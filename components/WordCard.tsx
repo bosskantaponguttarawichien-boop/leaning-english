@@ -14,14 +14,14 @@ interface WordCardProps {
 }
 
 const posColorMap: Record<POS, string> = {
-    n: "bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-400 border-blue-200 dark:border-blue-800",
-    v: "bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-400 border-red-200 dark:border-red-800",
-    adj: "bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400 border-green-200 dark:border-green-800",
-    adv: "bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-400 border-purple-200 dark:border-purple-800",
-    pron: "bg-yellow-100 dark:bg-yellow-900/40 text-yellow-700 dark:text-yellow-400 border-yellow-200 dark:border-yellow-800",
-    prep: "bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-400 border-indigo-200 dark:border-indigo-800",
-    conj: "bg-pink-100 dark:bg-pink-900/40 text-pink-700 dark:text-pink-400 border-pink-200 dark:border-pink-800",
-    int: "bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-400 border-orange-200 dark:border-orange-800",
+    n: "bg-blue-100 text-blue-700 border-blue-200",
+    v: "bg-red-100 text-red-700 border-red-200",
+    adj: "bg-green-100 text-green-700 border-green-200",
+    adv: "bg-purple-100 text-purple-700 border-purple-200",
+    pron: "bg-yellow-100 text-yellow-700 border-yellow-200",
+    prep: "bg-indigo-100 text-indigo-700 border-indigo-200",
+    conj: "bg-pink-100 text-pink-700 border-pink-200",
+    int: "bg-orange-100 text-orange-700 border-orange-200",
 };
 
 const posFullMap: Record<POS, string> = {
@@ -65,16 +65,16 @@ export default function WordCard({ wordData, revealed, typingValue = "", isCorre
                         );
                     }
 
-                    let color = "text-zinc-300 dark:text-zinc-600"; // un-typed
+                    let color = "text-zinc-300"; // un-typed
 
                     if (typedChar !== undefined) {
                         if (typedChar === char) {
-                            color = "text-zinc-900 dark:text-zinc-100 font-bold"; // correct
+                            color = "text-zinc-900 font-bold"; // correct
                         } else {
                             color = "text-red-500 font-bold underline decoration-2 underline-offset-4"; // incorrect
                         }
                     } else if (revealed && !isTestMode) {
-                        color = "text-zinc-900 dark:text-zinc-100"; // revealed target
+                        color = "text-zinc-900"; // revealed target
                     }
 
                     // In test mode, we show underscores for un-typed characters if not revealed
@@ -91,9 +91,7 @@ export default function WordCard({ wordData, revealed, typingValue = "", isCorre
     };
 
     return (
-        <div className={`p-8 rounded-2xl border-2 transition-all duration-300 ${isCorrect
-            ? "bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800 shadow-green-100 dark:shadow-green-900/20"
-            : "bg-white dark:bg-zinc-900 border-zinc-100 dark:border-zinc-800 shadow-xl shadow-zinc-100 dark:shadow-zinc-900/50"
+        <div className={`p-8 rounded-2xl border-2 transition-all duration-300 ${isCorrect ? "bg-green-50 border-green-200 shadow-green-100" : "bg-white border-zinc-100 shadow-xl shadow-zinc-100"
             }`}>
             <div className="flex flex-col items-center gap-4 text-center">
                 {/* POS Badge */}
@@ -137,37 +135,37 @@ export default function WordCard({ wordData, revealed, typingValue = "", isCorre
 
                 {/* Meaning Reveal / English Word Reveal */}
                 <div className={`mt-2 transition-all duration-500 overflow-hidden ${revealed ? "max-h-48 opacity-100" : "max-h-0 opacity-0"}`}>
-                    <div className="pt-4 border-t border-zinc-100 dark:border-zinc-800 flex flex-col items-center gap-4">
+                    <div className="pt-4 border-t border-zinc-100 flex flex-col items-center gap-4">
                         <div className="flex flex-col items-center gap-1">
-                            <p className="text-zinc-400 dark:text-zinc-500 text-xs font-bold uppercase tracking-widest">
+                            <p className="text-zinc-400 text-xs font-bold uppercase tracking-widest">
                                 {isTestMode ? "The word is" : "Meaning"}
                             </p>
-                            <p className="text-3xl font-black text-zinc-800 dark:text-zinc-100">
+                            <p className="text-3xl font-black text-zinc-800">
                                 {isTestMode ? wordData.word : wordData.meaning}
                             </p>
                         </div>
 
                         {/* SRS Stats */}
                         {progress && (
-                            <div className="flex gap-4 items-center bg-zinc-50 dark:bg-zinc-800 px-4 py-2 rounded-xl border border-zinc-100 dark:border-zinc-700">
+                            <div className="flex gap-4 items-center bg-zinc-50 px-4 py-2 rounded-xl border border-zinc-100">
                                 <div className="flex flex-col items-center">
-                                    <span className="text-[10px] font-black text-zinc-400 dark:text-zinc-500 uppercase tracking-widest">Strength</span>
+                                    <span className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">Strength</span>
                                     <div className="flex items-center gap-1.5">
-                                        <div className="w-12 h-1.5 bg-zinc-200 dark:bg-zinc-700 rounded-full overflow-hidden">
+                                        <div className="w-12 h-1.5 bg-zinc-200 rounded-full overflow-hidden">
                                             <div
                                                 className="h-full bg-blue-500 transition-all duration-300"
                                                 style={{ width: `${progress.memoryStrength * 100}%` }}
                                             />
                                         </div>
-                                        <span className="text-xs font-black text-zinc-700 dark:text-zinc-300">{(progress.memoryStrength * 100).toFixed(0)}%</span>
+                                        <span className="text-xs font-black text-zinc-700">{(progress.memoryStrength * 100).toFixed(0)}%</span>
                                     </div>
                                 </div>
-                                <div className="w-px h-6 bg-zinc-200 dark:bg-zinc-700" />
+                                <div className="w-px h-6 bg-zinc-200" />
                                 <div className="flex flex-col items-center">
-                                    <span className="text-[10px] font-black text-zinc-400 dark:text-zinc-500 uppercase tracking-widest">Level</span>
-                                    <span className={`text-xs font-black px-2 py-0.5 rounded ${progress.level === "Mastered" ? "bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400" :
-                                        progress.level === "Strong" ? "bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-400" :
-                                            "bg-zinc-100 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-300"
+                                    <span className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">Level</span>
+                                    <span className={`text-xs font-black px-2 py-0.5 rounded ${progress.level === "Mastered" ? "bg-green-100 text-green-700" :
+                                        progress.level === "Strong" ? "bg-blue-100 text-blue-700" :
+                                            "bg-zinc-100 text-zinc-600"
                                         }`}>
                                         {progress.level}
                                     </span>

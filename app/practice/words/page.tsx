@@ -125,40 +125,40 @@ export default function WordPracticePage() {
 
     if (isFinished) {
         return (
-            <main className="flex min-h-screen flex-col items-center justify-center bg-white dark:bg-zinc-950 p-6 md:p-24">
-                <div className="w-full max-w-md bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 p-8 rounded-3xl shadow-2xl flex flex-col gap-6 items-center text-center">
-                    <h2 className="text-3xl font-black text-zinc-900 dark:text-zinc-50 leading-tight">Session Complete! 🏁</h2>
+            <main className="flex min-h-screen flex-col items-center justify-center bg-white p-6 md:p-24">
+                <div className="w-full max-w-md bg-zinc-50 border border-zinc-100 p-8 rounded-3xl shadow-2xl flex flex-col gap-6 items-center text-center">
+                    <h2 className="text-3xl font-black text-zinc-900 leading-tight">Session Complete! 🏁</h2>
 
                     <div className="grid grid-cols-2 gap-4 w-full">
-                        <div className="bg-white dark:bg-zinc-800 p-4 rounded-2xl shadow-sm border border-zinc-100 dark:border-zinc-700">
-                            <p className="text-zinc-400 dark:text-zinc-500 text-xs font-bold uppercase tracking-widest">WPM</p>
+                        <div className="bg-white p-4 rounded-2xl shadow-sm border border-zinc-100">
+                            <p className="text-zinc-400 text-xs font-bold uppercase tracking-widest">WPM</p>
                             <p className="text-4xl font-black text-blue-600">{timerEnabled ? finalWpm : "-"}</p>
                         </div>
-                        <div className="bg-white dark:bg-zinc-800 p-4 rounded-2xl shadow-sm border border-zinc-100 dark:border-zinc-700">
-                            <p className="text-zinc-400 dark:text-zinc-500 text-xs font-bold uppercase tracking-widest">Words</p>
+                        <div className="bg-white p-4 rounded-2xl shadow-sm border border-zinc-100">
+                            <p className="text-zinc-400 text-xs font-bold uppercase tracking-widest">Words</p>
                             <p className="text-4xl font-black text-green-600">{correctCount}</p>
                         </div>
                     </div>
 
                     {stats && (
-                        <div className="w-full bg-white dark:bg-zinc-800 p-6 rounded-2xl shadow-sm border border-zinc-100 dark:border-zinc-700 flex flex-col gap-4">
-                            <h3 className="text-xs font-black text-zinc-400 dark:text-zinc-500 uppercase tracking-widest text-left">SRS Summary</h3>
+                        <div className="w-full bg-white p-6 rounded-2xl shadow-sm border border-zinc-100 flex flex-col gap-4">
+                            <h3 className="text-xs font-black text-zinc-400 uppercase tracking-widest text-left">SRS Summary</h3>
                             <div className="grid grid-cols-2 gap-y-4 text-left">
                                 <div>
-                                    <p className="text-xs font-bold text-zinc-400 dark:text-zinc-500">Retention</p>
-                                    <p className="text-xl font-black text-zinc-900 dark:text-zinc-50">{stats.retentionRate.toFixed(1)}%</p>
+                                    <p className="text-xs font-bold text-zinc-400">Retention</p>
+                                    <p className="text-xl font-black text-zinc-900">{stats.retentionRate.toFixed(1)}%</p>
                                 </div>
                                 <div>
-                                    <p className="text-xs font-bold text-zinc-400 dark:text-zinc-500">Mastered</p>
-                                    <p className="text-xl font-black text-zinc-900 dark:text-zinc-50">{stats.masteredCount}</p>
+                                    <p className="text-xs font-bold text-zinc-400">Mastered</p>
+                                    <p className="text-xl font-black text-zinc-900">{stats.masteredCount}</p>
                                 </div>
                                 <div>
-                                    <p className="text-xs font-bold text-zinc-400 dark:text-zinc-500">Due Words</p>
+                                    <p className="text-xs font-bold text-zinc-400">Due Words</p>
                                     <p className="text-xl font-black text-blue-600">{stats.dueCount}</p>
                                 </div>
                                 <div>
-                                    <p className="text-xs font-bold text-zinc-400 dark:text-zinc-500">Recall Speed</p>
-                                    <p className="text-xl font-black text-zinc-900 dark:text-zinc-50">{stats.avgRecallSpeed > 0 ? (stats.avgRecallSpeed / 1000).toFixed(2) + "s" : "-"}</p>
+                                    <p className="text-xs font-bold text-zinc-400">Recall Speed</p>
+                                    <p className="text-xl font-black text-zinc-900">{stats.avgRecallSpeed > 0 ? (stats.avgRecallSpeed / 1000).toFixed(2) + "s" : "-"}</p>
                                 </div>
                             </div>
                         </div>
@@ -166,11 +166,11 @@ export default function WordPracticePage() {
 
                     <button
                         onClick={() => window.location.reload()}
-                        className="w-full py-4 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-2xl font-bold hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors shadow-lg"
+                        className="w-full py-4 bg-zinc-900 text-white rounded-2xl font-bold hover:bg-zinc-800 transition-colors shadow-lg shadow-zinc-200"
                     >
                         Try Again
                     </button>
-                    <a href="/practice" className="text-zinc-500 dark:text-zinc-400 font-bold hover:text-zinc-900 dark:hover:text-zinc-100 transition-all">
+                    <a href="/practice" className="text-zinc-500 font-bold hover:text-zinc-900 transition-all">
                         Back to Menu
                     </a>
                 </div>
@@ -181,10 +181,10 @@ export default function WordPracticePage() {
     const currentWord = words[currentIndex];
 
     return (
-        <main className="flex min-h-screen flex-col items-center bg-zinc-50 dark:bg-zinc-950 p-6 md:p-12">
+        <main className="flex min-h-screen flex-col items-center bg-zinc-50 p-6 md:p-12">
             <div className="w-full max-w-2xl flex flex-col gap-8">
                 {/* Header / Settings */}
-                <div className="flex flex-col gap-6 bg-white dark:bg-zinc-900 p-6 rounded-3xl border border-zinc-100 dark:border-zinc-800 shadow-sm">
+                <div className="flex flex-col gap-6 bg-white p-6 rounded-3xl border border-zinc-100 shadow-sm">
                     <div className="flex justify-between items-center">
                         <div className="flex items-center gap-2">
                             <a href="/practice" className="text-zinc-400 hover:text-zinc-900">
@@ -192,30 +192,30 @@ export default function WordPracticePage() {
                                     <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
                                 </svg>
                             </a>
-                            <h1 className="text-2xl font-black text-zinc-900 dark:text-zinc-50 tracking-tight">Practice Sessions</h1>
+                            <h1 className="text-2xl font-black text-zinc-900 tracking-tight">Practice Sessions</h1>
                         </div>
                         {timerEnabled ? (
                             <Timer initialSeconds={60} isActive={isStarted} onTimeup={handleTimeup} />
                         ) : (
                             <div className="flex items-center gap-3">
                                 {stats && stats.dueCount > 0 && (
-                                    <span className="px-3 py-1 bg-red-50 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-[10px] font-black rounded-full uppercase border border-red-100 dark:border-red-900 animate-pulse">
+                                    <span className="px-3 py-1 bg-red-50 text-red-600 text-[10px] font-black rounded-full uppercase border border-red-100 animate-pulse">
                                         {stats.dueCount} DUE
                                     </span>
                                 )}
-                                <span className="px-3 py-1 bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 text-[10px] font-black rounded-full uppercase">Zen Mode</span>
+                                <span className="px-3 py-1 bg-zinc-100 text-zinc-500 text-[10px] font-black rounded-full uppercase">Zen Mode</span>
                             </div>
                         )}
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="flex flex-col gap-2">
-                            <label className="text-[10px] font-black uppercase text-zinc-400 dark:text-zinc-500 tracking-widest">Configuration</label>
+                            <label className="text-[10px] font-black uppercase text-zinc-400 tracking-widest">Configuration</label>
                             <div className="flex gap-2">
                                 <select
                                     value={difficulty}
                                     onChange={(e) => setDifficulty(e.target.value)}
-                                    className="flex-1 bg-zinc-50 dark:bg-zinc-800 border border-zinc-100 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 text-xs font-bold rounded-xl px-3 py-2 outline-none focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900 transition-all"
+                                    className="flex-1 bg-zinc-50 border border-zinc-100 text-zinc-600 text-xs font-bold rounded-xl px-3 py-2 outline-none focus:ring-2 focus:ring-blue-100 transition-all"
                                 >
                                     <option value="all">Any Level</option>
                                     <option value="A1">A1 (Beginner)</option>
@@ -225,7 +225,7 @@ export default function WordPracticePage() {
                                 <select
                                     value={selectedPOS}
                                     onChange={(e) => setSelectedPOS(e.target.value)}
-                                    className="flex-1 bg-zinc-50 dark:bg-zinc-800 border border-zinc-100 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 text-xs font-bold rounded-xl px-3 py-2 outline-none focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900 transition-all"
+                                    className="flex-1 bg-zinc-50 border border-zinc-100 text-zinc-600 text-xs font-bold rounded-xl px-3 py-2 outline-none focus:ring-2 focus:ring-blue-100 transition-all"
                                 >
                                     <option value="all">Any Type</option>
                                     <option value="n">Noun</option>
@@ -276,8 +276,8 @@ export default function WordPracticePage() {
                 </div>
 
                 {words.length === 0 ? (
-                    <div className="flex flex-col items-center justify-center p-12 bg-white dark:bg-zinc-900 rounded-3xl border border-dashed border-zinc-200 dark:border-zinc-700">
-                        <p className="text-zinc-400 dark:text-zinc-500 font-bold">No words found for this filter.</p>
+                    <div className="flex flex-col items-center justify-center p-12 bg-white rounded-3xl border border-dashed border-zinc-200">
+                        <p className="text-zinc-400 font-bold">No words found for this filter.</p>
                         <button onClick={() => { setDifficulty("all"); setSelectedPOS("all"); }} className="mt-2 text-blue-600 text-sm font-bold">Reset Filters</button>
                     </div>
                 ) : (
@@ -320,20 +320,20 @@ export default function WordPracticePage() {
                             <div className="flex items-center justify-between px-2">
                                 <div className="flex items-center gap-6">
                                     <div className="flex flex-col">
-                                        <span className="text-[10px] font-black text-zinc-400 dark:text-zinc-500 uppercase tracking-widest">Session Progress</span>
-                                        <span className="text-sm font-black text-zinc-700 dark:text-zinc-300">{currentIndex + 1} / {words.length}</span>
+                                        <span className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">Session Progress</span>
+                                        <span className="text-sm font-black text-zinc-700">{currentIndex + 1} / {words.length}</span>
                                     </div>
                                     <div className="w-px h-6 bg-zinc-200" />
                                     {stats && (
                                         <div className="flex items-center gap-6">
                                             <div className="flex flex-col">
-                                                <span className="text-[10px] font-black text-zinc-400 dark:text-zinc-500 uppercase tracking-widest">Total Mastery</span>
-                                                <span className="text-sm font-black text-zinc-700 dark:text-zinc-300">{stats.masteredCount}</span>
+                                                <span className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">Total Mastery</span>
+                                                <span className="text-sm font-black text-zinc-700">{stats.masteredCount}</span>
                                             </div>
-                                            <div className="w-px h-6 bg-zinc-200 dark:bg-zinc-700" />
+                                            <div className="w-px h-6 bg-zinc-200" />
                                             <div className="flex flex-col">
-                                                <span className="text-[10px] font-black text-zinc-400 dark:text-zinc-500 uppercase tracking-widest">Retention</span>
-                                                <span className="text-sm font-black text-zinc-700 dark:text-zinc-300">{stats.retentionRate.toFixed(0)}%</span>
+                                                <span className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">Retention</span>
+                                                <span className="text-sm font-black text-zinc-700">{stats.retentionRate.toFixed(0)}%</span>
                                             </div>
                                         </div>
                                     )}
@@ -348,7 +348,7 @@ export default function WordPracticePage() {
                             </div>
 
                             {/* Progress indicator */}
-                            <div className="w-full bg-zinc-200 dark:bg-zinc-800 h-1.5 rounded-full overflow-hidden mt-2">
+                            <div className="w-full bg-zinc-200 h-1.5 rounded-full overflow-hidden mt-2">
                                 <div
                                     className="bg-blue-500 h-full transition-all duration-300"
                                     style={{ width: `${((currentIndex + 1) / words.length) * 100}%` }}
