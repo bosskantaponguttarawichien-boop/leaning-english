@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 interface TypingInputProps {
     targetWord: string;
     onCorrect: () => void;
+    onWrong?: () => void;
     onInputChange?: (value: string) => void;
     disabled?: boolean;
 }
@@ -13,10 +14,11 @@ interface TypingInputProps {
 export default function TypingInput({
     targetWord,
     onCorrect,
+    onWrong,
     onInputChange,
     disabled = false,
 }: TypingInputProps) {
-    const { register, watch, setValue, reset } = useForm<{ typing: string }>({
+    const { register, watch, reset } = useForm<{ typing: string }>({
         defaultValues: { typing: "" },
     });
 
@@ -30,8 +32,13 @@ export default function TypingInput({
         if (typingValue === targetWord) {
             onCorrect();
             reset();
+        } else if (targetWord && typingValue.length >= targetWord.length && typingValue !== targetWord) {
+            if (onWrong) {
+                onWrong();
+            }
+            reset();
         }
-    }, [typingValue, targetWord, onCorrect, onInputChange, reset]);
+    }, [typingValue, targetWord, onCorrect, onWrong, onInputChange, reset]);
 
     return (
         <div className="w-full max-w-md mx-auto">
@@ -40,6 +47,7 @@ export default function TypingInput({
                 type="text"
                 autoFocus
                 autoComplete="off"
+                autoCapitalize="none"
                 disabled={disabled}
                 className="w-full px-4 py-3 text-2xl text-center border-2 border-zinc-200 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all disabled:bg-zinc-100 disabled:cursor-not-allowed"
                 placeholder="Type the word here..."

@@ -11,6 +11,9 @@ export default function SentencePracticePage() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const { register, watch, reset } = useForm<{ typing: string }>();
     const [isCorrect, setIsCorrect] = useState(false);
+    const [isWrong, setIsWrong] = useState(false);
+    const [isFinished, setIsFinished] = useState(false);
+    const [sessionWrongCount, setSessionWrongCount] = useState(0);
 
     useEffect(() => {
         try {
@@ -33,8 +36,47 @@ export default function SentencePracticePage() {
                 setIsCorrect(false);
                 reset();
             }, 1000);
+        } else if (targetSentence !== "" && typingValue.length >= targetSentence.length && typingValue !== targetSentence) {
+            setIsWrong(true);
+            setSessionWrongCount(prev => prev + 1);
+
+            // Play buzz sound (simple beep)
+            if (typeof window !== "undefined") {
+                try {
+                    const AudioCtx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+                    const audioCtx = new AudioCtx();
+                    if (audioCtx) {
+                        const oscillator = audioCtx.createOscillator();
+                        const gainNode = audioCtx.createGain();
+                        oscillator.connect(gainNode);
+                        gainNode.connect(audioCtx.destination);
+                        oscillator.type = "sawtooth";
+                        oscillator.frequency.value = 150; // Low buzz
+                        gainNode.gain.value = 0.5;
+                        oscillator.start();
+                        setTimeout(() => {
+                            oscillator.stop();
+                            audioCtx.close();
+                        }, 200);
+                    }
+                } catch (e) {
+                    console.error("Audio block", e);
+                }
+            }
+
+            setTimeout(() => {
+                setCurrentIndex((prev) => (prev + 1) % sentences.length);
+                setIsWrong(false);
+                reset();
+            }, 1000);
         }
     }, [typingValue, targetSentence, sentences.length, reset]);
+
+    useEffect(() => {
+        if (sentences.length > 0 && currentIndex >= sentences.length && !isFinished) {
+            setIsFinished(true);
+        }
+    }, [currentIndex, sentences.length, isFinished]);
 
     if (sentences.length === 0) {
         return <div className="p-24 text-center">Loading sentences...</div>;
@@ -45,8 +87,38 @@ export default function SentencePracticePage() {
     const typingTokens = typingValue.split(" ");
 
     return (
-        <main className="flex min-h-screen flex-col items-center bg-zinc-50 p-6 md:p-24">
-            <div className="w-full max-w-3xl flex flex-col gap-12">
+        <main className="flex min-h-screen flex-col items-center bg-zinc-50 relative">
+            {/* Session Complete Modal Overlay */}
+            {isFinished && (
+                <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-zinc-50/80 backdrop-blur-sm">
+                    <div className="w-full max-w-md bg-white border border-zinc-100 p-8 rounded-3xl shadow-2xl flex flex-col gap-6 items-center text-center animate-in fade-in zoom-in duration-300">
+                        <h2 className="text-3xl font-black text-zinc-900 leading-tight">Session Complete! 🏁</h2>
+
+                        <div className="grid grid-cols-2 gap-4 w-full">
+                            <div className="bg-white p-4 rounded-2xl shadow-sm border border-zinc-100">
+                                <p className="text-zinc-400 text-[10px] md:text-xs font-bold uppercase tracking-widest">Sentences</p>
+                                <p className="text-3xl md:text-4xl font-black text-green-600">{sentences.length}</p>
+                            </div>
+                            <div className="bg-white p-4 rounded-2xl shadow-sm border border-zinc-100">
+                                <p className="text-zinc-400 text-[10px] md:text-xs font-bold uppercase tracking-widest">Errors</p>
+                                <p className="text-3xl md:text-4xl font-black text-red-600">{sessionWrongCount}</p>
+                            </div>
+                        </div>
+
+                        <button
+                            onClick={() => window.location.reload()}
+                            className="w-full py-4 bg-zinc-900 text-white rounded-2xl font-bold hover:bg-zinc-800 transition-colors shadow-lg shadow-zinc-200"
+                        >
+                            Try Again
+                        </button>
+                        <a href="/practice" className="text-zinc-500 font-bold hover:text-zinc-900 transition-all">
+                            Back to Menu
+                        </a>
+                    </div>
+                </div>
+            )}
+
+            <div className={`w-full max-w-3xl flex flex-col gap-12 p-6 md:p-12 ${isFinished ? 'pointer-events-none opacity-50 blur-sm transition-all duration-300' : ''}`}>
                 <div className="flex flex-col gap-2">
                     <div className="flex items-center gap-2">
                         <Link href="/practice" className="text-zinc-400 hover:text-zinc-900">
@@ -87,13 +159,25 @@ export default function SentencePracticePage() {
                     </div>
                 </div>
 
+                {/* Keyboard Hint */}
+                <div className="flex justify-center mb-0">
+                    <div className="px-4 py-2 bg-zinc-200 text-zinc-500 text-xs font-bold rounded-full uppercase tracking-widest">
+                        Progress: {currentIndex + 1} / {sentences.length}
+                    </div>
+                </div>
+
                 {/* Input area */}
                 <div className="relative">
                     <textarea
                         {...register("typing")}
                         autoFocus
+                        autoCapitalize="none"
                         rows={3}
-                        className={`w-full p-6 text-2xl border-2 rounded-2xl outline-none transition-all resize-none shadow-sm ${isCorrect ? "border-green-500 bg-green-50" : "border-zinc-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
+                        className={`w-full p-6 text-2xl border-2 rounded-2xl outline-none transition-all resize-none shadow-sm ${isCorrect
+                            ? "border-green-500 bg-green-50"
+                            : isWrong
+                                ? "border-red-500 bg-red-50 text-red-900 focus:ring-red-100"
+                                : "border-zinc-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
                             }`}
                         placeholder="Start typing the sentence above..."
                     />
@@ -104,13 +188,13 @@ export default function SentencePracticePage() {
                             </svg>
                         </div>
                     )}
-                </div>
-
-                {/* Keyboard Hint */}
-                <div className="flex justify-center">
-                    <div className="px-4 py-2 bg-zinc-200 text-zinc-500 text-xs font-bold rounded-full uppercase tracking-widest">
-                        Progress: {currentIndex + 1} / {sentences.length}
-                    </div>
+                    {isWrong && (
+                        <div className="absolute top-4 right-4 text-red-600 animate-bounce">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                            </svg>
+                        </div>
+                    )}
                 </div>
             </div>
         </main>

@@ -9,6 +9,7 @@ interface WordCardProps {
     revealed: boolean;
     typingValue?: string;
     isCorrect?: boolean;
+    isWrong?: boolean;
     isTestMode?: boolean;
     progress?: WordProgress;
 }
@@ -35,7 +36,7 @@ const posFullMap: Record<POS, string> = {
     int: "interjection",
 };
 
-export default function WordCard({ wordData, revealed, typingValue = "", isCorrect, isTestMode, progress }: WordCardProps) {
+export default function WordCard({ wordData, revealed, typingValue = "", isCorrect, isWrong, isTestMode, progress }: WordCardProps) {
     const speak = (text: string) => {
         if (typeof window !== "undefined" && window.speechSynthesis) {
             const utterance = new SpeechSynthesisUtterance(text);
@@ -91,7 +92,11 @@ export default function WordCard({ wordData, revealed, typingValue = "", isCorre
     };
 
     return (
-        <div className={`p-8 rounded-2xl border-2 transition-all duration-300 ${isCorrect ? "bg-green-50 border-green-200 shadow-green-100" : "bg-white border-zinc-100 shadow-xl shadow-zinc-100"
+        <div className={`p-8 rounded-2xl border-2 transition-all duration-300 ${isCorrect
+            ? "bg-green-50 border-green-200 shadow-green-100"
+            : isWrong
+                ? "bg-red-50 border-red-200 shadow-red-100"
+                : "bg-white border-zinc-100 shadow-xl shadow-zinc-100"
             }`}>
             <div className="flex flex-col items-center gap-4 text-center">
                 {/* POS Badge */}

@@ -16,6 +16,7 @@ export default function WordPracticePage() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isRevealed, setIsRevealed] = useState(false);
     const [isCorrect, setIsCorrect] = useState(false);
+    const [isWrong, setIsWrong] = useState(false);
     const [isStarted, setIsStarted] = useState(false);
     const [isFinished, setIsFinished] = useState(false);
     const [difficulty, setDifficulty] = useState<string>("all");
@@ -28,6 +29,7 @@ export default function WordPracticePage() {
 
     // Stats
     const [correctCount, setCorrectCount] = useState(0);
+    const [sessionWrongCount, setSessionWrongCount] = useState(0);
     const [totalChars, setTotalChars] = useState(0);
     const startTimeRef = useRef<number | null>(null);
     const wordStartTimeRef = useRef<number | null>(null);
@@ -64,8 +66,10 @@ export default function WordPracticePage() {
             setIsStarted(false);
             setIsFinished(false);
             setCorrectCount(0);
+            setSessionWrongCount(0);
             setTotalChars(0);
             setIsRevealed(false);
+            setIsWrong(false);
             setTypingValue("");
         } catch (error) {
             console.error("Failed to validate vocab data:", error);
@@ -113,6 +117,59 @@ export default function WordPracticePage() {
         }, 1200); // Increased delay slightly to allow speech to finish
     }, [words, currentIndex, isStarted, isFinished, isSpeechEnabled]);
 
+    const handleWrong = useCallback(() => {
+        const now = Date.now();
+        if (!isStarted) {
+            setIsStarted(true);
+            startTimeRef.current = now;
+        }
+
+        setSessionWrongCount((prev) => prev + 1);
+
+        const responseTime = wordStartTimeRef.current ? now - wordStartTimeRef.current : undefined;
+
+        if (words[currentIndex]) {
+            saveWordResult(words[currentIndex].word, false, responseTime);
+        }
+
+        setIsWrong(true);
+        setIsRevealed(true);
+
+        // Play buzz sound if speech enabled (simple beep)
+        if (isSpeechEnabled && typeof window !== "undefined") {
+            try {
+                const AudioCtx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+                const audioCtx = new AudioCtx();
+                if (audioCtx) {
+                    const oscillator = audioCtx.createOscillator();
+                    const gainNode = audioCtx.createGain();
+                    oscillator.connect(gainNode);
+                    gainNode.connect(audioCtx.destination);
+                    oscillator.type = "sawtooth";
+                    oscillator.frequency.value = 150; // Low buzz
+                    gainNode.gain.value = 0.5;
+                    oscillator.start();
+                    setTimeout(() => {
+                        oscillator.stop();
+                        audioCtx.close();
+                    }, 200);
+                }
+            } catch (e) {
+                console.error("Audio block", e);
+            }
+        }
+
+        if (!isFinished) {
+            setTimeout(() => {
+                setCurrentIndex((prev) => (prev + 1) % words.length);
+                setIsRevealed(false);
+                setIsCorrect(false);
+                setIsWrong(false);
+                setTypingValue("");
+            }, 1000);
+        }
+    }, [words, currentIndex, isStarted, isFinished, isSpeechEnabled]);
+
     const [finalWpm, setFinalWpm] = useState(0);
     const handleTimeup = useCallback(() => {
         if (startTimeRef.current && timerEnabled) {
@@ -123,66 +180,69 @@ export default function WordPracticePage() {
         setIsStarted(false);
     }, [totalChars, timerEnabled]);
 
-    if (isFinished) {
-        return (
-            <main className="flex min-h-screen flex-col items-center justify-center bg-white p-6 md:p-24">
-                <div className="w-full max-w-md bg-zinc-50 border border-zinc-100 p-8 rounded-3xl shadow-2xl flex flex-col gap-6 items-center text-center">
-                    <h2 className="text-3xl font-black text-zinc-900 leading-tight">Session Complete! 🏁</h2>
-
-                    <div className="grid grid-cols-2 gap-4 w-full">
-                        <div className="bg-white p-4 rounded-2xl shadow-sm border border-zinc-100">
-                            <p className="text-zinc-400 text-xs font-bold uppercase tracking-widest">WPM</p>
-                            <p className="text-4xl font-black text-blue-600">{timerEnabled ? finalWpm : "-"}</p>
-                        </div>
-                        <div className="bg-white p-4 rounded-2xl shadow-sm border border-zinc-100">
-                            <p className="text-zinc-400 text-xs font-bold uppercase tracking-widest">Words</p>
-                            <p className="text-4xl font-black text-green-600">{correctCount}</p>
-                        </div>
-                    </div>
-
-                    {stats && (
-                        <div className="w-full bg-white p-6 rounded-2xl shadow-sm border border-zinc-100 flex flex-col gap-4">
-                            <h3 className="text-xs font-black text-zinc-400 uppercase tracking-widest text-left">SRS Summary</h3>
-                            <div className="grid grid-cols-2 gap-y-4 text-left">
-                                <div>
-                                    <p className="text-xs font-bold text-zinc-400">Retention</p>
-                                    <p className="text-xl font-black text-zinc-900">{stats.retentionRate.toFixed(1)}%</p>
-                                </div>
-                                <div>
-                                    <p className="text-xs font-bold text-zinc-400">Mastered</p>
-                                    <p className="text-xl font-black text-zinc-900">{stats.masteredCount}</p>
-                                </div>
-                                <div>
-                                    <p className="text-xs font-bold text-zinc-400">Due Words</p>
-                                    <p className="text-xl font-black text-blue-600">{stats.dueCount}</p>
-                                </div>
-                                <div>
-                                    <p className="text-xs font-bold text-zinc-400">Recall Speed</p>
-                                    <p className="text-xl font-black text-zinc-900">{stats.avgRecallSpeed > 0 ? (stats.avgRecallSpeed / 1000).toFixed(2) + "s" : "-"}</p>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-
-                    <button
-                        onClick={() => window.location.reload()}
-                        className="w-full py-4 bg-zinc-900 text-white rounded-2xl font-bold hover:bg-zinc-800 transition-colors shadow-lg shadow-zinc-200"
-                    >
-                        Try Again
-                    </button>
-                    <a href="/practice" className="text-zinc-500 font-bold hover:text-zinc-900 transition-all">
-                        Back to Menu
-                    </a>
-                </div>
-            </main>
-        );
-    }
-
     const currentWord = words[currentIndex];
 
     return (
-        <main className="flex min-h-screen flex-col items-center bg-zinc-50 p-6 md:p-12">
-            <div className="w-full max-w-2xl flex flex-col gap-8">
+        <main className="flex min-h-screen flex-col items-center bg-zinc-50 relative">
+            {/* Session Complete Modal Overlay */}
+            {isFinished && (
+                <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm">
+                    <div className="w-full max-w-md bg-white border border-zinc-100 p-8 rounded-3xl shadow-2xl flex flex-col gap-6 items-center text-center animate-in fade-in zoom-in duration-300">
+                        <h2 className="text-3xl font-black text-zinc-900 leading-tight">Session Complete! 🏁</h2>
+
+                        <div className="grid grid-cols-3 gap-4 w-full">
+                            <div className="bg-white p-4 rounded-2xl shadow-sm border border-zinc-100">
+                                <p className="text-zinc-400 text-[10px] md:text-xs font-bold uppercase tracking-widest">WPM</p>
+                                <p className="text-3xl md:text-4xl font-black text-blue-600">{timerEnabled ? finalWpm : "-"}</p>
+                            </div>
+                            <div className="bg-white p-4 rounded-2xl shadow-sm border border-zinc-100">
+                                <p className="text-zinc-400 text-[10px] md:text-xs font-bold uppercase tracking-widest">Words</p>
+                                <p className="text-3xl md:text-4xl font-black text-green-600">{correctCount}</p>
+                            </div>
+                            <div className="bg-white p-4 rounded-2xl shadow-sm border border-zinc-100">
+                                <p className="text-zinc-400 text-[10px] md:text-xs font-bold uppercase tracking-widest">Errors</p>
+                                <p className="text-3xl md:text-4xl font-black text-red-600">{sessionWrongCount}</p>
+                            </div>
+                        </div>
+
+                        {stats && (
+                            <div className="w-full bg-white p-6 rounded-2xl shadow-sm border border-zinc-100 flex flex-col gap-4">
+                                <h3 className="text-xs font-black text-zinc-400 uppercase tracking-widest text-left">SRS Summary</h3>
+                                <div className="grid grid-cols-2 gap-y-4 text-left">
+                                    <div>
+                                        <p className="text-xs font-bold text-zinc-400">Retention</p>
+                                        <p className="text-xl font-black text-zinc-900">{stats.retentionRate.toFixed(1)}%</p>
+                                    </div>
+                                    <div>
+                                        <p className="text-xs font-bold text-zinc-400">Mastered</p>
+                                        <p className="text-xl font-black text-zinc-900">{stats.masteredCount}</p>
+                                    </div>
+                                    <div>
+                                        <p className="text-xs font-bold text-zinc-400">Due Words</p>
+                                        <p className="text-xl font-black text-blue-600">{stats.dueCount}</p>
+                                    </div>
+                                    <div>
+                                        <p className="text-xs font-bold text-zinc-400">Recall Speed</p>
+                                        <p className="text-xl font-black text-zinc-900">{stats.avgRecallSpeed > 0 ? (stats.avgRecallSpeed / 1000).toFixed(2) + "s" : "-"}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
+                        <button
+                            onClick={() => window.location.reload()}
+                            className="w-full py-4 bg-zinc-900 text-white rounded-2xl font-bold hover:bg-zinc-800 transition-colors shadow-lg shadow-zinc-200"
+                        >
+                            Try Again
+                        </button>
+                        <a href="/practice" className="text-zinc-500 font-bold hover:text-zinc-900 transition-all">
+                            Back to Menu
+                        </a>
+                    </div>
+                </div>
+            )}
+
+            <div className={`w-full max-w-2xl flex flex-col gap-8 flex-1 p-6 md:p-12 ${isFinished ? 'pointer-events-none opacity-50 blur-sm transition-all duration-300' : ''}`}>
                 {/* Header / Settings */}
                 <div className="flex flex-col gap-6 bg-white p-6 rounded-3xl border border-zinc-100 shadow-sm">
                     <div className="flex justify-between items-center">
@@ -281,7 +341,45 @@ export default function WordPracticePage() {
                         <button onClick={() => { setDifficulty("all"); setSelectedPOS("all"); }} className="mt-2 text-blue-600 text-sm font-bold">Reset Filters</button>
                     </div>
                 ) : (
-                    <>
+                    <div className="flex flex-col gap-4">
+                        <div className="flex items-center justify-between px-2">
+                            <div className="flex items-center gap-6">
+                                <div className="flex flex-col">
+                                    <span className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">Session Progress</span>
+                                    <span className="text-sm font-black text-zinc-700">{currentIndex + 1} / {words.length}</span>
+                                </div>
+                                <div className="w-px h-6 bg-zinc-200" />
+                                {stats && (
+                                    <div className="flex items-center gap-6">
+                                        <div className="flex flex-col">
+                                            <span className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">Total Mastery</span>
+                                            <span className="text-sm font-black text-zinc-700">{stats.masteredCount}</span>
+                                        </div>
+                                        <div className="w-px h-6 bg-zinc-200" />
+                                        <div className="flex flex-col">
+                                            <span className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">Retention</span>
+                                            <span className="text-sm font-black text-zinc-700">{stats.retentionRate.toFixed(0)}%</span>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+
+                            <button
+                                onClick={() => setIsRevealed(!isRevealed)}
+                                className="text-xs font-black text-blue-600 hover:text-blue-700 flex items-center gap-1 transition-colors uppercase tracking-wider"
+                            >
+                                {isRevealed ? "Hide Hint" : "Need a Hint?"}
+                            </button>
+                        </div>
+
+                        {/* Progress indicator */}
+                        <div className="w-full bg-zinc-200 h-1.5 rounded-full overflow-hidden mb-2">
+                            <div
+                                className="bg-blue-500 h-full transition-all duration-300"
+                                style={{ width: `${((currentIndex + 1) / words.length) * 100}%` }}
+                            />
+                        </div>
+
                         {/* Word Card */}
                         <div className="relative">
                             <WordCard
@@ -289,6 +387,7 @@ export default function WordPracticePage() {
                                 revealed={isRevealed}
                                 typingValue={typingValue}
                                 isCorrect={isCorrect}
+                                isWrong={isWrong}
                                 isTestMode={isTestMode}
                                 progress={allProgress[currentWord.word]}
                             />
@@ -299,63 +398,31 @@ export default function WordPracticePage() {
                                     </svg>
                                 </div>
                             )}
-                        </div>
-
-                        {/* Input Area */}
-                        <div className="flex flex-col gap-4">
-                            <TypingInput
-                                targetWord={currentWord.word}
-                                onCorrect={handleCorrect}
-                                onInputChange={(val) => {
-                                    setTypingValue(val);
-                                    if (!isStarted && val.length > 0) {
-                                        setIsStarted(true);
-                                        startTimeRef.current = Date.now();
-                                        wordStartTimeRef.current = Date.now();
-                                    }
-                                }}
-                                disabled={isFinished}
-                            />
-
-                            <div className="flex items-center justify-between px-2">
-                                <div className="flex items-center gap-6">
-                                    <div className="flex flex-col">
-                                        <span className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">Session Progress</span>
-                                        <span className="text-sm font-black text-zinc-700">{currentIndex + 1} / {words.length}</span>
-                                    </div>
-                                    <div className="w-px h-6 bg-zinc-200" />
-                                    {stats && (
-                                        <div className="flex items-center gap-6">
-                                            <div className="flex flex-col">
-                                                <span className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">Total Mastery</span>
-                                                <span className="text-sm font-black text-zinc-700">{stats.masteredCount}</span>
-                                            </div>
-                                            <div className="w-px h-6 bg-zinc-200" />
-                                            <div className="flex flex-col">
-                                                <span className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">Retention</span>
-                                                <span className="text-sm font-black text-zinc-700">{stats.retentionRate.toFixed(0)}%</span>
-                                            </div>
-                                        </div>
-                                    )}
+                            {isWrong && (
+                                <div className="absolute -top-4 -right-4 bg-red-500 text-white p-2 rounded-full shadow-lg animate-bounce z-10">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
                                 </div>
-
-                                <button
-                                    onClick={() => setIsRevealed(!isRevealed)}
-                                    className="text-xs font-black text-blue-600 hover:text-blue-700 flex items-center gap-1 transition-colors uppercase tracking-wider"
-                                >
-                                    {isRevealed ? "Hide Hint" : "Need a Hint?"}
-                                </button>
-                            </div>
-
-                            {/* Progress indicator */}
-                            <div className="w-full bg-zinc-200 h-1.5 rounded-full overflow-hidden mt-2">
-                                <div
-                                    className="bg-blue-500 h-full transition-all duration-300"
-                                    style={{ width: `${((currentIndex + 1) / words.length) * 100}%` }}
-                                />
-                            </div>
+                            )}
                         </div>
-                    </>
+
+                        <TypingInput
+                            key={currentIndex} // Force reset of input component on word change
+                            targetWord={currentWord.word}
+                            onCorrect={handleCorrect}
+                            onWrong={handleWrong}
+                            onInputChange={(val) => {
+                                setTypingValue(val);
+                                if (!isStarted && val.length > 0) {
+                                    setIsStarted(true);
+                                    startTimeRef.current = Date.now();
+                                    wordStartTimeRef.current = Date.now();
+                                }
+                            }}
+                            disabled={isFinished}
+                        />
+                    </div>
                 )}
             </div>
         </main>

@@ -23,7 +23,7 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className={`w-full h-[120px] flex sticky top-0 z-40 relative ${scrolled ? "" : "bg-zinc-50"}`}>
+        <nav className={`w-full h-[120px] flex sticky top-0 z-30 relative ${scrolled ? "" : "bg-zinc-50"}`}>
             {/* Blur overlay — แสดงเฉพาะตอน scroll */}
             <div
                 className={`absolute inset-0 pointer-events-none transition-opacity duration-300 ${scrolled ? "opacity-100" : "opacity-0"}`}
@@ -36,7 +36,7 @@ export default function Navbar() {
                 }}
             />
             <div className="w-full relative">
-                <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-white/80 backdrop-blur-xl border border-zinc-200/50 p-1.5 rounded-2xl shadow-xl shadow-zinc-200/20 flex items-center gap-1">
+                <div className="fixed top-6 left-1/2 -translate-x-1/2 z-40 bg-white/80 backdrop-blur-xl border border-zinc-200/50 p-1.5 rounded-2xl shadow-xl shadow-zinc-200/20 flex items-center gap-1">
                     {links.map((link) => {
                         const isActive = pathname === link.path;
                         return (
