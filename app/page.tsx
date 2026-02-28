@@ -30,7 +30,7 @@ export default function Home() {
     .slice(0, 5);
 
   return (
-    <main className="flex min-h-screen flex-col items-center bg-zinc-50 p-6 md:p-24 tracking-tight">
+    <main className="flex min-h-screen flex-col items-center bg-zinc-50 px-[24px] tracking-tight">
       <div className="w-full max-w-4xl flex flex-col gap-10">
         {/* Header Section */}
         <div className="flex justify-between items-center bg-white p-8 rounded-3xl border border-zinc-100 shadow-xl shadow-zinc-200/50">

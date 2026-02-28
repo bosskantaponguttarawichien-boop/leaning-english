@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="th" className={`${inter.variable} ${notoThai.variable}`}>
-      <body className="antialiased font-sans pt-20">
+      <body className="antialiased font-sans bg-zinc-50 min-h-screen">
         <Navbar />
         {children}
       </body>

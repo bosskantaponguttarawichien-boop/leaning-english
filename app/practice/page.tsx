@@ -33,7 +33,7 @@ export default function PracticeMenuPage() {
     ];
 
     return (
-        <main className="flex min-h-screen flex-col items-center bg-zinc-50 p-6 md:p-24 tracking-tight">
+        <main className="flex min-h-screen flex-col items-center bg-zinc-50 px-[24px]  tracking-tight">
             <div className="w-full max-w-4xl flex flex-col gap-10">
                 <div className="flex flex-col gap-2">
                     <h1 className="text-4xl font-black text-zinc-900 leading-none">Practice Modes</h1>
