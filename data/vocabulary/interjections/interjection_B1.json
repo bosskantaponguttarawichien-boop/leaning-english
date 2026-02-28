@@ -1,0 +1,404 @@
+{
+    "words": [
+        {
+            "word": "unbelievable",
+            "pos": "int",
+            "meaning": "ไม่น่าเชื่อ",
+            "example": "Unbelievable! I can't believe that happened.",
+            "difficulty": "B1",
+            "category": [
+                "Surprise"
+            ]
+        },
+        {
+            "word": "no kidding",
+            "pos": "int",
+            "meaning": "จริงเหรอเนี่ย",
+            "example": "No kidding! That's amazing.",
+            "difficulty": "B1",
+            "category": [
+                "Surprise"
+            ]
+        },
+        {
+            "word": "you're kidding",
+            "pos": "int",
+            "meaning": "ล้อเล่นใช่ไหม",
+            "example": "You're kidding! That can't be true.",
+            "difficulty": "B1",
+            "category": [
+                "Disbelief"
+            ]
+        },
+        {
+            "word": "give me a break",
+            "pos": "int",
+            "meaning": "อย่ามาเลย / เว่อร์ไป",
+            "example": "Give me a break! That's not fair.",
+            "difficulty": "B1",
+            "category": [
+                "Frustration"
+            ]
+        },
+        {
+            "word": "come on now",
+            "pos": "int",
+            "meaning": "เอาน่า / อย่าพูดแบบนั้น",
+            "example": "Come on now, be serious.",
+            "difficulty": "B1",
+            "category": [
+                "Encouragement"
+            ]
+        },
+        {
+            "word": "are you serious",
+            "pos": "int",
+            "meaning": "คุณพูดจริงเหรอ",
+            "example": "Are you serious? That's expensive!",
+            "difficulty": "B1",
+            "category": [
+                "Disbelief"
+            ]
+        },
+        {
+            "word": "you've got to be kidding",
+            "pos": "int",
+            "meaning": "ล้อเล่นแน่ ๆ",
+            "example": "You've got to be kidding! That's impossible.",
+            "difficulty": "B1",
+            "category": [
+                "Disbelief"
+            ]
+        },
+        {
+            "word": "what on earth",
+            "pos": "int",
+            "meaning": "อะไรกันเนี่ย",
+            "example": "What on earth is happening?",
+            "difficulty": "B1",
+            "category": [
+                "Confusion"
+            ]
+        },
+        {
+            "word": "what the hell",
+            "pos": "int",
+            "meaning": "อะไรวะ (ไม่สุภาพ)",
+            "example": "What the hell was that?",
+            "difficulty": "B1",
+            "category": [
+                "Anger"
+            ]
+        },
+        {
+            "word": "for goodness' sake",
+            "pos": "int",
+            "meaning": "โอ้โหเถอะ",
+            "example": "For goodness' sake, be careful!",
+            "difficulty": "B1",
+            "category": [
+                "Frustration"
+            ]
+        },
+        {
+            "word": "thank goodness",
+            "pos": "int",
+            "meaning": "โชคดีไป",
+            "example": "Thank goodness you're safe.",
+            "difficulty": "B1",
+            "category": [
+                "Relief"
+            ]
+        },
+        {
+            "word": "good grief",
+            "pos": "int",
+            "meaning": "โอ้โห (เบื่อ/เหนื่อยใจ)",
+            "example": "Good grief, not again.",
+            "difficulty": "B1",
+            "category": [
+                "Frustration"
+            ]
+        },
+        {
+            "word": "fair enough",
+            "pos": "int",
+            "meaning": "ก็สมเหตุสมผล",
+            "example": "Fair enough, I understand your point.",
+            "difficulty": "B1",
+            "category": [
+                "Agreement"
+            ]
+        },
+        {
+            "word": "point taken",
+            "pos": "int",
+            "meaning": "เข้าใจแล้ว",
+            "example": "Point taken. I'll fix it.",
+            "difficulty": "B1",
+            "category": [
+                "Agreement"
+            ]
+        },
+        {
+            "word": "that figures",
+            "pos": "int",
+            "meaning": "ก็ว่าแล้ว",
+            "example": "He forgot again? That figures.",
+            "difficulty": "B1",
+            "category": [
+                "Expectation"
+            ]
+        },
+        {
+            "word": "tell me about it",
+            "pos": "int",
+            "meaning": "รู้เลยล่ะ",
+            "example": "It's hot today. Tell me about it!",
+            "difficulty": "B1",
+            "category": [
+                "Agreement"
+            ]
+        },
+        {
+            "word": "I bet",
+            "pos": "int",
+            "meaning": "เชื่อเลย",
+            "example": "It was expensive. I bet!",
+            "difficulty": "B1",
+            "category": [
+                "Agreement"
+            ]
+        },
+        {
+            "word": "exactly my point",
+            "pos": "int",
+            "meaning": "นั่นแหละประเด็น",
+            "example": "Exactly my point! We need a change.",
+            "difficulty": "B1",
+            "category": [
+                "Agreement"
+            ]
+        },
+        {
+            "word": "guess so",
+            "pos": "int",
+            "meaning": "ก็คงงั้น",
+            "example": "Is he coming? Guess so.",
+            "difficulty": "B1",
+            "category": [
+                "Uncertain"
+            ]
+        },
+        {
+            "word": "not really",
+            "pos": "int",
+            "meaning": "ก็ไม่เชิง",
+            "example": "Do you like it? Not really.",
+            "difficulty": "B1",
+            "category": [
+                "Disagreement"
+            ]
+        },
+        {
+            "word": "big deal",
+            "pos": "int",
+            "meaning": "เรื่องใหญ่ตรงไหน",
+            "example": "So you won? Big deal.",
+            "difficulty": "B1",
+            "category": [
+                "Sarcasm"
+            ]
+        },
+        {
+            "word": "whatever",
+            "pos": "int",
+            "meaning": "ช่างมันเถอะ",
+            "example": "Whatever, do what you want.",
+            "difficulty": "B1",
+            "category": [
+                "Dismissive"
+            ]
+        },
+        {
+            "word": "fine by me",
+            "pos": "int",
+            "meaning": "โอเคสำหรับฉัน",
+            "example": "We leave at 7? Fine by me.",
+            "difficulty": "B1",
+            "category": [
+                "Agreement"
+            ]
+        },
+        {
+            "word": "I'm in",
+            "pos": "int",
+            "meaning": "ฉันร่วมด้วย",
+            "example": "We're going out tonight. I'm in!",
+            "difficulty": "B1",
+            "category": [
+                "Excitement"
+            ]
+        },
+        {
+            "word": "I'm out",
+            "pos": "int",
+            "meaning": "ฉันไม่เอาด้วย",
+            "example": "Too risky. I'm out.",
+            "difficulty": "B1",
+            "category": [
+                "Decision"
+            ]
+        },
+        {
+            "word": "deal",
+            "pos": "int",
+            "meaning": "ตกลง",
+            "example": "You help me, I help you. Deal?",
+            "difficulty": "B1",
+            "category": [
+                "Agreement"
+            ]
+        },
+        {
+            "word": "you wish",
+            "pos": "int",
+            "meaning": "ฝันไปเถอะ",
+            "example": "You'll beat me? You wish.",
+            "difficulty": "B1",
+            "category": [
+                "Sarcasm"
+            ]
+        },
+        {
+            "word": "nice try",
+            "pos": "int",
+            "meaning": "พยายามดีนะ",
+            "example": "Nice try, but not good enough.",
+            "difficulty": "B1",
+            "category": [
+                "Sarcasm"
+            ]
+        },
+        {
+            "word": "my goodness",
+            "pos": "int",
+            "meaning": "โอ้โห",
+            "example": "My goodness, that's huge!",
+            "difficulty": "B1",
+            "category": [
+                "Surprise"
+            ]
+        },
+        {
+            "word": "no kidding around",
+            "pos": "int",
+            "meaning": "พูดจริงนะ",
+            "example": "I'm serious, no kidding around.",
+            "difficulty": "B1",
+            "category": [
+                "Serious"
+            ]
+        },
+        {
+            "word": "hold your horses",
+            "pos": "int",
+            "meaning": "ใจเย็น ๆ",
+            "example": "Hold your horses! Slow down.",
+            "difficulty": "B1",
+            "category": [
+                "Warning"
+            ]
+        },
+        {
+            "word": "way to go",
+            "pos": "int",
+            "meaning": "สุดยอดไปเลย",
+            "example": "Way to go! You did it!",
+            "difficulty": "B1",
+            "category": [
+                "Praise"
+            ]
+        },
+        {
+            "word": "that's it",
+            "pos": "int",
+            "meaning": "แค่นั้นแหละ / พอแล้ว",
+            "example": "That's it! I'm done.",
+            "difficulty": "B1",
+            "category": [
+                "Decision"
+            ]
+        },
+        {
+            "word": "I'm telling you",
+            "pos": "int",
+            "meaning": "ฉันบอกเลยนะ",
+            "example": "I'm telling you, it's true.",
+            "difficulty": "B1",
+            "category": [
+                "Emphasis"
+            ]
+        },
+        {
+            "word": "mark my words",
+            "pos": "int",
+            "meaning": "จำคำฉันไว้เลย",
+            "example": "Mark my words, it will happen.",
+            "difficulty": "B1",
+            "category": [
+                "Warning"
+            ]
+        },
+        {
+            "word": "here we are",
+            "pos": "int",
+            "meaning": "มาถึงแล้ว",
+            "example": "Here we are! Finally.",
+            "difficulty": "B1",
+            "category": [
+                "Arrival"
+            ]
+        },
+        {
+            "word": "there we go",
+            "pos": "int",
+            "meaning": "เรียบร้อยแล้ว",
+            "example": "There we go! It's fixed.",
+            "difficulty": "B1",
+            "category": [
+                "Completion"
+            ]
+        },
+        {
+            "word": "that makes sense",
+            "pos": "int",
+            "meaning": "ฟังดูมีเหตุผล",
+            "example": "That makes sense. I agree.",
+            "difficulty": "B1",
+            "category": [
+                "Agreement"
+            ]
+        },
+        {
+            "word": "makes sense",
+            "pos": "int",
+            "meaning": "มีเหตุผล",
+            "example": "Yeah, makes sense.",
+            "difficulty": "B1",
+            "category": [
+                "Agreement"
+            ]
+        },
+        {
+            "word": "no offense",
+            "pos": "int",
+            "meaning": "ไม่ได้จะล่วงเกินนะ",
+            "example": "No offense, but I disagree.",
+            "difficulty": "B1",
+            "category": [
+                "Polite"
+            ]
+        }
+    ]
+}

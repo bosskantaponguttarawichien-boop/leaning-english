@@ -1,0 +1,504 @@
+{
+    "words": [
+        {
+            "word": "good",
+            "pos": "adj",
+            "meaning": "ดี",
+            "example": "This is a good book.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "bad",
+            "pos": "adj",
+            "meaning": "แย่",
+            "example": "That was a bad day.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "big",
+            "pos": "adj",
+            "meaning": "ใหญ่",
+            "example": "They live in a big house.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "small",
+            "pos": "adj",
+            "meaning": "เล็ก",
+            "example": "She has a small bag.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "long",
+            "pos": "adj",
+            "meaning": "ยาว",
+            "example": "It is a long road.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "short",
+            "pos": "adj",
+            "meaning": "สั้น",
+            "example": "He gave a short answer.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "tall",
+            "pos": "adj",
+            "meaning": "สูง (คน/สิ่งของ)",
+            "example": "He is very tall.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "low",
+            "pos": "adj",
+            "meaning": "ต่ำ",
+            "example": "The table is low.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "old",
+            "pos": "adj",
+            "meaning": "เก่า / แก่",
+            "example": "This is an old car.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "new",
+            "pos": "adj",
+            "meaning": "ใหม่",
+            "example": "I bought new shoes.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "young",
+            "pos": "adj",
+            "meaning": "อายุน้อย",
+            "example": "She is very young.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "happy",
+            "pos": "adj",
+            "meaning": "มีความสุข",
+            "example": "I feel happy today.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "sad",
+            "pos": "adj",
+            "meaning": "เศร้า",
+            "example": "He looks sad.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "angry",
+            "pos": "adj",
+            "meaning": "โกรธ",
+            "example": "She is angry with me.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "tired",
+            "pos": "adj",
+            "meaning": "เหนื่อย",
+            "example": "I am tired after work.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "hungry",
+            "pos": "adj",
+            "meaning": "หิว",
+            "example": "I am hungry.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "thirsty",
+            "pos": "adj",
+            "meaning": "กระหายน้ำ",
+            "example": "She is thirsty.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "hot",
+            "pos": "adj",
+            "meaning": "ร้อน",
+            "example": "It is very hot today.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "cold",
+            "pos": "adj",
+            "meaning": "หนาว / เย็น",
+            "example": "The water is cold.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "warm",
+            "pos": "adj",
+            "meaning": "อุ่น",
+            "example": "The soup is warm.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "cool",
+            "pos": "adj",
+            "meaning": "เย็น / เจ๋ง",
+            "example": "That’s a cool idea.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "fast",
+            "pos": "adj",
+            "meaning": "เร็ว",
+            "example": "He is a fast runner.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "slow",
+            "pos": "adj",
+            "meaning": "ช้า",
+            "example": "The bus is slow.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "easy",
+            "pos": "adj",
+            "meaning": "ง่าย",
+            "example": "This question is easy.",
+            "difficulty": "A1",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "difficult",
+            "pos": "adj",
+            "meaning": "ยาก",
+            "example": "English is not difficult.",
+            "difficulty": "A1",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "clean",
+            "pos": "adj",
+            "meaning": "สะอาด",
+            "example": "The room is clean.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "dirty",
+            "pos": "adj",
+            "meaning": "สกปรก",
+            "example": "My shoes are dirty.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "busy",
+            "pos": "adj",
+            "meaning": "ยุ่ง",
+            "example": "I am busy today.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "free",
+            "pos": "adj",
+            "meaning": "ว่าง / ฟรี",
+            "example": "Are you free tonight?",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "early",
+            "pos": "adj",
+            "meaning": "เช้า / เร็ว",
+            "example": "I woke up early.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "late",
+            "pos": "adj",
+            "meaning": "สาย",
+            "example": "He is late for class.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "right",
+            "pos": "adj",
+            "meaning": "ถูกต้อง",
+            "example": "That answer is right.",
+            "difficulty": "A1",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "wrong",
+            "pos": "adj",
+            "meaning": "ผิด",
+            "example": "That is wrong.",
+            "difficulty": "A1",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "open",
+            "pos": "adj",
+            "meaning": "เปิดอยู่",
+            "example": "The shop is open.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "closed",
+            "pos": "adj",
+            "meaning": "ปิดอยู่",
+            "example": "The door is closed.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "full",
+            "pos": "adj",
+            "meaning": "เต็ม",
+            "example": "The glass is full.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "empty",
+            "pos": "adj",
+            "meaning": "ว่างเปล่า",
+            "example": "The box is empty.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "strong",
+            "pos": "adj",
+            "meaning": "แข็งแรง",
+            "example": "He is strong.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "weak",
+            "pos": "adj",
+            "meaning": "อ่อนแอ",
+            "example": "I feel weak today.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "safe",
+            "pos": "adj",
+            "meaning": "ปลอดภัย",
+            "example": "This place is safe.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "dangerous",
+            "pos": "adj",
+            "meaning": "อันตราย",
+            "example": "It is dangerous to swim here.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "beautiful",
+            "pos": "adj",
+            "meaning": "สวย",
+            "example": "She is beautiful.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "ugly",
+            "pos": "adj",
+            "meaning": "น่าเกลียด",
+            "example": "That building is ugly.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "kind",
+            "pos": "adj",
+            "meaning": "ใจดี",
+            "example": "She is very kind.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "friendly",
+            "pos": "adj",
+            "meaning": "เป็นมิตร",
+            "example": "He is friendly.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "nice",
+            "pos": "adj",
+            "meaning": "ดี / น่ารัก",
+            "example": "It’s a nice day.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "funny",
+            "pos": "adj",
+            "meaning": "ตลก",
+            "example": "That movie is funny.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "serious",
+            "pos": "adj",
+            "meaning": "จริงจัง",
+            "example": "This is a serious problem.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "ready",
+            "pos": "adj",
+            "meaning": "พร้อม",
+            "example": "I am ready.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "sure",
+            "pos": "adj",
+            "meaning": "มั่นใจ",
+            "example": "I am sure about that.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        }
+    ]
+}

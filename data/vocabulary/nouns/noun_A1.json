@@ -1,0 +1,404 @@
+{
+    "words": [
+        {
+            "word": "book",
+            "pos": "n",
+            "meaning": "หนังสือ",
+            "example": "I read a book every day.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "house",
+            "pos": "n",
+            "meaning": "บ้าน",
+            "example": "My house is small.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "car",
+            "pos": "n",
+            "meaning": "รถยนต์",
+            "example": "He has a new car.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "school",
+            "pos": "n",
+            "meaning": "โรงเรียน",
+            "example": "She goes to school.",
+            "difficulty": "A1",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "teacher",
+            "pos": "n",
+            "meaning": "ครู",
+            "example": "The teacher is kind.",
+            "difficulty": "A1",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "student",
+            "pos": "n",
+            "meaning": "นักเรียน",
+            "example": "He is a student.",
+            "difficulty": "A1",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "friend",
+            "pos": "n",
+            "meaning": "เพื่อน",
+            "example": "She is my friend.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "family",
+            "pos": "n",
+            "meaning": "ครอบครัว",
+            "example": "I love my family.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "food",
+            "pos": "n",
+            "meaning": "อาหาร",
+            "example": "The food is good.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "water",
+            "pos": "n",
+            "meaning": "น้ำ",
+            "example": "Drink more water.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "time",
+            "pos": "n",
+            "meaning": "เวลา",
+            "example": "What time is it?",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "day",
+            "pos": "n",
+            "meaning": "วัน",
+            "example": "Today is a good day.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "night",
+            "pos": "n",
+            "meaning": "กลางคืน",
+            "example": "Good night.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "money",
+            "pos": "n",
+            "meaning": "เงิน",
+            "example": "I need more money.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "job",
+            "pos": "n",
+            "meaning": "งาน",
+            "example": "He has a new job.",
+            "difficulty": "A1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "phone",
+            "pos": "n",
+            "meaning": "โทรศัพท์",
+            "example": "My phone is ringing.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "computer",
+            "pos": "n",
+            "meaning": "คอมพิวเตอร์",
+            "example": "She uses a computer.",
+            "difficulty": "A1",
+            "category": [
+                "Technology"
+            ]
+        },
+        {
+            "word": "table",
+            "pos": "n",
+            "meaning": "โต๊ะ",
+            "example": "The book is on the table.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "chair",
+            "pos": "n",
+            "meaning": "เก้าอี้",
+            "example": "Sit on the chair.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "door",
+            "pos": "n",
+            "meaning": "ประตู",
+            "example": "Close the door.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "window",
+            "pos": "n",
+            "meaning": "หน้าต่าง",
+            "example": "Open the window.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "bag",
+            "pos": "n",
+            "meaning": "กระเป๋า",
+            "example": "My bag is heavy.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "city",
+            "pos": "n",
+            "meaning": "เมือง",
+            "example": "Bangkok is a big city.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "country",
+            "pos": "n",
+            "meaning": "ประเทศ",
+            "example": "Thailand is my country.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "room",
+            "pos": "n",
+            "meaning": "ห้อง",
+            "example": "This is my room.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "bed",
+            "pos": "n",
+            "meaning": "เตียง",
+            "example": "Go to bed.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "shop",
+            "pos": "n",
+            "meaning": "ร้านค้า",
+            "example": "The shop is open.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "bus",
+            "pos": "n",
+            "meaning": "รถบัส",
+            "example": "I take the bus.",
+            "difficulty": "A1",
+            "category": [
+                "Transport"
+            ]
+        },
+        {
+            "word": "train",
+            "pos": "n",
+            "meaning": "รถไฟ",
+            "example": "The train is late.",
+            "difficulty": "A1",
+            "category": [
+                "Transport"
+            ]
+        },
+        {
+            "word": "airport",
+            "pos": "n",
+            "meaning": "สนามบิน",
+            "example": "We are at the airport.",
+            "difficulty": "A1",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "hospital",
+            "pos": "n",
+            "meaning": "โรงพยาบาล",
+            "example": "He works at a hospital.",
+            "difficulty": "A1",
+            "category": [
+                "Health"
+            ]
+        },
+        {
+            "word": "doctor",
+            "pos": "n",
+            "meaning": "หมอ",
+            "example": "The doctor is busy.",
+            "difficulty": "A1",
+            "category": [
+                "Health"
+            ]
+        },
+        {
+            "word": "name",
+            "pos": "n",
+            "meaning": "ชื่อ",
+            "example": "What is your name?",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "number",
+            "pos": "n",
+            "meaning": "ตัวเลข",
+            "example": "My number is 10.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "question",
+            "pos": "n",
+            "meaning": "คำถาม",
+            "example": "I have a question.",
+            "difficulty": "A1",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "answer",
+            "pos": "n",
+            "meaning": "คำตอบ",
+            "example": "That is the answer.",
+            "difficulty": "A1",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "idea",
+            "pos": "n",
+            "meaning": "ไอเดีย",
+            "example": "That’s a good idea.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "game",
+            "pos": "n",
+            "meaning": "เกม",
+            "example": "We play a game.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "music",
+            "pos": "n",
+            "meaning": "ดนตรี",
+            "example": "I like music.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "movie",
+            "pos": "n",
+            "meaning": "ภาพยนตร์",
+            "example": "Let’s watch a movie.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        }
+    ]
+}

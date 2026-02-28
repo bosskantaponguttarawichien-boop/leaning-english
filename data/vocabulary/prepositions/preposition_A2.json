@@ -1,0 +1,504 @@
+{
+    "words": [
+        {
+            "word": "about",
+            "pos": "prep",
+            "meaning": "เกี่ยวกับ / ประมาณ",
+            "example": "We talked about the problem.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "above",
+            "pos": "prep",
+            "meaning": "เหนือกว่า / เหนือ",
+            "example": "The temperature is above 30 degrees.",
+            "difficulty": "A2",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "below",
+            "pos": "prep",
+            "meaning": "ต่ำกว่า",
+            "example": "The price is below $50.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "across from",
+            "pos": "prep",
+            "meaning": "ตรงข้าม",
+            "example": "The bank is across from the mall.",
+            "difficulty": "A2",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "along with",
+            "pos": "prep",
+            "meaning": "พร้อมกับ",
+            "example": "She came along with her friend.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "apart from",
+            "pos": "prep",
+            "meaning": "นอกจาก",
+            "example": "Apart from English, he speaks Thai.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "because of",
+            "pos": "prep",
+            "meaning": "เนื่องจาก",
+            "example": "We canceled the trip because of rain.",
+            "difficulty": "A2",
+            "category": [
+                "Reason"
+            ]
+        },
+        {
+            "word": "due to",
+            "pos": "prep",
+            "meaning": "เนื่องจาก (เป็นทางการกว่า)",
+            "example": "The delay was due to traffic.",
+            "difficulty": "A2",
+            "category": [
+                "Reason"
+            ]
+        },
+        {
+            "word": "instead of",
+            "pos": "prep",
+            "meaning": "แทนที่จะ",
+            "example": "We stayed home instead of going out.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "in case of",
+            "pos": "prep",
+            "meaning": "ในกรณีที่",
+            "example": "Call this number in case of emergency.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "in spite of",
+            "pos": "prep",
+            "meaning": "ทั้ง ๆ ที่",
+            "example": "In spite of the rain, we continued.",
+            "difficulty": "A2",
+            "category": [
+                "Contrast"
+            ]
+        },
+        {
+            "word": "according to",
+            "pos": "prep",
+            "meaning": "ตามที่",
+            "example": "According to the report, sales increased.",
+            "difficulty": "A2",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "out of",
+            "pos": "prep",
+            "meaning": "จาก / หมด",
+            "example": "We ran out of time.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "up to",
+            "pos": "prep",
+            "meaning": "จนถึง / ขึ้นอยู่กับ",
+            "example": "It’s up to you.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "down to",
+            "pos": "prep",
+            "meaning": "จนถึง (เหลือเพียง)",
+            "example": "The price is down to $10.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "next to",
+            "pos": "prep",
+            "meaning": "ถัดจาก",
+            "example": "She sat next to me.",
+            "difficulty": "A2",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "close to",
+            "pos": "prep",
+            "meaning": "ใกล้กับ",
+            "example": "The school is close to my house.",
+            "difficulty": "A2",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "far from",
+            "pos": "prep",
+            "meaning": "ไกลจาก",
+            "example": "My office is far from here.",
+            "difficulty": "A2",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "in front of",
+            "pos": "prep",
+            "meaning": "ข้างหน้า",
+            "example": "He stood in front of the class.",
+            "difficulty": "A2",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "in the middle of",
+            "pos": "prep",
+            "meaning": "ตรงกลางของ",
+            "example": "She sat in the middle of the room.",
+            "difficulty": "A2",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "at the end of",
+            "pos": "prep",
+            "meaning": "ตอนท้ายของ",
+            "example": "We met at the end of the movie.",
+            "difficulty": "A2",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "at the beginning of",
+            "pos": "prep",
+            "meaning": "ตอนต้นของ",
+            "example": "At the beginning of the year, I traveled.",
+            "difficulty": "A2",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "by the time",
+            "pos": "prep",
+            "meaning": "เมื่อถึงเวลา",
+            "example": "By the time we arrived, it was dark.",
+            "difficulty": "A2",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "from...to",
+            "pos": "prep",
+            "meaning": "จาก...ถึง...",
+            "example": "I work from Monday to Friday.",
+            "difficulty": "A2",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "during",
+            "pos": "prep",
+            "meaning": "ระหว่าง",
+            "example": "She slept during the flight.",
+            "difficulty": "A2",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "within",
+            "pos": "prep",
+            "meaning": "ภายใน (ช่วงเวลา)",
+            "example": "Finish it within two days.",
+            "difficulty": "A2",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "beyond",
+            "pos": "prep",
+            "meaning": "เกินกว่า",
+            "example": "This is beyond my control.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "against",
+            "pos": "prep",
+            "meaning": "ต่อต้าน / ชนกับ",
+            "example": "He leaned against the wall.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "towards",
+            "pos": "prep",
+            "meaning": "ไปทาง",
+            "example": "She walked towards the station.",
+            "difficulty": "A2",
+            "category": [
+                "Direction"
+            ]
+        },
+        {
+            "word": "throughout",
+            "pos": "prep",
+            "meaning": "ตลอดทั่ว",
+            "example": "It rained throughout the day.",
+            "difficulty": "A2",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "besides",
+            "pos": "prep",
+            "meaning": "นอกจาก",
+            "example": "Besides English, he studies math.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "except for",
+            "pos": "prep",
+            "meaning": "ยกเว้น",
+            "example": "Everyone came except for Tom.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "as for",
+            "pos": "prep",
+            "meaning": "สำหรับ",
+            "example": "As for me, I agree.",
+            "difficulty": "A2",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "by means of",
+            "pos": "prep",
+            "meaning": "โดยวิธี",
+            "example": "He solved it by means of technology.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "on behalf of",
+            "pos": "prep",
+            "meaning": "ในนามของ",
+            "example": "She spoke on behalf of the team.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "in addition to",
+            "pos": "prep",
+            "meaning": "นอกจากนั้น",
+            "example": "In addition to English, she speaks Chinese.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "in exchange for",
+            "pos": "prep",
+            "meaning": "แลกกับ",
+            "example": "He gave money in exchange for help.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "in relation to",
+            "pos": "prep",
+            "meaning": "เกี่ยวกับ",
+            "example": "In relation to your question, here is the answer.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "in terms of",
+            "pos": "prep",
+            "meaning": "ในแง่ของ",
+            "example": "In terms of cost, it is cheap.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "with regard to",
+            "pos": "prep",
+            "meaning": "เกี่ยวกับ (เป็นทางการ)",
+            "example": "With regard to your request, we agree.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "regarding",
+            "pos": "prep",
+            "meaning": "เกี่ยวกับ",
+            "example": "I emailed you regarding the meeting.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "concerning",
+            "pos": "prep",
+            "meaning": "เกี่ยวกับ",
+            "example": "He asked a question concerning the plan.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "following",
+            "pos": "prep",
+            "meaning": "หลังจาก",
+            "example": "Following the meeting, we left.",
+            "difficulty": "A2",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "including",
+            "pos": "prep",
+            "meaning": "รวมถึง",
+            "example": "Ten people, including me, joined.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "excluding",
+            "pos": "prep",
+            "meaning": "ยกเว้น",
+            "example": "Everyone came, excluding John.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "despite",
+            "pos": "prep",
+            "meaning": "ทั้ง ๆ ที่",
+            "example": "Despite the rain, we played.",
+            "difficulty": "A2",
+            "category": [
+                "Contrast"
+            ]
+        },
+        {
+            "word": "per",
+            "pos": "prep",
+            "meaning": "ต่อ",
+            "example": "The speed is 80 km per hour.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "via",
+            "pos": "prep",
+            "meaning": "ผ่านทาง",
+            "example": "Send it via email.",
+            "difficulty": "A2",
+            "category": [
+                "Technology"
+            ]
+        },
+        {
+            "word": "alongside",
+            "pos": "prep",
+            "meaning": "เคียงข้าง",
+            "example": "She worked alongside her team.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "beneath",
+            "pos": "prep",
+            "meaning": "ใต้ (ทางการกว่า under)",
+            "example": "The keys are beneath the table.",
+            "difficulty": "A2",
+            "category": [
+                "Place"
+            ]
+        }
+    ]
+}

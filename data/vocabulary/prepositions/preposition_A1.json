@@ -1,0 +1,484 @@
+{
+    "words": [
+        {
+            "word": "in",
+            "pos": "prep",
+            "meaning": "ใน",
+            "example": "She is in the room.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "on",
+            "pos": "prep",
+            "meaning": "บน",
+            "example": "The book is on the table.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "at",
+            "pos": "prep",
+            "meaning": "ที่",
+            "example": "I am at school.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "under",
+            "pos": "prep",
+            "meaning": "ใต้",
+            "example": "The cat is under the chair.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "over",
+            "pos": "prep",
+            "meaning": "เหนือ / ข้าม",
+            "example": "The plane flew over the city.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "between",
+            "pos": "prep",
+            "meaning": "ระหว่าง (สองสิ่ง)",
+            "example": "The shop is between the bank and the cafe.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "among",
+            "pos": "prep",
+            "meaning": "ท่ามกลาง",
+            "example": "She sat among her friends.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "behind",
+            "pos": "prep",
+            "meaning": "ข้างหลัง",
+            "example": "The car is behind the house.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "in front of",
+            "pos": "prep",
+            "meaning": "ข้างหน้า",
+            "example": "He is in front of the door.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "next to",
+            "pos": "prep",
+            "meaning": "ถัดจาก",
+            "example": "The bank is next to the hotel.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "near",
+            "pos": "prep",
+            "meaning": "ใกล้",
+            "example": "I live near the park.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "by",
+            "pos": "prep",
+            "meaning": "ข้าง ๆ / โดย",
+            "example": "She sat by me.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "beside",
+            "pos": "prep",
+            "meaning": "ข้าง ๆ",
+            "example": "He stood beside her.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "inside",
+            "pos": "prep",
+            "meaning": "ข้างใน",
+            "example": "Stay inside the house.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "outside",
+            "pos": "prep",
+            "meaning": "ข้างนอก",
+            "example": "They are outside the building.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "to",
+            "pos": "prep",
+            "meaning": "ไปยัง",
+            "example": "I go to work.",
+            "difficulty": "A1",
+            "category": [
+                "Direction"
+            ]
+        },
+        {
+            "word": "from",
+            "pos": "prep",
+            "meaning": "จาก",
+            "example": "She is from Thailand.",
+            "difficulty": "A1",
+            "category": [
+                "Direction"
+            ]
+        },
+        {
+            "word": "into",
+            "pos": "prep",
+            "meaning": "เข้าไปใน",
+            "example": "He walked into the room.",
+            "difficulty": "A1",
+            "category": [
+                "Direction"
+            ]
+        },
+        {
+            "word": "out of",
+            "pos": "prep",
+            "meaning": "ออกจาก",
+            "example": "She ran out of the house.",
+            "difficulty": "A1",
+            "category": [
+                "Direction"
+            ]
+        },
+        {
+            "word": "onto",
+            "pos": "prep",
+            "meaning": "ขึ้นไปบน",
+            "example": "The cat jumped onto the table.",
+            "difficulty": "A1",
+            "category": [
+                "Direction"
+            ]
+        },
+        {
+            "word": "off",
+            "pos": "prep",
+            "meaning": "ออกจาก / ลงจาก",
+            "example": "He fell off the bike.",
+            "difficulty": "A1",
+            "category": [
+                "Direction"
+            ]
+        },
+        {
+            "word": "through",
+            "pos": "prep",
+            "meaning": "ผ่าน",
+            "example": "We walked through the park.",
+            "difficulty": "A1",
+            "category": [
+                "Direction"
+            ]
+        },
+        {
+            "word": "across",
+            "pos": "prep",
+            "meaning": "ข้าม",
+            "example": "She walked across the street.",
+            "difficulty": "A1",
+            "category": [
+                "Direction"
+            ]
+        },
+        {
+            "word": "along",
+            "pos": "prep",
+            "meaning": "ตามแนว",
+            "example": "They walked along the river.",
+            "difficulty": "A1",
+            "category": [
+                "Direction"
+            ]
+        },
+        {
+            "word": "around",
+            "pos": "prep",
+            "meaning": "รอบ ๆ",
+            "example": "We sat around the table.",
+            "difficulty": "A1",
+            "category": [
+                "Direction"
+            ]
+        },
+        {
+            "word": "up",
+            "pos": "prep",
+            "meaning": "ขึ้นไป",
+            "example": "He climbed up the hill.",
+            "difficulty": "A1",
+            "category": [
+                "Direction"
+            ]
+        },
+        {
+            "word": "down",
+            "pos": "prep",
+            "meaning": "ลงไป",
+            "example": "She walked down the stairs.",
+            "difficulty": "A1",
+            "category": [
+                "Direction"
+            ]
+        },
+        {
+            "word": "for",
+            "pos": "prep",
+            "meaning": "สำหรับ / เป็นเวลา",
+            "example": "This gift is for you.",
+            "difficulty": "A1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "with",
+            "pos": "prep",
+            "meaning": "กับ / ด้วย",
+            "example": "She came with me.",
+            "difficulty": "A1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "without",
+            "pos": "prep",
+            "meaning": "โดยไม่มี",
+            "example": "He left without his bag.",
+            "difficulty": "A1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "about",
+            "pos": "prep",
+            "meaning": "เกี่ยวกับ",
+            "example": "We talked about work.",
+            "difficulty": "A1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "of",
+            "pos": "prep",
+            "meaning": "ของ",
+            "example": "A cup of coffee.",
+            "difficulty": "A1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "like",
+            "pos": "prep",
+            "meaning": "เหมือน",
+            "example": "She looks like her mother.",
+            "difficulty": "A1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "as",
+            "pos": "prep",
+            "meaning": "ในฐานะ",
+            "example": "He works as a teacher.",
+            "difficulty": "A1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "before",
+            "pos": "prep",
+            "meaning": "ก่อน",
+            "example": "Call me before dinner.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "after",
+            "pos": "prep",
+            "meaning": "หลังจาก",
+            "example": "We met after work.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "during",
+            "pos": "prep",
+            "meaning": "ระหว่าง",
+            "example": "She slept during the movie.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "since",
+            "pos": "prep",
+            "meaning": "ตั้งแต่",
+            "example": "I have lived here since 2020.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "until",
+            "pos": "prep",
+            "meaning": "จนกระทั่ง",
+            "example": "Wait until tomorrow.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "past",
+            "pos": "prep",
+            "meaning": "ผ่าน",
+            "example": "It’s half past six.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "after",
+            "pos": "prep",
+            "meaning": "หลังจาก",
+            "example": "After school, we play football.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "per",
+            "pos": "prep",
+            "meaning": "ต่อ",
+            "example": "The speed is 60 km per hour.",
+            "difficulty": "A1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "via",
+            "pos": "prep",
+            "meaning": "ผ่านทาง",
+            "example": "Send it via email.",
+            "difficulty": "A1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "against",
+            "pos": "prep",
+            "meaning": "ต่อต้าน / ชนกับ",
+            "example": "The bike hit against the wall.",
+            "difficulty": "A1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "above",
+            "pos": "prep",
+            "meaning": "เหนือกว่า / เหนือ",
+            "example": "The picture is above the sofa.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "below",
+            "pos": "prep",
+            "meaning": "ต่ำกว่า / ใต้",
+            "example": "The temperature is below zero.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "inside of",
+            "pos": "prep",
+            "meaning": "ภายใน",
+            "example": "Stay inside of the building.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "outside of",
+            "pos": "prep",
+            "meaning": "ภายนอก",
+            "example": "He is outside of the office.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        }
+    ]
+}

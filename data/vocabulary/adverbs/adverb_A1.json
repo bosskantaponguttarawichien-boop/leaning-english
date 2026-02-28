@@ -1,0 +1,504 @@
+{
+    "words": [
+        {
+            "word": "very",
+            "pos": "adv",
+            "meaning": "มาก",
+            "example": "She is very happy.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "too",
+            "pos": "adv",
+            "meaning": "เกินไป / ด้วย",
+            "example": "It is too hot.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "so",
+            "pos": "adv",
+            "meaning": "มาก / ดังนั้น",
+            "example": "I am so tired.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "really",
+            "pos": "adv",
+            "meaning": "จริง ๆ",
+            "example": "I really like it.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "quite",
+            "pos": "adv",
+            "meaning": "ค่อนข้าง",
+            "example": "It is quite easy.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "almost",
+            "pos": "adv",
+            "meaning": "เกือบจะ",
+            "example": "I almost forgot.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "always",
+            "pos": "adv",
+            "meaning": "เสมอ",
+            "example": "She always comes early.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "usually",
+            "pos": "adv",
+            "meaning": "โดยปกติ",
+            "example": "I usually wake up at 6.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "often",
+            "pos": "adv",
+            "meaning": "บ่อย ๆ",
+            "example": "We often eat out.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "sometimes",
+            "pos": "adv",
+            "meaning": "บางครั้ง",
+            "example": "I sometimes feel tired.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "never",
+            "pos": "adv",
+            "meaning": "ไม่เคย",
+            "example": "He never drinks coffee.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "ever",
+            "pos": "adv",
+            "meaning": "เคย",
+            "example": "Have you ever been there?",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "today",
+            "pos": "adv",
+            "meaning": "วันนี้",
+            "example": "I am busy today.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "tomorrow",
+            "pos": "adv",
+            "meaning": "พรุ่งนี้",
+            "example": "See you tomorrow.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "yesterday",
+            "pos": "adv",
+            "meaning": "เมื่อวาน",
+            "example": "I met her yesterday.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "now",
+            "pos": "adv",
+            "meaning": "ตอนนี้",
+            "example": "I am working now.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "then",
+            "pos": "adv",
+            "meaning": "ตอนนั้น / แล้ว",
+            "example": "We were happy then.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "here",
+            "pos": "adv",
+            "meaning": "ที่นี่",
+            "example": "Come here.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "there",
+            "pos": "adv",
+            "meaning": "ที่นั่น",
+            "example": "Put it there.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "everywhere",
+            "pos": "adv",
+            "meaning": "ทุกที่",
+            "example": "I looked everywhere.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "somewhere",
+            "pos": "adv",
+            "meaning": "ที่ไหนสักแห่ง",
+            "example": "Let’s go somewhere.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "anywhere",
+            "pos": "adv",
+            "meaning": "ที่ไหนก็ได้",
+            "example": "You can sit anywhere.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "inside",
+            "pos": "adv",
+            "meaning": "ข้างใน",
+            "example": "Please come inside.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "outside",
+            "pos": "adv",
+            "meaning": "ข้างนอก",
+            "example": "The kids are playing outside.",
+            "difficulty": "A1",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "up",
+            "pos": "adv",
+            "meaning": "ขึ้น",
+            "example": "Stand up.",
+            "difficulty": "A1",
+            "category": [
+                "Direction"
+            ]
+        },
+        {
+            "word": "down",
+            "pos": "adv",
+            "meaning": "ลง",
+            "example": "Sit down.",
+            "difficulty": "A1",
+            "category": [
+                "Direction"
+            ]
+        },
+        {
+            "word": "away",
+            "pos": "adv",
+            "meaning": "ออกไป / ห่างออกไป",
+            "example": "Go away.",
+            "difficulty": "A1",
+            "category": [
+                "Direction"
+            ]
+        },
+        {
+            "word": "back",
+            "pos": "adv",
+            "meaning": "กลับ",
+            "example": "Come back soon.",
+            "difficulty": "A1",
+            "category": [
+                "Direction"
+            ]
+        },
+        {
+            "word": "early",
+            "pos": "adv",
+            "meaning": "เร็ว / แต่เช้า",
+            "example": "She arrived early.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "late",
+            "pos": "adv",
+            "meaning": "สาย",
+            "example": "He came late.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "fast",
+            "pos": "adv",
+            "meaning": "เร็ว",
+            "example": "He runs fast.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "slowly",
+            "pos": "adv",
+            "meaning": "อย่างช้า ๆ",
+            "example": "Please speak slowly.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "quickly",
+            "pos": "adv",
+            "meaning": "อย่างรวดเร็ว",
+            "example": "She finished quickly.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "carefully",
+            "pos": "adv",
+            "meaning": "อย่างระมัดระวัง",
+            "example": "Drive carefully.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "easily",
+            "pos": "adv",
+            "meaning": "อย่างง่ายดาย",
+            "example": "I solved it easily.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "well",
+            "pos": "adv",
+            "meaning": "อย่างดี",
+            "example": "She speaks English well.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "badly",
+            "pos": "adv",
+            "meaning": "อย่างแย่",
+            "example": "He played badly.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "again",
+            "pos": "adv",
+            "meaning": "อีกครั้ง",
+            "example": "Say that again.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "together",
+            "pos": "adv",
+            "meaning": "ด้วยกัน",
+            "example": "We worked together.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "alone",
+            "pos": "adv",
+            "meaning": "คนเดียว",
+            "example": "She lives alone.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "already",
+            "pos": "adv",
+            "meaning": "แล้ว",
+            "example": "I already finished.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "yet",
+            "pos": "adv",
+            "meaning": "ยัง",
+            "example": "I haven’t finished yet.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "still",
+            "pos": "adv",
+            "meaning": "ยังคง",
+            "example": "I am still working.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "maybe",
+            "pos": "adv",
+            "meaning": "บางที",
+            "example": "Maybe we can try later.",
+            "difficulty": "A1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "also",
+            "pos": "adv",
+            "meaning": "ด้วย / เช่นกัน",
+            "example": "I also like coffee.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "only",
+            "pos": "adv",
+            "meaning": "เพียงเท่านั้น",
+            "example": "I only need five minutes.",
+            "difficulty": "A1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "even",
+            "pos": "adv",
+            "meaning": "แม้กระทั่ง",
+            "example": "Even he agreed.",
+            "difficulty": "A1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "especially",
+            "pos": "adv",
+            "meaning": "โดยเฉพาะ",
+            "example": "I like fruit, especially mango.",
+            "difficulty": "A1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "probably",
+            "pos": "adv",
+            "meaning": "น่าจะ",
+            "example": "It will probably rain.",
+            "difficulty": "A1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "of course",
+            "pos": "adv",
+            "meaning": "แน่นอน",
+            "example": "Of course I will help you.",
+            "difficulty": "A1",
+            "category": [
+                "Communication"
+            ]
+        }
+    ]
+}

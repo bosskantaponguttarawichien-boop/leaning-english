@@ -1,0 +1,424 @@
+{
+    "words": [
+        {
+            "word": "however",
+            "pos": "conj",
+            "meaning": "อย่างไรก็ตาม",
+            "example": "However, we need more data.",
+            "difficulty": "B1",
+            "category": [
+                "Contrast"
+            ]
+        },
+        {
+            "word": "therefore",
+            "pos": "conj",
+            "meaning": "ดังนั้น",
+            "example": "The cost increased; therefore, we revised the plan.",
+            "difficulty": "B1",
+            "category": [
+                "Result"
+            ]
+        },
+        {
+            "word": "moreover",
+            "pos": "conj",
+            "meaning": "ยิ่งไปกว่านั้น",
+            "example": "Moreover, the results were impressive.",
+            "difficulty": "B1",
+            "category": [
+                "Addition"
+            ]
+        },
+        {
+            "word": "furthermore",
+            "pos": "conj",
+            "meaning": "นอกจากนี้ (เป็นทางการ)",
+            "example": "Furthermore, we improved efficiency.",
+            "difficulty": "B1",
+            "category": [
+                "Addition"
+            ]
+        },
+        {
+            "word": "meanwhile",
+            "pos": "conj",
+            "meaning": "ในขณะเดียวกัน",
+            "example": "Meanwhile, the team prepared the report.",
+            "difficulty": "B1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "otherwise",
+            "pos": "conj",
+            "meaning": "ไม่เช่นนั้น",
+            "example": "Hurry up; otherwise, we’ll be late.",
+            "difficulty": "B1",
+            "category": [
+                "Condition"
+            ]
+        },
+        {
+            "word": "instead",
+            "pos": "conj",
+            "meaning": "แทนที่จะ",
+            "example": "We stayed home instead of going out.",
+            "difficulty": "B1",
+            "category": [
+                "Contrast"
+            ]
+        },
+        {
+            "word": "consequently",
+            "pos": "conj",
+            "meaning": "ผลที่ตามมา",
+            "example": "He missed the deadline; consequently, he failed.",
+            "difficulty": "B1",
+            "category": [
+                "Result"
+            ]
+        },
+        {
+            "word": "as a result",
+            "pos": "conj",
+            "meaning": "ดังนั้น / เป็นผลให้",
+            "example": "Sales dropped. As a result, we reduced costs.",
+            "difficulty": "B1",
+            "category": [
+                "Result"
+            ]
+        },
+        {
+            "word": "for this reason",
+            "pos": "conj",
+            "meaning": "ด้วยเหตุนี้",
+            "example": "For this reason, we postponed the event.",
+            "difficulty": "B1",
+            "category": [
+                "Result"
+            ]
+        },
+        {
+            "word": "although",
+            "pos": "conj",
+            "meaning": "แม้ว่า",
+            "example": "Although it was risky, we continued.",
+            "difficulty": "B1",
+            "category": [
+                "Contrast"
+            ]
+        },
+        {
+            "word": "even though",
+            "pos": "conj",
+            "meaning": "แม้ว่า (เน้นกว่า)",
+            "example": "Even though it was difficult, she succeeded.",
+            "difficulty": "B1",
+            "category": [
+                "Contrast"
+            ]
+        },
+        {
+            "word": "whereas",
+            "pos": "conj",
+            "meaning": "ในขณะที่ (เปรียบเทียบ)",
+            "example": "She prefers tea, whereas I prefer coffee.",
+            "difficulty": "B1",
+            "category": [
+                "Comparison"
+            ]
+        },
+        {
+            "word": "while",
+            "pos": "conj",
+            "meaning": "ในขณะที่ / ตรงกันข้าม",
+            "example": "While I agree, I see another issue.",
+            "difficulty": "B1",
+            "category": [
+                "Contrast"
+            ]
+        },
+        {
+            "word": "on the other hand",
+            "pos": "conj",
+            "meaning": "ในทางกลับกัน",
+            "example": "On the other hand, costs are rising.",
+            "difficulty": "B1",
+            "category": [
+                "Contrast"
+            ]
+        },
+        {
+            "word": "if",
+            "pos": "conj",
+            "meaning": "ถ้า",
+            "example": "If we invest now, we may grow.",
+            "difficulty": "B1",
+            "category": [
+                "Condition"
+            ]
+        },
+        {
+            "word": "unless",
+            "pos": "conj",
+            "meaning": "ถ้าไม่",
+            "example": "We won’t succeed unless we try.",
+            "difficulty": "B1",
+            "category": [
+                "Condition"
+            ]
+        },
+        {
+            "word": "provided that",
+            "pos": "conj",
+            "meaning": "ถ้า (เป็นทางการ)",
+            "example": "You can leave provided that you finish.",
+            "difficulty": "B1",
+            "category": [
+                "Condition"
+            ]
+        },
+        {
+            "word": "as long as",
+            "pos": "conj",
+            "meaning": "ตราบใดที่",
+            "example": "You can stay as long as you are quiet.",
+            "difficulty": "B1",
+            "category": [
+                "Condition"
+            ]
+        },
+        {
+            "word": "in case",
+            "pos": "conj",
+            "meaning": "เผื่อว่า",
+            "example": "Take an umbrella in case it rains.",
+            "difficulty": "B1",
+            "category": [
+                "Condition"
+            ]
+        },
+        {
+            "word": "because",
+            "pos": "conj",
+            "meaning": "เพราะว่า",
+            "example": "We canceled because it was unsafe.",
+            "difficulty": "B1",
+            "category": [
+                "Reason"
+            ]
+        },
+        {
+            "word": "since",
+            "pos": "conj",
+            "meaning": "เพราะว่า / ตั้งแต่",
+            "example": "Since you are here, let's begin.",
+            "difficulty": "B1",
+            "category": [
+                "Reason"
+            ]
+        },
+        {
+            "word": "as",
+            "pos": "conj",
+            "meaning": "เพราะว่า / ขณะที่",
+            "example": "As demand increased, we hired staff.",
+            "difficulty": "B1",
+            "category": [
+                "Reason"
+            ]
+        },
+        {
+            "word": "so that",
+            "pos": "conj",
+            "meaning": "เพื่อที่ว่า",
+            "example": "We met early so that we could prepare.",
+            "difficulty": "B1",
+            "category": [
+                "Purpose"
+            ]
+        },
+        {
+            "word": "in order that",
+            "pos": "conj",
+            "meaning": "เพื่อที่ว่า (ทางการ)",
+            "example": "He spoke clearly in order that everyone could understand.",
+            "difficulty": "B1",
+            "category": [
+                "Purpose"
+            ]
+        },
+        {
+            "word": "when",
+            "pos": "conj",
+            "meaning": "เมื่อ",
+            "example": "Call me when you arrive.",
+            "difficulty": "B1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "whenever",
+            "pos": "conj",
+            "meaning": "เมื่อใดก็ตามที่",
+            "example": "Call me whenever you need help.",
+            "difficulty": "B1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "before",
+            "pos": "conj",
+            "meaning": "ก่อนที่",
+            "example": "Finish it before you leave.",
+            "difficulty": "B1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "after",
+            "pos": "conj",
+            "meaning": "หลังจากที่",
+            "example": "We met after the meeting ended.",
+            "difficulty": "B1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "once",
+            "pos": "conj",
+            "meaning": "ทันทีที่",
+            "example": "Once you finish, let me know.",
+            "difficulty": "B1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "both...and",
+            "pos": "conj",
+            "meaning": "ทั้ง...และ",
+            "example": "She is both skilled and experienced.",
+            "difficulty": "B1",
+            "category": [
+                "Addition"
+            ]
+        },
+        {
+            "word": "not only...but also",
+            "pos": "conj",
+            "meaning": "ไม่เพียงแต่...แต่ยัง",
+            "example": "He is not only smart but also reliable.",
+            "difficulty": "B1",
+            "category": [
+                "Addition"
+            ]
+        },
+        {
+            "word": "either...or",
+            "pos": "conj",
+            "meaning": "ไม่ก็...หรือ",
+            "example": "You can either join or leave.",
+            "difficulty": "B1",
+            "category": [
+                "Choice"
+            ]
+        },
+        {
+            "word": "neither...nor",
+            "pos": "conj",
+            "meaning": "ไม่ทั้ง...และ",
+            "example": "Neither the manager nor the staff agreed.",
+            "difficulty": "B1",
+            "category": [
+                "Choice"
+            ]
+        },
+        {
+            "word": "rather than",
+            "pos": "conj",
+            "meaning": "แทนที่จะ",
+            "example": "We chose to wait rather than rush.",
+            "difficulty": "B1",
+            "category": [
+                "Comparison"
+            ]
+        },
+        {
+            "word": "than",
+            "pos": "conj",
+            "meaning": "กว่า (เปรียบเทียบ)",
+            "example": "This option is better than the previous one.",
+            "difficulty": "B1",
+            "category": [
+                "Comparison"
+            ]
+        },
+        {
+            "word": "despite",
+            "pos": "conj",
+            "meaning": "ทั้ง ๆ ที่",
+            "example": "Despite the risk, they invested.",
+            "difficulty": "B1",
+            "category": [
+                "Contrast"
+            ]
+        },
+        {
+            "word": "in spite of",
+            "pos": "conj",
+            "meaning": "ทั้ง ๆ ที่",
+            "example": "In spite of the delay, we continued.",
+            "difficulty": "B1",
+            "category": [
+                "Contrast"
+            ]
+        },
+        {
+            "word": "even if",
+            "pos": "conj",
+            "meaning": "แม้ว่าจะ",
+            "example": "Even if it rains, we will go.",
+            "difficulty": "B1",
+            "category": [
+                "Condition"
+            ]
+        },
+        {
+            "word": "wherever",
+            "pos": "conj",
+            "meaning": "ที่ใดก็ตามที่",
+            "example": "Sit wherever you like.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "whatever",
+            "pos": "conj",
+            "meaning": "อะไรก็ตามที่",
+            "example": "Do whatever you think is right.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "whoever",
+            "pos": "conj",
+            "meaning": "ใครก็ตามที่",
+            "example": "Whoever wins will lead the team.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        }
+    ]
+}

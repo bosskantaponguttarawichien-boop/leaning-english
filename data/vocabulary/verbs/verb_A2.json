@@ -1,0 +1,504 @@
+{
+    "words": [
+        {
+            "word": "decide",
+            "pos": "v",
+            "meaning": "ตัดสินใจ",
+            "example": "I decided to stay home.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "choose",
+            "pos": "v",
+            "meaning": "เลือก",
+            "example": "Choose the best answer.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "change",
+            "pos": "v",
+            "meaning": "เปลี่ยน",
+            "example": "I want to change my job.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "improve",
+            "pos": "v",
+            "meaning": "พัฒนาให้ดีขึ้น",
+            "example": "I want to improve my English.",
+            "difficulty": "A2",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "practice",
+            "pos": "v",
+            "meaning": "ฝึกฝน",
+            "example": "Practice speaking every day.",
+            "difficulty": "A2",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "remember",
+            "pos": "v",
+            "meaning": "จำได้",
+            "example": "I remember your name.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "forget",
+            "pos": "v",
+            "meaning": "ลืม",
+            "example": "Don't forget your keys.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "understand",
+            "pos": "v",
+            "meaning": "เข้าใจ",
+            "example": "I understand the problem.",
+            "difficulty": "A2",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "explain",
+            "pos": "v",
+            "meaning": "อธิบาย",
+            "example": "Can you explain this?",
+            "difficulty": "A2",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "describe",
+            "pos": "v",
+            "meaning": "บรรยาย",
+            "example": "Describe your experience.",
+            "difficulty": "A2",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "agree",
+            "pos": "v",
+            "meaning": "เห็นด้วย",
+            "example": "I agree with you.",
+            "difficulty": "A2",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "disagree",
+            "pos": "v",
+            "meaning": "ไม่เห็นด้วย",
+            "example": "I disagree with that idea.",
+            "difficulty": "A2",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "invite",
+            "pos": "v",
+            "meaning": "เชิญ",
+            "example": "She invited me to a party.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "offer",
+            "pos": "v",
+            "meaning": "เสนอ",
+            "example": "He offered to help me.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "suggest",
+            "pos": "v",
+            "meaning": "แนะนำ",
+            "example": "I suggest a different plan.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "travel",
+            "pos": "v",
+            "meaning": "เดินทาง",
+            "example": "I travel once a year.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "visit",
+            "pos": "v",
+            "meaning": "เยี่ยม",
+            "example": "We visited our grandparents.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "arrive",
+            "pos": "v",
+            "meaning": "มาถึง",
+            "example": "The train arrived late.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "leave",
+            "pos": "v",
+            "meaning": "ออกจาก",
+            "example": "I leave work at 5 PM.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "return",
+            "pos": "v",
+            "meaning": "กลับมา",
+            "example": "She returned home early.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "prepare",
+            "pos": "v",
+            "meaning": "เตรียม",
+            "example": "I prepared dinner.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "plan",
+            "pos": "v",
+            "meaning": "วางแผน",
+            "example": "We are planning a trip.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "organize",
+            "pos": "v",
+            "meaning": "จัดระเบียบ",
+            "example": "She organized the meeting.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "build",
+            "pos": "v",
+            "meaning": "สร้าง",
+            "example": "They built a new house.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "fix",
+            "pos": "v",
+            "meaning": "ซ่อม",
+            "example": "Can you fix this?",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "check",
+            "pos": "v",
+            "meaning": "ตรวจสอบ",
+            "example": "Check your email.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "search",
+            "pos": "v",
+            "meaning": "ค้นหา",
+            "example": "I searched for the answer.",
+            "difficulty": "A2",
+            "category": [
+                "Technology"
+            ]
+        },
+        {
+            "word": "compare",
+            "pos": "v",
+            "meaning": "เปรียบเทียบ",
+            "example": "Compare the two options.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "add",
+            "pos": "v",
+            "meaning": "เพิ่ม",
+            "example": "Add more details.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "reduce",
+            "pos": "v",
+            "meaning": "ลดลง",
+            "example": "We need to reduce costs.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "increase",
+            "pos": "v",
+            "meaning": "เพิ่มขึ้น",
+            "example": "Prices increased last year.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "continue",
+            "pos": "v",
+            "meaning": "ดำเนินต่อ",
+            "example": "Please continue speaking.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "happen",
+            "pos": "v",
+            "meaning": "เกิดขึ้น",
+            "example": "What happened?",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "seem",
+            "pos": "v",
+            "meaning": "ดูเหมือน",
+            "example": "He seems tired.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "become",
+            "pos": "v",
+            "meaning": "กลายเป็น",
+            "example": "She became a teacher.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "bring",
+            "pos": "v",
+            "meaning": "นำมา",
+            "example": "Bring your laptop.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "carry",
+            "pos": "v",
+            "meaning": "ถือ / แบก",
+            "example": "He carried the bag.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "wear",
+            "pos": "v",
+            "meaning": "สวมใส่",
+            "example": "She wears a uniform.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "clean",
+            "pos": "v",
+            "meaning": "ทำความสะอาด",
+            "example": "I cleaned my room.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "cook",
+            "pos": "v",
+            "meaning": "ทำอาหาร",
+            "example": "She cooks dinner every day.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "drive",
+            "pos": "v",
+            "meaning": "ขับรถ",
+            "example": "I drive to work.",
+            "difficulty": "A2",
+            "category": [
+                "Transport"
+            ]
+        },
+        {
+            "word": "ride",
+            "pos": "v",
+            "meaning": "ขี่",
+            "example": "He rides a bike.",
+            "difficulty": "A2",
+            "category": [
+                "Transport"
+            ]
+        },
+        {
+            "word": "send",
+            "pos": "v",
+            "meaning": "ส่ง",
+            "example": "Send me the file.",
+            "difficulty": "A2",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "reply",
+            "pos": "v",
+            "meaning": "ตอบกลับ",
+            "example": "She replied quickly.",
+            "difficulty": "A2",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "promise",
+            "pos": "v",
+            "meaning": "สัญญา",
+            "example": "I promise to help you.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "expect",
+            "pos": "v",
+            "meaning": "คาดหวัง",
+            "example": "I expect good results.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "hope",
+            "pos": "v",
+            "meaning": "หวัง",
+            "example": "I hope you are well.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "win",
+            "pos": "v",
+            "meaning": "ชนะ",
+            "example": "Our team won the game.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "lose",
+            "pos": "v",
+            "meaning": "แพ้ / ทำหาย",
+            "example": "I lost my keys.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "share",
+            "pos": "v",
+            "meaning": "แบ่งปัน",
+            "example": "Share your ideas.",
+            "difficulty": "A2",
+            "category": [
+                "Communication"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,504 @@
+{
+    "words": [
+        {
+            "word": "effective",
+            "pos": "adj",
+            "meaning": "มีประสิทธิภาพ",
+            "example": "This strategy is effective.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "efficient",
+            "pos": "adj",
+            "meaning": "มีประสิทธิผล / ทำงานเร็วดี",
+            "example": "She is very efficient.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "significant",
+            "pos": "adj",
+            "meaning": "สำคัญมาก",
+            "example": "There was a significant change.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "relevant",
+            "pos": "adj",
+            "meaning": "เกี่ยวข้อง",
+            "example": "This information is relevant.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "appropriate",
+            "pos": "adj",
+            "meaning": "เหมาะสม",
+            "example": "That is not appropriate behavior.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "reasonable",
+            "pos": "adj",
+            "meaning": "สมเหตุสมผล",
+            "example": "That sounds reasonable.",
+            "difficulty": "B1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "responsible",
+            "pos": "adj",
+            "meaning": "มีความรับผิดชอบ",
+            "example": "He is responsible for this project.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "reliable",
+            "pos": "adj",
+            "meaning": "เชื่อถือได้",
+            "example": "She is a reliable employee.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "flexible",
+            "pos": "adj",
+            "meaning": "ยืดหยุ่น",
+            "example": "We need a flexible schedule.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "available",
+            "pos": "adj",
+            "meaning": "พร้อมใช้งาน / ว่าง",
+            "example": "The manager is available now.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "confident",
+            "pos": "adj",
+            "meaning": "มั่นใจ",
+            "example": "She feels confident about the exam.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "independent",
+            "pos": "adj",
+            "meaning": "เป็นอิสระ",
+            "example": "He is financially independent.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "creative",
+            "pos": "adj",
+            "meaning": "สร้างสรรค์",
+            "example": "She has creative ideas.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "competitive",
+            "pos": "adj",
+            "meaning": "มีการแข่งขันสูง",
+            "example": "The market is very competitive.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "professional",
+            "pos": "adj",
+            "meaning": "เป็นมืออาชีพ",
+            "example": "He gave a professional presentation.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "practical",
+            "pos": "adj",
+            "meaning": "ปฏิบัติได้จริง",
+            "example": "This is a practical solution.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "logical",
+            "pos": "adj",
+            "meaning": "มีเหตุผล",
+            "example": "That is a logical explanation.",
+            "difficulty": "B1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "obvious",
+            "pos": "adj",
+            "meaning": "ชัดเจนมาก",
+            "example": "It is obvious that he is tired.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "serious",
+            "pos": "adj",
+            "meaning": "ร้ายแรง / จริงจัง",
+            "example": "This is a serious issue.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "complex",
+            "pos": "adj",
+            "meaning": "ซับซ้อน",
+            "example": "The problem is complex.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "simple",
+            "pos": "adj",
+            "meaning": "เรียบง่าย",
+            "example": "Keep it simple.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "clear",
+            "pos": "adj",
+            "meaning": "ชัดเจน",
+            "example": "The instructions are clear.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "accurate",
+            "pos": "adj",
+            "meaning": "ถูกต้องแม่นยำ",
+            "example": "The data is accurate.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "incorrect",
+            "pos": "adj",
+            "meaning": "ไม่ถูกต้อง",
+            "example": "That answer is incorrect.",
+            "difficulty": "B1",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "aware",
+            "pos": "adj",
+            "meaning": "ตระหนักรู้",
+            "example": "I am aware of the risks.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "concerned",
+            "pos": "adj",
+            "meaning": "กังวล / เกี่ยวข้อง",
+            "example": "I am concerned about this issue.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "satisfied",
+            "pos": "adj",
+            "meaning": "พอใจ",
+            "example": "The customer is satisfied.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "disappointed",
+            "pos": "adj",
+            "meaning": "ผิดหวัง",
+            "example": "She was disappointed with the result.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "motivated",
+            "pos": "adj",
+            "meaning": "มีแรงจูงใจ",
+            "example": "I feel motivated to improve.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "determined",
+            "pos": "adj",
+            "meaning": "มุ่งมั่น",
+            "example": "He is determined to succeed.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "successful",
+            "pos": "adj",
+            "meaning": "ประสบความสำเร็จ",
+            "example": "It was a successful event.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "unsuccessful",
+            "pos": "adj",
+            "meaning": "ไม่ประสบความสำเร็จ",
+            "example": "The attempt was unsuccessful.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "valuable",
+            "pos": "adj",
+            "meaning": "มีค่า",
+            "example": "This experience is valuable.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "necessary",
+            "pos": "adj",
+            "meaning": "จำเป็น",
+            "example": "It is necessary to act now.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "essential",
+            "pos": "adj",
+            "meaning": "จำเป็นอย่างยิ่ง",
+            "example": "Communication is essential.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "current",
+            "pos": "adj",
+            "meaning": "ปัจจุบัน",
+            "example": "This is the current situation.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "previous",
+            "pos": "adj",
+            "meaning": "ก่อนหน้า",
+            "example": "In my previous job, I worked in sales.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "potential",
+            "pos": "adj",
+            "meaning": "มีศักยภาพ",
+            "example": "There is potential growth.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "financial",
+            "pos": "adj",
+            "meaning": "เกี่ยวกับการเงิน",
+            "example": "We need financial support.",
+            "difficulty": "B1",
+            "category": [
+                "Finance"
+            ]
+        },
+        {
+            "word": "technical",
+            "pos": "adj",
+            "meaning": "ด้านเทคนิค",
+            "example": "He has technical skills.",
+            "difficulty": "B1",
+            "category": [
+                "Technology"
+            ]
+        },
+        {
+            "word": "global",
+            "pos": "adj",
+            "meaning": "ทั่วโลก",
+            "example": "It is a global company.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "local",
+            "pos": "adj",
+            "meaning": "ท้องถิ่น",
+            "example": "We support local businesses.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "overall",
+            "pos": "adj",
+            "meaning": "โดยรวม",
+            "example": "The overall result is positive.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "direct",
+            "pos": "adj",
+            "meaning": "โดยตรง",
+            "example": "This has a direct impact.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "indirect",
+            "pos": "adj",
+            "meaning": "ทางอ้อม",
+            "example": "There was an indirect effect.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "specific",
+            "pos": "adj",
+            "meaning": "เฉพาะเจาะจง",
+            "example": "Do you have a specific plan?",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "general",
+            "pos": "adj",
+            "meaning": "ทั่วไป",
+            "example": "In general, people agree.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "positive",
+            "pos": "adj",
+            "meaning": "เชิงบวก",
+            "example": "She has a positive attitude.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "negative",
+            "pos": "adj",
+            "meaning": "เชิงลบ",
+            "example": "That was a negative comment.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "critical",
+            "pos": "adj",
+            "meaning": "สำคัญมาก / วิพากษ์วิจารณ์",
+            "example": "This is a critical issue.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        }
+    ]
+}

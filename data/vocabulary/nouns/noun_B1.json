@@ -1,0 +1,484 @@
+{
+    "words": [
+        {
+            "word": "opportunity",
+            "pos": "n",
+            "meaning": "โอกาส",
+            "example": "This is a great opportunity for you.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "environment",
+            "pos": "n",
+            "meaning": "สิ่งแวดล้อม",
+            "example": "We need to protect the environment.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "improvement",
+            "pos": "n",
+            "meaning": "การพัฒนาให้ดีขึ้น",
+            "example": "I see a big improvement in your English.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "development",
+            "pos": "n",
+            "meaning": "การพัฒนา",
+            "example": "The development of technology is fast.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "strategy",
+            "pos": "n",
+            "meaning": "กลยุทธ์",
+            "example": "We need a better strategy.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "performance",
+            "pos": "n",
+            "meaning": "ผลงาน / การแสดง",
+            "example": "Her performance was impressive.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "relationship",
+            "pos": "n",
+            "meaning": "ความสัมพันธ์",
+            "example": "They have a good relationship.",
+            "difficulty": "B1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "communication",
+            "pos": "n",
+            "meaning": "การสื่อสาร",
+            "example": "Good communication is important at work.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "responsibility",
+            "pos": "n",
+            "meaning": "ความรับผิดชอบ",
+            "example": "It is your responsibility to finish the task.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "management",
+            "pos": "n",
+            "meaning": "การบริหารจัดการ",
+            "example": "She works in management.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "support",
+            "pos": "n",
+            "meaning": "การสนับสนุน",
+            "example": "Thank you for your support.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "feedback",
+            "pos": "n",
+            "meaning": "คำแนะนำ / คำติชม",
+            "example": "Can you give me some feedback?",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "suggestion",
+            "pos": "n",
+            "meaning": "ข้อเสนอแนะ",
+            "example": "That’s a good suggestion.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "agreement",
+            "pos": "n",
+            "meaning": "ข้อตกลง",
+            "example": "We reached an agreement.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "discussion",
+            "pos": "n",
+            "meaning": "การอภิปราย",
+            "example": "We had a long discussion.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "opinion",
+            "pos": "n",
+            "meaning": "ความคิดเห็น",
+            "example": "In my opinion, this is the best option.",
+            "difficulty": "B1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "perspective",
+            "pos": "n",
+            "meaning": "มุมมอง",
+            "example": "From my perspective, it’s a good idea.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "advantage",
+            "pos": "n",
+            "meaning": "ข้อดี",
+            "example": "This plan has many advantages.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "disadvantage",
+            "pos": "n",
+            "meaning": "ข้อเสีย",
+            "example": "The main disadvantage is the cost.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "challenge",
+            "pos": "n",
+            "meaning": "ความท้าทาย",
+            "example": "Learning English is a challenge.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "success",
+            "pos": "n",
+            "meaning": "ความสำเร็จ",
+            "example": "Hard work leads to success.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "failure",
+            "pos": "n",
+            "meaning": "ความล้มเหลว",
+            "example": "Failure is part of learning.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "mistake",
+            "pos": "n",
+            "meaning": "ความผิดพลาด",
+            "example": "Everyone makes mistakes.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "behavior",
+            "pos": "n",
+            "meaning": "พฤติกรรม",
+            "example": "His behavior was strange.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "culture",
+            "pos": "n",
+            "meaning": "วัฒนธรรม",
+            "example": "Thai culture is unique.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "community",
+            "pos": "n",
+            "meaning": "ชุมชน",
+            "example": "She helps the local community.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "technology",
+            "pos": "n",
+            "meaning": "เทคโนโลยี",
+            "example": "Technology is changing our lives.",
+            "difficulty": "B1",
+            "category": [
+                "Technology"
+            ]
+        },
+        {
+            "word": "software",
+            "pos": "n",
+            "meaning": "ซอฟต์แวร์",
+            "example": "We use new software at work.",
+            "difficulty": "B1",
+            "category": [
+                "Technology"
+            ]
+        },
+        {
+            "word": "application",
+            "pos": "n",
+            "meaning": "แอปพลิเคชัน / ใบสมัคร",
+            "example": "I submitted my job application.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "database",
+            "pos": "n",
+            "meaning": "ฐานข้อมูล",
+            "example": "The data is stored in a database.",
+            "difficulty": "B1",
+            "category": [
+                "Technology"
+            ]
+        },
+        {
+            "word": "security",
+            "pos": "n",
+            "meaning": "ความปลอดภัย",
+            "example": "Online security is important.",
+            "difficulty": "B1",
+            "category": [
+                "Technology"
+            ]
+        },
+        {
+            "word": "risk",
+            "pos": "n",
+            "meaning": "ความเสี่ยง",
+            "example": "There is a risk of failure.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "benefit",
+            "pos": "n",
+            "meaning": "ประโยชน์",
+            "example": "Exercise has many benefits.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "effort",
+            "pos": "n",
+            "meaning": "ความพยายาม",
+            "example": "She made a great effort.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "progress",
+            "pos": "n",
+            "meaning": "ความก้าวหน้า",
+            "example": "You are making good progress.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "goal",
+            "pos": "n",
+            "meaning": "เป้าหมาย",
+            "example": "My goal is to speak English fluently.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "target",
+            "pos": "n",
+            "meaning": "เป้าหมาย (เชิงตัวเลข/งาน)",
+            "example": "We achieved our sales target.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "deadline",
+            "pos": "n",
+            "meaning": "กำหนดส่งงาน",
+            "example": "The deadline is tomorrow.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "schedule",
+            "pos": "n",
+            "meaning": "ตารางเวลา",
+            "example": "My schedule is busy this week.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "budget",
+            "pos": "n",
+            "meaning": "งบประมาณ",
+            "example": "We need to reduce the budget.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "income",
+            "pos": "n",
+            "meaning": "รายได้",
+            "example": "His income is stable.",
+            "difficulty": "B1",
+            "category": [
+                "Finance"
+            ]
+        },
+        {
+            "word": "expense",
+            "pos": "n",
+            "meaning": "รายจ่าย",
+            "example": "Monthly expenses are high.",
+            "difficulty": "B1",
+            "category": [
+                "Finance"
+            ]
+        },
+        {
+            "word": "research",
+            "pos": "n",
+            "meaning": "การวิจัย",
+            "example": "She is doing research on AI.",
+            "difficulty": "B1",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "report",
+            "pos": "n",
+            "meaning": "รายงาน",
+            "example": "I finished the report.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "analysis",
+            "pos": "n",
+            "meaning": "การวิเคราะห์",
+            "example": "The analysis shows positive results.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "comparison",
+            "pos": "n",
+            "meaning": "การเปรียบเทียบ",
+            "example": "This comparison is helpful.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "quality",
+            "pos": "n",
+            "meaning": "คุณภาพ",
+            "example": "The quality is excellent.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "experience",
+            "pos": "n",
+            "meaning": "ประสบการณ์",
+            "example": "Work experience is important.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        }
+    ]
+}

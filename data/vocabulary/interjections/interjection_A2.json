@@ -1,0 +1,374 @@
+{
+    "words": [
+        {
+            "word": "oh dear",
+            "pos": "int",
+            "meaning": "โอ้โห / โอ๊ยตาย",
+            "example": "Oh dear, I forgot my phone.",
+            "difficulty": "A2",
+            "category": [
+                "Surprise"
+            ]
+        },
+        {
+            "word": "oh my",
+            "pos": "int",
+            "meaning": "โอ้โห",
+            "example": "Oh my, that's amazing.",
+            "difficulty": "A2",
+            "category": [
+                "Surprise"
+            ]
+        },
+        {
+            "word": "oh my gosh",
+            "pos": "int",
+            "meaning": "โอ้มายก๊อด (สุภาพ)",
+            "example": "Oh my gosh, I can't believe it!",
+            "difficulty": "A2",
+            "category": [
+                "Surprise"
+            ]
+        },
+        {
+            "word": "oh my god",
+            "pos": "int",
+            "meaning": "โอ้มายก๊อด",
+            "example": "Oh my god, that's crazy!",
+            "difficulty": "A2",
+            "category": [
+                "Surprise"
+            ]
+        },
+        {
+            "word": "no way",
+            "pos": "int",
+            "meaning": "ไม่มีทาง!",
+            "example": "No way! Are you serious?",
+            "difficulty": "A2",
+            "category": [
+                "Disbelief"
+            ]
+        },
+        {
+            "word": "come on",
+            "pos": "int",
+            "meaning": "เอาน่า / เร็วเข้า",
+            "example": "Come on, let's go!",
+            "difficulty": "A2",
+            "category": [
+                "Encouragement"
+            ]
+        },
+        {
+            "word": "hang on",
+            "pos": "int",
+            "meaning": "รอเดี๋ยว",
+            "example": "Hang on, I'll check.",
+            "difficulty": "A2",
+            "category": [
+                "Pause"
+            ]
+        },
+        {
+            "word": "hold on",
+            "pos": "int",
+            "meaning": "เดี๋ยวก่อน",
+            "example": "Hold on, that's not correct.",
+            "difficulty": "A2",
+            "category": [
+                "Pause"
+            ]
+        },
+        {
+            "word": "wait a minute",
+            "pos": "int",
+            "meaning": "เดี๋ยวก่อน",
+            "example": "Wait a minute, what happened?",
+            "difficulty": "A2",
+            "category": [
+                "Pause"
+            ]
+        },
+        {
+            "word": "just a second",
+            "pos": "int",
+            "meaning": "ขอแป๊บหนึ่ง",
+            "example": "Just a second, please.",
+            "difficulty": "A2",
+            "category": [
+                "Pause"
+            ]
+        },
+        {
+            "word": "for real?",
+            "pos": "int",
+            "meaning": "จริงเหรอ?",
+            "example": "For real? That's awesome!",
+            "difficulty": "A2",
+            "category": [
+                "Question"
+            ]
+        },
+        {
+            "word": "seriously?",
+            "pos": "int",
+            "meaning": "จริงจังเหรอ?",
+            "example": "Seriously? You did that?",
+            "difficulty": "A2",
+            "category": [
+                "Question"
+            ]
+        },
+        {
+            "word": "are you kidding?",
+            "pos": "int",
+            "meaning": "ล้อเล่นหรือเปล่า?",
+            "example": "Are you kidding? That's expensive!",
+            "difficulty": "A2",
+            "category": [
+                "Disbelief"
+            ]
+        },
+        {
+            "word": "what a pity",
+            "pos": "int",
+            "meaning": "น่าเสียดาย",
+            "example": "What a pity! We missed it.",
+            "difficulty": "A2",
+            "category": [
+                "Sadness"
+            ]
+        },
+        {
+            "word": "what a shame",
+            "pos": "int",
+            "meaning": "น่าเสียดาย",
+            "example": "What a shame you couldn't come.",
+            "difficulty": "A2",
+            "category": [
+                "Sadness"
+            ]
+        },
+        {
+            "word": "good for you",
+            "pos": "int",
+            "meaning": "ดีเลยสำหรับคุณ",
+            "example": "Good for you! I'm proud of you.",
+            "difficulty": "A2",
+            "category": [
+                "Praise"
+            ]
+        },
+        {
+            "word": "well done",
+            "pos": "int",
+            "meaning": "ทำได้ดีมาก",
+            "example": "Well done! Excellent job.",
+            "difficulty": "A2",
+            "category": [
+                "Praise"
+            ]
+        },
+        {
+            "word": "nice job",
+            "pos": "int",
+            "meaning": "เก่งมาก",
+            "example": "Nice job! You did great.",
+            "difficulty": "A2",
+            "category": [
+                "Praise"
+            ]
+        },
+        {
+            "word": "good job",
+            "pos": "int",
+            "meaning": "ทำได้ดี",
+            "example": "Good job on the presentation.",
+            "difficulty": "A2",
+            "category": [
+                "Praise"
+            ]
+        },
+        {
+            "word": "my bad",
+            "pos": "int",
+            "meaning": "ความผิดฉันเอง",
+            "example": "My bad, I forgot.",
+            "difficulty": "A2",
+            "category": [
+                "Apology"
+            ]
+        },
+        {
+            "word": "that's my fault",
+            "pos": "int",
+            "meaning": "เป็นความผิดของฉัน",
+            "example": "That's my fault, sorry.",
+            "difficulty": "A2",
+            "category": [
+                "Apology"
+            ]
+        },
+        {
+            "word": "guess what",
+            "pos": "int",
+            "meaning": "เดาสิว่าอะไร",
+            "example": "Guess what? I got the job!",
+            "difficulty": "A2",
+            "category": [
+                "Excitement"
+            ]
+        },
+        {
+            "word": "you know what",
+            "pos": "int",
+            "meaning": "รู้อะไรไหม",
+            "example": "You know what? I agree with you.",
+            "difficulty": "A2",
+            "category": [
+                "Conversation"
+            ]
+        },
+        {
+            "word": "here we go",
+            "pos": "int",
+            "meaning": "เอาล่ะ เริ่มเลย",
+            "example": "Here we go! Let's begin.",
+            "difficulty": "A2",
+            "category": [
+                "Start"
+            ]
+        },
+        {
+            "word": "there you go",
+            "pos": "int",
+            "meaning": "นั่นไง / นั่นแหละ",
+            "example": "There you go! That's correct.",
+            "difficulty": "A2",
+            "category": [
+                "Approval"
+            ]
+        },
+        {
+            "word": "no worries",
+            "pos": "int",
+            "meaning": "ไม่เป็นไร",
+            "example": "No worries, it's okay.",
+            "difficulty": "A2",
+            "category": [
+                "Reassurance"
+            ]
+        },
+        {
+            "word": "no problem",
+            "pos": "int",
+            "meaning": "ไม่มีปัญหา",
+            "example": "No problem, I can help.",
+            "difficulty": "A2",
+            "category": [
+                "Reassurance"
+            ]
+        },
+        {
+            "word": "sounds good",
+            "pos": "int",
+            "meaning": "ฟังดูดี",
+            "example": "Sounds good! Let's do it.",
+            "difficulty": "A2",
+            "category": [
+                "Agreement"
+            ]
+        },
+        {
+            "word": "works for me",
+            "pos": "int",
+            "meaning": "โอเคสำหรับฉัน",
+            "example": "6 PM? Works for me.",
+            "difficulty": "A2",
+            "category": [
+                "Agreement"
+            ]
+        },
+        {
+            "word": "no kidding",
+            "pos": "int",
+            "meaning": "จริงเหรอ!",
+            "example": "No kidding? That's crazy!",
+            "difficulty": "A2",
+            "category": [
+                "Surprise"
+            ]
+        },
+        {
+            "word": "what the heck",
+            "pos": "int",
+            "meaning": "อะไรเนี่ย!",
+            "example": "What the heck is going on?",
+            "difficulty": "A2",
+            "category": [
+                "Confusion"
+            ]
+        },
+        {
+            "word": "oh well",
+            "pos": "int",
+            "meaning": "ช่างมันเถอะ",
+            "example": "Oh well, maybe next time.",
+            "difficulty": "A2",
+            "category": [
+                "Acceptance"
+            ]
+        },
+        {
+            "word": "never mind",
+            "pos": "int",
+            "meaning": "ไม่เป็นไร / ช่างมัน",
+            "example": "Never mind, it's okay.",
+            "difficulty": "A2",
+            "category": [
+                "Acceptance"
+            ]
+        },
+        {
+            "word": "watch out",
+            "pos": "int",
+            "meaning": "ระวัง!",
+            "example": "Watch out! The car!",
+            "difficulty": "A2",
+            "category": [
+                "Warning"
+            ]
+        },
+        {
+            "word": "look out",
+            "pos": "int",
+            "meaning": "ระวัง!",
+            "example": "Look out! It's falling.",
+            "difficulty": "A2",
+            "category": [
+                "Warning"
+            ]
+        },
+        {
+            "word": "that's right",
+            "pos": "int",
+            "meaning": "ถูกต้อง",
+            "example": "That's right! Good answer.",
+            "difficulty": "A2",
+            "category": [
+                "Agreement"
+            ]
+        },
+        {
+            "word": "exactly",
+            "pos": "int",
+            "meaning": "ใช่เลย",
+            "example": "Exactly! That's what I mean.",
+            "difficulty": "A2",
+            "category": [
+                "Agreement"
+            ]
+        }
+    ]
+}

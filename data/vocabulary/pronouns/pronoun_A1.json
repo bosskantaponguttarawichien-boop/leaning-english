@@ -1,0 +1,494 @@
+{
+    "words": [
+        {
+            "word": "I",
+            "pos": "pron",
+            "meaning": "ฉัน / ผม",
+            "example": "I am ready.",
+            "difficulty": "A1",
+            "category": [
+                "Personal"
+            ]
+        },
+        {
+            "word": "you",
+            "pos": "pron",
+            "meaning": "คุณ / พวกคุณ",
+            "example": "You are late.",
+            "difficulty": "A1",
+            "category": [
+                "Personal"
+            ]
+        },
+        {
+            "word": "he",
+            "pos": "pron",
+            "meaning": "เขา (ผู้ชาย)",
+            "example": "He is my friend.",
+            "difficulty": "A1",
+            "category": [
+                "Personal"
+            ]
+        },
+        {
+            "word": "she",
+            "pos": "pron",
+            "meaning": "เขา (ผู้หญิง)",
+            "example": "She is a teacher.",
+            "difficulty": "A1",
+            "category": [
+                "Personal"
+            ]
+        },
+        {
+            "word": "it",
+            "pos": "pron",
+            "meaning": "มัน",
+            "example": "It is cold.",
+            "difficulty": "A1",
+            "category": [
+                "Personal"
+            ]
+        },
+        {
+            "word": "we",
+            "pos": "pron",
+            "meaning": "พวกเรา",
+            "example": "We are happy.",
+            "difficulty": "A1",
+            "category": [
+                "Personal"
+            ]
+        },
+        {
+            "word": "they",
+            "pos": "pron",
+            "meaning": "พวกเขา",
+            "example": "They live here.",
+            "difficulty": "A1",
+            "category": [
+                "Personal"
+            ]
+        },
+        {
+            "word": "me",
+            "pos": "pron",
+            "meaning": "ฉัน / ผม (กรรม)",
+            "example": "Call me later.",
+            "difficulty": "A1",
+            "category": [
+                "Personal"
+            ]
+        },
+        {
+            "word": "him",
+            "pos": "pron",
+            "meaning": "เขา (ผู้ชาย, กรรม)",
+            "example": "I saw him.",
+            "difficulty": "A1",
+            "category": [
+                "Personal"
+            ]
+        },
+        {
+            "word": "her",
+            "pos": "pron",
+            "meaning": "เขา (ผู้หญิง, กรรม)",
+            "example": "I met her yesterday.",
+            "difficulty": "A1",
+            "category": [
+                "Personal"
+            ]
+        },
+        {
+            "word": "us",
+            "pos": "pron",
+            "meaning": "พวกเรา (กรรม)",
+            "example": "He helped us.",
+            "difficulty": "A1",
+            "category": [
+                "Personal"
+            ]
+        },
+        {
+            "word": "them",
+            "pos": "pron",
+            "meaning": "พวกเขา (กรรม)",
+            "example": "I called them.",
+            "difficulty": "A1",
+            "category": [
+                "Personal"
+            ]
+        },
+        {
+            "word": "my",
+            "pos": "pron",
+            "meaning": "ของฉัน / ผม",
+            "example": "This is my book.",
+            "difficulty": "A1",
+            "category": [
+                "Possessive"
+            ]
+        },
+        {
+            "word": "your",
+            "pos": "pron",
+            "meaning": "ของคุณ",
+            "example": "Is this your bag?",
+            "difficulty": "A1",
+            "category": [
+                "Possessive"
+            ]
+        },
+        {
+            "word": "his",
+            "pos": "pron",
+            "meaning": "ของเขา (ผู้ชาย)",
+            "example": "That is his car.",
+            "difficulty": "A1",
+            "category": [
+                "Possessive"
+            ]
+        },
+        {
+            "word": "her",
+            "pos": "pron",
+            "meaning": "ของเขา (ผู้หญิง)",
+            "example": "Her phone is new.",
+            "difficulty": "A1",
+            "category": [
+                "Possessive"
+            ]
+        },
+        {
+            "word": "its",
+            "pos": "pron",
+            "meaning": "ของมัน",
+            "example": "The dog wagged its tail.",
+            "difficulty": "A1",
+            "category": [
+                "Possessive"
+            ]
+        },
+        {
+            "word": "our",
+            "pos": "pron",
+            "meaning": "ของพวกเรา",
+            "example": "This is our house.",
+            "difficulty": "A1",
+            "category": [
+                "Possessive"
+            ]
+        },
+        {
+            "word": "their",
+            "pos": "pron",
+            "meaning": "ของพวกเขา",
+            "example": "Their car is red.",
+            "difficulty": "A1",
+            "category": [
+                "Possessive"
+            ]
+        },
+        {
+            "word": "mine",
+            "pos": "pron",
+            "meaning": "ของฉัน",
+            "example": "This book is mine.",
+            "difficulty": "A1",
+            "category": [
+                "Possessive"
+            ]
+        },
+        {
+            "word": "yours",
+            "pos": "pron",
+            "meaning": "ของคุณ",
+            "example": "The seat is yours.",
+            "difficulty": "A1",
+            "category": [
+                "Possessive"
+            ]
+        },
+        {
+            "word": "his",
+            "pos": "pron",
+            "meaning": "ของเขา",
+            "example": "That bag is his.",
+            "difficulty": "A1",
+            "category": [
+                "Possessive"
+            ]
+        },
+        {
+            "word": "hers",
+            "pos": "pron",
+            "meaning": "ของเขา (ผู้หญิง)",
+            "example": "The idea is hers.",
+            "difficulty": "A1",
+            "category": [
+                "Possessive"
+            ]
+        },
+        {
+            "word": "ours",
+            "pos": "pron",
+            "meaning": "ของพวกเรา",
+            "example": "The victory is ours.",
+            "difficulty": "A1",
+            "category": [
+                "Possessive"
+            ]
+        },
+        {
+            "word": "theirs",
+            "pos": "pron",
+            "meaning": "ของพวกเขา",
+            "example": "The house is theirs.",
+            "difficulty": "A1",
+            "category": [
+                "Possessive"
+            ]
+        },
+        {
+            "word": "this",
+            "pos": "pron",
+            "meaning": "นี่",
+            "example": "This is easy.",
+            "difficulty": "A1",
+            "category": [
+                "Demonstrative"
+            ]
+        },
+        {
+            "word": "that",
+            "pos": "pron",
+            "meaning": "นั้น",
+            "example": "That is mine.",
+            "difficulty": "A1",
+            "category": [
+                "Demonstrative"
+            ]
+        },
+        {
+            "word": "these",
+            "pos": "pron",
+            "meaning": "เหล่านี้",
+            "example": "These are good.",
+            "difficulty": "A1",
+            "category": [
+                "Demonstrative"
+            ]
+        },
+        {
+            "word": "those",
+            "pos": "pron",
+            "meaning": "เหล่านั้น",
+            "example": "Those are expensive.",
+            "difficulty": "A1",
+            "category": [
+                "Demonstrative"
+            ]
+        },
+        {
+            "word": "who",
+            "pos": "pron",
+            "meaning": "ใคร",
+            "example": "Who is that?",
+            "difficulty": "A1",
+            "category": [
+                "Question"
+            ]
+        },
+        {
+            "word": "what",
+            "pos": "pron",
+            "meaning": "อะไร",
+            "example": "What is this?",
+            "difficulty": "A1",
+            "category": [
+                "Question"
+            ]
+        },
+        {
+            "word": "which",
+            "pos": "pron",
+            "meaning": "อันไหน / ซึ่ง",
+            "example": "Which do you prefer?",
+            "difficulty": "A1",
+            "category": [
+                "Question"
+            ]
+        },
+        {
+            "word": "whose",
+            "pos": "pron",
+            "meaning": "ของใคร",
+            "example": "Whose bag is this?",
+            "difficulty": "A1",
+            "category": [
+                "Question"
+            ]
+        },
+        {
+            "word": "someone",
+            "pos": "pron",
+            "meaning": "ใครบางคน",
+            "example": "Someone is calling you.",
+            "difficulty": "A1",
+            "category": [
+                "Indefinite"
+            ]
+        },
+        {
+            "word": "somebody",
+            "pos": "pron",
+            "meaning": "ใครบางคน",
+            "example": "Somebody knocked.",
+            "difficulty": "A1",
+            "category": [
+                "Indefinite"
+            ]
+        },
+        {
+            "word": "something",
+            "pos": "pron",
+            "meaning": "บางสิ่ง",
+            "example": "I need something.",
+            "difficulty": "A1",
+            "category": [
+                "Indefinite"
+            ]
+        },
+        {
+            "word": "anyone",
+            "pos": "pron",
+            "meaning": "ใครก็ได้",
+            "example": "Anyone can try.",
+            "difficulty": "A1",
+            "category": [
+                "Indefinite"
+            ]
+        },
+        {
+            "word": "anything",
+            "pos": "pron",
+            "meaning": "อะไรก็ได้",
+            "example": "Do you need anything?",
+            "difficulty": "A1",
+            "category": [
+                "Indefinite"
+            ]
+        },
+        {
+            "word": "everyone",
+            "pos": "pron",
+            "meaning": "ทุกคน",
+            "example": "Everyone is here.",
+            "difficulty": "A1",
+            "category": [
+                "Indefinite"
+            ]
+        },
+        {
+            "word": "everything",
+            "pos": "pron",
+            "meaning": "ทุกอย่าง",
+            "example": "Everything is ready.",
+            "difficulty": "A1",
+            "category": [
+                "Indefinite"
+            ]
+        },
+        {
+            "word": "no one",
+            "pos": "pron",
+            "meaning": "ไม่มีใคร",
+            "example": "No one knows.",
+            "difficulty": "A1",
+            "category": [
+                "Indefinite"
+            ]
+        },
+        {
+            "word": "nothing",
+            "pos": "pron",
+            "meaning": "ไม่มีอะไร",
+            "example": "I have nothing.",
+            "difficulty": "A1",
+            "category": [
+                "Indefinite"
+            ]
+        },
+        {
+            "word": "myself",
+            "pos": "pron",
+            "meaning": "ตัวฉันเอง",
+            "example": "I did it myself.",
+            "difficulty": "A1",
+            "category": [
+                "Reflexive"
+            ]
+        },
+        {
+            "word": "yourself",
+            "pos": "pron",
+            "meaning": "ตัวคุณเอง",
+            "example": "Help yourself.",
+            "difficulty": "A1",
+            "category": [
+                "Reflexive"
+            ]
+        },
+        {
+            "word": "himself",
+            "pos": "pron",
+            "meaning": "ตัวเขาเอง (ผู้ชาย)",
+            "example": "He hurt himself.",
+            "difficulty": "A1",
+            "category": [
+                "Reflexive"
+            ]
+        },
+        {
+            "word": "herself",
+            "pos": "pron",
+            "meaning": "ตัวเขาเอง (ผู้หญิง)",
+            "example": "She taught herself.",
+            "difficulty": "A1",
+            "category": [
+                "Reflexive"
+            ]
+        },
+        {
+            "word": "itself",
+            "pos": "pron",
+            "meaning": "ตัวมันเอง",
+            "example": "The cat cleaned itself.",
+            "difficulty": "A1",
+            "category": [
+                "Reflexive"
+            ]
+        },
+        {
+            "word": "ourselves",
+            "pos": "pron",
+            "meaning": "ตัวพวกเราเอง",
+            "example": "We prepared ourselves.",
+            "difficulty": "A1",
+            "category": [
+                "Reflexive"
+            ]
+        },
+        {
+            "word": "themselves",
+            "pos": "pron",
+            "meaning": "ตัวพวกเขาเอง",
+            "example": "They fixed it themselves.",
+            "difficulty": "A1",
+            "category": [
+                "Reflexive"
+            ]
+        }
+    ]
+}

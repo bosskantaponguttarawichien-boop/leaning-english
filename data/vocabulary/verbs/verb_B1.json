@@ -1,0 +1,504 @@
+{
+    "words": [
+        {
+            "word": "achieve",
+            "pos": "v",
+            "meaning": "บรรลุ",
+            "example": "We achieved our goal.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "analyze",
+            "pos": "v",
+            "meaning": "วิเคราะห์",
+            "example": "Let's analyze the data.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "apply",
+            "pos": "v",
+            "meaning": "สมัคร / ประยุกต์ใช้",
+            "example": "I applied for the job.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "argue",
+            "pos": "v",
+            "meaning": "โต้แย้ง",
+            "example": "They argued about the plan.",
+            "difficulty": "B1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "avoid",
+            "pos": "v",
+            "meaning": "หลีกเลี่ยง",
+            "example": "Try to avoid mistakes.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "believe",
+            "pos": "v",
+            "meaning": "เชื่อ",
+            "example": "I believe in you.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "belong",
+            "pos": "v",
+            "meaning": "เป็นของ",
+            "example": "This book belongs to me.",
+            "difficulty": "B1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "calculate",
+            "pos": "v",
+            "meaning": "คำนวณ",
+            "example": "We calculated the cost.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "consider",
+            "pos": "v",
+            "meaning": "พิจารณา",
+            "example": "Please consider my idea.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "contain",
+            "pos": "v",
+            "meaning": "บรรจุ / มี",
+            "example": "This box contains files.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "contribute",
+            "pos": "v",
+            "meaning": "มีส่วนร่วม",
+            "example": "Everyone contributed to the project.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "control",
+            "pos": "v",
+            "meaning": "ควบคุม",
+            "example": "He controls the system.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "create",
+            "pos": "v",
+            "meaning": "สร้าง",
+            "example": "She created a new design.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "deal",
+            "pos": "v",
+            "meaning": "จัดการ",
+            "example": "We need to deal with this issue.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "define",
+            "pos": "v",
+            "meaning": "กำหนด / นิยาม",
+            "example": "Can you define this term?",
+            "difficulty": "B1",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "deliver",
+            "pos": "v",
+            "meaning": "ส่งมอบ",
+            "example": "They delivered the product on time.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "depend",
+            "pos": "v",
+            "meaning": "ขึ้นอยู่กับ",
+            "example": "It depends on the situation.",
+            "difficulty": "B1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "develop",
+            "pos": "v",
+            "meaning": "พัฒนา",
+            "example": "We developed a new system.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "encourage",
+            "pos": "v",
+            "meaning": "สนับสนุน / ให้กำลังใจ",
+            "example": "She encouraged me to try again.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "establish",
+            "pos": "v",
+            "meaning": "ก่อตั้ง / สร้างขึ้น",
+            "example": "They established a new company.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "evaluate",
+            "pos": "v",
+            "meaning": "ประเมิน",
+            "example": "We evaluated the results.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "exist",
+            "pos": "v",
+            "meaning": "มีอยู่",
+            "example": "This problem still exists.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "expand",
+            "pos": "v",
+            "meaning": "ขยาย",
+            "example": "The company plans to expand.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "focus",
+            "pos": "v",
+            "meaning": "โฟกัส",
+            "example": "Focus on your task.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "imagine",
+            "pos": "v",
+            "meaning": "จินตนาการ",
+            "example": "Imagine a better future.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "improve",
+            "pos": "v",
+            "meaning": "ปรับปรุง",
+            "example": "We need to improve quality.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "increase",
+            "pos": "v",
+            "meaning": "เพิ่มขึ้น",
+            "example": "Sales increased this month.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "influence",
+            "pos": "v",
+            "meaning": "มีอิทธิพลต่อ",
+            "example": "Social media influences people.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "involve",
+            "pos": "v",
+            "meaning": "เกี่ยวข้อง",
+            "example": "The job involves teamwork.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "manage",
+            "pos": "v",
+            "meaning": "จัดการ",
+            "example": "She manages a team.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "measure",
+            "pos": "v",
+            "meaning": "วัด",
+            "example": "We measured the results.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "mention",
+            "pos": "v",
+            "meaning": "กล่าวถึง",
+            "example": "He mentioned your name.",
+            "difficulty": "B1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "notice",
+            "pos": "v",
+            "meaning": "สังเกตเห็น",
+            "example": "I noticed a mistake.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "occur",
+            "pos": "v",
+            "meaning": "เกิดขึ้น",
+            "example": "The error occurred yesterday.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "perform",
+            "pos": "v",
+            "meaning": "ปฏิบัติ / แสดง",
+            "example": "She performed well.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "prefer",
+            "pos": "v",
+            "meaning": "ชอบมากกว่า",
+            "example": "I prefer tea to coffee.",
+            "difficulty": "B1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "prevent",
+            "pos": "v",
+            "meaning": "ป้องกัน",
+            "example": "This helps prevent problems.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "produce",
+            "pos": "v",
+            "meaning": "ผลิต",
+            "example": "The factory produces cars.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "provide",
+            "pos": "v",
+            "meaning": "จัดหาให้",
+            "example": "They provide good service.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "realize",
+            "pos": "v",
+            "meaning": "ตระหนัก",
+            "example": "I realized my mistake.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "receive",
+            "pos": "v",
+            "meaning": "ได้รับ",
+            "example": "I received your email.",
+            "difficulty": "B1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "recommend",
+            "pos": "v",
+            "meaning": "แนะนำ",
+            "example": "I recommend this book.",
+            "difficulty": "B1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "reduce",
+            "pos": "v",
+            "meaning": "ลดลง",
+            "example": "We reduced costs.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "reflect",
+            "pos": "v",
+            "meaning": "สะท้อน / ไตร่ตรอง",
+            "example": "Take time to reflect.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "require",
+            "pos": "v",
+            "meaning": "ต้องการ",
+            "example": "This job requires experience.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "respond",
+            "pos": "v",
+            "meaning": "ตอบสนอง",
+            "example": "He responded quickly.",
+            "difficulty": "B1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "result",
+            "pos": "v",
+            "meaning": "ส่งผลให้เกิด",
+            "example": "This may result in failure.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "solve",
+            "pos": "v",
+            "meaning": "แก้ปัญหา",
+            "example": "We solved the issue.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "support",
+            "pos": "v",
+            "meaning": "สนับสนุน",
+            "example": "They support the new policy.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "tend",
+            "pos": "v",
+            "meaning": "มีแนวโน้ม",
+            "example": "I tend to wake up early.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        }
+    ]
+}

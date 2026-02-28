@@ -1,0 +1,504 @@
+{
+    "words": [
+        {
+            "word": "important",
+            "pos": "adj",
+            "meaning": "สำคัญ",
+            "example": "This meeting is important.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "different",
+            "pos": "adj",
+            "meaning": "แตกต่าง",
+            "example": "This idea is different.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "similar",
+            "pos": "adj",
+            "meaning": "คล้ายกัน",
+            "example": "These two products are similar.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "possible",
+            "pos": "adj",
+            "meaning": "เป็นไปได้",
+            "example": "Is it possible?",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "impossible",
+            "pos": "adj",
+            "meaning": "เป็นไปไม่ได้",
+            "example": "That seems impossible.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "necessary",
+            "pos": "adj",
+            "meaning": "จำเป็น",
+            "example": "It is necessary to practice.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "available",
+            "pos": "adj",
+            "meaning": "ว่าง / มีพร้อม",
+            "example": "The room is available.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "ready",
+            "pos": "adj",
+            "meaning": "พร้อม",
+            "example": "Are you ready?",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "famous",
+            "pos": "adj",
+            "meaning": "มีชื่อเสียง",
+            "example": "She is a famous singer.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "popular",
+            "pos": "adj",
+            "meaning": "เป็นที่นิยม",
+            "example": "This app is popular.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "special",
+            "pos": "adj",
+            "meaning": "พิเศษ",
+            "example": "Today is a special day.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "simple",
+            "pos": "adj",
+            "meaning": "ง่าย / ไม่ซับซ้อน",
+            "example": "The answer is simple.",
+            "difficulty": "A2",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "careful",
+            "pos": "adj",
+            "meaning": "ระมัดระวัง",
+            "example": "Be careful.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "careless",
+            "pos": "adj",
+            "meaning": "สะเพร่า",
+            "example": "That was careless.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "quiet",
+            "pos": "adj",
+            "meaning": "เงียบ",
+            "example": "It is quiet here.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "noisy",
+            "pos": "adj",
+            "meaning": "เสียงดัง",
+            "example": "The street is noisy.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "comfortable",
+            "pos": "adj",
+            "meaning": "สบาย",
+            "example": "This chair is comfortable.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "uncomfortable",
+            "pos": "adj",
+            "meaning": "ไม่สบาย",
+            "example": "I feel uncomfortable.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "interesting",
+            "pos": "adj",
+            "meaning": "น่าสนใจ",
+            "example": "The book is interesting.",
+            "difficulty": "A2",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "boring",
+            "pos": "adj",
+            "meaning": "น่าเบื่อ",
+            "example": "The class was boring.",
+            "difficulty": "A2",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "excited",
+            "pos": "adj",
+            "meaning": "ตื่นเต้น",
+            "example": "I am excited about the trip.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "exciting",
+            "pos": "adj",
+            "meaning": "น่าตื่นเต้น",
+            "example": "It was an exciting game.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "worried",
+            "pos": "adj",
+            "meaning": "กังวล",
+            "example": "She is worried about the exam.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "surprised",
+            "pos": "adj",
+            "meaning": "ประหลาดใจ",
+            "example": "I was surprised.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "serious",
+            "pos": "adj",
+            "meaning": "ร้ายแรง / จริงจัง",
+            "example": "This is a serious issue.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "busy",
+            "pos": "adj",
+            "meaning": "ยุ่ง",
+            "example": "I am busy today.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "free",
+            "pos": "adj",
+            "meaning": "ว่าง",
+            "example": "Are you free this weekend?",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "late",
+            "pos": "adj",
+            "meaning": "สาย",
+            "example": "He is late again.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "early",
+            "pos": "adj",
+            "meaning": "เช้า / ก่อนเวลา",
+            "example": "She arrived early.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "modern",
+            "pos": "adj",
+            "meaning": "ทันสมัย",
+            "example": "This is a modern building.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "traditional",
+            "pos": "adj",
+            "meaning": "ดั้งเดิม",
+            "example": "This is a traditional dish.",
+            "difficulty": "A2",
+            "category": [
+                "Culture"
+            ]
+        },
+        {
+            "word": "local",
+            "pos": "adj",
+            "meaning": "ท้องถิ่น",
+            "example": "I like local food.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "international",
+            "pos": "adj",
+            "meaning": "นานาชาติ",
+            "example": "It is an international company.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "friendly",
+            "pos": "adj",
+            "meaning": "เป็นมิตร",
+            "example": "The staff are friendly.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "polite",
+            "pos": "adj",
+            "meaning": "สุภาพ",
+            "example": "He is very polite.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "honest",
+            "pos": "adj",
+            "meaning": "ซื่อสัตย์",
+            "example": "She is an honest person.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "brave",
+            "pos": "adj",
+            "meaning": "กล้าหาญ",
+            "example": "He is brave.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "clever",
+            "pos": "adj",
+            "meaning": "ฉลาด",
+            "example": "She is very clever.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "lazy",
+            "pos": "adj",
+            "meaning": "ขี้เกียจ",
+            "example": "He feels lazy today.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "healthy",
+            "pos": "adj",
+            "meaning": "สุขภาพดี",
+            "example": "Eating vegetables is healthy.",
+            "difficulty": "A2",
+            "category": [
+                "Health"
+            ]
+        },
+        {
+            "word": "unhealthy",
+            "pos": "adj",
+            "meaning": "ไม่ดีต่อสุขภาพ",
+            "example": "Fast food is unhealthy.",
+            "difficulty": "A2",
+            "category": [
+                "Health"
+            ]
+        },
+        {
+            "word": "expensive",
+            "pos": "adj",
+            "meaning": "แพง",
+            "example": "This bag is expensive.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "cheap",
+            "pos": "adj",
+            "meaning": "ถูก",
+            "example": "This shirt is cheap.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "crowded",
+            "pos": "adj",
+            "meaning": "แออัด",
+            "example": "The train is crowded.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "empty",
+            "pos": "adj",
+            "meaning": "ว่างเปล่า",
+            "example": "The room is empty.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "useful",
+            "pos": "adj",
+            "meaning": "มีประโยชน์",
+            "example": "This tool is useful.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "useless",
+            "pos": "adj",
+            "meaning": "ไร้ประโยชน์",
+            "example": "This information is useless.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "clear",
+            "pos": "adj",
+            "meaning": "ชัดเจน",
+            "example": "The instructions are clear.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "confused",
+            "pos": "adj",
+            "meaning": "สับสน",
+            "example": "I am confused.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "afraid",
+            "pos": "adj",
+            "meaning": "กลัว",
+            "example": "I am afraid of dogs.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        }
+    ]
+}

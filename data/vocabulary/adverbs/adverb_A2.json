@@ -1,0 +1,504 @@
+{
+    "words": [
+        {
+            "word": "actually",
+            "pos": "adv",
+            "meaning": "จริง ๆ แล้ว",
+            "example": "Actually, I changed my mind.",
+            "difficulty": "A2",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "finally",
+            "pos": "adv",
+            "meaning": "ในที่สุด",
+            "example": "We finally finished the project.",
+            "difficulty": "A2",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "recently",
+            "pos": "adv",
+            "meaning": "เมื่อไม่นานมานี้",
+            "example": "I recently started a new job.",
+            "difficulty": "A2",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "lately",
+            "pos": "adv",
+            "meaning": "ช่วงนี้",
+            "example": "I have been busy lately.",
+            "difficulty": "A2",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "soon",
+            "pos": "adv",
+            "meaning": "เร็ว ๆ นี้",
+            "example": "See you soon.",
+            "difficulty": "A2",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "immediately",
+            "pos": "adv",
+            "meaning": "ทันที",
+            "example": "Please reply immediately.",
+            "difficulty": "A2",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "suddenly",
+            "pos": "adv",
+            "meaning": "ทันใดนั้น",
+            "example": "Suddenly, it started to rain.",
+            "difficulty": "A2",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "already",
+            "pos": "adv",
+            "meaning": "เรียบร้อยแล้ว",
+            "example": "I have already sent the email.",
+            "difficulty": "A2",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "yet",
+            "pos": "adv",
+            "meaning": "ยัง (ในประโยคปฏิเสธ/คำถาม)",
+            "example": "I haven't finished yet.",
+            "difficulty": "A2",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "still",
+            "pos": "adv",
+            "meaning": "ยังคง",
+            "example": "She is still waiting.",
+            "difficulty": "A2",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "probably",
+            "pos": "adv",
+            "meaning": "น่าจะ",
+            "example": "It will probably rain.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "maybe",
+            "pos": "adv",
+            "meaning": "บางที",
+            "example": "Maybe we can try again.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "perhaps",
+            "pos": "adv",
+            "meaning": "บางที (เป็นทางการกว่า maybe)",
+            "example": "Perhaps we should wait.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "definitely",
+            "pos": "adv",
+            "meaning": "อย่างแน่นอน",
+            "example": "I will definitely join.",
+            "difficulty": "A2",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "certainly",
+            "pos": "adv",
+            "meaning": "แน่นอน",
+            "example": "You can certainly try.",
+            "difficulty": "A2",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "clearly",
+            "pos": "adv",
+            "meaning": "อย่างชัดเจน",
+            "example": "He clearly explained the plan.",
+            "difficulty": "A2",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "simply",
+            "pos": "adv",
+            "meaning": "อย่างง่าย ๆ",
+            "example": "It is simply not true.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "seriously",
+            "pos": "adv",
+            "meaning": "อย่างจริงจัง",
+            "example": "You should seriously consider it.",
+            "difficulty": "A2",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "especially",
+            "pos": "adv",
+            "meaning": "โดยเฉพาะ",
+            "example": "I like fruit, especially mango.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "exactly",
+            "pos": "adv",
+            "meaning": "อย่างแม่นยำ / ถูกต้อง",
+            "example": "That's exactly what I mean.",
+            "difficulty": "A2",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "nearly",
+            "pos": "adv",
+            "meaning": "เกือบจะ",
+            "example": "I nearly missed the bus.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "hardly",
+            "pos": "adv",
+            "meaning": "แทบจะไม่",
+            "example": "I can hardly hear you.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "quite",
+            "pos": "adv",
+            "meaning": "ค่อนข้าง",
+            "example": "It is quite difficult.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "rather",
+            "pos": "adv",
+            "meaning": "ค่อนข้าง",
+            "example": "It was rather cold.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "fairly",
+            "pos": "adv",
+            "meaning": "พอสมควร",
+            "example": "The test was fairly easy.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "carefully",
+            "pos": "adv",
+            "meaning": "อย่างระมัดระวัง",
+            "example": "Drive carefully.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "quickly",
+            "pos": "adv",
+            "meaning": "อย่างรวดเร็ว",
+            "example": "She quickly finished.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "slowly",
+            "pos": "adv",
+            "meaning": "อย่างช้า ๆ",
+            "example": "Please speak slowly.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "quietly",
+            "pos": "adv",
+            "meaning": "อย่างเงียบ ๆ",
+            "example": "He left quietly.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "loudly",
+            "pos": "adv",
+            "meaning": "เสียงดัง",
+            "example": "She laughed loudly.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "politely",
+            "pos": "adv",
+            "meaning": "อย่างสุภาพ",
+            "example": "He spoke politely.",
+            "difficulty": "A2",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "angrily",
+            "pos": "adv",
+            "meaning": "อย่างโกรธ",
+            "example": "She answered angrily.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "happily",
+            "pos": "adv",
+            "meaning": "อย่างมีความสุข",
+            "example": "They lived happily.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "sadly",
+            "pos": "adv",
+            "meaning": "อย่างเศร้า",
+            "example": "Sadly, he failed the test.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "easily",
+            "pos": "adv",
+            "meaning": "อย่างง่ายดาย",
+            "example": "I solved it easily.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "successfully",
+            "pos": "adv",
+            "meaning": "อย่างสำเร็จ",
+            "example": "She successfully completed the task.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "unfortunately",
+            "pos": "adv",
+            "meaning": "โชคร้ายที่",
+            "example": "Unfortunately, we were late.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "fortunately",
+            "pos": "adv",
+            "meaning": "โชคดีที่",
+            "example": "Fortunately, no one was hurt.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "together",
+            "pos": "adv",
+            "meaning": "ด้วยกัน",
+            "example": "We worked together.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "apart",
+            "pos": "adv",
+            "meaning": "แยกจากกัน",
+            "example": "They live apart.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "away",
+            "pos": "adv",
+            "meaning": "ออกไป / ห่างออกไป",
+            "example": "She walked away.",
+            "difficulty": "A2",
+            "category": [
+                "Direction"
+            ]
+        },
+        {
+            "word": "back",
+            "pos": "adv",
+            "meaning": "กลับ",
+            "example": "Come back soon.",
+            "difficulty": "A2",
+            "category": [
+                "Direction"
+            ]
+        },
+        {
+            "word": "forward",
+            "pos": "adv",
+            "meaning": "ไปข้างหน้า",
+            "example": "Step forward.",
+            "difficulty": "A2",
+            "category": [
+                "Direction"
+            ]
+        },
+        {
+            "word": "behind",
+            "pos": "adv",
+            "meaning": "ข้างหลัง",
+            "example": "He stayed behind.",
+            "difficulty": "A2",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "ahead",
+            "pos": "adv",
+            "meaning": "ล่วงหน้า / ข้างหน้า",
+            "example": "Plan ahead.",
+            "difficulty": "A2",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "online",
+            "pos": "adv",
+            "meaning": "ออนไลน์",
+            "example": "I work online.",
+            "difficulty": "A2",
+            "category": [
+                "Technology"
+            ]
+        },
+        {
+            "word": "offline",
+            "pos": "adv",
+            "meaning": "ออฟไลน์",
+            "example": "The system is offline.",
+            "difficulty": "A2",
+            "category": [
+                "Technology"
+            ]
+        },
+        {
+            "word": "abroad",
+            "pos": "adv",
+            "meaning": "ต่างประเทศ",
+            "example": "She studied abroad.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "upstairs",
+            "pos": "adv",
+            "meaning": "ชั้นบน",
+            "example": "He is upstairs.",
+            "difficulty": "A2",
+            "category": [
+                "Place"
+            ]
+        },
+        {
+            "word": "downstairs",
+            "pos": "adv",
+            "meaning": "ชั้นล่าง",
+            "example": "Dinner is downstairs.",
+            "difficulty": "A2",
+            "category": [
+                "Place"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,474 @@
+{
+    "words": [
+        {
+            "word": "who",
+            "pos": "pron",
+            "meaning": "ผู้ที่ (ประธาน)",
+            "example": "The woman who spoke is my manager.",
+            "difficulty": "B1",
+            "category": [
+                "Relative"
+            ]
+        },
+        {
+            "word": "whom",
+            "pos": "pron",
+            "meaning": "ผู้ซึ่ง (กรรม)",
+            "example": "The person whom I met was helpful.",
+            "difficulty": "B1",
+            "category": [
+                "Relative"
+            ]
+        },
+        {
+            "word": "whose",
+            "pos": "pron",
+            "meaning": "ของผู้ซึ่ง",
+            "example": "The student whose project won is here.",
+            "difficulty": "B1",
+            "category": [
+                "Relative"
+            ]
+        },
+        {
+            "word": "which",
+            "pos": "pron",
+            "meaning": "ซึ่ง (ใช้กับสิ่งของ)",
+            "example": "The report which you sent is clear.",
+            "difficulty": "B1",
+            "category": [
+                "Relative"
+            ]
+        },
+        {
+            "word": "that",
+            "pos": "pron",
+            "meaning": "ที่ / ซึ่ง",
+            "example": "The plan that we discussed is approved.",
+            "difficulty": "B1",
+            "category": [
+                "Relative"
+            ]
+        },
+        {
+            "word": "whoever",
+            "pos": "pron",
+            "meaning": "ใครก็ตามที่",
+            "example": "Whoever finishes first can leave.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "whomever",
+            "pos": "pron",
+            "meaning": "ใครก็ตามที่ (กรรม)",
+            "example": "Give it to whomever you trust.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "whatever",
+            "pos": "pron",
+            "meaning": "อะไรก็ตามที่",
+            "example": "Do whatever you think is best.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "whichever",
+            "pos": "pron",
+            "meaning": "อันไหนก็ตามที่",
+            "example": "Choose whichever suits you.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "anyone",
+            "pos": "pron",
+            "meaning": "ใครก็ตาม",
+            "example": "Anyone can apply.",
+            "difficulty": "B1",
+            "category": [
+                "Indefinite"
+            ]
+        },
+        {
+            "word": "anybody",
+            "pos": "pron",
+            "meaning": "ใครก็ตาม",
+            "example": "Is anybody interested?",
+            "difficulty": "B1",
+            "category": [
+                "Indefinite"
+            ]
+        },
+        {
+            "word": "anything",
+            "pos": "pron",
+            "meaning": "อะไรก็ได้",
+            "example": "Ask me anything.",
+            "difficulty": "B1",
+            "category": [
+                "Indefinite"
+            ]
+        },
+        {
+            "word": "someone",
+            "pos": "pron",
+            "meaning": "ใครบางคน",
+            "example": "Someone left a message.",
+            "difficulty": "B1",
+            "category": [
+                "Indefinite"
+            ]
+        },
+        {
+            "word": "somebody",
+            "pos": "pron",
+            "meaning": "ใครบางคน",
+            "example": "Somebody called earlier.",
+            "difficulty": "B1",
+            "category": [
+                "Indefinite"
+            ]
+        },
+        {
+            "word": "something",
+            "pos": "pron",
+            "meaning": "บางสิ่ง",
+            "example": "There is something wrong.",
+            "difficulty": "B1",
+            "category": [
+                "Indefinite"
+            ]
+        },
+        {
+            "word": "everyone",
+            "pos": "pron",
+            "meaning": "ทุกคน",
+            "example": "Everyone agreed with the decision.",
+            "difficulty": "B1",
+            "category": [
+                "Indefinite"
+            ]
+        },
+        {
+            "word": "everybody",
+            "pos": "pron",
+            "meaning": "ทุกคน",
+            "example": "Everybody was surprised.",
+            "difficulty": "B1",
+            "category": [
+                "Indefinite"
+            ]
+        },
+        {
+            "word": "everything",
+            "pos": "pron",
+            "meaning": "ทุกอย่าง",
+            "example": "Everything is under control.",
+            "difficulty": "B1",
+            "category": [
+                "Indefinite"
+            ]
+        },
+        {
+            "word": "nobody",
+            "pos": "pron",
+            "meaning": "ไม่มีใคร",
+            "example": "Nobody understands the issue.",
+            "difficulty": "B1",
+            "category": [
+                "Indefinite"
+            ]
+        },
+        {
+            "word": "no one",
+            "pos": "pron",
+            "meaning": "ไม่มีใคร",
+            "example": "No one responded.",
+            "difficulty": "B1",
+            "category": [
+                "Indefinite"
+            ]
+        },
+        {
+            "word": "nothing",
+            "pos": "pron",
+            "meaning": "ไม่มีอะไร",
+            "example": "Nothing has changed.",
+            "difficulty": "B1",
+            "category": [
+                "Indefinite"
+            ]
+        },
+        {
+            "word": "each",
+            "pos": "pron",
+            "meaning": "แต่ละคน / แต่ละสิ่ง",
+            "example": "Each has a different role.",
+            "difficulty": "B1",
+            "category": [
+                "Distributive"
+            ]
+        },
+        {
+            "word": "either",
+            "pos": "pron",
+            "meaning": "อย่างใดอย่างหนึ่ง",
+            "example": "Either will work.",
+            "difficulty": "B1",
+            "category": [
+                "Distributive"
+            ]
+        },
+        {
+            "word": "neither",
+            "pos": "pron",
+            "meaning": "ไม่ทั้งสอง",
+            "example": "Neither was correct.",
+            "difficulty": "B1",
+            "category": [
+                "Distributive"
+            ]
+        },
+        {
+            "word": "both",
+            "pos": "pron",
+            "meaning": "ทั้งสอง",
+            "example": "Both were accepted.",
+            "difficulty": "B1",
+            "category": [
+                "Distributive"
+            ]
+        },
+        {
+            "word": "all",
+            "pos": "pron",
+            "meaning": "ทั้งหมด",
+            "example": "All were invited.",
+            "difficulty": "B1",
+            "category": [
+                "Distributive"
+            ]
+        },
+        {
+            "word": "none",
+            "pos": "pron",
+            "meaning": "ไม่มีเลย",
+            "example": "None of the options worked.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "many",
+            "pos": "pron",
+            "meaning": "หลายคน",
+            "example": "Many were interested.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "few",
+            "pos": "pron",
+            "meaning": "ไม่กี่คน",
+            "example": "Few understood the topic.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "several",
+            "pos": "pron",
+            "meaning": "หลายคน / หลายอย่าง",
+            "example": "Several have applied.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "others",
+            "pos": "pron",
+            "meaning": "คนอื่น ๆ",
+            "example": "Some agreed; others disagreed.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "another",
+            "pos": "pron",
+            "meaning": "อีกหนึ่ง",
+            "example": "Can I have another?",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "the other",
+            "pos": "pron",
+            "meaning": "อีกอันหนึ่ง",
+            "example": "One failed; the other passed.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "the others",
+            "pos": "pron",
+            "meaning": "ที่เหลือทั้งหมด",
+            "example": "Two left; the others stayed.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "myself",
+            "pos": "pron",
+            "meaning": "ตัวฉันเอง",
+            "example": "I completed it myself.",
+            "difficulty": "B1",
+            "category": [
+                "Reflexive"
+            ]
+        },
+        {
+            "word": "yourself",
+            "pos": "pron",
+            "meaning": "ตัวคุณเอง",
+            "example": "You should ask yourself why.",
+            "difficulty": "B1",
+            "category": [
+                "Reflexive"
+            ]
+        },
+        {
+            "word": "himself",
+            "pos": "pron",
+            "meaning": "ตัวเขาเอง",
+            "example": "He prepared himself.",
+            "difficulty": "B1",
+            "category": [
+                "Reflexive"
+            ]
+        },
+        {
+            "word": "herself",
+            "pos": "pron",
+            "meaning": "ตัวเธอเอง",
+            "example": "She introduced herself.",
+            "difficulty": "B1",
+            "category": [
+                "Reflexive"
+            ]
+        },
+        {
+            "word": "itself",
+            "pos": "pron",
+            "meaning": "ตัวมันเอง",
+            "example": "The system restarted itself.",
+            "difficulty": "B1",
+            "category": [
+                "Reflexive"
+            ]
+        },
+        {
+            "word": "ourselves",
+            "pos": "pron",
+            "meaning": "ตัวพวกเราเอง",
+            "example": "We prepared ourselves.",
+            "difficulty": "B1",
+            "category": [
+                "Reflexive"
+            ]
+        },
+        {
+            "word": "themselves",
+            "pos": "pron",
+            "meaning": "ตัวพวกเขาเอง",
+            "example": "They fixed it themselves.",
+            "difficulty": "B1",
+            "category": [
+                "Reflexive"
+            ]
+        },
+        {
+            "word": "each other",
+            "pos": "pron",
+            "meaning": "ซึ่งกันและกัน",
+            "example": "They support each other.",
+            "difficulty": "B1",
+            "category": [
+                "Reciprocal"
+            ]
+        },
+        {
+            "word": "one another",
+            "pos": "pron",
+            "meaning": "ซึ่งกันและกัน",
+            "example": "We respect one another.",
+            "difficulty": "B1",
+            "category": [
+                "Reciprocal"
+            ]
+        },
+        {
+            "word": "what",
+            "pos": "pron",
+            "meaning": "สิ่งที่",
+            "example": "What you said is true.",
+            "difficulty": "B1",
+            "category": [
+                "Clause"
+            ]
+        },
+        {
+            "word": "which",
+            "pos": "pron",
+            "meaning": "สิ่งซึ่ง",
+            "example": "Which is better depends on you.",
+            "difficulty": "B1",
+            "category": [
+                "Clause"
+            ]
+        },
+        {
+            "word": "who",
+            "pos": "pron",
+            "meaning": "ผู้ที่ (ใช้ใน noun clause)",
+            "example": "Whoever wins will lead.",
+            "difficulty": "B1",
+            "category": [
+                "Clause"
+            ]
+        },
+        {
+            "word": "whichever",
+            "pos": "pron",
+            "meaning": "อันไหนก็ตามที่ (ใช้ใน clause)",
+            "example": "Take whichever you like.",
+            "difficulty": "B1",
+            "category": [
+                "Clause"
+            ]
+        }
+    ]
+}

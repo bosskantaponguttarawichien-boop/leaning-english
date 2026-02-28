@@ -1,0 +1,494 @@
+{
+    "words": [
+        {
+            "word": "decision",
+            "pos": "n",
+            "meaning": "การตัดสินใจ",
+            "example": "It was a difficult decision.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "message",
+            "pos": "n",
+            "meaning": "ข้อความ",
+            "example": "I sent you a message.",
+            "difficulty": "A2",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "meeting",
+            "pos": "n",
+            "meaning": "การประชุม",
+            "example": "We have a meeting this afternoon.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "plan",
+            "pos": "n",
+            "meaning": "แผน",
+            "example": "Do you have any plans for tonight?",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "project",
+            "pos": "n",
+            "meaning": "โครงการ",
+            "example": "I'm working on a new project.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "example",
+            "pos": "n",
+            "meaning": "ตัวอย่าง",
+            "example": "Can you give me an example?",
+            "difficulty": "A2",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "reason",
+            "pos": "n",
+            "meaning": "เหตุผล",
+            "example": "What is the reason for this?",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "result",
+            "pos": "n",
+            "meaning": "ผลลัพธ์",
+            "example": "The result was surprising.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "change",
+            "pos": "n",
+            "meaning": "การเปลี่ยนแปลง",
+            "example": "Change takes time.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "information",
+            "pos": "n",
+            "meaning": "ข้อมูล",
+            "example": "I need more information.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "experience",
+            "pos": "n",
+            "meaning": "ประสบการณ์",
+            "example": "It was a great experience.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "situation",
+            "pos": "n",
+            "meaning": "สถานการณ์",
+            "example": "It's a difficult situation.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "system",
+            "pos": "n",
+            "meaning": "ระบบ",
+            "example": "The system is not working.",
+            "difficulty": "A2",
+            "category": [
+                "Technology"
+            ]
+        },
+        {
+            "word": "company",
+            "pos": "n",
+            "meaning": "บริษัท",
+            "example": "She works for a big company.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "customer",
+            "pos": "n",
+            "meaning": "ลูกค้า",
+            "example": "The customer is waiting.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "service",
+            "pos": "n",
+            "meaning": "บริการ",
+            "example": "The service was excellent.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "business",
+            "pos": "n",
+            "meaning": "ธุรกิจ",
+            "example": "He runs a small business.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "product",
+            "pos": "n",
+            "meaning": "สินค้า",
+            "example": "This product is popular.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "price",
+            "pos": "n",
+            "meaning": "ราคา",
+            "example": "The price is too high.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "order",
+            "pos": "n",
+            "meaning": "คำสั่งซื้อ",
+            "example": "Your order is ready.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "travel",
+            "pos": "n",
+            "meaning": "การเดินทาง",
+            "example": "I love travel.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "vacation",
+            "pos": "n",
+            "meaning": "วันหยุดพักผ่อน",
+            "example": "We are planning a vacation.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "ticket",
+            "pos": "n",
+            "meaning": "ตั๋ว",
+            "example": "I bought a train ticket.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "solution",
+            "pos": "n",
+            "meaning": "วิธีแก้ปัญหา",
+            "example": "We found a solution.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "language",
+            "pos": "n",
+            "meaning": "ภาษา",
+            "example": "English is a global language.",
+            "difficulty": "A2",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "conversation",
+            "pos": "n",
+            "meaning": "บทสนทนา",
+            "example": "We had a long conversation.",
+            "difficulty": "A2",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "story",
+            "pos": "n",
+            "meaning": "เรื่องราว",
+            "example": "Tell me a story.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "news",
+            "pos": "n",
+            "meaning": "ข่าว",
+            "example": "Did you hear the news?",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "event",
+            "pos": "n",
+            "meaning": "เหตุการณ์ / งานกิจกรรม",
+            "example": "The event starts at 6 PM.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "party",
+            "pos": "n",
+            "meaning": "งานปาร์ตี้",
+            "example": "She invited me to her party.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "hobby",
+            "pos": "n",
+            "meaning": "งานอดิเรก",
+            "example": "Reading is my hobby.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "interest",
+            "pos": "n",
+            "meaning": "ความสนใจ",
+            "example": "He has an interest in music.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "skill",
+            "pos": "n",
+            "meaning": "ทักษะ",
+            "example": "Communication is an important skill.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "test",
+            "pos": "n",
+            "meaning": "แบบทดสอบ",
+            "example": "I have a test tomorrow.",
+            "difficulty": "A2",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "exam",
+            "pos": "n",
+            "meaning": "การสอบ",
+            "example": "The exam was difficult.",
+            "difficulty": "A2",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "lesson",
+            "pos": "n",
+            "meaning": "บทเรียน",
+            "example": "Today's lesson is easy.",
+            "difficulty": "A2",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "homework",
+            "pos": "n",
+            "meaning": "การบ้าน",
+            "example": "I finished my homework.",
+            "difficulty": "A2",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "future",
+            "pos": "n",
+            "meaning": "อนาคต",
+            "example": "I worry about the future.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "past",
+            "pos": "n",
+            "meaning": "อดีต",
+            "example": "The past is behind us.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "website",
+            "pos": "n",
+            "meaning": "เว็บไซต์",
+            "example": "I found it on a website.",
+            "difficulty": "A2",
+            "category": [
+                "Technology"
+            ]
+        },
+        {
+            "word": "email",
+            "pos": "n",
+            "meaning": "อีเมล",
+            "example": "Send me an email.",
+            "difficulty": "A2",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "account",
+            "pos": "n",
+            "meaning": "บัญชีผู้ใช้",
+            "example": "I created a new account.",
+            "difficulty": "A2",
+            "category": [
+                "Technology"
+            ]
+        },
+        {
+            "word": "password",
+            "pos": "n",
+            "meaning": "รหัสผ่าน",
+            "example": "Don't share your password.",
+            "difficulty": "A2",
+            "category": [
+                "Technology"
+            ]
+        },
+        {
+            "word": "address",
+            "pos": "n",
+            "meaning": "ที่อยู่",
+            "example": "What is your address?",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "photo",
+            "pos": "n",
+            "meaning": "รูปถ่าย",
+            "example": "She posted a photo online.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "video",
+            "pos": "n",
+            "meaning": "วิดีโอ",
+            "example": "I watched a video.",
+            "difficulty": "A2",
+            "category": [
+                "Technology"
+            ]
+        },
+        {
+            "word": "weather",
+            "pos": "n",
+            "meaning": "สภาพอากาศ",
+            "example": "The weather is nice today.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "traffic",
+            "pos": "n",
+            "meaning": "การจราจร",
+            "example": "The traffic is heavy.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "health",
+            "pos": "n",
+            "meaning": "สุขภาพ",
+            "example": "Health is important.",
+            "difficulty": "A2",
+            "category": [
+                "Health"
+            ]
+        }
+    ]
+}

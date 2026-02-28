@@ -1,0 +1,254 @@
+{
+    "words": [
+        {
+            "word": "and",
+            "pos": "conj",
+            "meaning": "และ",
+            "example": "I like coffee and tea.",
+            "difficulty": "A1",
+            "category": [
+                "Basic"
+            ]
+        },
+        {
+            "word": "but",
+            "pos": "conj",
+            "meaning": "แต่",
+            "example": "I want to go, but I am busy.",
+            "difficulty": "A1",
+            "category": [
+                "Basic"
+            ]
+        },
+        {
+            "word": "or",
+            "pos": "conj",
+            "meaning": "หรือ",
+            "example": "Tea or coffee?",
+            "difficulty": "A1",
+            "category": [
+                "Basic"
+            ]
+        },
+        {
+            "word": "so",
+            "pos": "conj",
+            "meaning": "ดังนั้น",
+            "example": "I was tired, so I went home.",
+            "difficulty": "A1",
+            "category": [
+                "Basic"
+            ]
+        },
+        {
+            "word": "because",
+            "pos": "conj",
+            "meaning": "เพราะว่า",
+            "example": "I stayed home because it was raining.",
+            "difficulty": "A1",
+            "category": [
+                "Reason"
+            ]
+        },
+        {
+            "word": "if",
+            "pos": "conj",
+            "meaning": "ถ้า",
+            "example": "If you need help, call me.",
+            "difficulty": "A1",
+            "category": [
+                "Condition"
+            ]
+        },
+        {
+            "word": "when",
+            "pos": "conj",
+            "meaning": "เมื่อ",
+            "example": "Call me when you arrive.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "before",
+            "pos": "conj",
+            "meaning": "ก่อนที่",
+            "example": "Wash your hands before you eat.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "after",
+            "pos": "conj",
+            "meaning": "หลังจากที่",
+            "example": "We went home after we finished.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "until",
+            "pos": "conj",
+            "meaning": "จนกระทั่ง",
+            "example": "Wait here until I come back.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "while",
+            "pos": "conj",
+            "meaning": "ขณะที่",
+            "example": "She listened while he spoke.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "though",
+            "pos": "conj",
+            "meaning": "แม้ว่า (แบบง่าย)",
+            "example": "I went out though it was cold.",
+            "difficulty": "A1",
+            "category": [
+                "Contrast"
+            ]
+        },
+        {
+            "word": "as",
+            "pos": "conj",
+            "meaning": "เมื่อ / เพราะว่า",
+            "example": "As I was tired, I slept early.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "than",
+            "pos": "conj",
+            "meaning": "กว่า (ใช้เปรียบเทียบ)",
+            "example": "She is taller than me.",
+            "difficulty": "A1",
+            "category": [
+                "Comparison"
+            ]
+        },
+        {
+            "word": "either...or",
+            "pos": "conj",
+            "meaning": "ไม่ก็...หรือ",
+            "example": "You can either stay or leave.",
+            "difficulty": "A1",
+            "category": [
+                "Choice"
+            ]
+        },
+        {
+            "word": "neither...nor",
+            "pos": "conj",
+            "meaning": "ไม่ทั้ง...และ",
+            "example": "Neither he nor I understand.",
+            "difficulty": "A1",
+            "category": [
+                "Choice"
+            ]
+        },
+        {
+            "word": "both...and",
+            "pos": "conj",
+            "meaning": "ทั้ง...และ",
+            "example": "She is both smart and kind.",
+            "difficulty": "A1",
+            "category": [
+                "Addition"
+            ]
+        },
+        {
+            "word": "so that",
+            "pos": "conj",
+            "meaning": "เพื่อที่ว่า",
+            "example": "I studied hard so that I could pass.",
+            "difficulty": "A1",
+            "category": [
+                "Purpose"
+            ]
+        },
+        {
+            "word": "because of",
+            "pos": "conj",
+            "meaning": "เพราะว่า (ใช้กับคำนาม)",
+            "example": "We stayed home because of rain.",
+            "difficulty": "A1",
+            "category": [
+                "Reason"
+            ]
+        },
+        {
+            "word": "although",
+            "pos": "conj",
+            "meaning": "แม้ว่า",
+            "example": "Although it was late, we continued.",
+            "difficulty": "A1",
+            "category": [
+                "Contrast"
+            ]
+        },
+        {
+            "word": "like",
+            "pos": "conj",
+            "meaning": "เหมือนกับว่า",
+            "example": "It looks like it will rain.",
+            "difficulty": "A1",
+            "category": [
+                "Comparison"
+            ]
+        },
+        {
+            "word": "since",
+            "pos": "conj",
+            "meaning": "เพราะว่า / ตั้งแต่",
+            "example": "Since you are here, let's start.",
+            "difficulty": "A1",
+            "category": [
+                "Reason"
+            ]
+        },
+        {
+            "word": "once",
+            "pos": "conj",
+            "meaning": "ทันทีที่",
+            "example": "Call me once you arrive.",
+            "difficulty": "A1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "whether",
+            "pos": "conj",
+            "meaning": "ว่า...หรือไม่",
+            "example": "I don't know whether he will come.",
+            "difficulty": "A1",
+            "category": [
+                "Condition"
+            ]
+        },
+        {
+            "word": "yet",
+            "pos": "conj",
+            "meaning": "แต่ถึงอย่างนั้น",
+            "example": "He is young, yet very wise.",
+            "difficulty": "A1",
+            "category": [
+                "Contrast"
+            ]
+        }
+    ]
+}

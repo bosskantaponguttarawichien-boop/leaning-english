@@ -1,0 +1,504 @@
+{
+    "words": [
+        {
+            "word": "however",
+            "pos": "adv",
+            "meaning": "อย่างไรก็ตาม",
+            "example": "However, we need more time.",
+            "difficulty": "B1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "therefore",
+            "pos": "adv",
+            "meaning": "ดังนั้น",
+            "example": "It was late; therefore, we left.",
+            "difficulty": "B1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "moreover",
+            "pos": "adv",
+            "meaning": "ยิ่งไปกว่านั้น",
+            "example": "Moreover, the cost is low.",
+            "difficulty": "B1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "furthermore",
+            "pos": "adv",
+            "meaning": "นอกจากนี้ (เป็นทางการ)",
+            "example": "Furthermore, we improved quality.",
+            "difficulty": "B1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "meanwhile",
+            "pos": "adv",
+            "meaning": "ในขณะเดียวกัน",
+            "example": "Meanwhile, the team prepared.",
+            "difficulty": "B1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "otherwise",
+            "pos": "adv",
+            "meaning": "ไม่เช่นนั้น",
+            "example": "Hurry up; otherwise, we’ll be late.",
+            "difficulty": "B1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "instead",
+            "pos": "adv",
+            "meaning": "แทนที่จะ",
+            "example": "We stayed home instead.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "overall",
+            "pos": "adv",
+            "meaning": "โดยรวม",
+            "example": "Overall, the result was good.",
+            "difficulty": "B1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "particularly",
+            "pos": "adv",
+            "meaning": "โดยเฉพาะอย่างยิ่ง",
+            "example": "I particularly like this idea.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "especially",
+            "pos": "adv",
+            "meaning": "โดยเฉพาะ",
+            "example": "I enjoy sports, especially football.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "clearly",
+            "pos": "adv",
+            "meaning": "อย่างชัดเจน",
+            "example": "She clearly explained the problem.",
+            "difficulty": "B1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "obviously",
+            "pos": "adv",
+            "meaning": "อย่างเห็นได้ชัด",
+            "example": "Obviously, this won’t work.",
+            "difficulty": "B1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "seriously",
+            "pos": "adv",
+            "meaning": "อย่างจริงจัง",
+            "example": "We need to seriously consider this.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "effectively",
+            "pos": "adv",
+            "meaning": "อย่างมีประสิทธิภาพ",
+            "example": "She managed the team effectively.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "efficiently",
+            "pos": "adv",
+            "meaning": "อย่างมีประสิทธิผล",
+            "example": "The system runs efficiently.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "significantly",
+            "pos": "adv",
+            "meaning": "อย่างมีนัยสำคัญ",
+            "example": "Sales increased significantly.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "directly",
+            "pos": "adv",
+            "meaning": "โดยตรง",
+            "example": "Contact me directly.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "indirectly",
+            "pos": "adv",
+            "meaning": "ทางอ้อม",
+            "example": "It indirectly affected the results.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "eventually",
+            "pos": "adv",
+            "meaning": "ในที่สุด",
+            "example": "We eventually solved it.",
+            "difficulty": "B1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "gradually",
+            "pos": "adv",
+            "meaning": "ค่อย ๆ",
+            "example": "The situation gradually improved.",
+            "difficulty": "B1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "previously",
+            "pos": "adv",
+            "meaning": "ก่อนหน้านี้",
+            "example": "I previously worked in sales.",
+            "difficulty": "B1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "currently",
+            "pos": "adv",
+            "meaning": "ปัจจุบัน",
+            "example": "I am currently studying.",
+            "difficulty": "B1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "recently",
+            "pos": "adv",
+            "meaning": "เมื่อไม่นานมานี้",
+            "example": "She recently moved.",
+            "difficulty": "B1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "frequently",
+            "pos": "adv",
+            "meaning": "บ่อยครั้ง",
+            "example": "He frequently travels abroad.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "rarely",
+            "pos": "adv",
+            "meaning": "แทบจะไม่",
+            "example": "I rarely eat fast food.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "barely",
+            "pos": "adv",
+            "meaning": "แทบจะไม่",
+            "example": "I barely slept last night.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "hardly",
+            "pos": "adv",
+            "meaning": "แทบจะไม่",
+            "example": "She hardly speaks.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "approximately",
+            "pos": "adv",
+            "meaning": "ประมาณ",
+            "example": "It costs approximately $100.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "exactly",
+            "pos": "adv",
+            "meaning": "อย่างแม่นยำ",
+            "example": "That’s exactly right.",
+            "difficulty": "B1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "precisely",
+            "pos": "adv",
+            "meaning": "อย่างแม่นยำมาก",
+            "example": "That is precisely the issue.",
+            "difficulty": "B1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "personally",
+            "pos": "adv",
+            "meaning": "โดยส่วนตัว",
+            "example": "Personally, I prefer this option.",
+            "difficulty": "B1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "honestly",
+            "pos": "adv",
+            "meaning": "พูดตามตรง",
+            "example": "Honestly, I disagree.",
+            "difficulty": "B1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "frankly",
+            "pos": "adv",
+            "meaning": "พูดตรง ๆ",
+            "example": "Frankly, we need a new plan.",
+            "difficulty": "B1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "fortunately",
+            "pos": "adv",
+            "meaning": "โชคดีที่",
+            "example": "Fortunately, no one was hurt.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "unfortunately",
+            "pos": "adv",
+            "meaning": "โชคร้ายที่",
+            "example": "Unfortunately, we failed.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "successfully",
+            "pos": "adv",
+            "meaning": "อย่างสำเร็จ",
+            "example": "They successfully completed it.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "independently",
+            "pos": "adv",
+            "meaning": "อย่างอิสระ",
+            "example": "She works independently.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "actively",
+            "pos": "adv",
+            "meaning": "อย่างกระตือรือร้น",
+            "example": "He actively participated.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "properly",
+            "pos": "adv",
+            "meaning": "อย่างถูกต้อง",
+            "example": "Please do it properly.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "carefully",
+            "pos": "adv",
+            "meaning": "อย่างระมัดระวัง",
+            "example": "Read carefully.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "immediately",
+            "pos": "adv",
+            "meaning": "ทันที",
+            "example": "Respond immediately.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "ultimately",
+            "pos": "adv",
+            "meaning": "ท้ายที่สุดแล้ว",
+            "example": "Ultimately, we agreed.",
+            "difficulty": "B1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "initially",
+            "pos": "adv",
+            "meaning": "ในตอนแรก",
+            "example": "Initially, it seemed easy.",
+            "difficulty": "B1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "specifically",
+            "pos": "adv",
+            "meaning": "โดยเฉพาะเจาะจง",
+            "example": "What specifically do you mean?",
+            "difficulty": "B1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "generally",
+            "pos": "adv",
+            "meaning": "โดยทั่วไป",
+            "example": "Generally, people agree.",
+            "difficulty": "B1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "normally",
+            "pos": "adv",
+            "meaning": "โดยปกติ",
+            "example": "I normally wake up early.",
+            "difficulty": "B1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "naturally",
+            "pos": "adv",
+            "meaning": "โดยธรรมชาติ / แน่นอนอยู่แล้ว",
+            "example": "Naturally, she was nervous.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "technically",
+            "pos": "adv",
+            "meaning": "ในทางเทคนิค",
+            "example": "Technically, it is correct.",
+            "difficulty": "B1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "financially",
+            "pos": "adv",
+            "meaning": "ทางการเงิน",
+            "example": "The company is financially stable.",
+            "difficulty": "B1",
+            "category": [
+                "Finance"
+            ]
+        },
+        {
+            "word": "globally",
+            "pos": "adv",
+            "meaning": "ทั่วโลก",
+            "example": "The brand is known globally.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        }
+    ]
+}

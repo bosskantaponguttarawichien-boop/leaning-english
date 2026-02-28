@@ -1,0 +1,504 @@
+{
+    "words": [
+        {
+            "word": "be",
+            "pos": "v",
+            "meaning": "เป็น / อยู่ / คือ",
+            "example": "I am happy.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "have",
+            "pos": "v",
+            "meaning": "มี",
+            "example": "I have a car.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "do",
+            "pos": "v",
+            "meaning": "ทำ",
+            "example": "I do my homework.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "go",
+            "pos": "v",
+            "meaning": "ไป",
+            "example": "I go to work.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "come",
+            "pos": "v",
+            "meaning": "มา",
+            "example": "Come here, please.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "get",
+            "pos": "v",
+            "meaning": "ได้รับ / เอา",
+            "example": "I get a message.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "make",
+            "pos": "v",
+            "meaning": "ทำ / สร้าง",
+            "example": "She makes coffee.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "take",
+            "pos": "v",
+            "meaning": "เอา / ใช้เวลา",
+            "example": "Take your time.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "eat",
+            "pos": "v",
+            "meaning": "กิน",
+            "example": "I eat rice.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "drink",
+            "pos": "v",
+            "meaning": "ดื่ม",
+            "example": "She drinks water.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "see",
+            "pos": "v",
+            "meaning": "เห็น",
+            "example": "I see you.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "look",
+            "pos": "v",
+            "meaning": "มอง",
+            "example": "Look at this.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "watch",
+            "pos": "v",
+            "meaning": "ดู",
+            "example": "We watch TV.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "listen",
+            "pos": "v",
+            "meaning": "ฟัง",
+            "example": "Listen to me.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "hear",
+            "pos": "v",
+            "meaning": "ได้ยิน",
+            "example": "I hear a noise.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "say",
+            "pos": "v",
+            "meaning": "พูด",
+            "example": "She says hello.",
+            "difficulty": "A1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "tell",
+            "pos": "v",
+            "meaning": "บอก",
+            "example": "Tell me the truth.",
+            "difficulty": "A1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "ask",
+            "pos": "v",
+            "meaning": "ถาม",
+            "example": "I ask a question.",
+            "difficulty": "A1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "answer",
+            "pos": "v",
+            "meaning": "ตอบ",
+            "example": "Please answer me.",
+            "difficulty": "A1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "call",
+            "pos": "v",
+            "meaning": "โทร / เรียก",
+            "example": "Call me later.",
+            "difficulty": "A1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "work",
+            "pos": "v",
+            "meaning": "ทำงาน",
+            "example": "I work every day.",
+            "difficulty": "A1",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "study",
+            "pos": "v",
+            "meaning": "เรียน",
+            "example": "She studies English.",
+            "difficulty": "A1",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "learn",
+            "pos": "v",
+            "meaning": "เรียนรู้",
+            "example": "I learn new words.",
+            "difficulty": "A1",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "teach",
+            "pos": "v",
+            "meaning": "สอน",
+            "example": "He teaches math.",
+            "difficulty": "A1",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "help",
+            "pos": "v",
+            "meaning": "ช่วย",
+            "example": "Can you help me?",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "like",
+            "pos": "v",
+            "meaning": "ชอบ",
+            "example": "I like coffee.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "love",
+            "pos": "v",
+            "meaning": "รัก / ชอบมาก",
+            "example": "I love music.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "want",
+            "pos": "v",
+            "meaning": "ต้องการ",
+            "example": "I want some water.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "need",
+            "pos": "v",
+            "meaning": "จำเป็นต้อง",
+            "example": "I need help.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "try",
+            "pos": "v",
+            "meaning": "ลอง",
+            "example": "Try again.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "start",
+            "pos": "v",
+            "meaning": "เริ่ม",
+            "example": "Let's start now.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "stop",
+            "pos": "v",
+            "meaning": "หยุด",
+            "example": "Stop talking.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "open",
+            "pos": "v",
+            "meaning": "เปิด",
+            "example": "Open the door.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "close",
+            "pos": "v",
+            "meaning": "ปิด",
+            "example": "Close the window.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "buy",
+            "pos": "v",
+            "meaning": "ซื้อ",
+            "example": "I buy food.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "pay",
+            "pos": "v",
+            "meaning": "จ่ายเงิน",
+            "example": "I pay the bill.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "play",
+            "pos": "v",
+            "meaning": "เล่น",
+            "example": "Children play outside.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "run",
+            "pos": "v",
+            "meaning": "วิ่ง",
+            "example": "He runs fast.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "walk",
+            "pos": "v",
+            "meaning": "เดิน",
+            "example": "I walk to school.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "sit",
+            "pos": "v",
+            "meaning": "นั่ง",
+            "example": "Sit down.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "stand",
+            "pos": "v",
+            "meaning": "ยืน",
+            "example": "Please stand up.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "sleep",
+            "pos": "v",
+            "meaning": "นอน",
+            "example": "I sleep at 10 PM.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "wake",
+            "pos": "v",
+            "meaning": "ตื่น",
+            "example": "I wake up early.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "live",
+            "pos": "v",
+            "meaning": "อาศัยอยู่",
+            "example": "I live in Bangkok.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "move",
+            "pos": "v",
+            "meaning": "ย้าย / เคลื่อนที่",
+            "example": "She moved to a new house.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "give",
+            "pos": "v",
+            "meaning": "ให้",
+            "example": "Give me your phone.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "send",
+            "pos": "v",
+            "meaning": "ส่ง",
+            "example": "Send me a message.",
+            "difficulty": "A1",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "meet",
+            "pos": "v",
+            "meaning": "พบ",
+            "example": "Nice to meet you.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "begin",
+            "pos": "v",
+            "meaning": "เริ่มต้น",
+            "example": "The class begins at 9.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "finish",
+            "pos": "v",
+            "meaning": "เสร็จสิ้น",
+            "example": "I finished my work.",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life"
+            ]
+        }
+    ]
+}
