@@ -34,6 +34,7 @@ export default function WordPracticePage() {
     const startTimeRef = useRef<number | null>(null);
     const wordStartTimeRef = useRef<number | null>(null);
     const [stats, setStats] = useState<SRSStats | null>(null);
+    const [finalWpm, setFinalWpm] = useState(0);
 
     // Update SRS stats
     useEffect(() => {
@@ -52,7 +53,12 @@ export default function WordPracticePage() {
             let filteredWords = validated.words;
 
             if (difficulty !== "all") {
-                filteredWords = filteredWords.filter(w => w.difficulty === difficulty);
+                if (difficulty === "difficult") {
+                    const progressData = getProgress();
+                    filteredWords = filteredWords.filter(w => (progressData[w.word]?.wrongCount || 0) > 0);
+                } else {
+                    filteredWords = filteredWords.filter(w => w.difficulty === difficulty);
+                }
             }
 
             if (selectedPOS !== "all") {
@@ -100,7 +106,7 @@ export default function WordPracticePage() {
 
         // Save SRS result
         if (words[currentIndex]) {
-            saveWordResult(words[currentIndex].word, true, responseTime);
+            saveWordResult(words[currentIndex].word, true, responseTime, { isTestMode });
             if (isSpeechEnabled) {
                 speak(words[currentIndex].word);
             }
@@ -109,13 +115,23 @@ export default function WordPracticePage() {
         // Short delay before next word
         setTimeout(() => {
             if (!isFinished) {
-                setCurrentIndex((prev) => (prev + 1) % words.length);
-                setIsRevealed(false);
-                setIsCorrect(false);
-                setTypingValue("");
+                if (!timerEnabled && words.length > 0 && currentIndex === words.length - 1) {
+                    if (startTimeRef.current) {
+                        const timeElapsedMinutes = (Date.now() - startTimeRef.current) / 60000;
+                        const chars = totalChars + words[currentIndex].word.length + 1;
+                        setFinalWpm(Math.round((chars / 5) / (timeElapsedMinutes || 0.01)));
+                    }
+                    setIsFinished(true);
+                    setIsStarted(false);
+                } else {
+                    setCurrentIndex((prev) => (prev + 1) % words.length);
+                    setIsRevealed(false);
+                    setIsCorrect(false);
+                    setTypingValue("");
+                }
             }
         }, 1200); // Increased delay slightly to allow speech to finish
-    }, [words, currentIndex, isStarted, isFinished, isSpeechEnabled]);
+    }, [words, currentIndex, isStarted, isFinished, isSpeechEnabled, timerEnabled, totalChars, isTestMode]);
 
     const handleWrong = useCallback(() => {
         const now = Date.now();
@@ -129,7 +145,7 @@ export default function WordPracticePage() {
         const responseTime = wordStartTimeRef.current ? now - wordStartTimeRef.current : undefined;
 
         if (words[currentIndex]) {
-            saveWordResult(words[currentIndex].word, false, responseTime);
+            saveWordResult(words[currentIndex].word, false, responseTime, { isTestMode });
         }
 
         setIsWrong(true);
@@ -161,16 +177,25 @@ export default function WordPracticePage() {
 
         if (!isFinished) {
             setTimeout(() => {
-                setCurrentIndex((prev) => (prev + 1) % words.length);
-                setIsRevealed(false);
-                setIsCorrect(false);
-                setIsWrong(false);
-                setTypingValue("");
+                if (!timerEnabled && words.length > 0 && currentIndex === words.length - 1) {
+                    if (startTimeRef.current) {
+                        const timeElapsedMinutes = (Date.now() - startTimeRef.current) / 60000;
+                        setFinalWpm(Math.round((totalChars / 5) / (timeElapsedMinutes || 0.01)));
+                    }
+                    setIsFinished(true);
+                    setIsStarted(false);
+                } else {
+                    setCurrentIndex((prev) => (prev + 1) % words.length);
+                    setIsRevealed(false);
+                    setIsCorrect(false);
+                    setIsWrong(false);
+                    setTypingValue("");
+                }
             }, 1000);
         }
-    }, [words, currentIndex, isStarted, isFinished, isSpeechEnabled]);
+    }, [words, currentIndex, isStarted, isFinished, isSpeechEnabled, timerEnabled, totalChars, isTestMode]);
 
-    const [finalWpm, setFinalWpm] = useState(0);
+
     const handleTimeup = useCallback(() => {
         if (startTimeRef.current && timerEnabled) {
             const timeElapsedMinutes = 1; // It was hardcoded to 60s
@@ -242,7 +267,7 @@ export default function WordPracticePage() {
                 </div>
             )}
 
-            <div className={`w-full max-w-2xl flex flex-col gap-8 flex-1 p-6 md:p-12 ${isFinished ? 'pointer-events-none opacity-50 blur-sm transition-all duration-300' : ''}`}>
+            <div className={`w-full max-w-2xl flex flex-col gap-8 flex-1 px-12 ${isFinished ? 'pointer-events-none opacity-50 blur-sm transition-all duration-300' : ''}`}>
                 {/* Header / Settings */}
                 <div className="flex flex-col gap-6 bg-white p-6 rounded-3xl border border-zinc-100 shadow-sm">
                     <div className="flex justify-between items-center">
@@ -268,8 +293,8 @@ export default function WordPracticePage() {
                         )}
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="flex flex-col gap-2">
+                    <div className="flex flex-row flex-wrap gap-6 justify-between">
+                        <div className="flex flex-col gap-2 flex-1 min-w-[260px]">
                             <label className="text-[10px] font-black uppercase text-zinc-400 tracking-widest">Configuration</label>
                             <div className="flex gap-2">
                                 <select
@@ -278,6 +303,7 @@ export default function WordPracticePage() {
                                     className="flex-1 bg-zinc-50 border border-zinc-100 text-zinc-600 text-xs font-bold rounded-xl px-3 py-2 outline-none focus:ring-2 focus:ring-blue-100 transition-all"
                                 >
                                     <option value="all">Any Level</option>
+                                    <option value="difficult">Difficult Words (Needs Review)</option>
                                     <option value="A1">A1 (Beginner)</option>
                                     <option value="A2">A2 (Elementary)</option>
                                     <option value="B1">B1 (Intermediate)</option>
@@ -300,9 +326,9 @@ export default function WordPracticePage() {
                             </div>
                         </div>
 
-                        <div className="flex flex-col gap-2">
+                        <div className="flex flex-col gap-2 flex-1 min-w-[260px]">
                             <label className="text-[10px] font-black uppercase text-zinc-400 tracking-widest">Modes</label>
-                            <div className="flex items-center gap-4 h-full">
+                            <div className="flex flex-wrap items-center gap-4 h-full min-h-[38px]">
                                 <label className="flex items-center gap-2 cursor-pointer group">
                                     <input
                                         type="checkbox"
@@ -342,34 +368,27 @@ export default function WordPracticePage() {
                     </div>
                 ) : (
                     <div className="flex flex-col gap-4">
-                        <div className="flex items-center justify-between px-2">
-                            <div className="flex items-center gap-6">
+                        <div className="flex items-center px-2 mb-2">
+                            <div className="flex w-full sm:w-auto items-center gap-6 sm:gap-16">
                                 <div className="flex flex-col">
                                     <span className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">Session Progress</span>
                                     <span className="text-sm font-black text-zinc-700">{currentIndex + 1} / {words.length}</span>
                                 </div>
-                                <div className="w-px h-6 bg-zinc-200" />
                                 {stats && (
-                                    <div className="flex items-center gap-6">
+                                    <>
+                                        <div className="w-px h-8 bg-zinc-200" />
                                         <div className="flex flex-col">
                                             <span className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">Total Mastery</span>
                                             <span className="text-sm font-black text-zinc-700">{stats.masteredCount}</span>
                                         </div>
-                                        <div className="w-px h-6 bg-zinc-200" />
+                                        <div className="w-px h-8 bg-zinc-200" />
                                         <div className="flex flex-col">
                                             <span className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">Retention</span>
                                             <span className="text-sm font-black text-zinc-700">{stats.retentionRate.toFixed(0)}%</span>
                                         </div>
-                                    </div>
+                                    </>
                                 )}
                             </div>
-
-                            <button
-                                onClick={() => setIsRevealed(!isRevealed)}
-                                className="text-xs font-black text-blue-600 hover:text-blue-700 flex items-center gap-1 transition-colors uppercase tracking-wider"
-                            >
-                                {isRevealed ? "Hide Hint" : "Need a Hint?"}
-                            </button>
                         </div>
 
                         {/* Progress indicator */}
@@ -390,6 +409,7 @@ export default function WordPracticePage() {
                                 isWrong={isWrong}
                                 isTestMode={isTestMode}
                                 progress={allProgress[currentWord.word]}
+                                onToggleHint={() => setIsRevealed(!isRevealed)}
                             />
                             {isCorrect && (
                                 <div className="absolute -top-4 -right-4 bg-green-500 text-white p-2 rounded-full shadow-lg animate-bounce z-10">

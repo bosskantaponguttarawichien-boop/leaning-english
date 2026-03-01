@@ -12,6 +12,7 @@ interface WordCardProps {
     isWrong?: boolean;
     isTestMode?: boolean;
     progress?: WordProgress;
+    onToggleHint?: () => void;
 }
 
 const posColorMap: Record<POS, string> = {
@@ -36,7 +37,7 @@ const posFullMap: Record<POS, string> = {
     int: "interjection",
 };
 
-export default function WordCard({ wordData, revealed, typingValue = "", isCorrect, isWrong, isTestMode, progress }: WordCardProps) {
+export default function WordCard({ wordData, revealed, typingValue = "", isCorrect, isWrong, isTestMode, progress, onToggleHint }: WordCardProps) {
     const speak = (text: string) => {
         if (typeof window !== "undefined" && window.speechSynthesis) {
             const utterance = new SpeechSynthesisUtterance(text);
@@ -92,13 +93,33 @@ export default function WordCard({ wordData, revealed, typingValue = "", isCorre
     };
 
     return (
-        <div className={`p-8 rounded-2xl border-2 transition-all duration-300 ${isCorrect
+        <div className={`relative p-8 rounded-2xl border-2 transition-all duration-300 ${isCorrect
             ? "bg-green-50 border-green-200 shadow-green-100"
             : isWrong
                 ? "bg-red-50 border-red-200 shadow-red-100"
                 : "bg-white border-zinc-100 shadow-xl shadow-zinc-100"
             }`}>
-            <div className="flex flex-col items-center gap-4 text-center">
+
+            {/* Hint Toggle Button */}
+            {onToggleHint && (
+                <button
+                    onClick={onToggleHint}
+                    className="absolute top-4 right-4 p-2 text-zinc-400 hover:text-yellow-500 hover:bg-yellow-50 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-yellow-200 group"
+                    title={revealed ? "Hide Hint" : "Need a Hint?"}
+                >
+                    {revealed ? (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
+                        </svg>
+                    ) : (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                    )}
+                </button>
+            )}
+
+            <div className="flex flex-col items-center gap-4 text-center mt-2">
                 {/* POS Badge */}
                 <span className={`px-2 py-0.5 text-[10px] font-black uppercase rounded border ${posColorMap[wordData.pos]}`}>
                     {posFullMap[wordData.pos]}

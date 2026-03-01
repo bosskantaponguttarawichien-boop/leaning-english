@@ -26,7 +26,7 @@ export function getProgress(): Record<string, WordProgress> {
 
 const STREAK_LEVELS: WordLevel[] = ["New", "Learning", "Reviewing", "Familiar", "Strong", "Mastered"];
 
-export function saveWordResult(word: string, isCorrect: boolean, responseTimeMs?: number) {
+export function saveWordResult(word: string, isCorrect: boolean, responseTimeMs?: number, options?: { isTestMode?: boolean }) {
     const progress = getProgress();
     const current = progress[word] || {
         word,
@@ -50,7 +50,9 @@ export function saveWordResult(word: string, isCorrect: boolean, responseTimeMs?
         }
     } else {
         current.correctStreak = Math.max(0, current.correctStreak > 1 ? 1 : 0); // Drop to 1 if failed after success, else 0
-        current.wrongCount += 1;
+        if (options?.isTestMode) {
+            current.wrongCount += 1;
+        }
     }
 
     // Update Average Response Time
