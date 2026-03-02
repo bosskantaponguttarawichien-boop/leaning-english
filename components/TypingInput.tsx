@@ -9,6 +9,7 @@ interface TypingInputProps {
     onWrong?: () => void;
     onInputChange?: (value: string) => void;
     disabled?: boolean;
+    isBlind?: boolean;
 }
 
 export default function TypingInput({
@@ -17,6 +18,7 @@ export default function TypingInput({
     onWrong,
     onInputChange,
     disabled = false,
+    isBlind = false,
 }: TypingInputProps) {
     const { register, watch, reset } = useForm<{ typing: string }>({
         defaultValues: { typing: "" },
@@ -49,7 +51,7 @@ export default function TypingInput({
                 autoComplete="off"
                 autoCapitalize="none"
                 disabled={disabled}
-                className="w-full px-4 py-3 text-2xl text-center border-2 border-zinc-200 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all disabled:bg-zinc-100 disabled:cursor-not-allowed"
+                className={`w-full px-4 py-3 text-2xl text-center border-2 border-zinc-200 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all disabled:bg-zinc-100 disabled:cursor-not-allowed ${isBlind ? "text-transparent caret-zinc-900 selection:bg-transparent" : ""}`}
                 placeholder="Type the word here..."
             />
         </div>

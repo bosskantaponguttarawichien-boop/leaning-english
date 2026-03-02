@@ -4,15 +4,19 @@ import React from "react";
 import { Word, POS } from "@/schemas/vocab.schema";
 import { WordProgress } from "@/lib/storage";
 
+export type DifficultyMode = 'normal' | 'test' | 'hard';
+
 interface WordCardProps {
     wordData: Word;
     revealed: boolean;
     typingValue?: string;
     isCorrect?: boolean;
     isWrong?: boolean;
-    isTestMode?: boolean;
+    difficultyMode?: DifficultyMode;
     progress?: WordProgress;
     onToggleHint?: () => void;
+    isMarked?: boolean;
+    onToggleMark?: () => void;
 }
 
 const posColorMap: Record<POS, string> = {
@@ -37,7 +41,7 @@ const posFullMap: Record<POS, string> = {
     int: "interjection",
 };
 
-export default function WordCard({ wordData, revealed, typingValue = "", isCorrect, isWrong, isTestMode, progress, onToggleHint }: WordCardProps) {
+export default function WordCard({ wordData, revealed, typingValue = "", isCorrect, isWrong, difficultyMode = 'normal', progress, onToggleHint, isMarked, onToggleMark }: WordCardProps) {
     const speak = (text: string) => {
         if (typeof window !== "undefined" && window.speechSynthesis) {
             const utterance = new SpeechSynthesisUtterance(text);
@@ -46,14 +50,17 @@ export default function WordCard({ wordData, revealed, typingValue = "", isCorre
         }
     };
 
-    // Mask the word in the example sentence if in test mode
-    const displayExample = isTestMode
+    const isTestLike = difficultyMode !== 'normal';
+
+    // Mask the word in the example sentence if in test/hard mode
+    const displayExample = isTestLike
         ? wordData.example.replace(new RegExp(wordData.word, "gi"), "____")
         : wordData.example;
 
     const renderWord = () => {
         const target = wordData.word;
-        const typing = typingValue;
+        // In hard mode, hide per-character feedback — show only underscores until revealed
+        const typing = difficultyMode === 'hard' ? "" : typingValue;
 
         return (
             <div className="flex flex-wrap justify-center gap-x-1">
@@ -75,12 +82,12 @@ export default function WordCard({ wordData, revealed, typingValue = "", isCorre
                         } else {
                             color = "text-red-500 font-bold underline decoration-2 underline-offset-4"; // incorrect
                         }
-                    } else if (revealed && !isTestMode) {
+                    } else if (revealed && !isTestLike) {
                         color = "text-zinc-900"; // revealed target
                     }
 
                     // In test mode, we show underscores for un-typed characters if not revealed
-                    const displayChar = (!revealed && isTestMode && typedChar === undefined) ? "_" : char;
+                    const displayChar = (!revealed && isTestLike && typedChar === undefined) ? "_" : char;
 
                     return (
                         <span key={idx} className={`${color} transition-colors duration-200`}>
@@ -93,18 +100,41 @@ export default function WordCard({ wordData, revealed, typingValue = "", isCorre
     };
 
     return (
-        <div className={`relative p-8 rounded-2xl border-2 transition-all duration-300 ${isCorrect
-            ? "bg-green-50 border-green-200 shadow-green-100"
+        <div className={`relative p-8 rounded-[2.5rem] border-2 transition-all duration-500 overflow-hidden ${isCorrect
+            ? "bg-green-50/50 border-green-200/50 premium-shadow shadow-green-100"
             : isWrong
-                ? "bg-red-50 border-red-200 shadow-red-100"
-                : "bg-white border-zinc-100 shadow-xl shadow-zinc-100"
+                ? "bg-red-50/50 border-red-200/50 premium-shadow shadow-red-100"
+                : "bg-white border-white premium-shadow-lg"
             }`}>
+
+            {/* Bookmark / Mark for Review Button */}
+            {onToggleMark && (
+                <button
+                    onClick={onToggleMark}
+                    className={`absolute top-6 left-6 p-3 rounded-2xl transition-all focus:outline-none focus:ring-4 focus:ring-amber-100 group z-10 ${
+                        isMarked
+                            ? "text-amber-500 bg-amber-50"
+                            : "text-zinc-300 hover:text-amber-500 hover:bg-amber-50"
+                    }`}
+                    title={isMarked ? "Remove bookmark" : "Mark for review"}
+                >
+                    {isMarked ? (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                        </svg>
+                    ) : (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                        </svg>
+                    )}
+                </button>
+            )}
 
             {/* Hint Toggle Button */}
             {onToggleHint && (
                 <button
                     onClick={onToggleHint}
-                    className="absolute top-4 right-4 p-2 text-zinc-400 hover:text-yellow-500 hover:bg-yellow-50 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-yellow-200 group"
+                    className="absolute top-6 right-6 p-3 text-zinc-300 hover:text-yellow-500 hover:bg-yellow-50 rounded-2xl transition-all focus:outline-none focus:ring-4 focus:ring-yellow-100 group z-10"
                     title={revealed ? "Hide Hint" : "Need a Hint?"}
                 >
                     {revealed ? (
@@ -119,35 +149,35 @@ export default function WordCard({ wordData, revealed, typingValue = "", isCorre
                 </button>
             )}
 
-            <div className="flex flex-col items-center gap-4 text-center mt-2">
+            <div className="flex flex-col items-center gap-6 text-center mt-2">
                 {/* POS Badge */}
-                <span className={`px-2 py-0.5 text-[10px] font-black uppercase rounded border ${posColorMap[wordData.pos]}`}>
+                <span className={`px-4 py-1 text-[10px] font-black uppercase rounded-full border tracking-widest ${posColorMap[wordData.pos]}`}>
                     {posFullMap[wordData.pos]}
                 </span>
 
                 {/* Primary Content */}
                 <div className="flex flex-col items-center gap-2">
-                    {isTestMode ? (
-                        <div className="flex flex-col gap-4">
-                            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-zinc-900 Thai-font">
+                    {isTestLike ? (
+                        <div className="flex flex-col gap-6">
+                            <h2 className="text-5xl md:text-6xl font-black tracking-tight text-zinc-900 Thai-font text-gradient leading-tight">
                                 {wordData.meaning}
                             </h2>
-                            <div className="text-4xl font-mono tracking-widest min-h-[1.5em] flex items-center justify-center">
+                            <div className="text-5xl font-mono tracking-widest min-h-[1.5em] flex items-center justify-center">
                                 {renderWord()}
                             </div>
                         </div>
                     ) : (
-                        <div className="flex items-center gap-3">
-                            <h2 className="text-5xl font-black tracking-tight text-zinc-900 min-h-[1.5em] flex items-center justify-center">
+                        <div className="flex items-center gap-6">
+                            <h2 className="text-6xl font-black tracking-tight text-zinc-900 min-h-[1.5em] flex items-center justify-center">
                                 {renderWord()}
                             </h2>
                             <button
                                 onClick={() => speak(wordData.word)}
-                                className="p-2 hover:bg-zinc-100 rounded-full transition-colors text-zinc-400 hover:text-blue-500 self-center"
+                                className="p-4 bg-zinc-50 hover:bg-blue-50 rounded-2xl transition-all text-zinc-300 hover:text-blue-500 self-center group"
                                 title="Listen"
                             >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
                                 </svg>
                             </button>
                         </div>
@@ -155,45 +185,45 @@ export default function WordCard({ wordData, revealed, typingValue = "", isCorre
                 </div>
 
                 {/* Example Sentence */}
-                <p className="text-lg text-zinc-400 font-medium italic max-w-md">
+                <p className="text-xl text-zinc-400 font-medium italic max-w-md leading-relaxed selection:bg-blue-50 selection:text-blue-500">
                     &quot;{displayExample}&quot;
                 </p>
 
                 {/* Meaning Reveal / English Word Reveal */}
-                <div className={`mt-2 transition-all duration-500 overflow-hidden ${revealed ? "max-h-48 opacity-100" : "max-h-0 opacity-0"}`}>
-                    <div className="pt-4 border-t border-zinc-100 flex flex-col items-center gap-4">
-                        <div className="flex flex-col items-center gap-1">
-                            <p className="text-zinc-400 text-xs font-bold uppercase tracking-widest">
-                                {isTestMode ? "The word is" : "Meaning"}
+                <div className={`w-full transition-all duration-700 ease-in-out overflow-hidden ${revealed ? "max-h-64 opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-4"}`}>
+                    <div className="pt-8 mt-4 border-t border-zinc-50 flex flex-col items-center gap-6">
+                        <div className="flex flex-col items-center gap-2">
+                            <p className="text-zinc-300 text-[10px] font-black uppercase tracking-[0.2em]">
+                                {isTestLike ? "The word is" : "Meaning"}
                             </p>
-                            <p className="text-3xl font-black text-zinc-800">
-                                {isTestMode ? wordData.word : wordData.meaning}
+                            <p className="text-4xl font-black text-zinc-800 text-gradient leading-none">
+                                {isTestLike ? wordData.word : wordData.meaning}
                             </p>
                         </div>
 
                         {/* SRS Stats */}
                         {progress && (
-                            <div className="flex gap-4 items-center bg-zinc-50 px-4 py-2 rounded-xl border border-zinc-100">
-                                <div className="flex flex-col items-center">
-                                    <span className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">Strength</span>
-                                    <div className="flex items-center gap-1.5">
-                                        <div className="w-12 h-1.5 bg-zinc-200 rounded-full overflow-hidden">
+                            <div className="flex gap-8 items-center bg-zinc-50/50 px-6 py-4 rounded-[1.5rem] border border-zinc-100/50">
+                                <div className="flex flex-col items-center gap-2">
+                                    <span className="text-[9px] font-black text-zinc-400 uppercase tracking-widest">Strength</span>
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-20 h-2 bg-zinc-200 rounded-full overflow-hidden shadow-inner">
                                             <div
-                                                className="h-full bg-blue-500 transition-all duration-300"
+                                                className="h-full bg-blue-500 transition-all duration-700"
                                                 style={{ width: `${progress.memoryStrength * 100}%` }}
                                             />
                                         </div>
-                                        <span className="text-xs font-black text-zinc-700">{(progress.memoryStrength * 100).toFixed(0)}%</span>
+                                        <span className="text-[11px] font-black text-zinc-900">{(progress.memoryStrength * 100).toFixed(0)}%</span>
                                     </div>
                                 </div>
-                                <div className="w-px h-6 bg-zinc-200" />
-                                <div className="flex flex-col items-center">
-                                    <span className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">Level</span>
-                                    <span className={`text-xs font-black px-2 py-0.5 rounded ${progress.level === "Mastered" ? "bg-green-100 text-green-700" :
-                                        progress.level === "Strong" ? "bg-blue-100 text-blue-700" :
-                                            "bg-zinc-100 text-zinc-600"
+                                <div className="w-px h-10 bg-zinc-200" />
+                                <div className="flex flex-col items-center gap-1.5">
+                                    <span className="text-[9px] font-black text-zinc-400 uppercase tracking-widest">Mastery</span>
+                                    <span className={`text-[10px] font-black px-4 py-1.5 rounded-lg shadow-sm ${progress.level === "Mastered" ? "bg-green-500 text-white" :
+                                        progress.level === "Strong" ? "bg-blue-500 text-white" :
+                                            "bg-zinc-200 text-zinc-600"
                                         }`}>
-                                        {progress.level}
+                                        {progress.level.toUpperCase()}
                                     </span>
                                 </div>
                             </div>
@@ -204,4 +234,3 @@ export default function WordCard({ wordData, revealed, typingValue = "", isCorre
         </div>
     );
 }
-

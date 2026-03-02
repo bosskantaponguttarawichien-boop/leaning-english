@@ -4,10 +4,10 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import vocabData from "@/data/vocab.json";
 import { Word, VocabDBSchema } from "@/schemas/vocab.schema";
-import WordCard from "@/components/WordCard";
+import WordCard, { DifficultyMode } from "@/components/WordCard";
 import TypingInput from "@/components/TypingInput";
 import Timer from "@/components/Timer";
-import { saveWordResult, getProgress, WordProgress } from "@/lib/storage";
+import { saveWordResult, getProgress, WordProgress, toggleWordMark } from "@/lib/storage";
 import { getWeightedWords, getSRSStats, SRSStats } from "@/lib/srs";
 import { speak } from "@/lib/speech";
 
@@ -21,10 +21,11 @@ export default function WordPracticePage() {
     const [isFinished, setIsFinished] = useState(false);
     const [difficulty, setDifficulty] = useState<string>("all");
     const [selectedPOS, setSelectedPOS] = useState<string>("all");
-    const [isTestMode, setIsTestMode] = useState(false);
+    const [difficultyMode, setDifficultyMode] = useState<DifficultyMode>('normal');
     const [timerEnabled, setTimerEnabled] = useState(true);
     const [typingValue, setTypingValue] = useState("");
     const [allProgress, setAllProgress] = useState<Record<string, WordProgress>>({});
+    const [markedWords, setMarkedWords] = useState<Set<string>>(new Set());
     const [isSpeechEnabled, setIsSpeechEnabled] = useState(true);
 
     // Stats
@@ -38,8 +39,10 @@ export default function WordPracticePage() {
 
     // Update SRS stats
     useEffect(() => {
-        setAllProgress(getProgress());
+        const progress = getProgress();
+        setAllProgress(progress);
         setStats(getSRSStats(words));
+        setMarkedWords(new Set(Object.values(progress).filter(p => p.isMarked).map(p => p.word)));
     }, [words, currentIndex, isCorrect]);
 
     useEffect(() => {
@@ -56,6 +59,9 @@ export default function WordPracticePage() {
                 if (difficulty === "difficult") {
                     const progressData = getProgress();
                     filteredWords = filteredWords.filter(w => (progressData[w.word]?.wrongCount || 0) > 0);
+                } else if (difficulty === "marked") {
+                    const progressData = getProgress();
+                    filteredWords = filteredWords.filter(w => progressData[w.word]?.isMarked === true);
                 } else {
                     filteredWords = filteredWords.filter(w => w.difficulty === difficulty);
                 }
@@ -106,7 +112,7 @@ export default function WordPracticePage() {
 
         // Save SRS result
         if (words[currentIndex]) {
-            saveWordResult(words[currentIndex].word, true, responseTime, { isTestMode });
+            saveWordResult(words[currentIndex].word, true, responseTime, { isTestMode: difficultyMode === 'hard' });
             if (isSpeechEnabled) {
                 speak(words[currentIndex].word);
             }
@@ -131,7 +137,7 @@ export default function WordPracticePage() {
                 }
             }
         }, 1200); // Increased delay slightly to allow speech to finish
-    }, [words, currentIndex, isStarted, isFinished, isSpeechEnabled, timerEnabled, totalChars, isTestMode]);
+    }, [words, currentIndex, isStarted, isFinished, isSpeechEnabled, timerEnabled, totalChars, difficultyMode]);
 
     const handleWrong = useCallback(() => {
         const now = Date.now();
@@ -145,7 +151,7 @@ export default function WordPracticePage() {
         const responseTime = wordStartTimeRef.current ? now - wordStartTimeRef.current : undefined;
 
         if (words[currentIndex]) {
-            saveWordResult(words[currentIndex].word, false, responseTime, { isTestMode });
+            saveWordResult(words[currentIndex].word, false, responseTime, { isTestMode: difficultyMode === 'hard' });
         }
 
         setIsWrong(true);
@@ -193,7 +199,7 @@ export default function WordPracticePage() {
                 }
             }, 1000);
         }
-    }, [words, currentIndex, isStarted, isFinished, isSpeechEnabled, timerEnabled, totalChars, isTestMode]);
+    }, [words, currentIndex, isStarted, isFinished, isSpeechEnabled, timerEnabled, totalChars, difficultyMode]);
 
 
     const handleTimeup = useCallback(() => {
@@ -206,6 +212,17 @@ export default function WordPracticePage() {
     }, [totalChars, timerEnabled]);
 
     const currentWord = words[currentIndex];
+
+    const handleToggleMark = useCallback(() => {
+        if (!currentWord) return;
+        const newState = toggleWordMark(currentWord.word);
+        setMarkedWords(prev => {
+            const next = new Set(prev);
+            if (newState) next.add(currentWord.word);
+            else next.delete(currentWord.word);
+            return next;
+        });
+    }, [currentWord]);
 
     return (
         <main className="flex min-h-screen flex-col items-center bg-zinc-50 relative">
@@ -267,42 +284,45 @@ export default function WordPracticePage() {
                 </div>
             )}
 
-            <div className={`w-full max-w-2xl flex flex-col gap-8 flex-1 px-12 ${isFinished ? 'pointer-events-none opacity-50 blur-sm transition-all duration-300' : ''}`}>
+            <div className={`w-full max-w-2xl flex flex-col gap-8 flex-1 px-4 sm:px-12 ${isFinished ? 'pointer-events-none opacity-50 blur-sm transition-all duration-300' : ''}`}>
                 {/* Header / Settings */}
-                <div className="flex flex-col gap-6 bg-white p-6 rounded-3xl border border-zinc-100 shadow-sm">
+                <div className="flex flex-col gap-6 bg-white/80 backdrop-blur-md p-6 rounded-[2.5rem] border border-white shadow-xl shadow-zinc-200/50">
                     <div className="flex justify-between items-center">
-                        <div className="flex items-center gap-2">
-                            <a href="/practice" className="text-zinc-400 hover:text-zinc-900">
+                        <div className="flex items-center gap-3">
+                            <a href="/practice" className="p-2 -ml-2 text-zinc-400 hover:text-zinc-900 hover:bg-zinc-100 rounded-full transition-all">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
                                 </svg>
                             </a>
                             <h1 className="text-2xl font-black text-zinc-900 tracking-tight">Practice Sessions</h1>
                         </div>
-                        {timerEnabled ? (
-                            <Timer initialSeconds={60} isActive={isStarted} onTimeup={handleTimeup} />
-                        ) : (
-                            <div className="flex items-center gap-3">
-                                {stats && stats.dueCount > 0 && (
-                                    <span className="px-3 py-1 bg-red-50 text-red-600 text-[10px] font-black rounded-full uppercase border border-red-100 animate-pulse">
-                                        {stats.dueCount} DUE
-                                    </span>
-                                )}
-                                <span className="px-3 py-1 bg-zinc-100 text-zinc-500 text-[10px] font-black rounded-full uppercase">Zen Mode</span>
-                            </div>
-                        )}
+                        <div className="flex items-center">
+                            {timerEnabled ? (
+                                <Timer initialSeconds={60} isActive={isStarted} onTimeup={handleTimeup} />
+                            ) : (
+                                <div className="flex items-center gap-3">
+                                    {stats && stats.dueCount > 0 && (
+                                        <span className="px-3 py-1 bg-red-50 text-red-600 text-[10px] font-black rounded-full uppercase border border-red-100 animate-pulse">
+                                            {stats.dueCount} DUE
+                                        </span>
+                                    )}
+                                    <span className="px-3 py-1 bg-zinc-100 text-zinc-500 text-[10px] font-black rounded-full uppercase">Zen Mode</span>
+                                </div>
+                            )}
+                        </div>
                     </div>
 
-                    <div className="flex flex-row flex-wrap gap-6 justify-between">
-                        <div className="flex flex-col gap-2 flex-1 min-w-[260px]">
-                            <label className="text-[10px] font-black uppercase text-zinc-400 tracking-widest">Configuration</label>
-                            <div className="flex gap-2">
+                    <div className="flex flex-col md:flex-row gap-6">
+                        <div className="flex flex-col gap-2 flex-1">
+                            <label className="text-[10px] font-black uppercase text-zinc-400 tracking-widest pl-1">Configuration</label>
+                            <div className="grid grid-cols-2 gap-2">
                                 <select
                                     value={difficulty}
                                     onChange={(e) => setDifficulty(e.target.value)}
-                                    className="flex-1 bg-zinc-50 border border-zinc-100 text-zinc-600 text-xs font-bold rounded-xl px-3 py-2 outline-none focus:ring-2 focus:ring-blue-100 transition-all"
+                                    className="w-full bg-zinc-50/50 border border-zinc-100/50 text-zinc-600 text-xs font-bold rounded-2xl px-4 py-3 outline-none focus:ring-4 focus:ring-blue-100 focus:bg-white transition-all appearance-none cursor-pointer"
                                 >
                                     <option value="all">Any Level</option>
+                                    <option value="marked">Marked Words</option>
                                     <option value="difficult">Difficult Words (Needs Review)</option>
                                     <option value="A1">A1 (Beginner)</option>
                                     <option value="A2">A2 (Elementary)</option>
@@ -311,7 +331,7 @@ export default function WordPracticePage() {
                                 <select
                                     value={selectedPOS}
                                     onChange={(e) => setSelectedPOS(e.target.value)}
-                                    className="flex-1 bg-zinc-50 border border-zinc-100 text-zinc-600 text-xs font-bold rounded-xl px-3 py-2 outline-none focus:ring-2 focus:ring-blue-100 transition-all"
+                                    className="w-full bg-zinc-50/50 border border-zinc-100/50 text-zinc-600 text-xs font-bold rounded-2xl px-4 py-3 outline-none focus:ring-4 focus:ring-blue-100 focus:bg-white transition-all appearance-none cursor-pointer"
                                 >
                                     <option value="all">Any Type</option>
                                     <option value="n">Noun</option>
@@ -326,40 +346,51 @@ export default function WordPracticePage() {
                             </div>
                         </div>
 
-                        <div className="flex flex-col gap-2 flex-1 min-w-[260px]">
-                            <label className="text-[10px] font-black uppercase text-zinc-400 tracking-widest">Modes</label>
-                            <div className="flex flex-wrap items-center gap-4 h-full min-h-[38px]">
-                                <label className="flex items-center gap-2 cursor-pointer group">
-                                    <input
-                                        type="checkbox"
-                                        checked={isTestMode}
-                                        onChange={(e) => setIsTestMode(e.target.checked)}
-                                        className="w-4 h-4 rounded border-zinc-300 text-blue-600 focus:ring-blue-500"
-                                    />
-                                    <span className="text-xs font-bold text-zinc-600 group-hover:text-zinc-900 transition-colors">Test Mode</span>
-                                </label>
-                                <label className="flex items-center gap-2 cursor-pointer group">
-                                    <input
-                                        type="checkbox"
-                                        checked={timerEnabled}
-                                        onChange={(e) => setTimerEnabled(e.target.checked)}
-                                        className="w-4 h-4 rounded border-zinc-300 text-blue-600 focus:ring-blue-500"
-                                    />
-                                    <span className="text-xs font-bold text-zinc-600 group-hover:text-zinc-900 transition-colors">Timer</span>
-                                </label>
-                                <label className="flex items-center gap-2 cursor-pointer group">
-                                    <input
-                                        type="checkbox"
-                                        checked={isSpeechEnabled}
-                                        onChange={(e) => setIsSpeechEnabled(e.target.checked)}
-                                        className="w-4 h-4 rounded border-zinc-300 text-blue-600 focus:ring-blue-500"
-                                    />
-                                    <span className="text-xs font-bold text-zinc-600 group-hover:text-zinc-900 transition-colors">Voice</span>
-                                </label>
+                        <div className="flex flex-col gap-2 md:w-fit">
+                            <label className="text-[10px] font-black uppercase text-zinc-400 tracking-widest pl-1">Modes</label>
+                            <div className="flex flex-col gap-2">
+                                {/* Difficulty Mode Segment Control */}
+                                <div className="flex bg-zinc-50/50 p-1 rounded-2xl border border-zinc-100/50 gap-1">
+                                    {(['normal', 'test', 'hard'] as DifficultyMode[]).map((mode) => (
+                                        <button
+                                            key={mode}
+                                            onClick={() => setDifficultyMode(mode)}
+                                            className={`flex-1 text-[11px] font-bold px-3 py-2 rounded-xl capitalize transition-all ${
+                                                difficultyMode === mode
+                                                    ? 'bg-zinc-900 text-white shadow-sm'
+                                                    : 'text-zinc-500 hover:text-zinc-900'
+                                            }`}
+                                        >
+                                            {mode}
+                                        </button>
+                                    ))}
+                                </div>
+                                {/* Timer and Voice */}
+                                <div className="flex flex-row items-center gap-4 bg-zinc-50/50 px-4 py-1 rounded-2xl border border-zinc-100/50">
+                                    <label className="flex items-center gap-2 cursor-pointer group py-1">
+                                        <input
+                                            type="checkbox"
+                                            checked={timerEnabled}
+                                            onChange={(e) => setTimerEnabled(e.target.checked)}
+                                            className="w-4 h-4 rounded-lg border-zinc-300 text-blue-600 focus:ring-blue-500 transition-all cursor-pointer"
+                                        />
+                                        <span className="text-[11px] font-bold text-zinc-500 group-hover:text-zinc-900 transition-colors">Timer</span>
+                                    </label>
+                                    <label className="flex items-center gap-2 cursor-pointer group py-1">
+                                        <input
+                                            type="checkbox"
+                                            checked={isSpeechEnabled}
+                                            onChange={(e) => setIsSpeechEnabled(e.target.checked)}
+                                            className="w-4 h-4 rounded-lg border-zinc-300 text-blue-600 focus:ring-blue-500 transition-all cursor-pointer"
+                                        />
+                                        <span className="text-[11px] font-bold text-zinc-500 group-hover:text-zinc-900 transition-colors">Voice</span>
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
 
                 {words.length === 0 ? (
                     <div className="flex flex-col items-center justify-center p-12 bg-white rounded-3xl border border-dashed border-zinc-200">
@@ -407,9 +438,11 @@ export default function WordPracticePage() {
                                 typingValue={typingValue}
                                 isCorrect={isCorrect}
                                 isWrong={isWrong}
-                                isTestMode={isTestMode}
+                                difficultyMode={difficultyMode}
                                 progress={allProgress[currentWord.word]}
                                 onToggleHint={() => setIsRevealed(!isRevealed)}
+                                isMarked={markedWords.has(currentWord.word)}
+                                onToggleMark={handleToggleMark}
                             />
                             {isCorrect && (
                                 <div className="absolute -top-4 -right-4 bg-green-500 text-white p-2 rounded-full shadow-lg animate-bounce z-10">
@@ -441,6 +474,7 @@ export default function WordPracticePage() {
                                 }
                             }}
                             disabled={isFinished}
+                            isBlind={difficultyMode === 'hard'}
                         />
                     </div>
                 )}

@@ -14,6 +14,7 @@ export interface WordProgress {
     level: WordLevel;
     weight: number; // probability multiplier for backward compatibility or non-SRS modes
     avgResponseTime?: number;
+    isMarked?: boolean;
 }
 
 const STORAGE_KEY = "englist_progress_v2"; // Incrementing version for schema change
@@ -90,4 +91,23 @@ export function saveWordResult(word: string, isCorrect: boolean, responseTimeMs?
 
 export function resetProgress() {
     localStorage.removeItem(STORAGE_KEY);
+}
+
+export function toggleWordMark(word: string): boolean {
+    const progress = getProgress();
+    const current = progress[word] || {
+        word,
+        correctStreak: 0,
+        wrongCount: 0,
+        totalCorrect: 0,
+        lastTested: Date.now(),
+        nextReview: Date.now(),
+        memoryStrength: 0,
+        level: "New" as WordLevel,
+        weight: 1.0,
+    };
+    current.isMarked = !current.isMarked;
+    progress[word] = current;
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+    return !!current.isMarked;
 }
