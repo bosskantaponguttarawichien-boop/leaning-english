@@ -77,16 +77,16 @@ export default function WordCard({ wordData, revealed, typingValue = "", isCorre
 
                     if (typedChar !== undefined) {
                         if (difficultyMode === 'hard') {
-                            color = "text-zinc-900 font-bold";
+                            color = "text-zinc-900 dark:text-zinc-100 font-bold";
                         } else {
                             if (typedChar === char) {
-                                color = "text-zinc-900 font-bold"; // correct
+                                color = "text-zinc-900 dark:text-zinc-100 font-bold"; // correct
                             } else {
                                 color = "text-red-500 font-bold underline decoration-2 underline-offset-4"; // incorrect
                             }
                         }
                     } else if (revealed && !isTestLike) {
-                        color = "text-zinc-900"; // revealed target
+                        color = "text-zinc-900 dark:text-zinc-100"; // revealed target
                     }
 
                     let displayChar = char;
@@ -110,19 +110,19 @@ export default function WordCard({ wordData, revealed, typingValue = "", isCorre
 
     return (
         <div className={`relative p-8 rounded-[2.5rem] border-2 transition-all duration-500 overflow-hidden ${isCorrect
-            ? "bg-green-50/50 border-green-200/50 premium-shadow shadow-green-100"
+            ? "bg-green-50/50 dark:bg-green-900/20 border-green-200/50 dark:border-green-800/50 premium-shadow shadow-green-100 dark:shadow-green-900/20"
             : isWrong
-                ? "bg-red-50/50 border-red-200/50 premium-shadow shadow-red-100"
-                : "bg-white border-white premium-shadow-lg"
+                ? "bg-red-50/50 dark:bg-red-900/20 border-red-200/50 dark:border-red-800/50 premium-shadow shadow-red-100 dark:shadow-red-900/20"
+                : "bg-white dark:bg-zinc-800 border-white dark:border-zinc-700 premium-shadow-lg dark:shadow-zinc-900/50"
             }`}>
 
             {/* Bookmark / Mark for Review Button */}
             {onToggleMark && (
                 <button
                     onClick={onToggleMark}
-                    className={`absolute top-6 left-6 p-3 rounded-2xl transition-all focus:outline-none focus:ring-4 focus:ring-amber-100 group z-10 ${isMarked
-                            ? "text-amber-500 bg-amber-50"
-                            : "text-zinc-300 hover:text-amber-500 hover:bg-amber-50"
+                    className={`absolute top-6 left-6 p-3 rounded-2xl transition-all focus:outline-none focus:ring-4 focus:ring-amber-100 dark:focus:ring-amber-900/50 group z-10 ${isMarked
+                        ? "text-amber-500 bg-amber-50 dark:bg-amber-900/30"
+                        : "text-zinc-300 dark:text-zinc-600 hover:text-amber-500 dark:hover:text-amber-400 hover:bg-amber-50 dark:hover:bg-amber-900/20"
                         }`}
                     title={isMarked ? "Remove bookmark" : "Mark for review"}
                 >
@@ -142,7 +142,7 @@ export default function WordCard({ wordData, revealed, typingValue = "", isCorre
             {onToggleHint && (
                 <button
                     onClick={onToggleHint}
-                    className="absolute top-6 right-6 p-3 text-zinc-300 hover:text-yellow-500 hover:bg-yellow-50 rounded-2xl transition-all focus:outline-none focus:ring-4 focus:ring-yellow-100 group z-10"
+                    className="absolute top-6 right-6 p-3 text-zinc-300 dark:text-zinc-600 hover:text-yellow-500 dark:hover:text-yellow-400 hover:bg-yellow-50 dark:hover:bg-yellow-900/20 rounded-2xl transition-all focus:outline-none focus:ring-4 focus:ring-yellow-100 dark:focus:ring-yellow-900/50 group z-10"
                     title={revealed ? "Hide Hint" : "Need a Hint?"}
                 >
                     {revealed ? (
@@ -167,7 +167,7 @@ export default function WordCard({ wordData, revealed, typingValue = "", isCorre
                 <div className="flex flex-col items-center gap-2">
                     {isTestLike ? (
                         <div className="flex flex-col gap-6">
-                            <h2 className="text-5xl md:text-6xl font-black tracking-tight text-zinc-900 Thai-font text-gradient leading-tight">
+                            <h2 className="text-5xl md:text-6xl font-black tracking-tight text-zinc-900 dark:text-white Thai-font text-gradient leading-tight">
                                 {wordData.meaning}
                             </h2>
                             <div className="text-5xl font-mono tracking-widest min-h-[1.5em] flex items-center justify-center">
@@ -176,12 +176,12 @@ export default function WordCard({ wordData, revealed, typingValue = "", isCorre
                         </div>
                     ) : (
                         <div className="flex items-center gap-6">
-                            <h2 className="text-6xl font-black tracking-tight text-zinc-900 min-h-[1.5em] flex items-center justify-center">
+                            <h2 className="text-6xl font-black tracking-tight text-zinc-900 dark:text-white min-h-[1.5em] flex items-center justify-center">
                                 {renderWord()}
                             </h2>
                             <button
                                 onClick={() => speak(wordData.word)}
-                                className="p-4 bg-zinc-50 hover:bg-blue-50 rounded-2xl transition-all text-zinc-300 hover:text-blue-500 self-center group"
+                                className="p-4 bg-zinc-50 dark:bg-zinc-800/80 hover:bg-blue-50 dark:hover:bg-blue-900/30 rounded-2xl transition-all text-zinc-300 dark:text-zinc-500 hover:text-blue-500 dark:hover:text-blue-400 self-center group"
                                 title="Listen"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -199,37 +199,37 @@ export default function WordCard({ wordData, revealed, typingValue = "", isCorre
 
                 {/* Meaning Reveal / English Word Reveal */}
                 <div className={`w-full transition-all duration-700 ease-in-out overflow-hidden ${revealed ? "max-h-64 opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-4"}`}>
-                    <div className="pt-8 mt-4 border-t border-zinc-50 flex flex-col items-center gap-6">
+                    <div className="pt-8 mt-4 border-t border-zinc-50 dark:border-zinc-700 flex flex-col items-center gap-6">
                         <div className="flex flex-col items-center gap-2">
-                            <p className="text-zinc-300 text-[10px] font-black uppercase tracking-[0.2em]">
+                            <p className="text-zinc-300 dark:text-zinc-500 text-[10px] font-black uppercase tracking-[0.2em]">
                                 {isTestLike ? "The word is" : "Meaning"}
                             </p>
-                            <p className="text-4xl font-black text-zinc-800 text-gradient leading-none">
+                            <p className="text-4xl font-black text-zinc-800 dark:text-zinc-200 text-gradient leading-none">
                                 {isTestLike ? wordData.word : wordData.meaning}
                             </p>
                         </div>
 
                         {/* SRS Stats */}
                         {progress && (
-                            <div className="flex gap-8 items-center bg-zinc-50/50 px-6 py-4 rounded-[1.5rem] border border-zinc-100/50">
+                            <div className="flex gap-8 items-center bg-zinc-50/50 dark:bg-zinc-800/50 px-6 py-4 rounded-[1.5rem] border border-zinc-100/50 dark:border-zinc-700/50">
                                 <div className="flex flex-col items-center gap-2">
-                                    <span className="text-[9px] font-black text-zinc-400 uppercase tracking-widest">Strength</span>
+                                    <span className="text-[9px] font-black text-zinc-400 dark:text-zinc-500 uppercase tracking-widest">Strength</span>
                                     <div className="flex items-center gap-3">
-                                        <div className="w-20 h-2 bg-zinc-200 rounded-full overflow-hidden shadow-inner">
+                                        <div className="w-20 h-2 bg-zinc-200 dark:bg-zinc-700 rounded-full overflow-hidden shadow-inner">
                                             <div
                                                 className="h-full bg-blue-500 transition-all duration-700"
                                                 style={{ width: `${progress.memoryStrength * 100}%` }}
                                             />
                                         </div>
-                                        <span className="text-[11px] font-black text-zinc-900">{(progress.memoryStrength * 100).toFixed(0)}%</span>
+                                        <span className="text-[11px] font-black text-zinc-900 dark:text-zinc-100">{(progress.memoryStrength * 100).toFixed(0)}%</span>
                                     </div>
                                 </div>
-                                <div className="w-px h-10 bg-zinc-200" />
+                                <div className="w-px h-10 bg-zinc-200 dark:bg-zinc-700" />
                                 <div className="flex flex-col items-center gap-1.5">
-                                    <span className="text-[9px] font-black text-zinc-400 uppercase tracking-widest">Mastery</span>
+                                    <span className="text-[9px] font-black text-zinc-400 dark:text-zinc-500 uppercase tracking-widest">Mastery</span>
                                     <span className={`text-[10px] font-black px-4 py-1.5 rounded-lg shadow-sm ${progress.level === "Mastered" ? "bg-green-500 text-white" :
                                         progress.level === "Strong" ? "bg-blue-500 text-white" :
-                                            "bg-zinc-200 text-zinc-600"
+                                            "bg-zinc-200 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-300"
                                         }`}>
                                         {progress.level.toUpperCase()}
                                     </span>

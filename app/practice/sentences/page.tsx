@@ -87,31 +87,31 @@ export default function SentencePracticePage() {
     const typingTokens = typingValue.split(" ");
 
     return (
-        <main className="flex min-h-screen flex-col items-center bg-zinc-50 relative">
+        <main className="flex min-h-screen flex-col items-center relative">
             {/* Session Complete Modal Overlay */}
             {isFinished && (
-                <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-zinc-50/80 backdrop-blur-sm">
-                    <div className="w-full max-w-md bg-white border border-zinc-100 p-8 rounded-3xl shadow-2xl flex flex-col gap-6 items-center text-center animate-in fade-in zoom-in duration-300">
-                        <h2 className="text-3xl font-black text-zinc-900 leading-tight">Session Complete! 🏁</h2>
+                <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-zinc-50/80 dark:bg-zinc-900/80 backdrop-blur-sm">
+                    <div className="w-full max-w-md bg-white dark:bg-zinc-800 border border-zinc-100 dark:border-zinc-700 p-8 rounded-3xl shadow-2xl flex flex-col gap-6 items-center text-center animate-in fade-in zoom-in duration-300">
+                        <h2 className="text-3xl font-black text-zinc-900 dark:text-white leading-tight">Session Complete! 🏁</h2>
 
                         <div className="grid grid-cols-2 gap-4 w-full">
-                            <div className="bg-white p-4 rounded-2xl shadow-sm border border-zinc-100">
-                                <p className="text-zinc-400 text-[10px] md:text-xs font-bold uppercase tracking-widest">Sentences</p>
-                                <p className="text-3xl md:text-4xl font-black text-green-600">{sentences.length}</p>
+                            <div className="bg-white dark:bg-zinc-800 p-4 rounded-2xl shadow-sm border border-zinc-100 dark:border-zinc-700">
+                                <p className="text-zinc-400 dark:text-zinc-500 text-[10px] md:text-xs font-bold uppercase tracking-widest">Sentences</p>
+                                <p className="text-3xl md:text-4xl font-black text-green-600 dark:text-green-500">{sentences.length}</p>
                             </div>
-                            <div className="bg-white p-4 rounded-2xl shadow-sm border border-zinc-100">
-                                <p className="text-zinc-400 text-[10px] md:text-xs font-bold uppercase tracking-widest">Errors</p>
-                                <p className="text-3xl md:text-4xl font-black text-red-600">{sessionWrongCount}</p>
+                            <div className="bg-white dark:bg-zinc-800 p-4 rounded-2xl shadow-sm border border-zinc-100 dark:border-zinc-700">
+                                <p className="text-zinc-400 dark:text-zinc-500 text-[10px] md:text-xs font-bold uppercase tracking-widest">Errors</p>
+                                <p className="text-3xl md:text-4xl font-black text-red-600 dark:text-red-500">{sessionWrongCount}</p>
                             </div>
                         </div>
 
                         <button
                             onClick={() => window.location.reload()}
-                            className="w-full py-4 bg-zinc-900 text-white rounded-2xl font-bold hover:bg-zinc-800 transition-colors shadow-lg shadow-zinc-200"
+                            className="w-full py-4 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-2xl font-bold hover:bg-zinc-800 dark:hover:bg-zinc-100 transition-colors shadow-lg shadow-zinc-200 dark:shadow-none"
                         >
                             Try Again
                         </button>
-                        <a href="/practice" className="text-zinc-500 font-bold hover:text-zinc-900 transition-all">
+                        <a href="/practice" className="text-zinc-500 dark:text-zinc-400 font-bold hover:text-zinc-900 dark:hover:text-white transition-all">
                             Back to Menu
                         </a>
                     </div>
@@ -121,32 +121,32 @@ export default function SentencePracticePage() {
             <div className={`w-full max-w-3xl flex flex-col gap-12 p-6 md:p-12 ${isFinished ? 'pointer-events-none opacity-50 blur-sm transition-all duration-300' : ''}`}>
                 <div className="flex flex-col gap-2">
                     <div className="flex items-center gap-2">
-                        <Link href="/practice" className="text-zinc-400 hover:text-zinc-900">
+                        <Link href="/practice" className="text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-white">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                 <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
                             </svg>
                         </Link>
-                        <h1 className="text-4xl font-black text-zinc-900 tracking-tight">Sentence Mode</h1>
+                        <h1 className="text-4xl font-black text-zinc-900 dark:text-white tracking-tight">Sentence Mode</h1>
                     </div>
-                    <p className="text-zinc-500 font-medium ml-7">Practice typing full natural sentences.</p>
+                    <p className="text-zinc-500 dark:text-zinc-400 font-medium ml-7">Practice typing full natural sentences.</p>
                 </div>
 
                 {/* Sentence Display with Highlighting */}
-                <div className="p-10 bg-white border border-zinc-100 rounded-3xl shadow-xl shadow-zinc-100 leading-relaxed">
+                <div className="p-10 bg-white dark:bg-zinc-800 border border-zinc-100 dark:border-zinc-700 rounded-3xl shadow-xl shadow-zinc-100 dark:shadow-zinc-900/50 leading-relaxed">
                     <div className="flex flex-wrap gap-x-2 gap-y-1 text-3xl font-medium">
                         {targetTokens.map((token, idx) => {
                             const typed = typingTokens[idx];
-                            let color = "text-zinc-300"; // un-typed
+                            let color = "text-zinc-300 dark:text-zinc-600"; // un-typed
 
                             if (typed !== undefined) {
                                 if (typed === token) {
-                                    color = "text-zinc-900"; // correct
+                                    color = "text-zinc-900 dark:text-zinc-100"; // correct
                                 } else if (idx < typingTokens.length - 1 || (idx === typingTokens.length - 1 && typingValue.endsWith(" "))) {
-                                    color = "text-red-500"; // incorrect after word ended
+                                    color = "text-red-500 dark:text-red-400"; // incorrect after word ended
                                 } else if (token.startsWith(typed)) {
-                                    color = "text-zinc-500"; // partially correct current word
+                                    color = "text-zinc-500 dark:text-zinc-400"; // partially correct current word
                                 } else {
-                                    color = "text-red-500"; // incorrect current word
+                                    color = "text-red-500 dark:text-red-400"; // incorrect current word
                                 }
                             }
 
@@ -161,7 +161,7 @@ export default function SentencePracticePage() {
 
                 {/* Keyboard Hint */}
                 <div className="flex justify-center mb-0">
-                    <div className="px-4 py-2 bg-zinc-200 text-zinc-500 text-xs font-bold rounded-full uppercase tracking-widest">
+                    <div className="px-4 py-2 bg-zinc-200 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 text-xs font-bold rounded-full uppercase tracking-widest">
                         Progress: {currentIndex + 1} / {sentences.length}
                     </div>
                 </div>
@@ -173,11 +173,11 @@ export default function SentencePracticePage() {
                         autoFocus
                         autoCapitalize="none"
                         rows={3}
-                        className={`w-full p-6 text-2xl border-2 rounded-2xl outline-none transition-all resize-none shadow-sm ${isCorrect
-                            ? "border-green-500 bg-green-50"
+                        className={`w-full p-6 text-2xl border-2 rounded-2xl outline-none transition-all resize-none shadow-sm dark:text-white ${isCorrect
+                            ? "border-green-500 bg-green-50 dark:bg-green-900/20"
                             : isWrong
-                                ? "border-red-500 bg-red-50 text-red-900 focus:ring-red-100"
-                                : "border-zinc-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
+                                ? "border-red-500 bg-red-50 dark:bg-red-900/20 text-red-900 dark:text-red-100 focus:ring-red-100 dark:focus:ring-red-900/30"
+                                : "border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:border-blue-500 dark:focus:border-blue-400 focus:ring-4 focus:ring-blue-100 dark:focus:ring-blue-900/30"
                             }`}
                         placeholder="Start typing the sentence above..."
                     />

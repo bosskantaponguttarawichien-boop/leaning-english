@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Noto_Sans_Thai, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { ThemeProvider } from "next-themes";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,10 +30,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="th" className={`${inter.variable} ${notoThai.variable} bg-zinc-50`}>
-      <body className="antialiased font-sans bg-zinc-50 min-h-screen">
-        <Navbar />
-        {children}
+    <html lang="th" className={`${inter.variable} ${notoThai.variable}`} suppressHydrationWarning>
+      <body className="antialiased font-sans bg-background text-foreground min-h-screen">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Navbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

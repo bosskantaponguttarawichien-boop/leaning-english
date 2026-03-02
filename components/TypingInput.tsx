@@ -51,7 +51,7 @@ export default function TypingInput({
                 autoComplete="off"
                 autoCapitalize="none"
                 disabled={disabled}
-                className={`w-full px-4 py-3 text-2xl text-center border-2 border-zinc-200 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all disabled:bg-zinc-100 disabled:cursor-not-allowed ${isBlind ? "text-transparent caret-zinc-900 selection:bg-transparent" : ""}`}
+                className={`w-full px-4 py-3 text-2xl text-center border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 rounded-xl focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-900/50 outline-none transition-all disabled:bg-zinc-100 dark:disabled:bg-zinc-900/50 disabled:cursor-not-allowed ${isBlind ? "text-transparent dark:text-transparent caret-zinc-900 dark:caret-white selection:bg-transparent dark:selection:bg-transparent" : "placeholder:text-zinc-400 dark:placeholder:text-zinc-600"}`}
                 placeholder="Type the word here..."
             />
         </div>

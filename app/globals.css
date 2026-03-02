@@ -1,8 +1,25 @@
 @import "tailwindcss";
+@custom-variant dark (&:is(.dark *));
 
 :root {
   --background: #fafafa;
   --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #18181b;
+    /* zinc-900 */
+    --foreground: #fafafa;
+    /* zinc-50 */
+  }
+}
+
+.dark {
+  --background: #18181b;
+  /* zinc-900 */
+  --foreground: #fafafa;
+  /* zinc-50 */
 }
 
 @theme inline {
@@ -15,7 +32,7 @@
   .glass {
     @apply bg-white/80 backdrop-blur-md border border-white/20;
   }
-  
+
   .premium-shadow {
     box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05), 0 4px 10px -5px rgba(0, 0, 0, 0.02);
   }
@@ -23,9 +40,9 @@
   .premium-shadow-lg {
     box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08), 0 10px 20px -10px rgba(0, 0, 0, 0.04);
   }
-  
+
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-linear-to-r from-zinc-900 to-zinc-500;
+    @apply bg-clip-text text-transparent bg-linear-to-r from-zinc-900 to-zinc-500 dark:from-white dark:to-zinc-400;
   }
 }
 
