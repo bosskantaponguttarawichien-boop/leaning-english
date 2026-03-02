@@ -59,8 +59,7 @@ export default function WordCard({ wordData, revealed, typingValue = "", isCorre
 
     const renderWord = () => {
         const target = wordData.word;
-        // In hard mode, hide per-character feedback — show only underscores until revealed
-        const typing = difficultyMode === 'hard' ? "" : typingValue;
+        const typing = typingValue;
 
         return (
             <div className="flex flex-wrap justify-center gap-x-1">
@@ -77,17 +76,27 @@ export default function WordCard({ wordData, revealed, typingValue = "", isCorre
                     let color = "text-zinc-300"; // un-typed
 
                     if (typedChar !== undefined) {
-                        if (typedChar === char) {
-                            color = "text-zinc-900 font-bold"; // correct
+                        if (difficultyMode === 'hard') {
+                            color = "text-zinc-900 font-bold";
                         } else {
-                            color = "text-red-500 font-bold underline decoration-2 underline-offset-4"; // incorrect
+                            if (typedChar === char) {
+                                color = "text-zinc-900 font-bold"; // correct
+                            } else {
+                                color = "text-red-500 font-bold underline decoration-2 underline-offset-4"; // incorrect
+                            }
                         }
                     } else if (revealed && !isTestLike) {
                         color = "text-zinc-900"; // revealed target
                     }
 
-                    // In test mode, we show underscores for un-typed characters if not revealed
-                    const displayChar = (!revealed && isTestLike && typedChar === undefined) ? "_" : char;
+                    let displayChar = char;
+                    if (!revealed && isTestLike) {
+                        if (difficultyMode === 'hard') {
+                            displayChar = "_";
+                        } else if (typedChar === undefined) {
+                            displayChar = "_";
+                        }
+                    }
 
                     return (
                         <span key={idx} className={`${color} transition-colors duration-200`}>
@@ -111,11 +120,10 @@ export default function WordCard({ wordData, revealed, typingValue = "", isCorre
             {onToggleMark && (
                 <button
                     onClick={onToggleMark}
-                    className={`absolute top-6 left-6 p-3 rounded-2xl transition-all focus:outline-none focus:ring-4 focus:ring-amber-100 group z-10 ${
-                        isMarked
+                    className={`absolute top-6 left-6 p-3 rounded-2xl transition-all focus:outline-none focus:ring-4 focus:ring-amber-100 group z-10 ${isMarked
                             ? "text-amber-500 bg-amber-50"
                             : "text-zinc-300 hover:text-amber-500 hover:bg-amber-50"
-                    }`}
+                        }`}
                     title={isMarked ? "Remove bookmark" : "Mark for review"}
                 >
                     {isMarked ? (

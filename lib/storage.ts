@@ -1,5 +1,6 @@
 "use client";
 
+import { readData, setData, onDataChange } from "./db";
 
 export type WordLevel = "New" | "Learning" | "Reviewing" | "Familiar" | "Strong" | "Mastered";
 
@@ -17,12 +18,65 @@ export interface WordProgress {
     isMarked?: boolean;
 }
 
-const STORAGE_KEY = "englist_progress_v2"; // Incrementing version for schema change
+const STORAGE_KEY = "englist_progress_v2"; // Local fallback
+const DEFAULT_USER_ID = "default_user";
 
+// Local cache to keep synchronous functions working immediately
+let localCache: Record<string, WordProgress> | null = null;
+
+/**
+ * Initializes the data by fetching from DB first.
+ * Should be called once when the app loads (e.g., inside useEffect in layout or page).
+ */
+export async function syncProgressFromDB(): Promise<Record<string, WordProgress>> {
+    const result = await readData(`users/${DEFAULT_USER_ID}/progress`);
+    if (result.success) {
+        // If data exists, use it. If null (meaning deleted in Firebase), use empty object
+        localCache = result.data || {};
+
+        // Sync local storage to match Firebase state exactly
+        if (typeof window !== "undefined") {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(localCache));
+        }
+        return localCache as Record<string, WordProgress>;
+    } else {
+        // Fallback to local storage
+        if (typeof window !== "undefined") {
+            const data = localStorage.getItem(STORAGE_KEY);
+            localCache = data ? JSON.parse(data) : {};
+        } else {
+            localCache = {};
+        }
+        return localCache as Record<string, WordProgress>;
+    }
+}
+
+/**
+ * Listens to Realtime DB and keeps local state continuously updated.
+ */
+export function listenToProgress(callback: (progress: Record<string, WordProgress>) => void) {
+    return onDataChange(`users/${DEFAULT_USER_ID}/progress`, (data) => {
+        const progress = data || {};
+        localCache = progress as Record<string, WordProgress>;
+
+        if (typeof window !== "undefined") {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(localCache));
+        }
+
+        callback(localCache);
+    });
+}
+
+/**
+ * Synchronous get function. Relies on the localCache or localStorage.
+ */
 export function getProgress(): Record<string, WordProgress> {
+    if (localCache) return localCache;
+
     if (typeof window === "undefined") return {};
     const data = localStorage.getItem(STORAGE_KEY);
-    return data ? JSON.parse(data) : {};
+    localCache = data ? JSON.parse(data) : {};
+    return localCache as Record<string, WordProgress>;
 }
 
 const STREAK_LEVELS: WordLevel[] = ["New", "Learning", "Reviewing", "Familiar", "Strong", "Mastered"];
@@ -85,12 +139,23 @@ export function saveWordResult(word: string, isCorrect: boolean, responseTimeMs?
     }
 
     current.lastTested = Date.now();
+
+    // 1. Update Memory (Local Cache)
     progress[word] = current;
+    localCache = progress;
+
+    // 2. Update Local Storage Fallback
     localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+
+    // 3. Update Firebase asynchronously
+    setData(`users/${DEFAULT_USER_ID}/progress/${word}`, current);
 }
 
 export function resetProgress() {
     localStorage.removeItem(STORAGE_KEY);
+    localCache = {};
+    // Also remove from Firebase
+    setData(`users/${DEFAULT_USER_ID}/progress`, null);
 }
 
 export function toggleWordMark(word: string): boolean {
@@ -107,7 +172,14 @@ export function toggleWordMark(word: string): boolean {
         weight: 1.0,
     };
     current.isMarked = !current.isMarked;
+
     progress[word] = current;
+    localCache = progress;
+
     localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+
+    // Sync to Firebase
+    setData(`users/${DEFAULT_USER_ID}/progress/${word}`, current);
+
     return !!current.isMarked;
 }

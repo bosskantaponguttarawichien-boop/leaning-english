@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
 import React, { useState, useEffect, useCallback, useRef } from "react";
@@ -7,9 +6,12 @@ import { Word, VocabDBSchema } from "@/schemas/vocab.schema";
 import WordCard, { DifficultyMode } from "@/components/WordCard";
 import TypingInput from "@/components/TypingInput";
 import Timer from "@/components/Timer";
-import { saveWordResult, getProgress, WordProgress, toggleWordMark } from "@/lib/storage";
+import { saveWordResult, getProgress, WordProgress, toggleWordMark, syncProgressFromDB } from "@/lib/storage";
 import { getWeightedWords, getSRSStats, SRSStats } from "@/lib/srs";
 import { speak } from "@/lib/speech";
+import { readData, setData, pushData } from "@/lib/db";
+
+const DEFAULT_USER_ID = "default_user";
 
 export default function WordPracticePage() {
     const [words, setWords] = useState<Word[]>([]);
@@ -27,6 +29,7 @@ export default function WordPracticePage() {
     const [allProgress, setAllProgress] = useState<Record<string, WordProgress>>({});
     const [markedWords, setMarkedWords] = useState<Set<string>>(new Set());
     const [isSpeechEnabled, setIsSpeechEnabled] = useState(true);
+    const [isDataLoaded, setIsDataLoaded] = useState(false);
 
     // Stats
     const [correctCount, setCorrectCount] = useState(0);
@@ -39,13 +42,64 @@ export default function WordPracticePage() {
 
     // Update SRS stats
     useEffect(() => {
+        if (!isDataLoaded) return;
         const progress = getProgress();
         setAllProgress(progress);
         setStats(getSRSStats(words));
         setMarkedWords(new Set(Object.values(progress).filter(p => p.isMarked).map(p => p.word)));
-    }, [words, currentIndex, isCorrect]);
+    }, [words, currentIndex, isCorrect, isDataLoaded]);
+
+    // Initial Load from Firebase
+    useEffect(() => {
+        const loadInitialData = async () => {
+            try {
+                // 1. Load Settings
+                const settingsRes = await readData(`users/${DEFAULT_USER_ID}/settings`);
+                if (settingsRes.success && settingsRes.data) {
+                    const s = settingsRes.data;
+                    if (s.isSpeechEnabled !== undefined) setIsSpeechEnabled(s.isSpeechEnabled);
+                    if (s.isTimerEnabled !== undefined) setTimerEnabled(s.isTimerEnabled);
+                    if (s.difficultyMode !== undefined) setDifficultyMode(s.difficultyMode);
+                    if (s.difficulty !== undefined) setDifficulty(s.difficulty);
+                    if (s.selectedPOS !== undefined) setSelectedPOS(s.selectedPOS);
+                }
+
+                // 2. Sync Progress
+                await syncProgressFromDB();
+            } catch (error) {
+                console.error("Failed to load initial data from Firebase:", error);
+            } finally {
+                setIsDataLoaded(true);
+            }
+        };
+
+        loadInitialData();
+    }, []);
+
+    // Save Settings to Firebase when they change (skip initial mount save)
+    const isFirstRender = useRef(true);
+    useEffect(() => {
+        if (isFirstRender.current || !isDataLoaded) {
+            isFirstRender.current = false;
+            return;
+        }
+
+        const saveSettings = async () => {
+            await setData(`users/${DEFAULT_USER_ID}/settings`, {
+                isSpeechEnabled,
+                timerEnabled,
+                difficultyMode,
+                difficulty,
+                selectedPOS
+            });
+        }
+
+        saveSettings();
+    }, [isSpeechEnabled, timerEnabled, difficultyMode, difficulty, selectedPOS, isDataLoaded]);
 
     useEffect(() => {
+        if (!isDataLoaded) return;
+
         // Validate and load data
         try {
             if (!vocabData || !vocabData.words) {
@@ -87,7 +141,7 @@ export default function WordPracticePage() {
             console.error("Failed to validate vocab data:", error);
             setWords([]);
         }
-    }, [difficulty, selectedPOS]);
+    }, [difficulty, selectedPOS, isDataLoaded]);
 
     // Start word timer whenever currentIndex changes
     useEffect(() => {
@@ -125,7 +179,18 @@ export default function WordPracticePage() {
                     if (startTimeRef.current) {
                         const timeElapsedMinutes = (Date.now() - startTimeRef.current) / 60000;
                         const chars = totalChars + words[currentIndex].word.length + 1;
-                        setFinalWpm(Math.round((chars / 5) / (timeElapsedMinutes || 0.01)));
+                        const wpm = Math.round((chars / 5) / (timeElapsedMinutes || 0.01));
+                        setFinalWpm(wpm);
+
+                        // Push Session History
+                        pushData(`users/${DEFAULT_USER_ID}/history/words`, {
+                            date: Date.now(),
+                            wpm,
+                            correctCount: correctCount + 1,
+                            wrongCount: sessionWrongCount,
+                            difficulty: difficultyMode,
+                            timerEnabled
+                        });
                     }
                     setIsFinished(true);
                     setIsStarted(false);
@@ -137,7 +202,7 @@ export default function WordPracticePage() {
                 }
             }
         }, 1200); // Increased delay slightly to allow speech to finish
-    }, [words, currentIndex, isStarted, isFinished, isSpeechEnabled, timerEnabled, totalChars, difficultyMode]);
+    }, [words, currentIndex, isStarted, isFinished, isSpeechEnabled, timerEnabled, totalChars, difficultyMode, correctCount, sessionWrongCount]);
 
     const handleWrong = useCallback(() => {
         const now = Date.now();
@@ -186,7 +251,17 @@ export default function WordPracticePage() {
                 if (!timerEnabled && words.length > 0 && currentIndex === words.length - 1) {
                     if (startTimeRef.current) {
                         const timeElapsedMinutes = (Date.now() - startTimeRef.current) / 60000;
-                        setFinalWpm(Math.round((totalChars / 5) / (timeElapsedMinutes || 0.01)));
+                        const wpm = Math.round((totalChars / 5) / (timeElapsedMinutes || 0.01));
+                        setFinalWpm(wpm);
+
+                        pushData(`users/${DEFAULT_USER_ID}/history/words`, {
+                            date: Date.now(),
+                            wpm,
+                            correctCount: correctCount,
+                            wrongCount: sessionWrongCount + 1,
+                            difficulty: difficultyMode,
+                            timerEnabled
+                        });
                     }
                     setIsFinished(true);
                     setIsStarted(false);
@@ -199,17 +274,27 @@ export default function WordPracticePage() {
                 }
             }, 1000);
         }
-    }, [words, currentIndex, isStarted, isFinished, isSpeechEnabled, timerEnabled, totalChars, difficultyMode]);
+    }, [words, currentIndex, isStarted, isFinished, isSpeechEnabled, timerEnabled, totalChars, difficultyMode, correctCount, sessionWrongCount]);
 
 
     const handleTimeup = useCallback(() => {
         if (startTimeRef.current && timerEnabled) {
             const timeElapsedMinutes = 1; // It was hardcoded to 60s
-            setFinalWpm(Math.round((totalChars / 5) / timeElapsedMinutes));
+            const wpm = Math.round((totalChars / 5) / timeElapsedMinutes);
+            setFinalWpm(wpm);
+
+            pushData(`users/${DEFAULT_USER_ID}/history/words`, {
+                date: Date.now(),
+                wpm,
+                correctCount,
+                wrongCount: sessionWrongCount,
+                difficulty: difficultyMode,
+                timerEnabled
+            });
         }
         setIsFinished(true);
         setIsStarted(false);
-    }, [totalChars, timerEnabled]);
+    }, [totalChars, timerEnabled, correctCount, sessionWrongCount, difficultyMode]);
 
     const currentWord = words[currentIndex];
 
@@ -223,6 +308,17 @@ export default function WordPracticePage() {
             return next;
         });
     }, [currentWord]);
+
+    if (!isDataLoaded) {
+        return (
+            <main className="flex min-h-screen flex-col items-center justify-center bg-zinc-50 relative">
+                <div className="flex flex-col items-center gap-4">
+                    <div className="w-12 h-12 border-4 border-zinc-200 border-t-zinc-900 rounded-full animate-spin"></div>
+                    <p className="text-zinc-500 font-medium">Syncing data...</p>
+                </div>
+            </main>
+        )
+    }
 
     return (
         <main className="flex min-h-screen flex-col items-center bg-zinc-50 relative">
@@ -355,11 +451,10 @@ export default function WordPracticePage() {
                                         <button
                                             key={mode}
                                             onClick={() => setDifficultyMode(mode)}
-                                            className={`flex-1 text-[11px] font-bold px-3 py-2 rounded-xl capitalize transition-all ${
-                                                difficultyMode === mode
-                                                    ? 'bg-zinc-900 text-white shadow-sm'
-                                                    : 'text-zinc-500 hover:text-zinc-900'
-                                            }`}
+                                            className={`flex-1 text-[11px] font-bold px-3 py-2 rounded-xl capitalize transition-all ${difficultyMode === mode
+                                                ? 'bg-zinc-900 text-white shadow-sm'
+                                                : 'text-zinc-500 hover:text-zinc-900'
+                                                }`}
                                         >
                                             {mode}
                                         </button>

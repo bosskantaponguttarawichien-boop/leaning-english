@@ -1,17 +1,25 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { getProgress, WordProgress } from "@/lib/storage";
+import { WordProgress, listenToProgress } from "@/lib/storage";
 import Link from "next/link";
 import vocabData from "@/data/vocab.json";
 
 export default function Home() {
   const [progress, setProgress] = useState<Record<string, WordProgress>>({});
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const data = getProgress();
-    setProgress(data);
+    // Setup listener
+    const unsubscribe = listenToProgress((data) => {
+      setProgress(data);
+      setIsLoading(false);
+    });
+
+    // Cleanup listener on unmount
+    return () => {
+      unsubscribe();
+    };
   }, []);
 
   const totalWordsCount = vocabData.words.length;
@@ -29,8 +37,19 @@ export default function Home() {
     .sort((a, b) => b.wrongCount - a.wrongCount)
     .slice(0, 5);
 
+  if (isLoading) {
+    return (
+      <main className="flex min-h-screen items-center justify-center bg-zinc-50 tracking-tight">
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-12 h-12 border-4 border-zinc-200 border-t-zinc-900 rounded-full animate-spin"></div>
+          <p className="text-zinc-500 font-medium">Syncing progress...</p>
+        </div>
+      </main>
+    );
+  }
+
   return (
-    <main className="flex min-h-screen flex-col items-center bg-zinc-50 px-[24px] tracking-tight">
+    <main className="flex min-h-screen flex-col items-center bg-zinc-50 px-[24px] tracking-tight py-12">
       <div className="w-full max-w-4xl flex flex-col gap-10">
         {/* Header Section */}
         <div className="flex justify-between items-center bg-white p-8 rounded-3xl border border-zinc-100 shadow-xl shadow-zinc-200/50">
