@@ -81,7 +81,7 @@ export function getProgress(): Record<string, WordProgress> {
 
 const STREAK_LEVELS: WordLevel[] = ["New", "Learning", "Reviewing", "Familiar", "Strong", "Mastered"];
 
-export function saveWordResult(word: string, isCorrect: boolean, responseTimeMs?: number, options?: { isTestMode?: boolean }) {
+export function saveWordResult(word: string, isCorrect: boolean, responseTimeMs?: number, options?: { isTestMode?: boolean, isHardMode?: boolean }) {
     const progress = getProgress();
     const current = progress[word] || {
         word,
@@ -103,9 +103,13 @@ export function saveWordResult(word: string, isCorrect: boolean, responseTimeMs?
         if (responseTimeMs && responseTimeMs < 3000) {
             current.correctStreak += 0.5;
         }
+
+        if (options?.isHardMode) {
+            current.wrongCount = 0; // successfully spelled in hard mode clears it from the 'difficult words'
+        }
     } else {
         current.correctStreak = Math.max(0, current.correctStreak > 1 ? 1 : 0); // Drop to 1 if failed after success, else 0
-        if (options?.isTestMode) {
+        if (options?.isTestMode || options?.isHardMode) {
             current.wrongCount += 1;
         }
     }

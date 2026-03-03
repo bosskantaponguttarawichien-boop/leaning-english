@@ -59,7 +59,7 @@ export default function WordPracticePage() {
                 if (settingsRes.success && settingsRes.data) {
                     const s = settingsRes.data;
                     if (s.isSpeechEnabled !== undefined) setIsSpeechEnabled(s.isSpeechEnabled);
-                    if (s.isTimerEnabled !== undefined) setTimerEnabled(s.isTimerEnabled);
+                    if (s.timerEnabled !== undefined) setTimerEnabled(s.timerEnabled);
                     if (s.difficultyMode !== undefined) setDifficultyMode(s.difficultyMode);
                     if (s.difficulty !== undefined) setDifficulty(s.difficulty);
                     if (s.selectedPOS !== undefined) setSelectedPOS(s.selectedPOS);
@@ -167,7 +167,10 @@ export default function WordPracticePage() {
 
         // Save SRS result
         if (words[currentIndex]) {
-            saveWordResult(words[currentIndex].word, true, responseTime, { isTestMode: difficultyMode === 'hard' });
+            saveWordResult(words[currentIndex].word, true, responseTime, {
+                isTestMode: difficultyMode === 'test',
+                isHardMode: difficultyMode === 'hard'
+            });
             if (isSpeechEnabled) {
                 speak(words[currentIndex].word);
             }
@@ -217,7 +220,10 @@ export default function WordPracticePage() {
         const responseTime = wordStartTimeRef.current ? now - wordStartTimeRef.current : undefined;
 
         if (words[currentIndex]) {
-            saveWordResult(words[currentIndex].word, false, responseTime, { isTestMode: difficultyMode === 'hard' });
+            saveWordResult(words[currentIndex].word, false, responseTime, {
+                isTestMode: difficultyMode === 'test',
+                isHardMode: difficultyMode === 'hard'
+            });
         }
 
         setIsWrong(true);
@@ -466,7 +472,13 @@ export default function WordPracticePage() {
                             <div className="grid grid-cols-2 gap-2">
                                 <select
                                     value={difficulty}
-                                    onChange={(e) => setDifficulty(e.target.value)}
+                                    onChange={(e) => {
+                                        const val = e.target.value;
+                                        setDifficulty(val);
+                                        if (val === "difficult") {
+                                            setDifficultyMode("hard");
+                                        }
+                                    }}
                                     className="w-full bg-zinc-50/50 dark:bg-zinc-800/80 border border-zinc-100/50 dark:border-zinc-700/50 text-zinc-600 dark:text-zinc-300 text-xs font-bold rounded-2xl px-4 py-3 outline-none focus:ring-4 focus:ring-blue-100 dark:focus:ring-blue-900 focus:bg-white dark:focus:bg-zinc-900 transition-all appearance-none cursor-pointer"
                                 >
                                     <option value="all">Any Level</option>
