@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { WordProgress, listenToProgress } from "@/lib/storage";
 import Link from "next/link";
 import vocabData from "@/data/vocab.json";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Home() {
   const [progress, setProgress] = useState<Record<string, WordProgress>>({});
@@ -39,10 +40,56 @@ export default function Home() {
 
   if (isLoading) {
     return (
-      <main className="flex min-h-screen items-center justify-center tracking-tight">
-        <div className="flex flex-col items-center gap-4">
-          <div className="w-12 h-12 border-4 border-zinc-200 dark:border-zinc-700 border-t-zinc-900 dark:border-t-zinc-100 rounded-full animate-spin"></div>
-          <p className="text-zinc-500 dark:text-zinc-400 font-medium">Syncing progress...</p>
+      <main className="flex min-h-screen flex-col items-center px-[24px] tracking-tight py-12">
+        <div className="w-full max-w-4xl flex flex-col gap-10">
+          {/* Header Skeleton */}
+          <div className="flex justify-between items-center bg-white dark:bg-zinc-800 p-8 rounded-3xl border border-zinc-100 dark:border-zinc-700 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50">
+            <div className="flex flex-col gap-4 w-full max-w-md">
+              <Skeleton className="h-10 w-3/4" />
+              <Skeleton className="h-5 w-full" />
+            </div>
+            <Skeleton className="h-12 w-36 rounded-2xl hidden sm:block" />
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <Skeleton className="h-8 w-64" />
+            <Skeleton className="h-5 w-48" />
+          </div>
+
+          {/* Stats Grid Skeleton */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="bg-white dark:bg-zinc-800 p-8 rounded-3xl border border-zinc-100 dark:border-zinc-700 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50 flex flex-col gap-4">
+                <Skeleton className="h-4 w-24" />
+                <Skeleton className="h-12 w-16" />
+              </div>
+            ))}
+          </div>
+
+          {/* Details Section Skeleton */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {/* Top Mistakes Skeleton */}
+            <div className="flex flex-col gap-4">
+              <Skeleton className="h-8 w-48" />
+              <div className="bg-white dark:bg-zinc-800 p-6 rounded-3xl border border-zinc-100 dark:border-zinc-700 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50 flex flex-col gap-4">
+                {[1, 2, 3].map((i) => (
+                  <div key={i} className="flex justify-between items-center p-4 bg-zinc-50 dark:bg-zinc-900/50 rounded-2xl border border-zinc-100 dark:border-zinc-700/50">
+                    <Skeleton className="h-6 w-24" />
+                    <Skeleton className="h-6 w-20 rounded-full" />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Progress Breakdown Skeleton */}
+            <div className="flex flex-col gap-4">
+              <Skeleton className="h-8 w-48" />
+              <div className="bg-white dark:bg-zinc-800 p-8 rounded-3xl border border-zinc-100 dark:border-zinc-700 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50 flex flex-col items-center justify-center gap-6">
+                <Skeleton className="h-40 w-40 rounded-full" />
+                <Skeleton className="h-4 w-48" />
+              </div>
+            </div>
+          </div>
         </div>
       </main>
     );

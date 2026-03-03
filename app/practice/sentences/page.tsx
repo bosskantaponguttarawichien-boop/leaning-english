@@ -5,6 +5,7 @@ import vocabData from "@/data/vocab.json";
 import { VocabDBSchema } from "@/schemas/vocab.schema";
 import { useForm } from "react-hook-form";
 import Link from "next/link";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function SentencePracticePage() {
     const [sentences, setSentences] = useState<string[]>([]);
@@ -79,7 +80,40 @@ export default function SentencePracticePage() {
     }, [currentIndex, sentences.length, isFinished]);
 
     if (sentences.length === 0) {
-        return <div className="p-24 text-center">Loading sentences...</div>;
+        return (
+            <main className="flex min-h-screen flex-col items-center relative gap-12 p-6 md:p-12 animate-fade-in">
+                <div className="w-full max-w-3xl flex flex-col gap-12">
+                    <div className="flex flex-col gap-2">
+                        <div className="flex items-center gap-2">
+                            <Skeleton className="h-10 w-10 rounded-full" />
+                            <Skeleton className="h-10 w-48 rounded-md" />
+                        </div>
+                        <Skeleton className="h-5 w-64 ml-7 rounded-md" />
+                    </div>
+
+                    {/* Sentence Display Skeleton */}
+                    <div className="p-10 bg-white dark:bg-zinc-800 border border-zinc-100 dark:border-zinc-700 rounded-3xl shadow-xl shadow-zinc-100 dark:shadow-zinc-900/50">
+                        <div className="flex flex-wrap gap-2">
+                            <Skeleton className="h-10 w-16 rounded-md" />
+                            <Skeleton className="h-10 w-24 rounded-md" />
+                            <Skeleton className="h-10 w-20 rounded-md" />
+                            <Skeleton className="h-10 w-32 rounded-md" />
+                            <Skeleton className="h-10 w-12 rounded-md" />
+                            <Skeleton className="h-10 w-28 rounded-md" />
+                            <Skeleton className="h-10 w-16 rounded-md" />
+                        </div>
+                    </div>
+
+                    {/* Keyboard Hint Skeleton */}
+                    <div className="flex justify-center mb-0">
+                        <Skeleton className="h-8 w-32 rounded-full" />
+                    </div>
+
+                    {/* Input area Skeleton */}
+                    <Skeleton className="w-full h-32 rounded-2xl" />
+                </div>
+            </main>
+        );
     }
 
     // Tokenize for highlighting

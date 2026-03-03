@@ -10,6 +10,7 @@ import { saveWordResult, getProgress, WordProgress, toggleWordMark, syncProgress
 import { getWeightedWords, getSRSStats, SRSStats } from "@/lib/srs";
 import { speak } from "@/lib/speech";
 import { readData, setData, pushData } from "@/lib/db";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const DEFAULT_USER_ID = "default_user";
 
@@ -311,10 +312,61 @@ export default function WordPracticePage() {
 
     if (!isDataLoaded) {
         return (
-            <main className="flex min-h-screen flex-col items-center justify-center relative">
-                <div className="flex flex-col items-center gap-4">
-                    <div className="w-12 h-12 border-4 border-zinc-200 border-t-zinc-900 rounded-full animate-spin"></div>
-                    <p className="text-zinc-500 font-medium">Syncing data...</p>
+            <main className="flex min-h-screen flex-col items-center relative">
+                <div className="w-full max-w-2xl flex flex-col gap-8 flex-1 px-4 sm:px-12 animate-fade-in mt-12 mb-12">
+                    {/* Header / Settings Skeleton */}
+                    <div className="flex flex-col gap-6 bg-white/80 dark:bg-zinc-800/80 backdrop-blur-md p-6 rounded-[2.5rem] border border-white dark:border-zinc-700/50 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50">
+                        <div className="flex justify-between items-center">
+                            <Skeleton className="h-8 w-48" />
+                            <Skeleton className="h-8 w-24 rounded-full" />
+                        </div>
+                        <div className="flex flex-col md:flex-row gap-6">
+                            <div className="flex flex-col gap-2 flex-1">
+                                <Skeleton className="h-3 w-20" />
+                                <div className="grid grid-cols-2 gap-2">
+                                    <Skeleton className="h-12 w-full rounded-2xl" />
+                                    <Skeleton className="h-12 w-full rounded-2xl" />
+                                </div>
+                            </div>
+                            <div className="flex flex-col gap-2 md:w-fit">
+                                <Skeleton className="h-3 w-16" />
+                                <div className="flex flex-col gap-2">
+                                    <Skeleton className="h-10 w-48 rounded-2xl" />
+                                    <Skeleton className="h-8 w-48 rounded-2xl" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col gap-4">
+                        <div className="flex items-center px-2 mb-2">
+                            <div className="flex w-full sm:w-auto items-center gap-6 sm:gap-16">
+                                <div className="flex flex-col gap-1">
+                                    <Skeleton className="h-3 w-24" />
+                                    <Skeleton className="h-5 w-12" />
+                                </div>
+                                <div className="w-px h-8 bg-zinc-200 dark:bg-zinc-700" />
+                                <div className="flex flex-col gap-1">
+                                    <Skeleton className="h-3 w-24" />
+                                    <Skeleton className="h-5 w-12" />
+                                </div>
+                                <div className="w-px h-8 bg-zinc-200 dark:bg-zinc-700" />
+                                <div className="flex flex-col gap-1">
+                                    <Skeleton className="h-3 w-24" />
+                                    <Skeleton className="h-5 w-12" />
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Progress indicator Skeleton */}
+                        <Skeleton className="w-full h-1.5 rounded-full mb-2" />
+
+                        {/* Word Card Skeleton */}
+                        <Skeleton className="w-full h-64 rounded-3xl" />
+
+                        {/* Input Skeleton */}
+                        <Skeleton className="w-full h-20 rounded-2xl" />
+                    </div>
                 </div>
             </main>
         )
