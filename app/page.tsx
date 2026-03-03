@@ -61,7 +61,7 @@ export default function Home() {
               เริ่มต้นฝึกพิมพ์คำศัพท์ภาษาอังกฤษเพื่อพัฒนาทักษะของคุณ
             </p>
           </div>
-          <Link href="/practice" className="px-6 py-3 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-100">
+          <Link href="/practice" className="px-6 py-3 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-100 dark:shadow-none">
             Keep Practicing
           </Link>
         </div>
