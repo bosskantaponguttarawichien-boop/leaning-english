@@ -5,10 +5,8 @@ import { WordProgress, listenToProgress } from "@/lib/storage";
 import Link from "next/link";
 import vocabData from "@/data/vocab.json";
 import { Skeleton } from "@/components/ui/skeleton";
-import { useLiff } from "@/components/LiffProvider";
 
 export default function Home() {
-  const { profile, isLoggedIn, isLoading: liffLoading } = useLiff()
   const [progress, setProgress] = useState<Record<string, WordProgress>>({});
   const [isLoading, setIsLoading] = useState(true);
 
@@ -40,7 +38,7 @@ export default function Home() {
     .sort((a, b) => b.wrongCount - a.wrongCount)
     .slice(0, 5);
 
-  if (isLoading || liffLoading) {
+  if (isLoading) {
     return (
       <main className="flex min-h-screen flex-col items-center px-[24px] tracking-tight py-12">
         <div className="w-full max-w-4xl flex flex-col gap-10">
@@ -103,22 +101,6 @@ export default function Home() {
         {/* Header Section */}
         <div className="flex justify-between items-center bg-white dark:bg-zinc-800 p-8 rounded-3xl border border-zinc-100 dark:border-zinc-700 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50">
           <div className="flex flex-col gap-2">
-            {isLoggedIn && profile ? (
-              <div className="flex items-center gap-4 mb-1">
-                {profile.pictureUrl && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={profile.pictureUrl}
-                    alt={profile.displayName}
-                    className="w-12 h-12 rounded-full border-2 border-blue-200 dark:border-blue-800 object-cover"
-                  />
-                )}
-                <div>
-                  <p className="text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest">ยินดีต้อนรับกลับ</p>
-                  <p className="text-2xl font-black text-zinc-900 dark:text-white leading-tight">{profile.displayName} 👋</p>
-                </div>
-              </div>
-            ) : null}
             <h1 className="text-4xl font-black text-zinc-900 dark:text-white leading-none">
               EngList 🧠
             </h1>

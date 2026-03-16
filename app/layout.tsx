@@ -3,7 +3,6 @@ import { Noto_Sans_Thai, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "next-themes";
-import LiffProvider from "@/components/LiffProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -37,10 +36,8 @@ export default function RootLayout({
     <html lang="th" className={`${inter.variable} ${notoThai.variable}`} suppressHydrationWarning>
       <body className="antialiased font-sans bg-background text-foreground min-h-screen">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <LiffProvider>
-            <Navbar />
-            {children}
-          </LiffProvider>
+          <Navbar />
+          {children}
         </ThemeProvider>
       </body>
     </html>
