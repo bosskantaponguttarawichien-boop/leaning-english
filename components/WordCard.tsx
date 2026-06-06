@@ -3,6 +3,7 @@
 import React from "react";
 import { Word, POS } from "@/schemas/vocab.schema";
 import { WordProgress } from "@/lib/storage";
+import { speak } from "@/lib/speech";
 
 export type DifficultyMode = 'normal' | 'test' | 'hard' | 'typing';
 
@@ -42,14 +43,6 @@ const posFullMap: Record<POS, string> = {
 };
 
 export default function WordCard({ wordData, revealed, typingValue = "", isCorrect, isWrong, difficultyMode = 'normal', progress, onToggleHint, isMarked, onToggleMark }: WordCardProps) {
-    const speak = (text: string) => {
-        if (typeof window !== "undefined" && window.speechSynthesis) {
-            const utterance = new SpeechSynthesisUtterance(text);
-            utterance.lang = "en-US";
-            window.speechSynthesis.speak(utterance);
-        }
-    };
-
     const isTestLike = difficultyMode !== 'normal';
 
     // Mask the word in the example sentence if in test/hard mode
