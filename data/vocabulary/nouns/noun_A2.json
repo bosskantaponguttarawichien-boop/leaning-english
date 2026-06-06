@@ -1,6 +1,266 @@
 {
     "words": [
         {
+            "word": "ability",
+            "pos": "n",
+            "meaning": "ความสามารถ",
+            "example": "She has the ability to lead a team.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "accommodation",
+            "pos": "n",
+            "meaning": "ที่พัก",
+            "example": "The accommodation was comfortable.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "account",
+            "pos": "n",
+            "meaning": "บัญชีผู้ใช้",
+            "example": "I created a new account.",
+            "difficulty": "A2",
+            "category": [
+                "Technology"
+            ]
+        },
+        {
+            "word": "advertisement",
+            "pos": "n",
+            "meaning": "การโฆษณา",
+            "example": "The advertisement was very creative.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "airline",
+            "pos": "n",
+            "meaning": "สายการบิน",
+            "example": "Which airline did you fly with?",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "ambulance",
+            "pos": "n",
+            "meaning": "รถพยาบาล",
+            "example": "Call an ambulance immediately.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "appointment",
+            "pos": "n",
+            "meaning": "การนัดหมาย",
+            "example": "I have a doctor appointment tomorrow.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "arrival",
+            "pos": "n",
+            "meaning": "การมาถึง",
+            "example": "The arrival time is 3 pm.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "assistant",
+            "pos": "n",
+            "meaning": "ผู้ช่วย",
+            "example": "She works as a teaching assistant.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "backpack",
+            "pos": "n",
+            "meaning": "เป้สะพายหลัง",
+            "example": "She carried a backpack on the trip.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "baggage",
+            "pos": "n",
+            "meaning": "สัมภาระ",
+            "example": "My baggage was too heavy.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "border",
+            "pos": "n",
+            "meaning": "ชายแดน",
+            "example": "We crossed the border by bus.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "boss",
+            "pos": "n",
+            "meaning": "เจ้านาย",
+            "example": "Her boss is very supportive.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "brochure",
+            "pos": "n",
+            "meaning": "แผ่นพับ",
+            "example": "She read the hotel brochure.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "candidate",
+            "pos": "n",
+            "meaning": "ผู้สมัคร",
+            "example": "She is the best candidate.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "career",
+            "pos": "n",
+            "meaning": "อาชีพ",
+            "example": "She built a career in medicine.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "change",
+            "pos": "n",
+            "meaning": "การเปลี่ยนแปลง",
+            "example": "Change takes time.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "check-in",
+            "pos": "n",
+            "meaning": "การลงทะเบียนเข้าพัก",
+            "example": "Check-in starts at 2 pm.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "colleague",
+            "pos": "n",
+            "meaning": "เพื่อนร่วมงาน",
+            "example": "My colleague helped me finish the report.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "conference",
+            "pos": "n",
+            "meaning": "การประชุมสัมมนา",
+            "example": "She attended an online conference.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "contract",
+            "pos": "n",
+            "meaning": "สัญญา",
+            "example": "Please sign the contract.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "conversation",
+            "pos": "n",
+            "meaning": "บทสนทนา",
+            "example": "We had a long conversation.",
+            "difficulty": "A2",
+            "category": [
+                "Communication"
+            ]
+        },
+        {
+            "word": "currency",
+            "pos": "n",
+            "meaning": "สกุลเงิน",
+            "example": "The currency in Japan is yen.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "customer",
+            "pos": "n",
+            "meaning": "ลูกค้า",
+            "example": "The customer is always right.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "customs",
+            "pos": "n",
+            "meaning": "ศุลกากร",
+            "example": "She waited at customs for an hour.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "deadline",
+            "pos": "n",
+            "meaning": "กำหนดส่งงาน",
+            "example": "The deadline is tomorrow.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
             "word": "decision",
             "pos": "n",
             "meaning": "การตัดสินใจ",
@@ -11,20 +271,351 @@
             ]
         },
         {
-            "word": "message",
+            "word": "degree",
             "pos": "n",
-            "meaning": "ข้อความ",
-            "example": "I sent you a message.",
+            "meaning": "ปริญญา / ระดับ",
+            "example": "She has a degree in English.",
+            "difficulty": "A2",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "delay",
+            "pos": "n",
+            "meaning": "ความล่าช้า",
+            "example": "The flight had a two-hour delay.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "department",
+            "pos": "n",
+            "meaning": "แผนก",
+            "example": "She works in the sales department.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "destination",
+            "pos": "n",
+            "meaning": "จุดหมายปลายทาง",
+            "example": "What is your destination?",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "email",
+            "pos": "n",
+            "meaning": "อีเมล",
+            "example": "Send me an email.",
             "difficulty": "A2",
             "category": [
                 "Communication"
             ]
         },
         {
+            "word": "embassy",
+            "pos": "n",
+            "meaning": "สถานทูต",
+            "example": "She went to the embassy for a visa.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "employee",
+            "pos": "n",
+            "meaning": "ลูกจ้าง",
+            "example": "The company has fifty employees.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "employer",
+            "pos": "n",
+            "meaning": "นายจ้าง",
+            "example": "Her employer is very fair.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "exam",
+            "pos": "n",
+            "meaning": "การสอบ",
+            "example": "The exam was difficult.",
+            "difficulty": "A2",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "factory",
+            "pos": "n",
+            "meaning": "โรงงาน",
+            "example": "He works at a car factory.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "flight",
+            "pos": "n",
+            "meaning": "เที่ยวบิน",
+            "example": "The flight was on time.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "future",
+            "pos": "n",
+            "meaning": "อนาคต",
+            "example": "I worry about the future.",
+            "difficulty": "A2",
+            "category": [
+                "General"
+            ]
+        },
+        {
+            "word": "goal",
+            "pos": "n",
+            "meaning": "เป้าหมาย",
+            "example": "My goal is to speak English fluently.",
+            "difficulty": "A2",
+            "category": [
+                "General",
+                "Work"
+            ]
+        },
+        {
+            "word": "guide",
+            "pos": "n",
+            "meaning": "มัคคุเทศก์",
+            "example": "The guide explained the history.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "hobby",
+            "pos": "n",
+            "meaning": "งานอดิเรก",
+            "example": "Reading is my hobby.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "homework",
+            "pos": "n",
+            "meaning": "การบ้าน",
+            "example": "I finished my homework.",
+            "difficulty": "A2",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "industry",
+            "pos": "n",
+            "meaning": "อุตสาหกรรม",
+            "example": "She works in the tourism industry.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "information",
+            "pos": "n",
+            "meaning": "ข้อมูล",
+            "example": "I need more information.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "interest",
+            "pos": "n",
+            "meaning": "ความสนใจ",
+            "example": "He has an interest in music.",
+            "difficulty": "A2",
+            "category": [
+                "Daily Life"
+            ]
+        },
+        {
+            "word": "interview",
+            "pos": "n",
+            "meaning": "การสัมภาษณ์",
+            "example": "She had a job interview today.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "journey",
+            "pos": "n",
+            "meaning": "การเดินทาง (ระยะไกล)",
+            "example": "The journey took three hours.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "knowledge",
+            "pos": "n",
+            "meaning": "ความรู้",
+            "example": "She has great knowledge of history.",
+            "difficulty": "A2",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "leader",
+            "pos": "n",
+            "meaning": "ผู้นำ",
+            "example": "A good leader listens to the team.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "lesson",
+            "pos": "n",
+            "meaning": "บทเรียน",
+            "example": "Today's lesson is easy.",
+            "difficulty": "A2",
+            "category": [
+                "Education"
+            ]
+        },
+        {
+            "word": "location",
+            "pos": "n",
+            "meaning": "สถานที่ตั้ง",
+            "example": "The hotel has a great location.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "luggage",
+            "pos": "n",
+            "meaning": "สัมภาระ",
+            "example": "She lost her luggage at the airport.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "manager",
+            "pos": "n",
+            "meaning": "ผู้จัดการ",
+            "example": "The manager approved the plan.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
             "word": "meeting",
             "pos": "n",
             "meaning": "การประชุม",
-            "example": "We have a meeting this afternoon.",
+            "example": "We have a team meeting every Monday.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "office",
+            "pos": "n",
+            "meaning": "สำนักงาน",
+            "example": "She works in a busy office.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "opportunity",
+            "pos": "n",
+            "meaning": "โอกาส",
+            "example": "This is a great opportunity for you.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "order",
+            "pos": "n",
+            "meaning": "คำสั่งซื้อ",
+            "example": "Your order is ready.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "passenger",
+            "pos": "n",
+            "meaning": "ผู้โดยสาร",
+            "example": "All passengers must fasten seatbelts.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "passport",
+            "pos": "n",
+            "meaning": "หนังสือเดินทาง",
+            "example": "Do not forget your passport.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "password",
+            "pos": "n",
+            "meaning": "รหัสผ่าน",
+            "example": "Don't share your password.",
+            "difficulty": "A2",
+            "category": [
+                "Technology"
+            ]
+        },
+        {
+            "word": "pension",
+            "pos": "n",
+            "meaning": "เงินบำนาญ",
+            "example": "He receives a pension after retirement.",
             "difficulty": "A2",
             "category": [
                 "Work"
@@ -41,110 +632,50 @@
             ]
         },
         {
-            "word": "project",
+            "word": "platform",
             "pos": "n",
-            "meaning": "โครงการ",
-            "example": "I'm working on a new project.",
+            "meaning": "ชานชาลา",
+            "example": "The train leaves from platform 5.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
+            ]
+        },
+        {
+            "word": "promotion",
+            "pos": "n",
+            "meaning": "การเลื่อนตำแหน่ง",
+            "example": "She got a promotion last month.",
             "difficulty": "A2",
             "category": [
                 "Work"
             ]
         },
         {
-            "word": "example",
+            "word": "reservation",
             "pos": "n",
-            "meaning": "ตัวอย่าง",
-            "example": "Can you give me an example?",
+            "meaning": "การจอง",
+            "example": "She made a hotel reservation.",
             "difficulty": "A2",
             "category": [
-                "Education"
+                "Travel"
             ]
         },
         {
-            "word": "reason",
+            "word": "route",
             "pos": "n",
-            "meaning": "เหตุผล",
-            "example": "What is the reason for this?",
+            "meaning": "เส้นทาง",
+            "example": "This is the fastest route.",
             "difficulty": "A2",
             "category": [
-                "Daily Life"
+                "Travel"
             ]
         },
         {
-            "word": "result",
+            "word": "salary",
             "pos": "n",
-            "meaning": "ผลลัพธ์",
-            "example": "The result was surprising.",
-            "difficulty": "A2",
-            "category": [
-                "General"
-            ]
-        },
-        {
-            "word": "change",
-            "pos": "n",
-            "meaning": "การเปลี่ยนแปลง",
-            "example": "Change takes time.",
-            "difficulty": "A2",
-            "category": [
-                "Daily Life"
-            ]
-        },
-        {
-            "word": "information",
-            "pos": "n",
-            "meaning": "ข้อมูล",
-            "example": "I need more information.",
-            "difficulty": "A2",
-            "category": [
-                "Work"
-            ]
-        },
-        {
-            "word": "experience",
-            "pos": "n",
-            "meaning": "ประสบการณ์",
-            "example": "It was a great experience.",
-            "difficulty": "A2",
-            "category": [
-                "Daily Life"
-            ]
-        },
-        {
-            "word": "situation",
-            "pos": "n",
-            "meaning": "สถานการณ์",
-            "example": "It's a difficult situation.",
-            "difficulty": "A2",
-            "category": [
-                "Daily Life"
-            ]
-        },
-        {
-            "word": "system",
-            "pos": "n",
-            "meaning": "ระบบ",
-            "example": "The system is not working.",
-            "difficulty": "A2",
-            "category": [
-                "Technology"
-            ]
-        },
-        {
-            "word": "company",
-            "pos": "n",
-            "meaning": "บริษัท",
-            "example": "She works for a big company.",
-            "difficulty": "A2",
-            "category": [
-                "Work"
-            ]
-        },
-        {
-            "word": "customer",
-            "pos": "n",
-            "meaning": "ลูกค้า",
-            "example": "The customer is waiting.",
+            "meaning": "เงินเดือน",
+            "example": "His salary increased this year.",
             "difficulty": "A2",
             "category": [
                 "Work"
@@ -161,73 +692,23 @@
             ]
         },
         {
-            "word": "business",
+            "word": "sightseeing",
             "pos": "n",
-            "meaning": "ธุรกิจ",
-            "example": "He runs a small business.",
+            "meaning": "การเที่ยวชมวิว",
+            "example": "We spent the day sightseeing.",
             "difficulty": "A2",
             "category": [
-                "Work"
+                "Travel"
             ]
         },
         {
-            "word": "product",
+            "word": "situation",
             "pos": "n",
-            "meaning": "สินค้า",
-            "example": "This product is popular.",
-            "difficulty": "A2",
-            "category": [
-                "Work"
-            ]
-        },
-        {
-            "word": "price",
-            "pos": "n",
-            "meaning": "ราคา",
-            "example": "The price is too high.",
+            "meaning": "สถานการณ์",
+            "example": "It's a difficult situation.",
             "difficulty": "A2",
             "category": [
                 "Daily Life"
-            ]
-        },
-        {
-            "word": "order",
-            "pos": "n",
-            "meaning": "คำสั่งซื้อ",
-            "example": "Your order is ready.",
-            "difficulty": "A2",
-            "category": [
-                "Work"
-            ]
-        },
-        {
-            "word": "travel",
-            "pos": "n",
-            "meaning": "การเดินทาง",
-            "example": "I love travel.",
-            "difficulty": "A2",
-            "category": [
-                "Travel"
-            ]
-        },
-        {
-            "word": "vacation",
-            "pos": "n",
-            "meaning": "วันหยุดพักผ่อน",
-            "example": "We are planning a vacation.",
-            "difficulty": "A2",
-            "category": [
-                "Travel"
-            ]
-        },
-        {
-            "word": "ticket",
-            "pos": "n",
-            "meaning": "ตั๋ว",
-            "example": "I bought a train ticket.",
-            "difficulty": "A2",
-            "category": [
-                "Travel"
             ]
         },
         {
@@ -241,153 +722,104 @@
             ]
         },
         {
-            "word": "language",
+            "word": "souvenir",
             "pos": "n",
-            "meaning": "ภาษา",
-            "example": "English is a global language.",
+            "meaning": "ของที่ระลึก",
+            "example": "She bought a souvenir for her family.",
             "difficulty": "A2",
             "category": [
-                "Education"
+                "Travel"
             ]
         },
         {
-            "word": "conversation",
+            "word": "staff",
             "pos": "n",
-            "meaning": "บทสนทนา",
-            "example": "We had a long conversation.",
-            "difficulty": "A2",
-            "category": [
-                "Communication"
-            ]
-        },
-        {
-            "word": "story",
-            "pos": "n",
-            "meaning": "เรื่องราว",
-            "example": "Tell me a story.",
-            "difficulty": "A2",
-            "category": [
-                "Daily Life"
-            ]
-        },
-        {
-            "word": "news",
-            "pos": "n",
-            "meaning": "ข่าว",
-            "example": "Did you hear the news?",
-            "difficulty": "A2",
-            "category": [
-                "Daily Life"
-            ]
-        },
-        {
-            "word": "event",
-            "pos": "n",
-            "meaning": "เหตุการณ์ / งานกิจกรรม",
-            "example": "The event starts at 6 PM.",
-            "difficulty": "A2",
-            "category": [
-                "General"
-            ]
-        },
-        {
-            "word": "party",
-            "pos": "n",
-            "meaning": "งานปาร์ตี้",
-            "example": "She invited me to her party.",
-            "difficulty": "A2",
-            "category": [
-                "Daily Life"
-            ]
-        },
-        {
-            "word": "hobby",
-            "pos": "n",
-            "meaning": "งานอดิเรก",
-            "example": "Reading is my hobby.",
-            "difficulty": "A2",
-            "category": [
-                "Daily Life"
-            ]
-        },
-        {
-            "word": "interest",
-            "pos": "n",
-            "meaning": "ความสนใจ",
-            "example": "He has an interest in music.",
-            "difficulty": "A2",
-            "category": [
-                "Daily Life"
-            ]
-        },
-        {
-            "word": "skill",
-            "pos": "n",
-            "meaning": "ทักษะ",
-            "example": "Communication is an important skill.",
+            "meaning": "พนักงาน",
+            "example": "All staff must attend the meeting.",
             "difficulty": "A2",
             "category": [
                 "Work"
             ]
         },
         {
-            "word": "test",
+            "word": "system",
             "pos": "n",
-            "meaning": "แบบทดสอบ",
-            "example": "I have a test tomorrow.",
+            "meaning": "ระบบ",
+            "example": "The system is not working.",
             "difficulty": "A2",
             "category": [
-                "Education"
+                "Technology"
             ]
         },
         {
-            "word": "exam",
+            "word": "task",
             "pos": "n",
-            "meaning": "การสอบ",
-            "example": "The exam was difficult.",
+            "meaning": "งานที่ได้รับมอบหมาย",
+            "example": "Complete each task carefully.",
             "difficulty": "A2",
             "category": [
-                "Education"
+                "Work"
             ]
         },
         {
-            "word": "lesson",
+            "word": "tourist",
             "pos": "n",
-            "meaning": "บทเรียน",
-            "example": "Today's lesson is easy.",
+            "meaning": "นักท่องเที่ยว",
+            "example": "Many tourists visit Thailand.",
             "difficulty": "A2",
             "category": [
-                "Education"
+                "Travel"
             ]
         },
         {
-            "word": "homework",
+            "word": "traffic",
             "pos": "n",
-            "meaning": "การบ้าน",
-            "example": "I finished my homework.",
+            "meaning": "การจราจร",
+            "example": "Traffic is heavy in the morning.",
             "difficulty": "A2",
             "category": [
-                "Education"
+                "Daily Life",
+                "Travel"
             ]
         },
         {
-            "word": "future",
+            "word": "transport",
             "pos": "n",
-            "meaning": "อนาคต",
-            "example": "I worry about the future.",
+            "meaning": "การขนส่ง",
+            "example": "Public transport is cheap here.",
             "difficulty": "A2",
             "category": [
-                "General"
+                "Travel"
             ]
         },
         {
-            "word": "past",
+            "word": "travel",
             "pos": "n",
-            "meaning": "อดีต",
-            "example": "The past is behind us.",
+            "meaning": "การเดินทาง",
+            "example": "I love travel.",
             "difficulty": "A2",
             "category": [
-                "General"
+                "Travel"
+            ]
+        },
+        {
+            "word": "uniform",
+            "pos": "n",
+            "meaning": "เครื่องแบบ",
+            "example": "Students wear a uniform.",
+            "difficulty": "A2",
+            "category": [
+                "Work"
+            ]
+        },
+        {
+            "word": "vehicle",
+            "pos": "n",
+            "meaning": "ยานพาหนะ",
+            "example": "A bus is a large vehicle.",
+            "difficulty": "A2",
+            "category": [
+                "Travel"
             ]
         },
         {
@@ -398,96 +830,6 @@
             "difficulty": "A2",
             "category": [
                 "Technology"
-            ]
-        },
-        {
-            "word": "email",
-            "pos": "n",
-            "meaning": "อีเมล",
-            "example": "Send me an email.",
-            "difficulty": "A2",
-            "category": [
-                "Communication"
-            ]
-        },
-        {
-            "word": "account",
-            "pos": "n",
-            "meaning": "บัญชีผู้ใช้",
-            "example": "I created a new account.",
-            "difficulty": "A2",
-            "category": [
-                "Technology"
-            ]
-        },
-        {
-            "word": "password",
-            "pos": "n",
-            "meaning": "รหัสผ่าน",
-            "example": "Don't share your password.",
-            "difficulty": "A2",
-            "category": [
-                "Technology"
-            ]
-        },
-        {
-            "word": "address",
-            "pos": "n",
-            "meaning": "ที่อยู่",
-            "example": "What is your address?",
-            "difficulty": "A2",
-            "category": [
-                "Daily Life"
-            ]
-        },
-        {
-            "word": "photo",
-            "pos": "n",
-            "meaning": "รูปถ่าย",
-            "example": "She posted a photo online.",
-            "difficulty": "A2",
-            "category": [
-                "Daily Life"
-            ]
-        },
-        {
-            "word": "video",
-            "pos": "n",
-            "meaning": "วิดีโอ",
-            "example": "I watched a video.",
-            "difficulty": "A2",
-            "category": [
-                "Technology"
-            ]
-        },
-        {
-            "word": "weather",
-            "pos": "n",
-            "meaning": "สภาพอากาศ",
-            "example": "The weather is nice today.",
-            "difficulty": "A2",
-            "category": [
-                "Daily Life"
-            ]
-        },
-        {
-            "word": "traffic",
-            "pos": "n",
-            "meaning": "การจราจร",
-            "example": "The traffic is heavy.",
-            "difficulty": "A2",
-            "category": [
-                "Daily Life"
-            ]
-        },
-        {
-            "word": "health",
-            "pos": "n",
-            "meaning": "สุขภาพ",
-            "example": "Health is important.",
-            "difficulty": "A2",
-            "category": [
-                "Health"
             ]
         }
     ]

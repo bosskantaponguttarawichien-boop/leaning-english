@@ -45,6 +45,13 @@ function syncVocab() {
         }
     }
 
+    // Sort words alphabetically (case-insensitive) to group related words (e.g. arrive & arrival) together
+    allWords.sort((a, b) => {
+        const wordComparison = a.word.toLowerCase().localeCompare(b.word.toLowerCase());
+        if (wordComparison !== 0) return wordComparison;
+        return a.pos.localeCompare(b.pos);
+    });
+
     const output = {
         words: allWords
     };

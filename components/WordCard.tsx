@@ -4,7 +4,7 @@ import React from "react";
 import { Word, POS } from "@/schemas/vocab.schema";
 import { WordProgress } from "@/lib/storage";
 
-export type DifficultyMode = 'normal' | 'test' | 'hard';
+export type DifficultyMode = 'normal' | 'test' | 'hard' | 'typing';
 
 interface WordCardProps {
     wordData: Word;

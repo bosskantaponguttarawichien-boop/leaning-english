@@ -1,93 +1,13 @@
 {
     "words": [
         {
-            "word": "according to",
+            "word": "as opposed to",
             "pos": "prep",
-            "meaning": "ตามที่",
-            "example": "According to the report, sales increased.",
+            "meaning": "ตรงข้ามกับ",
+            "example": "He chose tea as opposed to coffee.",
             "difficulty": "B1",
             "category": [
-                "Work"
-            ]
-        },
-        {
-            "word": "in terms of",
-            "pos": "prep",
-            "meaning": "ในแง่ของ",
-            "example": "In terms of quality, this is better.",
-            "difficulty": "B1",
-            "category": [
-                "Work"
-            ]
-        },
-        {
-            "word": "with regard to",
-            "pos": "prep",
-            "meaning": "เกี่ยวกับ",
-            "example": "With regard to your request, we agree.",
-            "difficulty": "B1",
-            "category": [
-                "Work"
-            ]
-        },
-        {
-            "word": "regarding",
-            "pos": "prep",
-            "meaning": "เกี่ยวกับ",
-            "example": "I emailed you regarding the issue.",
-            "difficulty": "B1",
-            "category": [
-                "Work"
-            ]
-        },
-        {
-            "word": "concerning",
-            "pos": "prep",
-            "meaning": "เกี่ยวกับ",
-            "example": "He asked a question concerning the budget.",
-            "difficulty": "B1",
-            "category": [
-                "Work"
-            ]
-        },
-        {
-            "word": "in relation to",
-            "pos": "prep",
-            "meaning": "เกี่ยวข้องกับ",
-            "example": "In relation to your proposal, we have feedback.",
-            "difficulty": "B1",
-            "category": [
-                "Work"
-            ]
-        },
-        {
-            "word": "on behalf of",
-            "pos": "prep",
-            "meaning": "ในนามของ",
-            "example": "She spoke on behalf of the team.",
-            "difficulty": "B1",
-            "category": [
-                "Work"
-            ]
-        },
-        {
-            "word": "in addition to",
-            "pos": "prep",
-            "meaning": "นอกจากนั้น",
-            "example": "In addition to English, she speaks Chinese.",
-            "difficulty": "B1",
-            "category": [
-                "General"
-            ]
-        },
-        {
-            "word": "apart from",
-            "pos": "prep",
-            "meaning": "นอกจาก",
-            "example": "Apart from cost, quality matters.",
-            "difficulty": "B1",
-            "category": [
-                "General"
+                "Comparison"
             ]
         },
         {
@@ -101,83 +21,13 @@
             ]
         },
         {
-            "word": "due to",
-            "pos": "prep",
-            "meaning": "เนื่องจาก",
-            "example": "The delay was due to traffic.",
-            "difficulty": "B1",
-            "category": [
-                "Reason"
-            ]
-        },
-        {
-            "word": "because of",
-            "pos": "prep",
-            "meaning": "เนื่องจาก",
-            "example": "The event was canceled because of rain.",
-            "difficulty": "B1",
-            "category": [
-                "Reason"
-            ]
-        },
-        {
-            "word": "owing to",
+            "word": "by virtue of",
             "pos": "prep",
             "meaning": "เนื่องจาก (เป็นทางการ)",
-            "example": "Owing to technical issues, we stopped.",
-            "difficulty": "B1",
-            "category": [
-                "Reason"
-            ]
-        },
-        {
-            "word": "despite",
-            "pos": "prep",
-            "meaning": "ทั้ง ๆ ที่",
-            "example": "Despite the problem, we continued.",
-            "difficulty": "B1",
-            "category": [
-                "Contrast"
-            ]
-        },
-        {
-            "word": "in spite of",
-            "pos": "prep",
-            "meaning": "ทั้ง ๆ ที่",
-            "example": "In spite of the risk, they invested.",
-            "difficulty": "B1",
-            "category": [
-                "Contrast"
-            ]
-        },
-        {
-            "word": "in case of",
-            "pos": "prep",
-            "meaning": "ในกรณีที่",
-            "example": "Call this number in case of emergency.",
-            "difficulty": "B1",
-            "category": [
-                "General"
-            ]
-        },
-        {
-            "word": "in the event of",
-            "pos": "prep",
-            "meaning": "ในกรณีที่ (ทางการ)",
-            "example": "In the event of failure, restart the system.",
+            "example": "She was promoted by virtue of her skills.",
             "difficulty": "B1",
             "category": [
                 "Work"
-            ]
-        },
-        {
-            "word": "by means of",
-            "pos": "prep",
-            "meaning": "โดยวิธี",
-            "example": "He solved it by means of technology.",
-            "difficulty": "B1",
-            "category": [
-                "General"
             ]
         },
         {
@@ -191,6 +41,16 @@
             ]
         },
         {
+            "word": "for the sake of",
+            "pos": "prep",
+            "meaning": "เพื่อประโยชน์ของ",
+            "example": "He stayed quiet for the sake of peace.",
+            "difficulty": "B1",
+            "category": [
+                "General"
+            ]
+        },
+        {
             "word": "in accordance with",
             "pos": "prep",
             "meaning": "ตาม / สอดคล้องกับ",
@@ -201,13 +61,13 @@
             ]
         },
         {
-            "word": "in contrast to",
+            "word": "in charge of",
             "pos": "prep",
-            "meaning": "ตรงกันข้ามกับ",
-            "example": "In contrast to last year, profits fell.",
+            "meaning": "รับผิดชอบ",
+            "example": "He is in charge of the project.",
             "difficulty": "B1",
             "category": [
-                "Comparison"
+                "Work"
             ]
         },
         {
@@ -221,10 +81,10 @@
             ]
         },
         {
-            "word": "as opposed to",
+            "word": "in contrast to",
             "pos": "prep",
-            "meaning": "ตรงข้ามกับ",
-            "example": "He chose tea as opposed to coffee.",
+            "meaning": "ตรงกันข้ามกับ",
+            "example": "In contrast to last year, profits fell.",
             "difficulty": "B1",
             "category": [
                 "Comparison"
@@ -241,13 +101,23 @@
             ]
         },
         {
-            "word": "in charge of",
+            "word": "in light of",
             "pos": "prep",
-            "meaning": "รับผิดชอบ",
-            "example": "He is in charge of the project.",
+            "meaning": "จากการพิจารณา",
+            "example": "In light of new data, we changed plans.",
             "difficulty": "B1",
             "category": [
                 "Work"
+            ]
+        },
+        {
+            "word": "in opposition to",
+            "pos": "prep",
+            "meaning": "ต่อต้าน",
+            "example": "He voted in opposition to the bill.",
+            "difficulty": "B1",
+            "category": [
+                "General"
             ]
         },
         {
@@ -261,10 +131,10 @@
             ]
         },
         {
-            "word": "in exchange for",
+            "word": "in pursuit of",
             "pos": "prep",
-            "meaning": "แลกกับ",
-            "example": "He gave money in exchange for help.",
+            "meaning": "เพื่อไล่ตาม / เพื่อให้ได้",
+            "example": "She moved abroad in pursuit of her dream.",
             "difficulty": "B1",
             "category": [
                 "General"
@@ -281,20 +151,20 @@
             ]
         },
         {
-            "word": "with respect to",
+            "word": "in support of",
             "pos": "prep",
-            "meaning": "เกี่ยวกับ",
-            "example": "With respect to your concern, we agree.",
+            "meaning": "เพื่อสนับสนุน",
+            "example": "They spoke in support of the policy.",
             "difficulty": "B1",
             "category": [
                 "Work"
             ]
         },
         {
-            "word": "in light of",
+            "word": "in the event of",
             "pos": "prep",
-            "meaning": "จากการพิจารณา",
-            "example": "In light of new data, we changed plans.",
+            "meaning": "ในกรณีที่ (ทางการ)",
+            "example": "In the event of failure, restart the system.",
             "difficulty": "B1",
             "category": [
                 "Work"
@@ -311,23 +181,13 @@
             ]
         },
         {
-            "word": "for the sake of",
-            "pos": "prep",
-            "meaning": "เพื่อประโยชน์ของ",
-            "example": "He stayed quiet for the sake of peace.",
-            "difficulty": "B1",
-            "category": [
-                "General"
-            ]
-        },
-        {
-            "word": "by virtue of",
+            "word": "owing to",
             "pos": "prep",
             "meaning": "เนื่องจาก (เป็นทางการ)",
-            "example": "She was promoted by virtue of her skills.",
+            "example": "Owing to technical issues, we stopped.",
             "difficulty": "B1",
             "category": [
-                "Work"
+                "Reason"
             ]
         },
         {
@@ -338,106 +198,6 @@
             "difficulty": "B1",
             "category": [
                 "Time"
-            ]
-        },
-        {
-            "word": "subsequent to",
-            "pos": "prep",
-            "meaning": "หลังจาก",
-            "example": "Subsequent to the call, we emailed.",
-            "difficulty": "B1",
-            "category": [
-                "Time"
-            ]
-        },
-        {
-            "word": "throughout",
-            "pos": "prep",
-            "meaning": "ตลอดทั่ว",
-            "example": "Sales increased throughout the year.",
-            "difficulty": "B1",
-            "category": [
-                "Time"
-            ]
-        },
-        {
-            "word": "within",
-            "pos": "prep",
-            "meaning": "ภายใน",
-            "example": "Finish the task within two days.",
-            "difficulty": "B1",
-            "category": [
-                "Time"
-            ]
-        },
-        {
-            "word": "beyond",
-            "pos": "prep",
-            "meaning": "เกินกว่า",
-            "example": "This is beyond our control.",
-            "difficulty": "B1",
-            "category": [
-                "General"
-            ]
-        },
-        {
-            "word": "alongside",
-            "pos": "prep",
-            "meaning": "เคียงข้าง",
-            "example": "She worked alongside experts.",
-            "difficulty": "B1",
-            "category": [
-                "Work"
-            ]
-        },
-        {
-            "word": "towards",
-            "pos": "prep",
-            "meaning": "ไปทาง / มุ่งสู่",
-            "example": "We are working towards success.",
-            "difficulty": "B1",
-            "category": [
-                "General"
-            ]
-        },
-        {
-            "word": "under",
-            "pos": "prep",
-            "meaning": "ภายใต้",
-            "example": "The project is under review.",
-            "difficulty": "B1",
-            "category": [
-                "Work"
-            ]
-        },
-        {
-            "word": "over",
-            "pos": "prep",
-            "meaning": "มากกว่า",
-            "example": "The company has over 500 employees.",
-            "difficulty": "B1",
-            "category": [
-                "General"
-            ]
-        },
-        {
-            "word": "per",
-            "pos": "prep",
-            "meaning": "ต่อ",
-            "example": "The cost is $50 per person.",
-            "difficulty": "B1",
-            "category": [
-                "General"
-            ]
-        },
-        {
-            "word": "via",
-            "pos": "prep",
-            "meaning": "ผ่านทาง",
-            "example": "Send it via email.",
-            "difficulty": "B1",
-            "category": [
-                "Technology"
             ]
         },
         {
@@ -461,33 +221,23 @@
             ]
         },
         {
-            "word": "in support of",
+            "word": "subsequent to",
             "pos": "prep",
-            "meaning": "เพื่อสนับสนุน",
-            "example": "They spoke in support of the policy.",
+            "meaning": "หลังจาก",
+            "example": "Subsequent to the call, we emailed.",
+            "difficulty": "B1",
+            "category": [
+                "Time"
+            ]
+        },
+        {
+            "word": "with respect to",
+            "pos": "prep",
+            "meaning": "เกี่ยวกับ",
+            "example": "With respect to your concern, we agree.",
             "difficulty": "B1",
             "category": [
                 "Work"
-            ]
-        },
-        {
-            "word": "in opposition to",
-            "pos": "prep",
-            "meaning": "ต่อต้าน",
-            "example": "He voted in opposition to the bill.",
-            "difficulty": "B1",
-            "category": [
-                "General"
-            ]
-        },
-        {
-            "word": "in pursuit of",
-            "pos": "prep",
-            "meaning": "เพื่อไล่ตาม / เพื่อให้ได้",
-            "example": "She moved abroad in pursuit of her dream.",
-            "difficulty": "B1",
-            "category": [
-                "General"
             ]
         },
         {

@@ -1,43 +1,123 @@
 {
     "words": [
         {
-            "word": "oh",
+            "word": "aha",
             "pos": "int",
-            "meaning": "โอ้",
-            "example": "Oh, I see.",
+            "meaning": "อ๋อ!",
+            "example": "Aha! I understand now.",
             "difficulty": "A1",
             "category": [
-                "Reaction"
+                "Realization"
             ]
         },
         {
-            "word": "wow",
+            "word": "alright",
             "pos": "int",
-            "meaning": "ว้าว",
-            "example": "Wow! That's amazing!",
+            "meaning": "โอเค / ได้เลย",
+            "example": "Alright, I understand.",
+            "difficulty": "A1",
+            "category": [
+                "Agreement"
+            ]
+        },
+        {
+            "word": "awesome",
+            "pos": "int",
+            "meaning": "สุดยอด",
+            "example": "Awesome! That's cool.",
+            "difficulty": "A1",
+            "category": [
+                "Positive"
+            ]
+        },
+        {
+            "word": "bravo",
+            "pos": "int",
+            "meaning": "เก่งมาก",
+            "example": "Bravo! Well done.",
+            "difficulty": "A1",
+            "category": [
+                "Praise"
+            ]
+        },
+        {
+            "word": "bye",
+            "pos": "int",
+            "meaning": "บ๊ายบาย",
+            "example": "Bye! See you tomorrow.",
+            "difficulty": "A1",
+            "category": [
+                "Farewell"
+            ]
+        },
+        {
+            "word": "cool",
+            "pos": "int",
+            "meaning": "เจ๋ง",
+            "example": "Cool! I like it.",
+            "difficulty": "A1",
+            "category": [
+                "Positive"
+            ]
+        },
+        {
+            "word": "excuse me",
+            "pos": "int",
+            "meaning": "ขอโทษนะ (ขอทาง)",
+            "example": "Excuse me, where is the station?",
+            "difficulty": "A1",
+            "category": [
+                "Politeness"
+            ]
+        },
+        {
+            "word": "fine",
+            "pos": "int",
+            "meaning": "ก็ได้ / โอเค",
+            "example": "Fine, I'll do it.",
+            "difficulty": "A1",
+            "category": [
+                "Agreement"
+            ]
+        },
+        {
+            "word": "gee",
+            "pos": "int",
+            "meaning": "โอ้โห (สุภาพ)",
+            "example": "Gee, that's interesting.",
             "difficulty": "A1",
             "category": [
                 "Surprise"
             ]
         },
         {
-            "word": "oops",
+            "word": "goodbye",
             "pos": "int",
-            "meaning": "อุ๊ปส์ (ทำผิดพลาด)",
-            "example": "Oops, I made a mistake.",
+            "meaning": "ลาก่อน",
+            "example": "Goodbye! Take care.",
             "difficulty": "A1",
             "category": [
-                "Mistake"
+                "Farewell"
             ]
         },
         {
-            "word": "ouch",
+            "word": "great",
             "pos": "int",
-            "meaning": "โอ๊ย (เจ็บ)",
-            "example": "Ouch! That hurts.",
+            "meaning": "เยี่ยม",
+            "example": "Great! Let's start.",
             "difficulty": "A1",
             "category": [
-                "Pain"
+                "Positive"
+            ]
+        },
+        {
+            "word": "hello",
+            "pos": "int",
+            "meaning": "สวัสดี",
+            "example": "Hello, everyone.",
+            "difficulty": "A1",
+            "category": [
+                "Greeting"
             ]
         },
         {
@@ -61,236 +141,6 @@
             ]
         },
         {
-            "word": "hello",
-            "pos": "int",
-            "meaning": "สวัสดี",
-            "example": "Hello, everyone.",
-            "difficulty": "A1",
-            "category": [
-                "Greeting"
-            ]
-        },
-        {
-            "word": "bye",
-            "pos": "int",
-            "meaning": "บ๊ายบาย",
-            "example": "Bye! See you tomorrow.",
-            "difficulty": "A1",
-            "category": [
-                "Farewell"
-            ]
-        },
-        {
-            "word": "goodbye",
-            "pos": "int",
-            "meaning": "ลาก่อน",
-            "example": "Goodbye! Take care.",
-            "difficulty": "A1",
-            "category": [
-                "Farewell"
-            ]
-        },
-        {
-            "word": "thanks",
-            "pos": "int",
-            "meaning": "ขอบคุณ",
-            "example": "Thanks for your help!",
-            "difficulty": "A1",
-            "category": [
-                "Politeness"
-            ]
-        },
-        {
-            "word": "thank you",
-            "pos": "int",
-            "meaning": "ขอบคุณ",
-            "example": "Thank you so much!",
-            "difficulty": "A1",
-            "category": [
-                "Politeness"
-            ]
-        },
-        {
-            "word": "sorry",
-            "pos": "int",
-            "meaning": "ขอโทษ",
-            "example": "Sorry, I'm late.",
-            "difficulty": "A1",
-            "category": [
-                "Politeness"
-            ]
-        },
-        {
-            "word": "please",
-            "pos": "int",
-            "meaning": "กรุณา / โปรด",
-            "example": "Please sit down.",
-            "difficulty": "A1",
-            "category": [
-                "Politeness"
-            ]
-        },
-        {
-            "word": "excuse me",
-            "pos": "int",
-            "meaning": "ขอโทษนะ (ขอทาง)",
-            "example": "Excuse me, where is the station?",
-            "difficulty": "A1",
-            "category": [
-                "Politeness"
-            ]
-        },
-        {
-            "word": "yes",
-            "pos": "int",
-            "meaning": "ใช่",
-            "example": "Yes, I agree.",
-            "difficulty": "A1",
-            "category": [
-                "Answer"
-            ]
-        },
-        {
-            "word": "no",
-            "pos": "int",
-            "meaning": "ไม่",
-            "example": "No, I don't think so.",
-            "difficulty": "A1",
-            "category": [
-                "Answer"
-            ]
-        },
-        {
-            "word": "yeah",
-            "pos": "int",
-            "meaning": "ใช่ (ไม่เป็นทางการ)",
-            "example": "Yeah, that's right.",
-            "difficulty": "A1",
-            "category": [
-                "Answer"
-            ]
-        },
-        {
-            "word": "nope",
-            "pos": "int",
-            "meaning": "ไม่ (ไม่เป็นทางการ)",
-            "example": "Nope, not today.",
-            "difficulty": "A1",
-            "category": [
-                "Answer"
-            ]
-        },
-        {
-            "word": "okay",
-            "pos": "int",
-            "meaning": "โอเค",
-            "example": "Okay, let's go.",
-            "difficulty": "A1",
-            "category": [
-                "Agreement"
-            ]
-        },
-        {
-            "word": "ok",
-            "pos": "int",
-            "meaning": "โอเค",
-            "example": "Ok, see you later.",
-            "difficulty": "A1",
-            "category": [
-                "Agreement"
-            ]
-        },
-        {
-            "word": "alright",
-            "pos": "int",
-            "meaning": "โอเค / ได้เลย",
-            "example": "Alright, I understand.",
-            "difficulty": "A1",
-            "category": [
-                "Agreement"
-            ]
-        },
-        {
-            "word": "fine",
-            "pos": "int",
-            "meaning": "ก็ได้ / โอเค",
-            "example": "Fine, I'll do it.",
-            "difficulty": "A1",
-            "category": [
-                "Agreement"
-            ]
-        },
-        {
-            "word": "great",
-            "pos": "int",
-            "meaning": "เยี่ยม",
-            "example": "Great! Let's start.",
-            "difficulty": "A1",
-            "category": [
-                "Positive"
-            ]
-        },
-        {
-            "word": "awesome",
-            "pos": "int",
-            "meaning": "สุดยอด",
-            "example": "Awesome! That's cool.",
-            "difficulty": "A1",
-            "category": [
-                "Positive"
-            ]
-        },
-        {
-            "word": "nice",
-            "pos": "int",
-            "meaning": "ดีเลย",
-            "example": "Nice! Good job.",
-            "difficulty": "A1",
-            "category": [
-                "Positive"
-            ]
-        },
-        {
-            "word": "cool",
-            "pos": "int",
-            "meaning": "เจ๋ง",
-            "example": "Cool! I like it.",
-            "difficulty": "A1",
-            "category": [
-                "Positive"
-            ]
-        },
-        {
-            "word": "oh no",
-            "pos": "int",
-            "meaning": "โอ้ไม่",
-            "example": "Oh no! I forgot my keys.",
-            "difficulty": "A1",
-            "category": [
-                "Negative"
-            ]
-        },
-        {
-            "word": "uh-oh",
-            "pos": "int",
-            "meaning": "แย่แล้ว",
-            "example": "Uh-oh, that's not good.",
-            "difficulty": "A1",
-            "category": [
-                "Negative"
-            ]
-        },
-        {
-            "word": "yikes",
-            "pos": "int",
-            "meaning": "โอ้โห (ตกใจ/แย่)",
-            "example": "Yikes! That's scary.",
-            "difficulty": "A1",
-            "category": [
-                "Surprise"
-            ]
-        },
-        {
             "word": "hmm",
             "pos": "int",
             "meaning": "อืม (กำลังคิด)",
@@ -298,66 +148,6 @@
             "difficulty": "A1",
             "category": [
                 "Thinking"
-            ]
-        },
-        {
-            "word": "uh",
-            "pos": "int",
-            "meaning": "เอ่อ",
-            "example": "Uh, I'm not sure.",
-            "difficulty": "A1",
-            "category": [
-                "Thinking"
-            ]
-        },
-        {
-            "word": "um",
-            "pos": "int",
-            "meaning": "อืม",
-            "example": "Um, maybe later.",
-            "difficulty": "A1",
-            "category": [
-                "Thinking"
-            ]
-        },
-        {
-            "word": "aha",
-            "pos": "int",
-            "meaning": "อ๋อ!",
-            "example": "Aha! I understand now.",
-            "difficulty": "A1",
-            "category": [
-                "Realization"
-            ]
-        },
-        {
-            "word": "yay",
-            "pos": "int",
-            "meaning": "เย้",
-            "example": "Yay! We won!",
-            "difficulty": "A1",
-            "category": [
-                "Joy"
-            ]
-        },
-        {
-            "word": "phew",
-            "pos": "int",
-            "meaning": "เฮ้อ (โล่งอก)",
-            "example": "Phew! That was close.",
-            "difficulty": "A1",
-            "category": [
-                "Relief"
-            ]
-        },
-        {
-            "word": "oh wow",
-            "pos": "int",
-            "meaning": "โอ้ว้าว",
-            "example": "Oh wow, that's beautiful.",
-            "difficulty": "A1",
-            "category": [
-                "Surprise"
             ]
         },
         {
@@ -381,13 +171,186 @@
             ]
         },
         {
-            "word": "bravo",
+            "word": "nah",
             "pos": "int",
-            "meaning": "เก่งมาก",
-            "example": "Bravo! Well done.",
+            "meaning": "ไม่ล่ะ",
+            "example": "Nah, I'm fine.",
             "difficulty": "A1",
             "category": [
-                "Praise"
+                "Answer"
+            ]
+        },
+        {
+            "word": "nice",
+            "pos": "int",
+            "meaning": "ดีเลย",
+            "example": "Nice! Good job.",
+            "difficulty": "A1",
+            "category": [
+                "Positive"
+            ]
+        },
+        {
+            "word": "no",
+            "pos": "int",
+            "meaning": "ไม่",
+            "example": "No, I don't think so.",
+            "difficulty": "A1",
+            "category": [
+                "Answer"
+            ]
+        },
+        {
+            "word": "nope",
+            "pos": "int",
+            "meaning": "ไม่ (ไม่เป็นทางการ)",
+            "example": "Nope, not today.",
+            "difficulty": "A1",
+            "category": [
+                "Answer"
+            ]
+        },
+        {
+            "word": "oh",
+            "pos": "int",
+            "meaning": "โอ้ / โอ้ (คำอุทาน)",
+            "example": "Oh, I forgot my bag!",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life",
+                "Reaction"
+            ]
+        },
+        {
+            "word": "oh no",
+            "pos": "int",
+            "meaning": "โอ้ไม่",
+            "example": "Oh no! I forgot my keys.",
+            "difficulty": "A1",
+            "category": [
+                "Negative"
+            ]
+        },
+        {
+            "word": "oh wow",
+            "pos": "int",
+            "meaning": "โอ้ว้าว",
+            "example": "Oh wow, that's beautiful.",
+            "difficulty": "A1",
+            "category": [
+                "Surprise"
+            ]
+        },
+        {
+            "word": "ok",
+            "pos": "int",
+            "meaning": "โอเค",
+            "example": "Ok, see you later.",
+            "difficulty": "A1",
+            "category": [
+                "Agreement"
+            ]
+        },
+        {
+            "word": "okay",
+            "pos": "int",
+            "meaning": "โอเค",
+            "example": "Okay, let's go.",
+            "difficulty": "A1",
+            "category": [
+                "Agreement"
+            ]
+        },
+        {
+            "word": "oops",
+            "pos": "int",
+            "meaning": "อุ๊ปส์ (ทำผิดพลาด)",
+            "example": "Oops, I made a mistake.",
+            "difficulty": "A1",
+            "category": [
+                "Mistake"
+            ]
+        },
+        {
+            "word": "ouch",
+            "pos": "int",
+            "meaning": "โอ๊ย (เจ็บ)",
+            "example": "Ouch! That hurts.",
+            "difficulty": "A1",
+            "category": [
+                "Pain"
+            ]
+        },
+        {
+            "word": "phew",
+            "pos": "int",
+            "meaning": "เฮ้อ (โล่งอก)",
+            "example": "Phew! That was close.",
+            "difficulty": "A1",
+            "category": [
+                "Relief"
+            ]
+        },
+        {
+            "word": "please",
+            "pos": "int",
+            "meaning": "กรุณา / โปรด",
+            "example": "Please sit down.",
+            "difficulty": "A1",
+            "category": [
+                "Politeness"
+            ]
+        },
+        {
+            "word": "right",
+            "pos": "int",
+            "meaning": "โอเค / ถูกต้อง",
+            "example": "Right, let's move on.",
+            "difficulty": "A1",
+            "category": [
+                "Agreement"
+            ]
+        },
+        {
+            "word": "sorry",
+            "pos": "int",
+            "meaning": "ขอโทษ",
+            "example": "I am sorry for being late.",
+            "difficulty": "A1",
+            "category": [
+                "Personal",
+                "Politeness"
+            ]
+        },
+        {
+            "word": "thank you",
+            "pos": "int",
+            "meaning": "ขอบคุณ",
+            "example": "Thank you so much!",
+            "difficulty": "A1",
+            "category": [
+                "Politeness"
+            ]
+        },
+        {
+            "word": "thanks",
+            "pos": "int",
+            "meaning": "ขอบคุณ / ขอบใจ",
+            "example": "Thanks for your help!",
+            "difficulty": "A1",
+            "category": [
+                "Daily Life",
+                "Politeness"
+            ]
+        },
+        {
+            "word": "uh",
+            "pos": "int",
+            "meaning": "เอ่อ",
+            "example": "Uh, I'm not sure.",
+            "difficulty": "A1",
+            "category": [
+                "Thinking"
             ]
         },
         {
@@ -401,33 +364,33 @@
             ]
         },
         {
-            "word": "nah",
+            "word": "uh-oh",
             "pos": "int",
-            "meaning": "ไม่ล่ะ",
-            "example": "Nah, I'm fine.",
+            "meaning": "แย่แล้ว",
+            "example": "Uh-oh, that's not good.",
             "difficulty": "A1",
             "category": [
-                "Answer"
+                "Negative"
             ]
         },
         {
-            "word": "whoa",
+            "word": "um",
             "pos": "int",
-            "meaning": "โอ้โห!",
-            "example": "Whoa! That's fast.",
+            "meaning": "อืม",
+            "example": "Um, maybe later.",
             "difficulty": "A1",
             "category": [
-                "Surprise"
+                "Thinking"
             ]
         },
         {
-            "word": "gee",
+            "word": "welcome",
             "pos": "int",
-            "meaning": "โอ้โห (สุภาพ)",
-            "example": "Gee, that's interesting.",
+            "meaning": "ยินดีต้อนรับ",
+            "example": "Welcome to our school.",
             "difficulty": "A1",
             "category": [
-                "Surprise"
+                "Daily Life"
             ]
         },
         {
@@ -441,13 +404,63 @@
             ]
         },
         {
-            "word": "right",
+            "word": "whoa",
             "pos": "int",
-            "meaning": "โอเค / ถูกต้อง",
-            "example": "Right, let's move on.",
+            "meaning": "โอ้โห!",
+            "example": "Whoa! That's fast.",
             "difficulty": "A1",
             "category": [
-                "Agreement"
+                "Surprise"
+            ]
+        },
+        {
+            "word": "wow",
+            "pos": "int",
+            "meaning": "ว้าว",
+            "example": "Wow! That's amazing!",
+            "difficulty": "A1",
+            "category": [
+                "Surprise"
+            ]
+        },
+        {
+            "word": "yay",
+            "pos": "int",
+            "meaning": "เย้",
+            "example": "Yay! We won!",
+            "difficulty": "A1",
+            "category": [
+                "Joy"
+            ]
+        },
+        {
+            "word": "yeah",
+            "pos": "int",
+            "meaning": "ใช่ (ไม่เป็นทางการ)",
+            "example": "Yeah, that's right.",
+            "difficulty": "A1",
+            "category": [
+                "Answer"
+            ]
+        },
+        {
+            "word": "yes",
+            "pos": "int",
+            "meaning": "ใช่",
+            "example": "Yes, I agree.",
+            "difficulty": "A1",
+            "category": [
+                "Answer"
+            ]
+        },
+        {
+            "word": "yikes",
+            "pos": "int",
+            "meaning": "โอ้โห (ตกใจ / แย่)",
+            "example": "Yikes! That's scary.",
+            "difficulty": "A1",
+            "category": [
+                "Surprise"
             ]
         }
     ]
