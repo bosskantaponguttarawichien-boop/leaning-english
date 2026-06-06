@@ -1037,39 +1037,39 @@ export default function WordPracticePage() {
                         </div>
 
                         {difficultyMode === 'typing' ? (
-                            <>
-                                {/* Hidden native input for keyboard capturing */}
+                            /* typing canvas stream with overlay input */
+                            <div
+                                onClick={forceFocus}
+                                className={`relative p-10 rounded-[2.5rem] bg-white dark:bg-zinc-800 border border-zinc-100 dark:border-zinc-700 shadow-xl cursor-text transition-all duration-300 min-h-[160px] ${!isFocused ? "blur-[2px] opacity-50 scale-[0.99]" : ""}`}
+                            >
+                                {/* Hidden native input overlay for easy mobile focus and view centering */}
                                 <input
                                     ref={inputRef}
                                     type="text"
                                     value={typedCurrentWord}
                                     onChange={handleTypingModeChange}
                                     onKeyDown={handleKeyDown}
-                                    className="absolute -top-[9999px] -left-[9999px] opacity-0 pointer-events-none"
+                                    onFocus={() => setIsFocused(true)}
+                                    onBlur={() => setIsFocused(false)}
+                                    className="absolute inset-0 w-full h-full opacity-0 cursor-default select-none z-0"
                                     autoComplete="off"
                                     autoCapitalize="off"
                                     autoCorrect="off"
                                     spellCheck={false}
                                 />
 
-                                {/* typing canvas stream */}
-                                <div
-                                    onClick={forceFocus}
-                                    className={`relative p-10 rounded-[2.5rem] bg-white dark:bg-zinc-800 border border-zinc-100 dark:border-zinc-700 shadow-xl cursor-text transition-all duration-300 min-h-[160px] ${!isFocused ? "blur-[2px] opacity-50 scale-[0.99]" : ""}`}
-                                >
-                                    <div className="flex flex-wrap leading-relaxed text-xl font-sans text-justify gap-y-2 select-none">
-                                        {renderWordsStream}
-                                    </div>
-
-                                    {!isFocused && (
-                                        <div className="absolute inset-0 flex items-center justify-center bg-white/60 dark:bg-zinc-800/60 backdrop-blur-xs rounded-[2.5rem]">
-                                            <span className="px-6 py-3 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 text-xs font-black uppercase tracking-widest rounded-2xl shadow-lg animate-pulse">
-                                                Click to Focus and Type
-                                            </span>
-                                        </div>
-                                    )}
+                                <div className="relative flex flex-wrap leading-relaxed text-xl font-sans text-justify gap-y-2 select-none z-10 pointer-events-none">
+                                    {renderWordsStream}
                                 </div>
-                            </>
+
+                                {!isFocused && (
+                                    <div className="absolute inset-0 flex items-center justify-center bg-white/60 dark:bg-zinc-800/60 backdrop-blur-xs rounded-[2.5rem] z-20">
+                                        <span className="px-6 py-3 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 text-xs font-black uppercase tracking-widest rounded-2xl shadow-lg animate-pulse">
+                                            Click to Focus and Type
+                                        </span>
+                                    </div>
+                                )}
+                            </div>
                         ) : (
                             <>
                                 {/* Word Card */}
