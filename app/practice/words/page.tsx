@@ -284,6 +284,10 @@ export default function WordPracticePage() {
         const container = containerRef.current;
         const activeWord = activeWordRef.current;
         if (container && activeWord && difficultyMode === 'typing') {
+            // Only scroll if container is actually overflow-hidden (meaning we are on mobile viewport)
+            const isScrollable = container.scrollHeight > container.clientHeight;
+            if (!isScrollable) return;
+
             const containerRect = container.getBoundingClientRect();
             const wordRect = activeWord.getBoundingClientRect();
 
@@ -303,10 +307,12 @@ export default function WordPracticePage() {
     // Scroll webpage to top when typing starts to keep UI clean and visible on mobile screens
     useEffect(() => {
         if (difficultyMode === 'typing' && isStarted && !isFinished) {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
+            if (window.innerWidth < 640) {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }
         }
     }, [isStarted, difficultyMode, isFinished]);
 
@@ -937,99 +943,97 @@ export default function WordPracticePage() {
                         </div>
                     </div>
 
-                    {!(isStarted && difficultyMode === 'typing') && (
-                        <div className="flex flex-col md:flex-row gap-6">
-                            <div className="flex flex-col gap-2 flex-1">
-                                <label className="text-[10px] font-black uppercase text-zinc-400 tracking-widest pl-1">Configuration</label>
-                                <div className="grid grid-cols-2 gap-2">
-                                    <select
-                                        value={difficulty}
-                                        onChange={(e) => {
-                                            const val = e.target.value;
-                                            setDifficulty(val);
-                                            if (val === "difficult") {
-                                                setDifficultyMode("hard");
-                                            }
-                                        }}
-                                        className="w-full bg-zinc-50/50 dark:bg-zinc-800/80 border border-zinc-100/50 dark:border-zinc-700/50 text-zinc-600 dark:text-zinc-300 text-xs font-bold rounded-2xl px-4 py-3 outline-none focus:ring-4 focus:ring-blue-100 dark:focus:ring-blue-900 focus:bg-white dark:focus:bg-zinc-900 transition-all appearance-none cursor-pointer"
-                                    >
-                                        <option value="all">Any Level</option>
-                                        <option value="marked">Marked Words</option>
-                                        <option value="difficult">Difficult Words (Needs Review)</option>
-                                        <option value="A1">A1 (Beginner)</option>
-                                        <option value="A2">A2 (Elementary)</option>
-                                        <option value="B1">B1 (Intermediate)</option>
-                                    </select>
-                                    <select
-                                        value={selectedPOS}
-                                        onChange={(e) => setSelectedPOS(e.target.value)}
-                                        className="w-full bg-zinc-50/50 dark:bg-zinc-800/80 border border-zinc-100/50 dark:border-zinc-700/50 text-zinc-600 dark:text-zinc-300 text-xs font-bold rounded-2xl px-4 py-3 outline-none focus:ring-4 focus:ring-blue-100 dark:focus:ring-blue-900 focus:bg-white dark:focus:bg-zinc-900 transition-all appearance-none cursor-pointer"
-                                    >
-                                        <option value="all">Any Type</option>
-                                        <option value="n">Noun</option>
-                                        <option value="v">Verb</option>
-                                        <option value="adj">Adjective</option>
-                                        <option value="adv">Adverb</option>
-                                        <option value="pron">Pronoun</option>
-                                        <option value="prep">Preposition</option>
-                                        <option value="conj">Conjunction</option>
-                                        <option value="int">Interjection</option>
-                                    </select>
-                                </div>
+                    <div className={`flex flex-col md:flex-row gap-6 transition-all duration-300 ${isStarted && difficultyMode === 'typing' ? 'hidden sm:flex' : ''}`}>
+                        <div className="flex flex-col gap-2 flex-1">
+                            <label className="text-[10px] font-black uppercase text-zinc-400 tracking-widest pl-1">Configuration</label>
+                            <div className="grid grid-cols-2 gap-2">
+                                <select
+                                    value={difficulty}
+                                    onChange={(e) => {
+                                        const val = e.target.value;
+                                        setDifficulty(val);
+                                        if (val === "difficult") {
+                                            setDifficultyMode("hard");
+                                        }
+                                    }}
+                                    className="w-full bg-zinc-50/50 dark:bg-zinc-800/80 border border-zinc-100/50 dark:border-zinc-700/50 text-zinc-600 dark:text-zinc-300 text-xs font-bold rounded-2xl px-4 py-3 outline-none focus:ring-4 focus:ring-blue-100 dark:focus:ring-blue-900 focus:bg-white dark:focus:bg-zinc-900 transition-all appearance-none cursor-pointer"
+                                >
+                                    <option value="all">Any Level</option>
+                                    <option value="marked">Marked Words</option>
+                                    <option value="difficult">Difficult Words (Needs Review)</option>
+                                    <option value="A1">A1 (Beginner)</option>
+                                    <option value="A2">A2 (Elementary)</option>
+                                    <option value="B1">B1 (Intermediate)</option>
+                                </select>
+                                <select
+                                    value={selectedPOS}
+                                    onChange={(e) => setSelectedPOS(e.target.value)}
+                                    className="w-full bg-zinc-50/50 dark:bg-zinc-800/80 border border-zinc-100/50 dark:border-zinc-700/50 text-zinc-600 dark:text-zinc-300 text-xs font-bold rounded-2xl px-4 py-3 outline-none focus:ring-4 focus:ring-blue-100 dark:focus:ring-blue-900 focus:bg-white dark:focus:bg-zinc-900 transition-all appearance-none cursor-pointer"
+                                >
+                                    <option value="all">Any Type</option>
+                                    <option value="n">Noun</option>
+                                    <option value="v">Verb</option>
+                                    <option value="adj">Adjective</option>
+                                    <option value="adv">Adverb</option>
+                                    <option value="pron">Pronoun</option>
+                                    <option value="prep">Preposition</option>
+                                    <option value="conj">Conjunction</option>
+                                    <option value="int">Interjection</option>
+                                </select>
                             </div>
+                        </div>
 
-                            <div className="flex flex-col gap-2 md:w-fit">
-                                <label className="text-[10px] font-black uppercase text-zinc-400 tracking-widest pl-1">Modes</label>
-                                <div className="flex flex-col gap-2">
-                                    {/* Difficulty Mode Segment Control */}
-                                    <div className="flex bg-zinc-50/50 dark:bg-zinc-800/80 p-1 rounded-2xl border border-zinc-100/50 dark:border-zinc-700/50 gap-1">
-                                        {(['normal', 'test', 'hard', 'typing'] as DifficultyMode[]).map((mode) => (
-                                            <button
-                                                key={mode}
-                                                onClick={() => setDifficultyMode(mode)}
-                                                className={`flex-1 text-[11px] font-bold px-3 py-2 rounded-xl capitalize transition-all ${difficultyMode === mode
-                                                    ? 'bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 shadow-sm'
-                                                    : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'
-                                                    }`}
-                                            >
-                                                {mode}
-                                            </button>
-                                        ))}
-                                    </div>
-                                    {/* Timer and Voice */}
-                                    <div className="flex flex-row items-center gap-4 bg-zinc-50/50 dark:bg-zinc-800/80 px-4 py-1 rounded-2xl border border-zinc-100/50 dark:border-zinc-700/50">
-                                        <label className="flex items-center gap-2 cursor-pointer group py-1">
-                                            <input
-                                                type="checkbox"
-                                                checked={timerEnabled}
-                                                onChange={(e) => setTimerEnabled(e.target.checked)}
-                                                className="w-4 h-4 rounded-lg border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-900 text-blue-600 focus:ring-blue-500 dark:focus:ring-blue-500/50 transition-all cursor-pointer"
-                                            />
-                                            <span className="text-[11px] font-bold text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors">Timer</span>
-                                        </label>
-                                        <label className="flex items-center gap-2 cursor-pointer group py-1">
-                                            <input
-                                                type="checkbox"
-                                                checked={isSpeechEnabled}
-                                                onChange={(e) => setIsSpeechEnabled(e.target.checked)}
-                                                className="w-4 h-4 rounded-lg border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-900 text-blue-600 focus:ring-blue-500 dark:focus:ring-blue-500/50 transition-all cursor-pointer"
-                                            />
-                                            <span className="text-[11px] font-bold text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors">Voice</span>
-                                        </label>
-                                        <label className="flex items-center gap-2 cursor-pointer group py-1">
-                                            <input
-                                                type="checkbox"
-                                                checked={isSoundEnabled}
-                                                onChange={(e) => setIsSoundEnabled(e.target.checked)}
-                                                className="w-4 h-4 rounded-lg border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-900 text-blue-600 focus:ring-blue-500 dark:focus:ring-blue-500/50 transition-all cursor-pointer"
-                                            />
-                                            <span className="text-[11px] font-bold text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors">Beep</span>
-                                        </label>
-                                    </div>
+                        <div className="flex flex-col gap-2 md:w-fit">
+                            <label className="text-[10px] font-black uppercase text-zinc-400 tracking-widest pl-1">Modes</label>
+                            <div className="flex flex-col gap-2">
+                                {/* Difficulty Mode Segment Control */}
+                                <div className="flex bg-zinc-50/50 dark:bg-zinc-800/80 p-1 rounded-2xl border border-zinc-100/50 dark:border-zinc-700/50 gap-1">
+                                    {(['normal', 'test', 'hard', 'typing'] as DifficultyMode[]).map((mode) => (
+                                        <button
+                                            key={mode}
+                                            onClick={() => setDifficultyMode(mode)}
+                                            className={`flex-1 text-[11px] font-bold px-3 py-2 rounded-xl capitalize transition-all ${difficultyMode === mode
+                                                ? 'bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 shadow-sm'
+                                                : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'
+                                                }`}
+                                        >
+                                            {mode}
+                                        </button>
+                                    ))}
+                                </div>
+                                {/* Timer and Voice */}
+                                <div className="flex flex-row items-center gap-4 bg-zinc-50/50 dark:bg-zinc-800/80 px-4 py-1 rounded-2xl border border-zinc-100/50 dark:border-zinc-700/50">
+                                    <label className="flex items-center gap-2 cursor-pointer group py-1">
+                                        <input
+                                            type="checkbox"
+                                            checked={timerEnabled}
+                                            onChange={(e) => setTimerEnabled(e.target.checked)}
+                                            className="w-4 h-4 rounded-lg border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-900 text-blue-600 focus:ring-blue-500 dark:focus:ring-blue-500/50 transition-all cursor-pointer"
+                                        />
+                                        <span className="text-[11px] font-bold text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors">Timer</span>
+                                    </label>
+                                    <label className="flex items-center gap-2 cursor-pointer group py-1">
+                                        <input
+                                            type="checkbox"
+                                            checked={isSpeechEnabled}
+                                            onChange={(e) => setIsSpeechEnabled(e.target.checked)}
+                                            className="w-4 h-4 rounded-lg border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-900 text-blue-600 focus:ring-blue-500 dark:focus:ring-blue-500/50 transition-all cursor-pointer"
+                                        />
+                                        <span className="text-[11px] font-bold text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors">Voice</span>
+                                    </label>
+                                    <label className="flex items-center gap-2 cursor-pointer group py-1">
+                                        <input
+                                            type="checkbox"
+                                            checked={isSoundEnabled}
+                                            onChange={(e) => setIsSoundEnabled(e.target.checked)}
+                                            className="w-4 h-4 rounded-lg border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-900 text-blue-600 focus:ring-blue-500 dark:focus:ring-blue-500/50 transition-all cursor-pointer"
+                                        />
+                                        <span className="text-[11px] font-bold text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors">Beep</span>
+                                    </label>
                                 </div>
                             </div>
                         </div>
-                    )}
+                    </div>
                 </div>
 
                 {words.length === 0 ? (
@@ -1095,7 +1099,7 @@ export default function WordPracticePage() {
                                 {/* typing canvas stream container with scroll hide */}
                                 <div
                                     ref={containerRef}
-                                    className={`relative p-8 rounded-[2.5rem] bg-white dark:bg-zinc-800 border border-zinc-100 dark:border-zinc-700 shadow-xl cursor-text transition-all duration-300 h-[150px] overflow-hidden ${!isFocused ? "blur-[2px] opacity-50 scale-[0.99]" : ""}`}
+                                    className={`relative p-8 rounded-[2.5rem] bg-white dark:bg-zinc-800 border border-zinc-100 dark:border-zinc-700 shadow-xl cursor-text transition-all duration-300 h-[150px] overflow-hidden sm:h-auto sm:min-h-[160px] sm:overflow-visible ${!isFocused ? "blur-[2px] opacity-50 scale-[0.99]" : ""}`}
                                 >
                                     <div className="relative flex flex-wrap leading-relaxed text-xl font-sans text-justify gap-y-2 select-none z-10 pointer-events-none">
                                         {/* Hidden native input overlay covering the active word */}
