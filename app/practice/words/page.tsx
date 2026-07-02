@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useCallback } from "react";
+import { useEffect, useCallback, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import WordCard, { DifficultyMode } from "@/components/WordCard";
 import TypingInput from "@/components/TypingInput";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -15,39 +16,45 @@ import PracticeHeader from "./components/PracticeHeader";
 import SessionStatsBar from "./components/SessionStatsBar";
 import TypingView from "./components/TypingView";
 
-export default function WordPracticePage() {
+function WordPracticeContent() {
+    const searchParams = useSearchParams();
+    const limitParam = searchParams.get("limit");
+    const limit = limitParam ? parseInt(limitParam, 10) : undefined;
+
     const { settings, update, isDataLoaded } = useSettings();
     const { isSpeechEnabled, isSoundEnabled, timerEnabled, difficultyMode, difficulty, selectedPOS } = settings;
 
+    const effectiveDifficultyMode = limit ? "typing" : difficultyMode;
+
     const { words, allProgress, markedWords, setMarkedWords, stats } = useWordFilter({
-        difficulty, selectedPOS, difficultyMode, timerEnabled, isDataLoaded,
+        difficulty, selectedPOS, difficultyMode: effectiveDifficultyMode, timerEnabled, isDataLoaded, limit,
     });
 
     const card = useCardSession({
-        words, difficultyMode, timerEnabled, isSpeechEnabled, difficulty,
+        words, difficultyMode: effectiveDifficultyMode, timerEnabled, isSpeechEnabled,
     });
 
     const typing = useTypingSession({
-        words, isSpeechEnabled, isSoundEnabled, timerEnabled, difficulty, selectedPOS,
+        words, isSpeechEnabled, isSoundEnabled, difficulty, selectedPOS,
     });
 
-    const isTypingMode = difficultyMode === "typing";
+    const isTypingMode = effectiveDifficultyMode === "typing";
     const isFinished = isTypingMode ? typing.isFinished : card.isFinished;
     const currentWord = words[card.currentIndex];
 
-    // Reset both sessions whenever difficultyMode or words change
+    // Reset both sessions whenever effectiveDifficultyMode or words change
     useEffect(() => {
         card.resetSession();
         typing.resetSession();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [difficultyMode, words]);
+    }, [effectiveDifficultyMode, words]);
 
     // Track word start time for card session
     useEffect(() => {
         if (!isTypingMode && card.isStarted && !card.isFinished) {
             card.wordStartTimeRef.current = Date.now();
         }
-    }, [card.currentIndex, card.isStarted, card.isFinished, isTypingMode]);
+    }, [card.currentIndex, card.isStarted, card.isFinished, isTypingMode, card.wordStartTimeRef]);
 
     const handleDifficultyChange = (val: string) => {
         update("difficulty", val);
@@ -145,8 +152,9 @@ export default function WordPracticePage() {
 
             <div className={`w-full max-w-4xl flex flex-col gap-8 flex-1 px-4 sm:px-12 ${isFinished ? "pointer-events-none opacity-50 blur-sm transition-all duration-300" : ""}`}>
                 <PracticeHeader
-                    difficultyMode={difficultyMode}
+                    difficultyMode={effectiveDifficultyMode}
                     difficulty={difficulty}
+                    isReviewMode={!!limit}
                     selectedPOS={selectedPOS}
                     timerEnabled={timerEnabled}
                     isSpeechEnabled={isSpeechEnabled}
@@ -176,7 +184,7 @@ export default function WordPracticePage() {
                     <div className="flex flex-col gap-4">
                         <div className="flex items-center px-2 mb-2">
                             <SessionStatsBar
-                                difficultyMode={difficultyMode}
+                                difficultyMode={effectiveDifficultyMode}
                                 currentIndex={isTypingMode ? typing.currentIndex : card.currentIndex}
                                 wordCount={words.length}
                                 realtimeWpm={typing.realtimeWpm}
@@ -203,7 +211,6 @@ export default function WordPracticePage() {
                                 activeWordRef={typing.activeWordRef}
                                 inputRef={typing.inputRef}
                                 containerRef={typing.containerRef}
-                                isFinished={typing.isFinished}
                                 onFocus={() => typing.setIsFocused(true)}
                                 onBlur={() => typing.setIsFocused(false)}
                                 onChange={typing.handleTypingInput}
@@ -219,7 +226,7 @@ export default function WordPracticePage() {
                                         typingValue={card.typingValue}
                                         isCorrect={card.isCorrect}
                                         isWrong={card.isWrong}
-                                        difficultyMode={difficultyMode}
+                                        difficultyMode={effectiveDifficultyMode}
                                         progress={allProgress[currentWord?.word]}
                                         onToggleHint={() => card.setIsRevealed(!card.isRevealed)}
                                         isMarked={markedWords.has(currentWord?.word)}
@@ -255,7 +262,7 @@ export default function WordPracticePage() {
                                         }
                                     }}
                                     disabled={card.isFinished}
-                                    isBlind={difficultyMode === "hard"}
+                                    isBlind={effectiveDifficultyMode === "hard"}
                                 />
                             </>
                         )}
@@ -263,5 +270,17 @@ export default function WordPracticePage() {
                 )}
             </div>
         </main>
+    );
+}
+
+export default function WordPracticePage() {
+    return (
+        <Suspense fallback={
+            <main className="flex min-h-screen flex-col items-center justify-center p-12">
+                <div className="text-zinc-500 font-bold">Loading review session...</div>
+            </main>
+        }>
+            <WordPracticeContent />
+        </Suspense>
     );
 }

@@ -1,0 +1,236 @@
+{
+  "project": "English Vocab Typing Web",
+  "version": "1.0.0",
+  "features": [
+    {
+      "id": "project-setup",
+      "name": "Project Setup & Infrastructure",
+      "description": "Next.js 16 bootstrap, Tailwind CSS integration, fonts, and linting rules.",
+      "status": "done",
+      "phase": 1,
+      "files": [
+        "package.json",
+        "tsconfig.json",
+        "eslint.config.mjs",
+        "app/layout.tsx",
+        "app/globals.css",
+        "app/page.tsx",
+        "app/practice/page.tsx",
+        "components/Navbar.tsx",
+        "components/ui/skeleton.tsx"
+      ]
+    },
+    {
+      "id": "vocab-database-validation",
+      "name": "Vocab Database & Zod Validation",
+      "description": "Zod Schema validation for vocab JSON data database format.",
+      "status": "done",
+      "phase": 1,
+      "files": [
+        "schemas/vocab.schema.ts",
+        "data/vocab.json"
+      ]
+    },
+    {
+      "id": "word-typing-practice",
+      "name": "Word Typing Practice Mode",
+      "description": "Real-time checking typing input vs current word with stats (WPM, Accuracy, Errors).",
+      "status": "done",
+      "phase": 2,
+      "files": [
+        "app/practice/words/page.tsx",
+        "app/practice/words/components/PracticeHeader.tsx",
+        "app/practice/words/components/SessionStatsBar.tsx",
+        "app/practice/words/components/TypingView.tsx",
+        "app/practice/words/hooks/useCardSession.ts",
+        "app/practice/words/hooks/useTypingSession.ts",
+        "app/practice/words/hooks/useWordFilter.ts",
+        "components/TypingInput.tsx",
+        "components/WordCard.tsx",
+        "lib/audio.ts"
+      ]
+    },
+    {
+      "id": "timer-control",
+      "name": "Practice Timer & Settings",
+      "description": "Adjustable session timer with custom limit, start, and end triggers.",
+      "status": "done",
+      "phase": 2,
+      "files": [
+        "components/Timer.tsx",
+        "app/practice/words/hooks/useSettings.ts"
+      ]
+    },
+    {
+      "id": "result-summary",
+      "name": "Result Summary Modal",
+      "description": "Overlay dialog summarizing typing performance (WPM, Accuracy, error items) at session end.",
+      "status": "done",
+      "phase": 2,
+      "files": [
+        "components/SessionCompleteModal.tsx"
+      ]
+    },
+    {
+      "id": "spaced-repetition-system",
+      "name": "Smart Spaced Repetition (SRS)",
+      "description": "Track typing progress, mistake streaks, and weight words dynamically for learning.",
+      "status": "done",
+      "phase": 3,
+      "files": [
+        "lib/srs.ts",
+        "lib/storage.ts",
+        "lib/firebase.ts",
+        "lib/db.ts"
+      ]
+    },
+    {
+      "id": "sentence-typing-mode",
+      "name": "Sentence Typing Practice",
+      "description": "Practice typing full sentences based on vocabulary example usage.",
+      "status": "done",
+      "phase": 4,
+      "files": [
+        "app/practice/sentences/page.tsx"
+      ]
+    },
+    {
+      "id": "build-a-sentence-mode",
+      "name": "Interactive Build-a-Sentence",
+      "description": "Interactive drag-and-drop or token assembly practice mode for learning grammar patterns.",
+      "status": "done",
+      "phase": 4,
+      "files": [
+        "app/practice/build-sentence/page.tsx"
+      ]
+    },
+    {
+      "id": "progress-dashboard",
+      "name": "Stats & Progress Dashboard",
+      "description": "Dedicated analytics screen detailing master/learning stats, mistake history, and review curves.",
+      "status": "done",
+      "phase": 5,
+      "files": [
+        "app/dashboard/page.tsx"
+      ]
+    },
+    {
+      "id": "import-export-data",
+      "name": "JSON Import & Export Backup",
+      "description": "Save/restore localStorage learning progress, mistake history, and user settings to local backup files.",
+      "status": "done",
+      "phase": 5,
+      "files": [
+        "components/BackupManager.tsx"
+      ]
+    },
+    {
+      "id": "web-speech-pronunciation",
+      "name": "Speech Synthesis Pronunciation",
+      "description": "Click/auto audio speak capabilities using Web Speech API synthesis for active pronunciation training.",
+      "status": "done",
+      "phase": 6,
+      "files": [
+        "lib/speech.ts"
+      ]
+    },
+    {
+      "id": "curriculum-engine",
+      "name": "Curriculum Engine & Schema Reader",
+      "description": "Implement data models, Zod validation schema, and dynamic loader for lessons, chunks, activities, and targets.",
+      "status": "done",
+      "phase": 1,
+      "files": [
+        "schemas/curriculum.schema.ts",
+        "lib/curriculum.ts"
+      ]
+    },
+    {
+      "id": "curriculum-content-foundation",
+      "name": "Curriculum Content: Foundation (L01-L06)",
+      "description": "Load Phase 1 foundation lessons including 'Be or Do', subject pronouns, plurals, and basic question/negative patterns.",
+      "status": "done",
+      "phase": 1,
+      "files": [
+        "data/curriculum.json"
+      ]
+    },
+    {
+      "id": "curriculum-activities-basic",
+      "name": "Core Learning Activities (Concept, Classify, Fill-in-blank, Reorder)",
+      "description": "Develop UI components for basic activities: concept reading, category classification, gap-filling, and word reordering.",
+      "status": "done",
+      "phase": 2,
+      "files": [
+        "app/practice/lessons/page.tsx",
+        "app/practice/lessons/[id]/page.tsx",
+        "app/practice/lessons/[id]/components/ConceptActivity.tsx",
+        "app/practice/lessons/[id]/components/ClassifyActivity.tsx",
+        "app/practice/lessons/[id]/components/FillBlankActivity.tsx",
+        "app/practice/lessons/[id]/components/ReorderActivity.tsx",
+        "app/practice/lessons/[id]/components/GuidedOutputActivity.tsx"
+      ]
+    },
+    {
+      "id": "lesson-progress-tracking",
+      "name": "Lesson Progress & Error Analytics",
+      "description": "Track LessonProgress state (locked/learning/mastered) and record categorized error tags (missing_be, wrong_tense, spelling) to store in history.",
+      "status": "done",
+      "phase": 3,
+      "files": [
+        "lib/curriculum.ts"
+      ]
+    },
+    {
+      "id": "curriculum-content-intermediate",
+      "name": "Curriculum Content: Time & Communication (L07-L18)",
+      "description": "Load Phase 2 (Time, Continuous vs Simple, Past Simple, Future) and Phase 3 (Connectives, Adjectives/Adverbs, Polite requests, Small talk) lessons.",
+      "status": "done",
+      "phase": 3,
+      "files": [
+        "data/curriculum.json"
+      ]
+    },
+    {
+      "id": "curriculum-activities-advanced",
+      "name": "Advanced Activities (Transform, Dictation, Reading)",
+      "description": "Develop UI components for grammar transform practice, audio dictation typing, and technical reading comprehension analysis.",
+      "status": "done",
+      "phase": 4,
+      "files": [
+        "app/practice/lessons/[id]/components/DictationActivity.tsx",
+        "app/practice/lessons/[id]/components/ReadingActivity.tsx"
+      ]
+    },
+    {
+      "id": "curriculum-content-technical",
+      "name": "Curriculum Content: Coding & AI Stand-up (L19-L24)",
+      "description": "Load Phase 4 technical scenarios (explaining functions, instructions/READMEs, stand-up updates, explaining bugs, AI project presentation) lessons.",
+      "status": "done",
+      "phase": 5,
+      "files": [
+        "data/curriculum.json"
+      ]
+    },
+    {
+      "id": "monthly-assessment-system",
+      "name": "Monthly Assessment Dashboard & Metrics",
+      "description": "Design an assessment subsystem measuring comprehensibility, response latency, and grammatical precision across five core areas.",
+      "status": "done",
+      "phase": 5,
+      "files": [
+        "app/practice/assessment/page.tsx"
+      ]
+    },
+    {
+      "id": "ai-tutor-roleplay",
+      "name": "AI Tutor Integration & Conversational Feedback",
+      "description": "Integrate interactive AI Tutor supporting balanced/strict/gentle modes, roleplaying daily workflows, and providing structural corrections.",
+      "status": "done",
+      "phase": 6,
+      "files": [
+        "app/practice/ai-tutor/page.tsx"
+      ]
+    }
+  ]
+}

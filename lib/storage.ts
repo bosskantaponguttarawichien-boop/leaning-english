@@ -30,24 +30,62 @@ let localCache: Record<string, WordProgress> | null = null;
  */
 export async function syncProgressFromDB(): Promise<Record<string, WordProgress>> {
     const result = await readData(`users/${DEFAULT_USER_ID}/progress`);
-    if (result.success) {
-        // If data exists, use it. If null (meaning deleted in Firebase), use empty object
-        localCache = result.data || {};
+    
+    let localProg: Record<string, WordProgress> = {};
+    if (typeof window !== "undefined") {
+        const data = localStorage.getItem(STORAGE_KEY);
+        localProg = data ? JSON.parse(data) : {};
+    }
 
-        // Sync local storage to match Firebase state exactly
-        if (typeof window !== "undefined") {
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(localCache));
+    if (result.success) {
+        const remoteProg = (result.data || {}) as Record<string, WordProgress>;
+        const mergedProg = { ...localProg };
+        let hasNewLocalUpdates = false;
+        const updatesToFirebase: Record<string, WordProgress> = {};
+
+        const allKeys = new Set([...Object.keys(localProg), ...Object.keys(remoteProg)]);
+        for (const word of allKeys) {
+            const local = localProg[word];
+            const remote = remoteProg[word];
+
+            if (local && remote) {
+                const localTime = local.lastTested || 0;
+                const remoteTime = remote.lastTested || 0;
+
+                if (localTime >= remoteTime) {
+                    mergedProg[word] = local;
+                    if (localTime > remoteTime) {
+                        hasNewLocalUpdates = true;
+                        updatesToFirebase[word] = local;
+                    }
+                } else {
+                    mergedProg[word] = remote;
+                }
+            } else if (local) {
+                mergedProg[word] = local;
+                hasNewLocalUpdates = true;
+                updatesToFirebase[word] = local;
+            } else if (remote) {
+                mergedProg[word] = remote;
+            }
         }
-        return localCache as Record<string, WordProgress>;
+
+        localCache = mergedProg;
+        if (typeof window !== "undefined") {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(mergedProg));
+        }
+
+        if (hasNewLocalUpdates) {
+            Object.entries(updatesToFirebase).forEach(([word, progressItem]) => {
+                setData(`users/${DEFAULT_USER_ID}/progress/${word}`, progressItem)
+                    .catch(err => console.error(`Failed to sync-back word progress for ${word} to Firebase:`, err));
+            });
+        }
+
+        return mergedProg;
     } else {
-        // Fallback to local storage
-        if (typeof window !== "undefined") {
-            const data = localStorage.getItem(STORAGE_KEY);
-            localCache = data ? JSON.parse(data) : {};
-        } else {
-            localCache = {};
-        }
-        return localCache as Record<string, WordProgress>;
+        localCache = localProg;
+        return localCache;
     }
 }
 

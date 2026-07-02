@@ -13,7 +13,6 @@ interface TypingViewProps {
     activeWordRef: React.RefObject<HTMLSpanElement | null>;
     inputRef: React.RefObject<HTMLInputElement | null>;
     containerRef: React.RefObject<HTMLDivElement | null>;
-    isFinished: boolean;
     onFocus: () => void;
     onBlur: () => void;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -24,7 +23,7 @@ interface TypingViewProps {
 export default function TypingView({
     words, currentIndex, typedCurrentWord, typedWordsHistory,
     isFocused, activeWordPos, activeWordRef, inputRef, containerRef,
-    isFinished, onFocus, onBlur, onChange, onKeyDown, onClick,
+    onFocus, onBlur, onChange, onKeyDown, onClick,
 }: TypingViewProps) {
     const wordStream = useMemo(() => {
         if (words.length === 0) return null;

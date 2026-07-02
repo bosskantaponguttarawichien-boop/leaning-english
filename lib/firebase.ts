@@ -1,5 +1,8 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
 
+import { getAuth } from "firebase/auth";
+import { getDatabase } from "firebase/database";
+
 const firebaseConfig = {
     apiKey: "AIzaSyC3IRrNigZGef4uWZdBVjIaoZO3E6YteOo",
     authDomain: "finalproject13590243.firebaseapp.com",
@@ -12,5 +15,7 @@ const firebaseConfig = {
 
 // Initialize Firebase (Singleton pattern to prevent re-initializing in Next.js development mode)
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+const auth = getAuth(app);
+const db = getDatabase(app);
 
-export { app };
+export { app, auth, db };

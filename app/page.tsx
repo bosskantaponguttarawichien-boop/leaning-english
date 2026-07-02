@@ -99,7 +99,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center px-[24px] tracking-tight py-12">
       <div className="w-full max-w-4xl flex flex-col gap-10">
         {/* Header Section */}
-        <div className="flex justify-between items-center bg-white dark:bg-zinc-800 p-8 rounded-3xl border border-zinc-100 dark:border-zinc-700 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 bg-white dark:bg-zinc-800 p-6 md:p-8 rounded-3xl border border-zinc-100 dark:border-zinc-700 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50">
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl font-black text-zinc-900 dark:text-white leading-none">
               EngList 🧠
@@ -108,9 +108,14 @@ export default function Home() {
               เริ่มต้นฝึกพิมพ์คำศัพท์ภาษาอังกฤษเพื่อพัฒนาทักษะของคุณ
             </p>
           </div>
-          <Link href="/practice" className="px-6 py-3 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-100 dark:shadow-none">
-            Keep Practicing
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+            <Link href="/dashboard" className="w-full sm:w-auto justify-center px-5 py-3 bg-zinc-100 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-200 font-bold rounded-2xl hover:bg-zinc-200 dark:hover:bg-zinc-600 transition-all text-sm flex items-center">
+              Stats Dashboard 📊
+            </Link>
+            <Link href="/practice" className="w-full sm:w-auto justify-center px-5 py-3 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-100 dark:shadow-none text-sm flex items-center">
+              Keep Practicing
+            </Link>
+          </div>
         </div>
 
         <div className="flex flex-col gap-2">

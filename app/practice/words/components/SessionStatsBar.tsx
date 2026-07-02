@@ -28,7 +28,7 @@ function StatItem({ label, value }: { label: string; value: string | number }) {
 
 export default function SessionStatsBar({ difficultyMode, currentIndex, wordCount, realtimeWpm, realtimeAccuracy, stats }: SessionStatsBarProps) {
     return (
-        <div className="flex w-full sm:w-auto items-center gap-6 sm:gap-16">
+        <div className="flex w-full items-center justify-between sm:justify-start gap-4 sm:gap-16">
             {difficultyMode === "typing" ? (
                 <>
                     <StatItem label="WPM" value={realtimeWpm} />

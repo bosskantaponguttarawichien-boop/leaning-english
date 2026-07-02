@@ -1,0 +1,1061 @@
+{
+  "lessons": [
+    {
+      "id": "L01",
+      "slug": "sentence-heart-be-vs-action",
+      "level": "A1",
+      "phase": "foundation",
+      "title_th": "หัวใจของประโยค: เป็นอะไร vs ทำอะไร",
+      "title_en": "Be or Do",
+      "estimated_minutes": 30,
+      "prerequisites": [],
+      "goals": [
+        "แยกประโยคที่ใช้ am/is/are ออกจากกริยาการกระทำ (Action verbs)",
+        "สร้างประโยคอธิบายตนเองและลักษณะงานพื้นฐานได้ 6 ประโยคโดยไม่มีโครงสร้าง 'am + base verb' ผิดพลาด"
+      ],
+      "grammar_targets": ["be", "present_simple"],
+      "vocabulary_tags": ["Personal", "Work", "Dev / Tech"],
+      "chunks": [
+        "I am a developer",
+        "interested in AI",
+        "write code",
+        "build an agent",
+        "learn English",
+        "work at SCB TechX",
+        "work on a project"
+      ],
+      "activities": [
+        {
+          "id": "L01-ACT1",
+          "type": "concept",
+          "instruction": "ทำความเข้าใจโมเดลความคิดการใช้ Be และ Action",
+          "content": "ภาษาอังกฤษต้องมีกริยาหลักในประโยคเสมอ:\n\n1. บอกสถานะ ตัวตน หรือคุณสมบัติ ใช้กริยาช่วย BE (am/is/are):\n   - I am tired. (ฉันเหนื่อย - บอกสภาพ)\n   - I am a developer. (ฉันเป็นนักพัฒนา - บอกอาชีพ)\n\n2. บอกการกระทำ ใช้กริยาการกระทำ (Action Verb) โดยตรง:\n   - I write code. (ฉันเขียนโค้ด)\n   - I work at SCB TechX. (ฉันทำงานที่...)\n\n🚨 ข้อควรระวังที่สุด: ห้ามใช้ 'am' หน้ากริยาปกติ!\n   - ถูก: I write code. / I am a developer.\n   - ผิด: I am write code. ❌"
+        },
+        {
+          "id": "L01-ACT2",
+          "type": "classify",
+          "instruction": "เลือกเติม 'am' หรือ ปล่อยว่าง (พิมพ์ - หากไม่ต้องการเติมกริยาช่วย)",
+          "question": "1. I ___ a developer.\n2. I ___ write code every day.\n3. I ___ interested in AI.\n4. I ___ work at SCB TechX.\n5. I ___ 28 years old.",
+          "options": ["am", "-"],
+          "answer": "am, -, am, -, am",
+          "hint": "สังเกตคำตามหลัง: หากเป็นอาชีพ (a developer), อายุ (28 years old) หรือความรู้สึก/สนใจ (interested) ให้ใช้ am ส่วนกริยาเขียน (write) หรือทำงาน (work) ไม่ต้องเติมกริยาช่วย"
+        },
+        {
+          "id": "L01-ACT3",
+          "type": "transform",
+          "instruction": "แก้ไขประโยคต่อไปนี้ให้ถูกต้องตามหลักไวยากรณ์",
+          "question": "1. I am code every day. -> ___\n2. I developer. -> ___\n3. I am work at SCB TechX. -> ___",
+          "answer": "I code every day., I am a developer., I work at SCB TechX.",
+          "hint": "ตัด am หน้ากริยาปกติออก และอย่าลืมใส่ am หน้าอาชีพเสมอนะครับ"
+        },
+        {
+          "id": "L01-ACT4",
+          "type": "guided_output",
+          "instruction": "เขียนประโยคอธิบายตนเอง 6 ประโยคตามโครงสร้าง:\n1. ชื่อของคุณ\n2. อายุ\n3. อาชีพ\n4. บริษัทที่ทำงาน\n5. หน้าที่ที่ทำในงาน\n6. สิ่งที่สนใจ",
+          "question": "My name is ... I am ... years old. I am a ... I work at ... I ... I am interested in ...",
+          "answer": "My name is Kantapong, but you can call me Boss. I am 28 years old. I am a developer. I work at SCB TechX. I write code and build AI agents. I am interested in self-development and trading.",
+          "hint": "พยายามไม่ดูเฉลยและเขียนด้วยข้อมูลจริงของคุณ Boss ครับ"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.75,
+        "required_outputs": 6
+      }
+    },
+    {
+      "id": "L02",
+      "slug": "subject-verb-detail",
+      "level": "A1",
+      "phase": "foundation",
+      "title_th": "ใครทำอะไร: Subject + Verb + Detail",
+      "title_en": "Subject Verb Detail",
+      "estimated_minutes": 25,
+      "prerequisites": ["L01"],
+      "goals": [
+        "จัดระเบียบโครงสร้างประโยคพื้นฐานและใช้คำสรรพนาม (Pronouns) ได้ถูกต้อง",
+        "สามารถแต่งประโยคอธิบายการทำงานของฟังก์ชันหรือโค้ดได้อย่างน้อย 3 ประโยค"
+      ],
+      "grammar_targets": ["pronouns", "word_order"],
+      "vocabulary_tags": ["Work", "Dev / Tech"],
+      "chunks": [
+        "The agent processes",
+        "I review the code",
+        "We use TypeScript",
+        "returns a string",
+        "receives a request",
+        "uses a tool",
+        "this error happens"
+      ],
+      "activities": [
+        {
+          "id": "L02-ACT1",
+          "type": "concept",
+          "instruction": "เข้าใจการเรียงลำดับประโยค Subject + Verb + Object/Detail",
+          "content": "ประโยคในภาษาอังกฤษต้องเรียงลำดับดังนี้เสมอ:\n\n1. Subject (ใคร/ระบบอะไร)\n2. Verb (ทำอะไร)\n3. Object/Detail (สิ่งใด/รายละเอียด)\n\nตัวอย่างประโยคสำหรับการโค้ดดิ้ง:\n- The function (S) + returns (V) + a string (O).\n- The API (S) + receives (V) + a request (O).\n- The agent (S) + uses (V) + a tool (O).\n- This error (S) + happens (V) + when the token expires (Detail)."
+        },
+        {
+          "id": "L02-ACT2",
+          "type": "reorder",
+          "instruction": "เรียงคำเหล่านี้ให้เป็นประโยคที่ถูกต้อง",
+          "question": "1. code / I / every day\n2. uses / the agent / a tool\n3. this function / data / validates",
+          "answer": "I code every day., The agent uses a tool., This function validates data.",
+          "hint": "หาประธานก่อน จากนั้นหากริยา และหาของที่โดนทำครับ"
+        },
+        {
+          "id": "L02-ACT3",
+          "type": "guided_output",
+          "instruction": "อธิบายการทำงานของฟังก์ชันที่คุณสร้างขึ้นมา 1 ฟังก์ชันด้วยประโยค 3 ประโยคตามโครงสร้าง:\n- This function receives ...\n- It checks ...\n- It returns ...",
+          "question": "1. This function receives ...\n2. It checks ...\n3. It returns ...",
+          "answer": "This function receives a user input. It checks the token validity. It returns a boolean status.",
+          "hint": "ลองนึกภาพโค้ดที่ทำอยู่ แล้วเขียนอธิบายด้วยศัพท์ง่าย ๆ ครับ"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.75,
+        "required_outputs": 3
+      }
+    },
+    {
+      "id": "L03",
+      "slug": "singular-and-plural",
+      "level": "A1",
+      "phase": "foundation",
+      "title_th": "หนึ่งหรือหลายสิ่ง: a/an และ Plurals",
+      "title_en": "Singular and Plural",
+      "estimated_minutes": 25,
+      "prerequisites": ["L02"],
+      "goals": [
+        "ระบุคำนำหน้านาม a/an และเติม s/es ในคำนามพหูพจน์ได้ถูกต้อง",
+        "เขียนอธิบายอุปกรณ์และโครงสร้างระบบในห้องทำงานได้ถูกต้องตามกฎเอกพจน์/พหูพจน์"
+      ],
+      "grammar_targets": ["articles", "plurals"],
+      "vocabulary_tags": ["Work", "Office", "Dev / Tech"],
+      "chunks": [
+        "an AI agent",
+        "a developer",
+        "two functions",
+        "three errors",
+        "an API request",
+        "a monitor",
+        "two servers"
+      ],
+      "activities": [
+        {
+          "id": "L03-ACT1",
+          "type": "concept",
+          "instruction": "เข้าใจการระบุจำนวนและคำนำหน้านาม",
+          "content": "ในภาษาอังกฤษ คำนามนับได้เอกพจน์ (มีชิ้นเดียว) จะอยู่ลอยๆ ไม่ได้ ต้องใส่คำระบุจำนวนด้านหน้าเสมอ:\n\n1. การใช้ a / an (กับคำนาม 1 สิ่งทั่วไป):\n   - a นำหน้าเสียงพยัญชนะ: a developer, a database, a function\n   - an นำหน้าเสียงสระ (A, E, I, O, U): an agent, an error, an API key\n\n2. พหูพจน์ (มีตั้งแต่ 2 สิ่งขึ้นไป) ให้ตัด a/an ออกแล้วเติม s/es ท้ายคำ:\n   - one function -> two functions\n   - one error -> three errors"
+        },
+        {
+          "id": "L03-ACT2",
+          "type": "fill_blank",
+          "instruction": "เติม a / an หรือ เติมตัวลงท้าย s เพื่อเปลี่ยนเป็นพหูพจน์ให้ถูกต้อง",
+          "question": "1. ___ AI agent\n2. ___ developer\n3. two function___\n4. three error___\n5. ___ API request",
+          "answer": "an, a, s, s, an",
+          "hint": "ระมัดระวังเสียงขึ้นต้นของ AI (เอ - เสียงสระ) และ API (เอ - เสียงสระ) ครับ"
+        },
+        {
+          "id": "L03-ACT3",
+          "type": "guided_output",
+          "instruction": "มองไปที่โต๊ะทำงานหรือโครงสร้างระบบที่คุณใช้อยู่ แล้วแต่งประโยคบอกเล่า 3 ประโยคเพื่ออธิบายอุปกรณ์หรือส่วนประกอบ (เช่น คอมพิวเตอร์ หน้าจอ จอบริการ หรือคีย์บอร์ด)",
+          "question": "I have ... I use ... My project includes ...",
+          "answer": "I have a laptop. I use two monitors. My project includes an API gateway and three databases.",
+          "hint": "อ้างอิงของจริงรอบตัวคุณ Boss เลยครับ เช่น laptop (1 เครื่อง = a laptop), monitors (2 จอ = two monitors)"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.75
+      }
+    },
+    {
+      "id": "L04",
+      "slug": "present-simple-routines",
+      "level": "A1",
+      "phase": "foundation",
+      "title_th": "Present Simple: งานประจำและสิ่งที่เป็นจริง",
+      "title_en": "Present Simple",
+      "estimated_minutes": 30,
+      "prerequisites": ["L03"],
+      "goals": [
+        "สร้างประโยคบอกเล่าแบบ routine/system behavior ตามประธานเอกพจน์/พหูพจน์ได้แม่นยำ",
+        "เขียนรายงานตารางการทำงานปกติของตนเองในแต่ละวันได้อย่างน้อย 6 ประโยค"
+      ],
+      "grammar_targets": ["present_simple", "frequency_adverbs"],
+      "vocabulary_tags": ["Work", "Routines", "Dev / Tech"],
+      "chunks": [
+        "write code every day",
+        "deploy on Friday",
+        "reviews my code",
+        "returns JSON",
+        "usually start work",
+        "often test the API"
+      ],
+      "activities": [
+        {
+          "id": "L04-ACT1",
+          "type": "concept",
+          "instruction": "เข้าใจกริยา Present Simple และคำบอกความถี่",
+          "content": "Present Simple ใช้พูดถึงสิ่งที่เป็นความจริงทั่วไป งานประจำ หรือการทำงานปกติของระบบ:\n\n1. การผันกริยาตามประธาน:\n   - ประธานพหูพจน์ (I/You/We/They/The developers) -> ใช้กริยาปกติ (base verb)\n     * I write code every day. (ฉันเขียนโค้ดทุกวัน)\n     * We deploy on Friday. (พวกเราดีพลอยวันศุกร์)\n   - ประธานเอกพจน์ (He/She/It/The API/The function) -> กริยาเติม s/es\n     * She reviews my code. (เธอตรวจโค้ดของฉัน)\n     * The API returns JSON. (API ตัวนี้ส่งค่ากลับเป็น JSON)\n\n2. คำบอกความถี่ (usually, often, sometimes, never):\n   - วางไว้หน้ากริยาหลัก: I usually start work at 9 a.m."
+        },
+        {
+          "id": "L04-ACT2",
+          "type": "transform",
+          "instruction": "เปลี่ยนรูปคำกริยาในวงเล็บให้ถูกต้องตามประธาน",
+          "question": "1. I usually (start) my day at 9 a.m.\n2. The system (send) a response automatically.\n3. The backend (validate) user input.\n4. We (use) GitHub for collaboration.\n5. The cron job (run) every hour.",
+          "answer": "start, sends, validates, use, runs",
+          "hint": "สังเกตว่าประธานเป็นสิ่งเดียว (เอกพจน์: The system, The backend, The cron job) หรือหลายสิ่ง/ฉัน (I, We)"
+        },
+        {
+          "id": "L04-ACT3",
+          "type": "guided_output",
+          "instruction": "เขียนเล่าเกี่ยวกับ 'วันทำงานปกติของคุณ' (A Typical Workday) จำนวน 6 ประโยค ตั้งแต่เริ่มงานจนจบวัน โดยระบุเวลาหรือคำบอกความถี่ (เช่น start, check, write, attend, finish)",
+          "question": "I usually start work at ... Then I check ... In the afternoon, I ... I often attend ... Finally, I finish ...",
+          "answer": "I usually start work at 9 a.m. Then I check my emails and Slack messages. In the afternoon, I write typescript code. I often attend a daily stand-up meeting. Finally, I finish work at 6 p.m.",
+          "hint": "เขียนลำดับจริงของคุณ Boss เพื่อให้สมองจดจำการใช้งานแบบใกล้ตัวครับ"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.75,
+        "required_outputs": 6
+      }
+    },
+    {
+      "id": "L05",
+      "slug": "questions-do-does",
+      "level": "A1",
+      "phase": "foundation",
+      "title_th": "Questions with do/does",
+      "title_en": "Questions with Do and Does",
+      "estimated_minutes": 30,
+      "prerequisites": ["L04"],
+      "goals": [
+        "สร้างคำถามแบบ Yes/No และ Wh-Questions ด้วย Do/Does ได้อย่างถูกต้อง",
+        "แต่งคำถามทางเทคนิคอย่างน้อย 5 ข้อเพื่อถามเพื่อนร่วมงานหรือหัวหน้างาน"
+      ],
+      "grammar_targets": ["questions", "do_does"],
+      "vocabulary_tags": ["Work", "Communication", "Dev / Tech"],
+      "chunks": [
+        "What do you do",
+        "Where do you work",
+        "Which framework do we use",
+        "How does this function work",
+        "Why does the agent call",
+        "require authentication"
+      ],
+      "activities": [
+        {
+          "id": "L05-ACT1",
+          "type": "concept",
+          "instruction": "เข้าใจสูตรสร้างคำถามด้วย Do และ Does",
+          "content": "เมื่อต้องการสร้างคำถามบอกเล่ากิจวัตรหรือพฤติกรรมปกติในภาษาอังกฤษ ให้เอา Do/Does มาช่วย:\n\n1. โครงสร้างประโยคคำถาม:\n   - Do + I/you/we/they + กริยาปกติ (ไม่เติม s)?\n     * Do you write tests? (คุณเขียนเทสต์ไหม?)\n   - Does + he/she/it/ประธานเอกพจน์ + กริยาปกติ (ไม่เติม s)?\n     * Does this function return JSON? (ฟังก์ชันนี้ส่งค่า JSON กลับมาไหม?)\n     * 🚨 ระวัง: ห้ามเติม s ที่กริยาหลักเมื่อมี Does ในประโยคแล้ว!\n\n2. การใส่คำถามแบบ Wh-:\n   - (What/Where/Why/How) + do/does + Subject + Verb?\n     * How does the agent work? (เอเจนต์ทำงานอย่างไร?)"
+        },
+        {
+          "id": "L05-ACT2",
+          "type": "reorder",
+          "instruction": "เรียงคำด้านล่างให้เป็นประโยคคำถามที่ถูกต้อง",
+          "question": "1. JSON / does / this function / return\n2. use / do / which tool / we\n3. require / does / the API / authentication",
+          "answer": "Does this function return JSON?, Which tool do we use?, Does the API require authentication?",
+          "hint": "สังเกตประธานเพื่อเลือก Do/Does และระวังลำดับคำขึ้นต้นด้วย Wh- ครับ"
+        },
+        {
+          "id": "L05-ACT3",
+          "type": "guided_output",
+          "instruction": "แต่งคำถามทางเทคนิค 5 ข้อ ที่คุณอยากจะเอาไปถามทีมผู้พัฒนาอาวุโส (Senior Developer) เกี่ยวกับโปรเจกต์หรือโค้ดที่คุณกำลังทำอยู่",
+          "question": "1. How does ...\n2. Why do we ...\n3. Does this ...\n4. Where do ...\n5. What database do ...",
+          "answer": "How does this logic handle errors? Why do we use this library? Does this service run on docker? Where do we store the API keys? What database do we use in staging?",
+          "hint": "ลองดึงคำถามทางเทคนิคที่สงสัยบ่อยๆ มาลองเปลี่ยนเป็นภาษาอังกฤษครับ"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.75,
+        "required_outputs": 5
+      }
+    },
+    {
+      "id": "L06",
+      "slug": "negatives-dont-doesnt",
+      "level": "A1",
+      "phase": "foundation",
+      "title_th": "Negatives with don't/doesn't",
+      "title_en": "Negatives with Don't and Doesn't",
+      "estimated_minutes": 25,
+      "prerequisites": ["L05"],
+      "goals": [
+        "สร้างประโยคปฏิเสธเพื่ออธิบายขีดจำกัดของระบบหรือสิ่งที่ไม่เข้าใจได้ถูกต้อง",
+        "แต่งประโยคเพื่อเปรียบเทียบสิ่งทีระบบของท่าน 'ทำได้' และ 'ทำไม่ได้' ได้อย่างถูกต้อง"
+      ],
+      "grammar_targets": ["negatives", "don_doesnt"],
+      "vocabulary_tags": ["Work", "Communication", "Dev / Tech"],
+      "chunks": [
+        "don't understand",
+        "don't use this library",
+        "doesn't support",
+        "doesn't return a value",
+        "doesn't require key",
+        "cannot access files"
+      ],
+      "activities": [
+        {
+          "id": "L06-ACT1",
+          "type": "concept",
+          "instruction": "ทำความเข้าใจกฎประโยคปฏิเสธ Don't และ Doesn't",
+          "content": "ใช้ don't (do not) หรือ doesn't (does not) วางหน้ากริยาหลักเพื่อปฏิเสธการกระทำ:\n\n1. การเลือกปฏิเสธตามประธาน:\n   - I/You/We/They -> don't + กริยาปกติ\n     * I don't understand this warning. (ฉันไม่เข้าใจคำเตือนนี้)\n     * We don't use Python for this task. (พวกเราไม่ได้ใช้ Python ในงานนี้)\n   - He/She/It/ประธานเอกพจน์ -> doesn't + กริยาปกติ (ตัด s/es ออก!)\n     * The API doesn't support this format. (API ไม่รองรับฟอร์แมตนี้)\n     * The function doesn't return a value. (ฟังก์ชันไม่ได้รีเทิร์นค่า)"
+        },
+        {
+          "id": "L06-ACT2",
+          "type": "fill_blank",
+          "instruction": "เลือกเติม don't หรือ doesn't ในช่องว่าง",
+          "question": "1. I ___ have the staging access.\n2. The server ___ respond after rebooting.\n3. The agent ___ access private configuration data.\n4. We ___ deploy code on holidays.\n5. This dependency ___ support Next.js 16 yet.",
+          "options": ["don't", "doesn't"],
+          "answer": "don't, doesn't, doesn't, don't, doesn't",
+          "hint": "เช็คประธานว่าเป็นพหูพจน์/I/We (ใช้ don't) หรือเอกพจน์อย่าง The server, The agent, This dependency (ใช้ doesn't)"
+        },
+        {
+          "id": "L06-ACT3",
+          "type": "guided_output",
+          "instruction": "เขียนเปรียบเทียบความสามารถของ AI Agent หรือระบบของคุณ โดยแต่งประโยคบอกเล่าขีดความสามารถ (สิ่งที่ทำได้ = can) 2 ข้อ และประโยคปฏิเสธขีดจำกัด (สิ่งที่ระบบไม่ทำ/ทำไม่ได้ = doesn't) 2 ข้อ",
+          "question": "1. The agent can ... but it doesn't ...\n2. The system can ... but it doesn't ...",
+          "answer": "The agent can search the database but it doesn't modify records. The system can send emails but it doesn't store user credentials.",
+          "hint": "ใช้โครงสร้าง but (แต่) เพื่อเชื่อมประโยคขัดแย้งให้อยู่ในข้อเดียวกันได้ครับ"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.75,
+        "required_outputs": 4
+      }
+    },
+    {
+      "id": "L07",
+      "slug": "present-continuous-now",
+      "level": "A1",
+      "level_label": "A1",
+      "phase": "communication",
+      "title_th": "Present Continuous: กำลังทำอยู่ตอนนี้",
+      "title_en": "Present Continuous",
+      "estimated_minutes": 25,
+      "prerequisites": ["L06"],
+      "goals": [
+        "พูดถึงสิ่งที่กำลังทำและสถานะงานปัจจุบันโดยใช้ Verb-ing ได้ถูกต้อง",
+        "แต่งประโยคตอบคำถาม 'คุณกำลังทำงานอะไรอยู่ ณ ตอนนี้' ได้อย่างธรรมชาติ"
+      ],
+      "grammar_targets": ["present_continuous"],
+      "vocabulary_tags": ["Work", "Routines", "Dev / Tech"],
+      "chunks": ["fixing a bug", "testing the agent", "service is running", "reviewing the PR", "working from home"],
+      "activities": [
+        {
+          "id": "L07-ACT1",
+          "type": "concept",
+          "instruction": "ทำความเข้าใจโครงสร้างประโยคสิ่งที่กำลังเกิดขึ้น",
+          "content": "Present Continuous ใช้บอกสิ่งที่กำลังเกิดขึ้นในขณะนี้:\n\nโครงสร้างประโยค:\nSubject + am/is/are + verb-ing\n\nตัวอย่าง:\n- I am fixing a bug. (ฉันกำลังแก้บั๊ก)\n- We are testing the agent. (พวกเรากำลังเทสต์เอเจนต์)\n- The service is running. (เซอร์วิสกำลังทำงานอยู่)\n\nความแตกต่าง:\n- I code. (ฉันทำงานเขียนโค้ดเป็นปกติ - Simple)\n- I am coding now. (ฉันกำลังนั่งพิมพ์โค้ดอยู่ตอนนี้ - Continuous)"
+        },
+        {
+          "id": "L07-ACT2",
+          "type": "dictation",
+          "instruction": "ฟังและพิมพ์ประโยคเกี่ยวกับงานที่กำลังทำอยู่ให้ถูกต้อง",
+          "answer": "I am fixing a bug in the code.",
+          "hint": "พิมพ์กริยาช่วย (am) ตามด้วยการเติม ing ของกริยาแก้ (fixing) ครับ"
+        },
+        {
+          "id": "L07-ACT3",
+          "type": "guided_output",
+          "instruction": "ตอบคำถาม 'What are you doing right now?' โดยบอกหน้าที่หรือการกระทำ 3 ข้อที่กำลังเกิดขึ้น",
+          "question": "Right now, I am ... Also, my team is ... And our server is ...",
+          "answer": "Right now, I am testing the new AI workflow. Also, my team is reviewing the pull request. And our server is running successfully.",
+          "hint": "ใช้ประธานหลากหลาย (I, my team, our server) แล้วตามด้วย am/is/are และกริยา ing ครับ"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.75
+      }
+    },
+    {
+      "id": "L08",
+      "slug": "routine-vs-now",
+      "level": "A1",
+      "phase": "communication",
+      "title_th": "Routine vs Right Now",
+      "title_en": "Routine vs Right Now",
+      "estimated_minutes": 25,
+      "prerequisites": ["L07"],
+      "goals": [
+        "แยกแยะและสลับใช้ระหว่างกิจวัตร (Simple) กับเหตุการณ์ขณะนั้น (Continuous) ได้คล่องแคล่ว"
+      ],
+      "grammar_targets": ["present_simple", "present_continuous"],
+      "vocabulary_tags": ["Work", "Routines"],
+      "chunks": ["work from home", "working from home", "sends a response", "returning an error"],
+      "activities": [
+        {
+          "id": "L08-ACT1",
+          "type": "concept",
+          "instruction": "เปรียบเทียบภาพเวลาของกิจวัตร vs เหตุการณ์เฉพาะหน้า",
+          "content": "เลือก Tense จากลักษณะของเวลา:\n\n1. สิ่งที่เป็นปกติ / กิจวัตร (Simple):\n   - I work from home on Fridays. (ปกติทำงานที่บ้านทุกวันศุกร์)\n   - The API sends a response. (โดยปกติ API จะส่งคำตอบกลับมา)\n\n2. สิ่งที่กำลังทำเฉพาะช่วงนี้/ตอนนี้ (Continuous):\n   - I am working from home today. (แค่วันนี้ที่ทำงานที่บ้าน)\n   - The API is returning an error. (ณ ตอนนี้ API ตัวนี้ดันกำลังเออเร่ออยู่)"
+        },
+        {
+          "id": "L08-ACT2",
+          "type": "classify",
+          "instruction": "เลือกฟอร์มกริยาที่สอดคล้องกับสถานการณ์ที่กำหนด",
+          "question": "1. Usually, I (code / am coding) in TypeScript.\n2. Look! The server (reboots / is rebooting) right now.\n3. The function usually (returns / is returning) a boolean.\n4. Today, we (test / are testing) the database connection.",
+          "options": ["code", "am coding", "reboots", "is rebooting", "returns", "is returning", "test", "are testing"],
+          "answer": "code, is rebooting, returns, are testing",
+          "hint": "สังเกตคำบอกเวลา เช่น usually (กิจวัตร -> Simple) หรือ look!, right now, today (ตอนนี้นั้นๆ -> Continuous)"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.85
+      }
+    },
+    {
+      "id": "L09",
+      "slug": "past-simple-regular",
+      "level": "A1",
+      "phase": "communication",
+      "title_th": "Past Simple: สิ่งที่จบลงไปแล้ว",
+      "title_en": "Past Simple Regular Verbs",
+      "estimated_minutes": 25,
+      "prerequisites": ["L08"],
+      "goals": [
+        "ใช้กริยารูปอดีตเติม ed (Regular verbs) เพื่อเล่าสิ่งที่เกิดขึ้นเมื่อวานได้ถูกต้อง",
+        "สามารถสรุปงานที่ทำเสร็จสิ้นไปแล้วได้อย่างน้อย 3 ข้อในการประชุม"
+      ],
+      "grammar_targets": ["past_simple", "regular_verbs"],
+      "vocabulary_tags": ["Work", "Past", "Dev / Tech"],
+      "chunks": ["worked yesterday", "fixed a bug", "tested the API", "stayed with family", "last weekend"],
+      "activities": [
+        {
+          "id": "L09-ACT1",
+          "type": "concept",
+          "instruction": "เข้าใจการเล่าเรื่องที่จบแล้วด้วยกริยาอดีตปกติ",
+          "content": "ใช้ Past Simple เล่าเหตุการณ์ที่เกิดขึ้นและสิ้นสุดลงแล้วในอดีต (เช่น yesterday, last week, 2 hours ago):\n\nกริยาปกติ (Regular Verbs) จะเปลี่ยนเป็นรูปอดีตโดยการเติม -ed:\n- work -> worked (I worked yesterday.)\n- fix -> fixed (I fixed a bug in the login module.)\n- test -> tested (We tested the model.)\n- stay -> stayed (I stayed at home last weekend.)"
+        },
+        {
+          "id": "L09-ACT2",
+          "type": "fill_blank",
+          "instruction": "เติมกริยารูปอดีต (เติม -ed) ของคำในวงเล็บ",
+          "question": "1. Yesterday, I (work) ___ for 8 hours.\n2. We (test) ___ the code before deployment.\n3. The developer (fix) ___ the database query error.\n4. I (stay) ___ with my family last weekend.",
+          "answer": "worked, tested, fixed, stayed",
+          "hint": "กริยาเหล่านี้สะกดตรงตัวแล้วเติม ed ได้เลยครับ เช่น work -> worked"
+        },
+        {
+          "id": "L09-ACT3",
+          "type": "guided_output",
+          "instruction": "รายงานสิ่งที่ทำเสร็จไปแล้วเมื่อวานนี้ 3 ข้อ โดยใช้กริยาอดีต",
+          "question": "Yesterday, I worked on ... I also tested ... And I fixed ...",
+          "answer": "Yesterday, I worked on the login screen. I also tested the user endpoint. And I fixed a minor spelling bug.",
+          "hint": "นึกถึงบั๊กหรือฟีเจอร์ที่ Boss เพิ่งแก้เสร็จ แล้วเขียนเล่าครับ"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.75
+      }
+    },
+    {
+      "id": "L10",
+      "slug": "past-simple-irregular",
+      "level": "A1",
+      "phase": "communication",
+      "title_th": "Past Simple: กริยาเปลี่ยนรูปยอดฮิต",
+      "title_en": "Common Irregular Past Verbs",
+      "estimated_minutes": 30,
+      "prerequisites": ["L09"],
+      "goals": [
+        "ใช้และสะกดกริยาเปลี่ยนรูป (Irregular verbs) ที่พบบ่อยในงานโค้ดดิ้งได้ถูกต้อง",
+        "เขียนเล่าเรื่องราวเหตุการณ์ทำงานเมื่อวานนี้สั้นๆ 6 ประโยคโดยใช้รูปอดีตได้ถูกต้อง"
+      ],
+      "grammar_targets": ["past_simple", "irregular_verbs"],
+      "vocabulary_tags": ["Work", "Past", "Dev / Tech"],
+      "chunks": ["went to office", "had a meeting", "made a change", "found a bug", "wrote a test", "read the doc", "got an error", "took two hours"],
+      "activities": [
+        {
+          "id": "L10-ACT1",
+          "type": "concept",
+          "instruction": "ทำความเข้าใจกริยาเปลี่ยนรูปอดีตที่ใช้งานบ่อย",
+          "content": "กริยาหลายคำไม่ได้เติม -ed แต่จะเปลี่ยนรูปร่างไปเลย (Irregular Verbs):\n\n| ช่อง 1 | ช่อง 2 (Past) | ตัวอย่าง |\n|---|---|---|\n| go | went | I went to the office. |\n| have | had | We had a meeting. |\n| make | made | I made a change. |\n| find | found | I found a bug. |\n| write | wrote | I wrote a test. |\n| read | read (อ่านว่า เรด) | I read the document. |\n| get | got | I got an error. |\n| take | took | The task took 2 hours. |"
+        },
+        {
+          "id": "L10-ACT2",
+          "type": "dictation",
+          "instruction": "ฟังและพิมพ์ประโยครูปอดีตที่ใช้กริยาเปลี่ยนรูป",
+          "answer": "I found a bug and wrote a test.",
+          "hint": "รูปอดีตของ find คือ found และ write คือ wrote ครับ"
+        },
+        {
+          "id": "L10-ACT3",
+          "type": "fill_blank",
+          "instruction": "เติมกริยารูปอดีตช่อง 2 ของคำในวงเล็บ",
+          "question": "1. Last Friday, we (have) ___ a retro meeting.\n2. I (go) ___ to the SCB office yesterday.\n3. The backend team (make) ___ a new API endpoint.\n4. I (get) ___ a timeout response code.",
+          "answer": "had, went, made, got",
+          "hint": "ทบทวนตารางด้านบนและเปลี่ยนรูปกริยาให้ตรงช่องครับ"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.75
+      }
+    },
+    {
+      "id": "L11",
+      "slug": "future-plans",
+      "level": "A1",
+      "phase": "communication",
+      "title_th": "Future: บอกแผนและงานที่จะทำต่อ",
+      "title_en": "Future Plans and Decisions",
+      "estimated_minutes": 25,
+      "prerequisites": ["L10"],
+      "goals": [
+        "เลือกใช้ will และ be going to เพื่อบอกแผนการตัดสินใจได้ถูกต้อง",
+        "เขียนรายงานแผนงานที่จะทำในวันพรุ่งนี้และระยะเวลาที่คาดเดาเสร็จสิ้นได้ถูกต้อง"
+      ],
+      "grammar_targets": ["future_will", "going_to"],
+      "vocabulary_tags": ["Work", "Future", "Dev / Tech"],
+      "chunks": ["going to study", "going to deploy", "will check logs", "will take two days", "will resolve the issue"],
+      "activities": [
+        {
+          "id": "L11-ACT1",
+          "type": "concept",
+          "instruction": "ความแตกต่างระหว่างการใช้ Will และ Be Going To",
+          "content": "ใช้พูดถึงสิ่งที่จะเกิดขึ้นในอนาคต:\n\n1. Be Going To (มีแผน / ตั้งใจไว้แล้วก่อนพูด):\n   - I am going to study English tonight. (วางแผนจะเรียนคืนนี้แล้ว)\n   - We are going to deploy tomorrow. (พวกเราตกลงจะดีพลอยพรุ่งนี้แล้ว)\n\n2. Will (ตัดสินใจตอนที่พูดเลย หรือ คาดเดาทั่วไป):\n   - I will check the logs. (เพิ่งคิดได้ว่าจะเช็คเดี๋ยวนี้เลย)\n   - I think this task will take two days. (คิดเดาว่าน่าจะใช้เวลาสองวัน)"
+        },
+        {
+          "id": "L11-ACT2",
+          "type": "classify",
+          "instruction": "เลือกเติม 'will' หรือ 'am going to' / 'are going to'",
+          "question": "1. We already decided. We ___ (deploy) the code tomorrow morning.\n2. Person A: We have a connection issue. Person B: OK, I ___ (check) the config.\n3. I bought a book. I ___ (study) Python this weekend.",
+          "options": ["will", "are going to deploy", "am going to check", "am going to study"],
+          "answer": "are going to deploy, will, am going to study",
+          "hint": "สังเกตความตั้งใจ: มีการตกลง/ตัดสินใจมาก่อนแล้ว (going to) หรือคิดและช่วยเหลือตอบรับทันที (will)"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.80
+      }
+    },
+    {
+      "id": "L12",
+      "slug": "prepositions-time",
+      "level": "A1",
+      "phase": "communication",
+      "title_th": "Time: at, on, in, for, since",
+      "title_en": "Prepositions of Time",
+      "estimated_minutes": 25,
+      "prerequisites": ["L11"],
+      "goals": [
+        "ระบุพิกัดเวลาด้วยคำบุพบทบอกเวลาได้ถูกต้องโดยไม่อิงรูปแบบภาษาไทย",
+        "แก้ไขข้อผิดพลาดในการบอกระยะเวลารวมกับช่วงจุดเริ่มต้นได้เสถียร"
+      ],
+      "grammar_targets": ["prepositions_time"],
+      "vocabulary_tags": ["Work", "Time", "Dev / Tech"],
+      "chunks": ["start at 9 a.m.", "meeting on Monday", "started in 2023", "worked for three years", "since 2023"],
+      "activities": [
+        {
+          "id": "L12-ACT1",
+          "type": "concept",
+          "instruction": "เข้าใจการจับคู่ Preposition กับชนิดของเวลา",
+          "content": "การระบุเวลาในภาษาอังกฤษ:\n\n- at + จุดเวลาแน่นอน: at 9 a.m., at noon, at midnight\n- on + วัน / วันที่แน่นอน: on Monday, on Friday, on July 1st\n- in + เดือน / ปี / ช่วงเวลาใหญ่ๆ: in July, in 2026, in the morning\n- for + ระยะเวลารวม (กี่ชั่วโมง/กี่ปี): for 3 hours, for 2 years\n- since + จุดเริ่มต้น (ตั้งแต่ปี/วันไหน): since 2023, since Monday\n\n🚨 แก้ไขความจำ:\n- ผิด: I work here since three years. ❌\n- ถูก: I work here for three years. ✅"
+        },
+        {
+          "id": "L12-ACT2",
+          "type": "fill_blank",
+          "instruction": "เติม at, on, in, for, since ในช่องว่าง",
+          "question": "1. The stand-up meeting is ___ 9:30 a.m.\n2. We have a sprint review ___ Friday.\n3. I was hired ___ 2024.\n4. I have coded in TypeScript ___ 5 years.",
+          "answer": "at, on, in, for",
+          "hint": "พิจารณาคำบอกเวลาตามหลัง: จุดเวลา (at), วันในสัปดาห์ (on), ปี (in), ระยะเวลารวม (for)"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.80
+      }
+    },
+    {
+      "id": "L13",
+      "slug": "connect-ideas",
+      "level": "A2",
+      "phase": "connector",
+      "title_th": "เชื่อมความคิด: and, but, because, so",
+      "title_en": "Connect Ideas",
+      "estimated_minutes": 25,
+      "prerequisites": ["L12"],
+      "goals": [
+        "แต่งประโยคขยายความโดยเชื่อมโยงเหตุผล ข้อมูลขัดแย้ง และผลลัพธ์ได้ถูกต้อง",
+        "สามารถขยายประโยคสั้นให้เป็นคำอธิบายงานที่มีใจความสมบูรณ์ได้"
+      ],
+      "grammar_targets": ["conjunctions"],
+      "vocabulary_tags": ["Work", "Communication", "Dev / Tech"],
+      "chunks": ["because it can automate", "but it is difficult to", "expired so the request", "learn English because"],
+      "activities": [
+        {
+          "id": "L13-ACT1",
+          "type": "concept",
+          "instruction": "ทำความเข้าใจคำเชื่อมประโยคหลัก 4 ตัว",
+          "content": "เชื่อมประโยคสั้นเข้าด้วยกันเพื่อการพูดที่ไหลลื่นขึ้น:\n\n- and (และ - เพิ่มข้อมูล): I code in Python and I study AI.\n- but (แต่ - ขัดแย้ง): The code works, but it is slow.\n- because (เพราะว่า - บอกสาเหตุ): I study English because I want to read docs.\n- so (ดังนั้น - บอกผลลัพธ์): The token expired, so the request failed."
+        },
+        {
+          "id": "L13-ACT2",
+          "type": "reorder",
+          "instruction": "เรียงคำเหล่านี้รวมกับคำเชื่อมประโยคให้ถูกต้อง",
+          "question": "1. failed / the token / expired / so / the request\n2. but / it is slow / the code / works",
+          "answer": "The token expired so the request failed., The code works but it is slow.",
+          "hint": "มองหาเหตุและผล (so) หรือ ข้อเท็จจริงที่ขัดแย้งกัน (but) ครับ"
+        },
+        {
+          "id": "L13-ACT3",
+          "type": "guided_output",
+          "instruction": "เริ่มจากประโยคสั้น 'I study English.' ขยายเพิ่มเหตุผลและวัตถุประสงค์ในการเอาไปใช้งานจริงให้ยาวขึ้นอย่างน้อย 20 คำขึ้นไป",
+          "question": "I study English because ...",
+          "answer": "I study English because I want to talk with foreign colleagues and read technical documentation more quickly.",
+          "hint": "เชื่อมประโยคด้วย because และ and ครับ"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.75
+      }
+    },
+    {
+      "id": "L14",
+      "slug": "describe-things",
+      "level": "A2",
+      "phase": "connector",
+      "title_th": "อธิบายสิ่งต่างๆ: Adjectives & Adverbs",
+      "title_en": "Describe Things Clearly",
+      "estimated_minutes": 25,
+      "prerequisites": ["L13"],
+      "goals": [
+        "แยกการใช้คำอธิบายคุณสมบัติ (Adjectives) และลักษณะการกระทำ (Adverbs) ในงานเทคนิคได้ถูกต้อง",
+        "แต่งประโยคอธิบายประสิทธิภาพและข้อจำกัดของฟังก์ชันโค้ดได้ 3 ประโยค"
+      ],
+      "grammar_targets": ["adjectives", "adverbs"],
+      "vocabulary_tags": ["Work", "Dev / Tech"],
+      "chunks": ["slow process", "runs slowly", "documentation is clear", "handles errors correctly", "works automatically"],
+      "activities": [
+        {
+          "id": "L014-ACT1",
+          "type": "concept",
+          "instruction": "เข้าใจตำแหน่ง Adjectives และ Adverbs ในประโยค",
+          "content": "อธิบายของ อธิบายระบบ หรือ อธิบายวิธีรัน:\n\n1. Adjective (ขยายคำนาม - วางไว้หน้าคำนาม หรือหลังกริยา BE):\n   - This is a slow process. (slow ขยายคำนาม process)\n   - The documentation is clear. (clear หลัง is ขยาย documentation)\n\n2. Adverb (ขยายกริยา/วิธีการทำงาน - มักลงท้ายด้วย -ly วางไว้ท้ายประโยค):\n   - The process runs slowly. (slowly ขยายกริยา runs)\n   - The function handles errors correctly. (correctly ขยายกริยา handles)"
+        },
+        {
+          "id": "L14-ACT2",
+          "type": "fill_blank",
+          "instruction": "เลือกเติม Adjective หรือ Adverb ให้ตรงประโยค",
+          "question": "1. This function is very (simple / simply).\n2. The system saves the configuration data (automatic / automatically).\n3. We need a (reliable / reliably) database service.\n4. The agent handles user messages (correct / correctly).",
+          "answer": "simple, automatically, reliable, correctly",
+          "hint": "เช็คคำที่ถูกขยาย: ขยายประธานหลัง verb to be (simple, reliable) หรือ ขยายวิธีการทำงานของกริยาหลัก (automatically, correctly)"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.80
+      }
+    },
+    {
+      "id": "L15",
+      "slug": "modals-capabilities",
+      "level": "A2",
+      "phase": "connector",
+      "title_th": "ความสามารถและการแนะนำ: can, could, should, must",
+      "title_en": "Modal Verbs at Work",
+      "estimated_minutes": 25,
+      "prerequisites": ["L14"],
+      "goals": [
+        "ใช้ modal verbs สื่อสารระดับของความสามารถ ความเป็นไปได้ ข้อเสนอแนะ และเงื่อนไขสำคัญได้ถูกต้อง",
+        "แต่งประโยคอธิบายระบบในแบบ capability, risk, recommendation, และ requirement ได้อย่างละ 1 ประโยค"
+      ],
+      "grammar_targets": ["modals"],
+      "vocabulary_tags": ["Work", "Dev / Tech"],
+      "chunks": ["can call external", "could cause an error", "should add a test", "must sign in first"],
+      "activities": [
+        {
+          "id": "L15-ACT1",
+          "type": "concept",
+          "instruction": "เข้าใจน้ำหนักความหมายของ Can, Could, Should, Must",
+          "content": "คำกริยาช่วยบอกความรู้สึกหรือน้ำหนักการทำกริยา:\n\n- can = สามารถทำได้ (Capability): The agent can search the web.\n- could = อาจเกิด (Risk/Possibility): This input could cause a memory error.\n- should = แนะนำให้ทำ (Recommendation): We should write unit tests.\n- must = ต้องทำ (Mandatory requirement): Users must verify their email."
+        },
+        {
+          "id": "L15-ACT2",
+          "type": "classify",
+          "instruction": "เลือกกริยาช่วยที่น้ำหนักความหมายเหมาะกับประโยค",
+          "question": "1. Safety rule: You ___ (must / should) encrypt passwords in DB.\n2. Feature: The user ___ (can / should) edit their name in dashboard.\n3. Bug risk: This update ___ (could / should) break the staging pipeline.\n4. Recommendation: We ___ (should / must) refactor this function.",
+          "options": ["must", "can", "could", "should"],
+          "answer": "must, can, could, should",
+          "hint": "เลือกตามกฎข้อบังคับ (must), ฟีเจอร์ที่ทำได้ (can), ความเสี่ยง (could) และ คำแนะนำทั่วไป (should)"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.80
+      }
+    },
+    {
+      "id": "L16",
+      "slug": "polite-requests",
+      "level": "A2",
+      "phase": "connector",
+      "title_th": "การขอความช่วยเหลืออย่างสุภาพ",
+      "title_en": "Polite Requests at Work",
+      "estimated_minutes": 25,
+      "prerequisites": ["L15"],
+      "goals": [
+        "ปรับระดับความเป็นกันเองเป็นความสุภาพในการถามและขอความช่วยเหลือทางเทคนิคได้ดี",
+        "แต่งประโยคเชิญเพื่อนร่วมงานช่วยดูบั๊กหรือโค้ดในรูปแบบสุภาพได้ถูกต้อง"
+      ],
+      "grammar_targets": ["polite_requests"],
+      "vocabulary_tags": ["Work", "Communication"],
+      "chunks": ["Could you take a look", "help me with this error", "give me an example", "if I missed anything", "Could you show me how"],
+      "activities": [
+        {
+          "id": "L16-ACT1",
+          "type": "concept",
+          "instruction": "ระดับประโยคคำขอ สั่งการ -> สุภาพ",
+          "content": "ปรับปรุงประโยคคำสั่งเพื่อให้สื่อสารได้นุ่มนวลและสุภาพขึ้นในการทำงาน:\n\n- สั่งตรง (ห้ามใช้กับคนร่วมงาน): Explain this code. ❌\n- ทั่วไป (ใช้กับเพื่อนสนิท): Can you explain this code?\n- สุภาพขึ้น (มาตรฐานการทำงาน): Could you explain this part to me?\n- สุภาพมาก (ขอให้สอน/อธิบาย): Could you show me how this function works?"
+        },
+        {
+          "id": "L16-ACT2",
+          "type": "dictation",
+          "instruction": "ฟังและพิมพ์คำร้องขอความช่วยเหลือสุภาพเพื่อตรวจโค้ด",
+          "answer": "Could you take a look at this code?",
+          "hint": "พิมพ์ Could ขึ้นต้นเพื่อเป็นคำร้องขอแบบทางการและสุภาพครับ"
+        },
+        {
+          "id": "L16-ACT3",
+          "type": "guided_output",
+          "instruction": "ขอให้เพื่อนร่วมงานช่วยตรวจเช็คบั๊ก โดยเขียนประโยคแจ้งปัญหาตามด้วยประโยคขอความช่วยเหลืออย่างสุภาพ 2-3 ประโยค",
+          "question": "Hello. I have an error in ... Could you ...",
+          "answer": "Hello. I have an error in the authentication route. Could you take a look at this when you have time? Thanks.",
+          "hint": "ระบุชื่อส่วนปัญหาคร่าวๆ แล้วตามด้วยประโยคคำขอ Could you take a look... ครับ"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.75
+      }
+    },
+    {
+      "id": "L17",
+      "slug": "clarification-loops",
+      "level": "A2",
+      "phase": "connector",
+      "title_th": "เมื่อฟังคู่สนทนาไม่เข้าใจ",
+      "title_en": "Clarification and Repair",
+      "estimated_minutes": 30,
+      "prerequisites": ["L16"],
+      "goals": [
+        "ใช้สำนวนภาษาอภิปรายเมื่อตามประเด็นการสื่อสารไม่ทันเพื่อหาข้อเท็จจริง",
+        "ดำเนินการสืบถามความหมายคำศัพท์เทคนิคและยืนยันประเด็นความเข้าใจได้อย่างเหมาะสม"
+      ],
+      "grammar_targets": ["clarification"],
+      "vocabulary_tags": ["Work", "Communication"],
+      "chunks": ["say that again", "speak a little more slowly", "What does it mean here", "Do you mean that", "check if I understand correctly"],
+      "activities": [
+        {
+          "id": "L17-ACT1",
+          "type": "concept",
+          "instruction": "ขั้นตอนและสำนวนแก้ไขเมื่อการคุยสะดุด/ไม่เข้าใจ",
+          "content": "ห้ามเงียบเมื่อคุยงานแล้วไม่เข้าใจ ให้ใช้สำนวนถามกลับทันที:\n\n1. ขอให้พูดซ้ำ/ช้าลง:\n   - Sorry, could you say that again?\n   - Could you speak a little more slowly?\n2. ถามความหมายคำเฉพาะ:\n   - What does 'fallback' mean here?\n3. ยืนยันประเด็นที่ตนเข้าใจ:\n   - Do you mean that the API is unavailable?\n   - Let me check if I understand correctly."
+        },
+        {
+          "id": "L17-ACT2",
+          "type": "reorder",
+          "instruction": "เรียงประโยคเพื่อขอความหมายคำอธิบายของคำเทคนิค",
+          "question": "1. mean / what / does / here / latency\n2. you / again / say / that / could",
+          "answer": "What does latency mean here?, Could you say that again?",
+          "hint": "คำถามเพื่อถามความหมายใช้โครงสร้าง What does... mean? ครับ"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.75
+      }
+    },
+    {
+      "id": "L18",
+      "slug": "small-talk",
+      "level": "A2",
+      "phase": "connector",
+      "title_th": "ชวนคุยและถามต่อ: Small Talk",
+      "title_en": "Small Talk and Follow-up",
+      "estimated_minutes": 25,
+      "prerequisites": ["L17"],
+      "goals": [
+        "สนทนาตอบรับและถามกลับเพื่อรักษารูปบทสนทนารายวันให้ลื่นไหล",
+        "ประยุกต์สูตร Answer + Detail + Question ในหัวข้อทั่วไปได้ดี"
+      ],
+      "grammar_targets": ["conversational_questions"],
+      "vocabulary_tags": ["Work", "Communication"],
+      "chunks": ["How was your weekend", "What are you working on", "get interested in", "That sounds interesting", "had dinner together"],
+      "activities": [
+        {
+          "id": "L18-ACT1",
+          "type": "concept",
+          "instruction": "สูตรคุยตอบรับไม่ให้จบบทสนทนาทันที",
+          "content": "การทำ Small Talk ไม่ควรตอบแค่คำเดียวแล้วจบ ให้ใช้สูตรนี้:\n\nสูตร: Answer + Detail + Question back\n\nตัวอย่าง:\n- Friend: How was your weekend?\n- Boss: It was good (Answer). I stayed with my family and had dinner together (Detail). How was your weekend? (Question back)"
+        },
+        {
+          "id": "L18-ACT2",
+          "type": "guided_output",
+          "instruction": "ตอบรับคำถาม 'How was your weekend?' ของเพื่อนร่วมงานด้วยสูตร 3 ส่วนอิงตามความสนใจของคุณ Boss",
+          "question": "It was ... I ... How was your weekend?",
+          "answer": "It was great. I spent time studying AI trading models and stayed at home. How was your weekend?",
+          "hint": "ระบุกิจกรรมจริง (Answer + Detail) แล้วตามด้วยคำถามย้อนกลับ (How was your weekend?)"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.75
+      }
+    },
+    {
+      "id": "L19",
+      "slug": "reading-code",
+      "level": "B1",
+      "phase": "technical",
+      "title_th": "อ่านคำอธิบายโค้ดและไลบรารี",
+      "title_en": "Reading Code Descriptions",
+      "estimated_minutes": 30,
+      "prerequisites": ["L18"],
+      "goals": [
+        "ถอดความหมายของประโยคคำอธิบายฟังก์ชันและไลบรารีขนาดกลางได้แม่นยำ",
+        "วิเคราะห์ตัวทำ เงื่อนไข และผลลัพธ์ของฟังก์ชันทางเทคนิคได้ถูกต้อง"
+      ],
+      "grammar_targets": ["passive_voice", "conditionals"],
+      "vocabulary_tags": ["Work", "Dev / Tech"],
+      "chunks": ["validates the user input", "returns an error if", "is missing", "is triggered when"],
+      "activities": [
+        {
+          "id": "L19-ACT1",
+          "type": "concept",
+          "instruction": "วิธีการแงะอ่านโครงสร้างประโยคเทคนิค",
+          "content": "ในการอ่านคู่มือโค้ดหรือข้อความเทคนิค ค้นหาโครงสร้าง 3 อย่างหลัก:\n1. Who / What (ตัวทำตัวหลักของฟังก์ชัน/คลาส)\n2. Action (มันทำหน้าที่อะไรบ้าง)\n3. Result / Condition (ผลลัพธ์ หรือ เงื่อนไขที่ทำให้เกิดขึ้น)\n\nตัวอย่างประโยค:\n- 'This function validates the user input and returns an error if the email address is missing.'\n  * Actor: This function\n  * Actions: validates, returns\n  * Condition/Result: if the email is missing / returns error"
+        },
+        {
+          "id": "L19-ACT2",
+          "type": "reading",
+          "instruction": "อ่านคำอธิบายระบบและเลือกตอบข้อคำถามทางเทคนิค",
+          "content": "This middleware checks incoming requests for valid JSON Web Tokens (JWT). It returns a 401 Unauthorized response code if the authorization header is empty or invalid.",
+          "question": "1. What does the middleware check?\n2. What condition triggers the 401 code?",
+          "options": [
+            "Incoming requests for JWT tokens",
+            "Outgoing server responses",
+            "When the header is empty or invalid",
+            "When the query parameter is present"
+          ],
+          "answer": "Incoming requests for JWT tokens, When the header is empty or invalid",
+          "hint": "วิเคราะห์ actor (middleware), action (checks, returns) และ condition (if the header is empty or invalid) ครับ"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.75
+      }
+    },
+    {
+      "id": "L20",
+      "slug": "documentation-steps",
+      "level": "B1",
+      "phase": "technical",
+      "title_th": "อ่านคู่มือและขั้นตอนการติดตั้ง",
+      "title_en": "Instructions and Documentation",
+      "estimated_minutes": 30,
+      "prerequisites": ["L19"],
+      "goals": [
+        "อ่านลำดับเงื่อนไขก่อนหลังของการติดตั้งโปรเจกต์และข้อกำหนดเทคนิคได้ถูกต้อง",
+        "สรุปขั้นตอนกระบวนการของคู่มืออ่านเข้าใจยากเป็นภาษาง่ายๆ ได้"
+      ],
+      "grammar_targets": ["imperatives", "time_connectors"],
+      "vocabulary_tags": ["Work", "Dev / Tech"],
+      "chunks": ["create a env file", "set the API key", "install dependencies", "start development server", "before you run"],
+      "activities": [
+        {
+          "id": "L20-ACT1",
+          "type": "concept",
+          "instruction": "คำศัพท์และโครงสร้างบอกลำดับการรันคำสั่ง",
+          "content": "คำกริยาขึ้นต้นประโยคคำสั่ง (Imperatives) และคำระบุลำดับเวลา:\n- Before / After / Then / Finally\n- Install, configure, create, replace, run, start\n\nตัวอย่างข้อความ:\n- 'Before you run the application, create a .env file and set the API key. Then install the dependencies and start the development server.'"
+        },
+        {
+          "id": "L20-ACT2",
+          "type": "reading",
+          "instruction": "วิเคราะห์ข้อกำหนดจากคู่มือการติดตั้งที่ระบุ",
+          "content": "To set up the server: First, configure the config.json file in the root. After config is updated, run npm run build to compile. Finally, run npm start.",
+          "question": "1. What is the first step?\n2. When should you run npm run build?\n3. What is the final start command?",
+          "options": [
+            "Configure config.json file",
+            "Run npm start",
+            "After config is updated",
+            "Before configuration",
+            "npm start"
+          ],
+          "answer": "Configure config.json file, After config is updated, npm start",
+          "hint": "สังเกตความหมายลำดับของ First, After และ Finally ในประโยคคู่มือติดตั้งครับ"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.75
+      }
+    },
+    {
+      "id": "L21",
+      "slug": "bugs-troubleshooting",
+      "level": "B1",
+      "phase": "technical",
+      "title_th": "การรายงานบั๊กและปัญหาของระบบ",
+      "title_en": "Bugs and Troubleshooting",
+      "estimated_minutes": 30,
+      "prerequisites": ["L20"],
+      "goals": [
+        "เขียนรายงานปัญหาทางเทคนิคและวิธีกู้สถานะระบบเบื้องต้นได้ครบถ้วน",
+        "ประยุกต์โครงรายงาน 5 ส่วน (Expected, Actual, Context, Attempt, Evidence) ในการทำงานจริง"
+      ],
+      "grammar_targets": ["reported_speech", "troubleshooting"],
+      "vocabulary_tags": ["Work", "Dev / Tech"],
+      "chunks": ["expected page to load", "happens when the token", "tried restarting the", "found a timeout error", "haven't found root cause"],
+      "activities": [
+        {
+          "id": "L21-ACT1",
+          "type": "concept",
+          "instruction": "โครงสร้างการอธิบายบั๊กให้ผู้อื่นเข้าใจง่าย",
+          "content": "เวลาเปิด issue หรือรายงานบั๊กให้ทีมอื่นเช็คงาน เขียนอิง 5 ส่วนหลัก:\n\n1. Expected: สิ่งที่ควรจะเกิด (e.g. I expected the page to load...)\n2. Actual: สิ่งที่เกิดขึ้นจริง (e.g. But it showed a 500 error code.)\n3. Context: ปัญหาเกิดตอนไหน/จุดใด (e.g. It happens when the token expires.)\n4. Attempt: เราลองทำอะไรไปแล้วบ้าง (e.g. I tried resetting the server.)\n5. Evidence: หลักฐานข้อผิดพลาด (e.g. I checked the logs and found a timeout.)"
+        },
+        {
+          "id": "L21-ACT2",
+          "type": "dictation",
+          "instruction": "ฟังและพิมพ์ประโยคร่วมอธิบายสาเหตุของปัญหาบั๊ก",
+          "answer": "The issue happens when the server is overloaded.",
+          "hint": "พิมพ์ประโยคบอกเหตุปัจจัยการเกิด: ...happens when (เกิดขึ้นเมื่อ) ครับ"
+        },
+        {
+          "id": "L21-ACT3",
+          "type": "guided_output",
+          "instruction": "แต่งรายงานบั๊กภาษาอังกฤษ 4 บรรทัด (Expected / Actual / Context / Attempt) อิงจากปัญหาที่คุณ Boss เคยพบในงานจริง",
+          "question": "Expected: ...\nActual: ...\nContext: ...\nAttempt: ...",
+          "answer": "Expected: The database connection stays alive. Actual: The connection drops after five minutes. Context: It happens during high load tests. Attempt: I tried raising the connection pool size.",
+          "hint": "พิมพ์สั้นๆ อธิบายความจริงและอาการของปัญหานั้นๆ ครับ"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.75
+      }
+    },
+    {
+      "id": "L22",
+      "slug": "daily-standup",
+      "level": "B1",
+      "phase": "technical",
+      "title_th": "รายงานความคืบหน้างานประจำวัน (Stand-up)",
+      "title_en": "Daily Stand-up Updates",
+      "estimated_minutes": 30,
+      "prerequisites": ["L21"],
+      "goals": [
+        "ดำเนินการรายงานความคืบหน้าประจำวันอิงอดีต ปัจจุบัน อนาคต ได้อย่างไหลลื่น",
+        "ระบุปัญหาที่เป็นตัวสกัดกั้นการทำงาน (Blockers) ได้ถูกต้องใน stand-up"
+      ],
+      "grammar_targets": ["standup_reporting"],
+      "vocabulary_tags": ["Work", "Communication", "Dev / Tech"],
+      "chunks": ["Yesterday I fixed", "Today I am going to", "My blocker is", "don't have any blockers", "update the workflow"],
+      "activities": [
+        {
+          "id": "L22-ACT1",
+          "type": "concept",
+          "instruction": "สูตรโครงสร้างการพูดรายงาน Stand-up ประจำวัน",
+          "content": "ใช้โครงสร้าง 3 ประโยคหลักในการพูดทุกเช้า:\n\n1. Yesterday: เล่าสิ่งที่เสร็จไปแล้ว (ใช้รูปอดีต/Past Simple)\n   * Yesterday, I fixed the database query bug.\n2. Today: เล่าแผนงานที่จะทำวันนี้ (ใช้ future plans / be going to)\n   * Today, I am going to build the new test pipeline.\n3. Blocker: แจ้งปัญหาติดขัด (ถ้าไม่มีบอก don't have any)\n   * My blocker is staging access config. / I don't have any blockers."
+        },
+        {
+          "id": "L22-ACT2",
+          "type": "guided_output",
+          "instruction": "เขียนข้อความรายงาน Stand-up ของตนเองประจำวันนี้ (ความยาว 3-4 ประโยค)",
+          "question": "Yesterday, I ... Today, I am going to ... I ... blockers.",
+          "answer": "Yesterday, I refactored the user verification code. Today, I am going to review the AI agent logs. I do not have any blockers.",
+          "hint": "เรียงประโยคอดีต (Yesterday), อนาคตอันสั้น (Today I am going to), และ Blocker ให้เหมาะสม"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.80
+      }
+    },
+    {
+      "id": "L23",
+      "slug": "technical-questions",
+      "level": "B1",
+      "phase": "technical",
+      "title_th": "การตั้งคำถามและถกเถียงแนวทางการออกแบบ",
+      "title_en": "Technical Questions and Trade-offs",
+      "estimated_minutes": 30,
+      "prerequisites": ["L22"],
+      "goals": [
+        "ตั้งคำถามเพื่อถกประเด็นข้อดีข้อเสีย (Trade-offs) ในการออกแบบโค้ดและดีไซน์ของระบบได้ถูกต้อง",
+        "สื่อสารข้อดี/ข้อเสียของการเลือก Library หรือสถาปัตยกรรมต่างๆ ได้"
+      ],
+      "grammar_targets": ["tradeoffs", "technical_discussion"],
+      "vocabulary_tags": ["Work", "Communication", "Dev / Tech"],
+      "chunks": ["choose this approach", "advantages and disadvantages", "is unavailable", "simpler way to implement", "affect performance"],
+      "activities": [
+        {
+          "id": "L23-ACT1",
+          "type": "concept",
+          "instruction": "ประโยคถามเปรียบเทียบหาทางออกที่ดีที่สุด (Trade-offs)",
+          "content": "คำถามเพื่อเช็คเหตุผลการทำงานและการประเมินความเสี่ยง:\n- Why did we choose this approach? (ทำไมถึงเลือกแนวทางนี้?)\n- What are the advantages and disadvantages? (ข้อดีและข้อเสียมีอะไรบ้าง?)\n- How does this affect performance? (สิ่งนี้ส่งผลต่อประสิทธิภาพอย่างไร?)\n- Is there a simpler way to implement this? (มีวิธีเขียนที่ง่ายกว่านี้ไหม?)"
+        },
+        {
+          "id": "L23-ACT2",
+          "type": "dictation",
+          "instruction": "ฟังและพิมพ์ประโยคคำถามเปรียบเทียบแนวทางเทคนิค",
+          "answer": "Why did we choose this library instead of that one?",
+          "hint": "พิมพ์: Why did we choose... (ทำไมพวกเราถึงเลือก...) ในการตั้งประโยคครับ"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.75
+      }
+    },
+    {
+      "id": "L24",
+      "slug": "final-project-explain",
+      "level": "B1",
+      "phase": "technical",
+      "title_th": "นำเสนอโครงการจริงและการตอบข้อซักถาม",
+      "title_en": "Final Project: Explain a Real Project",
+      "estimated_minutes": 35,
+      "prerequisites": ["L23"],
+      "goals": [
+        "นำเสนอและอธิบายสถาปัตยกรรมระบบ โค้ด และผลลัพธ์ของโครงการจริงที่พัฒนาอยู่ได้ 3 นาที",
+        "ประมวลผลคำศัพท์และสำนวนของบทเรียนที่ผ่านมานำมาใช้ตอบคำถามผู้ซักถามได้อย่างคล่องตัว"
+      ],
+      "grammar_targets": ["presentations", "cohesion"],
+      "vocabulary_tags": ["Work", "Communication", "Dev / Tech"],
+      "chunks": ["project involves", "solves the problem of", "built the backend module", "main challenge was", "next step is to"],
+      "activities": [
+        {
+          "id": "L24-ACT1",
+          "type": "concept",
+          "instruction": "โครงสร้างหลักสูตรการนำเสนองานวิศวกรรมสั้นๆ (Pitch)",
+          "content": "เรียงลำดับการพูดอธิบายงานจริงเป็น 6 หัวข้อหลัก:\n1. Intro: What is the project? (This project is...)\n2. Problem: What problem does it solve? (It solves...)\n3. Flow: How does it work? (First, user... then API...)\n4. Tech: What tools/frameworks? (We use TypeScript and Zod.)\n5. Output: What did you build? (I designed the verification module.)\n6. Challenge: What was hard? (The main challenge was parsing dynamic data.)"
+        },
+        {
+          "id": "L24-ACT2",
+          "type": "guided_output",
+          "instruction": "เขียนรายงานสรุปโครงการที่คุณกำลังทำอยู่ให้เพื่อนร่วมงานชาวต่างชาติเข้าใจ (ความยาวอย่างน้อย 8 ประโยคขึ้นไป)",
+          "question": "This project is a ... It helps users ... First, the system ... Then, it ... We use ... My contribution is ... The main challenge was ... In the future, we are going to ...",
+          "answer": "This project is an English vocab typing web application. It helps users improve their English skills through spaced repetition and target writing. First, the system loads the vocabulary database. Then, it tracks the user's typing errors and schedules reviews. We use Next.js, React, Tailwind CSS, Zod, and Firebase. My contribution is building the harness configuration and lesson engine. The main challenge was handling state updates within effect hooks. In the future, we are going to integrate generative AI feedback for roleplays.",
+          "hint": "รวมความรู้ทั้งหมด และใช้ศัพท์เทคนิคเฉพาะด้านความชอบของคุณ Boss มาบรรยายความจริงเลยครับ"
+        }
+      ],
+      "mastery": {
+        "recognition_accuracy": 0.85,
+        "production_accuracy": 0.75
+      }
+    }
+  ]
+}

@@ -14,10 +14,9 @@ interface UseCardSessionParams {
     difficultyMode: DifficultyMode;
     timerEnabled: boolean;
     isSpeechEnabled: boolean;
-    difficulty: string;
 }
 
-export function useCardSession({ words, difficultyMode, timerEnabled, isSpeechEnabled, difficulty }: UseCardSessionParams) {
+export function useCardSession({ words, difficultyMode, timerEnabled, isSpeechEnabled }: UseCardSessionParams) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isStarted, setIsStarted] = useState(false);
     const [isFinished, setIsFinished] = useState(false);

@@ -11,7 +11,7 @@ const db = getDatabase(app);
  * @param path ตำแหน่งใน Database เช่น "users"
  * @param data ข้อมูลที่จะเขียน
  */
-export const pushData = async (path: string, data: any) => {
+export const pushData = async (path: string, data: unknown) => {
     try {
         const listRef = ref(db, path);
         const newRef = push(listRef);
@@ -28,7 +28,7 @@ export const pushData = async (path: string, data: any) => {
  * @param path ตำแหน่งใน Database เช่น "settings/theme"
  * @param data ข้อมูลที่จะเขียน
  */
-export const setData = async (path: string, data: any) => {
+export const setData = async (path: string, data: unknown) => {
     try {
         await set(ref(db, path), data);
         return { success: true };
@@ -62,7 +62,7 @@ export const readData = async (path: string) => {
  * @param path ตำแหน่งใน Database เช่น "users/user1"
  * @param callback ฟังก์ชันที่จะทำงานเมื่อข้อมูลมีการเปลี่ยนแปลง
  */
-export const onDataChange = (path: string, callback: (data: any) => void) => {
+export const onDataChange = (path: string, callback: (data: unknown) => void) => {
     const dbRef = ref(db, path);
     const unsubscribe = onValue(dbRef, (snapshot) => {
         const data = snapshot.exists() ? snapshot.val() : null;
@@ -76,7 +76,7 @@ export const onDataChange = (path: string, callback: (data: any) => void) => {
  * @param path ตำแหน่งใน Database หลัก เช่น "users/user1"
  * @param updates ข้อมูลที่ต้องการอัปเดตแบบระบุ Key เช่น { "age": 25, "status": "active" }
  */
-export const updateData = async (path: string, updates: any) => {
+export const updateData = async (path: string, updates: Record<string, unknown>) => {
     try {
         const itemRef = ref(db, path);
         await update(itemRef, updates);

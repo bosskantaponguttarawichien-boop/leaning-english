@@ -13,12 +13,11 @@ interface UseTypingSessionParams {
     words: Word[];
     isSpeechEnabled: boolean;
     isSoundEnabled: boolean;
-    timerEnabled: boolean;
     difficulty: string;
     selectedPOS: string;
 }
 
-export function useTypingSession({ words, isSpeechEnabled, isSoundEnabled, timerEnabled, difficulty, selectedPOS }: UseTypingSessionParams) {
+export function useTypingSession({ words, isSpeechEnabled, isSoundEnabled, difficulty, selectedPOS }: UseTypingSessionParams) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isStarted, setIsStarted] = useState(false);
     const [isFinished, setIsFinished] = useState(false);

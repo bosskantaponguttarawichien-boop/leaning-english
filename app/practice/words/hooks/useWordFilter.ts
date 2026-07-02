@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import vocabData from "@/data/vocab.json";
 import { Word, VocabDBSchema } from "@/schemas/vocab.schema";
-import { getProgress, WordProgress } from "@/lib/storage";
-import { getWeightedWords, getSRSStats, SRSStats } from "@/lib/srs";
+import { getProgress } from "@/lib/storage";
+import { getWeightedWords, getSRSStats } from "@/lib/srs";
 import { DifficultyMode } from "@/components/WordCard";
 
 interface UseWordFilterParams {
@@ -13,20 +13,22 @@ interface UseWordFilterParams {
     difficultyMode: DifficultyMode;
     timerEnabled: boolean;
     isDataLoaded: boolean;
+    limit?: number;
 }
 
-export function useWordFilter({ difficulty, selectedPOS, difficultyMode, timerEnabled, isDataLoaded }: UseWordFilterParams) {
-    const [words, setWords] = useState<Word[]>([]);
-    const [allProgress, setAllProgress] = useState<Record<string, WordProgress>>({});
-    const [markedWords, setMarkedWords] = useState<Set<string>>(new Set());
-    const [stats, setStats] = useState<SRSStats | null>(null);
+export function useWordFilter({ difficulty, selectedPOS, difficultyMode, timerEnabled, isDataLoaded, limit }: UseWordFilterParams) {
+    const [markedWords, setMarkedWords] = useState<Set<string>>(() => {
+        if (typeof window === "undefined") return new Set();
+        const prog = getProgress();
+        return new Set(Object.values(prog).filter(p => p.isMarked).map(p => p.word));
+    });
 
-    // Load filtered words whenever filters or data readiness change
-    useEffect(() => {
-        if (!isDataLoaded) return;
+    // Compute filtered words list dynamically using useMemo
+    const words = useMemo(() => {
+        if (!isDataLoaded) return [];
 
         try {
-            if (!vocabData?.words) { setWords([]); return; }
+            if (!vocabData?.words) return [];
 
             const validated = VocabDBSchema.parse(vocabData);
             let filtered = validated.words;
@@ -53,26 +55,47 @@ export function useWordFilter({ difficulty, selectedPOS, difficultyMode, timerEn
                     word: w.word.replace(/\.\.\./g, " ").replace(/\s+/g, " ").trim(),
                     originalWord: w.word,
                 } as Word & { originalWord: string }));
-                if (!timerEnabled) {
+                if (!timerEnabled && !limit) {
                     weighted = weighted.slice(0, 50);
                 }
             }
 
-            setWords(weighted);
+            if (limit) {
+                weighted = weighted.slice(0, limit);
+            }
+
+            return weighted;
         } catch (error) {
             console.error("Failed to validate vocab data:", error);
-            setWords([]);
+            return [];
         }
-    }, [difficulty, selectedPOS, difficultyMode, timerEnabled, isDataLoaded]);
+    }, [difficulty, selectedPOS, difficultyMode, timerEnabled, isDataLoaded, limit]);
 
-    // Refresh progress/stats whenever words change
+    // Compute progress mapping dynamically
+    const allProgress = useMemo(() => {
+        if (!isDataLoaded) return {};
+        // Depend on markedWords to force re-evaluation on bookmark updates
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+        markedWords;
+        return getProgress();
+    }, [isDataLoaded, markedWords]);
+
+    // Compute SRS stats dynamically
+    const stats = useMemo(() => {
+        if (!isDataLoaded) return null;
+        return getSRSStats(words);
+    }, [words, isDataLoaded]);
+
+    // Sync markedWords state asynchronously after data has loaded to prevent cascading render warnings
     useEffect(() => {
         if (!isDataLoaded) return;
         const prog = getProgress();
-        setAllProgress(prog);
-        setStats(getSRSStats(words));
-        setMarkedWords(new Set(Object.values(prog).filter(p => p.isMarked).map(p => p.word)));
-    }, [words, isDataLoaded]);
+        const nextMarked = new Set(Object.values(prog).filter(p => p.isMarked).map(p => p.word));
+        const timer = setTimeout(() => {
+            setMarkedWords(nextMarked);
+        }, 0);
+        return () => clearTimeout(timer);
+    }, [isDataLoaded]);
 
     return { words, allProgress, markedWords, setMarkedWords, stats };
 }
