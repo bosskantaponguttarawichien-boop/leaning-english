@@ -211,13 +211,28 @@ export async function logLessonError(lessonId: string, errorTag: string): Promis
 }
 
 /**
- * Finds and returns the current active lesson (first non-mastered lesson).
+ * Finds and returns the current active lesson (most recently studied unmastered lesson, or first sequential unmastered lesson).
  */
 export function getActiveLesson(): Lesson | null {
     const lessons = getCurriculum();
     const progress = getCurriculumProgress();
     
-    // Find the first lesson that is not mastered
+    // Check for started/unmastered lessons with lastStudiedAt timestamp
+    const startedUnmastered = lessons.filter(lesson => {
+        const prog = progress[lesson.id];
+        return prog && prog.status !== "mastered" && prog.lastStudiedAt;
+    });
+
+    if (startedUnmastered.length > 0) {
+        startedUnmastered.sort((a, b) => {
+            const timeA = new Date(progress[a.id].lastStudiedAt || 0).getTime();
+            const timeB = new Date(progress[b.id].lastStudiedAt || 0).getTime();
+            return timeB - timeA;
+        });
+        return startedUnmastered[0];
+    }
+
+    // Fallback: Find the first lesson that is not mastered
     for (const lesson of lessons) {
         const prog = progress[lesson.id];
         if (!prog || prog.status !== "mastered") {

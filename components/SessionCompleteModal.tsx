@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { SRSStats } from "@/lib/srs";
 
 interface StatCard {
@@ -14,8 +15,6 @@ interface SessionCompleteModalProps {
     onRetry: () => void;
     backHref: string;
 }
-
-import React from "react";
 
 export default function SessionCompleteModal({ stats, details, onRetry, backHref }: SessionCompleteModalProps) {
     return (

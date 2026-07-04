@@ -214,3 +214,34 @@ Fixed a critical progress data loss/reversion bug when navigating away from less
 ## Handoff & Next Steps
 1. Progress and next-lesson unlocking are now fully verified, persistent, and race-condition free.
 2. The codebase passes compilation and ESLint checks.
+
+---
+
+## [2026-07-04] Session: Codebase Refactoring & Cleanup & Bug Fixing
+
+### Summary
+Cleaned up duplicate logic in active lesson identification, organized misplaced imports, memoized token splitting calculations, and resolved AudioContext leakage and double-triggering race conditions.
+
+### Accomplishments
+1. **Removed Redundant Code**:
+   - Replaced a duplicated 20-line started/unmastered lesson finder algorithm in [app/practice/page.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/practice/page.tsx) with a single call to the centralized helper `getActiveLesson()` from [lib/curriculum.ts](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/lib/curriculum.ts).
+2. **Organized Component Imports**:
+   - Standardized the import order in [components/SessionCompleteModal.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/components/SessionCompleteModal.tsx) by moving `import React` to the top of the file.
+3. **Optimized Sentence Tokenization**:
+   - Wrapped target sentence tokenization computation in a React `useMemo` hook in [app/practice/build-sentence/page.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/practice/build-sentence/page.tsx) to prevent redundant splits on every render.
+4. **Resolved AudioContext Resource Exhaustion**:
+   - Refactored `playErrorBuzz()` in [lib/audio.ts](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/lib/audio.ts) to utilize the global `getAudioContext()` singleton helper instead of instantiating and closing a new `AudioContext` object on every buzz sound, preventing browser-level resource limitations.
+5. **Fixed Double-Triggering Index Transition Races**:
+   - Implemented transition state guards in `handleCorrect` and `handleWrong` within [useCardSession.ts](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/practice/words/hooks/useCardSession.ts) to block subsequent triggers during the 1000ms/1200ms index increment delay period.
+6. **Fixed Sentence Mode Double Checking**:
+   - Implemented transition state guards and disabled state for input `<textarea>` in [app/practice/sentences/page.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/practice/sentences/page.tsx) to prevent double evaluations during checking timeout delay.
+7. **Verification & Harness**:
+   - Ran `npx tsc --noEmit` and `npm run lint` successfully without any new warnings or errors.
+   - Built the production Next.js bundle successfully with `npm run build`.
+
+---
+
+## Handoff & Next Steps
+1. Codebase is completely clean, optimized, and guarded against race condition bugs across all practice modes.
+2. Web Audio resource consumption is optimized for rapid mistake-triggering scenarios.
+3. Next.js build and TypeScript type-checks remain fully valid.

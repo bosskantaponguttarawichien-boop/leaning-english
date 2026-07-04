@@ -36,24 +36,20 @@ export function playErrorBeep(): void {
 
 export function playErrorBuzz(): void {
     try {
-        const AudioCtx = typeof window !== "undefined"
-            ? (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)
-            : null;
-        if (!AudioCtx) return;
+        const ctx = getAudioContext();
+        if (!ctx) return;
 
-        const ctx = new AudioCtx();
         const oscillator = ctx.createOscillator();
         const gainNode = ctx.createGain();
         oscillator.connect(gainNode);
         gainNode.connect(ctx.destination);
+
         oscillator.type = "sawtooth";
         oscillator.frequency.value = 150;
         gainNode.gain.value = 0.5;
+
         oscillator.start();
-        setTimeout(() => {
-            oscillator.stop();
-            ctx.close();
-        }, 200);
+        oscillator.stop(ctx.currentTime + 0.20);
     } catch (e) {
         console.error("Audio buzz error:", e);
     }

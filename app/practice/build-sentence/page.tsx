@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import vocabData from "@/data/vocab.json";
 import { speak } from "@/lib/speech";
@@ -40,9 +40,11 @@ export default function BuildSentencePage() {
     // Setup active sentence
     const currentWord = eligibleWords[currentIndex];
     const targetSentence = currentWord ? currentWord.example : "";
-    const cleanedTargetWords = targetSentence
-        ? targetSentence.replace(/[\.\?!,]/g, "").split(/\s+/).filter(w => w.trim() !== "")
-        : [];
+    const cleanedTargetWords = useMemo(() => {
+        return targetSentence
+            ? targetSentence.replace(/[\.\?!,]/g, "").split(/\s+/).filter(w => w.trim() !== "")
+            : [];
+    }, [targetSentence]);
 
     useEffect(() => {
         if (cleanedTargetWords.length > 0) {

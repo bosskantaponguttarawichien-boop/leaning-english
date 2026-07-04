@@ -32,6 +32,8 @@ export default function SentencePracticePage() {
     const targetSentence = sentences[currentIndex] || "";
 
     useEffect(() => {
+        if (isCorrect || isWrong) return; // Prevent double checking during transition delay
+
         if (typingValue === targetSentence && targetSentence !== "") {
             setIsCorrect(true);
             setTimeout(() => {
@@ -49,7 +51,7 @@ export default function SentencePracticePage() {
                 reset();
             }, 1000);
         }
-    }, [typingValue, targetSentence, sentences.length, reset]);
+    }, [typingValue, targetSentence, sentences.length, reset, isCorrect, isWrong]);
 
     useEffect(() => {
         if (sentences.length > 0 && currentIndex >= sentences.length && !isFinished) {
@@ -150,6 +152,7 @@ export default function SentencePracticePage() {
                         autoFocus
                         autoCapitalize="none"
                         rows={3}
+                        disabled={isCorrect || isWrong}
                         className={`w-full p-6 text-2xl border-2 rounded-2xl outline-none transition-all resize-none shadow-sm dark:text-white ${isCorrect
                             ? "border-green-500 bg-green-50 dark:bg-green-900/20"
                             : isWrong

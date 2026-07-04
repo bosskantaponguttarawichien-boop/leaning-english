@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, use } from "react";
 import Link from "next/link";
-import { getCurriculum, getLessonProgress, updateLessonProgress, logLessonError } from "@/lib/curriculum";
+import { getCurriculum, getLessonProgress, updateLessonProgress, logLessonError, syncCurriculumProgressFromDB } from "@/lib/curriculum";
 import { Lesson } from "@/schemas/curriculum.schema";
 import { Skeleton } from "@/components/ui/skeleton";
 import SessionCompleteModal from "@/components/SessionCompleteModal";
@@ -34,6 +34,9 @@ export default function LessonActivePage({ params }: LessonPageProps) {
     useEffect(() => {
         const init = async () => {
             try {
+                // Sync from Firebase DB to local cache first
+                await syncCurriculumProgressFromDB();
+
                 const list = getCurriculum();
                 const found = list.find(l => l.id === id);
                 if (found) {

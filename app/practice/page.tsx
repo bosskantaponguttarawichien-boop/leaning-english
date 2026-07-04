@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { getCurriculum, syncCurriculumProgressFromDB } from "@/lib/curriculum";
+import { getCurriculum, syncCurriculumProgressFromDB, getActiveLesson } from "@/lib/curriculum";
 import { Lesson, LessonProgress } from "@/schemas/curriculum.schema";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -46,12 +46,8 @@ export default function PracticeMenuPage() {
                 const list = getCurriculum();
                 setLessons(list);
 
-                // Find active lesson (first unmastered lesson)
-                const active = list.find(lesson => {
-                    const prog = progData[lesson.id];
-                    return !prog || prog.status !== "mastered";
-                }) || list[list.length - 1] || null;
-
+                // Find active lesson using central helper
+                const active = getActiveLesson();
                 setActiveLesson(active);
             } catch (err) {
                 console.error("Failed to load curriculum data for Today page:", err);

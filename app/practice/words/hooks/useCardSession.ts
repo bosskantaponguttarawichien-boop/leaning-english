@@ -63,6 +63,8 @@ export function useCardSession({ words, difficultyMode, timerEnabled, isSpeechEn
     }, [timerEnabled, difficultyMode]);
 
     const handleCorrect = useCallback(() => {
+        if (isCorrect || isWrong) return; // Prevent double-triggering during transition delay
+
         const now = Date.now();
         if (!isStarted) {
             setIsStarted(true);
@@ -109,9 +111,11 @@ export function useCardSession({ words, difficultyMode, timerEnabled, isSpeechEn
                 setTypingValue("");
             }
         }, 1200);
-    }, [words, currentIndex, isStarted, isSpeechEnabled, timerEnabled, totalChars, correctCount, sessionWrongCount, difficultyMode]);
+    }, [words, currentIndex, isStarted, isSpeechEnabled, timerEnabled, totalChars, correctCount, sessionWrongCount, difficultyMode, isCorrect, isWrong]);
 
     const handleWrong = useCallback(() => {
+        if (isCorrect || isWrong) return; // Prevent double-triggering during transition delay
+
         const now = Date.now();
         if (!isStarted) {
             setIsStarted(true);
@@ -155,7 +159,7 @@ export function useCardSession({ words, difficultyMode, timerEnabled, isSpeechEn
                 setTypingValue("");
             }
         }, 1000);
-    }, [words, currentIndex, isStarted, timerEnabled, totalChars, correctCount, sessionWrongCount, difficultyMode]);
+    }, [words, currentIndex, isStarted, timerEnabled, totalChars, correctCount, sessionWrongCount, difficultyMode, isCorrect, isWrong]);
 
     const handleTimeup = useCallback(() => {
         finishSession(correctCount, sessionWrongCount, totalChars);
