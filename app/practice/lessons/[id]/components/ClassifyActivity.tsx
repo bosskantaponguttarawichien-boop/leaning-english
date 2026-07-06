@@ -90,7 +90,15 @@ export default function ClassifyActivity({ activity, onComplete, onErrorLogged }
                     const isQuestionWrong = isChecked && userAnswers[idx] !== correctAnswers[idx];
 
                     // Replace the "___" with a drop down select box
-                    const textParts = q.split("___");
+                    let textParts = q.split("___");
+                    if (textParts.length === 1) {
+                        // Fallback: If "___" is missing, check for a parenthesized segment like (word)
+                        const match = q.match(/\(([^)]+)\)/);
+                        if (match) {
+                            const index = q.indexOf(match[0]);
+                            textParts = [q.substring(0, index), q.substring(index)];
+                        }
+                    }
                     return (
                         <div key={idx} className={`p-4 rounded-2xl border flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-all ${
                             isQuestionCorrect ? "bg-green-50/50 dark:bg-green-950/10 border-green-200 dark:border-green-900/30" : 

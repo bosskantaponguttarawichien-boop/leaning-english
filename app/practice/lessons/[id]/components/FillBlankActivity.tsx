@@ -96,7 +96,15 @@ export default function FillBlankActivity({ activity, onComplete, onErrorLogged 
                     const isInputCorrect = isChecked && userAnswers[idx].trim().toLowerCase().replace(/[\.\?!,]/g, "") === correctAnswers[idx].toLowerCase().replace(/[\.\?!,]/g, "");
                     const isInputWrong = isChecked && !isInputCorrect;
 
-                    const parts = q.split("___");
+                    let parts = q.split("___");
+                    if (parts.length === 1) {
+                        // Fallback: If "___" is missing, check for a parenthesized segment like (word)
+                        const match = q.match(/\(([^)]+)\)/);
+                        if (match) {
+                            const index = q.indexOf(match[0]);
+                            parts = [q.substring(0, index), q.substring(index)];
+                        }
+                    }
 
                     return (
                         <div key={idx} className={`p-4 rounded-2xl border flex flex-col gap-3 transition-all ${

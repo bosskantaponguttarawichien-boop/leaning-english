@@ -204,7 +204,7 @@
           "id": "L04-ACT2",
           "type": "transform",
           "instruction": "เปลี่ยนรูปคำกริยาในวงเล็บให้ถูกต้องตามประธาน",
-          "question": "1. I usually (start) my day at 9 a.m.\n2. The system (send) a response automatically.\n3. The backend (validate) user input.\n4. We (use) GitHub for collaboration.\n5. The cron job (run) every hour.",
+          "question": "1. I usually ___ (start) my day at 9 a.m.\n2. The system ___ (send) a response automatically.\n3. The backend ___ (validate) user input.\n4. We ___ (use) GitHub for collaboration.\n5. The cron job ___ (run) every hour.",
           "answer": "start, sends, validates, use, runs",
           "hint": "สังเกตว่าประธานเป็นสิ่งเดียว (เอกพจน์: The system, The backend, The cron job) หรือหลายสิ่ง/ฉัน (I, We)"
         },
@@ -401,7 +401,7 @@
           "id": "L08-ACT2",
           "type": "classify",
           "instruction": "เลือกฟอร์มกริยาที่สอดคล้องกับสถานการณ์ที่กำหนด",
-          "question": "1. Usually, I (code / am coding) in TypeScript.\n2. Look! The server (reboots / is rebooting) right now.\n3. The function usually (returns / is returning) a boolean.\n4. Today, we (test / are testing) the database connection.",
+          "question": "1. Usually, I ___ (code / am coding) in TypeScript.\n2. Look! The server ___ (reboots / is rebooting) right now.\n3. The function usually ___ (returns / is returning) a boolean.\n4. Today, we ___ (test / are testing) the database connection.",
           "options": ["code", "am coding", "reboots", "is rebooting", "returns", "is returning", "test", "are testing"],
           "answer": "code, is rebooting, returns, are testing",
           "hint": "สังเกตคำบอกเวลา เช่น usually (กิจวัตร -> Simple) หรือ look!, right now, today (ตอนนี้นั้นๆ -> Continuous)"
@@ -648,7 +648,7 @@
           "id": "L14-ACT2",
           "type": "fill_blank",
           "instruction": "เลือกเติม Adjective หรือ Adverb ให้ตรงประโยค",
-          "question": "1. This function is very (simple / simply).\n2. The system saves the configuration data (automatic / automatically).\n3. We need a (reliable / reliably) database service.\n4. The agent handles user messages (correct / correctly).",
+          "question": "1. This function is very ___ (simple / simply).\n2. The system saves the configuration data ___ (automatic / automatically).\n3. We need a ___ (reliable / reliably) database service.\n4. The agent handles user messages ___ (correct / correctly).",
           "answer": "simple, automatically, reliable, correctly",
           "hint": "เช็คคำที่ถูกขยาย: ขยายประธานหลัง verb to be (simple, reliable) หรือ ขยายวิธีการทำงานของกริยาหลัก (automatically, correctly)"
         }
