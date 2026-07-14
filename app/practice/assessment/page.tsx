@@ -181,7 +181,7 @@ export default function MonthlyAssessmentPage() {
                                     className={`w-full text-left p-4 rounded-xl border text-sm font-bold transition-all ${
                                         listeningAnswer === opt.id
                                             ? "bg-blue-50 dark:bg-blue-950/30 text-blue-700 dark:text-blue-300 border-blue-400"
-                                            : "bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 border-zinc-200 dark:border-zinc-750 hover:bg-zinc-50"
+                                            : "bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50"
                                     }`}
                                 >
                                     {opt.label}
@@ -228,7 +228,7 @@ export default function MonthlyAssessmentPage() {
                                     className={`w-full text-left p-4 rounded-xl border text-sm font-bold transition-all ${
                                         readingAnswer === opt.id
                                             ? "bg-blue-50 dark:bg-blue-950/30 text-blue-700 dark:text-blue-300 border-blue-400"
-                                            : "bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 border-zinc-200 dark:border-zinc-750 hover:bg-zinc-50"
+                                            : "bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50"
                                     }`}
                                 >
                                     {opt.label}

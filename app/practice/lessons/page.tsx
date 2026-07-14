@@ -122,7 +122,7 @@ export default function LessonsCatalogPage() {
                             return (
                                 <div
                                     key={lesson.id}
-                                    className="p-8 rounded-3xl border border-zinc-100 dark:border-zinc-800 bg-white/50 dark:bg-zinc-850 opacity-55 cursor-not-allowed select-none shadow-sm"
+                                    className="p-8 rounded-3xl border border-zinc-100 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900 opacity-55 cursor-not-allowed select-none shadow-sm"
                                 >
                                     {cardContent}
                                 </div>

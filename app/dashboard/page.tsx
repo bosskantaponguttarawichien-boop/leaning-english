@@ -192,20 +192,20 @@ export default function StatsDashboardPage() {
                                 const barPercent = maxCount > 0 ? Math.round((tag.count / maxCount) * 100) : 0;
 
                                 return (
-                                    <div key={tag.key} className="flex flex-col gap-2 p-5 bg-zinc-50 dark:bg-zinc-900/30 border border-zinc-100 dark:border-zinc-850 rounded-2xl">
+                                    <div key={tag.key} className="flex flex-col gap-2 p-5 bg-zinc-50 dark:bg-zinc-900/30 border border-zinc-100 dark:border-zinc-800 rounded-2xl">
                                         <div className="flex justify-between items-start">
                                             <div>
-                                                <h4 className="text-sm font-black text-zinc-850 dark:text-zinc-200">{tag.label}</h4>
+                                                <h4 className="text-sm font-black text-zinc-800 dark:text-zinc-200">{tag.label}</h4>
                                                 <p className="text-xs text-zinc-400 font-semibold mt-0.5">{tag.desc}</p>
                                             </div>
                                             <span className="text-xs font-black text-red-500 bg-red-50 dark:bg-red-950/20 px-2.5 py-1 rounded-full">{tag.count} times</span>
                                         </div>
 
-                                        <div className="w-full bg-zinc-200 dark:bg-zinc-850 h-2 rounded-full overflow-hidden mt-1">
+                                        <div className="w-full bg-zinc-200 dark:bg-zinc-800 h-2 rounded-full overflow-hidden mt-1">
                                             <div className="bg-red-500 h-full" style={{ width: `${barPercent}%` }} />
                                         </div>
 
-                                        <div className="mt-2 text-xs font-semibold text-zinc-500 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-850 p-2.5 rounded-xl border border-zinc-200/20 dark:border-zinc-800">
+                                        <div className="mt-2 text-xs font-semibold text-zinc-500 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800 p-2.5 rounded-xl border border-zinc-200/20 dark:border-zinc-800">
                                             <strong className="text-blue-500">Study Advice: </strong> {tag.tip}
                                         </div>
                                     </div>

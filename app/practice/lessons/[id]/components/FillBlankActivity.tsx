@@ -124,7 +124,7 @@ export default function FillBlankActivity({ activity, onComplete, onErrorLogged 
                                         className={`mx-2 px-3 py-1 font-bold rounded-xl border font-mono text-sm focus:outline-none transition-all ${
                                             isChecked
                                                 ? (isInputCorrect ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 border-green-300 w-36" : "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 border-red-300 w-36")
-                                                : "bg-white dark:bg-zinc-850 text-zinc-800 dark:text-white border-zinc-300 dark:border-zinc-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 w-36"
+                                                : "bg-white dark:bg-zinc-900 text-zinc-800 dark:text-white border-zinc-300 dark:border-zinc-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 w-36"
                                         }`}
                                     />
                                 )}

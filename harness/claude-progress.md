@@ -245,3 +245,40 @@ Cleaned up duplicate logic in active lesson identification, organized misplaced 
 1. Codebase is completely clean, optimized, and guarded against race condition bugs across all practice modes.
 2. Web Audio resource consumption is optimized for rapid mistake-triggering scenarios.
 3. Next.js build and TypeScript type-checks remain fully valid.
+
+---
+
+## [2026-07-14] Session: Dark Mode Input Visibility & Invalid Tailwind Colors Fix
+
+### Summary
+Fixed a critical usability bug where input fields and select dropdowns rendered as white text on a white background in dark mode, making typing invisible. Cleaned up invalid Tailwind CSS color classes (`zinc-850`, `zinc-750`, `zinc-150`) across the entire codebase and replaced them with standard Tailwind v4 color classes.
+
+### Accomplishments
+1. **Fixed Dark Mode Input Visibility**:
+   - Corrected `FillBlankActivity.tsx` and `ClassifyActivity.tsx` styles by replacing invalid `dark:bg-zinc-850` with standard `dark:bg-zinc-900`. This ensures input fields and dropdown selectors have dark backgrounds in dark mode, making white text fully legible.
+2. **Replaced Invalid Tailwind Color Classes**:
+   - Replaced invalid `zinc-850`, `zinc-750`, and `zinc-150` classes in multiple UI components and pages:
+     - [FillBlankActivity.tsx](file:///c:/Users/boss_/Documents/GitHub/leaning-english/app/practice/lessons/[id]/components/FillBlankActivity.tsx)
+     - [ClassifyActivity.tsx](file:///c:/Users/boss_/Documents/GitHub/leaning-english/app/practice/lessons/[id]/components/ClassifyActivity.tsx)
+     - [ReadingActivity.tsx](file:///c:/Users/boss_/Documents/GitHub/leaning-english/app/practice/lessons/[id]/components/ReadingActivity.tsx)
+     - [ReorderActivity.tsx](file:///c:/Users/boss_/Documents/GitHub/leaning-english/app/practice/lessons/[id]/components/ReorderActivity.tsx)
+     - [SessionCompleteModal.tsx](file:///c:/Users/boss_/Documents/GitHub/leaning-english/components/SessionCompleteModal.tsx)
+     - [BackupManager.tsx](file:///c:/Users/boss_/Documents/GitHub/leaning-english/components/BackupManager.tsx)
+     - [app/practice/page.tsx](file:///c:/Users/boss_/Documents/GitHub/leaning-english/app/practice/page.tsx)
+     - [app/practice/lessons/page.tsx](file:///c:/Users/boss_/Documents/GitHub/leaning-english/app/practice/lessons/page.tsx)
+     - [app/practice/build-sentence/page.tsx](file:///c:/Users/boss_/Documents/GitHub/leaning-english/app/practice/build-sentence/page.tsx)
+     - [app/practice/assessment/page.tsx](file:///c:/Users/boss_/Documents/GitHub/leaning-english/app/practice/assessment/page.tsx)
+     - [app/practice/ai-tutor/page.tsx](file:///c:/Users/boss_/Documents/GitHub/leaning-english/app/practice/ai-tutor/page.tsx)
+     - [app/dashboard/page.tsx](file:///c:/Users/boss_/Documents/GitHub/leaning-english/app/dashboard/page.tsx)
+3. **Reverted Debug Logs**:
+   - Reverted temporary state check logs from `FillBlankActivity.tsx`.
+4. **Verification & Harness**:
+   - Ran `.\harness\init.ps1` successfully with all linter checks and type compilation passing cleanly.
+   - Built the production Next.js application package successfully using `npm run build`.
+
+---
+
+## Handoff & Next Steps
+1. All inputs and selection boxes in dark mode are fully visible, legible, and compatible with Tailwind CSS v4 styling standards.
+2. Codebase successfully compiles and passes Next.js production builds.
+3. No further dark mode text rendering issues detected.

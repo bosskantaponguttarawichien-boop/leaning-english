@@ -299,7 +299,7 @@ IMPORTANT: Respond strictly in JSON format matching this schema:
                         </div>
 
                         {/* Optional OpenAI API configuration */}
-                        <div className="p-5 bg-zinc-50 dark:bg-zinc-900 border border-zinc-150 dark:border-zinc-850 rounded-2xl flex flex-col gap-3">
+                        <div className="p-5 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl flex flex-col gap-3">
                             <div className="flex justify-between items-center">
                                 <label className="text-xs font-black uppercase tracking-wider text-zinc-400">OpenAI API Key (Optional):</label>
                                 {savedKey && (
@@ -351,7 +351,7 @@ IMPORTANT: Respond strictly in JSON format matching this schema:
                         {/* Chat Header */}
                         <div className="p-4 border-b border-zinc-100 dark:border-zinc-700/50 flex justify-between items-center bg-zinc-50/50 dark:bg-zinc-900/20 rounded-t-3xl">
                             <div>
-                                <h3 className="font-extrabold text-sm text-zinc-850 dark:text-white leading-tight">{selectedScenario.title}</h3>
+                                <h3 className="font-extrabold text-sm text-zinc-800 dark:text-white leading-tight">{selectedScenario.title}</h3>
                                 <span className="text-[10px] uppercase font-black tracking-widest text-zinc-400">Coach strictness: {coachMode}</span>
                             </div>
                             <button
@@ -370,7 +370,7 @@ IMPORTANT: Respond strictly in JSON format matching this schema:
                                     <div key={idx} className={`flex flex-col max-w-[85%] ${isTutor ? "self-start items-start" : "self-end items-end"}`}>
                                         <div className={`p-4 rounded-2xl text-sm font-semibold leading-relaxed shadow-sm ${
                                             isTutor
-                                                ? "bg-zinc-100 dark:bg-zinc-900 text-zinc-850 dark:text-zinc-200 rounded-tl-none border border-zinc-200/40 dark:border-zinc-800"
+                                                ? "bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 rounded-tl-none border border-zinc-200/40 dark:border-zinc-800"
                                                 : "bg-blue-600 text-white rounded-tr-none"
                                         }`}>
                                             {msg.content}

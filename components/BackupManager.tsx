@@ -83,7 +83,7 @@ export default function BackupManager() {
     };
 
     return (
-        <div className="p-6 rounded-3xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-150 dark:border-zinc-800 flex flex-col gap-4">
+        <div className="p-6 rounded-3xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 flex flex-col gap-4">
             <div>
                 <h4 className="text-base font-extrabold text-zinc-900 dark:text-white">Backup & Data Recovery</h4>
                 <p className="text-xs font-semibold text-zinc-500 dark:text-zinc-400 mt-0.5">Export your progress database or restore from a previous local backup file.</p>
@@ -99,7 +99,7 @@ export default function BackupManager() {
                 </button>
 
                 {/* Import File Button */}
-                <label className="px-5 py-3 bg-white dark:bg-zinc-850 hover:bg-zinc-50 dark:hover:bg-zinc-750 text-zinc-850 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-750 font-extrabold text-xs rounded-2xl transition-all shadow-sm cursor-pointer text-center relative overflow-hidden">
+                <label className="px-5 py-3 bg-white dark:bg-zinc-900 hover:bg-zinc-50 dark:hover:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-800 font-extrabold text-xs rounded-2xl transition-all shadow-sm cursor-pointer text-center relative overflow-hidden">
                     📤 Restore Backup File
                     <input
                         type="file"

@@ -115,7 +115,7 @@ export default function ClassifyActivity({ activity, onComplete, onErrorLogged }
                                         className={`px-3 py-1.5 font-bold font-mono rounded-xl border text-sm focus:outline-none transition-all ${
                                             isChecked 
                                                 ? (isQuestionCorrect ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 border-green-300" : "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 border-red-300") 
-                                                : "bg-white dark:bg-zinc-850 text-zinc-800 dark:text-white border-zinc-300 dark:border-zinc-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                                                : "bg-white dark:bg-zinc-900 text-zinc-800 dark:text-white border-zinc-300 dark:border-zinc-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                                         }`}
                                     >
                                         <option value="" disabled>-- select --</option>

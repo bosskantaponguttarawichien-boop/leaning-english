@@ -64,15 +64,15 @@ export function SRSDetails({ stats, elapsedTime, wordCount, correctCharCount, to
             <div className="w-full bg-zinc-50 dark:bg-zinc-800 p-4 rounded-2xl border border-zinc-100 dark:border-zinc-700 text-left text-sm text-zinc-500 dark:text-zinc-400 flex flex-col gap-2">
                 <div className="flex justify-between">
                     <span className="font-bold">Words Completed:</span>
-                    <span className="font-black text-zinc-850 dark:text-zinc-200">{wordCount}</span>
+                    <span className="font-black text-zinc-800 dark:text-zinc-200">{wordCount}</span>
                 </div>
                 <div className="flex justify-between">
                     <span className="font-bold">Elapsed Time:</span>
-                    <span className="font-black text-zinc-850 dark:text-zinc-200">{elapsedTime}s</span>
+                    <span className="font-black text-zinc-800 dark:text-zinc-200">{elapsedTime}s</span>
                 </div>
                 <div className="flex justify-between">
                     <span className="font-bold">Keystrokes:</span>
-                    <span className="font-black text-zinc-850 dark:text-zinc-200">{correctCharCount} correct / {totalTypedCharCount} total</span>
+                    <span className="font-black text-zinc-800 dark:text-zinc-200">{correctCharCount} correct / {totalTypedCharCount} total</span>
                 </div>
             </div>
         );

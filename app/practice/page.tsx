@@ -254,7 +254,7 @@ export default function PracticeMenuPage() {
                 <div className="flex flex-col">
                     <button
                         onClick={() => setShowMore(!showMore)}
-                        className="w-full flex items-center justify-between p-5 bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-850 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 rounded-2xl border border-zinc-200/60 dark:border-zinc-700/60 transition-all font-black text-sm"
+                        className="w-full flex items-center justify-between p-5 bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-900 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 rounded-2xl border border-zinc-200/60 dark:border-zinc-700/60 transition-all font-black text-sm"
                     >
                         <span className="flex items-center gap-2">🛠️ ฝึกเพิ่มเติม (เครื่องมือฝึกอิสระ)</span>
                         <svg

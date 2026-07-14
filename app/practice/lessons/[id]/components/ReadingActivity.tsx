@@ -106,7 +106,7 @@ export default function ReadingActivity({ activity, onComplete, onErrorLogged }:
                                         const isSelected = userAnswers[qIdx] === opt;
                                         const isCorrectOpt = opt === correctAnswers[qIdx];
                                         
-                                        let btnStyle = "bg-white dark:bg-zinc-850 hover:bg-zinc-50 dark:hover:bg-zinc-750 text-zinc-800 dark:text-zinc-200 border-zinc-200 dark:border-zinc-700";
+                                        let btnStyle = "bg-white dark:bg-zinc-900 hover:bg-zinc-50 dark:hover:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border-zinc-200 dark:border-zinc-700";
                                         if (isSelected) {
                                             btnStyle = "bg-blue-50 dark:bg-blue-950/45 text-blue-700 dark:text-blue-300 border-blue-400 dark:border-blue-800 font-extrabold";
                                         }

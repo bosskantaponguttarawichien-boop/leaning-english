@@ -166,7 +166,7 @@ export default function ReorderActivity({ activity, onComplete, onErrorLogged }:
                         <div key={qIdx} className={`p-5 rounded-2xl border flex flex-col gap-4 transition-all ${
                             isQCorrect ? "bg-green-50/50 dark:bg-green-950/10 border-green-200 dark:border-green-900/30" : 
                             isQWrong ? "bg-red-50/50 dark:bg-red-950/10 border-red-200 dark:border-red-900/30" :
-                            "bg-zinc-50/50 dark:bg-zinc-900/50 border-zinc-100 dark:border-zinc-850"
+                            "bg-zinc-50/50 dark:bg-zinc-900/50 border-zinc-100 dark:border-zinc-800"
                         }`}>
                             {/* Question context number */}
                             <span className="text-xs uppercase tracking-widest font-black text-zinc-400">Sentence {qIdx + 1}</span>
