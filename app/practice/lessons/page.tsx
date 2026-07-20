@@ -35,12 +35,12 @@ export default function LessonsCatalogPage() {
             <main className="flex min-h-screen flex-col items-center px-6 py-12 bg-background text-foreground tracking-tight">
                 <div className="w-full max-w-4xl flex flex-col gap-10">
                     <div className="flex flex-col gap-2">
-                        <Skeleton className="h-10 w-64 rounded-md" />
-                        <Skeleton className="h-5 w-48 rounded-md" />
+                        <Skeleton className="h-10 w-64 rounded-xl" />
+                        <Skeleton className="h-5 w-48 rounded-xl" />
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {[1, 2, 3, 4].map(i => (
-                            <Skeleton key={i} className="h-64 w-full rounded-md" />
+                            <Skeleton key={i} className="h-64 w-full rounded-xl" />
                         ))}
                     </div>
                 </div>
@@ -122,7 +122,7 @@ export default function LessonsCatalogPage() {
                             return (
                                 <div
                                     key={lesson.id}
-                                    className="p-8 rounded-md border border-ink/10 dark:border-zinc-800 bg-canvas/50 dark:bg-zinc-900/50 opacity-55 cursor-not-allowed select-none shadow-none"
+                                    className="p-8 rounded-xl border border-ink/10 dark:border-zinc-800 bg-canvas/50 dark:bg-zinc-900/50 opacity-55 cursor-not-allowed select-none shadow-none"
                                 >
                                     {cardContent}
                                 </div>
@@ -133,7 +133,7 @@ export default function LessonsCatalogPage() {
                             <Link
                                 key={lesson.id}
                                 href={`/practice/lessons/${lesson.id}`}
-                                className="group p-8 rounded-md border border-ink/10 dark:border-zinc-800 bg-canvas dark:bg-zinc-900 shadow-none hover:bg-hume-lavender/5 dark:hover:bg-hume-lavender/5 transition-all cursor-pointer"
+                                className="group p-8 rounded-xl border border-ink/10 dark:border-zinc-800 bg-canvas dark:bg-zinc-900 shadow-none hover:bg-hume-lavender/5 dark:hover:bg-hume-lavender/5 transition-all cursor-pointer"
                             >
                                 {cardContent}
                             </Link>

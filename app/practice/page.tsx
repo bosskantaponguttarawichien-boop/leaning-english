@@ -107,14 +107,14 @@ export default function PracticeMenuPage() {
             <main className="flex min-h-screen flex-col items-center px-6 py-12 bg-background text-foreground tracking-tight">
                 <div className="w-full max-w-2xl flex flex-col gap-10">
                     <div className="flex flex-col gap-2">
-                        <Skeleton className="h-10 w-48 rounded-md" />
-                        <Skeleton className="h-5 w-64 rounded-md" />
+                        <Skeleton className="h-10 w-48 rounded-xl" />
+                        <Skeleton className="h-5 w-64 rounded-xl" />
                     </div>
-                    <Skeleton className="h-64 w-full rounded-md" />
+                    <Skeleton className="h-64 w-full rounded-xl" />
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <Skeleton className="h-32 w-full rounded-md" />
-                        <Skeleton className="h-32 w-full rounded-md" />
-                        <Skeleton className="h-32 w-full rounded-md" />
+                        <Skeleton className="h-32 w-full rounded-xl" />
+                        <Skeleton className="h-32 w-full rounded-xl" />
+                        <Skeleton className="h-32 w-full rounded-xl" />
                     </div>
                 </div>
             </main>
@@ -193,7 +193,7 @@ export default function PracticeMenuPage() {
                         {/* Daily Review */}
                         <Link
                             href="/practice/words?limit=5"
-                            className="group bg-canvas dark:bg-zinc-900 border border-ink/10 dark:border-zinc-800 p-6 rounded-md shadow-none hover:bg-hume-lavender/5 dark:hover:bg-hume-lavender/5 transition-all flex flex-col justify-between min-h-[140px]"
+                            className="group bg-canvas dark:bg-zinc-900 border border-ink/10 dark:border-zinc-800 p-6 rounded-xl shadow-none hover:bg-hume-lavender/5 dark:hover:bg-hume-lavender/5 transition-all flex flex-col justify-between min-h-[140px]"
                         >
                             <div className="flex flex-col gap-1">
                                 <div className="text-2xl">🧠</div>
@@ -210,7 +210,7 @@ export default function PracticeMenuPage() {
                         </Link>
 
                         {/* Progress */}
-                        <div className="bg-canvas dark:bg-zinc-900 border border-ink/10 dark:border-zinc-800 p-6 rounded-md shadow-none flex flex-col justify-between min-h-[140px]">
+                        <div className="bg-canvas dark:bg-zinc-900 border border-ink/10 dark:border-zinc-800 p-6 rounded-xl shadow-none flex flex-col justify-between min-h-[140px]">
                             <div className="flex flex-col gap-1">
                                 <div className="text-2xl">📈</div>
                                 <h4 className="font-display text-base font-semibold text-ink dark:text-canvas-cream mt-2 leading-none">
@@ -225,12 +225,12 @@ export default function PracticeMenuPage() {
                                 <div
                                     className="bg-hume-mint h-full transition-all duration-500"
                                     style={{ width: `${(masteredCount / (lessons.length || 1)) * 100}%` }}
-                                />
+                                  />
                             </div>
                         </div>
 
                         {/* Current Focus */}
-                        <div className="bg-canvas dark:bg-zinc-900 border border-ink/10 dark:border-zinc-800 p-6 rounded-md shadow-none flex flex-col min-h-[140px]">
+                        <div className="bg-canvas dark:bg-zinc-900 border border-ink/10 dark:border-zinc-800 p-6 rounded-xl shadow-none flex flex-col min-h-[140px]">
                             <div className="text-2xl">🎯</div>
                             <h4 className="font-display text-base font-semibold text-ink dark:text-canvas-cream mt-2 leading-none">
                                 จุดที่กำลังฝึก
@@ -246,7 +246,7 @@ export default function PracticeMenuPage() {
                 <div className="flex flex-col">
                     <button
                         onClick={() => setShowMore(!showMore)}
-                        className="w-full flex items-center justify-between p-5 bg-canvas-cream dark:bg-black/20 hover:bg-hume-lavender/10 text-ink dark:text-canvas-cream rounded-md border border-ink/10 dark:border-zinc-800 transition-all font-mono uppercase text-xs tracking-wider font-bold cursor-pointer focus:outline-none"
+                        className="w-full flex items-center justify-between p-5 bg-canvas-cream dark:bg-black/20 hover:bg-hume-lavender/10 text-ink dark:text-canvas-cream rounded-xl border border-ink/10 dark:border-zinc-800 transition-all font-mono uppercase text-xs tracking-wider font-bold cursor-pointer focus:outline-none"
                     >
                         <span className="flex items-center gap-2">🛠️ ฝึกเพิ่มเติม (เครื่องมือฝึกอิสระ)</span>
                         <svg
@@ -267,7 +267,7 @@ export default function PracticeMenuPage() {
                                 <Link
                                     key={idx}
                                     href={mode.href}
-                                    className="group p-5 rounded-md border border-ink/10 dark:border-zinc-800 bg-canvas dark:bg-zinc-900 shadow-none hover:bg-hume-lavender/5 dark:hover:bg-hume-lavender/5 transition-all cursor-pointer flex gap-4 items-start"
+                                    className="group p-5 rounded-xl border border-ink/10 dark:border-zinc-800 bg-canvas dark:bg-zinc-900 shadow-none hover:bg-hume-lavender/5 dark:hover:bg-hume-lavender/5 transition-all cursor-pointer flex gap-4 items-start"
                                 >
                                     <div className="w-10 h-10 rounded-md bg-canvas-cream dark:bg-black/20 flex items-center justify-center text-xl shrink-0 border border-ink/5 dark:border-zinc-800">
                                         {mode.icon}
