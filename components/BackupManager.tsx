@@ -8,7 +8,6 @@ export default function BackupManager() {
 
     const handleExport = () => {
         try {
-            // Retrieve all relevant learning keys from localStorage
             const keysToBackup = [
                 "englist_progress_v2",
                 "englist_curriculum_progress_v1",
@@ -21,7 +20,6 @@ export default function BackupManager() {
                 backupData[key] = localStorage.getItem(key);
             });
 
-            // Create file payload
             const jsonString = `data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(backupData, null, 2))}`;
             const downloadAnchor = document.createElement("a");
             
@@ -52,13 +50,11 @@ export default function BackupManager() {
                 const jsonText = event.target?.result as string;
                 const importedData = JSON.parse(jsonText);
 
-                // Simple validation check
                 const keys = Object.keys(importedData);
                 if (keys.length === 0 || !keys.some(k => k.includes("progress") || k.includes("englist") || k.includes("assessments"))) {
                     throw new Error("Invalid backup format");
                 }
 
-                // Restore items to localStorage
                 keys.forEach(key => {
                     if (importedData[key] !== null) {
                         localStorage.setItem(key, importedData[key]);
@@ -68,7 +64,6 @@ export default function BackupManager() {
                 setStatusMessage("Progress restored successfully! Reloading page... 🔄");
                 setIsError(false);
 
-                // Reload the page to refresh app state
                 setTimeout(() => {
                     window.location.reload();
                 }, 1500);
@@ -83,23 +78,24 @@ export default function BackupManager() {
     };
 
     return (
-        <div className="p-6 rounded-3xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 flex flex-col gap-4">
-            <div>
-                <h4 className="text-base font-extrabold text-zinc-900 dark:text-white">Backup & Data Recovery</h4>
-                <p className="text-xs font-semibold text-zinc-500 dark:text-zinc-400 mt-0.5">Export your progress database or restore from a previous local backup file.</p>
+        <div className="p-6 rounded-md bg-canvas dark:bg-zinc-900 border border-ink/10 dark:border-zinc-800 flex flex-col gap-4 shadow-none">
+            <div className="font-display">
+                <span className="font-mono text-[9px] font-semibold uppercase tracking-widest text-ink/50 dark:text-canvas-cream/50">Security & Backup</span>
+                <h4 className="text-lg font-semibold text-ink dark:text-canvas-cream mt-0.5 leading-none">Backup & Data Recovery</h4>
+                <p className="text-xs text-ink/65 dark:text-canvas-cream/65 mt-1 leading-normal">Export your progress database or restore from a previous local backup file.</p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 mt-1 items-stretch sm:items-center">
                 {/* Export CTA */}
                 <button
                     onClick={handleExport}
-                    className="px-5 py-3 bg-zinc-900 hover:bg-zinc-800 text-white font-extrabold text-xs rounded-2xl transition-all shadow-md cursor-pointer text-center"
+                    className="h-9 px-5 bg-ink dark:bg-canvas-cream text-canvas-cream dark:text-ink font-mono text-[10px] uppercase tracking-wider font-bold rounded-full transition-all hover:opacity-90 active:scale-[0.97] cursor-pointer text-center flex items-center justify-center gap-1.5 border-0 focus:outline-none"
                 >
                     📥 Export Progress Backup
                 </button>
 
                 {/* Import File Button */}
-                <label className="px-5 py-3 bg-white dark:bg-zinc-900 hover:bg-zinc-50 dark:hover:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-800 font-extrabold text-xs rounded-2xl transition-all shadow-sm cursor-pointer text-center relative overflow-hidden">
+                <label className="h-9 px-5 bg-transparent text-ink dark:text-canvas-cream border border-ink/20 dark:border-canvas-cream/30 font-mono text-[10px] uppercase tracking-wider font-bold rounded-full transition-all hover:bg-ink/5 dark:hover:bg-canvas-cream/5 cursor-pointer text-center flex items-center justify-center gap-1.5 focus:outline-none relative overflow-hidden">
                     📤 Restore Backup File
                     <input
                         type="file"

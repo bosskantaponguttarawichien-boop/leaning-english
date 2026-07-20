@@ -310,7 +310,41 @@ Overhauled the visual user interface of the EngList application to implement the
 
 ---
 
+## [2026-07-20] Session: Hume AI Design System UI Overhaul
+
+### Summary
+Overhauled the visual user interface of the EngList application to implement the premium, humanist Hume AI design system defined in `DESIGN.md`.
+
+### Accomplishments
+1. **Style System and Tokens Configuration:**
+   - Modified [app/globals.css](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/globals.css) to define core Hume tokens inside Tailwind CSS v4 `@theme` (warm cream canvas `#fff9f3` in light mode, `#222222` in dark mode, and six named pastel register accents).
+   - Configured custom border radii (no shadows, flat card hairline border style, and scaled up sizes to sm: 12px, md: 20px, lg: 28px, xl: 36px to enhance rounded visual layout). Removed custom `--spacing-*` layout overrides to resolve a Tailwind v4 compilation conflict. Added Noto Sans Thai (`--font-noto-thai`) as a primary/fallback font across all font definitions (`font-sans`, `font-display`, `font-mono`) to guarantee proper Thai rendering.
+2. **Typography System:**
+   - Updated [app/layout.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/layout.tsx) to load Google Fonts (Plus Jakarta Sans as the Fellix substitute, and IBM Plex Mono as the PP Fraktion Mono substitute).
+   - Linked variable classes to the HTML tag.
+3. **Core Navigation:**
+   - Updated [components/Navbar.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/components/Navbar.tsx) to align with Hume top-nav (56px height, flush canvas layout, brand wordmark left, nav links center, and theme toggle styled as a monochrome pill button-primary right).
+4. **Landing Page Redesign:**
+   - Modified [app/page.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/page.tsx) with a subtle radial gradient hero, inline lavender highlights, flat scorecards, and a full-bleed footer gradient band section with an email subscription pill.
+5. **Today Dashboard:**
+   - Modified [app/practice/page.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/practice/page.tsx) to style lessons, daily targets, and collapsible practices using flat layouts and Hume card styles.
+6. **Stats & Backup Redesign:**
+   - Overhauled [app/dashboard/page.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/dashboard/page.tsx) with flat scorecard metrics and Mistake Analytics color-coded dynamically using the Hume pastel register mappings.
+   - Restructured [components/BackupManager.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/components/BackupManager.tsx) to adopt Hume flat border radii and button controls.
+7. **Session Completion Overhaul:**
+   - Overhauled [components/SessionCompleteModal.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/components/SessionCompleteModal.tsx) to conform to the Hume styling (hairline borders, uppercase buttons, zero shadows).
+   - Adjusted active lesson player completion options in [app/practice/lessons/[id]/page.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/practice/lessons/[id]/page.tsx) to use Hume primary and secondary pill CTAs.
+8. **Verification & Harness:**
+   - Confirmed type checking compiles successfully via `npx tsc --noEmit`.
+   - Verified that ESLint is clean (`npm run lint`).
+   - Verified production build completes cleanly (`npm run build`).
+
+---
+
 ## Handoff & Next Steps
-1. The web interface is now visually overhauled with high-contrast radial gradients, flat canvas partitions, and rounded-pill interactive components.
-2. Production builds compile warning-free.
+1. The web interface is fully overhauled under the Hume AI design system.
+2. Plus Jakarta Sans and IBM Plex Mono Google Fonts have been successfully loaded.
+3. Clean hairline borders and a flat, paper-like aesthetic have replaced the previous Apple Music drop shadows and high-contrast gradients.
+4. Next.js production builds and TypeScript type-checks remain fully valid.
+
 

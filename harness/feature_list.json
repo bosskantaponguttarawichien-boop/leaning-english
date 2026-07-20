@@ -245,6 +245,24 @@
         "app/practice/page.tsx",
         "app/dashboard/page.tsx"
       ]
+    },
+    {
+      "id": "hume-ai-ui-overhaul",
+      "name": "Hume AI UI Overhaul",
+      "description": "Redesign website views using Hume AI design system tokens from DESIGN.md, including layout, navigation, scorecards, custom pastel mistake bars, and flat buttons.",
+      "status": "done",
+      "phase": 6,
+      "files": [
+        "app/globals.css",
+        "app/layout.tsx",
+        "components/Navbar.tsx",
+        "app/page.tsx",
+        "app/practice/page.tsx",
+        "app/dashboard/page.tsx",
+        "components/SessionCompleteModal.tsx",
+        "components/BackupManager.tsx",
+        "app/practice/lessons/[id]/page.tsx"
+      ]
     }
   ]
 }

@@ -18,30 +18,38 @@ interface SessionCompleteModalProps {
 
 export default function SessionCompleteModal({ stats, details, onRetry, backHref }: SessionCompleteModalProps) {
     return (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm">
-            <div className="w-full max-w-md bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 p-8 rounded-3xl shadow-2xl flex flex-col gap-6 items-center text-center animate-in fade-in zoom-in duration-300">
-                <h2 className="text-3xl font-black text-zinc-900 dark:text-white leading-tight">Session Complete! 🏁</h2>
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-background/80 dark:bg-zinc-950/80 backdrop-blur-md">
+            <div className="w-full max-w-md bg-canvas dark:bg-zinc-900 border border-ink/10 dark:border-zinc-800 p-8 rounded-md shadow-none flex flex-col gap-6 items-center text-center animate-in fade-in zoom-in duration-300">
+                <div className="font-display">
+                    <span className="font-mono text-[9px] font-semibold uppercase tracking-widest text-ink/50 dark:text-canvas-cream/50">Lesson Finished</span>
+                    <h2 className="text-3xl font-semibold text-ink dark:text-canvas-cream leading-tight mt-1">Session Complete! 🏁</h2>
+                </div>
 
                 <div className={`grid gap-4 w-full`} style={{ gridTemplateColumns: `repeat(${stats.length}, 1fr)` }}>
                     {stats.map((s, i) => (
-                        <div key={i} className="bg-zinc-50 dark:bg-zinc-800 p-4 rounded-2xl shadow-sm border border-zinc-100 dark:border-zinc-700">
-                            <p className="text-zinc-400 dark:text-zinc-500 text-[10px] md:text-xs font-bold uppercase tracking-widest">{s.label}</p>
-                            <p className={`text-3xl md:text-4xl font-black ${s.color}`}>{s.value}</p>
+                        <div key={i} className="bg-canvas-cream dark:bg-black/20 p-4 rounded-md border border-ink/5 dark:border-zinc-800">
+                            <p className="text-ink/50 dark:text-canvas-cream/50 text-[9px] font-mono font-bold uppercase tracking-widest leading-none">{s.label}</p>
+                            <p className={`text-2xl font-bold mt-2 ${s.color}`}>{s.value}</p>
                         </div>
                     ))}
                 </div>
 
                 {details}
 
-                <button
-                    onClick={onRetry}
-                    className="w-full py-4 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-2xl font-bold hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors shadow-lg shadow-zinc-200 dark:shadow-zinc-900/50"
-                >
-                    Try Again
-                </button>
-                <a href={backHref} className="text-zinc-500 dark:text-zinc-400 font-bold hover:text-zinc-900 dark:hover:text-zinc-100 transition-all">
-                    Back to Menu
-                </a>
+                <div className="w-full flex flex-col gap-2 mt-2">
+                    <button
+                        onClick={onRetry}
+                        className="w-full py-3.5 bg-ink dark:bg-canvas-cream text-canvas-cream dark:text-ink font-mono text-xs uppercase tracking-wider font-bold rounded-full transition-all hover:opacity-90 active:scale-[0.98] border-0 focus:outline-none cursor-pointer"
+                    >
+                        Try Again
+                    </button>
+                    <a 
+                        href={backHref} 
+                        className="w-full py-3 hover:bg-ink/5 dark:hover:bg-canvas-cream/5 text-ink/50 dark:text-canvas-cream/50 font-mono text-[10px] font-bold uppercase tracking-wider rounded-full border border-transparent hover:border-ink/10 dark:hover:border-canvas-cream/10 transition-all text-center flex items-center justify-center cursor-pointer"
+                    >
+                        Back to Menu
+                    </a>
+                </div>
             </div>
         </div>
     );
@@ -61,42 +69,42 @@ interface SRSDetailsProps {
 export function SRSDetails({ stats, elapsedTime, wordCount, correctCharCount, totalTypedCharCount, isTypingMode }: SRSDetailsProps) {
     if (isTypingMode) {
         return (
-            <div className="w-full bg-zinc-50 dark:bg-zinc-800 p-4 rounded-2xl border border-zinc-100 dark:border-zinc-700 text-left text-sm text-zinc-500 dark:text-zinc-400 flex flex-col gap-2">
-                <div className="flex justify-between">
-                    <span className="font-bold">Words Completed:</span>
-                    <span className="font-black text-zinc-800 dark:text-zinc-200">{wordCount}</span>
+            <div className="w-full bg-canvas-cream dark:bg-black/25 p-4 rounded-md border border-ink/5 dark:border-zinc-800 text-left text-xs text-ink/70 dark:text-canvas-cream/70 flex flex-col gap-2 font-sans">
+                <div className="flex justify-between items-center border-b border-ink/5 dark:border-zinc-850 pb-1.5">
+                    <span className="font-mono text-[9px] uppercase tracking-widest text-ink/50 dark:text-canvas-cream/50">Words Completed:</span>
+                    <span className="font-bold text-ink dark:text-canvas-cream">{wordCount}</span>
                 </div>
-                <div className="flex justify-between">
-                    <span className="font-bold">Elapsed Time:</span>
-                    <span className="font-black text-zinc-800 dark:text-zinc-200">{elapsedTime}s</span>
+                <div className="flex justify-between items-center border-b border-ink/5 dark:border-zinc-850 pb-1.5">
+                    <span className="font-mono text-[9px] uppercase tracking-widest text-ink/50 dark:text-canvas-cream/50">Elapsed Time:</span>
+                    <span className="font-bold text-ink dark:text-canvas-cream">{elapsedTime}s</span>
                 </div>
-                <div className="flex justify-between">
-                    <span className="font-bold">Keystrokes:</span>
-                    <span className="font-black text-zinc-800 dark:text-zinc-200">{correctCharCount} correct / {totalTypedCharCount} total</span>
+                <div className="flex justify-between items-center">
+                    <span className="font-mono text-[9px] uppercase tracking-widest text-ink/50 dark:text-canvas-cream/50">Keystrokes:</span>
+                    <span className="font-bold text-ink dark:text-canvas-cream">{correctCharCount} correct / {totalTypedCharCount} total</span>
                 </div>
             </div>
         );
     }
 
     return (
-        <div className="w-full bg-zinc-50 dark:bg-zinc-800 p-6 rounded-2xl shadow-sm border border-zinc-100 dark:border-zinc-700 flex flex-col gap-4">
-            <h3 className="text-xs font-black text-zinc-400 dark:text-zinc-500 uppercase tracking-widest text-left">SRS Summary</h3>
+        <div className="w-full bg-canvas-cream dark:bg-black/25 p-4 rounded-md border border-ink/5 dark:border-zinc-800 flex flex-col gap-4 font-sans">
+            <h3 className="text-[10px] font-mono font-bold text-ink/50 dark:text-canvas-cream/50 uppercase tracking-widest text-left">SRS Summary</h3>
             <div className="grid grid-cols-2 gap-y-4 text-left">
                 <div>
-                    <p className="text-xs font-bold text-zinc-400 dark:text-zinc-500">Retention</p>
-                    <p className="text-xl font-black text-zinc-900 dark:text-zinc-100">{stats.retentionRate.toFixed(1)}%</p>
+                    <p className="text-[9px] font-mono font-bold text-ink/40 dark:text-canvas-cream/40 uppercase tracking-wider">Retention</p>
+                    <p className="text-lg font-bold text-ink dark:text-canvas-cream">{stats.retentionRate.toFixed(1)}%</p>
                 </div>
                 <div>
-                    <p className="text-xs font-bold text-zinc-400 dark:text-zinc-500">Mastered</p>
-                    <p className="text-xl font-black text-zinc-900 dark:text-zinc-100">{stats.masteredCount}</p>
+                    <p className="text-[9px] font-mono font-bold text-ink/40 dark:text-canvas-cream/40 uppercase tracking-wider">Mastered</p>
+                    <p className="text-lg font-bold text-ink dark:text-canvas-cream">{stats.masteredCount}</p>
                 </div>
                 <div>
-                    <p className="text-xs font-bold text-zinc-400 dark:text-zinc-500">Due Words</p>
-                    <p className="text-xl font-black text-blue-600 dark:text-blue-400">{stats.dueCount}</p>
+                    <p className="text-[9px] font-mono font-bold text-ink/40 dark:text-canvas-cream/40 uppercase tracking-wider">Due Words</p>
+                    <p className="text-lg font-bold text-hume-lavender">{stats.dueCount}</p>
                 </div>
                 <div>
-                    <p className="text-xs font-bold text-zinc-400 dark:text-zinc-500">Recall Speed</p>
-                    <p className="text-xl font-black text-zinc-900 dark:text-zinc-100">
+                    <p className="text-[9px] font-mono font-bold text-ink/40 dark:text-canvas-cream/40 uppercase tracking-wider">Recall Speed</p>
+                    <p className="text-lg font-bold text-ink dark:text-canvas-cream">
                         {stats.avgRecallSpeed > 0 ? (stats.avgRecallSpeed / 1000).toFixed(2) + "s" : "-"}
                     </p>
                 </div>

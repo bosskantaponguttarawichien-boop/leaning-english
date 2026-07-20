@@ -38,15 +38,12 @@ export default function PracticeMenuPage() {
     useEffect(() => {
         const init = async () => {
             try {
-                // Fetch progress from Firebase / local storage
                 const progData = await syncCurriculumProgressFromDB();
                 setProgress(progData);
 
-                // Fetch lessons list
                 const list = getCurriculum();
                 setLessons(list);
 
-                // Find active lesson using central helper
                 const active = getActiveLesson();
                 setActiveLesson(active);
             } catch (err) {
@@ -66,113 +63,107 @@ export default function PracticeMenuPage() {
             description: "ฝึกพิมพ์คำศัพท์และทบทวนผ่านระบบ SRS",
             icon: "📖",
             href: "/practice/words",
-            color: "bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400",
-            borderColor: "border-blue-100 dark:border-blue-900/30",
+            color: "text-hume-blue",
         },
         {
             title: "Sentences (ฝึกแต่งประโยค)",
             description: "พิมพ์ประโยคสมบูรณ์เพื่อฝึกจังหวะและความลื่นไหล",
             icon: "💬",
             href: "/practice/sentences",
-            color: "bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400",
-            borderColor: "border-purple-100 dark:border-purple-900/30",
+            color: "text-hume-lavender",
         },
         {
             title: "Build-a-Sentence (ลำดับคำ)",
             description: "เรียงบล็อกคำเป็นประโยคที่ถูกต้องตามแกรมมาร์",
             icon: "🧩",
             href: "/practice/build-sentence",
-            color: "bg-teal-50 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400",
-            borderColor: "border-teal-100 dark:border-teal-900/30",
+            color: "text-hume-mint",
         },
         {
             title: "AI Coach Tutor (สนทนา AI)",
             description: "ซ้อมสแตนอัพและสนทนาเทคกับบอทพร้อมแนะการแก้ประโยค",
             icon: "🤖",
             href: "/practice/ai-tutor",
-            color: "bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400",
-            borderColor: "border-amber-100 dark:border-amber-900/30",
+            color: "text-hume-orange",
         },
         {
             title: "Monthly Diagnosis (ประเมินทักษะ)",
             description: "วัดผลความแม่นยำและการพิมพ์ตอบโต้ทุกๆ 30 วัน",
             icon: "📊",
             href: "/practice/assessment",
-            color: "bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400",
-            borderColor: "border-indigo-100 dark:border-indigo-900/30",
+            color: "text-hume-coral",
         },
         {
             title: "Curriculum Lessons (บทเรียนทั้งหมด)",
             description: "ดูแผนการเรียนโครงสร้างหลักสูตร 24 บททั้งหมด",
             icon: "🎓",
             href: "/practice/lessons",
-            color: "bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400",
-            borderColor: "border-emerald-100 dark:border-emerald-900/30",
+            color: "text-hume-sky",
         },
     ];
 
     if (isLoading) {
         return (
-            <main className="flex min-h-screen flex-col items-center px-[24px] tracking-tight py-12">
+            <main className="flex min-h-screen flex-col items-center px-6 py-12 bg-background text-foreground tracking-tight">
                 <div className="w-full max-w-2xl flex flex-col gap-10">
                     <div className="flex flex-col gap-2">
-                        <Skeleton className="h-10 w-48" />
-                        <Skeleton className="h-5 w-64" />
+                        <Skeleton className="h-10 w-48 rounded-md" />
+                        <Skeleton className="h-5 w-64 rounded-md" />
                     </div>
-                    <Skeleton className="h-64 w-full rounded-[2.5rem]" />
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <Skeleton className="h-32 w-full rounded-3xl" />
-                        <Skeleton className="h-32 w-full rounded-3xl" />
+                    <Skeleton className="h-64 w-full rounded-md" />
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <Skeleton className="h-32 w-full rounded-md" />
+                        <Skeleton className="h-32 w-full rounded-md" />
+                        <Skeleton className="h-32 w-full rounded-md" />
                     </div>
                 </div>
             </main>
         );
     }
 
-    // Friendly grammar focus string
     const focusTargets = activeLesson
         ? activeLesson.grammar_targets
               .map(t => GRAMMAR_TARGETS_MAP[t] || t.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '))
               .join(', ')
         : "";
 
-    // Determine lesson status text
     const activeLessonProgress = activeLesson ? progress[activeLesson.id] : null;
     const isNew = !activeLessonProgress || activeLessonProgress.status === "available";
     const ctaLabel = isNew ? "เริ่มเรียนวันนี้" : "เรียนต่อวันนี้";
 
     return (
-        <main className="flex min-h-screen flex-col items-center px-[24px] tracking-tight py-12">
+        <main className="flex min-h-screen flex-col items-center px-6 py-12 bg-background text-foreground tracking-tight">
             <div className="w-full max-w-2xl flex flex-col gap-10">
                 {/* Header */}
                 <div className="flex flex-col gap-2 font-display">
-                    <h1 className="text-4xl font-semibold text-ink dark:text-white leading-none">Today</h1>
-                    <p className="text-ink-secondary dark:text-zinc-400 font-medium">
+                    <span className="font-mono text-[10px] font-semibold uppercase tracking-widest text-ink/50 dark:text-canvas-cream/50">Study Hub</span>
+                    <h1 className="text-4xl font-semibold text-ink dark:text-canvas-cream leading-none">Today</h1>
+                    <p className="text-ink/75 dark:text-canvas-cream/75 font-medium text-sm mt-1">
                         ระบบเลือกแผนการเรียนและการฝึกที่เหมาะสมที่สุดให้แล้วครับ
                     </p>
                 </div>
 
-                {/* Main Hero Card: Today's Lesson with Apple Music Hero Gradient */}
+                {/* Main Hero Card: Today's Lesson with Hume Premium Lavender Card style */}
                 {activeLesson && (
-                    <div className="relative overflow-hidden bg-apple-music-hero text-white rounded-md p-8 md:p-10 shadow-none flex flex-col gap-6 border-0">
+                    <div className="relative overflow-hidden bg-hume-lavender text-ink rounded-md p-8 md:p-10 shadow-none flex flex-col gap-6 border border-ink/10">
                         {/* Background subtle elements */}
-                        <div className="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-white/5 blur-3xl pointer-events-none" />
-                        <div className="absolute -left-16 -bottom-16 w-64 h-64 rounded-full bg-white/5 blur-3xl pointer-events-none" />
+                        <div className="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-white/10 blur-3xl pointer-events-none" />
+                        <div className="absolute -left-16 -bottom-16 w-64 h-64 rounded-full bg-white/10 blur-3xl pointer-events-none" />
 
-                        <div className="flex flex-col gap-2">
-                            <span className="text-[11px] font-semibold uppercase tracking-widest bg-white/20 text-white w-fit px-3 py-1 rounded-pill">
+                        <div className="flex flex-col gap-2 relative z-10">
+                            <span className="font-mono text-[9px] font-bold uppercase tracking-widest bg-ink/10 text-ink w-fit px-3 py-1 rounded-full border border-ink/5">
                                 {isNew ? "แนะนำบทเรียนใหม่ 💡" : "กำลังเรียนค้างอยู่ ⚡"}
                             </span>
-                            <h2 className="font-display text-3xl font-semibold leading-tight mt-2 text-white">
+                            <h2 className="font-display text-2xl md:text-3xl font-semibold leading-tight mt-2 text-ink">
                                 Continue Lesson {activeLesson.id.replace('L', '')} — {activeLesson.title_en}
                             </h2>
-                            <p className="text-zinc-200 font-bold text-sm">
+                            <p className="text-ink/80 font-bold text-sm">
                                 {activeLesson.title_th}
                             </p>
                         </div>
 
-                        <div className="flex flex-col gap-4 mt-2">
-                            <div className="flex items-center gap-2 text-xs font-semibold text-zinc-200">
+                        <div className="flex flex-col gap-4 mt-2 relative z-10">
+                            <div className="flex items-center gap-2 text-xs font-semibold text-ink/70">
                                 <span>⏱️ ใช้เวลาประมาณ {activeLesson.estimated_minutes} นาที</span>
                                 <span>•</span>
                                 <span>📖 {activeLesson.activities.length} กิจกรรมย่อย</span>
@@ -180,10 +171,10 @@ export default function PracticeMenuPage() {
 
                             <Link
                                 href={`/practice/lessons/${activeLesson.id}`}
-                                className="w-full py-4 bg-white hover:bg-canvas-parchment text-ink font-bold rounded-pill text-center transition-all hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2"
+                                className="w-full py-3.5 bg-ink text-canvas-cream font-mono text-xs uppercase tracking-wider font-bold rounded-full text-center transition-all hover:opacity-90 active:scale-[0.98] flex items-center justify-center gap-2 shadow-none cursor-pointer"
                             >
                                 {ctaLabel}
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 stroke-current" fill="none" viewBox="0 0 24 24" strokeWidth="2.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 stroke-current" fill="none" viewBox="0 0 24 24" strokeWidth="2.5">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
                             </Link>
@@ -191,70 +182,71 @@ export default function PracticeMenuPage() {
                     </div>
                 )}
 
-                {/* Today's Tasks Cards - Parchment plan-card styles */}
-                <div className="flex flex-col gap-6">
-                    <h3 className="font-display text-lg font-semibold text-ink dark:text-white uppercase tracking-wider">
+                {/* Today's Tasks Cards - Hume card styles */}
+                <div className="flex flex-col gap-4">
+                    <span className="font-mono text-[10px] font-semibold uppercase tracking-widest text-ink/50 dark:text-canvas-cream/50">Daily Missions</span>
+                    <h3 className="font-display text-xl font-semibold text-ink dark:text-canvas-cream leading-none">
                         เป้าหมายประจำวันของคุณ
                     </h3>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-2">
                         {/* Daily Review */}
                         <Link
                             href="/practice/words?limit=5"
-                            className="group bg-white dark:bg-zinc-900 border border-hairline dark:border-zinc-800 p-6 rounded-sm shadow-none hover:scale-[1.01] active:scale-[0.99] transition-all flex flex-col justify-between min-h-[140px]"
+                            className="group bg-canvas dark:bg-zinc-900 border border-ink/10 dark:border-zinc-800 p-6 rounded-md shadow-none hover:bg-hume-lavender/5 dark:hover:bg-hume-lavender/5 transition-all flex flex-col justify-between min-h-[140px]"
                         >
                             <div className="flex flex-col gap-1">
                                 <div className="text-2xl">🧠</div>
-                                <h4 className="font-display text-base font-semibold text-ink dark:text-white mt-2 leading-none">
+                                <h4 className="font-display text-base font-semibold text-ink dark:text-canvas-cream mt-2 leading-none">
                                     ทบทวนคำศัพท์
-                               </h4>
-                                <p className="text-ink-secondary dark:text-zinc-400 text-xs font-semibold mt-1 leading-normal">
+                                </h4>
+                                <p className="text-ink/60 dark:text-canvas-cream/60 text-xs mt-1 leading-normal">
                                     ทบทวนคำศัพท์วันนี้ 5 ข้อ
                                 </p>
                             </div>
-                            <span className="text-[11px] font-bold text-primary-action-blue group-hover:translate-x-1 transition-transform flex items-center gap-1 mt-4">
+                            <span className="font-mono text-[10px] font-bold text-hume-lavender uppercase tracking-wide group-hover:translate-x-1 transition-transform flex items-center gap-1 mt-4">
                                 เริ่มทบทวน →
                             </span>
                         </Link>
 
                         {/* Progress */}
-                        <div className="bg-white dark:bg-zinc-900 border border-hairline dark:border-zinc-800 p-6 rounded-sm shadow-none flex flex-col justify-between min-h-[140px]">
+                        <div className="bg-canvas dark:bg-zinc-900 border border-ink/10 dark:border-zinc-800 p-6 rounded-md shadow-none flex flex-col justify-between min-h-[140px]">
                             <div className="flex flex-col gap-1">
                                 <div className="text-2xl">📈</div>
-                                <h4 className="font-display text-base font-semibold text-ink dark:text-white mt-2 leading-none">
+                                <h4 className="font-display text-base font-semibold text-ink dark:text-canvas-cream mt-2 leading-none">
                                     ความคืบหน้า
                                 </h4>
-                                <p className="text-ink-secondary dark:text-zinc-400 text-xs font-semibold mt-1 leading-normal">
+                                <p className="text-ink/60 dark:text-canvas-cream/60 text-xs mt-1 leading-normal">
                                     สำเร็จ {masteredCount} จาก {lessons.length} บทเรียน
                                 </p>
                             </div>
                             {/* Progress bar */}
-                            <div className="w-full bg-canvas-parchment dark:bg-zinc-800 h-2 rounded-full overflow-hidden mt-4">
+                            <div className="w-full bg-canvas-cream dark:bg-black/20 h-1.5 rounded-full overflow-hidden mt-4">
                                 <div
-                                    className="bg-emerald-500 h-full transition-all duration-500"
+                                    className="bg-hume-mint h-full transition-all duration-500"
                                     style={{ width: `${(masteredCount / (lessons.length || 1)) * 100}%` }}
                                 />
                             </div>
                         </div>
 
                         {/* Current Focus */}
-                        <div className="bg-white dark:bg-zinc-900 border border-hairline dark:border-zinc-800 p-6 rounded-sm shadow-none flex flex-col min-h-[140px]">
+                        <div className="bg-canvas dark:bg-zinc-900 border border-ink/10 dark:border-zinc-800 p-6 rounded-md shadow-none flex flex-col min-h-[140px]">
                             <div className="text-2xl">🎯</div>
-                            <h4 className="font-display text-base font-semibold text-ink dark:text-white mt-2 leading-none">
+                            <h4 className="font-display text-base font-semibold text-ink dark:text-canvas-cream mt-2 leading-none">
                                 จุดที่กำลังฝึก
                             </h4>
-                            <p className="text-ink-secondary dark:text-zinc-300 text-xs font-semibold mt-2 leading-relaxed flex-1">
+                            <p className="text-ink/75 dark:text-canvas-cream/80 text-xs font-sans mt-2 leading-relaxed flex-1 overflow-hidden line-clamp-3">
                                 {focusTargets || "ไม่มีข้อมูล"}
                             </p>
                         </div>
                     </div>
                 </div>
 
-                {/* Collapsible Section "ฝึกเพิ่มเติม" - Dark Immersion Variant */}
+                {/* Collapsible Section "ฝึกเพิ่มเติม" */}
                 <div className="flex flex-col">
                     <button
                         onClick={() => setShowMore(!showMore)}
-                        className="w-full flex items-center justify-between p-5 bg-canvas-parchment dark:bg-zinc-900/60 hover:bg-zinc-100 dark:hover:bg-zinc-800/80 text-ink dark:text-zinc-300 rounded-sm border border-hairline dark:border-zinc-800 transition-all font-bold text-sm"
+                        className="w-full flex items-center justify-between p-5 bg-canvas-cream dark:bg-black/20 hover:bg-hume-lavender/10 text-ink dark:text-canvas-cream rounded-md border border-ink/10 dark:border-zinc-800 transition-all font-mono uppercase text-xs tracking-wider font-bold cursor-pointer focus:outline-none"
                     >
                         <span className="flex items-center gap-2">🛠️ ฝึกเพิ่มเติม (เครื่องมือฝึกอิสระ)</span>
                         <svg
@@ -275,20 +267,20 @@ export default function PracticeMenuPage() {
                                 <Link
                                     key={idx}
                                     href={mode.href}
-                                    className="group p-5 rounded-sm border border-hairline dark:border-zinc-850 bg-white dark:bg-zinc-900 shadow-none hover:scale-[1.01] active:scale-[0.99] transition-all cursor-pointer flex gap-4 items-start"
+                                    className="group p-5 rounded-md border border-ink/10 dark:border-zinc-800 bg-canvas dark:bg-zinc-900 shadow-none hover:bg-hume-lavender/5 dark:hover:bg-hume-lavender/5 transition-all cursor-pointer flex gap-4 items-start"
                                 >
-                                    <div className={`w-10 h-10 rounded-sm bg-canvas-parchment dark:bg-zinc-800 flex items-center justify-center text-xl shrink-0 border border-hairline dark:border-zinc-850`}>
+                                    <div className="w-10 h-10 rounded-md bg-canvas-cream dark:bg-black/20 flex items-center justify-center text-xl shrink-0 border border-ink/5 dark:border-zinc-800">
                                         {mode.icon}
                                     </div>
                                     <div className="flex-1 min-w-0 pr-4">
-                                        <h4 className="text-sm font-bold text-ink dark:text-white group-hover:text-primary-action-blue transition-colors leading-tight">
+                                        <h4 className={`text-sm font-bold text-ink dark:text-canvas-cream group-hover:${mode.color} transition-colors leading-tight`}>
                                             {mode.title}
                                         </h4>
-                                        <p className="text-ink-secondary dark:text-zinc-400 text-xs font-semibold mt-1 leading-normal">
+                                        <p className="text-ink/65 dark:text-canvas-cream/65 text-xs mt-1 leading-normal">
                                             {mode.description}
                                         </p>
                                     </div>
-                                    <span className="text-zinc-300 dark:text-zinc-650 group-hover:text-primary-action-blue dark:group-hover:text-white transition-colors self-center shrink-0">
+                                    <span className="text-ink/20 dark:text-canvas-cream/20 group-hover:text-hume-lavender transition-colors self-center shrink-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                                         </svg>

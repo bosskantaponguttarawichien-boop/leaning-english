@@ -228,16 +228,16 @@ export default function LessonActivePage({ params }: LessonPageProps) {
                             {nextLessonId && (
                                 <Link
                                     href={`/practice/lessons/${nextLessonId}`}
-                                    className="w-full py-3.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-2xl font-bold transition-all shadow-md flex items-center justify-center gap-2 text-sm"
+                                    className="w-full py-3.5 bg-ink dark:bg-canvas-cream text-canvas-cream dark:text-ink font-mono text-xs uppercase tracking-wider font-bold rounded-full transition-all hover:opacity-90 active:scale-[0.98] flex items-center justify-center gap-2"
                                 >
-                                    เรียนบทถัดไป (Next Lesson) ➡️
+                                    Next Lesson (เรียนบทถัดไป) ➡️
                                 </Link>
                             )}
                             <Link
                                 href={`/practice/ai-tutor?scenario=${lesson.id === "L21" ? "standup" : lesson.id === "L22" ? "bug" : lesson.id === "L23" ? "tradeoff" : "standup"}`}
-                                className="w-full py-3.5 bg-amber-500 hover:bg-amber-600 text-white rounded-2xl font-bold transition-all shadow-md flex items-center justify-center gap-2 text-sm"
+                                className="w-full py-3.5 bg-transparent text-ink dark:text-canvas-cream border border-ink/20 dark:border-canvas-cream/30 hover:bg-ink/5 dark:hover:bg-canvas-cream/5 font-mono text-xs uppercase tracking-wider font-bold rounded-full transition-all active:scale-[0.98] flex items-center justify-center gap-2"
                             >
-                                💬 สนทนาท้ายบทกับ AI Coach
+                                💬 Talk with AI Coach
                             </Link>
                         </div>
                     }
