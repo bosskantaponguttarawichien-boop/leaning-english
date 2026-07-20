@@ -261,7 +261,19 @@
         "app/dashboard/page.tsx",
         "components/SessionCompleteModal.tsx",
         "components/BackupManager.tsx",
-        "app/practice/lessons/[id]/page.tsx"
+        "app/practice/lessons/[id]/page.tsx",
+        "app/practice/words/page.tsx",
+        "app/practice/sentences/page.tsx",
+        "app/practice/build-sentence/page.tsx",
+        "app/practice/ai-tutor/page.tsx",
+        "app/practice/assessment/page.tsx",
+        "app/practice/lessons/[id]/components/ClassifyActivity.tsx",
+        "app/practice/lessons/[id]/components/ConceptActivity.tsx",
+        "app/practice/lessons/[id]/components/DictationActivity.tsx",
+        "app/practice/lessons/[id]/components/FillBlankActivity.tsx",
+        "app/practice/lessons/[id]/components/GuidedOutputActivity.tsx",
+        "app/practice/lessons/[id]/components/ReadingActivity.tsx",
+        "app/practice/lessons/[id]/components/ReorderActivity.tsx"
       ]
     }
   ]

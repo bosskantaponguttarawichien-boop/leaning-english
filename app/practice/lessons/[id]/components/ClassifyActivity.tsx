@@ -76,11 +76,11 @@ export default function ClassifyActivity({ activity, onComplete, onErrorLogged }
     const isAllSelected = userAnswers.every(ans => ans !== "");
 
     return (
-        <div className="bg-white dark:bg-zinc-800 p-8 rounded-3xl border border-zinc-100 dark:border-zinc-700 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50 flex flex-col gap-6 animate-fade-in">
+        <div className="bg-canvas dark:bg-zinc-900 p-8 rounded-md border border-ink/10 dark:border-zinc-800 shadow-none flex flex-col gap-6 animate-fade-in">
             {/* Header */}
-            <div className="border-b border-zinc-100 dark:border-zinc-700/50 pb-4">
-                <h2 className="text-xl font-bold text-zinc-400 uppercase tracking-widest">Classification Challenge</h2>
-                <h3 className="text-2xl font-black text-zinc-900 dark:text-white mt-1 leading-snug">{activity.instruction}</h3>
+            <div className="border-b border-ink/5 dark:border-zinc-850 pb-4">
+                <h2 className="text-[10px] font-mono uppercase tracking-widest font-semibold text-ink/50 dark:text-canvas-cream/50">Classification Challenge</h2>
+                <h3 className="text-2xl font-semibold text-ink dark:text-canvas-cream mt-1 leading-snug font-display">{activity.instruction}</h3>
             </div>
 
             {/* Questions List */}
@@ -100,22 +100,22 @@ export default function ClassifyActivity({ activity, onComplete, onErrorLogged }
                         }
                     }
                     return (
-                        <div key={idx} className={`p-4 rounded-2xl border flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-all ${
-                            isQuestionCorrect ? "bg-green-50/50 dark:bg-green-950/10 border-green-200 dark:border-green-900/30" : 
-                            isQuestionWrong ? "bg-red-50/50 dark:bg-red-950/10 border-red-200 dark:border-red-900/30" :
-                            "bg-zinc-50/50 dark:bg-zinc-900/50 border-zinc-100 dark:border-zinc-800"
+                        <div key={idx} className={`p-4 rounded-md border flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-all ${
+                            isQuestionCorrect ? "bg-hume-mint/10 border-hume-mint/20" : 
+                            isQuestionWrong ? "bg-hume-coral/10 border-hume-coral/20" :
+                            "bg-canvas-cream dark:bg-black/25 border-ink/5 dark:border-zinc-800"
                         }`}>
-                            <div className="text-base font-bold text-zinc-800 dark:text-zinc-200">
+                            <div className="text-base font-medium text-ink dark:text-canvas-cream">
                                 {textParts[0]}
                                 <span className="inline-block mx-1.5 align-middle">
                                     <select
                                         disabled={isChecked}
                                         value={userAnswers[idx]}
                                         onChange={(e) => handleSelect(idx, e.target.value)}
-                                        className={`px-3 py-1.5 font-bold font-mono rounded-xl border text-sm focus:outline-none transition-all ${
+                                        className={`px-3 py-1.5 font-bold font-mono rounded-md border text-sm focus:outline-none transition-all ${
                                             isChecked 
-                                                ? (isQuestionCorrect ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 border-green-300" : "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 border-red-300") 
-                                                : "bg-white dark:bg-zinc-900 text-zinc-800 dark:text-white border-zinc-300 dark:border-zinc-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                                                ? (isQuestionCorrect ? "bg-hume-mint/15 text-hume-mint border-hume-mint/30" : "bg-hume-coral/15 text-hume-coral border-hume-coral/30") 
+                                                : "bg-canvas dark:bg-zinc-900 text-ink dark:text-white border-ink/10 dark:border-zinc-750 focus:border-hume-lavender"
                                         }`}
                                     >
                                         <option value="" disabled>-- select --</option>
@@ -128,11 +128,11 @@ export default function ClassifyActivity({ activity, onComplete, onErrorLogged }
                             </div>
 
                             {isChecked && (
-                                <div className="text-xs font-black uppercase tracking-wider flex items-center gap-1.5 self-end sm:self-auto">
+                                <div className="text-[10px] font-mono uppercase tracking-wider flex items-center gap-1.5 self-end sm:self-auto">
                                     {isQuestionCorrect ? (
-                                        <span className="text-green-600 dark:text-green-400">Correct ✓</span>
+                                        <span className="text-hume-mint">Correct ✓</span>
                                     ) : (
-                                        <span className="text-red-600 dark:text-red-400">Correct: {correctAnswers[idx] === "-" ? "[blank]" : correctAnswers[idx]}</span>
+                                        <span className="text-hume-coral">Correct: {correctAnswers[idx] === "-" ? "[blank]" : correctAnswers[idx]}</span>
                                     )}
                                 </div>
                             )}
@@ -142,13 +142,13 @@ export default function ClassifyActivity({ activity, onComplete, onErrorLogged }
             </div>
 
             {/* Feedback & Actions */}
-            <div className="mt-4 pt-4 border-t border-zinc-100 dark:border-zinc-700/50 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div className="mt-4 pt-4 border-t border-ink/5 dark:border-zinc-800 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                 {isChecked && (
-                    <div className="text-base font-bold">
+                    <div className="text-sm font-semibold">
                         {isCorrect ? (
-                            <span className="text-green-600 dark:text-green-400">✨ Great job! All answers are correct.</span>
+                            <span className="text-hume-mint">✨ Great job! All answers are correct.</span>
                         ) : (
-                            <span className="text-red-600 dark:text-red-400">⚠️ {correctAnswers.length - userAnswers.filter((a, i) => a === correctAnswers[i]).length} incorrect selections. Try again!</span>
+                            <span className="text-hume-coral">⚠️ {correctAnswers.length - userAnswers.filter((a, i) => a === correctAnswers[i]).length} incorrect selections. Try again!</span>
                         )}
                     </div>
                 )}
@@ -156,7 +156,7 @@ export default function ClassifyActivity({ activity, onComplete, onErrorLogged }
                     {isChecked && !isCorrect && (
                         <button
                             onClick={handleRetry}
-                            className="px-6 py-3.5 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-300 font-extrabold text-sm rounded-2xl transition-all"
+                            className="px-5 py-2.5 bg-transparent text-ink dark:text-canvas-cream border border-ink/20 dark:border-canvas-cream/30 hover:bg-ink/5 dark:hover:bg-canvas-cream/5 font-mono text-xs uppercase tracking-wider font-bold rounded-full transition-all active:scale-[0.98] cursor-pointer"
                         >
                             Retry
                         </button>
@@ -165,10 +165,10 @@ export default function ClassifyActivity({ activity, onComplete, onErrorLogged }
                         <button
                             disabled={!isAllSelected}
                             onClick={handleCheck}
-                            className={`px-8 py-3.5 font-black text-base rounded-2xl shadow-lg transition-all ${
+                            className={`px-6 py-3 font-mono text-xs uppercase tracking-wider font-bold rounded-full transition-all shadow-none ${
                                 isAllSelected 
-                                    ? "bg-blue-600 hover:bg-blue-700 text-white shadow-blue-200 dark:shadow-none cursor-pointer active:scale-[0.98]" 
-                                    : "bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-600 shadow-none cursor-not-allowed"
+                                    ? "bg-ink dark:bg-canvas-cream text-canvas-cream dark:text-ink cursor-pointer active:scale-[0.98] hover:opacity-90" 
+                                    : "bg-ink/5 dark:bg-canvas-cream/5 text-ink/30 dark:text-canvas-cream/30 cursor-not-allowed"
                             }`}
                         >
                             Check Answers
@@ -176,7 +176,7 @@ export default function ClassifyActivity({ activity, onComplete, onErrorLogged }
                     ) : (
                         <button
                             onClick={handleNext}
-                            className="px-8 py-3.5 bg-emerald-500 hover:bg-emerald-600 active:scale-[0.98] transition-all text-white font-black text-base rounded-2xl shadow-lg shadow-emerald-200 dark:shadow-none"
+                            className="px-6 py-3 bg-ink dark:bg-canvas-cream text-canvas-cream dark:text-ink hover:opacity-90 active:scale-[0.98] transition-all font-mono text-xs uppercase tracking-wider font-bold rounded-full cursor-pointer shadow-none"
                         >
                             Continue →
                         </button>

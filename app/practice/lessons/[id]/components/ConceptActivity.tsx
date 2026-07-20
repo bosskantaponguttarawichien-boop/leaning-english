@@ -80,11 +80,11 @@ export default function ConceptActivity({ activity, onComplete }: ConceptActivit
     const paragraphs = (activity.content || "").split("\n");
 
     return (
-        <div className="bg-white dark:bg-zinc-800 p-8 rounded-3xl border border-zinc-100 dark:border-zinc-700 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50 flex flex-col gap-6 animate-fade-in">
+        <div className="bg-canvas dark:bg-zinc-900 p-8 rounded-md border border-ink/10 dark:border-zinc-800 shadow-none flex flex-col gap-6 animate-fade-in">
             {/* Title / Instruction */}
-            <div className="border-b border-zinc-100 dark:border-zinc-700/50 pb-4">
-                <h2 className="text-xl font-bold text-zinc-400 uppercase tracking-widest">Mental Model</h2>
-                <h3 className="text-2xl font-black text-zinc-900 dark:text-white mt-1 leading-snug">{activity.instruction}</h3>
+            <div className="border-b border-ink/5 dark:border-zinc-850 pb-4">
+                <h2 className="text-[10px] font-mono uppercase tracking-widest font-semibold text-ink/50 dark:text-canvas-cream/50">Mental Model</h2>
+                <h3 className="text-2xl font-semibold text-ink dark:text-canvas-cream mt-1 leading-snug font-display">{activity.instruction}</h3>
             </div>
 
             {/* Slide Body Content */}
@@ -95,10 +95,10 @@ export default function ConceptActivity({ activity, onComplete }: ConceptActivit
             </div>
 
             {/* CTA action button */}
-            <div className="mt-4 pt-4 border-t border-zinc-100 dark:border-zinc-700/50 flex justify-end">
+            <div className="mt-4 pt-4 border-t border-ink/5 dark:border-zinc-800 flex justify-end">
                 <button
                     onClick={onComplete}
-                    className="px-8 py-3.5 bg-emerald-500 hover:bg-emerald-600 active:scale-[0.98] transition-all text-white font-black text-base rounded-2xl shadow-lg shadow-emerald-200 dark:shadow-none"
+                    className="px-6 py-3 bg-ink dark:bg-canvas-cream text-canvas-cream dark:text-ink hover:opacity-90 active:scale-[0.98] transition-all font-mono text-xs uppercase tracking-wider font-bold rounded-full cursor-pointer shadow-none"
                 >
                     Got it, next!
                 </button>

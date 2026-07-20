@@ -83,33 +83,33 @@ function WordPracticeContent() {
 
     if (!isDataLoaded) {
         return (
-            <main className="flex min-h-screen flex-col items-center relative">
+            <main className="flex min-h-screen flex-col items-center relative bg-background text-foreground">
                 <div className="w-full max-w-4xl flex flex-col gap-8 flex-1 px-4 sm:px-12 animate-fade-in mt-12 mb-12">
-                    <div className="flex flex-col gap-6 bg-white/80 dark:bg-zinc-800/80 backdrop-blur-md p-6 rounded-[2.5rem] border border-white dark:border-zinc-700/50 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50">
+                    <div className="flex flex-col gap-6 bg-canvas dark:bg-zinc-900 p-6 rounded-md border border-ink/10 dark:border-zinc-800 shadow-none">
                         <div className="flex justify-between items-center">
-                            <Skeleton className="h-8 w-48" />
+                            <Skeleton className="h-8 w-48 rounded-md" />
                             <Skeleton className="h-8 w-24 rounded-full" />
                         </div>
                         <div className="flex flex-col md:flex-row gap-6">
                             <div className="flex flex-col gap-2 flex-1">
-                                <Skeleton className="h-3 w-20" />
+                                <Skeleton className="h-3 w-20 rounded-md" />
                                 <div className="grid grid-cols-2 gap-2">
-                                    <Skeleton className="h-12 w-full rounded-2xl" />
-                                    <Skeleton className="h-12 w-full rounded-2xl" />
+                                    <Skeleton className="h-12 w-full rounded-md" />
+                                    <Skeleton className="h-12 w-full rounded-md" />
                                 </div>
                             </div>
                             <div className="flex flex-col gap-2 md:w-fit">
-                                <Skeleton className="h-3 w-16" />
+                                <Skeleton className="h-3 w-16 rounded-md" />
                                 <div className="flex flex-col gap-2">
-                                    <Skeleton className="h-10 w-48 rounded-2xl" />
-                                    <Skeleton className="h-8 w-48 rounded-2xl" />
+                                    <Skeleton className="h-10 w-48 rounded-md" />
+                                    <Skeleton className="h-8 w-48 rounded-md" />
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="flex flex-col gap-4">
                         <Skeleton className="w-full h-1.5 rounded-full mb-2" />
-                        <Skeleton className="w-full h-64 rounded-3xl" />
+                        <Skeleton className="w-full h-64 rounded-md" />
                     </div>
                 </div>
             </main>
@@ -171,11 +171,11 @@ function WordPracticeContent() {
                 />
 
                 {words.length === 0 ? (
-                    <div className="flex flex-col items-center justify-center p-12 bg-white dark:bg-zinc-800 rounded-3xl border border-dashed border-zinc-200 dark:border-zinc-700">
-                        <p className="text-zinc-400 dark:text-zinc-500 font-bold">No words found for this filter.</p>
+                    <div className="flex flex-col items-center justify-center p-12 bg-canvas dark:bg-zinc-900 rounded-md border border-dashed border-ink/20 dark:border-zinc-800 shadow-none">
+                        <p className="text-ink/50 dark:text-canvas-cream/50 font-bold">No words found for this filter.</p>
                         <button
                             onClick={() => { update("difficulty", "all"); update("selectedPOS", "all"); }}
-                            className="mt-2 text-blue-600 dark:text-blue-400 text-sm font-bold"
+                            className="mt-2 text-hume-lavender text-sm font-bold hover:opacity-85 transition-opacity"
                         >
                             Reset Filters
                         </button>
@@ -276,8 +276,8 @@ function WordPracticeContent() {
 export default function WordPracticePage() {
     return (
         <Suspense fallback={
-            <main className="flex min-h-screen flex-col items-center justify-center p-12">
-                <div className="text-zinc-500 font-bold">Loading review session...</div>
+            <main className="flex min-h-screen flex-col items-center justify-center p-12 bg-background text-foreground tracking-tight">
+                <div className="text-ink/65 dark:text-canvas-cream/65 font-mono text-xs uppercase tracking-wider font-bold">Loading review session...</div>
             </main>
         }>
             <WordPracticeContent />

@@ -97,11 +97,11 @@ export default function LessonActivePage({ params }: LessonPageProps) {
 
     if (isLoading) {
         return (
-            <main className="flex min-h-screen flex-col items-center justify-center p-12">
+            <main className="flex min-h-screen flex-col items-center justify-center p-12 bg-background text-foreground tracking-tight">
                 <div className="w-full max-w-2xl flex flex-col gap-6">
-                    <Skeleton className="h-10 w-48" />
-                    <Skeleton className="h-6 w-full" />
-                    <Skeleton className="h-64 w-full rounded-3xl" />
+                    <Skeleton className="h-10 w-48 rounded-md" />
+                    <Skeleton className="h-6 w-full rounded-md" />
+                    <Skeleton className="h-64 w-full rounded-md" />
                 </div>
             </main>
         );
@@ -109,10 +109,10 @@ export default function LessonActivePage({ params }: LessonPageProps) {
 
     if (!lesson) {
         return (
-            <main className="flex min-h-screen flex-col items-center justify-center p-12">
+            <main className="flex min-h-screen flex-col items-center justify-center p-12 bg-background text-foreground tracking-tight">
                 <div className="text-center flex flex-col gap-4">
-                    <h2 className="text-2xl font-black text-zinc-950 dark:text-white">Lesson not found.</h2>
-                    <Link href="/practice" className="text-blue-500 font-bold hover:underline">
+                    <h2 className="text-2xl font-semibold text-ink dark:text-canvas-cream font-display">Lesson not found.</h2>
+                    <Link href="/practice" className="font-mono text-xs uppercase tracking-wider font-semibold text-hume-lavender hover:opacity-80 transition-opacity">
                         Return to Today Page
                     </Link>
                 </div>
@@ -189,11 +189,11 @@ export default function LessonActivePage({ params }: LessonPageProps) {
                 );
             default:
                 return (
-                    <div className="p-8 text-center bg-white dark:bg-zinc-800 rounded-3xl border border-zinc-100 dark:border-zinc-700">
-                        <p className="text-zinc-500 font-bold">Unsupported activity type: {currentActivity.type}</p>
+                    <div className="p-8 text-center bg-canvas dark:bg-zinc-900 rounded-md border border-ink/10 dark:border-zinc-800 shadow-none">
+                        <p className="text-ink/65 dark:text-canvas-cream/65 font-bold mb-4">Unsupported activity type: {currentActivity.type}</p>
                         <button
                             onClick={() => handleActivityComplete()}
-                            className="mt-4 px-6 py-2.5 bg-blue-500 text-white rounded-2xl font-bold"
+                            className="px-6 py-2.5 bg-ink dark:bg-canvas-cream text-canvas-cream dark:text-ink font-mono text-xs uppercase tracking-wider font-bold rounded-full transition-all hover:opacity-90 active:scale-[0.98] border-0 cursor-pointer"
                         >
                             Skip Activity
                         </button>

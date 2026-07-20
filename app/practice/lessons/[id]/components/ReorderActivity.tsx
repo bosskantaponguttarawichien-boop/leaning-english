@@ -147,11 +147,11 @@ export default function ReorderActivity({ activity, onComplete, onErrorLogged }:
     const isAllPlaced = states.every(s => s.shuffledTokens.length === 0);
 
     return (
-        <div className="bg-white dark:bg-zinc-800 p-8 rounded-3xl border border-zinc-100 dark:border-zinc-700 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50 flex flex-col gap-6 animate-fade-in">
+        <div className="bg-canvas dark:bg-zinc-900 p-8 rounded-md border border-ink/10 dark:border-zinc-800 shadow-none flex flex-col gap-6 animate-fade-in">
             {/* Header */}
-            <div className="border-b border-zinc-100 dark:border-zinc-700/50 pb-4">
-                <h2 className="text-xl font-bold text-zinc-400 uppercase tracking-widest">Syntax Arranging</h2>
-                <h3 className="text-2xl font-black text-zinc-900 dark:text-white mt-1 leading-snug">{activity.instruction}</h3>
+            <div className="border-b border-ink/5 dark:border-zinc-850 pb-4">
+                <h2 className="text-[10px] font-mono uppercase tracking-widest font-semibold text-ink/50 dark:text-canvas-cream/50">Syntax Arranging</h2>
+                <h3 className="text-2xl font-semibold text-ink dark:text-canvas-cream mt-1 leading-snug font-display">{activity.instruction}</h3>
             </div>
 
             {/* Questions list */}
@@ -163,25 +163,25 @@ export default function ReorderActivity({ activity, onComplete, onErrorLogged }:
                     const isQWrong = isChecked && userSentence !== correctSentence;
 
                     return (
-                        <div key={qIdx} className={`p-5 rounded-2xl border flex flex-col gap-4 transition-all ${
-                            isQCorrect ? "bg-green-50/50 dark:bg-green-950/10 border-green-200 dark:border-green-900/30" : 
-                            isQWrong ? "bg-red-50/50 dark:bg-red-950/10 border-red-200 dark:border-red-900/30" :
-                            "bg-zinc-50/50 dark:bg-zinc-900/50 border-zinc-100 dark:border-zinc-800"
+                        <div key={qIdx} className={`p-5 rounded-md border flex flex-col gap-4 transition-all ${
+                            isQCorrect ? "bg-hume-mint/10 border-hume-mint/20" : 
+                            isQWrong ? "bg-hume-coral/10 border-hume-coral/20" :
+                            "bg-canvas-cream dark:bg-black/25 border border-ink/5 dark:border-zinc-800"
                         }`}>
                             {/* Question context number */}
-                            <span className="text-xs uppercase tracking-widest font-black text-zinc-400">Sentence {qIdx + 1}</span>
+                            <span className="text-[10px] font-mono uppercase tracking-widest font-semibold text-ink/50 dark:text-canvas-cream/50">Sentence {qIdx + 1}</span>
 
                             {/* Constructed Area */}
-                            <div className="min-h-12 p-3 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700/80 rounded-xl flex flex-wrap gap-2 items-center">
+                            <div className="min-h-12 p-3 bg-canvas dark:bg-black/20 border border-ink/10 dark:border-zinc-800 rounded-md flex flex-wrap gap-2 items-center">
                                 {state.selectedTokens.length === 0 ? (
-                                    <span className="text-xs font-semibold text-zinc-400 select-none">Click on tokens below to form a sentence...</span>
+                                    <span className="text-[11px] font-sans text-ink/40 dark:text-canvas-cream/40 select-none">Click on tokens below to form a sentence...</span>
                                 ) : (
                                     state.selectedTokens.map((word, wIdx) => (
                                         <button
                                             disabled={isChecked}
                                             key={wIdx}
                                             onClick={() => handleRemoveToken(qIdx, word, wIdx)}
-                                            className="px-3 py-1.5 bg-blue-50 hover:bg-blue-100 dark:bg-blue-950/30 dark:hover:bg-blue-900/40 text-blue-700 dark:text-blue-300 font-extrabold text-sm border border-blue-100 dark:border-blue-900/30 rounded-xl cursor-pointer active:scale-95 transition-all"
+                                            className="px-3 py-1 bg-ink/5 dark:bg-canvas-cream/5 hover:bg-ink/10 dark:hover:bg-canvas-cream/10 text-ink dark:text-canvas-cream font-mono text-xs uppercase tracking-wider border border-ink/25 dark:border-canvas-cream/35 rounded-full cursor-pointer active:scale-95 transition-all focus:outline-none"
                                         >
                                             {word}
                                         </button>
@@ -197,7 +197,7 @@ export default function ReorderActivity({ activity, onComplete, onErrorLogged }:
                                             disabled={isChecked}
                                             key={tokenIdx}
                                             onClick={() => handleTokenClick(qIdx, word, tokenIdx)}
-                                            className="px-3 py-1.5 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-800 dark:text-zinc-200 font-bold text-sm rounded-xl cursor-pointer active:scale-95 transition-all"
+                                            className="px-3 py-1.5 bg-canvas dark:bg-zinc-900 hover:bg-ink/5 dark:hover:bg-canvas-cream/5 text-ink dark:text-canvas-cream font-mono text-xs uppercase tracking-wider border border-ink/15 dark:border-zinc-800 rounded-full cursor-pointer active:scale-95 transition-all focus:outline-none"
                                         >
                                             {word}
                                         </button>
@@ -207,11 +207,11 @@ export default function ReorderActivity({ activity, onComplete, onErrorLogged }:
 
                             {/* Feedback helper */}
                             {isChecked && (
-                                <div className="text-xs font-black uppercase tracking-wider flex items-center justify-between mt-1">
+                                <div className="text-[10px] font-mono uppercase tracking-wider flex items-center justify-between mt-1">
                                     {isQCorrect ? (
-                                        <span className="text-green-600 dark:text-green-400">✓ Correct Sentence</span>
+                                        <span className="text-hume-mint">✓ Correct Sentence</span>
                                     ) : (
-                                        <span className="text-red-600 dark:text-red-400">Expected: &quot;{correctAnswers[qIdx]}&quot;</span>
+                                        <span className="text-hume-coral">Expected: &quot;{correctAnswers[qIdx]}&quot;</span>
                                     )}
                                 </div>
                             )}
@@ -220,7 +220,7 @@ export default function ReorderActivity({ activity, onComplete, onErrorLogged }:
                                 <div className="flex justify-end">
                                     <button
                                         onClick={() => handleResetQuestion(qIdx)}
-                                        className="text-xs font-bold text-zinc-400 hover:text-zinc-600 transition-colors"
+                                        className="font-mono text-xs uppercase tracking-wider font-semibold text-ink/40 dark:text-canvas-cream/40 hover:opacity-85 transition-opacity cursor-pointer focus:outline-none"
                                     >
                                         Reset Sentence ↺
                                     </button>
@@ -232,13 +232,13 @@ export default function ReorderActivity({ activity, onComplete, onErrorLogged }:
             </div>
 
             {/* Actions */}
-            <div className="mt-4 pt-4 border-t border-zinc-100 dark:border-zinc-700/50 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div className="mt-4 pt-4 border-t border-ink/5 dark:border-zinc-800 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                 {isChecked && (
-                    <div className="text-base font-bold">
+                    <div className="text-sm font-semibold">
                         {isCorrect ? (
-                            <span className="text-green-600 dark:text-green-400">✨ Correct! Excellent word ordering.</span>
+                            <span className="text-hume-mint">✨ Correct! Excellent word ordering.</span>
                         ) : (
-                            <span className="text-red-600 dark:text-red-400">⚠️ Word order errors detected. Try again!</span>
+                            <span className="text-hume-coral">⚠️ Word order errors detected. Try again!</span>
                         )}
                     </div>
                 )}
@@ -247,7 +247,7 @@ export default function ReorderActivity({ activity, onComplete, onErrorLogged }:
                     {isChecked && !isCorrect && (
                         <button
                             onClick={handleRetry}
-                            className="px-6 py-3.5 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-300 font-extrabold text-sm rounded-2xl transition-all"
+                            className="px-5 py-2.5 bg-transparent text-ink dark:text-canvas-cream border border-ink/20 dark:border-canvas-cream/30 hover:bg-ink/5 dark:hover:bg-canvas-cream/5 font-mono text-xs uppercase tracking-wider font-bold rounded-full transition-all active:scale-[0.98] cursor-pointer"
                         >
                             Retry
                         </button>
@@ -256,10 +256,10 @@ export default function ReorderActivity({ activity, onComplete, onErrorLogged }:
                         <button
                             disabled={!isAllPlaced}
                             onClick={handleCheck}
-                            className={`px-8 py-3.5 font-black text-base rounded-2xl shadow-lg transition-all ${
+                            className={`px-6 py-3 font-mono text-xs uppercase tracking-wider font-bold rounded-full transition-all shadow-none ${
                                 isAllPlaced
-                                    ? "bg-blue-600 hover:bg-blue-700 text-white shadow-blue-200 dark:shadow-none cursor-pointer active:scale-[0.98]"
-                                    : "bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-600 shadow-none cursor-not-allowed"
+                                    ? "bg-ink dark:bg-canvas-cream text-canvas-cream dark:text-ink cursor-pointer active:scale-[0.98] hover:opacity-90"
+                                    : "bg-ink/5 dark:bg-canvas-cream/5 text-ink/30 dark:text-canvas-cream/30 cursor-not-allowed"
                             }`}
                         >
                             Check Arrangement
@@ -267,7 +267,7 @@ export default function ReorderActivity({ activity, onComplete, onErrorLogged }:
                     ) : (
                         <button
                             onClick={handleNext}
-                            className="px-8 py-3.5 bg-emerald-500 hover:bg-emerald-600 active:scale-[0.98] transition-all text-white font-black text-base rounded-2xl shadow-lg shadow-emerald-200 dark:shadow-none"
+                            className="px-6 py-3 bg-ink dark:bg-canvas-cream text-canvas-cream dark:text-ink hover:opacity-90 active:scale-[0.98] transition-all font-mono text-xs uppercase tracking-wider font-bold rounded-full cursor-pointer shadow-none"
                         >
                             Continue →
                         </button>

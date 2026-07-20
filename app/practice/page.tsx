@@ -145,7 +145,7 @@ export default function PracticeMenuPage() {
 
                 {/* Main Hero Card: Today's Lesson with Hume Premium Lavender Card style */}
                 {activeLesson && (
-                    <div className="relative overflow-hidden bg-hume-lavender text-ink rounded-md p-8 md:p-10 shadow-none flex flex-col gap-6 border border-ink/10">
+                    <div className="relative overflow-hidden bg-hume-lavender text-ink rounded-xl p-8 md:p-10 shadow-none flex flex-col gap-6 border border-ink/10">
                         {/* Background subtle elements */}
                         <div className="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-white/10 blur-3xl pointer-events-none" />
                         <div className="absolute -left-16 -bottom-16 w-64 h-64 rounded-full bg-white/10 blur-3xl pointer-events-none" />

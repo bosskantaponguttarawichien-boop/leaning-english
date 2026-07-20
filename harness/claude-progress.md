@@ -339,13 +339,37 @@ Overhauled the visual user interface of the EngList application to implement the
    - Verified that ESLint is clean (`npm run lint`).
    - Verified production build completes cleanly (`npm run build`).
 
+## [2026-07-20] Session: Visual Style Alignment across Practice Pages & Activities
+
+### Summary
+Aligned all sub-practice pages, monthly assessment, AI Tutor coach, and lesson activity components with the humanist Hume AI design system (flat cards, hairline borders, zero shadows, rounded-md [12px] standard radii, and rounded-full monochrome pill buttons).
+
+### Accomplishments
+1. **Aligned Sub-Practice Pages:**
+   - Updated vocabulary practice page ([words/page.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/practice/words/page.tsx)) loader skeleton, empty states, reset buttons to use Hume card specs.
+   - Updated sentence typing practice page ([sentences/page.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/practice/sentences/page.tsx)) border-radius, background colors, status colors, and inputs.
+   - Restructured build-a-sentence page ([build-sentence/page.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/practice/build-sentence/page.tsx)) chips as custom Hume tags, action panels, and buttons.
+   - Updated conversational AI Tutor Coach page ([ai-tutor/page.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/practice/ai-tutor/page.tsx)) scenario buttons, input footers, chat bubble border-radius, and highlights.
+   - Overhauled Monthly Diagnostic Assessment page ([assessment/page.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/practice/assessment/page.tsx)) step cards, reading snippets, inputs, rating stars, and final report grid colors.
+2. **Aligned Lesson Activity Components:**
+   - Aligned [ClassifyActivity.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/practice/lessons/[id]/components/ClassifyActivity.tsx) with Hume EVI flat card structures and inline selector stylings.
+   - Aligned [FillBlankActivity.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/practice/lessons/[id]/components/FillBlankActivity.tsx) input elements and status borders.
+   - Aligned [ConceptActivity.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/practice/lessons/[id]/components/ConceptActivity.tsx) container styling and CTA monochrome buttons.
+   - Aligned [ReadingActivity.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/practice/lessons/[id]/components/ReadingActivity.tsx) documentation reading blocks and option selections.
+   - Aligned [GuidedOutputActivity.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/practice/lessons/[id]/components/GuidedOutputActivity.tsx) textareas, self-reflection ratings, reference cards.
+   - Aligned [ReorderActivity.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/practice/lessons/[id]/components/ReorderActivity.tsx) sentence assembly zones, token buttons, and action blocks.
+   - Aligned [DictationActivity.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/practice/lessons/[id]/components/DictationActivity.tsx) audio trigger icons, spelling text inputs, and CTAs.
+3. **Verification & Quality Checks:**
+   - Ran linter validation (`npm run lint`), which passed successfully.
+   - Ran TypeScript compiler type-check (`npx tsc --noEmit`), which compiled with 0 errors.
+   - Verified production build package optimization (`npm run build`) compiles successfully without warnings or errors.
+
 ---
 
 ## Handoff & Next Steps
-1. The web interface is fully overhauled under the Hume AI design system.
-2. Plus Jakarta Sans and IBM Plex Mono Google Fonts have been successfully loaded.
-3. Clean hairline borders and a flat, paper-like aesthetic have replaced the previous Apple Music drop shadows and high-contrast gradients.
-4. Corrected border-radius variables to match Hume EVI design specification (sm: 8px, md: 12px, lg: 16px, xl: 24px) for optimal visual aesthetics.
-5. Next.js production builds and TypeScript type-checks remain fully valid.
+1. The visual styling and border-radius alignment across the entire practice ecosystem is 100% complete and fully verified.
+2. All components adhere to the flat hairline border layouts, warm cream canvas backgrounds, and color-coded register accents of the Hume AI design spec.
+3. Code quality passes TypeScript compilation and Next.js production builds.
+
 
 

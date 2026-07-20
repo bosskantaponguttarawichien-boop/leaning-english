@@ -32,15 +32,15 @@ export default function LessonsCatalogPage() {
 
     if (isLoading) {
         return (
-            <main className="flex min-h-screen flex-col items-center px-[24px] py-12 tracking-tight">
+            <main className="flex min-h-screen flex-col items-center px-6 py-12 bg-background text-foreground tracking-tight">
                 <div className="w-full max-w-4xl flex flex-col gap-10">
                     <div className="flex flex-col gap-2">
-                        <Skeleton className="h-10 w-64" />
-                        <Skeleton className="h-5 w-48" />
+                        <Skeleton className="h-10 w-64 rounded-md" />
+                        <Skeleton className="h-5 w-48 rounded-md" />
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {[1, 2, 3, 4].map(i => (
-                            <Skeleton key={i} className="h-64 w-full rounded-3xl" />
+                            <Skeleton key={i} className="h-64 w-full rounded-md" />
                         ))}
                     </div>
                 </div>
@@ -49,17 +49,17 @@ export default function LessonsCatalogPage() {
     }
 
     return (
-        <main className="flex min-h-screen flex-col items-center px-[24px] py-12 tracking-tight">
+        <main className="flex min-h-screen flex-col items-center px-6 py-12 bg-background text-foreground tracking-tight">
             <div className="w-full max-w-4xl flex flex-col gap-10">
                 {/* Header */}
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2 font-display">
                     <div className="flex items-center gap-3">
-                        <Link href="/practice" className="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors text-xl font-bold flex items-center gap-1">
-                            ← Back
+                        <Link href="/practice" className="font-mono text-xs uppercase tracking-wider font-semibold text-hume-lavender hover:opacity-80 transition-opacity flex items-center gap-1">
+                            ← Back to Today
                         </Link>
                     </div>
-                    <h1 className="text-4xl font-black text-zinc-900 dark:text-white leading-none mt-2">Curriculum Lessons</h1>
-                    <p className="text-zinc-500 dark:text-zinc-400 font-medium">Follow this step-by-step path to master conversational & coding English.</p>
+                    <h1 className="text-4xl font-semibold text-ink dark:text-canvas-cream mt-2 leading-none">Curriculum Lessons</h1>
+                    <p className="text-ink/65 dark:text-canvas-cream/65 font-medium text-sm mt-1">Follow this step-by-step path to master conversational & coding English.</p>
                 </div>
 
                 {/* Lessons Grid */}
@@ -74,43 +74,43 @@ export default function LessonsCatalogPage() {
                             ? (!lessonProg || lessonProg.status === "available" || lessonProg.status === "learning" || lessonProg.status === "review")
                             : (lessonProg?.status === "available" || lessonProg?.status === "learning" || lessonProg?.status === "review");
 
-                        let badgeColor = "bg-zinc-100 dark:bg-zinc-800 text-zinc-400";
+                        let badgeColor = "bg-ink/5 dark:bg-canvas-cream/5 text-ink/40 dark:text-canvas-cream/40";
                         let badgeLabel = "Locked 🔒";
 
                         if (isMastered) {
-                            badgeColor = "bg-green-50 dark:bg-green-950/30 text-green-600 dark:text-green-400 border border-green-100 dark:border-green-900/30";
+                            badgeColor = "bg-hume-mint/15 text-hume-mint font-bold border border-hume-mint/10";
                             badgeLabel = "Mastered ✅";
                         } else if (isAvailable) {
-                            badgeColor = "bg-blue-50 dark:bg-blue-950/30 text-blue-600 dark:text-blue-400 border border-blue-100 dark:border-blue-900/30";
+                            badgeColor = "bg-hume-lavender/15 text-hume-lavender font-bold border border-hume-lavender/10";
                             badgeLabel = "Available 📖";
                         }
 
                         const cardContent = (
                             <div className="flex flex-col h-full gap-4">
                                 <div className="flex justify-between items-start">
-                                    <span className="text-xs uppercase tracking-widest font-black text-zinc-400">{lesson.id} • {lesson.level}</span>
-                                    <span className={`text-xs px-2.5 py-1 rounded-full font-bold ${badgeColor}`}>{badgeLabel}</span>
+                                    <span className="text-[10px] font-mono uppercase tracking-widest font-semibold text-ink/50 dark:text-canvas-cream/50">{lesson.id} • {lesson.level}</span>
+                                    <span className={`text-[10px] font-mono uppercase px-2.5 py-0.5 rounded-full ${badgeColor}`}>{badgeLabel}</span>
                                 </div>
-                                <div>
-                                    <h3 className="text-2xl font-black text-zinc-900 dark:text-white group-hover:text-blue-600 transition-colors leading-tight">
+                                <div className="font-display">
+                                    <h3 className="text-2xl font-semibold text-ink dark:text-canvas-cream group-hover:text-hume-lavender transition-colors leading-tight">
                                         {lesson.title_en}
                                     </h3>
-                                    <h4 className="text-sm font-semibold text-zinc-500 dark:text-zinc-400 mt-1 leading-snug">
+                                    <h4 className="text-sm font-semibold text-ink/70 dark:text-canvas-cream/70 mt-1 leading-snug">
                                         {lesson.title_th}
                                     </h4>
                                 </div>
-                                <div className="flex-1 flex flex-col gap-2 mt-2">
-                                    <h5 className="text-xs font-bold uppercase tracking-wider text-zinc-400">Goals:</h5>
-                                    <ul className="text-xs font-medium text-zinc-600 dark:text-zinc-300 list-disc list-inside flex flex-col gap-1">
+                                <div className="flex-1 flex flex-col gap-2 mt-2 font-sans">
+                                    <h5 className="text-[10px] font-mono font-bold uppercase tracking-wider text-ink/50 dark:text-canvas-cream/50">Goals:</h5>
+                                    <ul className="text-xs text-ink/75 dark:text-canvas-cream/75 list-disc list-inside flex flex-col gap-1">
                                         {lesson.goals.slice(0, 2).map((goal, idx) => (
                                             <li key={idx} className="truncate">{goal}</li>
                                         ))}
                                     </ul>
                                 </div>
-                                <div className="pt-4 border-t border-zinc-100 dark:border-zinc-700/50 flex justify-between items-center text-xs font-bold text-zinc-400">
+                                <div className="pt-4 border-t border-ink/5 dark:border-zinc-800 flex justify-between items-center text-[10px] font-mono font-bold uppercase text-ink/50 dark:text-canvas-cream/50">
                                     <span>⏱️ {lesson.estimated_minutes} mins</span>
                                     {!isLocked && (
-                                        <span className="text-blue-500 group-hover:translate-x-1 transition-transform flex items-center gap-0.5">
+                                        <span className="text-hume-lavender group-hover:translate-x-1 transition-transform flex items-center gap-0.5">
                                             Start Lesson →
                                         </span>
                                     )}
@@ -122,7 +122,7 @@ export default function LessonsCatalogPage() {
                             return (
                                 <div
                                     key={lesson.id}
-                                    className="p-8 rounded-3xl border border-zinc-100 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900 opacity-55 cursor-not-allowed select-none shadow-sm"
+                                    className="p-8 rounded-md border border-ink/10 dark:border-zinc-800 bg-canvas/50 dark:bg-zinc-900/50 opacity-55 cursor-not-allowed select-none shadow-none"
                                 >
                                     {cardContent}
                                 </div>
@@ -133,7 +133,7 @@ export default function LessonsCatalogPage() {
                             <Link
                                 key={lesson.id}
                                 href={`/practice/lessons/${lesson.id}`}
-                                className="group p-8 rounded-3xl border border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-800 shadow-xl shadow-zinc-200/40 dark:shadow-zinc-900/50 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
+                                className="group p-8 rounded-md border border-ink/10 dark:border-zinc-800 bg-canvas dark:bg-zinc-900 shadow-none hover:bg-hume-lavender/5 dark:hover:bg-hume-lavender/5 transition-all cursor-pointer"
                             >
                                 {cardContent}
                             </Link>

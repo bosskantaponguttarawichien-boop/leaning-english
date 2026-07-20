@@ -238,36 +238,36 @@ IMPORTANT: Respond strictly in JSON format matching this schema:
     };
 
     return (
-        <main className="flex min-h-screen flex-col items-center px-[24px] py-12 tracking-tight">
+        <main className="flex min-h-screen flex-col items-center px-6 py-12 bg-background text-foreground tracking-tight">
             <div className="w-full max-w-2xl flex flex-col gap-6 flex-1 justify-center">
 
                 {/* SETUP VIEW PANEL */}
                 {step === "setup" && (
-                    <div className="bg-white dark:bg-zinc-800 p-8 rounded-3xl border border-zinc-100 dark:border-zinc-700 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50 flex flex-col gap-6 animate-fade-in">
+                    <div className="bg-canvas dark:bg-zinc-900 p-8 rounded-md border border-ink/10 dark:border-zinc-800 shadow-none flex flex-col gap-6 animate-fade-in">
                         <div>
-                            <Link href="/practice" className="text-zinc-400 hover:text-zinc-950 dark:hover:text-white transition-colors font-bold text-sm">
+                            <Link href="/practice" className="font-mono text-xs uppercase tracking-wider font-semibold text-hume-lavender hover:opacity-85 transition-opacity">
                                 ← Cancel Setup
                             </Link>
-                            <h1 className="text-3xl font-black text-zinc-900 dark:text-white mt-4">AI Coach Settings</h1>
-                            <p className="text-zinc-500 dark:text-zinc-400 font-medium">Select a scenario and choose your coach coaching strictness level.</p>
+                            <h1 className="text-3xl font-semibold text-ink dark:text-canvas-cream mt-4 font-display leading-none">AI Coach Settings</h1>
+                            <p className="text-ink/65 dark:text-canvas-cream/65 font-medium text-sm mt-1">Select a scenario and choose your coach coaching strictness level.</p>
                         </div>
 
                         {/* Scenario Selection */}
                         <div className="flex flex-col gap-2">
-                            <label className="text-xs font-black uppercase tracking-wider text-zinc-400">Select Scenario:</label>
+                            <label className="text-[10px] font-mono uppercase tracking-widest font-semibold text-ink/50 dark:text-canvas-cream/50">Select Scenario:</label>
                             <div className="flex flex-col gap-2">
                                 {SCENARIOS.map((sc) => (
                                     <button
                                         key={sc.id}
                                         onClick={() => setSelectedScenario(sc)}
-                                        className={`w-full text-left p-4 rounded-2xl border text-sm transition-all flex flex-col gap-1 ${
+                                        className={`w-full text-left p-4 rounded-md border text-sm transition-all flex flex-col gap-1 cursor-pointer focus:outline-none ${
                                             selectedScenario.id === sc.id
-                                                ? "bg-blue-50/50 dark:bg-blue-950/20 text-blue-700 dark:text-blue-300 border-blue-400"
-                                                : "bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50"
+                                                ? "bg-hume-lavender/10 text-ink dark:text-canvas-cream border-hume-lavender"
+                                                : "bg-canvas dark:bg-zinc-900 text-ink dark:text-canvas-cream border-ink/10 dark:border-zinc-800 hover:bg-ink/5 dark:hover:bg-canvas-cream/5"
                                         }`}
                                     >
-                                        <span className="font-extrabold">{sc.title}</span>
-                                        <span className="text-xs font-semibold text-zinc-400">{sc.description}</span>
+                                        <span className="font-semibold text-ink dark:text-canvas-cream font-display">{sc.title}</span>
+                                        <span className="text-xs text-ink/50 dark:text-canvas-cream/50">{sc.description}</span>
                                     </button>
                                 ))}
                             </div>
@@ -275,7 +275,7 @@ IMPORTANT: Respond strictly in JSON format matching this schema:
 
                         {/* Coach Mode Strictness Selection */}
                         <div className="flex flex-col gap-2">
-                            <label className="text-xs font-black uppercase tracking-wider text-zinc-400">Coach Feedback Level:</label>
+                            <label className="text-[10px] font-mono uppercase tracking-widest font-semibold text-ink/50 dark:text-canvas-cream/50">Coach Feedback Level:</label>
                             <div className="grid grid-cols-3 gap-2">
                                 {[
                                     { id: "gentle", label: "Gentle 🟢", desc: "No inline breaks" },
@@ -285,25 +285,25 @@ IMPORTANT: Respond strictly in JSON format matching this schema:
                                     <button
                                         key={mode.id}
                                         onClick={() => setCoachMode(mode.id as "gentle" | "balanced" | "strict")}
-                                        className={`p-3.5 rounded-2xl border text-center transition-all flex flex-col gap-1 ${
+                                        className={`p-3.5 rounded-md border text-center transition-all flex flex-col gap-1 cursor-pointer focus:outline-none ${
                                             coachMode === mode.id
-                                                ? "bg-blue-50/50 dark:bg-blue-950/20 text-blue-700 dark:text-blue-300 border-blue-400 font-extrabold"
-                                                : "bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50"
+                                                ? "bg-hume-lavender/10 text-ink dark:text-canvas-cream border-hume-lavender font-bold"
+                                                : "bg-canvas dark:bg-zinc-900 text-ink dark:text-canvas-cream border-ink/10 dark:border-zinc-800 hover:bg-ink/5 dark:hover:bg-canvas-cream/5"
                                         }`}
                                     >
-                                        <span className="text-xs font-black">{mode.label}</span>
-                                        <span className="text-[10px] font-bold text-zinc-400">{mode.desc}</span>
+                                        <span className="text-xs font-bold text-ink dark:text-canvas-cream">{mode.label}</span>
+                                        <span className="text-[10px] text-ink/50 dark:text-canvas-cream/50">{mode.desc}</span>
                                     </button>
                                 ))}
                             </div>
                         </div>
 
                         {/* Optional OpenAI API configuration */}
-                        <div className="p-5 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl flex flex-col gap-3">
+                        <div className="p-5 bg-canvas-cream dark:bg-black/25 border border-ink/5 dark:border-zinc-800 rounded-md flex flex-col gap-3">
                             <div className="flex justify-between items-center">
-                                <label className="text-xs font-black uppercase tracking-wider text-zinc-400">OpenAI API Key (Optional):</label>
+                                <label className="text-[10px] font-mono uppercase tracking-widest font-semibold text-ink/50 dark:text-canvas-cream/50">OpenAI API Key (Optional):</label>
                                 {savedKey && (
-                                    <span className="text-[10px] bg-green-50 dark:bg-green-950/20 border border-green-200/50 text-green-600 dark:text-green-400 font-black uppercase px-2 py-0.5 rounded-full">Active</span>
+                                    <span className="text-[9px] font-mono bg-hume-mint/15 border border-hume-mint/10 text-hume-mint font-bold uppercase px-2 py-0.5 rounded-full">Active</span>
                                 )}
                             </div>
                             <div className="flex gap-2">
@@ -312,32 +312,32 @@ IMPORTANT: Respond strictly in JSON format matching this schema:
                                     value={apiKey}
                                     onChange={(e) => setApiKey(e.target.value)}
                                     placeholder="sk-proj-..."
-                                    className="flex-1 px-3.5 py-2.5 bg-white dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 rounded-xl text-xs font-medium focus:outline-none"
+                                    className="flex-1 px-3.5 py-2.5 bg-canvas dark:bg-zinc-950 border border-ink/10 dark:border-zinc-850 rounded-full text-xs font-medium focus:outline-none text-ink dark:text-canvas-cream focus:border-hume-lavender"
                                 />
                                 {savedKey ? (
                                     <button
                                         onClick={handleClearKey}
-                                        className="px-4 py-2.5 bg-red-100 hover:bg-red-200 text-red-600 font-bold text-xs rounded-xl transition-all"
+                                        className="px-4 py-2.5 bg-hume-coral/20 hover:opacity-85 text-hume-coral font-bold text-xs rounded-full transition-all cursor-pointer focus:outline-none"
                                     >
                                         Clear
                                     </button>
                                 ) : (
                                     <button
                                         onClick={handleSaveKey}
-                                        className="px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-xl transition-all"
+                                        className="px-4 py-2.5 bg-ink dark:bg-canvas-cream text-canvas-cream dark:text-ink hover:opacity-90 font-mono uppercase tracking-wider text-[10px] font-bold rounded-full transition-all cursor-pointer focus:outline-none"
                                     >
                                         Save
                                     </button>
                                 )}
                             </div>
-                            <span className="text-[10px] text-zinc-400 font-semibold leading-tight">Stored in your browser local storage. If omitted, a smart simulated local engine will reply.</span>
+                            <span className="text-[10px] text-ink/40 dark:text-canvas-cream/40 font-semibold leading-tight">Stored in your browser local storage. If omitted, a smart simulated local engine will reply.</span>
                         </div>
 
                         {/* CTA trigger */}
-                        <div className="pt-4 border-t border-zinc-100 dark:border-zinc-700/50 flex justify-end">
+                        <div className="pt-4 border-t border-ink/5 dark:border-zinc-800 flex justify-end">
                             <button
                                 onClick={handleStartChat}
-                                className="px-8 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-black text-sm rounded-2xl shadow-lg transition-all active:scale-[0.98] cursor-pointer"
+                                className="px-6 py-3 bg-ink dark:bg-canvas-cream text-canvas-cream dark:text-ink hover:opacity-90 transition-all active:scale-[0.98] cursor-pointer font-mono text-xs uppercase tracking-wider font-bold rounded-full shadow-none"
                             >
                                 Start Roleplay →
                             </button>
@@ -347,16 +347,16 @@ IMPORTANT: Respond strictly in JSON format matching this schema:
 
                 {/* ACTIVE CHAT WORKSPACE PANEL */}
                 {step === "chat" && (
-                    <div className="bg-white dark:bg-zinc-800 border border-zinc-100 dark:border-zinc-700 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50 rounded-3xl flex flex-col h-[520px] animate-fade-in relative">
+                    <div className="bg-canvas dark:bg-zinc-900 border border-ink/10 dark:border-zinc-800 shadow-none rounded-md flex flex-col h-[520px] animate-fade-in relative">
                         {/* Chat Header */}
-                        <div className="p-4 border-b border-zinc-100 dark:border-zinc-700/50 flex justify-between items-center bg-zinc-50/50 dark:bg-zinc-900/20 rounded-t-3xl">
+                        <div className="p-4 border-b border-ink/5 dark:border-zinc-800 flex justify-between items-center bg-canvas-cream dark:bg-black/10 rounded-t-md">
                             <div>
-                                <h3 className="font-extrabold text-sm text-zinc-800 dark:text-white leading-tight">{selectedScenario.title}</h3>
-                                <span className="text-[10px] uppercase font-black tracking-widest text-zinc-400">Coach strictness: {coachMode}</span>
+                                <h3 className="font-semibold text-sm text-ink dark:text-canvas-cream leading-tight font-display">{selectedScenario.title}</h3>
+                                <span className="text-[10px] uppercase font-mono tracking-widest text-ink/50 dark:text-canvas-cream/50">Coach strictness: {coachMode}</span>
                             </div>
                             <button
                                 onClick={() => setStep("setup")}
-                                className="text-xs font-bold text-zinc-400 hover:text-zinc-600 transition-colors"
+                                className="font-mono text-xs uppercase tracking-wider font-semibold text-ink/40 dark:text-canvas-cream/40 hover:opacity-85 transition-opacity cursor-pointer focus:outline-none"
                             >
                                 Leave ✕
                             </button>
@@ -368,17 +368,17 @@ IMPORTANT: Respond strictly in JSON format matching this schema:
                                 const isTutor = msg.sender === "tutor";
                                 return (
                                     <div key={idx} className={`flex flex-col max-w-[85%] ${isTutor ? "self-start items-start" : "self-end items-end"}`}>
-                                        <div className={`p-4 rounded-2xl text-sm font-semibold leading-relaxed shadow-sm ${
+                                        <div className={`p-4 rounded-md text-sm font-semibold leading-relaxed shadow-none ${
                                             isTutor
-                                                ? "bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 rounded-tl-none border border-zinc-200/40 dark:border-zinc-800"
-                                                : "bg-blue-600 text-white rounded-tr-none"
+                                                ? "bg-canvas-cream dark:bg-black/25 text-ink dark:text-canvas-cream rounded-tl-none border border-ink/5 dark:border-zinc-850"
+                                                : "bg-ink dark:bg-canvas-cream text-canvas-cream dark:text-ink rounded-tr-none border-0"
                                         }`}>
                                             {msg.content}
                                             
                                             {isTutor && (
                                                 <button
                                                     onClick={() => speak(msg.content)}
-                                                    className="block text-[10px] text-blue-500 hover:underline mt-1.5 font-bold"
+                                                    className="block text-[10px] text-hume-lavender hover:opacity-85 mt-1.5 font-bold cursor-pointer focus:outline-none"
                                                 >
                                                     Listen 🔊
                                                 </button>
@@ -387,7 +387,7 @@ IMPORTANT: Respond strictly in JSON format matching this schema:
 
                                         {/* Show inline corrections immediately in balanced/strict modes */}
                                         {msg.correction && (
-                                            <div className="my-1.5 p-3 bg-amber-50 dark:bg-amber-950/20 border-l-4 border-amber-500 rounded-r-xl text-amber-800 dark:text-amber-400 font-bold text-xs max-w-full leading-normal">
+                                            <div className="my-1.5 p-3 bg-hume-orange/10 border-l-2 border-hume-orange rounded-r-md text-ink dark:text-canvas-cream font-medium text-xs max-w-full leading-normal">
                                                 💡 {msg.correction}
                                             </div>
                                         )}
@@ -396,30 +396,30 @@ IMPORTANT: Respond strictly in JSON format matching this schema:
                             })}
 
                             {isResponding && (
-                                <div className="self-start flex gap-1.5 p-3.5 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200/40 dark:border-zinc-800 rounded-2xl rounded-tl-none items-center">
-                                    <div className="w-1.5 h-1.5 bg-zinc-400 rounded-full animate-bounce" />
-                                    <div className="w-1.5 h-1.5 bg-zinc-400 rounded-full animate-bounce [animation-delay:0.2s]" />
-                                    <div className="w-1.5 h-1.5 bg-zinc-400 rounded-full animate-bounce [animation-delay:0.4s]" />
+                                <div className="self-start flex gap-1.5 p-3.5 bg-canvas-cream dark:bg-black/25 border border-ink/5 dark:border-zinc-800 rounded-md rounded-tl-none items-center">
+                                    <div className="w-1.5 h-1.5 bg-ink/50 dark:bg-canvas-cream/50 rounded-full animate-bounce" />
+                                    <div className="w-1.5 h-1.5 bg-ink/50 dark:bg-canvas-cream/50 rounded-full animate-bounce [animation-delay:0.2s]" />
+                                    <div className="w-1.5 h-1.5 bg-ink/50 dark:bg-canvas-cream/50 rounded-full animate-bounce [animation-delay:0.4s]" />
                                 </div>
                             )}
                         </div>
 
                         {/* Gentle Mode cumulative review checklist */}
                         {coachMode === "gentle" && localCorrectionsList.length > 0 && (
-                            <div className="p-3 bg-indigo-50/50 dark:bg-indigo-950/10 border-y border-indigo-100/50 text-[10px] font-bold text-indigo-700 dark:text-indigo-300 px-4 leading-normal flex items-center justify-between">
+                            <div className="p-3 bg-hume-blue/10 border-y border-hume-blue/20 text-[10px] font-bold text-hume-blue px-4 leading-normal flex items-center justify-between">
                                 <span>📝 {localCorrectionsList.length} feedback tips ready for exit checklist review.</span>
                             </div>
                         )}
 
                         {/* Input Footer */}
-                        <div className="p-4 border-t border-zinc-100 dark:border-zinc-700/50 flex gap-2 items-center bg-zinc-50/20 dark:bg-zinc-900/10 rounded-b-3xl">
+                        <div className="p-4 border-t border-ink/5 dark:border-zinc-800 flex gap-2 items-center bg-canvas-cream dark:bg-black/10 rounded-b-md">
                             <input
                                 disabled={isResponding}
                                 type="text"
                                 value={inputValue}
                                 onChange={(e) => setInputValue(e.target.value)}
                                 placeholder="Type your reply here..."
-                                className="flex-1 px-4 py-3 bg-white dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 rounded-2xl text-sm font-semibold focus:outline-none focus:ring-1 focus:ring-blue-500 transition-all text-zinc-900 dark:text-white"
+                                className="flex-1 px-4 py-2.5 bg-canvas dark:bg-zinc-950 border border-ink/10 dark:border-zinc-800 rounded-full text-sm font-medium focus:outline-none text-ink dark:text-canvas-cream focus:border-hume-lavender transition-all"
                                 onKeyDown={(e) => {
                                     if (e.key === "Enter") handleSendMessage();
                                 }}
@@ -427,10 +427,10 @@ IMPORTANT: Respond strictly in JSON format matching this schema:
                             <button
                                 disabled={isResponding || inputValue.trim() === ""}
                                 onClick={handleSendMessage}
-                                className={`px-5 py-3 rounded-2xl font-black text-sm transition-all shadow-md ${
+                                className={`px-5 py-2.5 rounded-full font-mono text-xs uppercase tracking-wider font-bold transition-all shadow-none ${
                                     inputValue.trim() !== "" && !isResponding
-                                        ? "bg-blue-600 hover:bg-blue-700 text-white cursor-pointer active:scale-95"
-                                        : "bg-zinc-100 dark:bg-zinc-800 text-zinc-400 shadow-none cursor-not-allowed"
+                                        ? "bg-ink dark:bg-canvas-cream text-canvas-cream dark:text-ink cursor-pointer active:scale-95 hover:opacity-90"
+                                        : "bg-ink/5 dark:bg-canvas-cream/5 text-ink/30 dark:text-canvas-cream/30 cursor-not-allowed"
                                 }`}
                             >
                                 Send
@@ -447,8 +447,8 @@ IMPORTANT: Respond strictly in JSON format matching this schema:
 export default function AITutorPage() {
     return (
         <Suspense fallback={
-            <main className="flex min-h-screen flex-col items-center justify-center p-12">
-                <div className="text-zinc-500 font-bold">Loading AI Coach...</div>
+            <main className="flex min-h-screen flex-col items-center justify-center p-12 bg-background text-foreground tracking-tight">
+                <div className="text-ink/65 dark:text-canvas-cream/65 font-mono text-xs uppercase tracking-wider font-bold">Loading AI Coach...</div>
             </main>
         }>
             <AITutorContent />
