@@ -310,15 +310,15 @@ Overhauled the visual user interface of the EngList application to implement the
 
 ---
 
-## [2026-07-20] Session: Hume AI Design System UI Overhaul
+## [2026-07-20] Session: Hume AI Design System UI Overhaul & Border Radius Fix
 
 ### Summary
-Overhauled the visual user interface of the EngList application to implement the premium, humanist Hume AI design system defined in `DESIGN.md`.
+Overhauled the visual user interface of the EngList application to implement the premium, humanist Hume AI design system defined in `DESIGN.md` and corrected border radius tokens.
 
 ### Accomplishments
 1. **Style System and Tokens Configuration:**
    - Modified [app/globals.css](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/globals.css) to define core Hume tokens inside Tailwind CSS v4 `@theme` (warm cream canvas `#fff9f3` in light mode, `#222222` in dark mode, and six named pastel register accents).
-   - Configured custom border radii (no shadows, flat card hairline border style, and scaled up sizes to sm: 12px, md: 20px, lg: 28px, xl: 36px to enhance rounded visual layout). Removed custom `--spacing-*` layout overrides to resolve a Tailwind v4 compilation conflict. Added Noto Sans Thai (`--font-noto-thai`) as a primary/fallback font across all font definitions (`font-sans`, `font-display`, `font-mono`) to guarantee proper Thai rendering.
+   - Configured custom border radii to match the Hume specification exactly (no shadows, flat card hairline border style, and tokens: sm: 8px, md: 12px, lg: 16px, xl: 24px). Removed custom `--spacing-*` layout overrides to resolve a Tailwind v4 compilation conflict. Added Noto Sans Thai (`--font-noto-thai`) as a primary/fallback font across all font definitions (`font-sans`, `font-display`, `font-mono`) to guarantee proper Thai rendering.
 2. **Typography System:**
    - Updated [app/layout.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/layout.tsx) to load Google Fonts (Plus Jakarta Sans as the Fellix substitute, and IBM Plex Mono as the PP Fraktion Mono substitute).
    - Linked variable classes to the HTML tag.
@@ -345,6 +345,7 @@ Overhauled the visual user interface of the EngList application to implement the
 1. The web interface is fully overhauled under the Hume AI design system.
 2. Plus Jakarta Sans and IBM Plex Mono Google Fonts have been successfully loaded.
 3. Clean hairline borders and a flat, paper-like aesthetic have replaced the previous Apple Music drop shadows and high-contrast gradients.
-4. Next.js production builds and TypeScript type-checks remain fully valid.
+4. Corrected border-radius variables to match Hume EVI design specification (sm: 8px, md: 12px, lg: 16px, xl: 24px) for optimal visual aesthetics.
+5. Next.js production builds and TypeScript type-checks remain fully valid.
 
 
