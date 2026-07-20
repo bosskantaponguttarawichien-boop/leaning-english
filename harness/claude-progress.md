@@ -282,3 +282,35 @@ Fixed a critical usability bug where input fields and select dropdowns rendered 
 1. All inputs and selection boxes in dark mode are fully visible, legible, and compatible with Tailwind CSS v4 styling standards.
 2. Codebase successfully compiles and passes Next.js production builds.
 3. No further dark mode text rendering issues detected.
+
+---
+
+## [2026-07-20] Session: Apple Music Design System UI Overhaul
+
+### Summary
+Overhauled the visual user interface of the EngList application to implement the premium, high-impact Apple Music design system defined in `DESIGN.md`.
+
+### Accomplishments
+1. **Style System and Tokens Configuration:**
+   - Modified [app/globals.css](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/globals.css) to define core Apple Music tokens inside Tailwind CSS v4 `@theme`.
+   - Setup border-radius configuration scale (`sm` for cards, `pill` for CTAs) and typography settings (SF Pro fallbacks).
+   - Added a radial gradient hero utility (`bg-apple-music-hero`) and fixed dark-mode nesting compilation warnings.
+2. **Dock Navigation:**
+   - Updated [components/Navbar.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/components/Navbar.tsx) with rounded-pill shapes, hairline borders, and flat active highlight overlays (zero shadows).
+3. **Landing Page Redesign:**
+   - Updated [app/page.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/page.tsx) with a full-bleed radial gradient hero card, rounded-sm parchment progress panels, and a dark immersion container for retention analytics.
+4. **Today Dashboard:**
+   - Updated [app/practice/page.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/practice/page.tsx) to feature the active lesson recommendation on the saturated hero canvas and tasks inside flat parchment cards.
+5. **Stats & Progress Dashboard:**
+   - Modified [app/dashboard/page.tsx](file:///Users/kantapong.uttarawichien/Documents/GitHub/leaning-english/app/dashboard/page.tsx) to align scorecards and analytics blocks with the flat layout grid.
+6. **Verification & Harness:**
+   - Verified that strict type checking passes with `npx tsc --noEmit`.
+   - Verified ESLint rules compile cleanly.
+   - Built the production package successfully with `npm run build`.
+
+---
+
+## Handoff & Next Steps
+1. The web interface is now visually overhauled with high-contrast radial gradients, flat canvas partitions, and rounded-pill interactive components.
+2. Production builds compile warning-free.
+

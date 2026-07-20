@@ -231,6 +231,20 @@
       "files": [
         "app/practice/ai-tutor/page.tsx"
       ]
+    },
+    {
+      "id": "apple-music-ui-overhaul",
+      "name": "Apple Music UI Overhaul",
+      "description": "Redesign website views (Navbar, Home, Today practice page, and Stats dashboard) using Apple Music design system tokens from DESIGN.md.",
+      "status": "done",
+      "phase": 6,
+      "files": [
+        "app/globals.css",
+        "components/Navbar.tsx",
+        "app/page.tsx",
+        "app/practice/page.tsx",
+        "app/dashboard/page.tsx"
+      ]
     }
   ]
 }

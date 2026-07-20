@@ -128,62 +128,62 @@ export default function StatsDashboardPage() {
         <main className="flex min-h-screen flex-col items-center px-[24px] py-12 tracking-tight">
             <div className="w-full max-w-4xl flex flex-col gap-10">
                 {/* Header */}
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2 font-display">
                     <div className="flex items-center gap-3">
-                        <Link href="/practice" className="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors text-xl font-bold flex items-center gap-1">
-                            ← Back
+                        <Link href="/practice" className="text-primary-action-blue hover:text-primary-action-blue-focus transition-colors text-sm font-semibold flex items-center gap-1">
+                            ← Back to Today
                         </Link>
                     </div>
-                    <h1 className="text-4xl font-black text-zinc-900 dark:text-white mt-2">Stats & Progress Dashboard</h1>
-                    <p className="text-zinc-500 dark:text-zinc-400 font-medium">Detailed tracking of your study achievements and weakest error points.</p>
+                    <h1 className="text-4xl font-semibold text-ink dark:text-white mt-2">Stats & Progress Dashboard</h1>
+                    <p className="text-ink-secondary dark:text-zinc-400 font-medium text-sm">สถิติและผลลัพธ์ความสำเร็จในการเรียนรู้ รวมถึงจุดบกพร่องที่ควรปรับปรุง</p>
                 </div>
 
-                {/* Scorecards Grid */}
+                {/* Scorecards Grid using rounded-sm (10px) parchment card geometry with no shadows */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="p-6 rounded-3xl bg-white dark:bg-zinc-800 border border-zinc-100 dark:border-zinc-700 shadow-xl shadow-zinc-200/40 dark:shadow-zinc-900/50 flex flex-col gap-1">
-                        <span className="text-xs uppercase tracking-widest font-black text-zinc-400">Mastery Progress</span>
+                    <div className="p-6 rounded-sm bg-white dark:bg-zinc-900 border border-hairline dark:border-zinc-800 shadow-none flex flex-col justify-between min-h-[140px]">
+                        <span className="text-xs uppercase tracking-widest font-semibold text-ink-secondary dark:text-zinc-400">Mastery Progress</span>
                         <div className="flex items-baseline gap-1 mt-2">
-                            <span className="text-4xl font-black text-zinc-900 dark:text-white">{progressPercent}%</span>
-                            <span className="text-sm font-bold text-zinc-400">completed</span>
+                            <span className="text-4xl font-semibold font-display text-ink dark:text-white">{progressPercent}%</span>
+                            <span className="text-xs font-semibold text-ink-muted dark:text-zinc-500">completed</span>
                         </div>
-                        <div className="w-full bg-zinc-250 dark:bg-zinc-700 h-2 rounded-full overflow-hidden mt-3">
+                        <div className="w-full bg-canvas-parchment dark:bg-zinc-800 h-2 rounded-full overflow-hidden mt-3">
                             <div className="bg-emerald-500 h-full transition-all duration-300" style={{ width: `${progressPercent}%` }} />
                         </div>
                     </div>
 
-                    <div className="p-6 rounded-3xl bg-white dark:bg-zinc-800 border border-zinc-100 dark:border-zinc-700 shadow-xl shadow-zinc-200/40 dark:shadow-zinc-900/50 flex flex-col justify-between">
-                        <span className="text-xs uppercase tracking-widest font-black text-zinc-400">Lessons Completed</span>
+                    <div className="p-6 rounded-sm bg-white dark:bg-zinc-900 border border-hairline dark:border-zinc-800 shadow-none flex flex-col justify-between min-h-[140px]">
+                        <span className="text-xs uppercase tracking-widest font-semibold text-ink-secondary dark:text-zinc-400">Lessons Completed</span>
                         <div className="flex items-baseline gap-1.5 mt-2">
-                            <span className="text-4xl font-black text-emerald-500">{masteredLessons}</span>
-                            <span className="text-sm font-bold text-zinc-400">/ {totalLessons} Mastered</span>
+                            <span className="text-4xl font-semibold font-display text-emerald-500">{masteredLessons}</span>
+                            <span className="text-xs font-semibold text-ink-muted dark:text-zinc-500">/ {totalLessons} Mastered</span>
                         </div>
-                        <span className="text-xs text-zinc-400 font-bold mt-1">({learningLessons} active lessons)</span>
+                        <span className="text-[11px] text-ink-muted dark:text-zinc-500 font-semibold mt-1">({learningLessons} active lessons)</span>
                     </div>
 
-                    <div className="p-6 rounded-3xl bg-white dark:bg-zinc-800 border border-zinc-100 dark:border-zinc-700 shadow-xl shadow-zinc-200/40 dark:shadow-zinc-900/50 flex flex-col justify-between">
-                        <span className="text-xs uppercase tracking-widest font-black text-zinc-400">Total Errors Logged</span>
+                    <div className="p-6 rounded-sm bg-white dark:bg-zinc-900 border border-hairline dark:border-zinc-800 shadow-none flex flex-col justify-between min-h-[140px]">
+                        <span className="text-xs uppercase tracking-widest font-semibold text-ink-secondary dark:text-zinc-400">Total Errors Logged</span>
                         <div className="flex items-baseline gap-1.5 mt-2">
-                            <span className="text-4xl font-black text-red-500">
+                            <span className="text-4xl font-semibold font-display text-brand-music-red">
                                 {Object.values(errorTags).reduce((a, b) => a + b, 0)}
                             </span>
-                            <span className="text-sm font-bold text-zinc-400">Errors</span>
+                            <span className="text-xs font-semibold text-ink-muted dark:text-zinc-500">Errors</span>
                         </div>
-                        <span className="text-xs text-zinc-400 font-bold mt-1">Across all learning categories</span>
+                        <span className="text-[11px] text-ink-muted dark:text-zinc-500 font-semibold mt-1">Across all learning categories</span>
                     </div>
                 </div>
 
-                {/* Error Analytics Section */}
-                <div className="bg-white dark:bg-zinc-800 p-8 rounded-3xl border border-zinc-100 dark:border-zinc-700 shadow-xl shadow-zinc-200/40 dark:shadow-zinc-900/50 flex flex-col gap-6">
-                    <div>
-                        <h3 className="text-2xl font-black text-zinc-900 dark:text-white">Mistake Analytics</h3>
-                        <p className="text-xs font-semibold text-zinc-500 dark:text-zinc-400 mt-1">Which error tags are triggered most frequently and how to correct them.</p>
+                {/* Error Analytics Section: styled as a clean card block */}
+                <div className="bg-white dark:bg-zinc-900 p-8 rounded-sm border border-hairline dark:border-zinc-800 shadow-none flex flex-col gap-6">
+                    <div className="font-display">
+                        <h3 className="text-2xl font-semibold text-ink dark:text-white">Mistake Analytics</h3>
+                        <p className="text-xs font-semibold text-ink-secondary dark:text-zinc-400 mt-1">วิเคราะห์ประเภทข้อผิดพลาดที่เกิดขึ้นบ่อยที่สุดเพื่อแนะแนวทางแก้ไข</p>
                     </div>
 
                     {sortedTags.length === 0 ? (
-                        <div className="p-8 text-center bg-zinc-50 dark:bg-zinc-900/40 rounded-2xl border border-zinc-100 dark:border-zinc-800">
+                        <div className="p-8 text-center bg-canvas-parchment dark:bg-zinc-900/30 rounded-sm border border-hairline dark:border-zinc-800">
                             <span className="text-2xl">🎉</span>
-                            <h4 className="text-sm font-extrabold text-zinc-800 dark:text-zinc-200 mt-2">No errors recorded yet!</h4>
-                            <p className="text-xs font-semibold text-zinc-400 mt-1">Complete lesson exercises or assessment tests to populate analytics data.</p>
+                            <h4 className="text-sm font-bold text-ink dark:text-white mt-2">No errors recorded yet!</h4>
+                            <p className="text-xs font-semibold text-ink-muted dark:text-zinc-500 mt-1">Complete lesson exercises or assessment tests to populate analytics data.</p>
                         </div>
                     ) : (
                         <div className="flex flex-col gap-6">
@@ -192,21 +192,21 @@ export default function StatsDashboardPage() {
                                 const barPercent = maxCount > 0 ? Math.round((tag.count / maxCount) * 100) : 0;
 
                                 return (
-                                    <div key={tag.key} className="flex flex-col gap-2 p-5 bg-zinc-50 dark:bg-zinc-900/30 border border-zinc-100 dark:border-zinc-800 rounded-2xl">
+                                    <div key={tag.key} className="flex flex-col gap-2 p-5 bg-canvas-parchment dark:bg-zinc-900/30 border border-hairline dark:border-zinc-800 rounded-sm">
                                         <div className="flex justify-between items-start">
                                             <div>
-                                                <h4 className="text-sm font-black text-zinc-800 dark:text-zinc-200">{tag.label}</h4>
-                                                <p className="text-xs text-zinc-400 font-semibold mt-0.5">{tag.desc}</p>
+                                                <h4 className="text-sm font-bold text-ink dark:text-white">{tag.label}</h4>
+                                                <p className="text-xs text-ink-muted dark:text-zinc-500 font-semibold mt-0.5">{tag.desc}</p>
                                             </div>
-                                            <span className="text-xs font-black text-red-500 bg-red-50 dark:bg-red-950/20 px-2.5 py-1 rounded-full">{tag.count} times</span>
+                                            <span className="text-xs font-bold text-brand-music-red bg-brand-music-red/10 border border-brand-music-red/20 px-2.5 py-1 rounded-pill">{tag.count} times</span>
                                         </div>
 
-                                        <div className="w-full bg-zinc-200 dark:bg-zinc-800 h-2 rounded-full overflow-hidden mt-1">
-                                            <div className="bg-red-500 h-full" style={{ width: `${barPercent}%` }} />
+                                        <div className="w-full bg-white dark:bg-zinc-800 h-2 rounded-full overflow-hidden mt-1">
+                                            <div className="bg-brand-music-red h-full" style={{ width: `${barPercent}%` }} />
                                         </div>
 
-                                        <div className="mt-2 text-xs font-semibold text-zinc-500 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800 p-2.5 rounded-xl border border-zinc-200/20 dark:border-zinc-800">
-                                            <strong className="text-blue-500">Study Advice: </strong> {tag.tip}
+                                        <div className="mt-2 text-xs font-semibold text-ink-secondary dark:text-zinc-400 bg-white dark:bg-zinc-900 p-2.5 rounded-sm border border-hairline dark:border-zinc-800/80 border-l-2 border-l-primary-action-blue">
+                                            <strong className="text-primary-action-blue">Study Advice: </strong> {tag.tip}
                                         </div>
                                     </div>
                                 );

@@ -98,72 +98,90 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center px-[24px] tracking-tight py-12">
       <div className="w-full max-w-4xl flex flex-col gap-10">
-        {/* Header Section */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 bg-white dark:bg-zinc-800 p-6 md:p-8 rounded-3xl border border-zinc-100 dark:border-zinc-700 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50">
-          <div className="flex flex-col gap-2">
-            <h1 className="text-4xl font-black text-zinc-900 dark:text-white leading-none">
-              EngList 🧠
+        {/* Apple Music Radial Gradient Hero Section */}
+        <div className="relative overflow-hidden bg-apple-music-hero text-white rounded-md p-8 md:p-12 border-0 flex flex-col justify-between min-h-[300px] shadow-none">
+          <div className="flex flex-col gap-4 max-w-xl">
+            <span className="text-xs font-semibold uppercase tracking-widest bg-white/20 text-white w-fit px-3 py-1 rounded-pill">
+              Apple Music Design System 🎨
+            </span>
+            <h1 className="font-display text-5xl md:text-6xl font-semibold tracking-tight leading-none text-white">
+              EngList
             </h1>
-            <p className="text-zinc-500 dark:text-zinc-400 font-medium">
-              เริ่มต้นฝึกพิมพ์คำศัพท์ภาษาอังกฤษเพื่อพัฒนาทักษะของคุณ
+            <p className="text-zinc-200 text-base md:text-lg font-medium leading-relaxed">
+              ฝึกฝนคำศัพท์ภาษาอังกฤษผ่านระบบวิเคราะห์ระดับพรีเมียม ช่วยให้การพิมพ์สะกดคำและจำประโยคทำได้รวดเร็วลื่นไหล
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-            <Link href="/dashboard" className="w-full sm:w-auto justify-center px-5 py-3 bg-zinc-100 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-200 font-bold rounded-2xl hover:bg-zinc-200 dark:hover:bg-zinc-600 transition-all text-sm flex items-center">
+          <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto mt-8">
+            <Link href="/practice" className="w-full sm:w-auto justify-center px-6 py-3.5 bg-white text-ink hover:bg-canvas-parchment font-bold rounded-pill transition-all text-sm flex items-center gap-2">
+              Keep Practicing ⚡
+            </Link>
+            <Link href="/dashboard" className="w-full sm:w-auto justify-center px-6 py-3.5 bg-transparent text-white hover:bg-white/10 font-bold rounded-pill border border-white/30 transition-all text-sm flex items-center gap-2">
               Stats Dashboard 📊
             </Link>
-            <Link href="/practice" className="w-full sm:w-auto justify-center px-5 py-3 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-100 dark:shadow-none text-sm flex items-center">
-              Keep Practicing
-            </Link>
           </div>
         </div>
 
-        <div className="flex flex-col gap-2">
-          <h2 className="text-3xl font-black text-zinc-900 dark:text-white leading-none">Your Progress</h2>
-          <p className="text-zinc-500 dark:text-zinc-400 font-medium">Visualization of your learning journey.</p>
+        {/* Section: Your Progress in Plan-Card style */}
+        <div className="flex flex-col gap-2 mt-2">
+          <h2 className="font-display text-3xl font-semibold text-ink dark:text-white leading-none">Your Progress</h2>
+          <p className="text-ink-secondary dark:text-zinc-400 font-medium text-sm">สถิติความก้าวหน้าและการเดินทางเพื่อการเรียนรู้ของคุณ</p>
         </div>
 
-        {/* Stats Grid */}
+        {/* Stats Grid using Apple Plan-Card geometry: 10px rounded-sm, hairline borders, no shadows */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white dark:bg-zinc-800 p-8 rounded-3xl border border-zinc-100 dark:border-zinc-700 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50">
-            <p className="text-zinc-400 dark:text-zinc-500 text-xs font-bold uppercase tracking-widest mb-1">Words Learned</p>
-            <p className="text-5xl font-black text-blue-600 dark:text-blue-500">{totalCorrect} <span className="text-xl text-zinc-300 dark:text-zinc-600">/ {totalWordsCount}</span></p>
+          <div className="bg-white dark:bg-zinc-900 border border-hairline dark:border-zinc-800 p-8 rounded-sm shadow-none flex flex-col justify-between min-h-[140px]">
+            <p className="text-ink-secondary dark:text-zinc-400 text-xs font-semibold uppercase tracking-widest">Words Learned</p>
+            <div className="mt-4">
+              <p className="text-5xl font-semibold font-display text-primary-action-blue leading-none">{totalCorrect}</p>
+              <p className="text-xs text-ink-muted dark:text-zinc-500 font-semibold mt-2">จากทั้งหมด {totalWordsCount} คำ</p>
+            </div>
           </div>
-          <div className="bg-white dark:bg-zinc-800 p-8 rounded-3xl border border-zinc-100 dark:border-zinc-700 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50">
-            <p className="text-zinc-400 dark:text-zinc-500 text-xs font-bold uppercase tracking-widest mb-1">Total Mistakes</p>
-            <p className="text-5xl font-black text-red-500 dark:text-red-400">{totalMistakes}</p>
+          
+          <div className="bg-white dark:bg-zinc-900 border border-hairline dark:border-zinc-800 p-8 rounded-sm shadow-none flex flex-col justify-between min-h-[140px]">
+            <p className="text-ink-secondary dark:text-zinc-400 text-xs font-semibold uppercase tracking-widest">Total Mistakes</p>
+            <div className="mt-4">
+              <p className="text-5xl font-semibold font-display text-brand-music-red leading-none">{totalMistakes}</p>
+              <p className="text-xs text-ink-muted dark:text-zinc-500 font-semibold mt-2">ข้อผิดพลาดที่บันทึกไว้</p>
+            </div>
           </div>
-          <div className="bg-white dark:bg-zinc-800 p-8 rounded-3xl border border-zinc-100 dark:border-zinc-700 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50">
-            <p className="text-zinc-400 dark:text-zinc-500 text-xs font-bold uppercase tracking-widest mb-1">Learning Streak</p>
-            <p className="text-5xl font-black text-green-500 dark:text-green-400">1</p>
+
+          <div className="bg-white dark:bg-zinc-900 border border-hairline dark:border-zinc-800 p-8 rounded-sm shadow-none flex flex-col justify-between min-h-[140px]">
+            <p className="text-ink-secondary dark:text-zinc-400 text-xs font-semibold uppercase tracking-widest">Learning Streak</p>
+            <div className="mt-4">
+              <p className="text-5xl font-semibold font-display text-green-500 leading-none">1</p>
+              <p className="text-xs text-ink-muted dark:text-zinc-500 font-semibold mt-2">วันเรียนติดต่อกัน</p>
+            </div>
           </div>
         </div>
 
-        {/* Details Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {/* Top Mistakes */}
+        {/* Dark Immersion Card Section for detail analytics */}
+        <div className="bg-ink dark:bg-surface-near-black text-white rounded-md p-8 md:p-10 border border-zinc-800 dark:border-zinc-900 shadow-none grid grid-cols-1 md:grid-cols-2 gap-10">
+          
+          {/* Top Mistakes in Dark immersion design */}
           <div className="flex flex-col gap-4">
-            <h2 className="text-2xl font-black text-zinc-900 dark:text-white">Difficult Words ⚠️</h2>
-            <div className="bg-white dark:bg-zinc-800 p-6 rounded-3xl border border-zinc-100 dark:border-zinc-700 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50 flex flex-col gap-4">
+            <h3 className="font-display text-2xl font-semibold text-white leading-none">Difficult Words ⚠️</h3>
+            <p className="text-zinc-400 text-xs font-medium">คำศัพท์ที่ต้องการการฝึกฝนเพิ่มเติม</p>
+            <div className="flex flex-col gap-3 mt-2">
               {topMistakes.length > 0 ? (
                 topMistakes.map((w, idx) => (
-                  <div key={idx} className="flex justify-between items-center p-4 bg-zinc-50 dark:bg-zinc-900/50 rounded-2xl border border-zinc-100 dark:border-zinc-700/50">
-                    <span className="text-xl font-bold text-zinc-800 dark:text-zinc-200">{w.word}</span>
-                    <span className="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs font-black rounded-full uppercase">
+                  <div key={idx} className="flex justify-between items-center p-4 bg-white/5 hover:bg-white/10 rounded-sm border border-white/5 transition-all">
+                    <span className="text-lg font-bold text-zinc-100">{w.word}</span>
+                    <span className="px-3 py-1 bg-brand-music-red/20 text-brand-music-red text-xs font-bold rounded-pill border border-brand-music-red/20">
                       {w.wrongCount} errors
                     </span>
                   </div>
                 ))
               ) : (
-                <p className="text-center py-8 text-zinc-400 dark:text-zinc-500 font-medium">Keep practicing to track mistakes!</p>
+                <p className="text-zinc-400 py-8 text-sm font-medium text-center">Keep practicing to track mistakes!</p>
               )}
             </div>
           </div>
 
-          {/* Progress Breakdown */}
-          <div className="flex flex-col gap-4">
-            <h2 className="text-2xl font-black text-zinc-900 dark:text-white">Word Retention 🧠</h2>
-            <div className="bg-white dark:bg-zinc-800 p-8 rounded-3xl border border-zinc-100 dark:border-zinc-700 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50 flex flex-col items-center justify-center gap-6">
+          {/* Progress Retention Graph in Dark immersion design */}
+          <div className="flex flex-col gap-4 items-center md:items-start">
+            <h3 className="font-display text-2xl font-semibold text-white leading-none">Word Retention 🧠</h3>
+            <p className="text-zinc-400 text-xs font-medium">อัตราความแม่นยำและการจำจดคำศัพท์</p>
+            <div className="w-full flex flex-col items-center justify-center gap-6 mt-4">
               <div className="relative w-40 h-40 flex items-center justify-center">
                 <svg className="w-full h-full transform -rotate-90">
                   <circle
@@ -172,7 +190,7 @@ export default function Home() {
                     r="70"
                     fill="transparent"
                     stroke="currentColor"
-                    className="text-zinc-100 dark:text-zinc-700"
+                    className="text-white/10"
                     strokeWidth="12"
                   />
                   <circle
@@ -181,7 +199,7 @@ export default function Home() {
                     r="70"
                     fill="transparent"
                     stroke="currentColor"
-                    className="text-blue-600 dark:text-blue-500"
+                    className="text-primary-action-blue"
                     strokeWidth="12"
                     strokeDasharray={440}
                     strokeDashoffset={440 - (440 * (masteryPercentage / 100))}
@@ -189,14 +207,15 @@ export default function Home() {
                   />
                 </svg>
                 <div className="absolute flex flex-col items-center">
-                  <span className="text-4xl font-black text-zinc-900 dark:text-white">{masteryPercentage}%</span>
+                  <span className="text-4xl font-semibold font-display text-white">{masteryPercentage}%</span>
                 </div>
               </div>
-              <p className="text-sm text-center text-zinc-500 dark:text-zinc-400 font-medium">
-                You&apos;ve mastered <span className="font-bold text-zinc-900 dark:text-white">{totalCorrect}</span> words from the collection.
+              <p className="text-xs text-center text-zinc-400 font-medium max-w-[250px] leading-relaxed">
+                คุณจดจำศัพท์ได้แล้ว <span className="font-semibold text-white">{totalCorrect}</span> คำ จากคอลเลกชันทั้งหมด
               </p>
             </div>
           </div>
+
         </div>
       </div>
     </main>

@@ -31,7 +31,7 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className={`w-full h-[120px] flex sticky top-0 z-30 relative ${scrolled ? "" : "bg-zinc-50 dark:bg-zinc-900"}`}>
+        <nav className={`w-full h-[120px] flex sticky top-0 z-30 relative ${scrolled ? "" : "bg-white dark:bg-ink"}`}>
             {/* Blur overlay — แสดงเฉพาะตอน scroll */}
             <div
                 className={`absolute inset-0 pointer-events-none transition-opacity duration-300 ${scrolled ? "opacity-100" : "opacity-0"}`}
@@ -42,19 +42,19 @@ export default function Navbar() {
                     WebkitMaskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
                 }}
             >
-                <div className="absolute inset-0 bg-gradient-to-b from-zinc-50/85 to-transparent dark:from-zinc-900/85 dark:to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-b from-white/85 to-transparent dark:from-ink/85 dark:to-transparent" />
             </div>
-            <div className="w-full relative">
-                <div className="fixed top-6 left-1/2 -translate-x-1/2 z-40 bg-white/80 dark:bg-zinc-800/80 backdrop-blur-xl border border-zinc-200/50 dark:border-zinc-700/50 p-1.5 rounded-2xl shadow-xl shadow-zinc-200/20 dark:shadow-zinc-900/20 flex items-center gap-1">
+            <div className="w-full relative font-display">
+                <div className="fixed top-6 left-1/2 -translate-x-1/2 z-40 bg-white/80 dark:bg-ink/80 backdrop-blur-xl border border-hairline dark:border-zinc-800 p-1.5 rounded-pill flex items-center gap-1">
                     {links.map((link) => {
                         const isActive = pathname === link.path;
                         return (
                             <Link
                                 key={link.path}
                                 href={link.path}
-                                className={`px-4 py-2 rounded-xl text-sm font-bold transition-all duration-200 ${isActive
-                                    ? "bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 shadow-lg shadow-zinc-200 dark:shadow-none"
-                                    : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700"
+                                className={`px-4 py-2 rounded-pill text-sm font-semibold tracking-wide transition-all duration-200 ${isActive
+                                    ? "bg-primary-action-blue text-white"
+                                    : "text-ink-secondary dark:text-zinc-400 hover:text-primary-action-blue dark:hover:text-white hover:bg-canvas-parchment dark:hover:bg-zinc-800"
                                     }`}
                             >
                                 {link.name}
@@ -65,10 +65,10 @@ export default function Navbar() {
                     {/* Integrated Theme Toggle (Top Right) */}
                     {mounted && (
                         <>
-                            <div className="w-px h-5 bg-zinc-200 dark:bg-zinc-700 mx-1" />
+                            <div className="w-px h-5 bg-hairline dark:bg-zinc-800 mx-1" />
                             <button
                                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                                className="p-2 rounded-xl text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-all focus:outline-none"
+                                className="p-2 rounded-pill text-ink-secondary hover:text-primary-action-blue dark:text-zinc-400 dark:hover:text-white hover:bg-canvas-parchment dark:hover:bg-zinc-800 transition-all focus:outline-none"
                                 aria-label="Toggle Dark Mode"
                                 title="Toggle Theme"
                             >

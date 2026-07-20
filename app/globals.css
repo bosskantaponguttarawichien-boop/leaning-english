@@ -2,40 +2,64 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #fafafa;
-  --foreground: #171717;
+  --background: #ffffff;
+  --foreground: #1d1d1f;
 }
 
-
-
 .dark {
-  --background: #18181b;
-  /* zinc-900 */
-  --foreground: #fafafa;
-  /* zinc-50 */
+  --background: #1d1d1f;
+  --foreground: #ffffff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-noto-thai), var(--font-inter), ui-sans-serif, system-ui;
+  --font-sans: var(--font-noto-thai), var(--font-inter), "SF Pro Text", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "SF Pro Display", var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-text: "SF Pro Text", ui-sans-serif, system-ui, sans-serif;
+
+  /* Apple Music Design System Colors */
+  --color-brand-music-red: #fa243c;
+  --color-brand-music-red-deep: #d6143a;
+  --color-gradient-crimson: #c00020;
+  --color-gradient-coral: #dc4c24;
+  --color-gradient-rose: #e43240;
+  --color-gradient-pink: #e83273;
+  --color-gradient-magenta: #ff4dc3;
+  --color-gradient-aubergine: #591962;
+  --color-gradient-burgundy: #991e2f;
+  --color-primary-action-blue: #0066cc;
+  --color-primary-action-blue-focus: #0071e3;
+  --color-ink: #1d1d1f;
+  --color-ink-secondary: #6e6e73;
+  --color-ink-muted: #86868b;
+  --color-canvas-parchment: #f5f5f7;
+  --color-surface-pearl: #fafafc;
+  --color-surface-cool: #e8e8ed;
+  --color-hairline: #d2d2d7;
+  --color-surface-near-black: #0d161f;
+  --color-surface-black: #000000;
+
+  /* Custom Border Radii */
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 30px;
+  --radius-xl: 36px;
+  --radius-pill: 980px;
 }
 
-@layer utilities {
-  .glass {
-    @apply bg-white/80 backdrop-blur-md border border-white/20;
-  }
+@utility bg-apple-music-hero {
+  background: radial-gradient(circle at 30% 20%, #fa243c 0%, #c00020 25%, #ff4dc3 60%, #591962 100%);
+}
 
-  .premium-shadow {
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05), 0 4px 10px -5px rgba(0, 0, 0, 0.02);
-  }
+@utility text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #1d1d1f, #6e6e73);
 
-  .premium-shadow-lg {
-    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08), 0 10px 20px -10px rgba(0, 0, 0, 0.04);
-  }
-
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-linear-to-r from-zinc-900 to-zinc-500 dark:from-white dark:to-zinc-400;
+  @variant dark {
+    background-image: linear-gradient(to right, #ffffff, #86868b);
   }
 }
 
