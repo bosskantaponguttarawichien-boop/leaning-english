@@ -11,7 +11,7 @@
   --foreground: #fff9f3;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-noto-thai), var(--font-jakarta), system-ui, sans-serif;
