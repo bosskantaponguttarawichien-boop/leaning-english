@@ -587,3 +587,36 @@ Separated the pre-lesson vocabulary activity into a guided learning round and a 
 - `app/practice/lessons/[id]/components/VocabularyActivity.tsx`
 - `harness/feature_list.json`
 - `harness/claude-progress.md`
+
+---
+
+## [2026-07-31] Session: Codebase Refactoring & React Compiler Warnings Cleanup
+
+### Summary
+Refactored key application components and utilities to reduce code duplication, eliminate React Compiler ESLint warnings (`react-hooks/set-state-in-effect`), improve event-driven state management, and guard against potential infinite loops during token shuffling.
+
+### Accomplishments
+1. **Audio Utility Refactoring (`lib/audio.ts`)**:
+   - Abstracted repetitive Web Audio oscillator and gain node connection logic into a single helper `playTone()`.
+2. **React Compiler Warnings & Form Refactoring (`components/TypingInput.tsx` & `app/practice/sentences/page.tsx`)**:
+   - Replaced `react-hook-form`'s `useForm` / `watch` in `TypingInput.tsx` and `SentencePracticePage` with direct event-handler evaluation (`handleChange` / `handleTypingChange`).
+   - Removed `setState` calls from `useEffect` hooks, resolving all ESLint `react-hooks/set-state-in-effect` errors and compiler warnings completely.
+   - Derived `isFinished` state cleanly without unnecessary effects.
+3. **Session Progress Deduplication (`useCardSession.ts`)**:
+   - Extracted untimed session completion and history recording into a shared `recordUntimedSessionCompletion` helper function, removing duplicate WPM calculations across `handleCorrect` and `handleWrong`.
+4. **Sentence Assembly Shuffle Safety (`app/practice/build-sentence/page.tsx`)**:
+   - Added an explicit iteration attempt cap (`attempts < 10`) to the token shuffle `while` loop, preventing potential infinite browser freeze loops when handling duplicated sentence tokens.
+
+### Verification
+- **TypeScript Type Check**: Passed cleanly with `npx tsc --noEmit` (0 errors).
+- **ESLint Linter**: Passed cleanly with `npm run lint` (0 errors, 0 warnings).
+- **Production Build**: Successfully compiled optimized static routes with `npm run build`.
+
+### Files Changed
+- `lib/audio.ts`
+- `components/TypingInput.tsx`
+- `app/practice/sentences/page.tsx`
+- `app/practice/words/hooks/useCardSession.ts`
+- `app/practice/build-sentence/page.tsx`
+- `harness/claude-progress.md`
+

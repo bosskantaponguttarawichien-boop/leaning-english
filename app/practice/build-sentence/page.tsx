@@ -49,9 +49,11 @@ export default function BuildSentencePage() {
     useEffect(() => {
         if (cleanedTargetWords.length > 0) {
             let shuffled = [...cleanedTargetWords].sort(() => Math.random() - 0.5);
-            // Ensure the shuffle doesn't match the original order
-            while (shuffled.join(" ") === cleanedTargetWords.join(" ") && cleanedTargetWords.length > 1) {
+            // Ensure the shuffle doesn't match the original order, up to 10 attempts
+            let attempts = 0;
+            while (shuffled.join(" ") === cleanedTargetWords.join(" ") && cleanedTargetWords.length > 1 && attempts < 10) {
                 shuffled = [...cleanedTargetWords].sort(() => Math.random() - 0.5);
+                attempts++;
             }
             setShuffledTokens(shuffled);
             setSelectedTokens([]);

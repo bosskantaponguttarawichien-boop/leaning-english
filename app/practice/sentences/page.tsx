@@ -1,63 +1,58 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import vocabData from "@/data/vocab.json";
 import { VocabDBSchema } from "@/schemas/vocab.schema";
-import { useForm } from "react-hook-form";
 import Link from "next/link";
 import { Skeleton } from "@/components/ui/skeleton";
 import SessionCompleteModal from "@/components/SessionCompleteModal";
 import { playErrorBuzz } from "@/lib/audio";
 
 export default function SentencePracticePage() {
-    const [sentences, setSentences] = useState<string[]>([]);
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const { register, watch, reset } = useForm<{ typing: string }>();
-    const [isCorrect, setIsCorrect] = useState(false);
-    const [isWrong, setIsWrong] = useState(false);
-    const [isFinished, setIsFinished] = useState(false);
-    const [sessionWrongCount, setSessionWrongCount] = useState(0);
-
-    useEffect(() => {
+    const [sentences] = useState<string[]>(() => {
         try {
             const validated = VocabDBSchema.parse(vocabData);
             const allSentences = validated.words.map(w => w.example);
-            setSentences([...allSentences].sort(() => Math.random() - 0.5));
+            return [...allSentences].sort(() => Math.random() - 0.5);
         } catch (error) {
             console.error("Failed to load sentences:", error);
+            return [];
         }
-    }, []);
+    });
 
-    const typingValue = watch("typing") || "";
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [typingValue, setTypingValue] = useState("");
+    const [isCorrect, setIsCorrect] = useState(false);
+    const [isWrong, setIsWrong] = useState(false);
+    const [sessionWrongCount, setSessionWrongCount] = useState(0);
+
     const targetSentence = sentences[currentIndex] || "";
+    const isFinished = sentences.length > 0 && currentIndex >= sentences.length;
 
-    useEffect(() => {
+    const handleTypingChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+        const val = e.target.value;
+        setTypingValue(val);
+
         if (isCorrect || isWrong) return; // Prevent double checking during transition delay
 
-        if (typingValue === targetSentence && targetSentence !== "") {
+        if (val === targetSentence && targetSentence !== "") {
             setIsCorrect(true);
             setTimeout(() => {
                 setCurrentIndex(prev => (prev + 1) % sentences.length);
                 setIsCorrect(false);
-                reset();
+                setTypingValue("");
             }, 1000);
-        } else if (targetSentence !== "" && typingValue.length >= targetSentence.length && typingValue !== targetSentence) {
+        } else if (targetSentence !== "" && val.length >= targetSentence.length && val !== targetSentence) {
             setIsWrong(true);
             setSessionWrongCount(prev => prev + 1);
             playErrorBuzz();
             setTimeout(() => {
                 setCurrentIndex(prev => (prev + 1) % sentences.length);
                 setIsWrong(false);
-                reset();
+                setTypingValue("");
             }, 1000);
         }
-    }, [typingValue, targetSentence, sentences.length, reset, isCorrect, isWrong]);
-
-    useEffect(() => {
-        if (sentences.length > 0 && currentIndex >= sentences.length && !isFinished) {
-            setIsFinished(true);
-        }
-    }, [currentIndex, sentences.length, isFinished]);
+    };
 
     if (sentences.length === 0) {
         return (
@@ -146,7 +141,8 @@ export default function SentencePracticePage() {
 
                 <div className="relative">
                     <textarea
-                        {...register("typing")}
+                        value={typingValue}
+                        onChange={handleTypingChange}
                         autoFocus
                         autoCapitalize="none"
                         rows={3}

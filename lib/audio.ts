@@ -13,7 +13,7 @@ function getAudioContext(): AudioContext | null {
     return audioCtx;
 }
 
-export function playErrorBeep(): void {
+function playTone(freq: number, gainVal: number, durationSec: number, type: OscillatorType = "sawtooth"): void {
     try {
         const ctx = getAudioContext();
         if (!ctx) return;
@@ -23,37 +23,25 @@ export function playErrorBeep(): void {
         oscillator.connect(gainNode);
         gainNode.connect(ctx.destination);
 
-        oscillator.type = "sawtooth";
-        oscillator.frequency.value = 140;
-        gainNode.gain.value = 0.15;
+        oscillator.type = type;
+        oscillator.frequency.value = freq;
+        gainNode.gain.value = gainVal;
 
         oscillator.start();
-        oscillator.stop(ctx.currentTime + 0.15);
+        oscillator.stop(ctx.currentTime + durationSec);
     } catch (e) {
-        console.error("Audio beep error:", e);
+        console.error("Audio playTone error:", e);
     }
+}
+
+export function playErrorBeep(): void {
+    playTone(140, 0.15, 0.15);
 }
 
 export function playErrorBuzz(): void {
-    try {
-        const ctx = getAudioContext();
-        if (!ctx) return;
-
-        const oscillator = ctx.createOscillator();
-        const gainNode = ctx.createGain();
-        oscillator.connect(gainNode);
-        gainNode.connect(ctx.destination);
-
-        oscillator.type = "sawtooth";
-        oscillator.frequency.value = 150;
-        gainNode.gain.value = 0.5;
-
-        oscillator.start();
-        oscillator.stop(ctx.currentTime + 0.20);
-    } catch (e) {
-        console.error("Audio buzz error:", e);
-    }
+    playTone(150, 0.5, 0.20);
 }
+
 
 export function playKeyClickSound(isSpace = false): void {
     try {

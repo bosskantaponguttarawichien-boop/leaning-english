@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
-import { useForm } from "react-hook-form";
+import React, { useState } from "react";
 
 interface TypingInputProps {
     targetWord: string;
@@ -20,32 +19,32 @@ export default function TypingInput({
     disabled = false,
     isBlind = false,
 }: TypingInputProps) {
-    const { register, watch, reset } = useForm<{ typing: string }>({
-        defaultValues: { typing: "" },
-    });
+    const [typingValue, setTypingValue] = useState("");
 
-    const typingValue = watch("typing");
-
-    useEffect(() => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const val = e.target.value;
         if (onInputChange) {
-            onInputChange(typingValue);
+            onInputChange(val);
         }
 
-        if (typingValue === targetWord) {
+        if (val === targetWord) {
             onCorrect();
-            reset();
-        } else if (targetWord && typingValue.length >= targetWord.length && typingValue !== targetWord) {
+            setTypingValue("");
+        } else if (targetWord && val.length >= targetWord.length && val !== targetWord) {
             if (onWrong) {
                 onWrong();
             }
-            reset();
+            setTypingValue("");
+        } else {
+            setTypingValue(val);
         }
-    }, [typingValue, targetWord, onCorrect, onWrong, onInputChange, reset]);
+    };
 
     return (
         <div className="w-full max-w-md mx-auto">
             <input
-                {...register("typing")}
+                value={typingValue}
+                onChange={handleChange}
                 type="text"
                 autoFocus
                 autoComplete="off"

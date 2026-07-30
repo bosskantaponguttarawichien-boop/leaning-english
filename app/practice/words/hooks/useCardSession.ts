@@ -62,6 +62,21 @@ export function useCardSession({ words, difficultyMode, timerEnabled, isSpeechEn
         setIsStarted(false);
     }, [timerEnabled, difficultyMode]);
 
+    const recordUntimedSessionCompletion = useCallback((finalCorrect: number, finalWrong: number, finalChars: number) => {
+        if (startTimeRef.current) {
+            const elapsed = (Date.now() - startTimeRef.current) / 60000;
+            const wpm = Math.round((finalChars / 5) / (elapsed || 0.01));
+            setFinalWpm(wpm);
+            pushData(`users/${DEFAULT_USER_ID}/history/words`, {
+                date: Date.now(), wpm,
+                correctCount: finalCorrect, wrongCount: finalWrong,
+                difficulty: difficultyMode, timerEnabled
+            });
+        }
+        setIsFinished(true);
+        setIsStarted(false);
+    }, [difficultyMode, timerEnabled]);
+
     const handleCorrect = useCallback(() => {
         if (isCorrect || isWrong) return; // Prevent double-triggering during transition delay
 
@@ -78,7 +93,7 @@ export function useCardSession({ words, difficultyMode, timerEnabled, isSpeechEn
         setIsRevealed(true);
 
         const newCorrect = correctCount + 1;
-        const newChars = totalChars + word.word.length + 1;
+        const newChars = totalChars + (word ? word.word.length + 1 : 0);
         setCorrectCount(newCorrect);
         setTotalChars(newChars);
 
@@ -92,18 +107,7 @@ export function useCardSession({ words, difficultyMode, timerEnabled, isSpeechEn
 
         setTimeout(() => {
             if (!timerEnabled && currentIndex === words.length - 1) {
-                if (startTimeRef.current) {
-                    const elapsed = (Date.now() - startTimeRef.current) / 60000;
-                    const wpm = Math.round((newChars / 5) / (elapsed || 0.01));
-                    setFinalWpm(wpm);
-                    pushData(`users/${DEFAULT_USER_ID}/history/words`, {
-                        date: Date.now(), wpm,
-                        correctCount: newCorrect, wrongCount: sessionWrongCount,
-                        difficulty: difficultyMode, timerEnabled
-                    });
-                }
-                setIsFinished(true);
-                setIsStarted(false);
+                recordUntimedSessionCompletion(newCorrect, sessionWrongCount, newChars);
             } else {
                 setCurrentIndex(prev => (prev + 1) % words.length);
                 setIsRevealed(false);
@@ -111,7 +115,7 @@ export function useCardSession({ words, difficultyMode, timerEnabled, isSpeechEn
                 setTypingValue("");
             }
         }, 1200);
-    }, [words, currentIndex, isStarted, isSpeechEnabled, timerEnabled, totalChars, correctCount, sessionWrongCount, difficultyMode, isCorrect, isWrong]);
+    }, [words, currentIndex, isStarted, isSpeechEnabled, timerEnabled, totalChars, correctCount, sessionWrongCount, difficultyMode, isCorrect, isWrong, recordUntimedSessionCompletion]);
 
     const handleWrong = useCallback(() => {
         if (isCorrect || isWrong) return; // Prevent double-triggering during transition delay
@@ -139,18 +143,7 @@ export function useCardSession({ words, difficultyMode, timerEnabled, isSpeechEn
 
         setTimeout(() => {
             if (!timerEnabled && currentIndex === words.length - 1) {
-                if (startTimeRef.current) {
-                    const elapsed = (Date.now() - startTimeRef.current) / 60000;
-                    const wpm = Math.round((totalChars / 5) / (elapsed || 0.01));
-                    setFinalWpm(wpm);
-                    pushData(`users/${DEFAULT_USER_ID}/history/words`, {
-                        date: Date.now(), wpm,
-                        correctCount, wrongCount: newWrong,
-                        difficulty: difficultyMode, timerEnabled
-                    });
-                }
-                setIsFinished(true);
-                setIsStarted(false);
+                recordUntimedSessionCompletion(correctCount, newWrong, totalChars);
             } else {
                 setCurrentIndex(prev => (prev + 1) % words.length);
                 setIsRevealed(false);
@@ -159,7 +152,7 @@ export function useCardSession({ words, difficultyMode, timerEnabled, isSpeechEn
                 setTypingValue("");
             }
         }, 1000);
-    }, [words, currentIndex, isStarted, timerEnabled, totalChars, correctCount, sessionWrongCount, difficultyMode, isCorrect, isWrong]);
+    }, [words, currentIndex, isStarted, timerEnabled, totalChars, correctCount, sessionWrongCount, difficultyMode, isCorrect, isWrong, recordUntimedSessionCompletion]);
 
     const handleTimeup = useCallback(() => {
         finishSession(correctCount, sessionWrongCount, totalChars);
