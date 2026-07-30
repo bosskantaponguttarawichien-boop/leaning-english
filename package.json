@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "sync-vocab": "node scripts/sync-vocab.mjs"
+    "sync-vocab": "node scripts/sync-vocab.mjs",
+    "generate-curriculum": "node scripts/generate-curriculum.mjs",
+    "validate-curriculum": "node scripts/validate-curriculum.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

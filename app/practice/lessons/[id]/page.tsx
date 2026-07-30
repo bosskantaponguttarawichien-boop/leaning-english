@@ -15,6 +15,9 @@ import ReorderActivity from "./components/ReorderActivity";
 import GuidedOutputActivity from "./components/GuidedOutputActivity";
 import DictationActivity from "./components/DictationActivity";
 import ReadingActivity from "./components/ReadingActivity";
+import VocabularyActivity from "./components/VocabularyActivity";
+import ShadowingActivity from "./components/ShadowingActivity";
+import RoleplayActivity from "./components/RoleplayActivity";
 
 interface LessonPageProps {
     params: Promise<{ id: string }>;
@@ -34,9 +37,6 @@ export default function LessonActivePage({ params }: LessonPageProps) {
     useEffect(() => {
         const init = async () => {
             try {
-                // Sync from Firebase DB to local cache first
-                await syncCurriculumProgressFromDB();
-
                 const list = getCurriculum();
                 const found = list.find(l => l.id === id);
                 if (found) {
@@ -44,9 +44,11 @@ export default function LessonActivePage({ params }: LessonPageProps) {
                     // Update progress status to learning if not already finished
                     const progress = getLessonProgress(id);
                     if (progress.status === "available" || progress.status === "locked") {
-                        await updateLessonProgress(id, { status: "learning" });
+                        void updateLessonProgress(id, { status: "learning" });
                     }
                 }
+                // Remote sync must not block a lesson from opening when offline.
+                void syncCurriculumProgressFromDB();
             } catch (err) {
                 console.error("Failed to load active lesson:", err);
             } finally {
@@ -75,10 +77,20 @@ export default function LessonActivePage({ params }: LessonPageProps) {
                 // Simple calculation: recognition accuracy decreases as error count increases
                 const recognitionAccuracy = Math.max(0.2, 1 - (sessionErrorCount / (totalActivities * 3)));
                 
+                const nextStatus =
+                    currentProg.status === "review" || currentProg.status === "mastered"
+                        ? "mastered"
+                        : "review";
+                const productionAccuracy = Math.max(
+                    20,
+                    Math.round(((metrics?.confidence || speakingConfidence) / 5) * 100)
+                );
+
                 await updateLessonProgress(id, {
-                    status: "mastered",
+                    status: nextStatus,
                     attempts: currentProg.attempts + 1,
                     recognitionAccuracy: Math.round(recognitionAccuracy * 100),
+                    productionAccuracy,
                     speakingConfidence: metrics?.confidence || speakingConfidence,
                 });
             } catch (error) {
@@ -124,6 +136,13 @@ export default function LessonActivePage({ params }: LessonPageProps) {
 
     const renderActivity = () => {
         switch (currentActivity.type) {
+            case "vocabulary":
+                return (
+                    <VocabularyActivity
+                        activity={currentActivity}
+                        onComplete={() => handleActivityComplete()}
+                    />
+                );
             case "concept":
                 return (
                     <ConceptActivity
@@ -169,6 +188,20 @@ export default function LessonActivePage({ params }: LessonPageProps) {
                         activity={currentActivity}
                         onComplete={(errors: number) => handleActivityComplete({ errors })}
                         onErrorLogged={handleErrorLogged}
+                    />
+                );
+            case "shadowing":
+                return (
+                    <ShadowingActivity
+                        activity={currentActivity}
+                        onComplete={() => handleActivityComplete()}
+                    />
+                );
+            case "roleplay":
+                return (
+                    <RoleplayActivity
+                        activity={currentActivity}
+                        onComplete={(confidence) => handleActivityComplete({ confidence })}
                     />
                 );
             case "transform":
@@ -260,6 +293,27 @@ export default function LessonActivePage({ params }: LessonPageProps) {
                             className="bg-emerald-500 h-full transition-all duration-300"
                             style={{ width: `${((activityIndex) / lesson.activities.length) * 100}%` }}
                         />
+                    </div>
+                    <div className="mt-3 p-4 rounded-md bg-canvas dark:bg-zinc-900 border border-ink/10 dark:border-zinc-800">
+                        <div className="flex flex-wrap items-center gap-2 mb-2">
+                            <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-hume-coral">
+                                Mission
+                            </span>
+                            {lesson.tense_focus.map((item) => (
+                                <span
+                                    key={item}
+                                    className="text-[9px] font-mono px-2 py-1 rounded-full bg-hume-lavender/10 text-hume-lavender"
+                                >
+                                    {item}
+                                </span>
+                            ))}
+                        </div>
+                        <p className="text-sm font-semibold text-ink dark:text-canvas-cream">
+                            {lesson.situation_th}
+                        </p>
+                        <p className="text-xs text-ink/55 dark:text-canvas-cream/55 mt-1">
+                            เป้าหมายท้ายบท: {lesson.exit_task}
+                        </p>
                     </div>
                 </div>
 

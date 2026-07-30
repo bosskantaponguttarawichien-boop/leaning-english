@@ -76,7 +76,7 @@ export default function ReadingActivity({ activity, onComplete, onErrorLogged }:
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 flex-1 min-h-[300px]">
                 {/* Left Pane: Documentation Reading Material */}
                 <div className="p-6 bg-canvas-cream dark:bg-black/25 border border-ink/5 dark:border-zinc-800 rounded-md overflow-y-auto max-h-[400px]">
-                    <h4 className="text-[10px] font-mono uppercase tracking-widest font-semibold text-ink/50 dark:text-canvas-cream/50 mb-3">Documentation Snippet:</h4>
+                    <h4 className="text-[10px] font-mono uppercase tracking-widest font-semibold text-ink/50 dark:text-canvas-cream/50 mb-3">Story / Dialogue:</h4>
                     <p className="text-sm text-ink/80 dark:text-canvas-cream/80 leading-relaxed whitespace-pre-wrap font-mono">
                         {docText}
                     </p>

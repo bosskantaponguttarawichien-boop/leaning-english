@@ -275,6 +275,28 @@
         "app/practice/lessons/[id]/components/ReadingActivity.tsx",
         "app/practice/lessons/[id]/components/ReorderActivity.tsx"
       ]
+    },
+    {
+      "id": "communication-first-curriculum-rewrite",
+      "name": "Communication-first Curriculum Rewrite",
+      "description": "Replace the existing grammar-first L01-L24 content with situation-led lessons that preview preserved vocabulary, teach essential tenses in context, and include working shadowing, roleplay, and measurable output.",
+      "status": "done",
+      "phase": 7,
+      "files": [
+        "CURRICULUM_BLUEPRINT.md",
+        "data/curriculum.json",
+        "package.json",
+        "schemas/curriculum.schema.ts",
+        "lib/curriculum.ts",
+        "app/practice/lessons/page.tsx",
+        "app/practice/lessons/[id]/page.tsx",
+        "app/practice/lessons/[id]/components/ReadingActivity.tsx",
+        "app/practice/lessons/[id]/components/VocabularyActivity.tsx",
+        "app/practice/lessons/[id]/components/ShadowingActivity.tsx",
+        "app/practice/lessons/[id]/components/RoleplayActivity.tsx",
+        "scripts/generate-curriculum.mjs",
+        "scripts/validate-curriculum.mjs"
+      ]
     }
   ]
 }

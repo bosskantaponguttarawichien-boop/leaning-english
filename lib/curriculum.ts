@@ -4,8 +4,9 @@ import { readData, setData } from "./db";
 import curriculumData from "@/data/curriculum.json";
 import { CurriculumSchema, Lesson, LessonProgress, LessonProgressSchema } from "@/schemas/curriculum.schema";
 
-const STORAGE_KEY = "englist_curriculum_progress_v1";
+const STORAGE_KEY = "englist_curriculum_progress_v2";
 const DEFAULT_USER_ID = "default_user";
+const CURRICULUM_PROGRESS_PATH = `users/${DEFAULT_USER_ID}/curriculum_progress_v2`;
 
 // Local cache
 let localCache: Record<string, LessonProgress> | null = null;
@@ -27,7 +28,7 @@ export function getCurriculum(): Lesson[] {
  * Syncs curriculum progress from Firebase Realtime DB.
  */
 export async function syncCurriculumProgressFromDB(): Promise<Record<string, LessonProgress>> {
-    const result = await readData(`users/${DEFAULT_USER_ID}/curriculum_progress`);
+    const result = await readData(CURRICULUM_PROGRESS_PATH);
     
     let localProg: Record<string, LessonProgress> = {};
     if (typeof window !== "undefined") {
@@ -87,7 +88,7 @@ export async function syncCurriculumProgressFromDB(): Promise<Record<string, Les
 
         if (hasNewLocalUpdates) {
             Object.entries(updatesToFirebase).forEach(([id, progressItem]) => {
-                setData(`users/${DEFAULT_USER_ID}/curriculum_progress/${id}`, progressItem)
+                setData(`${CURRICULUM_PROGRESS_PATH}/${id}`, progressItem)
                     .catch(err => console.error(`Failed to sync-back curriculum progress for ${id} to Firebase:`, err));
             });
         }
@@ -162,10 +163,11 @@ export async function updateLessonProgress(lessonId: string, updates: Partial<Le
 
     progress[lessonId] = updated;
 
-    // Dynamic unlock of next lesson on mastery - LOCAL SYNCHRONOUS UPDATE
+    // Unlock the next lesson after a successful first pass. The current lesson
+    // remains in review until a later retrieval attempt earns mastery.
     let nextUpdated: LessonProgress | null = null;
     let nextLessonId: string | null = null;
-    if (updated.status === "mastered") {
+    if (updated.status === "review" || updated.status === "mastered") {
         const lessons = getCurriculum();
         const index = lessons.findIndex(l => l.id === lessonId);
         if (index !== -1 && index + 1 < lessons.length) {
@@ -190,9 +192,9 @@ export async function updateLessonProgress(lessonId: string, updates: Partial<Le
 
     // Save asynchronously to Firebase
     try {
-        await setData(`users/${DEFAULT_USER_ID}/curriculum_progress/${lessonId}`, updated);
+        await setData(`${CURRICULUM_PROGRESS_PATH}/${lessonId}`, updated);
         if (nextLessonId && nextUpdated) {
-            await setData(`users/${DEFAULT_USER_ID}/curriculum_progress/${nextLessonId}`, nextUpdated);
+            await setData(`${CURRICULUM_PROGRESS_PATH}/${nextLessonId}`, nextUpdated);
         }
     } catch (error) {
         console.error("Failed to sync curriculum progress to Firebase:", error);
@@ -242,4 +244,3 @@ export function getActiveLesson(): Lesson | null {
     // If all lessons are mastered, return the last lesson
     return lessons[lessons.length - 1] || null;
 }
-

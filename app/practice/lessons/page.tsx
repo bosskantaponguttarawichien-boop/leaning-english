@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { getCurriculum, syncCurriculumProgressFromDB } from "@/lib/curriculum";
+import { getCurriculum, getCurriculumProgress, syncCurriculumProgressFromDB } from "@/lib/curriculum";
 import { Lesson, LessonProgress } from "@/schemas/curriculum.schema";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -17,10 +17,10 @@ export default function LessonsCatalogPage() {
                 // Load catalog structure
                 const list = getCurriculum();
                 setLessons(list);
+                setProgress(getCurriculumProgress());
 
-                // Fetch student progress from DB / storage
-                const progData = await syncCurriculumProgressFromDB();
-                setProgress(progData);
+                // Show local progress immediately and merge remote progress later.
+                void syncCurriculumProgressFromDB().then(setProgress);
             } catch (err) {
                 console.error("Failed to load curriculum catalog:", err);
             } finally {
@@ -58,8 +58,10 @@ export default function LessonsCatalogPage() {
                             ← Back to Today
                         </Link>
                     </div>
-                    <h1 className="text-4xl font-semibold text-ink dark:text-canvas-cream mt-2 leading-none">Curriculum Lessons</h1>
-                    <p className="text-ink/65 dark:text-canvas-cream/65 font-medium text-sm mt-1">Follow this step-by-step path to master conversational & coding English.</p>
+                    <h1 className="text-4xl font-semibold text-ink dark:text-canvas-cream mt-2 leading-none">Real-life English Path</h1>
+                    <p className="text-ink/65 dark:text-canvas-cream/65 font-medium text-sm mt-1">
+                        คำศัพท์ก่อน → เข้าใจสถานการณ์ → เห็น tense → ฟังและ Shadowing → พูดใช้จริง
+                    </p>
                 </div>
 
                 {/* Lessons Grid */}
@@ -100,12 +102,28 @@ export default function LessonsCatalogPage() {
                                     </h4>
                                 </div>
                                 <div className="flex-1 flex flex-col gap-2 mt-2 font-sans">
-                                    <h5 className="text-[10px] font-mono font-bold uppercase tracking-wider text-ink/50 dark:text-canvas-cream/50">Goals:</h5>
-                                    <ul className="text-xs text-ink/75 dark:text-canvas-cream/75 list-disc list-inside flex flex-col gap-1">
-                                        {lesson.goals.slice(0, 2).map((goal, idx) => (
-                                            <li key={idx} className="truncate">{goal}</li>
+                                    <h5 className="text-[10px] font-mono font-bold uppercase tracking-wider text-ink/50 dark:text-canvas-cream/50">Situation</h5>
+                                    <p className="text-xs text-ink/75 dark:text-canvas-cream/75 leading-relaxed">
+                                        {lesson.situation_th}
+                                    </p>
+                                    <div className="flex flex-wrap gap-1.5 mt-1">
+                                        {lesson.tense_focus.map((target) => (
+                                            <span
+                                                key={target}
+                                                className="text-[9px] font-mono rounded-full px-2 py-1 bg-hume-lavender/10 text-hume-lavender"
+                                            >
+                                                {target}
+                                            </span>
                                         ))}
-                                    </ul>
+                                    </div>
+                                    <div className="mt-2 p-3 rounded-md bg-canvas-cream dark:bg-black/20 border border-ink/5 dark:border-zinc-800">
+                                        <span className="text-[9px] font-mono uppercase tracking-wider text-ink/45 dark:text-canvas-cream/45">
+                                            Can-do check
+                                        </span>
+                                        <p className="text-xs text-ink/70 dark:text-canvas-cream/70 mt-1 leading-relaxed">
+                                            {lesson.exit_task}
+                                        </p>
+                                    </div>
                                 </div>
                                 <div className="pt-4 border-t border-ink/5 dark:border-zinc-800 flex justify-between items-center text-[10px] font-mono font-bold uppercase text-ink/50 dark:text-canvas-cream/50">
                                     <span>⏱️ {lesson.estimated_minutes} mins</span>

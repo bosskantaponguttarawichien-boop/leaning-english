@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 export const ActivityTypeSchema = z.enum([
+    "vocabulary",
     "concept",
     "classify",
     "fill_blank",
@@ -34,6 +35,11 @@ export const LessonSchema = z.object({
     phase: z.enum(["foundation", "communication", "connector", "technical"]),
     title_th: z.string(),
     title_en: z.string(),
+    situation_th: z.string(),
+    situation_en: z.string(),
+    tense_focus: z.array(z.string()),
+    exit_task: z.string(),
+    safe_default: z.string(),
     estimated_minutes: z.number(),
     prerequisites: z.array(z.string()),
     goals: z.array(z.string()),

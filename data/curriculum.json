@@ -2,1059 +2,3137 @@
   "lessons": [
     {
       "id": "L01",
-      "slug": "sentence-heart-be-vs-action",
+      "slug": "the-essential-tense-map",
       "level": "A1",
       "phase": "foundation",
-      "title_th": "หัวใจของประโยค: เป็นอะไร vs ทำอะไร",
-      "title_en": "Be or Do",
-      "estimated_minutes": 30,
+      "title_th": "แผนที่เวลา: Tense ที่ต้องใช้จริง",
+      "title_en": "The Essential Tense Map",
+      "situation_th": "เลือกมุมเวลาที่ตรงกับสิ่งที่ต้องการสื่อ ก่อนกังวลเรื่องกฎย่อย",
+      "situation_en": "Choose the time view that matches your message.",
+      "tense_focus": [
+        "12-tense overview",
+        "7 priority forms"
+      ],
+      "exit_task": "เลือกกลุ่มเวลาให้ข้อความ 6 แบบและพูดตัวอย่างของตัวเอง 3 ประโยค",
+      "safe_default": "เริ่มจาก Present Simple, Present Continuous, Past Simple และรูปอนาคตที่ตรงกับเจตนา",
+      "estimated_minutes": 40,
       "prerequisites": [],
       "goals": [
-        "แยกประโยคที่ใช้ am/is/are ออกจากกริยาการกระทำ (Action verbs)",
-        "สร้างประโยคอธิบายตนเองและลักษณะงานพื้นฐานได้ 6 ประโยคโดยไม่มีโครงสร้าง 'am + base verb' ผิดพลาด"
+        "เลือกมุมเวลาที่ตรงกับสิ่งที่ต้องการสื่อ ก่อนกังวลเรื่องกฎย่อย",
+        "เลือกกลุ่มเวลาให้ข้อความ 6 แบบและพูดตัวอย่างของตัวเอง 3 ประโยค"
       ],
-      "grammar_targets": ["be", "present_simple"],
-      "vocabulary_tags": ["Personal", "Work", "Dev / Tech"],
+      "grammar_targets": [
+        "12-tense overview",
+        "7 priority forms"
+      ],
+      "vocabulary_tags": [
+        "Time",
+        "Daily Life"
+      ],
       "chunks": [
-        "I am a developer",
-        "interested in AI",
-        "write code",
-        "build an agent",
-        "learn English",
-        "work at SCB TechX",
-        "work on a project"
+        "I usually...",
+        "I'm ...ing now",
+        "I ... yesterday",
+        "I'm going to...",
+        "I'll...",
+        "I've already...",
+        "I was ...ing when..."
       ],
       "activities": [
         {
-          "id": "L01-ACT1",
+          "id": "L01-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “แผนที่เวลา: Tense ที่ต้องใช้จริง” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "usually",
+            "happen",
+            "finish",
+            "plan",
+            "experience",
+            "continue",
+            "before",
+            "future"
+          ]
+        },
+        {
+          "id": "L01-C1",
           "type": "concept",
-          "instruction": "ทำความเข้าใจโมเดลความคิดการใช้ Be และ Action",
-          "content": "ภาษาอังกฤษต้องมีกริยาหลักในประโยคเสมอ:\n\n1. บอกสถานะ ตัวตน หรือคุณสมบัติ ใช้กริยาช่วย BE (am/is/are):\n   - I am tired. (ฉันเหนื่อย - บอกสภาพ)\n   - I am a developer. (ฉันเป็นนักพัฒนา - บอกอาชีพ)\n\n2. บอกการกระทำ ใช้กริยาการกระทำ (Action Verb) โดยตรง:\n   - I write code. (ฉันเขียนโค้ด)\n   - I work at SCB TechX. (ฉันทำงานที่...)\n\n🚨 ข้อควรระวังที่สุด: ห้ามใช้ 'am' หน้ากริยาปกติ!\n   - ถูก: I write code. / I am a developer.\n   - ผิด: I am write code. ❌"
+          "instruction": "Tense lens: 12-tense overview + 7 priority forms",
+          "content": "# Tense คือมุมที่เราเลือกมองเวลา\nตำรามักแบ่งเป็น 12 tense แต่ชีวิตจริงไม่จำเป็นต้องผลิตทุก tense ตั้งแต่แรก\n- Present Simple: กิจวัตร ข้อเท็จจริง สภาพ — `I work from home.`\n- Present Continuous: กำลังเกิดหรือชั่วคราว — `I'm working now.`\n- Past Simple: เกิดและจบแล้ว — `I worked yesterday.`\n- Past Continuous: กำลังเกิดในอดีต — `I was working when you called.`\n- going to: แผนหรือสิ่งที่เห็นแนวโน้ม — `I'm going to rest.`\n- will: ตัดสินใจทันที เสนอ หรือคาดการณ์ — `I'll help you.`\n- Present Perfect: อดีตเชื่อมกับตอนนี้ — `I've finished the task.`\n💡 ใน 7 รูปที่เราเน้น `going to` เป็นโครงสร้างอนาคตที่ใช้จริงแต่ไม่ใช่หนึ่งในตาราง 12 แบบดั้งเดิม ส่วนอีก 6 รูปในตาราง 12 ให้รู้จักไว้ก่อน: Present Perfect Continuous, Past Perfect, Past Perfect Continuous, Future Continuous, Future Perfect และ Future Perfect Continuous\n## คำถามก่อนเลือก tense\nเหตุการณ์เป็นกิจวัตร กำลังเกิด จบแล้ว เป็นแผน หรืออดีตยังมีผลตอนนี้?\n## Safe default\n`เริ่มจาก Present Simple, Present Continuous, Past Simple และรูปอนาคตที่ตรงกับเจตนา`"
         },
         {
-          "id": "L01-ACT2",
-          "type": "classify",
-          "instruction": "เลือกเติม 'am' หรือ ปล่อยว่าง (พิมพ์ - หากไม่ต้องการเติมกริยาช่วย)",
-          "question": "1. I ___ a developer.\n2. I ___ write code every day.\n3. I ___ interested in AI.\n4. I ___ work at SCB TechX.\n5. I ___ 28 years old.",
-          "options": ["am", "-"],
-          "answer": "am, -, am, -, am",
-          "hint": "สังเกตคำตามหลัง: หากเป็นอาชีพ (a developer), อายุ (28 years old) หรือความรู้สึก/สนใจ (interested) ให้ใช้ am ส่วนกริยาเขียน (write) หรือทำงาน (work) ไม่ต้องเติมกริยาช่วย"
+          "id": "L01-R1",
+          "type": "reading",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "Nina uses English every day. Right now, she is talking to a customer. Yesterday, she answered an email in English. Tomorrow, she is going to join an online meeting. She thinks the meeting will be useful. She has prepared three questions, so she feels ready.",
+          "question": "Which sentence describes an action happening now?\nWhich form connects a past action to the present?",
+          "options": [
+            "She is talking to a customer.",
+            "She answered an email yesterday.",
+            "She has prepared three questions.",
+            "She is going to join a meeting."
+          ],
+          "answer": "She is talking to a customer.,She has prepared three questions."
         },
         {
-          "id": "L01-ACT3",
-          "type": "transform",
-          "instruction": "แก้ไขประโยคต่อไปนี้ให้ถูกต้องตามหลักไวยากรณ์",
-          "question": "1. I am code every day. -> ___\n2. I developer. -> ___\n3. I am work at SCB TechX. -> ___",
-          "answer": "I code every day., I am a developer., I work at SCB TechX.",
-          "hint": "ตัด am หน้ากริยาปกติออก และอย่าลืมใส่ am หน้าอาชีพเสมอนะครับ"
+          "id": "L01-F1",
+          "type": "fill_blank",
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "Nina ___ English every day. (use)\nRight now she ___ to a customer. (talk)\nYesterday she ___ an email. (answer)\nShe ___ three questions already. (prepare)",
+          "answer": "uses,is talking,answered,has prepared",
+          "hint": "เริ่มจาก Present Simple, Present Continuous, Past Simple และรูปอนาคตที่ตรงกับเจตนา"
         },
         {
-          "id": "L01-ACT4",
-          "type": "guided_output",
-          "instruction": "เขียนประโยคอธิบายตนเอง 6 ประโยคตามโครงสร้าง:\n1. ชื่อของคุณ\n2. อายุ\n3. อาชีพ\n4. บริษัทที่ทำงาน\n5. หน้าที่ที่ทำในงาน\n6. สิ่งที่สนใจ",
-          "question": "My name is ... I am ... years old. I am a ... I work at ... I ... I am interested in ...",
-          "answer": "My name is Kantapong, but you can call me Boss. I am 28 years old. I am a developer. I work at SCB TechX. I write code and build AI agents. I am interested in self-development and trading.",
-          "hint": "พยายามไม่ดูเฉลยและเขียนด้วยข้อมูลจริงของคุณ Boss ครับ"
+          "id": "L01-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "Choose the time view that matches your message.",
+          "options": [
+            "I use English every day.",
+            "I'm studying right now.",
+            "I practiced yesterday.",
+            "I'm going to practice tomorrow.",
+            "I've finished today's lesson."
+          ],
+          "answer": [
+            "ฉันใช้ภาษาอังกฤษทุกวัน",
+            "ตอนนี้ฉันกำลังเรียนอยู่",
+            "ฉันฝึกเมื่อวาน",
+            "ฉันวางแผนจะฝึกพรุ่งนี้",
+            "ฉันเรียนบทของวันนี้เสร็จแล้ว"
+          ]
+        },
+        {
+          "id": "L01-P1",
+          "type": "roleplay",
+          "instruction": "เลือกกลุ่มเวลาให้ข้อความ 6 แบบและพูดตัวอย่างของตัวเอง 3 ประโยค",
+          "context": "สถานการณ์: เลือกมุมเวลาที่ตรงกับสิ่งที่ต้องการสื่อ ก่อนกังวลเรื่องกฎย่อย",
+          "question": "เลือกกลุ่มเวลาให้ข้อความ 6 แบบและพูดตัวอย่างของตัวเอง 3 ประโยค",
+          "options": [
+            "What do you usually do in the morning?",
+            "What are you doing right now?",
+            "What did you do yesterday?",
+            "What are you going to do tomorrow?"
+          ],
+          "answer": [
+            "I usually check my messages and have breakfast.",
+            "I'm studying English right now.",
+            "I worked and watched a video yesterday.",
+            "I'm going to review this lesson tomorrow."
+          ],
+          "hint": "I usually... • I'm ...ing now • I ... yesterday • I'm going to... • I'll... • I've already... • I was ...ing when..."
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.75,
-        "required_outputs": 6
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
+        "required_outputs": 4
       }
     },
     {
       "id": "L02",
-      "slug": "subject-verb-detail",
+      "slug": "introduce-yourself-with-be",
       "level": "A1",
       "phase": "foundation",
-      "title_th": "ใครทำอะไร: Subject + Verb + Detail",
-      "title_en": "Subject Verb Detail",
-      "estimated_minutes": 25,
-      "prerequisites": ["L01"],
-      "goals": [
-        "จัดระเบียบโครงสร้างประโยคพื้นฐานและใช้คำสรรพนาม (Pronouns) ได้ถูกต้อง",
-        "สามารถแต่งประโยคอธิบายการทำงานของฟังก์ชันหรือโค้ดได้อย่างน้อย 3 ประโยค"
+      "title_th": "แนะนำตัว: เป็นอะไร เป็นอย่างไร อยู่ที่ไหน",
+      "title_en": "Introduce Yourself with Be",
+      "situation_th": "แนะนำตัวกับคนใหม่อย่างสั้นและชัดเจน",
+      "situation_en": "Give a clear introduction to someone new.",
+      "tense_focus": [
+        "Present Simple with be"
       ],
-      "grammar_targets": ["pronouns", "word_order"],
-      "vocabulary_tags": ["Work", "Dev / Tech"],
+      "exit_task": "แนะนำตัวต่อเนื่อง 45 วินาทีโดยใช้ be อย่างน้อย 4 ประโยค",
+      "safe_default": "I am + คำนาม/คำคุณศัพท์/สถานที่ — ห้ามใช้ I am + กริยารูปพื้นฐาน",
+      "estimated_minutes": 35,
+      "prerequisites": [
+        "L01"
+      ],
+      "goals": [
+        "แนะนำตัวกับคนใหม่อย่างสั้นและชัดเจน",
+        "แนะนำตัวต่อเนื่อง 45 วินาทีโดยใช้ be อย่างน้อย 4 ประโยค"
+      ],
+      "grammar_targets": [
+        "Present Simple with be"
+      ],
+      "vocabulary_tags": [
+        "Personal",
+        "Work"
+      ],
       "chunks": [
-        "The agent processes",
-        "I review the code",
-        "We use TypeScript",
-        "returns a string",
-        "receives a request",
-        "uses a tool",
-        "this error happens"
+        "My name is...",
+        "I'm from...",
+        "I live in...",
+        "I work at...",
+        "I'm interested in...",
+        "I'm excited to..."
       ],
       "activities": [
         {
-          "id": "L02-ACT1",
+          "id": "L02-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “แนะนำตัว: เป็นอะไร เป็นอย่างไร อยู่ที่ไหน” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "name",
+            "work",
+            "job",
+            "excited",
+            "interest",
+            "from",
+            "live",
+            "company"
+          ]
+        },
+        {
+          "id": "L02-C1",
           "type": "concept",
-          "instruction": "เข้าใจการเรียงลำดับประโยค Subject + Verb + Object/Detail",
-          "content": "ประโยคในภาษาอังกฤษต้องเรียงลำดับดังนี้เสมอ:\n\n1. Subject (ใคร/ระบบอะไร)\n2. Verb (ทำอะไร)\n3. Object/Detail (สิ่งใด/รายละเอียด)\n\nตัวอย่างประโยคสำหรับการโค้ดดิ้ง:\n- The function (S) + returns (V) + a string (O).\n- The API (S) + receives (V) + a request (O).\n- The agent (S) + uses (V) + a tool (O).\n- This error (S) + happens (V) + when the token expires (Detail)."
+          "instruction": "Tense lens: Present Simple with be",
+          "content": "# `be` ใช้บอกข้อมูลของประธาน\n- เป็นอะไร: `I'm a software worker.`\n- เป็นอย่างไร: `I'm excited.`\n- อยู่ที่ไหน/มาจากไหน: `I'm at home.` / `I'm from Thailand.`\n✅ `I am interested in AI.`\n❌ `I am work at a company.`\nกริยาการกระทำใช้ตรง ๆ: `I work at a company.`\n💡 ค่าเริ่มต้นที่ปลอดภัย: `I'm + noun/adjective/place`\n## Safe default\n`I am + คำนาม/คำคุณศัพท์/สถานที่ — ห้ามใช้ I am + กริยารูปพื้นฐาน`"
         },
         {
-          "id": "L02-ACT2",
-          "type": "reorder",
-          "instruction": "เรียงคำเหล่านี้ให้เป็นประโยคที่ถูกต้อง",
-          "question": "1. code / I / every day\n2. uses / the agent / a tool\n3. this function / data / validates",
-          "answer": "I code every day., The agent uses a tool., This function validates data.",
-          "hint": "หาประธานก่อน จากนั้นหากริยา และหาของที่โดนทำครับ"
+          "id": "L02-R1",
+          "type": "reading",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "Hi, my name is Boss. I'm from Thailand, and I live in Bangkok. I work at a technology company. My job is about software and AI. I'm interested in learning new tools. I'm excited to improve my English because I want to communicate more clearly at work.",
+          "question": "Where does Boss live?\nWhy is he improving his English?",
+          "options": [
+            "He lives in Bangkok.",
+            "He lives in New York.",
+            "To communicate more clearly.",
+            "To change his name."
+          ],
+          "answer": "He lives in Bangkok.,To communicate more clearly."
         },
         {
-          "id": "L02-ACT3",
-          "type": "guided_output",
-          "instruction": "อธิบายการทำงานของฟังก์ชันที่คุณสร้างขึ้นมา 1 ฟังก์ชันด้วยประโยค 3 ประโยคตามโครงสร้าง:\n- This function receives ...\n- It checks ...\n- It returns ...",
-          "question": "1. This function receives ...\n2. It checks ...\n3. It returns ...",
-          "answer": "This function receives a user input. It checks the token validity. It returns a boolean status.",
-          "hint": "ลองนึกภาพโค้ดที่ทำอยู่ แล้วเขียนอธิบายด้วยศัพท์ง่าย ๆ ครับ"
+          "id": "L02-F1",
+          "type": "fill_blank",
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "I ___ from Thailand.\nMy job ___ about software.\nI ___ at a technology company. (work)\nI ___ interested in AI.",
+          "answer": "am,is,work,am",
+          "hint": "I am + คำนาม/คำคุณศัพท์/สถานที่ — ห้ามใช้ I am + กริยารูปพื้นฐาน"
+        },
+        {
+          "id": "L02-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "Give a clear introduction to someone new.",
+          "options": [
+            "Hi, my name is Boss.",
+            "I'm from Thailand.",
+            "I work at a technology company.",
+            "I'm interested in AI.",
+            "I'm excited to improve my English."
+          ],
+          "answer": [
+            "สวัสดี ผมชื่อบอส",
+            "ผมมาจากประเทศไทย",
+            "ผมทำงานที่บริษัทเทคโนโลยี",
+            "ผมสนใจ AI",
+            "ผมตื่นเต้นที่จะพัฒนาภาษาอังกฤษ"
+          ]
+        },
+        {
+          "id": "L02-P1",
+          "type": "roleplay",
+          "instruction": "แนะนำตัวต่อเนื่อง 45 วินาทีโดยใช้ be อย่างน้อย 4 ประโยค",
+          "context": "สถานการณ์: แนะนำตัวกับคนใหม่อย่างสั้นและชัดเจน",
+          "question": "แนะนำตัวต่อเนื่อง 45 วินาทีโดยใช้ be อย่างน้อย 4 ประโยค",
+          "options": [
+            "Hello! What's your name?",
+            "Where are you from?",
+            "What do you do?",
+            "What are you interested in?"
+          ],
+          "answer": [
+            "Hi, my name is Boss.",
+            "I'm from Thailand, and I live in Bangkok.",
+            "I work in technology.",
+            "I'm interested in coding, AI, and learning English."
+          ],
+          "hint": "My name is... • I'm from... • I live in... • I work at... • I'm interested in... • I'm excited to..."
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.75,
-        "required_outputs": 3
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
+        "required_outputs": 4
       }
     },
     {
       "id": "L03",
-      "slug": "singular-and-plural",
+      "slug": "my-normal-weekday",
       "level": "A1",
       "phase": "foundation",
-      "title_th": "หนึ่งหรือหลายสิ่ง: a/an และ Plurals",
-      "title_en": "Singular and Plural",
-      "estimated_minutes": 25,
-      "prerequisites": ["L02"],
-      "goals": [
-        "ระบุคำนำหน้านาม a/an และเติม s/es ในคำนามพหูพจน์ได้ถูกต้อง",
-        "เขียนอธิบายอุปกรณ์และโครงสร้างระบบในห้องทำงานได้ถูกต้องตามกฎเอกพจน์/พหูพจน์"
+      "title_th": "วันธรรมดาของฉัน",
+      "title_en": "My Normal Weekday",
+      "situation_th": "เล่ากิจวัตรตั้งแต่เช้าถึงเย็น",
+      "situation_en": "Describe a normal day from morning to evening.",
+      "tense_focus": [
+        "Present Simple",
+        "frequency adverbs"
       ],
-      "grammar_targets": ["articles", "plurals"],
-      "vocabulary_tags": ["Work", "Office", "Dev / Tech"],
+      "exit_task": "เล่ากิจวัตร 6 ขั้นพร้อมคำบอกความถี่อย่างน้อย 2 คำ",
+      "safe_default": "I/You/We/They + verb; He/She/It + verb-s",
+      "estimated_minutes": 35,
+      "prerequisites": [
+        "L02"
+      ],
+      "goals": [
+        "เล่ากิจวัตรตั้งแต่เช้าถึงเย็น",
+        "เล่ากิจวัตร 6 ขั้นพร้อมคำบอกความถี่อย่างน้อย 2 คำ"
+      ],
+      "grammar_targets": [
+        "Present Simple",
+        "frequency adverbs"
+      ],
+      "vocabulary_tags": [
+        "Daily Life",
+        "Time"
+      ],
       "chunks": [
-        "an AI agent",
-        "a developer",
-        "two functions",
-        "three errors",
-        "an API request",
-        "a monitor",
-        "two servers"
+        "wake up at...",
+        "have breakfast",
+        "start work at...",
+        "usually work from...",
+        "finish work at...",
+        "relax after work"
       ],
       "activities": [
         {
-          "id": "L03-ACT1",
+          "id": "L03-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “วันธรรมดาของฉัน” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "wake",
+            "breakfast",
+            "bus",
+            "usually",
+            "often",
+            "start",
+            "finish",
+            "relax"
+          ]
+        },
+        {
+          "id": "L03-C1",
           "type": "concept",
-          "instruction": "เข้าใจการระบุจำนวนและคำนำหน้านาม",
-          "content": "ในภาษาอังกฤษ คำนามนับได้เอกพจน์ (มีชิ้นเดียว) จะอยู่ลอยๆ ไม่ได้ ต้องใส่คำระบุจำนวนด้านหน้าเสมอ:\n\n1. การใช้ a / an (กับคำนาม 1 สิ่งทั่วไป):\n   - a นำหน้าเสียงพยัญชนะ: a developer, a database, a function\n   - an นำหน้าเสียงสระ (A, E, I, O, U): an agent, an error, an API key\n\n2. พหูพจน์ (มีตั้งแต่ 2 สิ่งขึ้นไป) ให้ตัด a/an ออกแล้วเติม s/es ท้ายคำ:\n   - one function -> two functions\n   - one error -> three errors"
+          "instruction": "Tense lens: Present Simple + frequency adverbs",
+          "content": "# Present Simple = สิ่งที่เป็นปกติ\nใช้กับกิจวัตร ข้อเท็จจริง ความชอบ และตารางประจำ\n- `I start work at nine.`\n- `She starts work at nine.`\nคำที่พบบ่อย: usually, often, sometimes, every day\nตำแหน่ง: `I usually work at home.` แต่ `I am usually tired.`\n💡 อย่าเติม am ก่อน action verb: `I work` ไม่ใช่ `I am work`\n## Safe default\n`I/You/We/They + verb; He/She/It + verb-s`"
         },
         {
-          "id": "L03-ACT2",
+          "id": "L03-R1",
+          "type": "reading",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "On weekdays, Ken usually wakes up at seven. He has breakfast at home and takes a bus to work. He starts work at nine. He often has lunch with a colleague. He finishes work at six and walks home. In the evening, he relaxes and studies English for twenty minutes.",
+          "question": "How does Ken go to work?\nWhat does he do in the evening?",
+          "options": [
+            "He takes a bus.",
+            "He drives a taxi.",
+            "He relaxes and studies English.",
+            "He starts work again."
+          ],
+          "answer": "He takes a bus.,He relaxes and studies English."
+        },
+        {
+          "id": "L03-F1",
           "type": "fill_blank",
-          "instruction": "เติม a / an หรือ เติมตัวลงท้าย s เพื่อเปลี่ยนเป็นพหูพจน์ให้ถูกต้อง",
-          "question": "1. ___ AI agent\n2. ___ developer\n3. two function___\n4. three error___\n5. ___ API request",
-          "answer": "an, a, s, s, an",
-          "hint": "ระมัดระวังเสียงขึ้นต้นของ AI (เอ - เสียงสระ) และ API (เอ - เสียงสระ) ครับ"
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "Ken usually ___ up at seven. (wake)\nHe ___ work at nine. (start)\nI often ___ English after work. (study)\nShe ___ at home in the evening. (relax)",
+          "answer": "wakes,starts,study,relaxes",
+          "hint": "I/You/We/They + verb; He/She/It + verb-s"
         },
         {
-          "id": "L03-ACT3",
-          "type": "guided_output",
-          "instruction": "มองไปที่โต๊ะทำงานหรือโครงสร้างระบบที่คุณใช้อยู่ แล้วแต่งประโยคบอกเล่า 3 ประโยคเพื่ออธิบายอุปกรณ์หรือส่วนประกอบ (เช่น คอมพิวเตอร์ หน้าจอ จอบริการ หรือคีย์บอร์ด)",
-          "question": "I have ... I use ... My project includes ...",
-          "answer": "I have a laptop. I use two monitors. My project includes an API gateway and three databases.",
-          "hint": "อ้างอิงของจริงรอบตัวคุณ Boss เลยครับ เช่น laptop (1 เครื่อง = a laptop), monitors (2 จอ = two monitors)"
+          "id": "L03-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "Describe a normal day from morning to evening.",
+          "options": [
+            "I usually wake up at seven.",
+            "I have breakfast at home.",
+            "I start work at nine.",
+            "I often study after work.",
+            "I relax in the evening."
+          ],
+          "answer": [
+            "ปกติฉันตื่นเจ็ดโมง",
+            "ฉันกินอาหารเช้าที่บ้าน",
+            "ฉันเริ่มงานเก้าโมง",
+            "ฉันมักเรียนหลังเลิกงาน",
+            "ฉันพักผ่อนตอนเย็น"
+          ]
+        },
+        {
+          "id": "L03-P1",
+          "type": "roleplay",
+          "instruction": "เล่ากิจวัตร 6 ขั้นพร้อมคำบอกความถี่อย่างน้อย 2 คำ",
+          "context": "สถานการณ์: เล่ากิจวัตรตั้งแต่เช้าถึงเย็น",
+          "question": "เล่ากิจวัตร 6 ขั้นพร้อมคำบอกความถี่อย่างน้อย 2 คำ",
+          "options": [
+            "What time do you usually wake up?",
+            "What do you do before work?",
+            "When do you start work?",
+            "What do you do in the evening?"
+          ],
+          "answer": [
+            "I usually wake up at seven.",
+            "I have breakfast and check my messages.",
+            "I start work at nine.",
+            "I usually relax and study English in the evening."
+          ],
+          "hint": "wake up at... • have breakfast • start work at... • usually work from... • finish work at... • relax after work"
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.75
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
+        "required_outputs": 4
       }
     },
     {
       "id": "L04",
-      "slug": "present-simple-routines",
+      "slug": "getting-to-know-someone",
       "level": "A1",
       "phase": "foundation",
-      "title_th": "Present Simple: งานประจำและสิ่งที่เป็นจริง",
-      "title_en": "Present Simple",
-      "estimated_minutes": 30,
-      "prerequisites": ["L03"],
-      "goals": [
-        "สร้างประโยคบอกเล่าแบบ routine/system behavior ตามประธานเอกพจน์/พหูพจน์ได้แม่นยำ",
-        "เขียนรายงานตารางการทำงานปกติของตนเองในแต่ละวันได้อย่างน้อย 6 ประโยค"
+      "title_th": "ถามเพื่อรู้จักกัน",
+      "title_en": "Getting to Know Someone",
+      "situation_th": "ถามและตอบเรื่องงาน ความชอบ และวันหยุด",
+      "situation_en": "Ask and answer about work, interests, and weekends.",
+      "tense_focus": [
+        "Present Simple questions and negatives"
       ],
-      "grammar_targets": ["present_simple", "frequency_adverbs"],
-      "vocabulary_tags": ["Work", "Routines", "Dev / Tech"],
+      "exit_task": "สนทนาแนะนำตัว 6 ช่วงโดยถามกลับอย่างน้อย 3 คำถาม",
+      "safe_default": "Do/Does + subject + base verb? และ don't/doesn't + base verb",
+      "estimated_minutes": 35,
+      "prerequisites": [
+        "L03"
+      ],
+      "goals": [
+        "ถามและตอบเรื่องงาน ความชอบ และวันหยุด",
+        "สนทนาแนะนำตัว 6 ช่วงโดยถามกลับอย่างน้อย 3 คำถาม"
+      ],
+      "grammar_targets": [
+        "Present Simple questions and negatives"
+      ],
+      "vocabulary_tags": [
+        "Personal",
+        "Communication"
+      ],
       "chunks": [
-        "write code every day",
-        "deploy on Friday",
-        "reviews my code",
-        "returns JSON",
-        "usually start work",
-        "often test the API"
+        "What do you do?",
+        "Where do you work?",
+        "What do you enjoy?",
+        "Do you...?",
+        "I don't usually...",
+        "How about you?"
       ],
       "activities": [
         {
-          "id": "L04-ACT1",
+          "id": "L04-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “ถามเพื่อรู้จักกัน” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "hobby",
+            "weekend",
+            "family",
+            "question",
+            "understand",
+            "prefer",
+            "enjoy",
+            "often"
+          ]
+        },
+        {
+          "id": "L04-C1",
           "type": "concept",
-          "instruction": "เข้าใจกริยา Present Simple และคำบอกความถี่",
-          "content": "Present Simple ใช้พูดถึงสิ่งที่เป็นความจริงทั่วไป งานประจำ หรือการทำงานปกติของระบบ:\n\n1. การผันกริยาตามประธาน:\n   - ประธานพหูพจน์ (I/You/We/They/The developers) -> ใช้กริยาปกติ (base verb)\n     * I write code every day. (ฉันเขียนโค้ดทุกวัน)\n     * We deploy on Friday. (พวกเราดีพลอยวันศุกร์)\n   - ประธานเอกพจน์ (He/She/It/The API/The function) -> กริยาเติม s/es\n     * She reviews my code. (เธอตรวจโค้ดของฉัน)\n     * The API returns JSON. (API ตัวนี้ส่งค่ากลับเป็น JSON)\n\n2. คำบอกความถี่ (usually, often, sometimes, never):\n   - วางไว้หน้ากริยาหลัก: I usually start work at 9 a.m."
+          "instruction": "Tense lens: Present Simple questions and negatives",
+          "content": "# คำถาม Present Simple ใช้ do/does\n- `Do you work from home?`\n- `Does she work from home?`\n- `Where do you live?`\nหลัง do/does ใช้กริยารูปพื้นฐานเสมอ\n✅ `Does he enjoy music?`\n❌ `Does he enjoys music?`\nปฏิเสธ: `I don't...` / `He doesn't...`\n💡 ตอบแล้วถามกลับด้วย `How about you?` เพื่อให้บทสนทนาเดินต่อ\n## Safe default\n`Do/Does + subject + base verb? และ don't/doesn't + base verb`"
         },
         {
-          "id": "L04-ACT2",
-          "type": "transform",
-          "instruction": "เปลี่ยนรูปคำกริยาในวงเล็บให้ถูกต้องตามประธาน",
-          "question": "1. I usually ___ (start) my day at 9 a.m.\n2. The system ___ (send) a response automatically.\n3. The backend ___ (validate) user input.\n4. We ___ (use) GitHub for collaboration.\n5. The cron job ___ (run) every hour.",
-          "answer": "start, sends, validates, use, runs",
-          "hint": "สังเกตว่าประธานเป็นสิ่งเดียว (เอกพจน์: The system, The backend, The cron job) หรือหลายสิ่ง/ฉัน (I, We)"
+          "id": "L04-R1",
+          "type": "reading",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "Maya meets a new colleague named Tom. She asks, “What do you do?” Tom says he works with customers. Maya asks, “Do you enjoy your job?” He says, “Yes, I do, but I don't work on weekends.” Tom then asks Maya about her hobbies. She enjoys cooking and often visits her family.",
+          "question": "Does Tom work on weekends?\nWhat does Maya enjoy?",
+          "options": [
+            "No — he doesn't.",
+            "Yes — he does.",
+            "She enjoys cooking.",
+            "She enjoys driving a bus."
+          ],
+          "answer": "No — he doesn't.,She enjoys cooking."
         },
         {
-          "id": "L04-ACT3",
-          "type": "guided_output",
-          "instruction": "เขียนเล่าเกี่ยวกับ 'วันทำงานปกติของคุณ' (A Typical Workday) จำนวน 6 ประโยค ตั้งแต่เริ่มงานจนจบวัน โดยระบุเวลาหรือคำบอกความถี่ (เช่น start, check, write, attend, finish)",
-          "question": "I usually start work at ... Then I check ... In the afternoon, I ... I often attend ... Finally, I finish ...",
-          "answer": "I usually start work at 9 a.m. Then I check my emails and Slack messages. In the afternoon, I write typescript code. I often attend a daily stand-up meeting. Finally, I finish work at 6 p.m.",
-          "hint": "เขียนลำดับจริงของคุณ Boss เพื่อให้สมองจดจำการใช้งานแบบใกล้ตัวครับ"
+          "id": "L04-F1",
+          "type": "fill_blank",
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "___ you work from home?\nWhere ___ she live?\nHe doesn't ___ on weekends. (work)\nWhat do you ___? (enjoy)",
+          "answer": "Do,does,work,enjoy",
+          "hint": "Do/Does + subject + base verb? และ don't/doesn't + base verb"
+        },
+        {
+          "id": "L04-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "Ask and answer about work, interests, and weekends.",
+          "options": [
+            "What do you do?",
+            "Where do you work?",
+            "Do you enjoy your job?",
+            "I don't work on weekends.",
+            "How about you?"
+          ],
+          "answer": [
+            "คุณทำงานอะไร",
+            "คุณทำงานที่ไหน",
+            "คุณชอบงานของคุณไหม",
+            "ฉันไม่ทำงานวันหยุดสุดสัปดาห์",
+            "แล้วคุณล่ะ"
+          ]
+        },
+        {
+          "id": "L04-P1",
+          "type": "roleplay",
+          "instruction": "สนทนาแนะนำตัว 6 ช่วงโดยถามกลับอย่างน้อย 3 คำถาม",
+          "context": "สถานการณ์: ถามและตอบเรื่องงาน ความชอบ และวันหยุด",
+          "question": "สนทนาแนะนำตัว 6 ช่วงโดยถามกลับอย่างน้อย 3 คำถาม",
+          "options": [
+            "What do you do?",
+            "Do you work from home?",
+            "What do you enjoy after work?",
+            "What do you usually do on weekends?"
+          ],
+          "answer": [
+            "I work in technology.",
+            "Yes, I sometimes work from home.",
+            "I enjoy watching videos and learning new things.",
+            "I usually relax and spend time with my family. How about you?"
+          ],
+          "hint": "What do you do? • Where do you work? • What do you enjoy? • Do you...? • I don't usually... • How about you?"
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.75,
-        "required_outputs": 6
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
+        "required_outputs": 4
       }
     },
     {
       "id": "L05",
-      "slug": "questions-do-does",
+      "slug": "what-s-happening-now",
       "level": "A1",
       "phase": "foundation",
-      "title_th": "Questions with do/does",
-      "title_en": "Questions with Do and Does",
-      "estimated_minutes": 30,
-      "prerequisites": ["L04"],
-      "goals": [
-        "สร้างคำถามแบบ Yes/No และ Wh-Questions ด้วย Do/Does ได้อย่างถูกต้อง",
-        "แต่งคำถามทางเทคนิคอย่างน้อย 5 ข้อเพื่อถามเพื่อนร่วมงานหรือหัวหน้างาน"
+      "title_th": "ตอนนี้กำลังเกิดอะไรขึ้น",
+      "title_en": "What's Happening Now?",
+      "situation_th": "บอกสิ่งที่ตนเองและคนรอบตัวกำลังทำ",
+      "situation_en": "Describe actions happening around you now.",
+      "tense_focus": [
+        "Present Continuous"
       ],
-      "grammar_targets": ["questions", "do_does"],
-      "vocabulary_tags": ["Work", "Communication", "Dev / Tech"],
+      "exit_task": "บรรยายภาพหรือสถานการณ์ปัจจุบัน 5 ประโยค",
+      "safe_default": "subject + am/is/are + verb-ing",
+      "estimated_minutes": 35,
+      "prerequisites": [
+        "L04"
+      ],
+      "goals": [
+        "บอกสิ่งที่ตนเองและคนรอบตัวกำลังทำ",
+        "บรรยายภาพหรือสถานการณ์ปัจจุบัน 5 ประโยค"
+      ],
+      "grammar_targets": [
+        "Present Continuous"
+      ],
+      "vocabulary_tags": [
+        "Daily Life",
+        "Time"
+      ],
       "chunks": [
-        "What do you do",
-        "Where do you work",
-        "Which framework do we use",
-        "How does this function work",
-        "Why does the agent call",
-        "require authentication"
+        "I'm waiting for...",
+        "She's talking to...",
+        "They're sitting...",
+        "What are you doing?",
+        "I'm using...",
+        "right now"
       ],
       "activities": [
         {
-          "id": "L05-ACT1",
+          "id": "L05-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “ตอนนี้กำลังเกิดอะไรขึ้น” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "wait",
+            "wear",
+            "talk",
+            "use",
+            "currently",
+            "now",
+            "sit",
+            "stand"
+          ]
+        },
+        {
+          "id": "L05-C1",
           "type": "concept",
-          "instruction": "เข้าใจสูตรสร้างคำถามด้วย Do และ Does",
-          "content": "เมื่อต้องการสร้างคำถามบอกเล่ากิจวัตรหรือพฤติกรรมปกติในภาษาอังกฤษ ให้เอา Do/Does มาช่วย:\n\n1. โครงสร้างประโยคคำถาม:\n   - Do + I/you/we/they + กริยาปกติ (ไม่เติม s)?\n     * Do you write tests? (คุณเขียนเทสต์ไหม?)\n   - Does + he/she/it/ประธานเอกพจน์ + กริยาปกติ (ไม่เติม s)?\n     * Does this function return JSON? (ฟังก์ชันนี้ส่งค่า JSON กลับมาไหม?)\n     * 🚨 ระวัง: ห้ามเติม s ที่กริยาหลักเมื่อมี Does ในประโยคแล้ว!\n\n2. การใส่คำถามแบบ Wh-:\n   - (What/Where/Why/How) + do/does + Subject + Verb?\n     * How does the agent work? (เอเจนต์ทำงานอย่างไร?)"
+          "instruction": "Tense lens: Present Continuous",
+          "content": "# Present Continuous = กำลังเกิดหรือชั่วคราว\nโครงสร้าง: subject + am/is/are + V-ing\n- `I'm waiting for the bus.`\n- `She is talking on the phone.`\n- `They are sitting near the door.`\nคำใบ้: now, right now, at the moment, currently\nคำถาม: `What are you doing?`\n💡 `I am at the station` บอกตำแหน่ง ไม่ใช่ Continuous เพราะไม่มี V-ing\n## Safe default\n`subject + am/is/are + verb-ing`"
         },
         {
-          "id": "L05-ACT2",
-          "type": "reorder",
-          "instruction": "เรียงคำด้านล่างให้เป็นประโยคคำถามที่ถูกต้อง",
-          "question": "1. JSON / does / this function / return\n2. use / do / which tool / we\n3. require / does / the API / authentication",
-          "answer": "Does this function return JSON?, Which tool do we use?, Does the API require authentication?",
-          "hint": "สังเกตประธานเพื่อเลือก Do/Does และระวังลำดับคำขึ้นต้นด้วย Wh- ครับ"
+          "id": "L05-R1",
+          "type": "reading",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "It is eight in the morning. Arun is waiting at a bus stop. He is wearing a blue shirt and carrying a bag. Two people are sitting on a bench. A woman is talking on her phone. A bus is coming now, so everyone is standing up.",
+          "question": "Where is Arun waiting?\nWhat are people doing when the bus comes?",
+          "options": [
+            "At a bus stop.",
+            "At an airport.",
+            "They are standing up.",
+            "They are going to sleep."
+          ],
+          "answer": "At a bus stop.,They are standing up."
         },
         {
-          "id": "L05-ACT3",
-          "type": "guided_output",
-          "instruction": "แต่งคำถามทางเทคนิค 5 ข้อ ที่คุณอยากจะเอาไปถามทีมผู้พัฒนาอาวุโส (Senior Developer) เกี่ยวกับโปรเจกต์หรือโค้ดที่คุณกำลังทำอยู่",
-          "question": "1. How does ...\n2. Why do we ...\n3. Does this ...\n4. Where do ...\n5. What database do ...",
-          "answer": "How does this logic handle errors? Why do we use this library? Does this service run on docker? Where do we store the API keys? What database do we use in staging?",
-          "hint": "ลองดึงคำถามทางเทคนิคที่สงสัยบ่อยๆ มาลองเปลี่ยนเป็นภาษาอังกฤษครับ"
+          "id": "L05-F1",
+          "type": "fill_blank",
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "Arun ___ for the bus. (wait)\nTwo people ___ on a bench. (sit)\nI ___ English now. (study)\nWhat ___ you doing?",
+          "answer": "is waiting,are sitting,am studying,are",
+          "hint": "subject + am/is/are + verb-ing"
+        },
+        {
+          "id": "L05-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "Describe actions happening around you now.",
+          "options": [
+            "I'm waiting for the bus.",
+            "She's talking on the phone.",
+            "They're sitting near the door.",
+            "The bus is coming now.",
+            "What are you doing?"
+          ],
+          "answer": [
+            "ฉันกำลังรอรถบัส",
+            "เธอกำลังคุยโทรศัพท์",
+            "พวกเขากำลังนั่งใกล้ประตู",
+            "รถบัสกำลังมาแล้ว",
+            "คุณกำลังทำอะไรอยู่"
+          ]
+        },
+        {
+          "id": "L05-P1",
+          "type": "roleplay",
+          "instruction": "บรรยายภาพหรือสถานการณ์ปัจจุบัน 5 ประโยค",
+          "context": "สถานการณ์: บอกสิ่งที่ตนเองและคนรอบตัวกำลังทำ",
+          "question": "บรรยายภาพหรือสถานการณ์ปัจจุบัน 5 ประโยค",
+          "options": [
+            "Where are you right now?",
+            "What are you doing?",
+            "What is someone near you doing?",
+            "Are you using a phone or a computer?"
+          ],
+          "answer": [
+            "I'm at home right now.",
+            "I'm studying English.",
+            "Someone near me is working.",
+            "I'm using a computer."
+          ],
+          "hint": "I'm waiting for... • She's talking to... • They're sitting... • What are you doing? • I'm using... • right now"
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.75,
-        "required_outputs": 5
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
+        "required_outputs": 4
       }
     },
     {
       "id": "L06",
-      "slug": "negatives-dont-doesnt",
+      "slug": "usually-vs-right-now",
       "level": "A1",
       "phase": "foundation",
-      "title_th": "Negatives with don't/doesn't",
-      "title_en": "Negatives with Don't and Doesn't",
-      "estimated_minutes": 25,
-      "prerequisites": ["L05"],
-      "goals": [
-        "สร้างประโยคปฏิเสธเพื่ออธิบายขีดจำกัดของระบบหรือสิ่งที่ไม่เข้าใจได้ถูกต้อง",
-        "แต่งประโยคเพื่อเปรียบเทียบสิ่งทีระบบของท่าน 'ทำได้' และ 'ทำไม่ได้' ได้อย่างถูกต้อง"
+      "title_th": "ปกติ vs ตอนนี้",
+      "title_en": "Usually vs Right Now",
+      "situation_th": "แยกกิจวัตรออกจากเหตุการณ์ชั่วคราว",
+      "situation_en": "Contrast a normal routine with a temporary action.",
+      "tense_focus": [
+        "Present Simple",
+        "Present Continuous"
       ],
-      "grammar_targets": ["negatives", "don_doesnt"],
-      "vocabulary_tags": ["Work", "Communication", "Dev / Tech"],
+      "exit_task": "พูดคู่เปรียบเทียบกิจวัตรกับวันนี้ 4 คู่",
+      "safe_default": "usually/every day → Simple; now/today at this moment → Continuous",
+      "estimated_minutes": 35,
+      "prerequisites": [
+        "L05"
+      ],
+      "goals": [
+        "แยกกิจวัตรออกจากเหตุการณ์ชั่วคราว",
+        "พูดคู่เปรียบเทียบกิจวัตรกับวันนี้ 4 คู่"
+      ],
+      "grammar_targets": [
+        "Present Simple",
+        "Present Continuous"
+      ],
+      "vocabulary_tags": [
+        "Daily Life",
+        "Time"
+      ],
       "chunks": [
-        "don't understand",
-        "don't use this library",
-        "doesn't support",
-        "doesn't return a value",
-        "doesn't require key",
-        "cannot access files"
+        "I usually..., but today I'm...",
+        "normally works...",
+        "is currently...",
+        "every day",
+        "right now"
       ],
       "activities": [
         {
-          "id": "L06-ACT1",
+          "id": "L06-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “ปกติ vs ตอนนี้” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "normally",
+            "today",
+            "usually",
+            "currently",
+            "work",
+            "study",
+            "stay",
+            "change"
+          ]
+        },
+        {
+          "id": "L06-C1",
           "type": "concept",
-          "instruction": "ทำความเข้าใจกฎประโยคปฏิเสธ Don't และ Doesn't",
-          "content": "ใช้ don't (do not) หรือ doesn't (does not) วางหน้ากริยาหลักเพื่อปฏิเสธการกระทำ:\n\n1. การเลือกปฏิเสธตามประธาน:\n   - I/You/We/They -> don't + กริยาปกติ\n     * I don't understand this warning. (ฉันไม่เข้าใจคำเตือนนี้)\n     * We don't use Python for this task. (พวกเราไม่ได้ใช้ Python ในงานนี้)\n   - He/She/It/ประธานเอกพจน์ -> doesn't + กริยาปกติ (ตัด s/es ออก!)\n     * The API doesn't support this format. (API ไม่รองรับฟอร์แมตนี้)\n     * The function doesn't return a value. (ฟังก์ชันไม่ได้รีเทิร์นค่า)"
+          "instruction": "Tense lens: Present Simple + Present Continuous",
+          "content": "# ให้ดู “ความหมาย” ไม่ใช่แค่คำบอกเวลา\nPresent Simple = รูปแบบปกติ: `I work at the office.`\nPresent Continuous = ตอนนี้หรือชั่วคราว: `I'm working at home today.`\n`today` อาจใช้ Simple ได้ถ้าพูดถึงตารางหรือข้อเท็จจริง แต่ในบทนี้เราใช้กับสถานการณ์ชั่วคราว\n💡 สูตรพูดที่ใช้ได้จริง: `I usually..., but today I'm...`\n## Safe default\n`usually/every day → Simple; now/today at this moment → Continuous`"
         },
         {
-          "id": "L06-ACT2",
+          "id": "L06-R1",
+          "type": "reading",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "Leo usually works at the office, but today he is working from home. He normally eats lunch with his team, but today he is eating alone. His team usually has a meeting on Thursday. Right now, they are using an online call because Leo is not at the office.",
+          "question": "Where does Leo usually work?\nWhy is the team using an online call?",
+          "options": [
+            "At the office.",
+            "At a hotel.",
+            "Because Leo is at home.",
+            "Because Thursday is a holiday."
+          ],
+          "answer": "At the office.,Because Leo is at home."
+        },
+        {
+          "id": "L06-F1",
           "type": "fill_blank",
-          "instruction": "เลือกเติม don't หรือ doesn't ในช่องว่าง",
-          "question": "1. I ___ have the staging access.\n2. The server ___ respond after rebooting.\n3. The agent ___ access private configuration data.\n4. We ___ deploy code on holidays.\n5. This dependency ___ support Next.js 16 yet.",
-          "options": ["don't", "doesn't"],
-          "answer": "don't, doesn't, doesn't, don't, doesn't",
-          "hint": "เช็คประธานว่าเป็นพหูพจน์/I/We (ใช้ don't) หรือเอกพจน์อย่าง The server, The agent, This dependency (ใช้ doesn't)"
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "Leo usually ___ at the office. (work)\nToday he ___ from home. (work)\nWe normally ___ at noon. (eat)\nRight now we ___ online. (talk)",
+          "answer": "works,is working,eat,are talking",
+          "hint": "usually/every day → Simple; now/today at this moment → Continuous"
         },
         {
-          "id": "L06-ACT3",
-          "type": "guided_output",
-          "instruction": "เขียนเปรียบเทียบความสามารถของ AI Agent หรือระบบของคุณ โดยแต่งประโยคบอกเล่าขีดความสามารถ (สิ่งที่ทำได้ = can) 2 ข้อ และประโยคปฏิเสธขีดจำกัด (สิ่งที่ระบบไม่ทำ/ทำไม่ได้ = doesn't) 2 ข้อ",
-          "question": "1. The agent can ... but it doesn't ...\n2. The system can ... but it doesn't ...",
-          "answer": "The agent can search the database but it doesn't modify records. The system can send emails but it doesn't store user credentials.",
-          "hint": "ใช้โครงสร้าง but (แต่) เพื่อเชื่อมประโยคขัดแย้งให้อยู่ในข้อเดียวกันได้ครับ"
+          "id": "L06-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "Contrast a normal routine with a temporary action.",
+          "options": [
+            "I usually work at the office.",
+            "Today, I'm working from home.",
+            "We normally eat together.",
+            "Right now, we're talking online.",
+            "My routine is changing today."
+          ],
+          "answer": [
+            "ปกติฉันทำงานที่ออฟฟิศ",
+            "วันนี้ฉันกำลังทำงานจากบ้าน",
+            "ปกติเรากินด้วยกัน",
+            "ตอนนี้เรากำลังคุยออนไลน์",
+            "กิจวัตรของฉันเปลี่ยนไปวันนี้"
+          ]
+        },
+        {
+          "id": "L06-P1",
+          "type": "roleplay",
+          "instruction": "พูดคู่เปรียบเทียบกิจวัตรกับวันนี้ 4 คู่",
+          "context": "สถานการณ์: แยกกิจวัตรออกจากเหตุการณ์ชั่วคราว",
+          "question": "พูดคู่เปรียบเทียบกิจวัตรกับวันนี้ 4 คู่",
+          "options": [
+            "Where do you usually work?",
+            "Where are you working today?",
+            "What do you normally eat for lunch?",
+            "What are you doing differently today?"
+          ],
+          "answer": [
+            "I usually work at the office.",
+            "I'm working at home today.",
+            "I normally eat rice for lunch.",
+            "Today, I'm studying English after work."
+          ],
+          "hint": "I usually..., but today I'm... • normally works... • is currently... • every day • right now"
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.75,
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
         "required_outputs": 4
       }
     },
     {
       "id": "L07",
-      "slug": "present-continuous-now",
+      "slug": "what-i-did-yesterday",
       "level": "A1",
-      "level_label": "A1",
       "phase": "communication",
-      "title_th": "Present Continuous: กำลังทำอยู่ตอนนี้",
-      "title_en": "Present Continuous",
-      "estimated_minutes": 25,
-      "prerequisites": ["L06"],
-      "goals": [
-        "พูดถึงสิ่งที่กำลังทำและสถานะงานปัจจุบันโดยใช้ Verb-ing ได้ถูกต้อง",
-        "แต่งประโยคตอบคำถาม 'คุณกำลังทำงานอะไรอยู่ ณ ตอนนี้' ได้อย่างธรรมชาติ"
+      "title_th": "เมื่อวานฉันทำอะไร",
+      "title_en": "What I Did Yesterday",
+      "situation_th": "เล่าเหตุการณ์ง่าย ๆ ที่เกิดและจบแล้ว",
+      "situation_en": "Report completed actions from yesterday.",
+      "tense_focus": [
+        "Past Simple regular verbs"
       ],
-      "grammar_targets": ["present_continuous"],
-      "vocabulary_tags": ["Work", "Routines", "Dev / Tech"],
-      "chunks": ["fixing a bug", "testing the agent", "service is running", "reviewing the PR", "working from home"],
+      "exit_task": "เล่าเหตุการณ์เมื่อวาน 6 ประโยคตามลำดับ",
+      "safe_default": "finished past time → verb-ed; negative/question → did + base verb",
+      "estimated_minutes": 35,
+      "prerequisites": [
+        "L06"
+      ],
+      "goals": [
+        "เล่าเหตุการณ์ง่าย ๆ ที่เกิดและจบแล้ว",
+        "เล่าเหตุการณ์เมื่อวาน 6 ประโยคตามลำดับ"
+      ],
+      "grammar_targets": [
+        "Past Simple regular verbs"
+      ],
+      "vocabulary_tags": [
+        "Daily Life",
+        "Time"
+      ],
+      "chunks": [
+        "Yesterday, I...",
+        "started work",
+        "finished at...",
+        "called a friend",
+        "watched a video",
+        "didn't..."
+      ],
       "activities": [
         {
-          "id": "L07-ACT1",
+          "id": "L07-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “เมื่อวานฉันทำอะไร” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "yesterday",
+            "clean",
+            "cook",
+            "watch",
+            "call",
+            "visit",
+            "finish",
+            "start"
+          ]
+        },
+        {
+          "id": "L07-C1",
           "type": "concept",
-          "instruction": "ทำความเข้าใจโครงสร้างประโยคสิ่งที่กำลังเกิดขึ้น",
-          "content": "Present Continuous ใช้บอกสิ่งที่กำลังเกิดขึ้นในขณะนี้:\n\nโครงสร้างประโยค:\nSubject + am/is/are + verb-ing\n\nตัวอย่าง:\n- I am fixing a bug. (ฉันกำลังแก้บั๊ก)\n- We are testing the agent. (พวกเรากำลังเทสต์เอเจนต์)\n- The service is running. (เซอร์วิสกำลังทำงานอยู่)\n\nความแตกต่าง:\n- I code. (ฉันทำงานเขียนโค้ดเป็นปกติ - Simple)\n- I am coding now. (ฉันกำลังนั่งพิมพ์โค้ดอยู่ตอนนี้ - Continuous)"
+          "instruction": "Tense lens: Past Simple regular verbs",
+          "content": "# Past Simple = จบแล้วในอดีต\n- `I worked yesterday.`\n- `She called me last night.`\n- `We didn't watch the movie.`\n- `Did you finish the task?`\nกริยาปกติเติม -ed แต่การออกเสียงมีหลายแบบ ไม่ต้องท่องสัญลักษณ์ก่อน ให้ฟังและพูดเป็นคำ\n💡 เมื่อมี did/didn't กริยาหลักกลับเป็นรูปพื้นฐาน\n## Safe default\n`finished past time → verb-ed; negative/question → did + base verb`"
         },
         {
-          "id": "L07-ACT2",
-          "type": "dictation",
-          "instruction": "ฟังและพิมพ์ประโยคเกี่ยวกับงานที่กำลังทำอยู่ให้ถูกต้อง",
-          "answer": "I am fixing a bug in the code.",
-          "hint": "พิมพ์กริยาช่วย (am) ตามด้วยการเติม ing ของกริยาแก้ (fixing) ครับ"
+          "id": "L07-R1",
+          "type": "reading",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "Yesterday, Mali started work at nine. She answered several messages and finished a report before lunch. In the afternoon, she called a customer. After work, she visited her sister. They cooked dinner and watched a movie. Mali didn't study English because she arrived home late.",
+          "question": "What did Mali finish before lunch?\nWhy didn't she study English?",
+          "options": [
+            "A report.",
+            "A movie.",
+            "She arrived home late.",
+            "She forgot her name."
+          ],
+          "answer": "A report.,She arrived home late."
         },
         {
-          "id": "L07-ACT3",
-          "type": "guided_output",
-          "instruction": "ตอบคำถาม 'What are you doing right now?' โดยบอกหน้าที่หรือการกระทำ 3 ข้อที่กำลังเกิดขึ้น",
-          "question": "Right now, I am ... Also, my team is ... And our server is ...",
-          "answer": "Right now, I am testing the new AI workflow. Also, my team is reviewing the pull request. And our server is running successfully.",
-          "hint": "ใช้ประธานหลากหลาย (I, my team, our server) แล้วตามด้วย am/is/are และกริยา ing ครับ"
+          "id": "L07-F1",
+          "type": "fill_blank",
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "Mali ___ work at nine. (start)\nShe ___ a customer. (call)\nThey ___ dinner. (cook)\nShe didn't ___ English. (study)",
+          "answer": "started,called,cooked,study",
+          "hint": "finished past time → verb-ed; negative/question → did + base verb"
+        },
+        {
+          "id": "L07-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "Report completed actions from yesterday.",
+          "options": [
+            "Yesterday, I started work at nine.",
+            "I finished a report before lunch.",
+            "I called a customer.",
+            "I visited my sister after work.",
+            "I didn't study last night."
+          ],
+          "answer": [
+            "เมื่อวานฉันเริ่มงานเก้าโมง",
+            "ฉันทำรายงานเสร็จก่อนมื้อเที่ยง",
+            "ฉันโทรหาลูกค้า",
+            "ฉันไปหาพี่สาวหรือน้องสาวหลังเลิกงาน",
+            "เมื่อคืนฉันไม่ได้เรียน"
+          ]
+        },
+        {
+          "id": "L07-P1",
+          "type": "roleplay",
+          "instruction": "เล่าเหตุการณ์เมื่อวาน 6 ประโยคตามลำดับ",
+          "context": "สถานการณ์: เล่าเหตุการณ์ง่าย ๆ ที่เกิดและจบแล้ว",
+          "question": "เล่าเหตุการณ์เมื่อวาน 6 ประโยคตามลำดับ",
+          "options": [
+            "What time did you start your day?",
+            "What did you do in the morning?",
+            "Who did you talk to?",
+            "What did you do after work?"
+          ],
+          "answer": [
+            "I started my day at seven.",
+            "I worked and answered messages in the morning.",
+            "I talked to my colleagues.",
+            "I watched a video and relaxed after work."
+          ],
+          "hint": "Yesterday, I... • started work • finished at... • called a friend • watched a video • didn't..."
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.75
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
+        "required_outputs": 4
       }
     },
     {
       "id": "L08",
-      "slug": "routine-vs-now",
+      "slug": "my-last-weekend",
       "level": "A1",
       "phase": "communication",
-      "title_th": "Routine vs Right Now",
-      "title_en": "Routine vs Right Now",
-      "estimated_minutes": 25,
-      "prerequisites": ["L07"],
-      "goals": [
-        "แยกแยะและสลับใช้ระหว่างกิจวัตร (Simple) กับเหตุการณ์ขณะนั้น (Continuous) ได้คล่องแคล่ว"
+      "title_th": "เล่าเรื่องวันหยุดที่ผ่านมา",
+      "title_en": "My Last Weekend",
+      "situation_th": "เล่าเรื่องสั้นโดยใช้กริยาอดีตที่เปลี่ยนรูปบ่อย",
+      "situation_en": "Tell a short weekend story with common irregular verbs.",
+      "tense_focus": [
+        "Past Simple irregular verbs"
       ],
-      "grammar_targets": ["present_simple", "present_continuous"],
-      "vocabulary_tags": ["Work", "Routines"],
-      "chunks": ["work from home", "working from home", "sends a response", "returning an error"],
+      "exit_task": "เล่าเรื่องวันหยุด 60 วินาทีโดยใช้กริยาอดีตต่างกัน 5 คำ",
+      "safe_default": "จำกริยาเป็นคู่ใน chunk: go-went, have-had, get-got, make-made",
+      "estimated_minutes": 35,
+      "prerequisites": [
+        "L07"
+      ],
+      "goals": [
+        "เล่าเรื่องสั้นโดยใช้กริยาอดีตที่เปลี่ยนรูปบ่อย",
+        "เล่าเรื่องวันหยุด 60 วินาทีโดยใช้กริยาอดีตต่างกัน 5 คำ"
+      ],
+      "grammar_targets": [
+        "Past Simple irregular verbs"
+      ],
+      "vocabulary_tags": [
+        "Daily Life",
+        "Time"
+      ],
+      "chunks": [
+        "went to...",
+        "had lunch",
+        "met a friend",
+        "took a bus",
+        "bought...",
+        "got home"
+      ],
       "activities": [
         {
-          "id": "L08-ACT1",
-          "type": "concept",
-          "instruction": "เปรียบเทียบภาพเวลาของกิจวัตร vs เหตุการณ์เฉพาะหน้า",
-          "content": "เลือก Tense จากลักษณะของเวลา:\n\n1. สิ่งที่เป็นปกติ / กิจวัตร (Simple):\n   - I work from home on Fridays. (ปกติทำงานที่บ้านทุกวันศุกร์)\n   - The API sends a response. (โดยปกติ API จะส่งคำตอบกลับมา)\n\n2. สิ่งที่กำลังทำเฉพาะช่วงนี้/ตอนนี้ (Continuous):\n   - I am working from home today. (แค่วันนี้ที่ทำงานที่บ้าน)\n   - The API is returning an error. (ณ ตอนนี้ API ตัวนี้ดันกำลังเออเร่ออยู่)"
+          "id": "L08-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “เล่าเรื่องวันหยุดที่ผ่านมา” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "go",
+            "have",
+            "make",
+            "find",
+            "take",
+            "meet",
+            "buy",
+            "get"
+          ]
         },
         {
-          "id": "L08-ACT2",
-          "type": "classify",
-          "instruction": "เลือกฟอร์มกริยาที่สอดคล้องกับสถานการณ์ที่กำหนด",
-          "question": "1. Usually, I ___ (code / am coding) in TypeScript.\n2. Look! The server ___ (reboots / is rebooting) right now.\n3. The function usually ___ (returns / is returning) a boolean.\n4. Today, we ___ (test / are testing) the database connection.",
-          "options": ["code", "am coding", "reboots", "is rebooting", "returns", "is returning", "test", "are testing"],
-          "answer": "code, is rebooting, returns, are testing",
-          "hint": "สังเกตคำบอกเวลา เช่น usually (กิจวัตร -> Simple) หรือ look!, right now, today (ตอนนี้นั้นๆ -> Continuous)"
+          "id": "L08-C1",
+          "type": "concept",
+          "instruction": "Tense lens: Past Simple irregular verbs",
+          "content": "# Irregular verbs เปลี่ยนรูป\nอย่าจำเป็นรายการยาว ให้จำจากเรื่องที่ใช้จริง\n- go → went\n- have → had\n- meet → met\n- take → took\n- buy → bought\n- get → got\n- make → made\n- find → found\nคำถามและปฏิเสธยังใช้ did + base verb: `Did you go?` / `I didn't go.`\n## Safe default\n`จำกริยาเป็นคู่ใน chunk: go-went, have-had, get-got, make-made`"
+        },
+        {
+          "id": "L08-R1",
+          "type": "reading",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "Last Saturday, Dan went to a market with his friend. They took a train and got there at ten. Dan bought a small gift and found a good restaurant. They had lunch and met another friend there. In the evening, Dan made dinner at home and went to bed early.",
+          "question": "How did Dan travel to the market?\nWhat did he do at home in the evening?",
+          "options": [
+            "He took a train.",
+            "He drove a plane.",
+            "He made dinner.",
+            "He bought another train."
+          ],
+          "answer": "He took a train.,He made dinner."
+        },
+        {
+          "id": "L08-F1",
+          "type": "fill_blank",
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "Dan ___ to a market. (go)\nThey ___ a train. (take)\nHe ___ a gift. (buy)\nThey ___ lunch. (have)",
+          "answer": "went,took,bought,had",
+          "hint": "จำกริยาเป็นคู่ใน chunk: go-went, have-had, get-got, make-made"
+        },
+        {
+          "id": "L08-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "Tell a short weekend story with common irregular verbs.",
+          "options": [
+            "I went to a market last Saturday.",
+            "I took a train with a friend.",
+            "We had lunch together.",
+            "I bought a small gift.",
+            "I got home in the evening."
+          ],
+          "answer": [
+            "ฉันไปตลาดเมื่อวันเสาร์ที่แล้ว",
+            "ฉันนั่งรถไฟกับเพื่อน",
+            "เรากินมื้อเที่ยงด้วยกัน",
+            "ฉันซื้อของขวัญชิ้นเล็ก",
+            "ฉันถึงบ้านตอนเย็น"
+          ]
+        },
+        {
+          "id": "L08-P1",
+          "type": "roleplay",
+          "instruction": "เล่าเรื่องวันหยุด 60 วินาทีโดยใช้กริยาอดีตต่างกัน 5 คำ",
+          "context": "สถานการณ์: เล่าเรื่องสั้นโดยใช้กริยาอดีตที่เปลี่ยนรูปบ่อย",
+          "question": "เล่าเรื่องวันหยุด 60 วินาทีโดยใช้กริยาอดีตต่างกัน 5 คำ",
+          "options": [
+            "Where did you go last weekend?",
+            "How did you get there?",
+            "Who did you meet?",
+            "What did you eat or buy?"
+          ],
+          "answer": [
+            "I went to a shopping center.",
+            "I took a car.",
+            "I met my family.",
+            "We had lunch, and I bought some food."
+          ],
+          "hint": "went to... • had lunch • met a friend • took a bus • bought... • got home"
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.85
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
+        "required_outputs": 4
       }
     },
     {
       "id": "L09",
-      "slug": "past-simple-regular",
-      "level": "A1",
+      "slug": "when-something-interrupted",
+      "level": "A2",
       "phase": "communication",
-      "title_th": "Past Simple: สิ่งที่จบลงไปแล้ว",
-      "title_en": "Past Simple Regular Verbs",
-      "estimated_minutes": 25,
-      "prerequisites": ["L08"],
-      "goals": [
-        "ใช้กริยารูปอดีตเติม ed (Regular verbs) เพื่อเล่าสิ่งที่เกิดขึ้นเมื่อวานได้ถูกต้อง",
-        "สามารถสรุปงานที่ทำเสร็จสิ้นไปแล้วได้อย่างน้อย 3 ข้อในการประชุม"
+      "title_th": "ตอนที่ปัญหาเกิดขึ้น",
+      "title_en": "When Something Interrupted",
+      "situation_th": "เล่าการกระทำที่กำลังดำเนินอยู่และเหตุการณ์ที่เข้ามาแทรก",
+      "situation_en": "Explain what was in progress when another event happened.",
+      "tense_focus": [
+        "Past Continuous",
+        "Past Simple"
       ],
-      "grammar_targets": ["past_simple", "regular_verbs"],
-      "vocabulary_tags": ["Work", "Past", "Dev / Tech"],
-      "chunks": ["worked yesterday", "fixed a bug", "tested the API", "stayed with family", "last weekend"],
+      "exit_task": "เล่าเหตุขัดข้องหนึ่งเรื่องด้วย was/were-ing + past event",
+      "safe_default": "background: was/were + V-ing; interrupting event: Past Simple",
+      "estimated_minutes": 35,
+      "prerequisites": [
+        "L08"
+      ],
+      "goals": [
+        "เล่าการกระทำที่กำลังดำเนินอยู่และเหตุการณ์ที่เข้ามาแทรก",
+        "เล่าเหตุขัดข้องหนึ่งเรื่องด้วย was/were-ing + past event"
+      ],
+      "grammar_targets": [
+        "Past Continuous",
+        "Past Simple"
+      ],
+      "vocabulary_tags": [
+        "Daily Life",
+        "Time"
+      ],
+      "chunks": [
+        "I was ...ing when...",
+        "While I was...",
+        "suddenly...",
+        "the problem happened",
+        "What were you doing?"
+      ],
       "activities": [
         {
-          "id": "L09-ACT1",
+          "id": "L09-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “ตอนที่ปัญหาเกิดขึ้น” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "while",
+            "when",
+            "drive",
+            "rain",
+            "call",
+            "happen",
+            "suddenly",
+            "problem"
+          ]
+        },
+        {
+          "id": "L09-C1",
           "type": "concept",
-          "instruction": "เข้าใจการเล่าเรื่องที่จบแล้วด้วยกริยาอดีตปกติ",
-          "content": "ใช้ Past Simple เล่าเหตุการณ์ที่เกิดขึ้นและสิ้นสุดลงแล้วในอดีต (เช่น yesterday, last week, 2 hours ago):\n\nกริยาปกติ (Regular Verbs) จะเปลี่ยนเป็นรูปอดีตโดยการเติม -ed:\n- work -> worked (I worked yesterday.)\n- fix -> fixed (I fixed a bug in the login module.)\n- test -> tested (We tested the model.)\n- stay -> stayed (I stayed at home last weekend.)"
+          "instruction": "Tense lens: Past Continuous + Past Simple",
+          "content": "# ฉากหลัง + เหตุการณ์ที่แทรก\n- `I was driving when my phone rang.`\n- `While I was working, the system stopped.`\nPast Continuous สร้างฉากหรือการกระทำที่กำลังดำเนินอยู่\nPast Simple บอกเหตุการณ์สั้นที่เกิดขึ้น\n💡 when มักนำเหตุการณ์ที่แทรก; while มักนำการกระทำที่กำลังดำเนินอยู่ แต่ให้ดูความหมายเป็นหลัก\n## Safe default\n`background: was/were + V-ing; interrupting event: Past Simple`"
         },
         {
-          "id": "L09-ACT2",
+          "id": "L09-R1",
+          "type": "reading",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "Nok was driving home when heavy rain started. She was listening to music, so she didn't hear her phone. While she was waiting at a red light, the car suddenly stopped. She called her brother and explained the problem. He arrived twenty minutes later and helped her.",
+          "question": "What was Nok doing when the rain started?\nWhen did the car stop?",
+          "options": [
+            "She was driving home.",
+            "She was sleeping.",
+            "While she was waiting at a red light.",
+            "After she arrived home."
+          ],
+          "answer": "She was driving home.,While she was waiting at a red light."
+        },
+        {
+          "id": "L09-F1",
           "type": "fill_blank",
-          "instruction": "เติมกริยารูปอดีต (เติม -ed) ของคำในวงเล็บ",
-          "question": "1. Yesterday, I (work) ___ for 8 hours.\n2. We (test) ___ the code before deployment.\n3. The developer (fix) ___ the database query error.\n4. I (stay) ___ with my family last weekend.",
-          "answer": "worked, tested, fixed, stayed",
-          "hint": "กริยาเหล่านี้สะกดตรงตัวแล้วเติม ed ได้เลยครับ เช่น work -> worked"
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "Nok ___ home when it started to rain. (drive)\nShe ___ for the light when the car stopped. (wait)\nThe car suddenly ___. (stop)\nWhat ___ you doing?",
+          "answer": "was driving,was waiting,stopped,were",
+          "hint": "background: was/were + V-ing; interrupting event: Past Simple"
         },
         {
-          "id": "L09-ACT3",
-          "type": "guided_output",
-          "instruction": "รายงานสิ่งที่ทำเสร็จไปแล้วเมื่อวานนี้ 3 ข้อ โดยใช้กริยาอดีต",
-          "question": "Yesterday, I worked on ... I also tested ... And I fixed ...",
-          "answer": "Yesterday, I worked on the login screen. I also tested the user endpoint. And I fixed a minor spelling bug.",
-          "hint": "นึกถึงบั๊กหรือฟีเจอร์ที่ Boss เพิ่งแก้เสร็จ แล้วเขียนเล่าครับ"
+          "id": "L09-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "Explain what was in progress when another event happened.",
+          "options": [
+            "I was driving home when it started to rain.",
+            "I was listening to music.",
+            "The car suddenly stopped.",
+            "I called my brother.",
+            "He arrived and helped me."
+          ],
+          "answer": [
+            "ฉันกำลังขับรถกลับบ้านตอนฝนเริ่มตก",
+            "ฉันกำลังฟังเพลงอยู่",
+            "รถหยุดกะทันหัน",
+            "ฉันโทรหาพี่ชายหรือน้องชาย",
+            "เขามาถึงและช่วยฉัน"
+          ]
+        },
+        {
+          "id": "L09-P1",
+          "type": "roleplay",
+          "instruction": "เล่าเหตุขัดข้องหนึ่งเรื่องด้วย was/were-ing + past event",
+          "context": "สถานการณ์: เล่าการกระทำที่กำลังดำเนินอยู่และเหตุการณ์ที่เข้ามาแทรก",
+          "question": "เล่าเหตุขัดข้องหนึ่งเรื่องด้วย was/were-ing + past event",
+          "options": [
+            "What were you doing when the problem happened?",
+            "What happened suddenly?",
+            "Who did you call?",
+            "How did the situation end?"
+          ],
+          "answer": [
+            "I was working when the problem happened.",
+            "My computer suddenly stopped.",
+            "I called a colleague.",
+            "We restarted it, and it worked again."
+          ],
+          "hint": "I was ...ing when... • While I was... • suddenly... • the problem happened • What were you doing?"
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.75
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
+        "required_outputs": 4
       }
     },
     {
       "id": "L10",
-      "slug": "past-simple-irregular",
-      "level": "A1",
+      "slug": "plans-with-going-to",
+      "level": "A2",
       "phase": "communication",
-      "title_th": "Past Simple: กริยาเปลี่ยนรูปยอดฮิต",
-      "title_en": "Common Irregular Past Verbs",
-      "estimated_minutes": 30,
-      "prerequisites": ["L09"],
-      "goals": [
-        "ใช้และสะกดกริยาเปลี่ยนรูป (Irregular verbs) ที่พบบ่อยในงานโค้ดดิ้งได้ถูกต้อง",
-        "เขียนเล่าเรื่องราวเหตุการณ์ทำงานเมื่อวานนี้สั้นๆ 6 ประโยคโดยใช้รูปอดีตได้ถูกต้อง"
+      "title_th": "แผนที่ตั้งใจไว้",
+      "title_en": "Plans with Going To",
+      "situation_th": "บอกสิ่งที่ตั้งใจจะทำและเหตุผล",
+      "situation_en": "State intended plans and reasons.",
+      "tense_focus": [
+        "be going to"
       ],
-      "grammar_targets": ["past_simple", "irregular_verbs"],
-      "vocabulary_tags": ["Work", "Past", "Dev / Tech"],
-      "chunks": ["went to office", "had a meeting", "made a change", "found a bug", "wrote a test", "read the doc", "got an error", "took two hours"],
+      "exit_task": "พูดแผน 3 เรื่องพร้อมเหตุผลและเวลา",
+      "safe_default": "subject + am/is/are going to + base verb",
+      "estimated_minutes": 35,
+      "prerequisites": [
+        "L09"
+      ],
+      "goals": [
+        "บอกสิ่งที่ตั้งใจจะทำและเหตุผล",
+        "พูดแผน 3 เรื่องพร้อมเหตุผลและเวลา"
+      ],
+      "grammar_targets": [
+        "be going to"
+      ],
+      "vocabulary_tags": [
+        "Daily Life",
+        "Future"
+      ],
+      "chunks": [
+        "I'm going to...",
+        "next week",
+        "this weekend",
+        "because I want to...",
+        "Are you going to...?"
+      ],
       "activities": [
         {
-          "id": "L10-ACT1",
+          "id": "L10-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “แผนที่ตั้งใจไว้” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "plan",
+            "travel",
+            "visit",
+            "learn",
+            "money",
+            "walk",
+            "next",
+            "reason"
+          ]
+        },
+        {
+          "id": "L10-C1",
           "type": "concept",
-          "instruction": "ทำความเข้าใจกริยาเปลี่ยนรูปอดีตที่ใช้งานบ่อย",
-          "content": "กริยาหลายคำไม่ได้เติม -ed แต่จะเปลี่ยนรูปร่างไปเลย (Irregular Verbs):\n\n| ช่อง 1 | ช่อง 2 (Past) | ตัวอย่าง |\n|---|---|---|\n| go | went | I went to the office. |\n| have | had | We had a meeting. |\n| make | made | I made a change. |\n| find | found | I found a bug. |\n| write | wrote | I wrote a test. |\n| read | read (อ่านว่า เรด) | I read the document. |\n| get | got | I got an error. |\n| take | took | The task took 2 hours. |"
+          "instruction": "Tense lens: be going to",
+          "content": "# going to = มีความตั้งใจหรือแผนแล้ว\n- `I'm going to visit my family this weekend.`\n- `She's going to learn English.`\n- `Are you going to travel next month?`\nรูปปฏิเสธ: `I'm not going to...`\n💡 `I'm going to Bangkok` อาจหมายถึงกำลังเดินทางไปกรุงเทพ เพราะหลัง to เป็นสถานที่ ส่วน future pattern ต้องเป็น `going to + verb`\n## Safe default\n`subject + am/is/are going to + base verb`"
         },
         {
-          "id": "L10-ACT2",
-          "type": "dictation",
-          "instruction": "ฟังและพิมพ์ประโยครูปอดีตที่ใช้กริยาเปลี่ยนรูป",
-          "answer": "I found a bug and wrote a test.",
-          "hint": "รูปอดีตของ find คือ found และ write คือ wrote ครับ"
+          "id": "L10-R1",
+          "type": "reading",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "This weekend, Fern is going to visit her parents. She is going to take an early train because she wants more time with them. On Saturday, they are going to cook together. On Sunday, Fern is going to walk in the park and take some photos. She isn't going to work.",
+          "question": "Why is Fern taking an early train?\nIs she going to work on Sunday?",
+          "options": [
+            "She wants more time with her parents.",
+            "She dislikes trains.",
+            "No — she isn't.",
+            "Yes — she is."
+          ],
+          "answer": "She wants more time with her parents.,No — she isn't."
         },
         {
-          "id": "L10-ACT3",
+          "id": "L10-F1",
           "type": "fill_blank",
-          "instruction": "เติมกริยารูปอดีตช่อง 2 ของคำในวงเล็บ",
-          "question": "1. Last Friday, we (have) ___ a retro meeting.\n2. I (go) ___ to the SCB office yesterday.\n3. The backend team (make) ___ a new API endpoint.\n4. I (get) ___ a timeout response code.",
-          "answer": "had, went, made, got",
-          "hint": "ทบทวนตารางด้านบนและเปลี่ยนรูปกริยาให้ตรงช่องครับ"
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "I ___ going to visit my family.\nShe is going to ___ a train. (take)\nThey ___ going to cook together.\nI am not going to ___ this weekend. (work)",
+          "answer": "am,take,are,work",
+          "hint": "subject + am/is/are going to + base verb"
+        },
+        {
+          "id": "L10-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "State intended plans and reasons.",
+          "options": [
+            "I'm going to visit my family.",
+            "I'm going to take an early train.",
+            "We're going to cook together.",
+            "I'm not going to work this weekend.",
+            "What are you going to do?"
+          ],
+          "answer": [
+            "ฉันวางแผนจะไปหาครอบครัว",
+            "ฉันวางแผนจะขึ้นรถไฟเช้า",
+            "เราวางแผนจะทำอาหารด้วยกัน",
+            "ฉันไม่ได้วางแผนทำงานสุดสัปดาห์นี้",
+            "คุณวางแผนจะทำอะไร"
+          ]
+        },
+        {
+          "id": "L10-P1",
+          "type": "roleplay",
+          "instruction": "พูดแผน 3 เรื่องพร้อมเหตุผลและเวลา",
+          "context": "สถานการณ์: บอกสิ่งที่ตั้งใจจะทำและเหตุผล",
+          "question": "พูดแผน 3 เรื่องพร้อมเหตุผลและเวลา",
+          "options": [
+            "What are you going to do this weekend?",
+            "Where are you going to go?",
+            "Who are you going to meet?",
+            "Why are you going to do that?"
+          ],
+          "answer": [
+            "I'm going to relax and study English.",
+            "I'm going to go to a café.",
+            "I'm going to meet a friend.",
+            "Because I want to practice speaking and have a good time."
+          ],
+          "hint": "I'm going to... • next week • this weekend • because I want to... • Are you going to...?"
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.75
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
+        "required_outputs": 4
       }
     },
     {
       "id": "L11",
-      "slug": "future-plans",
-      "level": "A1",
+      "slug": "arrangements-and-appointments",
+      "level": "A2",
       "phase": "communication",
-      "title_th": "Future: บอกแผนและงานที่จะทำต่อ",
-      "title_en": "Future Plans and Decisions",
-      "estimated_minutes": 25,
-      "prerequisites": ["L10"],
-      "goals": [
-        "เลือกใช้ will และ be going to เพื่อบอกแผนการตัดสินใจได้ถูกต้อง",
-        "เขียนรายงานแผนงานที่จะทำในวันพรุ่งนี้และระยะเวลาที่คาดเดาเสร็จสิ้นได้ถูกต้อง"
+      "title_th": "นัดหมายที่จัดไว้แล้ว",
+      "title_en": "Arrangements and Appointments",
+      "situation_th": "นัดเวลาและยืนยันแผนที่จัดไว้แล้ว",
+      "situation_en": "Arrange and confirm a scheduled meeting.",
+      "tense_focus": [
+        "Present Continuous for future"
       ],
-      "grammar_targets": ["future_will", "going_to"],
-      "vocabulary_tags": ["Work", "Future", "Dev / Tech"],
-      "chunks": ["going to study", "going to deploy", "will check logs", "will take two days", "will resolve the issue"],
+      "exit_task": "นัดพบหนึ่งครั้งโดยตกลงวัน เวลา และสถานที่",
+      "safe_default": "am/is/are + V-ing + future time for a fixed arrangement",
+      "estimated_minutes": 35,
+      "prerequisites": [
+        "L10"
+      ],
+      "goals": [
+        "นัดเวลาและยืนยันแผนที่จัดไว้แล้ว",
+        "นัดพบหนึ่งครั้งโดยตกลงวัน เวลา และสถานที่"
+      ],
+      "grammar_targets": [
+        "Present Continuous for future"
+      ],
+      "vocabulary_tags": [
+        "Work",
+        "Time",
+        "Communication"
+      ],
+      "chunks": [
+        "Are you free...?",
+        "I'm meeting...",
+        "We're having...",
+        "What time are we meeting?",
+        "See you at..."
+      ],
       "activities": [
         {
-          "id": "L11-ACT1",
-          "type": "concept",
-          "instruction": "ความแตกต่างระหว่างการใช้ Will และ Be Going To",
-          "content": "ใช้พูดถึงสิ่งที่จะเกิดขึ้นในอนาคต:\n\n1. Be Going To (มีแผน / ตั้งใจไว้แล้วก่อนพูด):\n   - I am going to study English tonight. (วางแผนจะเรียนคืนนี้แล้ว)\n   - We are going to deploy tomorrow. (พวกเราตกลงจะดีพลอยพรุ่งนี้แล้ว)\n\n2. Will (ตัดสินใจตอนที่พูดเลย หรือ คาดเดาทั่วไป):\n   - I will check the logs. (เพิ่งคิดได้ว่าจะเช็คเดี๋ยวนี้เลย)\n   - I think this task will take two days. (คิดเดาว่าน่าจะใช้เวลาสองวัน)"
+          "id": "L11-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “นัดหมายที่จัดไว้แล้ว” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "appointment",
+            "available",
+            "meet",
+            "schedule",
+            "tomorrow",
+            "tonight",
+            "free",
+            "arrange"
+          ]
         },
         {
-          "id": "L11-ACT2",
-          "type": "classify",
-          "instruction": "เลือกเติม 'will' หรือ 'am going to' / 'are going to'",
-          "question": "1. We already decided. We ___ (deploy) the code tomorrow morning.\n2. Person A: We have a connection issue. Person B: OK, I ___ (check) the config.\n3. I bought a book. I ___ (study) Python this weekend.",
-          "options": ["will", "are going to deploy", "am going to check", "am going to study"],
-          "answer": "are going to deploy, will, am going to study",
-          "hint": "สังเกตความตั้งใจ: มีการตกลง/ตัดสินใจมาก่อนแล้ว (going to) หรือคิดและช่วยเหลือตอบรับทันที (will)"
+          "id": "L11-C1",
+          "type": "concept",
+          "instruction": "Tense lens: Present Continuous for future",
+          "content": "# Present Continuous ใช้กับนัดหมายอนาคตได้\nเมื่อเวลา/คน/สถานที่ถูกจัดไว้แล้ว:\n- `I'm meeting May tomorrow at ten.`\n- `We're having dinner tonight.`\nเปรียบเทียบ: `I'm going to meet May` เน้นความตั้งใจ; `I'm meeting May at ten` ฟังเหมือนนัดเรียบร้อยแล้ว\n💡 ถ้าไม่ต้องการเน้นความต่างมาก ใช้รูปที่จำง่ายและสื่อได้ก่อน\n## Safe default\n`am/is/are + V-ing + future time for a fixed arrangement`"
+        },
+        {
+          "id": "L11-R1",
+          "type": "reading",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "Pat calls Mina to arrange a meeting. Mina is meeting a customer on Monday morning, but she is free in the afternoon. They agree to meet at three at a café near the office. Pat is bringing the project notes, and Mina is preparing three questions. They are meeting for about one hour.",
+          "question": "When are Pat and Mina meeting?\nWhat is Pat bringing?",
+          "options": [
+            "Monday at three.",
+            "Sunday at nine.",
+            "The project notes.",
+            "A customer."
+          ],
+          "answer": "Monday at three.,The project notes."
+        },
+        {
+          "id": "L11-F1",
+          "type": "fill_blank",
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "We ___ meeting at three tomorrow.\nI ___ having dinner with May tonight.\nWhat time ___ we meeting?\nShe is ___ a customer on Monday. (meet)",
+          "answer": "are,am,are,meeting",
+          "hint": "am/is/are + V-ing + future time for a fixed arrangement"
+        },
+        {
+          "id": "L11-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "Arrange and confirm a scheduled meeting.",
+          "options": [
+            "Are you free tomorrow afternoon?",
+            "I'm meeting a customer in the morning.",
+            "We're meeting at three.",
+            "I'm bringing the project notes.",
+            "See you at the café."
+          ],
+          "answer": [
+            "พรุ่งนี้บ่ายคุณว่างไหม",
+            "ฉันมีนัดพบลูกค้าตอนเช้า",
+            "เรานัดเจอกันตอนบ่ายสาม",
+            "ฉันจะนำบันทึกโครงการไป",
+            "เจอกันที่คาเฟ่"
+          ]
+        },
+        {
+          "id": "L11-P1",
+          "type": "roleplay",
+          "instruction": "นัดพบหนึ่งครั้งโดยตกลงวัน เวลา และสถานที่",
+          "context": "สถานการณ์: นัดเวลาและยืนยันแผนที่จัดไว้แล้ว",
+          "question": "นัดพบหนึ่งครั้งโดยตกลงวัน เวลา และสถานที่",
+          "options": [
+            "Are you free tomorrow afternoon?",
+            "What time can we meet?",
+            "Where are we meeting?",
+            "What are you bringing?"
+          ],
+          "answer": [
+            "Yes, I'm free after two.",
+            "We're meeting at three.",
+            "We're meeting at the café near the office.",
+            "I'm bringing my notes."
+          ],
+          "hint": "Are you free...? • I'm meeting... • We're having... • What time are we meeting? • See you at..."
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.80
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
+        "required_outputs": 4
       }
     },
     {
       "id": "L12",
-      "slug": "prepositions-time",
-      "level": "A1",
+      "slug": "decisions-and-offers-with-will",
+      "level": "A2",
       "phase": "communication",
-      "title_th": "Time: at, on, in, for, since",
-      "title_en": "Prepositions of Time",
-      "estimated_minutes": 25,
-      "prerequisites": ["L11"],
-      "goals": [
-        "ระบุพิกัดเวลาด้วยคำบุพบทบอกเวลาได้ถูกต้องโดยไม่อิงรูปแบบภาษาไทย",
-        "แก้ไขข้อผิดพลาดในการบอกระยะเวลารวมกับช่วงจุดเริ่มต้นได้เสถียร"
+      "title_th": "ตัดสินใจ เสนอ และคาดการณ์",
+      "title_en": "Decisions and Offers with Will",
+      "situation_th": "ตอบสนองต่อสถานการณ์ที่เพิ่งเกิดขึ้น",
+      "situation_en": "React with an immediate decision, offer, or prediction.",
+      "tense_focus": [
+        "will"
       ],
-      "grammar_targets": ["prepositions_time"],
-      "vocabulary_tags": ["Work", "Time", "Dev / Tech"],
-      "chunks": ["start at 9 a.m.", "meeting on Monday", "started in 2023", "worked for three years", "since 2023"],
+      "exit_task": "ตอบสนองต่อสถานการณ์เปลี่ยนแปลง 4 แบบอย่างเป็นธรรมชาติ",
+      "safe_default": "will + base verb; ใช้ I'll... สำหรับการตัดสินใจหรือเสนอ ณ ตอนพูด",
+      "estimated_minutes": 35,
+      "prerequisites": [
+        "L11"
+      ],
+      "goals": [
+        "ตอบสนองต่อสถานการณ์ที่เพิ่งเกิดขึ้น",
+        "ตอบสนองต่อสถานการณ์เปลี่ยนแปลง 4 แบบอย่างเป็นธรรมชาติ"
+      ],
+      "grammar_targets": [
+        "will"
+      ],
+      "vocabulary_tags": [
+        "Future",
+        "Communication"
+      ],
+      "chunks": [
+        "I'll help you.",
+        "I'll check.",
+        "Don't worry.",
+        "I think it will...",
+        "Will you...?",
+        "I won't..."
+      ],
       "activities": [
         {
-          "id": "L12-ACT1",
-          "type": "concept",
-          "instruction": "เข้าใจการจับคู่ Preposition กับชนิดของเวลา",
-          "content": "การระบุเวลาในภาษาอังกฤษ:\n\n- at + จุดเวลาแน่นอน: at 9 a.m., at noon, at midnight\n- on + วัน / วันที่แน่นอน: on Monday, on Friday, on July 1st\n- in + เดือน / ปี / ช่วงเวลาใหญ่ๆ: in July, in 2026, in the morning\n- for + ระยะเวลารวม (กี่ชั่วโมง/กี่ปี): for 3 hours, for 2 years\n- since + จุดเริ่มต้น (ตั้งแต่ปี/วันไหน): since 2023, since Monday\n\n🚨 แก้ไขความจำ:\n- ผิด: I work here since three years. ❌\n- ถูก: I work here for three years. ✅"
+          "id": "L12-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “ตัดสินใจ เสนอ และคาดการณ์” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "decide",
+            "promise",
+            "offer",
+            "probably",
+            "think",
+            "help",
+            "check",
+            "worry"
+          ]
         },
         {
-          "id": "L12-ACT2",
+          "id": "L12-C1",
+          "type": "concept",
+          "instruction": "Tense lens: will",
+          "content": "# will ใช้เมื่อเราตอบสนองตอนพูด\n- ตัดสินใจทันที: `The phone is ringing. I'll answer it.`\n- เสนอ: `I'll help you.`\n- สัญญา: `I won't forget.`\n- คาดการณ์/ความเห็น: `I think it will rain.`\nเปรียบเทียบ: going to = มีแผนก่อนพูด; will = ตัดสินใจตอนนี้หรือคาดการณ์\n💡 ในชีวิตจริงสองรูปอาจทับกันได้ ให้เลือกจากเจตนาหลัก\n## Safe default\n`will + base verb; ใช้ I'll... สำหรับการตัดสินใจหรือเสนอ ณ ตอนพูด`"
+        },
+        {
+          "id": "L12-R1",
+          "type": "reading",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "Kai and June are preparing dinner. June sees that there is no rice. Kai says, “I'll buy some.” Then June's phone rings, but her hands are wet. Kai says, “I'll answer it.” The sky is getting dark, and June thinks it will rain. Kai promises he won't be long.",
+          "question": "Why does Kai decide to buy rice?\nWhat does June predict?",
+          "options": [
+            "There is no rice.",
+            "He planned it last week.",
+            "She thinks it will rain.",
+            "She thinks dinner will disappear."
+          ],
+          "answer": "There is no rice.,She thinks it will rain."
+        },
+        {
+          "id": "L12-F1",
           "type": "fill_blank",
-          "instruction": "เติม at, on, in, for, since ในช่องว่าง",
-          "question": "1. The stand-up meeting is ___ 9:30 a.m.\n2. We have a sprint review ___ Friday.\n3. I was hired ___ 2024.\n4. I have coded in TypeScript ___ 5 years.",
-          "answer": "at, on, in, for",
-          "hint": "พิจารณาคำบอกเวลาตามหลัง: จุดเวลา (at), วันในสัปดาห์ (on), ปี (in), ระยะเวลารวม (for)"
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "The phone is ringing. I ___ answer it.\nDon't worry. I ___ help you.\nI think it ___ rain.\nI ___ forget. (negative)",
+          "answer": "will,will,will,won't",
+          "hint": "will + base verb; ใช้ I'll... สำหรับการตัดสินใจหรือเสนอ ณ ตอนพูด"
+        },
+        {
+          "id": "L12-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "React with an immediate decision, offer, or prediction.",
+          "options": [
+            "I'll buy some rice.",
+            "I'll answer the phone.",
+            "Don't worry. I'll help you.",
+            "I think it will rain.",
+            "I won't be long."
+          ],
+          "answer": [
+            "ฉันจะไปซื้อข้าวเอง",
+            "ฉันจะรับโทรศัพท์เอง",
+            "ไม่ต้องกังวล ฉันจะช่วยคุณ",
+            "ฉันคิดว่าฝนจะตก",
+            "ฉันจะไปไม่นาน"
+          ]
+        },
+        {
+          "id": "L12-P1",
+          "type": "roleplay",
+          "instruction": "ตอบสนองต่อสถานการณ์เปลี่ยนแปลง 4 แบบอย่างเป็นธรรมชาติ",
+          "context": "สถานการณ์: ตอบสนองต่อสถานการณ์ที่เพิ่งเกิดขึ้น",
+          "question": "ตอบสนองต่อสถานการณ์เปลี่ยนแปลง 4 แบบอย่างเป็นธรรมชาติ",
+          "options": [
+            "I can't carry these bags.",
+            "The phone is ringing.",
+            "We don't know the answer.",
+            "Look at those dark clouds."
+          ],
+          "answer": [
+            "I'll help you carry them.",
+            "I'll answer it.",
+            "I'll check the information.",
+            "I think it will rain soon."
+          ],
+          "hint": "I'll help you. • I'll check. • Don't worry. • I think it will... • Will you...? • I won't..."
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.80
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
+        "required_outputs": 4
       }
     },
     {
       "id": "L13",
-      "slug": "connect-ideas",
+      "slug": "life-experience",
       "level": "A2",
-      "phase": "connector",
-      "title_th": "เชื่อมความคิด: and, but, because, so",
-      "title_en": "Connect Ideas",
-      "estimated_minutes": 25,
-      "prerequisites": ["L12"],
-      "goals": [
-        "แต่งประโยคขยายความโดยเชื่อมโยงเหตุผล ข้อมูลขัดแย้ง และผลลัพธ์ได้ถูกต้อง",
-        "สามารถขยายประโยคสั้นให้เป็นคำอธิบายงานที่มีใจความสมบูรณ์ได้"
+      "phase": "communication",
+      "title_th": "เคยหรือไม่เคย",
+      "title_en": "Life Experience",
+      "situation_th": "ถามและตอบเกี่ยวกับประสบการณ์โดยไม่ระบุเวลา",
+      "situation_en": "Ask and answer about life experience without a finished time.",
+      "tense_focus": [
+        "Present Perfect for experience"
       ],
-      "grammar_targets": ["conjunctions"],
-      "vocabulary_tags": ["Work", "Communication", "Dev / Tech"],
-      "chunks": ["because it can automate", "but it is difficult to", "expired so the request", "learn English because"],
+      "exit_task": "ถามและตอบ Have you ever...? 4 หัวข้อพร้อมรายละเอียดต่อหนึ่งประโยค",
+      "safe_default": "have/has + past participle; ใช้ Past Simple เมื่อตามด้วยเวลาที่จบแล้ว",
+      "estimated_minutes": 35,
+      "prerequisites": [
+        "L12"
+      ],
+      "goals": [
+        "ถามและตอบเกี่ยวกับประสบการณ์โดยไม่ระบุเวลา",
+        "ถามและตอบ Have you ever...? 4 หัวข้อพร้อมรายละเอียดต่อหนึ่งประโยค"
+      ],
+      "grammar_targets": [
+        "Present Perfect for experience"
+      ],
+      "vocabulary_tags": [
+        "Daily Life",
+        "Travel"
+      ],
+      "chunks": [
+        "Have you ever...?",
+        "I've never...",
+        "Yes, I have.",
+        "No, I haven't.",
+        "I went there in..."
+      ],
       "activities": [
         {
-          "id": "L13-ACT1",
+          "id": "L13-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “เคยหรือไม่เคย” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "ever",
+            "never",
+            "experience",
+            "try",
+            "visit",
+            "see",
+            "eat",
+            "travel"
+          ]
+        },
+        {
+          "id": "L13-C1",
           "type": "concept",
-          "instruction": "ทำความเข้าใจคำเชื่อมประโยคหลัก 4 ตัว",
-          "content": "เชื่อมประโยคสั้นเข้าด้วยกันเพื่อการพูดที่ไหลลื่นขึ้น:\n\n- and (และ - เพิ่มข้อมูล): I code in Python and I study AI.\n- but (แต่ - ขัดแย้ง): The code works, but it is slow.\n- because (เพราะว่า - บอกสาเหตุ): I study English because I want to read docs.\n- so (ดังนั้น - บอกผลลัพธ์): The token expired, so the request failed."
+          "instruction": "Tense lens: Present Perfect for experience",
+          "content": "# Present Perfect มองประสบการณ์ถึงตอนนี้\n- `Have you ever visited Japan?`\n- `I've never tried that food.`\nไม่ระบุเวลาที่จบแล้วในประโยค Present Perfect\n✅ `I've visited Japan.`\n✅ `I visited Japan in 2024.`\n❌ `I've visited Japan in 2024.`\n💡 หลังตอบ Yes/No ให้เพิ่มรายละเอียดด้วย Past Simple\n## Safe default\n`have/has + past participle; ใช้ Past Simple เมื่อตามด้วยเวลาที่จบแล้ว`"
         },
         {
-          "id": "L13-ACT2",
-          "type": "reorder",
-          "instruction": "เรียงคำเหล่านี้รวมกับคำเชื่อมประโยคให้ถูกต้อง",
-          "question": "1. failed / the token / expired / so / the request\n2. but / it is slow / the code / works",
-          "answer": "The token expired so the request failed., The code works but it is slow.",
-          "hint": "มองหาเหตุและผล (so) หรือ ข้อเท็จจริงที่ขัดแย้งกัน (but) ครับ"
+          "id": "L13-R1",
+          "type": "reading",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "Pim and Alex are talking about travel. Pim has visited three countries, but she has never been to Japan. Alex has been to Japan twice. He first went there in 2023. Pim asks if he has ever tried a traditional breakfast. Alex says yes and tells her that he ate it in Kyoto.",
+          "question": "Has Pim been to Japan?\nWhen did Alex first go to Japan?",
+          "options": [
+            "No — she hasn't.",
+            "Yes — she has.",
+            "In 2023.",
+            "He has never gone."
+          ],
+          "answer": "No — she hasn't.,In 2023."
         },
         {
-          "id": "L13-ACT3",
-          "type": "guided_output",
-          "instruction": "เริ่มจากประโยคสั้น 'I study English.' ขยายเพิ่มเหตุผลและวัตถุประสงค์ในการเอาไปใช้งานจริงให้ยาวขึ้นอย่างน้อย 20 คำขึ้นไป",
-          "question": "I study English because ...",
-          "answer": "I study English because I want to talk with foreign colleagues and read technical documentation more quickly.",
-          "hint": "เชื่อมประโยคด้วย because และ and ครับ"
+          "id": "L13-F1",
+          "type": "fill_blank",
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "Have you ever ___ Japan? (visit)\nI have never ___ that food. (try)\nHe ___ there in 2023. (go)\n___ she ever traveled abroad?",
+          "answer": "visited,tried,went,Has",
+          "hint": "have/has + past participle; ใช้ Past Simple เมื่อตามด้วยเวลาที่จบแล้ว"
+        },
+        {
+          "id": "L13-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "Ask and answer about life experience without a finished time.",
+          "options": [
+            "Have you ever visited Japan?",
+            "No, I haven't.",
+            "I've never tried that food.",
+            "I've traveled to three countries.",
+            "I went there in 2023."
+          ],
+          "answer": [
+            "คุณเคยไปญี่ปุ่นไหม",
+            "ไม่ ฉันยังไม่เคย",
+            "ฉันไม่เคยลองอาหารนั้น",
+            "ฉันเคยเดินทางไปสามประเทศ",
+            "ฉันไปที่นั่นในปี 2023"
+          ]
+        },
+        {
+          "id": "L13-P1",
+          "type": "roleplay",
+          "instruction": "ถามและตอบ Have you ever...? 4 หัวข้อพร้อมรายละเอียดต่อหนึ่งประโยค",
+          "context": "สถานการณ์: ถามและตอบเกี่ยวกับประสบการณ์โดยไม่ระบุเวลา",
+          "question": "ถามและตอบ Have you ever...? 4 หัวข้อพร้อมรายละเอียดต่อหนึ่งประโยค",
+          "options": [
+            "Have you ever traveled abroad?",
+            "Have you ever tried Japanese food?",
+            "Have you ever met someone famous?",
+            "Have you ever studied all night?"
+          ],
+          "answer": [
+            "Yes, I have. I traveled abroad a few years ago.",
+            "Yes, I have. I tried it at a restaurant.",
+            "No, I haven't, but I'd like to.",
+            "Yes, I have. I studied all night before an important task."
+          ],
+          "hint": "Have you ever...? • I've never... • Yes, I have. • No, I haven't. • I went there in..."
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.75
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
+        "required_outputs": 4
       }
     },
     {
       "id": "L14",
-      "slug": "describe-things",
+      "slug": "a-recent-result",
       "level": "A2",
-      "phase": "connector",
-      "title_th": "อธิบายสิ่งต่างๆ: Adjectives & Adverbs",
-      "title_en": "Describe Things Clearly",
-      "estimated_minutes": 25,
-      "prerequisites": ["L13"],
-      "goals": [
-        "แยกการใช้คำอธิบายคุณสมบัติ (Adjectives) และลักษณะการกระทำ (Adverbs) ในงานเทคนิคได้ถูกต้อง",
-        "แต่งประโยคอธิบายประสิทธิภาพและข้อจำกัดของฟังก์ชันโค้ดได้ 3 ประโยค"
+      "phase": "communication",
+      "title_th": "อดีตที่ยังมีผลตอนนี้",
+      "title_en": "A Recent Result",
+      "situation_th": "อธิบายปัญหาหรือผลลัพธ์ปัจจุบันและบอกว่าเกิดเมื่อใด",
+      "situation_en": "Explain a present result and say when it happened.",
+      "tense_focus": [
+        "Present Perfect",
+        "Past Simple"
       ],
-      "grammar_targets": ["adjectives", "adverbs"],
-      "vocabulary_tags": ["Work", "Dev / Tech"],
-      "chunks": ["slow process", "runs slowly", "documentation is clear", "handles errors correctly", "works automatically"],
+      "exit_task": "รายงานปัญหาปัจจุบันหนึ่งเรื่องและตอบคำถามว่าเกิดเมื่อใด",
+      "safe_default": "result now → Present Perfect; finished time/detail → Past Simple",
+      "estimated_minutes": 35,
+      "prerequisites": [
+        "L13"
+      ],
+      "goals": [
+        "อธิบายปัญหาหรือผลลัพธ์ปัจจุบันและบอกว่าเกิดเมื่อใด",
+        "รายงานปัญหาปัจจุบันหนึ่งเรื่องและตอบคำถามว่าเกิดเมื่อใด"
+      ],
+      "grammar_targets": [
+        "Present Perfect",
+        "Past Simple"
+      ],
+      "vocabulary_tags": [
+        "Daily Life",
+        "Time"
+      ],
+      "chunks": [
+        "I've just...",
+        "I've already...",
+        "I haven't ... yet.",
+        "What happened?",
+        "When did it happen?"
+      ],
       "activities": [
         {
-          "id": "L014-ACT1",
-          "type": "concept",
-          "instruction": "เข้าใจตำแหน่ง Adjectives และ Adverbs ในประโยค",
-          "content": "อธิบายของ อธิบายระบบ หรือ อธิบายวิธีรัน:\n\n1. Adjective (ขยายคำนาม - วางไว้หน้าคำนาม หรือหลังกริยา BE):\n   - This is a slow process. (slow ขยายคำนาม process)\n   - The documentation is clear. (clear หลัง is ขยาย documentation)\n\n2. Adverb (ขยายกริยา/วิธีการทำงาน - มักลงท้ายด้วย -ly วางไว้ท้ายประโยค):\n   - The process runs slowly. (slowly ขยายกริยา runs)\n   - The function handles errors correctly. (correctly ขยายกริยา handles)"
+          "id": "L14-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “อดีตที่ยังมีผลตอนนี้” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "already",
+            "yet",
+            "just",
+            "lose",
+            "break",
+            "finish",
+            "happen",
+            "problem"
+          ]
         },
         {
-          "id": "L14-ACT2",
+          "id": "L14-C1",
+          "type": "concept",
+          "instruction": "Tense lens: Present Perfect + Past Simple",
+          "content": "# Present Perfect เชื่อมอดีตกับตอนนี้\n- `I've lost my key.` → ตอนนี้ยังไม่มีกุญแจ\n- `I've just finished.`\n- `I haven't called yet.`\nเมื่อถามรายละเอียดเวลาที่จบแล้ว เปลี่ยนเป็น Past Simple:\n`When did you lose it?` — `I lost it this morning.`\n💡 เลือกตามสิ่งที่กำลังเน้น: ผลตอนนี้ หรือเหตุการณ์ตอนนั้น\n## Safe default\n`result now → Present Perfect; finished time/detail → Past Simple`"
+        },
+        {
+          "id": "L14-R1",
+          "type": "reading",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "Nina can't open her apartment door because she has lost her key. She thinks she dropped it this morning. She has already checked her bag, but she hasn't found it yet. Her brother has just arrived, so he can open the door. Nina calls the café she visited earlier and asks about the key.",
+          "question": "Why can't Nina open the door?\nWhat has she already checked?",
+          "options": [
+            "She has lost her key.",
+            "The door has disappeared.",
+            "Her bag.",
+            "Her brother's phone."
+          ],
+          "answer": "She has lost her key.,Her bag."
+        },
+        {
+          "id": "L14-F1",
           "type": "fill_blank",
-          "instruction": "เลือกเติม Adjective หรือ Adverb ให้ตรงประโยค",
-          "question": "1. This function is very ___ (simple / simply).\n2. The system saves the configuration data ___ (automatic / automatically).\n3. We need a ___ (reliable / reliably) database service.\n4. The agent handles user messages ___ (correct / correctly).",
-          "answer": "simple, automatically, reliable, correctly",
-          "hint": "เช็คคำที่ถูกขยาย: ขยายประธานหลัง verb to be (simple, reliable) หรือ ขยายวิธีการทำงานของกริยาหลัก (automatically, correctly)"
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "I have just ___ the task. (finish)\nShe hasn't ___ the key yet. (find)\nWhen did you ___ it? (lose)\nI ___ it this morning. (lose)",
+          "answer": "finished,found,lose,lost",
+          "hint": "result now → Present Perfect; finished time/detail → Past Simple"
+        },
+        {
+          "id": "L14-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "Explain a present result and say when it happened.",
+          "options": [
+            "I've lost my key.",
+            "I've already checked my bag.",
+            "I haven't found it yet.",
+            "When did you lose it?",
+            "I lost it this morning."
+          ],
+          "answer": [
+            "ฉันทำกุญแจหายและตอนนี้ยังหาไม่เจอ",
+            "ฉันตรวจในกระเป๋าแล้ว",
+            "ฉันยังหาไม่เจอ",
+            "คุณทำหายเมื่อไร",
+            "ฉันทำหายเมื่อเช้านี้"
+          ]
+        },
+        {
+          "id": "L14-P1",
+          "type": "roleplay",
+          "instruction": "รายงานปัญหาปัจจุบันหนึ่งเรื่องและตอบคำถามว่าเกิดเมื่อใด",
+          "context": "สถานการณ์: อธิบายปัญหาหรือผลลัพธ์ปัจจุบันและบอกว่าเกิดเมื่อใด",
+          "question": "รายงานปัญหาปัจจุบันหนึ่งเรื่องและตอบคำถามว่าเกิดเมื่อใด",
+          "options": [
+            "What's the problem?",
+            "What have you already done?",
+            "When did the problem happen?",
+            "What are you going to do next?"
+          ],
+          "answer": [
+            "I've lost an important file.",
+            "I've already checked my computer.",
+            "It happened this morning.",
+            "I'm going to ask a colleague for help."
+          ],
+          "hint": "I've just... • I've already... • I haven't ... yet. • What happened? • When did it happen?"
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.80
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
+        "required_outputs": 4
       }
     },
     {
       "id": "L15",
-      "slug": "modals-capabilities",
+      "slug": "talking-about-duration",
       "level": "A2",
-      "phase": "connector",
-      "title_th": "ความสามารถและการแนะนำ: can, could, should, must",
-      "title_en": "Modal Verbs at Work",
-      "estimated_minutes": 25,
-      "prerequisites": ["L14"],
-      "goals": [
-        "ใช้ modal verbs สื่อสารระดับของความสามารถ ความเป็นไปได้ ข้อเสนอแนะ และเงื่อนไขสำคัญได้ถูกต้อง",
-        "แต่งประโยคอธิบายระบบในแบบ capability, risk, recommendation, และ requirement ได้อย่างละ 1 ประโยค"
+      "phase": "communication",
+      "title_th": "นานแค่ไหน: for, since, ago, about",
+      "title_en": "Talking About Duration",
+      "situation_th": "บอกระยะเวลา จุดเริ่มต้น และเวลาประมาณ",
+      "situation_en": "Explain duration, starting point, and approximate time.",
+      "tense_focus": [
+        "Present Perfect with for/since",
+        "Past Simple with ago"
       ],
-      "grammar_targets": ["modals"],
-      "vocabulary_tags": ["Work", "Dev / Tech"],
-      "chunks": ["can call external", "could cause an error", "should add a test", "must sign in first"],
+      "exit_task": "บอกระยะเวลาเกี่ยวกับชีวิตจริง 3 เรื่องโดยเลือก for/since/ago/about ถูกความหมาย",
+      "safe_default": "for + ระยะเวลา; since + จุดเริ่ม; ago + ย้อนจากตอนนี้; about + ประมาณ",
+      "estimated_minutes": 35,
+      "prerequisites": [
+        "L14"
+      ],
+      "goals": [
+        "บอกระยะเวลา จุดเริ่มต้น และเวลาประมาณ",
+        "บอกระยะเวลาเกี่ยวกับชีวิตจริง 3 เรื่องโดยเลือก for/since/ago/about ถูกความหมาย"
+      ],
+      "grammar_targets": [
+        "Present Perfect with for/since",
+        "Past Simple with ago"
+      ],
+      "vocabulary_tags": [
+        "Time",
+        "Daily Life"
+      ],
+      "chunks": [
+        "for three hours",
+        "for about three hours",
+        "since Monday",
+        "two years ago",
+        "How long have you...?"
+      ],
       "activities": [
         {
-          "id": "L15-ACT1",
-          "type": "concept",
-          "instruction": "เข้าใจน้ำหนักความหมายของ Can, Could, Should, Must",
-          "content": "คำกริยาช่วยบอกความรู้สึกหรือน้ำหนักการทำกริยา:\n\n- can = สามารถทำได้ (Capability): The agent can search the web.\n- could = อาจเกิด (Risk/Possibility): This input could cause a memory error.\n- should = แนะนำให้ทำ (Recommendation): We should write unit tests.\n- must = ต้องทำ (Mandatory requirement): Users must verify their email."
+          "id": "L15-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “นานแค่ไหน: for, since, ago, about” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "for",
+            "since",
+            "ago",
+            "about",
+            "time",
+            "hour",
+            "year",
+            "wait"
+          ]
         },
         {
-          "id": "L15-ACT2",
-          "type": "classify",
-          "instruction": "เลือกกริยาช่วยที่น้ำหนักความหมายเหมาะกับประโยค",
-          "question": "1. Safety rule: You ___ (must / should) encrypt passwords in DB.\n2. Feature: The user ___ (can / should) edit their name in dashboard.\n3. Bug risk: This update ___ (could / should) break the staging pipeline.\n4. Recommendation: We ___ (should / must) refactor this function.",
-          "options": ["must", "can", "could", "should"],
-          "answer": "must, can, could, should",
-          "hint": "เลือกตามกฎข้อบังคับ (must), ฟีเจอร์ที่ทำได้ (can), ความเสี่ยง (could) และ คำแนะนำทั่วไป (should)"
+          "id": "L15-C1",
+          "type": "concept",
+          "instruction": "Tense lens: Present Perfect with for/since + Past Simple with ago",
+          "content": "# สี่คำที่ไม่ควรจำปนกัน\n- `for three hours` = เป็นเวลา 3 ชั่วโมง\n- `for about three hours` = เป็นเวลาประมาณ 3 ชั่วโมง\n- `since Monday` = ตั้งแต่วันจันทร์ถึงตอนนี้\n- `two years ago` = เมื่อสองปีก่อน\n`about` บอกความไม่เป๊ะ ส่วน `for` บอกระยะเวลา จึงใช้ร่วมกันได้\n✅ `I studied for about three hours.`\n❌ `I studied about for three hours.`\n## Safe default\n`for + ระยะเวลา; since + จุดเริ่ม; ago + ย้อนจากตอนนี้; about + ประมาณ`"
+        },
+        {
+          "id": "L15-R1",
+          "type": "reading",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "Mew has worked at the same company for four years. She has lived in Bangkok since 2021. She started learning English about two years ago. So far today, she has studied for about thirty minutes. Yesterday, she waited for a bus for forty minutes, but the trip took only twenty minutes.",
+          "question": "How long has Mew worked at the company?\nWhen did she start learning English?",
+          "options": [
+            "For four years.",
+            "Since four hours.",
+            "About two years ago.",
+            "For yesterday."
+          ],
+          "answer": "For four years.,About two years ago."
+        },
+        {
+          "id": "L15-F1",
+          "type": "fill_blank",
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "I have worked here ___ four years.\nShe has lived here ___ 2021.\nI started two years ___.\nI studied for ___ thirty minutes.",
+          "answer": "for,since,ago,about",
+          "hint": "for + ระยะเวลา; since + จุดเริ่ม; ago + ย้อนจากตอนนี้; about + ประมาณ"
+        },
+        {
+          "id": "L15-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "Explain duration, starting point, and approximate time.",
+          "options": [
+            "I've worked here for four years.",
+            "I've lived here since 2021.",
+            "I started two years ago.",
+            "I studied for about thirty minutes.",
+            "How long have you worked here?"
+          ],
+          "answer": [
+            "ฉันทำงานที่นี่มาเป็นเวลาสี่ปี",
+            "ฉันอยู่ที่นี่มาตั้งแต่ปี 2021",
+            "ฉันเริ่มเมื่อสองปีก่อน",
+            "ฉันเรียนประมาณสามสิบนาที",
+            "คุณทำงานที่นี่มานานเท่าไร"
+          ]
+        },
+        {
+          "id": "L15-P1",
+          "type": "roleplay",
+          "instruction": "บอกระยะเวลาเกี่ยวกับชีวิตจริง 3 เรื่องโดยเลือก for/since/ago/about ถูกความหมาย",
+          "context": "สถานการณ์: บอกระยะเวลา จุดเริ่มต้น และเวลาประมาณ",
+          "question": "บอกระยะเวลาเกี่ยวกับชีวิตจริง 3 เรื่องโดยเลือก for/since/ago/about ถูกความหมาย",
+          "options": [
+            "How long have you lived in your city?",
+            "How long have you worked at your company?",
+            "When did you start learning English?",
+            "How long did you study today?"
+          ],
+          "answer": [
+            "I've lived in my city for many years.",
+            "I've worked at my company since 2022.",
+            "I started learning English a few years ago.",
+            "I studied for about thirty minutes today."
+          ],
+          "hint": "for three hours • for about three hours • since Monday • two years ago • How long have you...?"
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.80
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
+        "required_outputs": 4
       }
     },
     {
       "id": "L16",
-      "slug": "polite-requests",
+      "slug": "ability-need-and-advice",
       "level": "A2",
       "phase": "connector",
-      "title_th": "การขอความช่วยเหลืออย่างสุภาพ",
-      "title_en": "Polite Requests at Work",
-      "estimated_minutes": 25,
-      "prerequisites": ["L15"],
-      "goals": [
-        "ปรับระดับความเป็นกันเองเป็นความสุภาพในการถามและขอความช่วยเหลือทางเทคนิคได้ดี",
-        "แต่งประโยคเชิญเพื่อนร่วมงานช่วยดูบั๊กหรือโค้ดในรูปแบบสุภาพได้ถูกต้อง"
+      "title_th": "ทำได้ จำเป็น และควรทำ",
+      "title_en": "Ability, Need, and Advice",
+      "situation_th": "ขอความช่วยเหลือ บอกความจำเป็น และให้คำแนะนำ",
+      "situation_en": "Ask for help, state a need, and give practical advice.",
+      "tense_focus": [
+        "can/could",
+        "should",
+        "have to"
       ],
-      "grammar_targets": ["polite_requests"],
-      "vocabulary_tags": ["Work", "Communication"],
-      "chunks": ["Could you take a look", "help me with this error", "give me an example", "if I missed anything", "Could you show me how"],
+      "exit_task": "แก้สถานการณ์หนึ่งเรื่องด้วยคำขอ คำแนะนำ และข้อจำเป็น",
+      "safe_default": "modal + base verb; have to + base verb",
+      "estimated_minutes": 35,
+      "prerequisites": [
+        "L15"
+      ],
+      "goals": [
+        "ขอความช่วยเหลือ บอกความจำเป็น และให้คำแนะนำ",
+        "แก้สถานการณ์หนึ่งเรื่องด้วยคำขอ คำแนะนำ และข้อจำเป็น"
+      ],
+      "grammar_targets": [
+        "can/could",
+        "should",
+        "have to"
+      ],
+      "vocabulary_tags": [
+        "Communication",
+        "Daily Life"
+      ],
+      "chunks": [
+        "Can you help me?",
+        "Could you...?",
+        "You should...",
+        "I have to...",
+        "Do I need to...?",
+        "You don't have to..."
+      ],
       "activities": [
         {
-          "id": "L16-ACT1",
+          "id": "L16-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “ทำได้ จำเป็น และควรทำ” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "ability",
+            "advice",
+            "ask",
+            "necessary",
+            "possible",
+            "recommend",
+            "help",
+            "need"
+          ]
+        },
+        {
+          "id": "L16-C1",
           "type": "concept",
-          "instruction": "ระดับประโยคคำขอ สั่งการ -> สุภาพ",
-          "content": "ปรับปรุงประโยคคำสั่งเพื่อให้สื่อสารได้นุ่มนวลและสุภาพขึ้นในการทำงาน:\n\n- สั่งตรง (ห้ามใช้กับคนร่วมงาน): Explain this code. ❌\n- ทั่วไป (ใช้กับเพื่อนสนิท): Can you explain this code?\n- สุภาพขึ้น (มาตรฐานการทำงาน): Could you explain this part to me?\n- สุภาพมาก (ขอให้สอน/อธิบาย): Could you show me how this function works?"
+          "instruction": "Tense lens: can/could + should + have to",
+          "content": "# เครื่องมือสื่อสารที่จำเป็น แต่ไม่ใช่ tense\n- can = ความสามารถ/ขอแบบทั่วไป\n- could = ขออย่างสุภาพขึ้นหรือความเป็นไปได้\n- should = คำแนะนำ\n- have to = ความจำเป็น\nหลัง can/could/should ใช้กริยารูปพื้นฐาน\n✅ `Could you help me?`\n❌ `Could you to help me?`\n💡 คำขอที่ปลอดภัยและใช้กว้าง: `Could you help me with this?`\n## Safe default\n`modal + base verb; have to + base verb`"
         },
         {
-          "id": "L16-ACT2",
-          "type": "dictation",
-          "instruction": "ฟังและพิมพ์คำร้องขอความช่วยเหลือสุภาพเพื่อตรวจโค้ด",
-          "answer": "Could you take a look at this code?",
-          "hint": "พิมพ์ Could ขึ้นต้นเพื่อเป็นคำร้องขอแบบทางการและสุภาพครับ"
+          "id": "L16-R1",
+          "type": "reading",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "Ben is visiting a clinic because he has a bad cough. He asks, “Could you help me?” The nurse says he has to wait for the doctor. She tells him, “You should drink water, and you shouldn't smoke.” Ben asks if he has to pay now. The nurse says he can pay after he sees the doctor.",
+          "question": "What does Ben have to do?\nWhat advice does the nurse give?",
+          "options": [
+            "He has to wait.",
+            "He has to leave.",
+            "He should drink water.",
+            "He should run outside."
+          ],
+          "answer": "He has to wait.,He should drink water."
         },
         {
-          "id": "L16-ACT3",
-          "type": "guided_output",
-          "instruction": "ขอให้เพื่อนร่วมงานช่วยตรวจเช็คบั๊ก โดยเขียนประโยคแจ้งปัญหาตามด้วยประโยคขอความช่วยเหลืออย่างสุภาพ 2-3 ประโยค",
-          "question": "Hello. I have an error in ... Could you ...",
-          "answer": "Hello. I have an error in the authentication route. Could you take a look at this when you have time? Thanks.",
-          "hint": "ระบุชื่อส่วนปัญหาคร่าวๆ แล้วตามด้วยประโยคคำขอ Could you take a look... ครับ"
+          "id": "L16-F1",
+          "type": "fill_blank",
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "Could you ___ me? (help)\nYou should ___ some water. (drink)\nI have to ___ for the doctor. (wait)\nYou don't have to ___ now. (pay)",
+          "answer": "help,drink,wait,pay",
+          "hint": "modal + base verb; have to + base verb"
+        },
+        {
+          "id": "L16-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "Ask for help, state a need, and give practical advice.",
+          "options": [
+            "Could you help me?",
+            "You should drink some water.",
+            "You shouldn't smoke.",
+            "I have to wait for the doctor.",
+            "You can pay later."
+          ],
+          "answer": [
+            "คุณช่วยฉันได้ไหม",
+            "คุณควรดื่มน้ำ",
+            "คุณไม่ควรสูบบุหรี่",
+            "ฉันจำเป็นต้องรอหมอ",
+            "คุณจ่ายทีหลังได้"
+          ]
+        },
+        {
+          "id": "L16-P1",
+          "type": "roleplay",
+          "instruction": "แก้สถานการณ์หนึ่งเรื่องด้วยคำขอ คำแนะนำ และข้อจำเป็น",
+          "context": "สถานการณ์: ขอความช่วยเหลือ บอกความจำเป็น และให้คำแนะนำ",
+          "question": "แก้สถานการณ์หนึ่งเรื่องด้วยคำขอ คำแนะนำ และข้อจำเป็น",
+          "options": [
+            "I don't understand this form.",
+            "I have a bad cough.",
+            "Do I have to pay now?",
+            "Can I wait here?"
+          ],
+          "answer": [
+            "Could you show me how to complete it?",
+            "You should see a doctor and drink water.",
+            "No, you don't have to pay now.",
+            "Yes, you can wait here."
+          ],
+          "hint": "Can you help me? • Could you...? • You should... • I have to... • Do I need to...? • You don't have to..."
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.75
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
+        "required_outputs": 4
       }
     },
     {
       "id": "L17",
-      "slug": "clarification-loops",
+      "slug": "clarify-and-repair",
       "level": "A2",
       "phase": "connector",
-      "title_th": "เมื่อฟังคู่สนทนาไม่เข้าใจ",
-      "title_en": "Clarification and Repair",
-      "estimated_minutes": 30,
-      "prerequisites": ["L16"],
-      "goals": [
-        "ใช้สำนวนภาษาอภิปรายเมื่อตามประเด็นการสื่อสารไม่ทันเพื่อหาข้อเท็จจริง",
-        "ดำเนินการสืบถามความหมายคำศัพท์เทคนิคและยืนยันประเด็นความเข้าใจได้อย่างเหมาะสม"
+      "title_th": "ฟังไม่ทันก็ไปต่อได้",
+      "title_en": "Clarify and Repair",
+      "situation_th": "กู้บทสนทนาเมื่อฟังไม่ออกหรือไม่เข้าใจคำหนึ่งคำ",
+      "situation_en": "Repair a conversation when you miss or misunderstand something.",
+      "tense_focus": [
+        "clarification phrases"
       ],
-      "grammar_targets": ["clarification"],
-      "vocabulary_tags": ["Work", "Communication"],
-      "chunks": ["say that again", "speak a little more slowly", "What does it mean here", "Do you mean that", "check if I understand correctly"],
+      "exit_task": "ใช้วลีแก้บทสนทนาอย่างน้อย 4 แบบโดยไม่เปลี่ยนเป็นภาษาไทย",
+      "safe_default": "Sorry, could you say that again more slowly?",
+      "estimated_minutes": 35,
+      "prerequisites": [
+        "L16"
+      ],
+      "goals": [
+        "กู้บทสนทนาเมื่อฟังไม่ออกหรือไม่เข้าใจคำหนึ่งคำ",
+        "ใช้วลีแก้บทสนทนาอย่างน้อย 4 แบบโดยไม่เปลี่ยนเป็นภาษาไทย"
+      ],
+      "grammar_targets": [
+        "clarification phrases"
+      ],
+      "vocabulary_tags": [
+        "Communication",
+        "Politeness"
+      ],
+      "chunks": [
+        "Could you say that again?",
+        "Could you speak more slowly?",
+        "What does ... mean?",
+        "Do you mean...?",
+        "Let me check if I understand."
+      ],
       "activities": [
         {
-          "id": "L17-ACT1",
-          "type": "concept",
-          "instruction": "ขั้นตอนและสำนวนแก้ไขเมื่อการคุยสะดุด/ไม่เข้าใจ",
-          "content": "ห้ามเงียบเมื่อคุยงานแล้วไม่เข้าใจ ให้ใช้สำนวนถามกลับทันที:\n\n1. ขอให้พูดซ้ำ/ช้าลง:\n   - Sorry, could you say that again?\n   - Could you speak a little more slowly?\n2. ถามความหมายคำเฉพาะ:\n   - What does 'fallback' mean here?\n3. ยืนยันประเด็นที่ตนเข้าใจ:\n   - Do you mean that the API is unavailable?\n   - Let me check if I understand correctly."
+          "id": "L17-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “ฟังไม่ทันก็ไปต่อได้” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "repeat",
+            "slowly",
+            "mean",
+            "explain",
+            "understand",
+            "clearly",
+            "confirm",
+            "again"
+          ]
         },
         {
-          "id": "L17-ACT2",
-          "type": "reorder",
-          "instruction": "เรียงประโยคเพื่อขอความหมายคำอธิบายของคำเทคนิค",
-          "question": "1. mean / what / does / here / latency\n2. you / again / say / that / could",
-          "answer": "What does latency mean here?, Could you say that again?",
-          "hint": "คำถามเพื่อถามความหมายใช้โครงสร้าง What does... mean? ครับ"
+          "id": "L17-C1",
+          "type": "concept",
+          "instruction": "Tense lens: clarification phrases",
+          "content": "# เป้าหมายไม่ใช่ฟังออกทุกคำ แต่รักษาบทสนทนา\n1. บอกปัญหา: `Sorry, I didn't catch that.`\n2. ขอซ้ำ/ช้าลง: `Could you say that again more slowly?`\n3. ถามความหมาย: `What does “refund” mean?`\n4. ยืนยัน: `Do you mean I should wait here?`\n5. สรุป: `Let me check if I understand.`\n💡 ประโยคค่าเริ่มต้นใช้ได้แทบทุกที่: `Sorry, could you say that again?`\n## Safe default\n`Sorry, could you say that again more slowly?`"
+        },
+        {
+          "id": "L17-R1",
+          "type": "reading",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "A customer tells Jay that his appointment has been moved to Thursday. Jay doesn't catch the new time. He says, “Sorry, could you say that again more slowly?” The customer repeats the information. Jay asks, “Do you mean Thursday at three?” The customer says yes. Jay then confirms, “So the appointment is Thursday at three, correct?”",
+          "question": "What information did Jay miss?\nHow did he confirm the information?",
+          "options": [
+            "The new appointment time.",
+            "The customer's name.",
+            "He repeated Thursday at three.",
+            "He ended the call."
+          ],
+          "answer": "The new appointment time.,He repeated Thursday at three."
+        },
+        {
+          "id": "L17-F1",
+          "type": "fill_blank",
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "Could you say that ___?\nCould you speak more ___?\nWhat does this word ___?\nDo you ___ Thursday at three?",
+          "answer": "again,slowly,mean,mean",
+          "hint": "Sorry, could you say that again more slowly?"
+        },
+        {
+          "id": "L17-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "Repair a conversation when you miss or misunderstand something.",
+          "options": [
+            "Sorry, I didn't catch that.",
+            "Could you say that again?",
+            "Could you speak more slowly?",
+            "What does this word mean?",
+            "Do you mean Thursday at three?"
+          ],
+          "answer": [
+            "ขอโทษ ฉันฟังตรงนั้นไม่ทัน",
+            "ช่วยพูดอีกครั้งได้ไหม",
+            "ช่วยพูดช้าลงได้ไหม",
+            "คำนี้หมายความว่าอะไร",
+            "คุณหมายถึงวันพฤหัสบดีตอนบ่ายสามใช่ไหม"
+          ]
+        },
+        {
+          "id": "L17-P1",
+          "type": "roleplay",
+          "instruction": "ใช้วลีแก้บทสนทนาอย่างน้อย 4 แบบโดยไม่เปลี่ยนเป็นภาษาไทย",
+          "context": "สถานการณ์: กู้บทสนทนาเมื่อฟังไม่ออกหรือไม่เข้าใจคำหนึ่งคำ",
+          "question": "ใช้วลีแก้บทสนทนาอย่างน้อย 4 แบบโดยไม่เปลี่ยนเป็นภาษาไทย",
+          "options": [
+            "Your appointment is on the fifteenth at thirteen thirty.",
+            "Please bring your identification document.",
+            "The service is temporarily unavailable.",
+            "So you need to arrive before noon."
+          ],
+          "answer": [
+            "Sorry, could you say the date and time again more slowly?",
+            "What does identification document mean here?",
+            "Do you mean I can't use the service right now?",
+            "Let me check if I understand. I have to arrive before twelve, right?"
+          ],
+          "hint": "Could you say that again? • Could you speak more slowly? • What does ... mean? • Do you mean...? • Let me check if I understand."
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.75
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
+        "required_outputs": 4
       }
     },
     {
       "id": "L18",
-      "slug": "small-talk",
+      "slug": "feelings-and-their-causes",
       "level": "A2",
       "phase": "connector",
-      "title_th": "ชวนคุยและถามต่อ: Small Talk",
-      "title_en": "Small Talk and Follow-up",
-      "estimated_minutes": 25,
-      "prerequisites": ["L17"],
-      "goals": [
-        "สนทนาตอบรับและถามกลับเพื่อรักษารูปบทสนทนารายวันให้ลื่นไหล",
-        "ประยุกต์สูตร Answer + Detail + Question ในหัวข้อทั่วไปได้ดี"
+      "title_th": "พูดความรู้สึกและต้นเหตุ",
+      "title_en": "Feelings and Their Causes",
+      "situation_th": "บอกว่ารู้สึกอย่างไรและอะไรทำให้เกิดความรู้สึกนั้น",
+      "situation_en": "Express a feeling and explain its cause.",
+      "tense_focus": [
+        "be/feel + adjective",
+        "-ed vs -ing adjectives"
       ],
-      "grammar_targets": ["conversational_questions"],
-      "vocabulary_tags": ["Work", "Communication"],
-      "chunks": ["How was your weekend", "What are you working on", "get interested in", "That sounds interesting", "had dinner together"],
+      "exit_task": "พูดความรู้สึก 4 แบบพร้อมสาเหตุและระดับอารมณ์",
+      "safe_default": "person feels -ed; thing/situation is -ing",
+      "estimated_minutes": 35,
+      "prerequisites": [
+        "L17"
+      ],
+      "goals": [
+        "บอกว่ารู้สึกอย่างไรและอะไรทำให้เกิดความรู้สึกนั้น",
+        "พูดความรู้สึก 4 แบบพร้อมสาเหตุและระดับอารมณ์"
+      ],
+      "grammar_targets": [
+        "be/feel + adjective",
+        "-ed vs -ing adjectives"
+      ],
+      "vocabulary_tags": [
+        "Personal",
+        "Communication",
+        "Excitement"
+      ],
+      "chunks": [
+        "I'm excited about...",
+        "I feel...",
+        "It's exciting.",
+        "I'm interested in...",
+        "It makes me feel...",
+        "I'm so..."
+      ],
       "activities": [
         {
-          "id": "L18-ACT1",
-          "type": "concept",
-          "instruction": "สูตรคุยตอบรับไม่ให้จบบทสนทนาทันที",
-          "content": "การทำ Small Talk ไม่ควรตอบแค่คำเดียวแล้วจบ ให้ใช้สูตรนี้:\n\nสูตร: Answer + Detail + Question back\n\nตัวอย่าง:\n- Friend: How was your weekend?\n- Boss: It was good (Answer). I stayed with my family and had dinner together (Detail). How was your weekend? (Question back)"
+          "id": "L18-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “พูดความรู้สึกและต้นเหตุ” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "excited",
+            "exciting",
+            "feel",
+            "boring",
+            "interest",
+            "interesting",
+            "tired",
+            "relaxed"
+          ]
         },
         {
-          "id": "L18-ACT2",
-          "type": "guided_output",
-          "instruction": "ตอบรับคำถาม 'How was your weekend?' ของเพื่อนร่วมงานด้วยสูตร 3 ส่วนอิงตามความสนใจของคุณ Boss",
-          "question": "It was ... I ... How was your weekend?",
-          "answer": "It was great. I spent time studying AI trading models and stayed at home. How was your weekend?",
-          "hint": "ระบุกิจกรรมจริง (Answer + Detail) แล้วตามด้วยคำถามย้อนกลับ (How was your weekend?)"
+          "id": "L18-C1",
+          "type": "concept",
+          "instruction": "Tense lens: be/feel + adjective + -ed vs -ing adjectives",
+          "content": "# ผู้รู้สึก vs สิ่งที่ทำให้รู้สึก\n- `I'm excited.` = บอกสภาพตรง ๆ และเป็นธรรมชาติที่สุด\n- `I feel excited.` = เน้นความรู้สึกภายใน\n- `I'm so excited!` = เพิ่มระดับอารมณ์\n- `The trip is exciting.` = การเดินทางทำให้เกิดความตื่นเต้น\nหลัก -ed/-ing: person is interested; topic is interesting\n💡 ถ้าเลือกไม่ถูก ใช้ `I'm + feeling adjective` เป็นค่าเริ่มต้น\n## Safe default\n`person feels -ed; thing/situation is -ing`"
+        },
+        {
+          "id": "L18-R1",
+          "type": "reading",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "Lina is going on her first international trip tomorrow. She is excited about the flight, but she also feels a little nervous. The airport looks busy, and the check-in process is confusing at first. A helpful employee explains everything clearly. Lina feels relaxed after that. She thinks the whole experience is exciting.",
+          "question": "How does Lina feel about the flight?\nWhat makes her feel relaxed?",
+          "options": [
+            "She is excited.",
+            "She is boring.",
+            "An employee explains everything.",
+            "The airport closes."
+          ],
+          "answer": "She is excited.,An employee explains everything."
+        },
+        {
+          "id": "L18-F1",
+          "type": "fill_blank",
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "I am ___ about the trip. (feeling)\nThe trip is ___. (cause)\nThis topic is ___. (cause)\nI feel ___ after work. (feeling)",
+          "answer": "excited,exciting,interesting,tired",
+          "hint": "person feels -ed; thing/situation is -ing"
+        },
+        {
+          "id": "L18-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "Express a feeling and explain its cause.",
+          "options": [
+            "I'm excited about the trip.",
+            "I feel a little nervous.",
+            "The airport is confusing.",
+            "The employee is helpful.",
+            "I feel relaxed now."
+          ],
+          "answer": [
+            "ฉันตื่นเต้นกับการเดินทาง",
+            "ฉันรู้สึกกังวลเล็กน้อย",
+            "สนามบินชวนให้สับสน",
+            "พนักงานให้ความช่วยเหลือดี",
+            "ตอนนี้ฉันรู้สึกผ่อนคลาย"
+          ]
+        },
+        {
+          "id": "L18-P1",
+          "type": "roleplay",
+          "instruction": "พูดความรู้สึก 4 แบบพร้อมสาเหตุและระดับอารมณ์",
+          "context": "สถานการณ์: บอกว่ารู้สึกอย่างไรและอะไรทำให้เกิดความรู้สึกนั้น",
+          "question": "พูดความรู้สึก 4 แบบพร้อมสาเหตุและระดับอารมณ์",
+          "options": [
+            "How do you feel about learning English?",
+            "What makes you feel excited?",
+            "What is sometimes confusing for you?",
+            "How do you feel after a long day?"
+          ],
+          "answer": [
+            "I'm excited about learning English, but I sometimes feel nervous.",
+            "Traveling and learning new things make me feel excited.",
+            "Fast English is sometimes confusing for me.",
+            "I usually feel tired, but I feel relaxed after I rest."
+          ],
+          "hint": "I'm excited about... • I feel... • It's exciting. • I'm interested in... • It makes me feel... • I'm so..."
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.75
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
+        "required_outputs": 4
       }
     },
     {
       "id": "L19",
-      "slug": "reading-code",
-      "level": "B1",
-      "phase": "technical",
-      "title_th": "อ่านคำอธิบายโค้ดและไลบรารี",
-      "title_en": "Reading Code Descriptions",
-      "estimated_minutes": 30,
-      "prerequisites": ["L18"],
-      "goals": [
-        "ถอดความหมายของประโยคคำอธิบายฟังก์ชันและไลบรารีขนาดกลางได้แม่นยำ",
-        "วิเคราะห์ตัวทำ เงื่อนไข และผลลัพธ์ของฟังก์ชันทางเทคนิคได้ถูกต้อง"
+      "slug": "airport-check-in",
+      "level": "A2",
+      "phase": "connector",
+      "title_th": "สนามบินและเช็กอิน",
+      "title_en": "Airport Check-in",
+      "situation_th": "เช็กอิน ถามข้อมูล และเข้าใจประกาศพื้นฐาน",
+      "situation_en": "Check in, ask for information, and understand basic instructions.",
+      "tense_focus": [
+        "present forms",
+        "future arrangements",
+        "polite requests"
       ],
-      "grammar_targets": ["passive_voice", "conditionals"],
-      "vocabulary_tags": ["Work", "Dev / Tech"],
-      "chunks": ["validates the user input", "returns an error if", "is missing", "is triggered when"],
+      "exit_task": "จบบทสนทนาเช็กอินตั้งแต่ยื่นพาสปอร์ตจนรู้ที่นั่งและเวลาขึ้นเครื่อง",
+      "safe_default": "Could you tell me...? / Where is...? / I'm flying to...",
+      "estimated_minutes": 35,
+      "prerequisites": [
+        "L18"
+      ],
+      "goals": [
+        "เช็กอิน ถามข้อมูล และเข้าใจประกาศพื้นฐาน",
+        "จบบทสนทนาเช็กอินตั้งแต่ยื่นพาสปอร์ตจนรู้ที่นั่งและเวลาขึ้นเครื่อง"
+      ],
+      "grammar_targets": [
+        "present forms",
+        "future arrangements",
+        "polite requests"
+      ],
+      "vocabulary_tags": [
+        "Travel",
+        "Communication"
+      ],
+      "chunks": [
+        "I'm flying to...",
+        "Here is my passport.",
+        "I'd like to check in.",
+        "Do you have any luggage?",
+        "Where is my seat?",
+        "What time does boarding start?"
+      ],
       "activities": [
         {
-          "id": "L19-ACT1",
-          "type": "concept",
-          "instruction": "วิธีการแงะอ่านโครงสร้างประโยคเทคนิค",
-          "content": "ในการอ่านคู่มือโค้ดหรือข้อความเทคนิค ค้นหาโครงสร้าง 3 อย่างหลัก:\n1. Who / What (ตัวทำตัวหลักของฟังก์ชัน/คลาส)\n2. Action (มันทำหน้าที่อะไรบ้าง)\n3. Result / Condition (ผลลัพธ์ หรือ เงื่อนไขที่ทำให้เกิดขึ้น)\n\nตัวอย่างประโยค:\n- 'This function validates the user input and returns an error if the email address is missing.'\n  * Actor: This function\n  * Actions: validates, returns\n  * Condition/Result: if the email is missing / returns error"
+          "id": "L19-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “สนามบินและเช็กอิน” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "airport",
+            "passport",
+            "board",
+            "luggage",
+            "flight",
+            "check-in",
+            "passenger",
+            "seat"
+          ]
         },
         {
-          "id": "L19-ACT2",
+          "id": "L19-C1",
+          "type": "concept",
+          "instruction": "Tense lens: present forms + future arrangements + polite requests",
+          "content": "# บทจริงใช้หลายรูป แต่มีหน้าที่ชัด\n- `I'm flying to New York today.` = แผนที่จัดไว้\n- `Here is my passport.` = ส่งสิ่งของให้\n- `Do you have any luggage?` = ถามข้อมูล\n- `Boarding starts at ten.` = ตาราง\n- `Could you tell me where to go?` = ขออย่างสุภาพ\n💡 อย่าพยายามตั้งชื่อ tense ขณะพูด ให้ดึง chunk ที่ตรงกับหน้าที่\n## Safe default\n`Could you tell me...? / Where is...? / I'm flying to...`"
+        },
+        {
+          "id": "L19-R1",
           "type": "reading",
-          "instruction": "อ่านคำอธิบายระบบและเลือกตอบข้อคำถามทางเทคนิค",
-          "content": "This middleware checks incoming requests for valid JSON Web Tokens (JWT). It returns a 401 Unauthorized response code if the authorization header is empty or invalid.",
-          "question": "1. What does the middleware check?\n2. What condition triggers the 401 code?",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "Mina arrives at the airport two hours before her flight. At the check-in desk, she says, “I'd like to check in for my flight to Singapore.” She gives the employee her passport and puts her luggage on the scale. The employee gives her a seat near the window and says boarding starts at ten. Mina asks where she should go next.",
+          "question": "What does Mina give the employee?\nWhen does boarding start?",
           "options": [
-            "Incoming requests for JWT tokens",
-            "Outgoing server responses",
-            "When the header is empty or invalid",
-            "When the query parameter is present"
+            "Her passport.",
+            "Her hotel key.",
+            "At ten.",
+            "Two days later."
           ],
-          "answer": "Incoming requests for JWT tokens, When the header is empty or invalid",
-          "hint": "วิเคราะห์ actor (middleware), action (checks, returns) และ condition (if the header is empty or invalid) ครับ"
+          "answer": "Her passport.,At ten."
+        },
+        {
+          "id": "L19-F1",
+          "type": "fill_blank",
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "I'd like to ___ in.\nHere ___ my passport.\nWhat time ___ boarding start?\nWhere should I ___ next?",
+          "answer": "check,is,does,go",
+          "hint": "Could you tell me...? / Where is...? / I'm flying to..."
+        },
+        {
+          "id": "L19-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "Check in, ask for information, and understand basic instructions.",
+          "options": [
+            "I'd like to check in for my flight.",
+            "Here is my passport.",
+            "Do you have any luggage?",
+            "What time does boarding start?",
+            "Could you tell me where to go next?"
+          ],
+          "answer": [
+            "ฉันต้องการเช็กอินสำหรับเที่ยวบิน",
+            "นี่คือหนังสือเดินทางของฉัน",
+            "คุณมีสัมภาระไหม",
+            "เริ่มขึ้นเครื่องกี่โมง",
+            "ช่วยบอกฉันได้ไหมว่าต้องไปที่ไหนต่อ"
+          ]
+        },
+        {
+          "id": "L19-P1",
+          "type": "roleplay",
+          "instruction": "จบบทสนทนาเช็กอินตั้งแต่ยื่นพาสปอร์ตจนรู้ที่นั่งและเวลาขึ้นเครื่อง",
+          "context": "สถานการณ์: เช็กอิน ถามข้อมูล และเข้าใจประกาศพื้นฐาน",
+          "question": "จบบทสนทนาเช็กอินตั้งแต่ยื่นพาสปอร์ตจนรู้ที่นั่งและเวลาขึ้นเครื่อง",
+          "options": [
+            "Good morning. Where are you flying today?",
+            "May I see your passport?",
+            "Do you have any luggage?",
+            "Boarding starts at ten. Do you have any questions?"
+          ],
+          "answer": [
+            "Good morning. I'm flying to Singapore.",
+            "Of course. Here is my passport.",
+            "Yes, I have one bag.",
+            "Yes. Could you tell me where I should go next?"
+          ],
+          "hint": "I'm flying to... • Here is my passport. • I'd like to check in. • Do you have any luggage? • Where is my seat? • What time does boarding start?"
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.75
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
+        "required_outputs": 4
       }
     },
     {
       "id": "L20",
-      "slug": "documentation-steps",
-      "level": "B1",
-      "phase": "technical",
-      "title_th": "อ่านคู่มือและขั้นตอนการติดตั้ง",
-      "title_en": "Instructions and Documentation",
-      "estimated_minutes": 30,
-      "prerequisites": ["L19"],
-      "goals": [
-        "อ่านลำดับเงื่อนไขก่อนหลังของการติดตั้งโปรเจกต์และข้อกำหนดเทคนิคได้ถูกต้อง",
-        "สรุปขั้นตอนกระบวนการของคู่มืออ่านเข้าใจยากเป็นภาษาง่ายๆ ได้"
+      "slug": "taxi-and-directions",
+      "level": "A2",
+      "phase": "connector",
+      "title_th": "แท็กซี่และเส้นทาง",
+      "title_en": "Taxi and Directions",
+      "situation_th": "บอกจุดหมาย ขอข้อมูล และแก้ความเข้าใจผิด",
+      "situation_en": "Give a destination, ask for information, and repair a misunderstanding.",
+      "tense_focus": [
+        "polite requests",
+        "Past Simple retell"
       ],
-      "grammar_targets": ["imperatives", "time_connectors"],
-      "vocabulary_tags": ["Work", "Dev / Tech"],
-      "chunks": ["create a env file", "set the API key", "install dependencies", "start development server", "before you run"],
+      "exit_task": "เดินทางถึงจุดหมายและเล่าเหตุเข้าใจผิดสั้น ๆ หลังจบสถานการณ์",
+      "safe_default": "Could you take me to this address? / Could you say that again?",
+      "estimated_minutes": 35,
+      "prerequisites": [
+        "L19"
+      ],
+      "goals": [
+        "บอกจุดหมาย ขอข้อมูล และแก้ความเข้าใจผิด",
+        "เดินทางถึงจุดหมายและเล่าเหตุเข้าใจผิดสั้น ๆ หลังจบสถานการณ์"
+      ],
+      "grammar_targets": [
+        "polite requests",
+        "Past Simple retell"
+      ],
+      "vocabulary_tags": [
+        "Travel",
+        "Transport",
+        "Communication"
+      ],
+      "chunks": [
+        "Could you take me to...?",
+        "Here is the address.",
+        "How long will it take?",
+        "Please stop here.",
+        "Could you say that again?",
+        "I misunderstood..."
+      ],
       "activities": [
         {
-          "id": "L20-ACT1",
-          "type": "concept",
-          "instruction": "คำศัพท์และโครงสร้างบอกลำดับการรันคำสั่ง",
-          "content": "คำกริยาขึ้นต้นประโยคคำสั่ง (Imperatives) และคำระบุลำดับเวลา:\n- Before / After / Then / Finally\n- Install, configure, create, replace, run, start\n\nตัวอย่างข้อความ:\n- 'Before you run the application, create a .env file and set the API key. Then install the dependencies and start the development server.'"
+          "id": "L20-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “แท็กซี่และเส้นทาง” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "taxi",
+            "car",
+            "address",
+            "destination",
+            "route",
+            "turn",
+            "traffic",
+            "arrive"
+          ]
         },
         {
-          "id": "L20-ACT2",
+          "id": "L20-C1",
+          "type": "concept",
+          "instruction": "Tense lens: polite requests + Past Simple retell",
+          "content": "# สถานการณ์ปัจจุบัน + การเล่าย้อน\nตอนอยู่ในรถ ใช้ request chunks:\n- `Could you take me to this address?`\n- `How long will it take?`\n- `Please stop here.`\nหลังเหตุการณ์ ใช้ Past Simple:\n- `The driver misunderstood the address.`\n- `I asked him to repeat it.`\n💡 หนึ่งสถานการณ์อาจมีมากกว่าหนึ่ง tense เพราะเราทำหลายหน้าที่\n## Safe default\n`Could you take me to this address? / Could you say that again?`"
+        },
+        {
+          "id": "L20-R1",
           "type": "reading",
-          "instruction": "วิเคราะห์ข้อกำหนดจากคู่มือการติดตั้งที่ระบุ",
-          "content": "To set up the server: First, configure the config.json file in the root. After config is updated, run npm run build to compile. Finally, run npm start.",
-          "question": "1. What is the first step?\n2. When should you run npm run build?\n3. What is the final start command?",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "Sara gets into a taxi and shows the address of her hotel. The taxi moves, but the driver is going in the wrong direction. Sara asks, “Are we going to Central Hotel?” The driver says a different hotel name. Sara realizes he misunderstood the address. She asks him to stop and shows the map. Finally, they arrive at the correct hotel.",
+          "question": "What did the driver misunderstand?\nHow did Sara solve the problem?",
           "options": [
-            "Configure config.json file",
-            "Run npm start",
-            "After config is updated",
-            "Before configuration",
-            "npm start"
+            "The hotel address.",
+            "The taxi color.",
+            "She showed him the map.",
+            "She bought another hotel."
           ],
-          "answer": "Configure config.json file, After config is updated, npm start",
-          "hint": "สังเกตความหมายลำดับของ First, After และ Finally ในประโยคคู่มือติดตั้งครับ"
+          "answer": "The hotel address.,She showed him the map."
+        },
+        {
+          "id": "L20-F1",
+          "type": "fill_blank",
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "Could you ___ me to this address?\nHow long will it ___?\nThe driver ___ the address. (misunderstand)\nWe finally ___ at the hotel. (arrive)",
+          "answer": "take,take,misunderstood,arrived",
+          "hint": "Could you take me to this address? / Could you say that again?"
+        },
+        {
+          "id": "L20-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "Give a destination, ask for information, and repair a misunderstanding.",
+          "options": [
+            "Could you take me to this address?",
+            "Here is the address.",
+            "How long will it take?",
+            "Could you say that again?",
+            "Please stop here."
+          ],
+          "answer": [
+            "ช่วยพาฉันไปที่อยู่นี้ได้ไหม",
+            "นี่คือที่อยู่",
+            "จะใช้เวลานานเท่าไร",
+            "ช่วยพูดอีกครั้งได้ไหม",
+            "กรุณาจอดตรงนี้"
+          ]
+        },
+        {
+          "id": "L20-P1",
+          "type": "roleplay",
+          "instruction": "เดินทางถึงจุดหมายและเล่าเหตุเข้าใจผิดสั้น ๆ หลังจบสถานการณ์",
+          "context": "สถานการณ์: บอกจุดหมาย ขอข้อมูล และแก้ความเข้าใจผิด",
+          "question": "เดินทางถึงจุดหมายและเล่าเหตุเข้าใจผิดสั้น ๆ หลังจบสถานการณ์",
+          "options": [
+            "Hello. Where would you like to go?",
+            "It will take about thirty minutes.",
+            "Did you say Central Hotel or City Hotel?",
+            "We're here. Would you like a receipt?"
+          ],
+          "answer": [
+            "Could you take me to Central Hotel? Here is the address.",
+            "Thank you. Is there a faster route?",
+            "Central Hotel. Could you check the address on my phone?",
+            "No, thank you. I can pay by card."
+          ],
+          "hint": "Could you take me to...? • Here is the address. • How long will it take? • Please stop here. • Could you say that again? • I misunderstood..."
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.75
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
+        "required_outputs": 4
       }
     },
     {
       "id": "L21",
-      "slug": "bugs-troubleshooting",
-      "level": "B1",
-      "phase": "technical",
-      "title_th": "การรายงานบั๊กและปัญหาของระบบ",
-      "title_en": "Bugs and Troubleshooting",
-      "estimated_minutes": 30,
-      "prerequisites": ["L20"],
-      "goals": [
-        "เขียนรายงานปัญหาทางเทคนิคและวิธีกู้สถานะระบบเบื้องต้นได้ครบถ้วน",
-        "ประยุกต์โครงรายงาน 5 ส่วน (Expected, Actual, Context, Attempt, Evidence) ในการทำงานจริง"
+      "slug": "restaurant-problem-solving",
+      "level": "A2",
+      "phase": "connector",
+      "title_th": "สั่งอาหารและแก้รายการผิด",
+      "title_en": "Restaurant Problem-solving",
+      "situation_th": "สั่งอาหาร ถามราคา และแก้ความผิดพลาดอย่างสุภาพ",
+      "situation_en": "Order food, ask about price, and resolve a mistake politely.",
+      "tense_focus": [
+        "would like",
+        "polite requests",
+        "present problem language"
       ],
-      "grammar_targets": ["reported_speech", "troubleshooting"],
-      "vocabulary_tags": ["Work", "Dev / Tech"],
-      "chunks": ["expected page to load", "happens when the token", "tried restarting the", "found a timeout error", "haven't found root cause"],
+      "exit_task": "สั่งอาหารครบหนึ่งมื้อและแก้รายการผิดหนึ่งอย่าง",
+      "safe_default": "I'd like... / Could I have...? / I think there's a mistake.",
+      "estimated_minutes": 35,
+      "prerequisites": [
+        "L20"
+      ],
+      "goals": [
+        "สั่งอาหาร ถามราคา และแก้ความผิดพลาดอย่างสุภาพ",
+        "สั่งอาหารครบหนึ่งมื้อและแก้รายการผิดหนึ่งอย่าง"
+      ],
+      "grammar_targets": [
+        "would like",
+        "polite requests",
+        "present problem language"
+      ],
+      "vocabulary_tags": [
+        "Daily Life",
+        "Communication"
+      ],
+      "chunks": [
+        "I'd like...",
+        "Could I have...?",
+        "What do you recommend?",
+        "I ordered...",
+        "I think there's a mistake.",
+        "Could you change this?"
+      ],
       "activities": [
         {
-          "id": "L21-ACT1",
+          "id": "L21-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “สั่งอาหารและแก้รายการผิด” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "restaurant",
+            "food",
+            "order",
+            "waiter",
+            "customer",
+            "pay",
+            "price",
+            "wrong"
+          ]
+        },
+        {
+          "id": "L21-C1",
           "type": "concept",
-          "instruction": "โครงสร้างการอธิบายบั๊กให้ผู้อื่นเข้าใจง่าย",
-          "content": "เวลาเปิด issue หรือรายงานบั๊กให้ทีมอื่นเช็คงาน เขียนอิง 5 ส่วนหลัก:\n\n1. Expected: สิ่งที่ควรจะเกิด (e.g. I expected the page to load...)\n2. Actual: สิ่งที่เกิดขึ้นจริง (e.g. But it showed a 500 error code.)\n3. Context: ปัญหาเกิดตอนไหน/จุดใด (e.g. It happens when the token expires.)\n4. Attempt: เราลองทำอะไรไปแล้วบ้าง (e.g. I tried resetting the server.)\n5. Evidence: หลักฐานข้อผิดพลาด (e.g. I checked the logs and found a timeout.)"
+          "instruction": "Tense lens: would like + polite requests + present problem language",
+          "content": "# ประโยคที่ทำให้งานสำเร็จ\n- สั่ง: `I'd like the chicken, please.`\n- ขอ: `Could I have some water?`\n- ขอคำแนะนำ: `What do you recommend?`\n- แจ้งปัญหา: `I think there's a mistake.`\n- บอกสิ่งที่เกิด: `I ordered tea, but I got coffee.`\n💡 แจ้งข้อเท็จจริงก่อน แล้วขอทางแก้ ไม่ต้องอธิบายแกรมมาร์ยาว\n## Safe default\n`I'd like... / Could I have...? / I think there's a mistake.`"
         },
         {
-          "id": "L21-ACT2",
-          "type": "dictation",
-          "instruction": "ฟังและพิมพ์ประโยคร่วมอธิบายสาเหตุของปัญหาบั๊ก",
-          "answer": "The issue happens when the server is overloaded.",
-          "hint": "พิมพ์ประโยคบอกเหตุปัจจัยการเกิด: ...happens when (เกิดขึ้นเมื่อ) ครับ"
+          "id": "L21-R1",
+          "type": "reading",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "At a restaurant, Ton orders chicken and rice with a glass of water. The waiter brings fish and tea. Ton says politely, “Excuse me, I think there's a mistake. I ordered chicken and water.” The waiter apologizes and changes the order. Later, Ton checks the price before he pays. The final order is correct.",
+          "question": "What did Ton originally order?\nHow did he report the problem?",
+          "options": [
+            "Chicken and water.",
+            "Fish and tea.",
+            "He said there was a mistake.",
+            "He left without speaking."
+          ],
+          "answer": "Chicken and water.,He said there was a mistake."
         },
         {
-          "id": "L21-ACT3",
-          "type": "guided_output",
-          "instruction": "แต่งรายงานบั๊กภาษาอังกฤษ 4 บรรทัด (Expected / Actual / Context / Attempt) อิงจากปัญหาที่คุณ Boss เคยพบในงานจริง",
-          "question": "Expected: ...\nActual: ...\nContext: ...\nAttempt: ...",
-          "answer": "Expected: The database connection stays alive. Actual: The connection drops after five minutes. Context: It happens during high load tests. Attempt: I tried raising the connection pool size.",
-          "hint": "พิมพ์สั้นๆ อธิบายความจริงและอาการของปัญหานั้นๆ ครับ"
+          "id": "L21-F1",
+          "type": "fill_blank",
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "I'd ___ the chicken please.\nCould I ___ some water?\nI think there ___ a mistake.\nI ___ chicken but I got fish. (order)",
+          "answer": "like,have,is,ordered",
+          "hint": "I'd like... / Could I have...? / I think there's a mistake."
+        },
+        {
+          "id": "L21-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "Order food, ask about price, and resolve a mistake politely.",
+          "options": [
+            "I'd like the chicken, please.",
+            "Could I have some water?",
+            "What do you recommend?",
+            "I think there's a mistake.",
+            "I ordered chicken, but I got fish."
+          ],
+          "answer": [
+            "ฉันขอสั่งไก่",
+            "ฉันขอน้ำได้ไหม",
+            "คุณแนะนำอะไร",
+            "ฉันคิดว่ามีข้อผิดพลาด",
+            "ฉันสั่งไก่แต่ได้ปลา"
+          ]
+        },
+        {
+          "id": "L21-P1",
+          "type": "roleplay",
+          "instruction": "สั่งอาหารครบหนึ่งมื้อและแก้รายการผิดหนึ่งอย่าง",
+          "context": "สถานการณ์: สั่งอาหาร ถามราคา และแก้ความผิดพลาดอย่างสุภาพ",
+          "question": "สั่งอาหารครบหนึ่งมื้อและแก้รายการผิดหนึ่งอย่าง",
+          "options": [
+            "Good evening. What would you like?",
+            "Would you like anything to drink?",
+            "Here's your fish and tea.",
+            "I'm sorry. I'll change it now."
+          ],
+          "answer": [
+            "I'd like the chicken and rice, please.",
+            "Could I have a glass of water?",
+            "Excuse me, I think there's a mistake. I ordered chicken and water.",
+            "Thank you. I appreciate your help."
+          ],
+          "hint": "I'd like... • Could I have...? • What do you recommend? • I ordered... • I think there's a mistake. • Could you change this?"
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.75
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
+        "required_outputs": 4
       }
     },
     {
       "id": "L22",
-      "slug": "daily-standup",
-      "level": "B1",
+      "slug": "small-talk-and-work-status",
+      "level": "A2",
       "phase": "technical",
-      "title_th": "รายงานความคืบหน้างานประจำวัน (Stand-up)",
-      "title_en": "Daily Stand-up Updates",
-      "estimated_minutes": 30,
-      "prerequisites": ["L21"],
-      "goals": [
-        "ดำเนินการรายงานความคืบหน้าประจำวันอิงอดีต ปัจจุบัน อนาคต ได้อย่างไหลลื่น",
-        "ระบุปัญหาที่เป็นตัวสกัดกั้นการทำงาน (Blockers) ได้ถูกต้องใน stand-up"
+      "title_th": "คุยกับเพื่อนร่วมงาน",
+      "title_en": "Small Talk and Work Status",
+      "situation_th": "เริ่มบทสนทนา ตอบพร้อมรายละเอียด และถามกลับ",
+      "situation_en": "Start a colleague conversation and keep it moving.",
+      "tense_focus": [
+        "mixed present/past",
+        "Answer + Detail + Question"
       ],
-      "grammar_targets": ["standup_reporting"],
-      "vocabulary_tags": ["Work", "Communication", "Dev / Tech"],
-      "chunks": ["Yesterday I fixed", "Today I am going to", "My blocker is", "don't have any blockers", "update the workflow"],
+      "exit_task": "สนทนากับเพื่อนร่วมงานต่อเนื่องหนึ่งนาทีโดยถามกลับอย่างน้อย 2 ครั้ง",
+      "safe_default": "Answer + one detail + a related question",
+      "estimated_minutes": 35,
+      "prerequisites": [
+        "L21"
+      ],
+      "goals": [
+        "เริ่มบทสนทนา ตอบพร้อมรายละเอียด และถามกลับ",
+        "สนทนากับเพื่อนร่วมงานต่อเนื่องหนึ่งนาทีโดยถามกลับอย่างน้อย 2 ครั้ง"
+      ],
+      "grammar_targets": [
+        "mixed present/past",
+        "Answer + Detail + Question"
+      ],
+      "vocabulary_tags": [
+        "Work",
+        "Communication"
+      ],
+      "chunks": [
+        "How was your weekend?",
+        "What are you working on?",
+        "That sounds interesting.",
+        "I'm currently...",
+        "How about you?",
+        "How's it going?"
+      ],
       "activities": [
         {
-          "id": "L22-ACT1",
-          "type": "concept",
-          "instruction": "สูตรโครงสร้างการพูดรายงาน Stand-up ประจำวัน",
-          "content": "ใช้โครงสร้าง 3 ประโยคหลักในการพูดทุกเช้า:\n\n1. Yesterday: เล่าสิ่งที่เสร็จไปแล้ว (ใช้รูปอดีต/Past Simple)\n   * Yesterday, I fixed the database query bug.\n2. Today: เล่าแผนงานที่จะทำวันนี้ (ใช้ future plans / be going to)\n   * Today, I am going to build the new test pipeline.\n3. Blocker: แจ้งปัญหาติดขัด (ถ้าไม่มีบอก don't have any)\n   * My blocker is staging access config. / I don't have any blockers."
+          "id": "L22-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “คุยกับเพื่อนร่วมงาน” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "weekend",
+            "project",
+            "busy",
+            "interesting",
+            "colleague",
+            "progress",
+            "work",
+            "sound"
+          ]
         },
         {
-          "id": "L22-ACT2",
-          "type": "guided_output",
-          "instruction": "เขียนข้อความรายงาน Stand-up ของตนเองประจำวันนี้ (ความยาว 3-4 ประโยค)",
-          "question": "Yesterday, I ... Today, I am going to ... I ... blockers.",
-          "answer": "Yesterday, I refactored the user verification code. Today, I am going to review the AI agent logs. I do not have any blockers.",
-          "hint": "เรียงประโยคอดีต (Yesterday), อนาคตอันสั้น (Today I am going to), และ Blocker ให้เหมาะสม"
+          "id": "L22-C1",
+          "type": "concept",
+          "instruction": "Tense lens: mixed present/past + Answer + Detail + Question",
+          "content": "# สูตรรักษาบทสนทนา\nAnswer + Detail + Question\n`It was good. I visited my family. How about yours?`\n`I'm fixing a problem in our project. What are you working on?`\nใช้ Past Simple กับวันหยุดที่จบแล้ว และ Present Continuous กับงานที่กำลังทำตอนนี้\n💡 ไม่ต้องตอบยาว ให้เพิ่มรายละเอียดหนึ่งอย่างแล้วถามกลับ\n## Safe default\n`Answer + one detail + a related question`"
+        },
+        {
+          "id": "L22-R1",
+          "type": "reading",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "On Monday morning, Kim meets a colleague in the kitchen. The colleague asks about her weekend. Kim says it was relaxing because she visited her family. Then she asks, “How about yours?” Later, they talk about work. Kim is currently preparing a report, and her colleague is testing a new service. They agree to talk again after lunch.",
+          "question": "What did Kim do on the weekend?\nWhat is she doing now?",
+          "options": [
+            "She visited her family.",
+            "She tested a service.",
+            "She is preparing a report.",
+            "She is traveling abroad."
+          ],
+          "answer": "She visited her family.,She is preparing a report."
+        },
+        {
+          "id": "L22-F1",
+          "type": "fill_blank",
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "How ___ your weekend?\nI ___ my family. (visit)\nWhat are you ___ on? (work)\nThat ___ interesting.",
+          "answer": "was,visited,working,sounds",
+          "hint": "Answer + one detail + a related question"
+        },
+        {
+          "id": "L22-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "Start a colleague conversation and keep it moving.",
+          "options": [
+            "How was your weekend?",
+            "It was good. I visited my family.",
+            "How about yours?",
+            "What are you working on?",
+            "That sounds interesting."
+          ],
+          "answer": [
+            "วันหยุดสุดสัปดาห์เป็นอย่างไรบ้าง",
+            "ดีเลย ฉันไปหาครอบครัว",
+            "แล้วของคุณล่ะ",
+            "คุณกำลังทำงานอะไรอยู่",
+            "ฟังดูน่าสนใจ"
+          ]
+        },
+        {
+          "id": "L22-P1",
+          "type": "roleplay",
+          "instruction": "สนทนากับเพื่อนร่วมงานต่อเนื่องหนึ่งนาทีโดยถามกลับอย่างน้อย 2 ครั้ง",
+          "context": "สถานการณ์: เริ่มบทสนทนา ตอบพร้อมรายละเอียด และถามกลับ",
+          "question": "สนทนากับเพื่อนร่วมงานต่อเนื่องหนึ่งนาทีโดยถามกลับอย่างน้อย 2 ครั้ง",
+          "options": [
+            "How was your weekend?",
+            "What are you working on today?",
+            "How is the project going?",
+            "Do you want to talk after lunch?"
+          ],
+          "answer": [
+            "It was good. I relaxed and watched a movie. How about yours?",
+            "I'm currently preparing a report. What are you working on?",
+            "It's going well, but I still have one problem to solve.",
+            "Sure. I'm free after one."
+          ],
+          "hint": "How was your weekend? • What are you working on? • That sounds interesting. • I'm currently... • How about you? • How's it going?"
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.80
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
+        "required_outputs": 4
       }
     },
     {
       "id": "L23",
-      "slug": "technical-questions",
+      "slug": "explain-a-bug-clearly",
       "level": "B1",
       "phase": "technical",
-      "title_th": "การตั้งคำถามและถกเถียงแนวทางการออกแบบ",
-      "title_en": "Technical Questions and Trade-offs",
-      "estimated_minutes": 30,
-      "prerequisites": ["L22"],
-      "goals": [
-        "ตั้งคำถามเพื่อถกประเด็นข้อดีข้อเสีย (Trade-offs) ในการออกแบบโค้ดและดีไซน์ของระบบได้ถูกต้อง",
-        "สื่อสารข้อดี/ข้อเสียของการเลือก Library หรือสถาปัตยกรรมต่างๆ ได้"
+      "title_th": "อธิบายปัญหาในงาน",
+      "title_en": "Explain a Bug Clearly",
+      "situation_th": "รายงานสิ่งที่คาดหวัง สิ่งที่เกิดจริง บริบท สิ่งที่ลอง และหลักฐาน",
+      "situation_en": "Report expected behavior, actual behavior, context, attempts, and evidence.",
+      "tense_focus": [
+        "Past Simple",
+        "Present Simple/Continuous",
+        "Present Perfect"
       ],
-      "grammar_targets": ["tradeoffs", "technical_discussion"],
-      "vocabulary_tags": ["Work", "Communication", "Dev / Tech"],
-      "chunks": ["choose this approach", "advantages and disadvantages", "is unavailable", "simpler way to implement", "affect performance"],
+      "exit_task": "รายงานปัญหา 5 ส่วนภายใน 90 วินาที",
+      "safe_default": "Expected → Actual → Context → Tried → Evidence",
+      "estimated_minutes": 35,
+      "prerequisites": [
+        "L22"
+      ],
+      "goals": [
+        "รายงานสิ่งที่คาดหวัง สิ่งที่เกิดจริง บริบท สิ่งที่ลอง และหลักฐาน",
+        "รายงานปัญหา 5 ส่วนภายใน 90 วินาที"
+      ],
+      "grammar_targets": [
+        "Past Simple",
+        "Present Simple/Continuous",
+        "Present Perfect"
+      ],
+      "vocabulary_tags": [
+        "Work",
+        "Technology",
+        "Communication"
+      ],
+      "chunks": [
+        "I expected...",
+        "Instead, the system...",
+        "It happens when...",
+        "I've already tried...",
+        "I found...",
+        "I haven't found the cause yet."
+      ],
       "activities": [
         {
-          "id": "L23-ACT1",
-          "type": "concept",
-          "instruction": "ประโยคถามเปรียบเทียบหาทางออกที่ดีที่สุด (Trade-offs)",
-          "content": "คำถามเพื่อเช็คเหตุผลการทำงานและการประเมินความเสี่ยง:\n- Why did we choose this approach? (ทำไมถึงเลือกแนวทางนี้?)\n- What are the advantages and disadvantages? (ข้อดีและข้อเสียมีอะไรบ้าง?)\n- How does this affect performance? (สิ่งนี้ส่งผลต่อประสิทธิภาพอย่างไร?)\n- Is there a simpler way to implement this? (มีวิธีเขียนที่ง่ายกว่านี้ไหม?)"
+          "id": "L23-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “อธิบายปัญหาในงาน” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "problem",
+            "happen",
+            "cause",
+            "report",
+            "result",
+            "fix",
+            "test",
+            "system"
+          ]
         },
         {
-          "id": "L23-ACT2",
-          "type": "dictation",
-          "instruction": "ฟังและพิมพ์ประโยคคำถามเปรียบเทียบแนวทางเทคนิค",
-          "answer": "Why did we choose this library instead of that one?",
-          "hint": "พิมพ์: Why did we choose... (ทำไมพวกเราถึงเลือก...) ในการตั้งประโยคครับ"
+          "id": "L23-C1",
+          "type": "concept",
+          "instruction": "Tense lens: Past Simple + Present Simple/Continuous + Present Perfect",
+          "content": "# รายงานให้ผู้ฟังทำงานต่อได้\n1. Expected: `I expected the page to open.`\n2. Actual: `Instead, the system shows a blank page.`\n3. Context: `It happens when I sign in.`\n4. Attempt: `I've already restarted the service.`\n5. Evidence: `I found the same message in the report.`\nใช้ Past Simple กับการทดสอบที่จบแล้ว และ Present Perfect กับสิ่งที่ลองซึ่งเกี่ยวข้องกับสถานะตอนนี้\n## Safe default\n`Expected → Actual → Context → Tried → Evidence`"
+        },
+        {
+          "id": "L23-R1",
+          "type": "reading",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "A page should show a customer's order, but it shows a blank screen. The problem happens after the user signs in. Nat tested the page twice and got the same result. He has already restarted the service and checked the system report. He found one unusual message, but he hasn't found the exact cause yet.",
+          "question": "When does the problem happen?\nWhat has Nat already tried?",
+          "options": [
+            "After the user signs in.",
+            "Before the computer starts.",
+            "He restarted the service.",
+            "He changed the customer."
+          ],
+          "answer": "After the user signs in.,He restarted the service."
+        },
+        {
+          "id": "L23-F1",
+          "type": "fill_blank",
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "I ___ the page to open. (expect)\nThe problem ___ after sign-in. (happen)\nI have already ___ the service. (restart)\nI haven't ___ the cause yet. (find)",
+          "answer": "expected,happens,restarted,found",
+          "hint": "Expected → Actual → Context → Tried → Evidence"
+        },
+        {
+          "id": "L23-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "Report expected behavior, actual behavior, context, attempts, and evidence.",
+          "options": [
+            "I expected the page to open.",
+            "Instead, the system shows a blank screen.",
+            "The problem happens after sign-in.",
+            "I've already restarted the service.",
+            "I haven't found the cause yet."
+          ],
+          "answer": [
+            "ฉันคาดว่าหน้าจะเปิด",
+            "แต่ระบบกลับแสดงหน้าว่าง",
+            "ปัญหาเกิดหลังเข้าสู่ระบบ",
+            "ฉันรีสตาร์ตบริการแล้ว",
+            "ฉันยังไม่พบสาเหตุ"
+          ]
+        },
+        {
+          "id": "L23-P1",
+          "type": "roleplay",
+          "instruction": "รายงานปัญหา 5 ส่วนภายใน 90 วินาที",
+          "context": "สถานการณ์: รายงานสิ่งที่คาดหวัง สิ่งที่เกิดจริง บริบท สิ่งที่ลอง และหลักฐาน",
+          "question": "รายงานปัญหา 5 ส่วนภายใน 90 วินาที",
+          "options": [
+            "What did you expect to happen?",
+            "What actually happens?",
+            "When does the problem happen?",
+            "What have you already tried?",
+            "What evidence did you find?"
+          ],
+          "answer": [
+            "I expected the page to show the customer's order.",
+            "Instead, the system shows a blank screen.",
+            "It happens after the user signs in.",
+            "I've already restarted the service and tested twice.",
+            "I found an unusual message in the system report, but I haven't found the cause yet."
+          ],
+          "hint": "I expected... • Instead, the system... • It happens when... • I've already tried... • I found... • I haven't found the cause yet."
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.75
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
+        "required_outputs": 5
       }
     },
     {
       "id": "L24",
-      "slug": "final-project-explain",
+      "slug": "integrated-real-life-challenge",
       "level": "B1",
       "phase": "technical",
-      "title_th": "นำเสนอโครงการจริงและการตอบข้อซักถาม",
-      "title_en": "Final Project: Explain a Real Project",
-      "estimated_minutes": 35,
-      "prerequisites": ["L23"],
-      "goals": [
-        "นำเสนอและอธิบายสถาปัตยกรรมระบบ โค้ด และผลลัพธ์ของโครงการจริงที่พัฒนาอยู่ได้ 3 นาที",
-        "ประมวลผลคำศัพท์และสำนวนของบทเรียนที่ผ่านมานำมาใช้ตอบคำถามผู้ซักถามได้อย่างคล่องตัว"
+      "title_th": "ภารกิจรวม: ภาษาอังกฤษของฉัน",
+      "title_en": "Integrated Real-life Challenge",
+      "situation_th": "รวมอดีต ปัจจุบัน อนาคต ประสบการณ์ และการแก้ปัญหาในเรื่องเดียว",
+      "situation_en": "Combine past, present, future, experience, and repair language.",
+      "tense_focus": [
+        "7 priority forms",
+        "Past Perfect recognition"
       ],
-      "grammar_targets": ["presentations", "cohesion"],
-      "vocabulary_tags": ["Work", "Communication", "Dev / Tech"],
-      "chunks": ["project involves", "solves the problem of", "built the backend module", "main challenge was", "next step is to"],
+      "exit_task": "พูด 3 นาทีเกี่ยวกับตนเอง งานหนึ่งเรื่อง ปัญหาที่เคยเกิด และแผนถัดไป",
+      "safe_default": "สื่อสารตามลำดับ Now → Past → Result now → Next; ไม่ต้องฝืนใช้ทุก tense",
+      "estimated_minutes": 35,
+      "prerequisites": [
+        "L23"
+      ],
+      "goals": [
+        "รวมอดีต ปัจจุบัน อนาคต ประสบการณ์ และการแก้ปัญหาในเรื่องเดียว",
+        "พูด 3 นาทีเกี่ยวกับตนเอง งานหนึ่งเรื่อง ปัญหาที่เคยเกิด และแผนถัดไป"
+      ],
+      "grammar_targets": [
+        "7 priority forms",
+        "Past Perfect recognition"
+      ],
+      "vocabulary_tags": [
+        "Personal",
+        "Work",
+        "Communication"
+      ],
+      "chunks": [
+        "I currently...",
+        "Last week, I...",
+        "I've learned...",
+        "The problem happened when...",
+        "I'm going to...",
+        "I think it will...",
+        "My next step is..."
+      ],
       "activities": [
         {
-          "id": "L24-ACT1",
-          "type": "concept",
-          "instruction": "โครงสร้างหลักสูตรการนำเสนองานวิศวกรรมสั้นๆ (Pitch)",
-          "content": "เรียงลำดับการพูดอธิบายงานจริงเป็น 6 หัวข้อหลัก:\n1. Intro: What is the project? (This project is...)\n2. Problem: What problem does it solve? (It solves...)\n3. Flow: How does it work? (First, user... then API...)\n4. Tech: What tools/frameworks? (We use TypeScript and Zod.)\n5. Output: What did you build? (I designed the verification module.)\n6. Challenge: What was hard? (The main challenge was parsing dynamic data.)"
+          "id": "L24-V1",
+          "type": "vocabulary",
+          "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
+          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “ภารกิจรวม: ภาษาอังกฤษของฉัน” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "options": [
+            "challenge",
+            "goal",
+            "improve",
+            "experience",
+            "plan",
+            "work",
+            "problem",
+            "solution"
+          ]
         },
         {
-          "id": "L24-ACT2",
-          "type": "guided_output",
-          "instruction": "เขียนรายงานสรุปโครงการที่คุณกำลังทำอยู่ให้เพื่อนร่วมงานชาวต่างชาติเข้าใจ (ความยาวอย่างน้อย 8 ประโยคขึ้นไป)",
-          "question": "This project is a ... It helps users ... First, the system ... Then, it ... We use ... My contribution is ... The main challenge was ... In the future, we are going to ...",
-          "answer": "This project is an English vocab typing web application. It helps users improve their English skills through spaced repetition and target writing. First, the system loads the vocabulary database. Then, it tracks the user's typing errors and schedules reviews. We use Next.js, React, Tailwind CSS, Zod, and Firebase. My contribution is building the harness configuration and lesson engine. The main challenge was handling state updates within effect hooks. In the future, we are going to integrate generative AI feedback for roleplays.",
-          "hint": "รวมความรู้ทั้งหมด และใช้ศัพท์เทคนิคเฉพาะด้านความชอบของคุณ Boss มาบรรยายความจริงเลยครับ"
+          "id": "L24-C1",
+          "type": "concept",
+          "instruction": "Tense lens: 7 priority forms + Past Perfect recognition",
+          "content": "# เลือก tense จากเส้นเรื่อง\n1. ตัวตน/กิจวัตร: Present Simple\n2. สิ่งที่กำลังทำ: Present Continuous\n3. เหตุการณ์จบแล้ว: Past Simple\n4. ฉากก่อนเหตุการณ์: Past Continuous\n5. ประสบการณ์/ผลถึงตอนนี้: Present Perfect\n6. แผน: going to\n7. การคาดการณ์/ตัดสินใจ: will\nPast Perfect ใช้บอกว่าเหตุการณ์หนึ่งจบก่อนอีกเหตุการณ์ในอดีต: `I had finished the test before the meeting started.` ในระดับนี้ให้รู้ความหมายก่อน ยังไม่บังคับใช้\n💡 ความสำเร็จคือเล่าแล้วผู้ฟังเข้าใจ ไม่ใช่ยัด tense ให้ครบ\n## Safe default\n`สื่อสารตามลำดับ Now → Past → Result now → Next; ไม่ต้องฝืนใช้ทุก tense`"
+        },
+        {
+          "id": "L24-R1",
+          "type": "reading",
+          "instruction": "อ่านเรื่องเพื่อเข้าใจภาพรวมก่อนวิเคราะห์",
+          "content": "Boss works in technology and is currently improving a project. Last week, he found a problem while he was testing the system. He had completed the first test before the problem appeared. Since then, he has tried two solutions and has learned more about the system. Tomorrow, he is going to test again. He thinks the next version will work better.",
+          "question": "What is Boss currently doing?\nWhat is he going to do tomorrow?",
+          "options": [
+            "He is improving a project.",
+            "He is traveling.",
+            "He is going to test again.",
+            "He is going to forget the project."
+          ],
+          "answer": "He is improving a project.,He is going to test again."
+        },
+        {
+          "id": "L24-F1",
+          "type": "fill_blank",
+          "instruction": "เลือกโครงสร้างที่ทำให้ความหมายของเวลาถูกต้อง",
+          "question": "I currently ___ on a project. (work)\nLast week I ___ a problem. (find)\nI have ___ two solutions. (try)\nTomorrow I am going to ___ again. (test)",
+          "answer": "am working,found,tried,test",
+          "hint": "สื่อสารตามลำดับ Now → Past → Result now → Next; ไม่ต้องฝืนใช้ทุก tense"
+        },
+        {
+          "id": "L24-S1",
+          "type": "shadowing",
+          "instruction": "ฝึกประโยคหลักให้เรียกออกมาได้โดยไม่แปลทีละคำ",
+          "context": "Combine past, present, future, experience, and repair language.",
+          "options": [
+            "I currently work on a technology project.",
+            "Last week, I found a problem.",
+            "I was testing when it happened.",
+            "I've tried two solutions.",
+            "I'm going to test again tomorrow.",
+            "I think the next version will work better."
+          ],
+          "answer": [
+            "ตอนนี้ฉันทำงานในโครงการเทคโนโลยี",
+            "สัปดาห์ก่อนฉันพบปัญหา",
+            "ฉันกำลังทดสอบตอนที่มันเกิดขึ้น",
+            "ฉันได้ลองสองวิธีแล้ว",
+            "ฉันวางแผนจะทดสอบอีกครั้งพรุ่งนี้",
+            "ฉันคิดว่าเวอร์ชันถัดไปจะทำงานดีขึ้น"
+          ]
+        },
+        {
+          "id": "L24-P1",
+          "type": "roleplay",
+          "instruction": "พูด 3 นาทีเกี่ยวกับตนเอง งานหนึ่งเรื่อง ปัญหาที่เคยเกิด และแผนถัดไป",
+          "context": "สถานการณ์: รวมอดีต ปัจจุบัน อนาคต ประสบการณ์ และการแก้ปัญหาในเรื่องเดียว",
+          "question": "พูด 3 นาทีเกี่ยวกับตนเอง งานหนึ่งเรื่อง ปัญหาที่เคยเกิด และแผนถัดไป",
+          "options": [
+            "Please introduce yourself and describe your normal work.",
+            "What are you working on now?",
+            "Tell me about a recent problem.",
+            "What have you learned or tried?",
+            "What are you going to do next?"
+          ],
+          "answer": [
+            "I'm Boss, and I work in technology. I usually build and improve software.",
+            "I'm currently working on a project that helps people complete a task.",
+            "Last week, I found a problem while I was testing the system.",
+            "I've tried two solutions, and I've learned more about the cause.",
+            "I'm going to test again tomorrow. I think the next version will work better."
+          ],
+          "hint": "I currently... • Last week, I... • I've learned... • The problem happened when... • I'm going to... • I think it will... • My next step is..."
         }
       ],
       "mastery": {
-        "recognition_accuracy": 0.85,
-        "production_accuracy": 0.75
+        "recognition_accuracy": 80,
+        "production_accuracy": 70,
+        "required_outputs": 5
       }
     }
   ]

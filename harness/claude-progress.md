@@ -248,6 +248,64 @@ Cleaned up duplicate logic in active lesson identification, organized misplaced 
 
 ---
 
+## [2026-07-30] Session: Communication-first Curriculum Rewrite
+
+### Summary
+Replaced the grammar-first L01-L24 course with a situation-led learning path
+designed for real-life retrieval. The preserved vocabulary database now appears
+before each lesson input, followed by a focused tense lens, story/dialogue,
+controlled practice, shadowing, and roleplay.
+
+### Accomplishments
+1. **Detailed teaching blueprint**
+   - Added `CURRICULUM_BLUEPRINT.md` with learner needs, tense scope, 24-lesson
+     architecture, weekly routine, mastery rules, and content QA standards.
+2. **Complete curriculum rewrite**
+   - Rebuilt `data/curriculum.json` with 24 lessons and 144 usable activities.
+   - Covered the traditional tense map at recognition level and prioritized
+     Present Simple, Present Continuous, Past Simple, Past Continuous,
+     Present Perfect, `will`, and `be going to`.
+   - Added daily-life situations for introductions, routines, weekends, plans,
+     feelings, airport, taxi, restaurant, small talk, and work problem reports.
+3. **Vocabulary preserved and connected**
+   - Left `data/vocab.json` unchanged with all 1,537 entries.
+   - Added a vocabulary-preview activity that resolves lesson word references
+     from the existing vocabulary bank and provides speech, examples, Thai
+     reveal, and an active-recall checklist.
+4. **Working output activities**
+   - Added functional Shadowing and Roleplay activity renderers.
+   - Shadowing supports slow, repeat, and natural-speed rounds.
+   - Roleplay requires an attempt before revealing a natural model and records
+     confidence.
+5. **Progress semantics**
+   - Bumped curriculum progress to v2 so old lesson completion does not mark
+     rewritten lessons as finished.
+   - First completion now enters review; a later completion earns mastery.
+   - The next lesson unlocks after a successful first pass.
+   - Local content/progress now opens immediately while Firebase sync continues
+     in the background, so an unavailable network does not block lessons.
+6. **Validation and maintainability**
+   - Added a deterministic curriculum generator and validator.
+   - Validation checks lesson count/order, activity order, vocabulary references,
+     answer alignment, shadowing translations, and roleplay models.
+
+### Verification
+- Curriculum validation: passed (24 lessons, 144 activities).
+- Vocabulary preservation: passed (1,537 entries; no diff in `data/vocab.json`).
+- TypeScript: passed.
+- ESLint: passed with two pre-existing React Hook Form compiler warnings.
+- Production build: passed using local font mocks because this environment could
+  not reach Google Fonts.
+- Browser flow: verified catalog, vocabulary gating, concept, reading, fill-in,
+  shadowing, roleplay, completion modal, and L02 unlock with no console errors.
+
+### Handoff
+The curriculum rewrite is ready for real use. The recommended next step is to
+study L01 and collect learner feedback about lesson length and vocabulary load
+before changing the 35-minute pacing.
+
+---
+
 ## [2026-07-14] Session: Dark Mode Input Visibility & Invalid Tailwind Colors Fix
 
 ### Summary
@@ -370,6 +428,5 @@ Aligned all sub-practice pages, monthly assessment, AI Tutor coach, and lesson a
 1. The visual styling and border-radius alignment across the entire practice ecosystem is 100% complete and fully verified.
 2. All components adhere to the flat hairline border layouts, warm cream canvas backgrounds, and color-coded register accents of the Hume AI design spec.
 3. Code quality passes TypeScript compilation and Next.js production builds.
-
 
 
