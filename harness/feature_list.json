@@ -334,6 +334,16 @@
       "files": [
         "app/practice/lessons/[id]/components/VocabularyActivity.tsx"
       ]
+    },
+    {
+      "id": "lesson-vocabulary-test-gate",
+      "name": "Vocabulary Test Gate",
+      "description": "Separate vocabulary learning from a hard typing test, require a perfect test before continuing, and provide explicit retry or relearn paths after each result.",
+      "status": "done",
+      "phase": 7,
+      "files": [
+        "app/practice/lessons/[id]/components/VocabularyActivity.tsx"
+      ]
     }
   ]
 }

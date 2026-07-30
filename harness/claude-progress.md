@@ -556,3 +556,34 @@ Aligned all sub-practice pages, monthly assessment, AI Tutor coach, and lesson a
 1. The visual styling and border-radius alignment across the entire practice ecosystem is 100% complete and fully verified.
 2. All components adhere to the flat hairline border layouts, warm cream canvas backgrounds, and color-coded register accents of the Hume AI design spec.
 3. Code quality passes TypeScript compilation and Next.js production builds.
+
+---
+
+## [2026-07-31] Session: Vocabulary Test Gate
+
+### Summary
+Separated the pre-lesson vocabulary activity into a guided learning round and a required hard typing test. Completing the learning round no longer unlocks the lesson; the learner must type every vocabulary word correctly in the test before continuing.
+
+### Accomplishments
+1. **Learning round completion choices:**
+   - Added explicit `เรียนอีกครั้ง` and `เริ่ม Test` actions after all lesson words have been typed.
+   - Removed the direct lesson continuation action from the learning result.
+2. **Hard vocabulary test:**
+   - Hides the English target, masks it in the example sentence, hides contextual English notes, and removes word/example audio before the learner answers.
+   - Requires one first-attempt answer for every word and records failed vocabulary for review.
+3. **Pass and retry gates:**
+   - A perfect test (`all words correct`, `0 errors`) is required before `Continue to the situation` appears.
+   - Failed tests show the missed words and provide `Test Again` or `กลับไปเรียนคำศัพท์`.
+4. **Verification:**
+   - Browser-tested L01 with all 24 learning words.
+   - Verified a 23/24 test cannot continue and exposes both retry paths.
+   - Verified a 24/24 test unlocks Activity 2.
+   - TypeScript passed with `npx tsc --noEmit --incremental false`.
+   - ESLint passed with the two existing React Hook Form compiler warnings.
+   - Curriculum validation passed for 24 lessons, 144 activities, and 1537 vocabulary entries.
+   - Production build completed successfully.
+
+### Files Changed
+- `app/practice/lessons/[id]/components/VocabularyActivity.tsx`
+- `harness/feature_list.json`
+- `harness/claude-progress.md`

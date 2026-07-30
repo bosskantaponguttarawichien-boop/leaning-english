@@ -12,8 +12,9 @@ interface VocabularyActivityProps {
     onComplete: () => void;
 }
 
-type SessionPhase = "learn" | "recall" | "complete";
+type SessionPhase = "learn" | "learn-result" | "test" | "test-result";
 type AnswerStatus = "idle" | "correct" | "wrong";
+type ActiveSession = Extract<SessionPhase, "learn" | "test">;
 
 function normalizeAnswer(value: string) {
     return value.trim().toLowerCase().replace(/\s+/g, " ");
@@ -43,80 +44,77 @@ export default function VocabularyActivity({ activity, onComplete }: VocabularyA
     );
 
     const [phase, setPhase] = useState<SessionPhase>("learn");
-    const [queue, setQueue] = useState<number[]>(() => words.map((_, index) => index));
     const [position, setPosition] = useState(0);
     const [typedAnswer, setTypedAnswer] = useState("");
     const [answerStatus, setAnswerStatus] = useState<AnswerStatus>("idle");
     const [errorCount, setErrorCount] = useState(0);
     const [correctCount, setCorrectCount] = useState(0);
-    const [missedWords, setMissedWords] = useState<Set<number>>(new Set());
+    const [failedWordIndices, setFailedWordIndices] = useState<Set<number>>(new Set());
     const inputRef = useRef<HTMLInputElement>(null);
 
-    useEffect(() => {
-        if (phase !== "complete") {
-            inputRef.current?.focus();
-        }
-    }, [phase, position]);
-
-    const currentWordIndex = queue[position] ?? 0;
-    const currentWord = words[currentWordIndex];
+    const isActiveSession = phase === "learn" || phase === "test";
+    const isTest = phase === "test";
+    const currentWord = words[position];
     const vocabularyNote = currentWord
         ? vocabularyNoteByWord.get(currentWord.word.toLowerCase())
         : undefined;
-    const isRecall = phase === "recall";
-    const revealTarget = !isRecall || answerStatus !== "idle";
-    const progressNumerator = Math.min(
-        position + (answerStatus === "correct" ? 1 : 0),
-        queue.length,
-    );
-    const progressPercent = queue.length > 0
-        ? Math.round((progressNumerator / queue.length) * 100)
+    const answerLocked = answerStatus !== "idle";
+    const revealTarget = !isTest || answerLocked;
+    const progressNumerator = Math.min(position + (answerLocked ? 1 : 0), words.length);
+    const progressPercent = words.length > 0
+        ? Math.round((progressNumerator / words.length) * 100)
         : 0;
     const totalAttempts = correctCount + errorCount;
     const accuracy = totalAttempts > 0
         ? Math.round((correctCount / totalAttempts) * 100)
         : 100;
 
+    useEffect(() => {
+        if (isActiveSession) {
+            inputRef.current?.focus();
+        }
+    }, [isActiveSession, phase, position]);
+
     const resetAnswer = () => {
         setTypedAnswer("");
         setAnswerStatus("idle");
     };
 
+    const startSession = (session: ActiveSession) => {
+        setPhase(session);
+        setPosition(0);
+        setErrorCount(0);
+        setCorrectCount(0);
+        setFailedWordIndices(new Set());
+        resetAnswer();
+    };
+
     const advanceSession = () => {
-        if (position + 1 < queue.length) {
+        if (position + 1 < words.length) {
             setPosition((current) => current + 1);
             resetAnswer();
             return;
         }
 
-        if (missedWords.size > 0) {
-            setPhase("recall");
-            setQueue(Array.from(missedWords));
-            setMissedWords(new Set());
-            setPosition(0);
-            resetAnswer();
-            return;
-        }
-
-        setPhase("complete");
+        setPhase(isTest ? "test-result" : "learn-result");
         resetAnswer();
     };
 
     const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        if (!currentWord || answerStatus === "correct") return;
+        if (!currentWord || answerLocked) return;
 
         const isCorrect = normalizeAnswer(typedAnswer) === normalizeAnswer(currentWord.word);
         if (isCorrect) {
             setAnswerStatus("correct");
             setCorrectCount((current) => current + 1);
-            speak(currentWord.word);
+            if (!isTest) speak(currentWord.word);
             return;
         }
 
         setAnswerStatus("wrong");
         setErrorCount((current) => current + 1);
-        setMissedWords((current) => new Set(current).add(currentWordIndex));
+        setFailedWordIndices((current) => new Set(current).add(position));
         playErrorBuzz();
     };
 
@@ -135,17 +133,42 @@ export default function VocabularyActivity({ activity, onComplete }: VocabularyA
         );
     }
 
-    if (phase === "complete") {
+    if (phase === "learn-result" || phase === "test-result") {
+        const isLearnResult = phase === "learn-result";
+        const testPassed = phase === "test-result"
+            && correctCount === words.length
+            && errorCount === 0;
+        const failedWords = Array.from(failedWordIndices)
+            .map((index) => words[index])
+            .filter((word): word is NonNullable<typeof word> => Boolean(word));
+
         return (
             <div className="bg-canvas dark:bg-zinc-900 p-6 sm:p-8 rounded-md border border-ink/10 dark:border-zinc-800 shadow-none flex flex-col gap-6 animate-fade-in">
-                <div className="rounded-md border border-hume-mint/30 bg-hume-mint/10 p-8 text-center">
-                    <span className="text-4xl" aria-hidden="true">✓</span>
+                <div className={`rounded-md border p-8 text-center ${
+                    isLearnResult
+                        ? "border-hume-lavender/30 bg-hume-lavender/10"
+                        : testPassed
+                          ? "border-hume-mint/30 bg-hume-mint/10"
+                          : "border-hume-coral/30 bg-hume-coral/10"
+                }`}>
+                    <span className="text-4xl" aria-hidden="true">
+                        {isLearnResult ? "⌨️" : testPassed ? "✓" : "↻"}
+                    </span>
                     <h2 className="mt-3 text-2xl font-semibold text-ink dark:text-canvas-cream">
-                        ฝึกพิมพ์ครบ {words.length} คำแล้ว
+                        {isLearnResult
+                            ? `เรียนครบ ${words.length} คำแล้ว`
+                            : testPassed
+                              ? "ผ่าน Vocabulary Test"
+                              : "ยังไม่ผ่าน Vocabulary Test"}
                     </h2>
-                    <p className="mt-2 text-sm text-ink/60 dark:text-canvas-cream/60">
-                        คำที่พิมพ์ผิดถูกนำกลับมาทบทวนจนตอบถูกก่อนเข้าสู่บทเรียน
+                    <p className="mx-auto mt-2 max-w-2xl text-sm leading-relaxed text-ink/60 dark:text-canvas-cream/60">
+                        {isLearnResult
+                            ? "รอบนี้เป็นการเรียนรู้ ยังไม่ถือว่าผ่าน Step 1 เลือกเรียนอีกครั้ง หรือเริ่ม Test เพื่อวัดว่าจำได้จริง"
+                            : testPassed
+                              ? `คุณพิมพ์ถูกครบทุกคำ ${words.length}/${words.length} โดยไม่มีข้อผิดพลาด พร้อมเข้าสู่สถานการณ์แล้ว`
+                              : `Test ต้องพิมพ์ถูกทุกคำ คุณตอบถูก ${correctCount}/${words.length} กลับไปเรียนคำศัพท์ หรือสอบใหม่ได้`}
                     </p>
+
                     <div className="mx-auto mt-6 grid max-w-lg grid-cols-3 gap-3">
                         <div className="rounded-md bg-canvas/80 p-3 dark:bg-zinc-950/60">
                             <span className="block text-[9px] font-mono font-bold uppercase tracking-wider text-ink/40 dark:text-canvas-cream/40">Vocabulary</span>
@@ -153,47 +176,128 @@ export default function VocabularyActivity({ activity, onComplete }: VocabularyA
                         </div>
                         <div className="rounded-md bg-canvas/80 p-3 dark:bg-zinc-950/60">
                             <span className="block text-[9px] font-mono font-bold uppercase tracking-wider text-ink/40 dark:text-canvas-cream/40">Accuracy</span>
-                            <strong className="mt-1 block text-xl text-hume-mint">{accuracy}%</strong>
+                            <strong className={`mt-1 block text-xl ${
+                                testPassed ? "text-hume-mint" : "text-ink dark:text-canvas-cream"
+                            }`}>
+                                {accuracy}%
+                            </strong>
                         </div>
                         <div className="rounded-md bg-canvas/80 p-3 dark:bg-zinc-950/60">
                             <span className="block text-[9px] font-mono font-bold uppercase tracking-wider text-ink/40 dark:text-canvas-cream/40">Errors</span>
                             <strong className="mt-1 block text-xl text-hume-coral">{errorCount}</strong>
                         </div>
                     </div>
+
+                    {!isLearnResult && !testPassed && failedWords.length > 0 && (
+                        <div className="mx-auto mt-6 max-w-2xl">
+                            <p className="text-[10px] font-mono font-bold uppercase tracking-wider text-hume-coral">
+                                คำที่ต้องทบทวน
+                            </p>
+                            <div className="mt-2 flex flex-wrap justify-center gap-2">
+                                {failedWords.map((word) => (
+                                    <span
+                                        key={word.word}
+                                        className="rounded-full border border-hume-coral/25 bg-canvas/70 px-3 py-1.5 text-xs font-semibold text-ink dark:bg-zinc-950/50 dark:text-canvas-cream"
+                                    >
+                                        {word.word} · {word.meaning}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    )}
                 </div>
-                <div className="flex justify-end border-t border-ink/5 pt-4 dark:border-zinc-800">
-                    <button
-                        type="button"
-                        onClick={onComplete}
-                        className="rounded-full bg-ink px-6 py-3 font-mono text-xs font-bold uppercase tracking-wider text-canvas-cream transition-opacity hover:opacity-90 dark:bg-canvas-cream dark:text-ink"
-                    >
-                        Continue to the situation →
-                    </button>
+
+                <div className="flex flex-col-reverse gap-3 border-t border-ink/5 pt-4 sm:flex-row sm:justify-end dark:border-zinc-800">
+                    {isLearnResult && (
+                        <>
+                            <button
+                                type="button"
+                                onClick={() => startSession("learn")}
+                                className="rounded-full border border-ink/15 px-6 py-3 font-mono text-xs font-bold uppercase tracking-wider text-ink transition-colors hover:bg-ink/5 dark:border-canvas-cream/15 dark:text-canvas-cream"
+                            >
+                                เรียนอีกครั้ง
+                            </button>
+                            <button
+                                type="button"
+                                onClick={() => startSession("test")}
+                                className="rounded-full bg-ink px-6 py-3 font-mono text-xs font-bold uppercase tracking-wider text-canvas-cream transition-opacity hover:opacity-90 dark:bg-canvas-cream dark:text-ink"
+                            >
+                                เริ่ม Test →
+                            </button>
+                        </>
+                    )}
+
+                    {!isLearnResult && !testPassed && (
+                        <>
+                            <button
+                                type="button"
+                                onClick={() => startSession("learn")}
+                                className="rounded-full border border-ink/15 px-6 py-3 font-mono text-xs font-bold uppercase tracking-wider text-ink transition-colors hover:bg-ink/5 dark:border-canvas-cream/15 dark:text-canvas-cream"
+                            >
+                                กลับไปเรียนคำศัพท์
+                            </button>
+                            <button
+                                type="button"
+                                onClick={() => startSession("test")}
+                                className="rounded-full bg-ink px-6 py-3 font-mono text-xs font-bold uppercase tracking-wider text-canvas-cream transition-opacity hover:opacity-90 dark:bg-canvas-cream dark:text-ink"
+                            >
+                                Test Again →
+                            </button>
+                        </>
+                    )}
+
+                    {testPassed && (
+                        <>
+                            <button
+                                type="button"
+                                onClick={() => startSession("test")}
+                                className="rounded-full border border-ink/15 px-6 py-3 font-mono text-xs font-bold uppercase tracking-wider text-ink transition-colors hover:bg-ink/5 dark:border-canvas-cream/15 dark:text-canvas-cream"
+                            >
+                                Test Again
+                            </button>
+                            <button
+                                type="button"
+                                onClick={onComplete}
+                                className="rounded-full bg-ink px-6 py-3 font-mono text-xs font-bold uppercase tracking-wider text-canvas-cream transition-opacity hover:opacity-90 dark:bg-canvas-cream dark:text-ink"
+                            >
+                                Continue to the situation →
+                            </button>
+                        </>
+                    )}
                 </div>
             </div>
         );
     }
 
-    const sectionLabel = currentWordIndex < coreVocabularyCount
+    const sectionLabel = position < coreVocabularyCount
         ? "คำหลักของหัวข้อ"
         : "คำช่วยอ่านทั้งบท";
-    const displayExample = isRecall && answerStatus === "idle"
+    const displayExample = isTest && !answerLocked
         ? maskWordInExample(currentWord.example, currentWord.word)
         : currentWord.example;
 
     return (
         <div className="bg-canvas dark:bg-zinc-900 p-6 sm:p-8 rounded-md border border-ink/10 dark:border-zinc-800 shadow-none flex flex-col gap-6 animate-fade-in">
             <div className="border-b border-ink/5 pb-4 dark:border-zinc-800">
-                <h2 className="text-[10px] font-mono uppercase tracking-widest font-semibold text-hume-lavender">
-                    Step 1 • Vocabulary Typing
-                </h2>
+                <div className="flex flex-wrap items-center gap-2">
+                    <h2 className="text-[10px] font-mono uppercase tracking-widest font-semibold text-hume-lavender">
+                        Step 1 • Vocabulary {isTest ? "Test" : "Typing"}
+                    </h2>
+                    {isTest && (
+                        <span className="rounded-full bg-hume-coral/12 px-3 py-1 text-[9px] font-mono font-bold uppercase tracking-wider text-hume-coral">
+                            Hard Test
+                        </span>
+                    )}
+                </div>
                 <h3 className="mt-1 text-2xl font-semibold leading-snug text-ink dark:text-canvas-cream">
-                    พิมพ์คำศัพท์เพื่อให้สมองจำผ่านการลงมือ
+                    {isTest
+                        ? "สอบจำคำศัพท์ให้ได้ครบทุกคำ"
+                        : "พิมพ์คำศัพท์เพื่อให้สมองจำผ่านการลงมือ"}
                 </h3>
                 <p className="mt-2 text-sm text-ink/60 dark:text-canvas-cream/60">
-                    {phase === "learn"
-                        ? "ดูคำ ฟังเสียง และพิมพ์ตามให้ถูก คำที่ผิดจะกลับมาในรอบทบทวน"
-                        : "รอบทบทวน: จำคำจากความหมายและตัวอย่าง โดยคำอังกฤษจะถูกซ่อนไว้"}
+                    {isTest
+                        ? "คำอังกฤษและเสียงถูกซ่อน ใช้ความหมายกับประโยคช่วยจำ แล้วพิมพ์ให้ถูกตั้งแต่ครั้งแรก"
+                        : "ดูคำ ฟังเสียง และพิมพ์ตามให้ถูก เมื่อครบแล้วคุณจะเลือกเรียนอีกครั้งหรือเริ่ม Test ได้"}
                 </p>
             </div>
 
@@ -201,7 +305,7 @@ export default function VocabularyActivity({ activity, onComplete }: VocabularyA
                 <div>
                     <span className="text-[9px] font-mono font-bold uppercase tracking-wider text-ink/40 dark:text-canvas-cream/40">Session progress</span>
                     <p className="mt-1 text-sm font-semibold text-ink dark:text-canvas-cream">
-                        {position + 1} / {queue.length}
+                        {position + 1} / {words.length}
                     </p>
                 </div>
                 <div>
@@ -217,7 +321,7 @@ export default function VocabularyActivity({ activity, onComplete }: VocabularyA
             <div className="h-1.5 overflow-hidden rounded-full bg-ink/10 dark:bg-canvas-cream/10">
                 <div
                     className={`h-full rounded-full transition-all duration-300 ${
-                        phase === "recall" ? "bg-hume-orange" : "bg-hume-lavender"
+                        isTest ? "bg-hume-coral" : "bg-hume-lavender"
                     }`}
                     style={{ width: `${progressPercent}%` }}
                 />
@@ -237,9 +341,9 @@ export default function VocabularyActivity({ activity, onComplete }: VocabularyA
                     <span className="rounded-full border border-ink/10 px-3 py-1 text-[9px] font-mono font-bold uppercase tracking-wider text-ink/45 dark:border-canvas-cream/10 dark:text-canvas-cream/45">
                         {sectionLabel}
                     </span>
-                    {phase === "recall" && (
-                        <span className="rounded-full bg-hume-orange/12 px-3 py-1 text-[9px] font-mono font-bold uppercase tracking-wider text-hume-orange">
-                            Recall
+                    {isTest && (
+                        <span className="rounded-full bg-hume-coral/12 px-3 py-1 text-[9px] font-mono font-bold uppercase tracking-wider text-hume-coral">
+                            Test
                         </span>
                     )}
                 </div>
@@ -257,21 +361,23 @@ export default function VocabularyActivity({ activity, onComplete }: VocabularyA
                             ? currentWord.word
                             : currentWord.word.split("").map(() => "_").join(" ")}
                     </h4>
-                    <button
-                        type="button"
-                        onClick={() => speak(currentWord.word)}
-                        aria-label={`Listen to ${currentWord.word}`}
-                        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-ink/10 text-lg transition-colors hover:bg-ink hover:text-canvas-cream dark:border-canvas-cream/15 dark:hover:bg-canvas-cream dark:hover:text-ink"
-                    >
-                        🔊
-                    </button>
+                    {!isTest && (
+                        <button
+                            type="button"
+                            onClick={() => speak(currentWord.word)}
+                            aria-label={`Listen to ${currentWord.word}`}
+                            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-ink/10 text-lg transition-colors hover:bg-ink hover:text-canvas-cream dark:border-canvas-cream/15 dark:hover:bg-canvas-cream dark:hover:text-ink"
+                        >
+                            🔊
+                        </button>
+                    )}
                 </div>
 
                 <p className="mt-5 text-lg font-semibold text-ink/70 dark:text-canvas-cream/70">
                     {currentWord.meaning}
                 </p>
 
-                {vocabularyNote && (!isRecall || answerStatus !== "idle") && (
+                {vocabularyNote && (!isTest || answerLocked) && (
                     <div className="mx-auto mt-4 max-w-xl rounded-md bg-hume-orange/10 p-3 text-left">
                         <span className="text-[9px] font-mono font-bold uppercase tracking-wider text-hume-orange">
                             ในบท: {vocabularyNote.formInLesson}
@@ -282,14 +388,20 @@ export default function VocabularyActivity({ activity, onComplete }: VocabularyA
                     </div>
                 )}
 
-                <button
-                    type="button"
-                    onClick={() => speak(currentWord.example)}
-                    className="mx-auto mt-5 block max-w-xl rounded-md border border-ink/5 bg-canvas px-5 py-4 text-sm italic leading-relaxed text-ink/55 transition-colors hover:border-ink/15 dark:border-zinc-800 dark:bg-zinc-950/60 dark:text-canvas-cream/55"
-                    aria-label={`Listen to example: ${currentWord.example}`}
-                >
-                    “{displayExample}” <span className="not-italic opacity-40">🔊</span>
-                </button>
+                {isTest ? (
+                    <div className="mx-auto mt-5 block max-w-xl rounded-md border border-ink/5 bg-canvas px-5 py-4 text-sm italic leading-relaxed text-ink/55 dark:border-zinc-800 dark:bg-zinc-950/60 dark:text-canvas-cream/55">
+                        “{displayExample}”
+                    </div>
+                ) : (
+                    <button
+                        type="button"
+                        onClick={() => speak(currentWord.example)}
+                        className="mx-auto mt-5 block max-w-xl rounded-md border border-ink/5 bg-canvas px-5 py-4 text-sm italic leading-relaxed text-ink/55 transition-colors hover:border-ink/15 dark:border-zinc-800 dark:bg-zinc-950/60 dark:text-canvas-cream/55"
+                        aria-label={`Listen to example: ${currentWord.example}`}
+                    >
+                        “{displayExample}” <span className="not-italic opacity-40">🔊</span>
+                    </button>
+                )}
             </div>
 
             <form onSubmit={handleSubmit} className="mx-auto w-full max-w-xl">
@@ -297,7 +409,9 @@ export default function VocabularyActivity({ activity, onComplete }: VocabularyA
                     htmlFor={`vocabulary-answer-${activity.id}`}
                     className="block text-center text-xs font-semibold text-ink/50 dark:text-canvas-cream/50"
                 >
-                    {isRecall ? "พิมพ์คำอังกฤษจากความหมายด้านบน" : "พิมพ์คำอังกฤษที่เห็นด้านบนอีกครั้ง"}
+                    {isTest
+                        ? "พิมพ์คำอังกฤษจากความหมายด้านบน"
+                        : "พิมพ์คำอังกฤษที่เห็นด้านบนอีกครั้ง"}
                 </label>
                 <input
                     ref={inputRef}
@@ -306,9 +420,9 @@ export default function VocabularyActivity({ activity, onComplete }: VocabularyA
                     value={typedAnswer}
                     onChange={(event) => {
                         setTypedAnswer(event.target.value);
-                        if (answerStatus === "wrong") setAnswerStatus("idle");
+                        if (!isTest && answerStatus === "wrong") setAnswerStatus("idle");
                     }}
-                    disabled={answerStatus === "correct"}
+                    disabled={answerLocked}
                     autoComplete="off"
                     autoCapitalize="none"
                     spellCheck={false}
@@ -328,24 +442,29 @@ export default function VocabularyActivity({ activity, onComplete }: VocabularyA
                     )}
                     {answerStatus === "wrong" && (
                         <span className="text-hume-coral">
-                            ยังไม่ตรง ลองตรวจตัวสะกดแล้วพิมพ์อีกครั้ง
-                            {isRecall ? ` — คำที่ถูกคือ “${currentWord.word}”` : ""}
+                            {isTest
+                                ? `✕ ยังไม่ผ่านข้อนี้ — คำที่ถูกคือ “${currentWord.word}”`
+                                : "ยังไม่ตรง ลองตรวจตัวสะกดแล้วพิมพ์อีกครั้ง"}
                         </span>
                     )}
                 </div>
 
                 <div className="mt-3 flex justify-center">
-                    {answerStatus === "correct" ? (
+                    {answerLocked ? (
                         <button
                             type="button"
                             onClick={advanceSession}
-                            className="rounded-full bg-hume-mint px-6 py-3 font-mono text-xs font-bold uppercase tracking-wider text-ink"
+                            className={`rounded-full px-6 py-3 font-mono text-xs font-bold uppercase tracking-wider ${
+                                answerStatus === "correct"
+                                    ? "bg-hume-mint text-ink"
+                                    : "bg-hume-coral text-ink"
+                            }`}
                         >
-                            {position + 1 < queue.length
+                            {position + 1 < words.length
                                 ? "คำถัดไป →"
-                                : missedWords.size > 0
-                                  ? "ทบทวนคำที่ผิด →"
-                                  : "ดูผลการฝึก →"}
+                                : isTest
+                                  ? "ดูผล Test →"
+                                  : "ดูผลการเรียน →"}
                         </button>
                     ) : (
                         <button
@@ -364,7 +483,9 @@ export default function VocabularyActivity({ activity, onComplete }: VocabularyA
             </form>
 
             <p className="text-center text-[11px] text-ink/45 dark:text-canvas-cream/45">
-                กด Enter เพื่อตรวจคำตอบ • คำที่ผิดจะถูกวนกลับมาให้พิมพ์ใหม่ก่อนเริ่มบท
+                {isTest
+                    ? "Test จะผ่านเมื่อพิมพ์ถูกทุกคำตั้งแต่ครั้งแรก • ไม่มีเสียงหรือคำใบ้ภาษาอังกฤษ"
+                    : "กด Enter เพื่อตรวจคำตอบ • พิมพ์ครบแล้วยังต้องผ่าน Test ก่อนเริ่มบท"}
             </p>
         </div>
     );
