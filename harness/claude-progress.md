@@ -391,6 +391,49 @@ accepted arbitrary text without checking it.
 
 ---
 
+## [2026-07-31] Session: Pre-lesson Vocabulary Typing
+
+### Summary
+Replaced the passive vocabulary-card checklist with a one-word-at-a-time typing
+session inspired by the existing Practice Sessions experience.
+
+### Accomplishments
+1. **Active typing instead of self-reporting**
+   - Shows one vocabulary word at a time with part of speech, Thai meaning,
+     lesson section, pronunciation, and an audio example.
+   - Requires the learner to type the English word and submit it before moving
+     to the next item.
+   - Provides immediate correct/incorrect spelling feedback and supports Enter
+     submission.
+2. **Missed-word recall loop**
+   - Tracks every word answered incorrectly.
+   - After the main round, presents only missed words again.
+   - Hides the English word and masks it inside the example during recall, while
+     keeping the Thai meaning and optional audio cue.
+   - Repeats missed words until every one has been typed correctly.
+3. **Visible measurement**
+   - Added session progress, correct attempts, errors, progress bar, and final
+     accuracy.
+   - Added a completion summary before continuing to the tense lesson.
+   - Preserved the 23–24 word whole-lesson vocabulary coverage and contextual
+     notes added in the previous session.
+
+### Verification
+- TypeScript: passed.
+- ESLint: passed with two pre-existing React Hook Form compiler warnings.
+- Curriculum validation: passed (24 lessons, 144 activities; 1,537 vocabulary
+  entries preserved).
+- Production build: passed using the existing local Google Font mock.
+- Browser flow:
+  - Verified an incorrect spelling increments Errors and blocks progress.
+  - Verified correcting the spelling enables the next word.
+  - Completed all 24 L01 words and confirmed the missed word entered Recall.
+  - Verified Recall hides the target and masks it in the example.
+  - Verified successful recall produces a 96% accuracy summary and continues to
+    Activity 2.
+
+---
+
 ## [2026-07-14] Session: Dark Mode Input Visibility & Invalid Tailwind Colors Fix
 
 ### Summary

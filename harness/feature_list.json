@@ -324,6 +324,16 @@
         "app/practice/lessons/[id]/components/RoleplayActivity.tsx",
         "lib/roleplay-validation.ts"
       ]
+    },
+    {
+      "id": "lesson-vocabulary-typing-session",
+      "name": "Pre-lesson Vocabulary Typing Session",
+      "description": "Replace passive vocabulary marking with a focused one-word-at-a-time typing session that checks spelling, tracks errors, and repeats missed words before the learner enters the lesson.",
+      "status": "done",
+      "phase": 7,
+      "files": [
+        "app/practice/lessons/[id]/components/VocabularyActivity.tsx"
+      ]
     }
   ]
 }
