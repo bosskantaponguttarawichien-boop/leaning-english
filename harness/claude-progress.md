@@ -306,6 +306,41 @@ before changing the 35-minute pacing.
 
 ---
 
+## [2026-07-30] Session: Story Listening with Reading Pauses
+
+### Summary
+Added guided English audio to every Story / Dialogue activity so learners can
+listen first, see sentence boundaries, and read aloud with natural pauses.
+
+### Accomplishments
+1. **Whole-story listening**
+   - Added a play/stop control that reads the complete story one sentence at a
+     time.
+   - Added a deliberate 450 ms pause between sentences.
+2. **Sentence-level practice**
+   - Split each story into visible sentence rows with an individual listen
+     button.
+   - Highlighted the active sentence and displayed the current sentence number
+     while audio is playing.
+3. **Learner-controlled speed**
+   - Added slow (0.75×), follow-along (0.88×), and normal (1×) modes.
+   - Included a Thai cue explaining short pauses at commas and full pauses at
+     sentence endings.
+4. **Playback safety**
+   - Stops old audio before starting a new story, sentence, or speed.
+   - Cancels speech and pending pause timers when leaving the activity.
+
+### Verification
+- TypeScript: passed.
+- ESLint: passed with two pre-existing React Hook Form compiler warnings.
+- Curriculum validation: passed (24 lessons, 144 activities; 1,537 vocabulary
+  entries preserved).
+- Production build: passed using the existing local Google Font mock.
+- Browser flow: verified whole-story play/stop, active-sentence highlighting,
+  speed selection, and individual sentence playback in L01.
+
+---
+
 ## [2026-07-14] Session: Dark Mode Input Visibility & Invalid Tailwind Colors Fix
 
 ### Summary
@@ -428,5 +463,4 @@ Aligned all sub-practice pages, monthly assessment, AI Tutor coach, and lesson a
 1. The visual styling and border-radius alignment across the entire practice ecosystem is 100% complete and fully verified.
 2. All components adhere to the flat hairline border layouts, warm cream canvas backgrounds, and color-coded register accents of the Hume AI design spec.
 3. Code quality passes TypeScript compilation and Next.js production builds.
-
 

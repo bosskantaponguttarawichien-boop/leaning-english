@@ -297,6 +297,16 @@
         "scripts/generate-curriculum.mjs",
         "scripts/validate-curriculum.mjs"
       ]
+    },
+    {
+      "id": "story-listening-with-pauses",
+      "name": "Story Listening with Reading Pauses",
+      "description": "Add whole-story and sentence-level English audio to reading activities, with adjustable speed, visible sentence breaks, and active sentence highlighting for pause practice.",
+      "status": "done",
+      "phase": 7,
+      "files": [
+        "app/practice/lessons/[id]/components/ReadingActivity.tsx"
+      ]
     }
   ]
 }
