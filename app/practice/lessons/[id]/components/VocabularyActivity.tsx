@@ -24,6 +24,23 @@ export default function VocabularyActivity({ activity, onComplete }: VocabularyA
             .filter((word): word is NonNullable<typeof word> => Boolean(word));
     }, [activity.options]);
 
+    const coreVocabularyCount = Math.min(activity.coreVocabularyCount || 8, words.length);
+    const vocabularyNoteByWord = new Map(
+        (activity.vocabularyNotes || []).map((note) => [note.word.toLowerCase(), note]),
+    );
+    const vocabularySections = [
+        {
+            title: "คำหลักของหัวข้อ",
+            description: "คำที่ช่วยให้เข้าใจแนวคิดหลักและสร้างประโยคเป้าหมาย",
+            words: words.slice(0, coreVocabularyCount),
+        },
+        {
+            title: "คำช่วยอ่านทั้งบท",
+            description: "คำสำคัญที่พบใน Story คำถาม แบบฝึก และ Roleplay",
+            words: words.slice(coreVocabularyCount),
+        },
+    ].filter((section) => section.words.length > 0);
+
     const markReviewed = (word: string) => {
         setReviewed((current) => {
             const next = new Set(current);
@@ -58,60 +75,91 @@ export default function VocabularyActivity({ activity, onComplete }: VocabularyA
                 </button>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {words.map((item) => {
-                    const isReviewed = reviewed.has(item.word);
-                    return (
-                        <article
-                            key={item.word}
-                            className={`p-4 rounded-md border transition-colors ${
-                                isReviewed
-                                    ? "bg-hume-mint/10 border-hume-mint/30"
-                                    : "bg-canvas-cream dark:bg-black/20 border-ink/5 dark:border-zinc-800"
-                            }`}
-                        >
-                            <div className="flex items-start justify-between gap-3">
-                                <div>
-                                    <div className="flex items-center gap-2">
-                                        <strong className="text-lg text-ink dark:text-canvas-cream">{item.word}</strong>
-                                        <span className="text-[9px] font-mono uppercase px-2 py-0.5 rounded-full bg-hume-lavender/12 text-hume-lavender">
-                                            {item.pos}
-                                        </span>
-                                    </div>
-                                    <p className={`text-sm mt-1 min-h-5 text-ink/70 dark:text-canvas-cream/70 ${showThai ? "" : "blur-sm select-none"}`}>
-                                        {showThai ? item.meaning : "ซ่อนความหมายไว้เพื่อทดสอบการจำ"}
-                                    </p>
-                                </div>
-                                <button
-                                    type="button"
-                                    onClick={() => speak(item.word)}
-                                    aria-label={`Listen to ${item.word}`}
-                                    className="w-9 h-9 shrink-0 rounded-full border border-ink/10 dark:border-zinc-700 hover:bg-ink/5 dark:hover:bg-white/5"
-                                >
-                                    🔊
-                                </button>
+            <div className="space-y-7">
+                {vocabularySections.map((section, sectionIndex) => (
+                    <section key={section.title}>
+                        <div className="mb-3 flex flex-wrap items-end justify-between gap-2">
+                            <div>
+                                <h4 className="text-sm font-semibold text-ink dark:text-canvas-cream">{section.title}</h4>
+                                <p className="mt-0.5 text-xs text-ink/50 dark:text-canvas-cream/50">{section.description}</p>
                             </div>
+                            <span className="rounded-full bg-hume-lavender/10 px-3 py-1 text-[10px] font-mono font-bold text-hume-lavender">
+                                {section.words.length} คำ
+                            </span>
+                        </div>
 
-                            <button
-                                type="button"
-                                onClick={() => speak(item.example)}
-                                className="w-full text-left mt-3 p-3 rounded-md bg-canvas dark:bg-zinc-950/70 text-xs leading-relaxed text-ink/75 dark:text-canvas-cream/75 border border-ink/5 dark:border-zinc-800"
-                            >
-                                {item.example} <span className="opacity-40">↗</span>
-                            </button>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            {section.words.map((item) => {
+                                const isReviewed = reviewed.has(item.word);
+                                const vocabularyNote = vocabularyNoteByWord.get(item.word.toLowerCase());
+                                return (
+                                    <article
+                                        key={item.word}
+                                        className={`p-4 rounded-md border transition-colors ${
+                                            isReviewed
+                                                ? "bg-hume-mint/10 border-hume-mint/30"
+                                                : "bg-canvas-cream dark:bg-black/20 border-ink/5 dark:border-zinc-800"
+                                        }`}
+                                    >
+                                        <div className="flex items-start justify-between gap-3">
+                                            <div>
+                                                <div className="flex items-center gap-2">
+                                                    <strong className="text-lg text-ink dark:text-canvas-cream">{item.word}</strong>
+                                                    <span className="text-[9px] font-mono uppercase px-2 py-0.5 rounded-full bg-hume-lavender/12 text-hume-lavender">
+                                                        {item.pos}
+                                                    </span>
+                                                </div>
+                                                <p className={`text-sm mt-1 min-h-5 text-ink/70 dark:text-canvas-cream/70 ${showThai ? "" : "blur-sm select-none"}`}>
+                                                    {showThai ? item.meaning : "ซ่อนความหมายไว้เพื่อทดสอบการจำ"}
+                                                </p>
+                                                {vocabularyNote && (
+                                                    <div className={`mt-2 rounded-md bg-hume-orange/10 px-2.5 py-2 ${showThai ? "" : "blur-sm select-none"}`}>
+                                                        <p className="text-[10px] font-mono font-bold text-hume-orange">
+                                                            ในบท: {vocabularyNote.formInLesson}
+                                                        </p>
+                                                        <p className="mt-0.5 text-xs leading-relaxed text-ink/65 dark:text-canvas-cream/65">
+                                                            {showThai ? vocabularyNote.contextualMeaning : "ซ่อนความหมายตามบริบท"}
+                                                        </p>
+                                                    </div>
+                                                )}
+                                            </div>
+                                            <button
+                                                type="button"
+                                                onClick={() => speak(item.word)}
+                                                aria-label={`Listen to ${item.word}`}
+                                                className="w-9 h-9 shrink-0 rounded-full border border-ink/10 dark:border-zinc-700 hover:bg-ink/5 dark:hover:bg-white/5"
+                                            >
+                                                🔊
+                                            </button>
+                                        </div>
 
-                            <button
-                                type="button"
-                                onClick={() => markReviewed(item.word)}
-                                className={`mt-3 text-[10px] font-mono uppercase tracking-wider font-bold ${
-                                    isReviewed ? "text-hume-mint" : "text-ink/45 dark:text-canvas-cream/45"
-                                }`}
-                            >
-                                {isReviewed ? "✓ จำความหมายได้แล้ว" : "ทำเครื่องหมายเมื่อจำได้"}
-                            </button>
-                        </article>
-                    );
-                })}
+                                        <button
+                                            type="button"
+                                            onClick={() => speak(item.example)}
+                                            className="w-full text-left mt-3 p-3 rounded-md bg-canvas dark:bg-zinc-950/70 text-xs leading-relaxed text-ink/75 dark:text-canvas-cream/75 border border-ink/5 dark:border-zinc-800"
+                                        >
+                                            {item.example} <span className="opacity-40">↗</span>
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            onClick={() => markReviewed(item.word)}
+                                            className={`mt-3 text-[10px] font-mono uppercase tracking-wider font-bold ${
+                                                isReviewed ? "text-hume-mint" : "text-ink/45 dark:text-canvas-cream/45"
+                                            }`}
+                                        >
+                                            {isReviewed ? "✓ จำความหมายได้แล้ว" : "ทำเครื่องหมายเมื่อจำได้"}
+                                        </button>
+                                    </article>
+                                );
+                            })}
+                        </div>
+
+                        {sectionIndex === 0 && vocabularySections.length > 1 && (
+                            <div className="mt-6 border-b border-dashed border-ink/10 dark:border-canvas-cream/10" />
+                        )}
+                    </section>
+                ))}
             </div>
 
             <div className="pt-4 border-t border-ink/5 dark:border-zinc-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3">

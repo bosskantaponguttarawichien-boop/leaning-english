@@ -307,6 +307,23 @@
       "files": [
         "app/practice/lessons/[id]/components/ReadingActivity.tsx"
       ]
+    },
+    {
+      "id": "lesson-input-and-output-validation",
+      "name": "Complete Lesson Vocabulary, Sentence Analysis, and Roleplay Validation",
+      "description": "Expand vocabulary previews to cover lesson input, explain the Thai meaning, tense, structure, and use of every story sentence, and reject irrelevant or non-English roleplay responses with actionable feedback.",
+      "status": "done",
+      "phase": 7,
+      "files": [
+        "data/curriculum.json",
+        "schemas/curriculum.schema.ts",
+        "scripts/generate-curriculum.mjs",
+        "scripts/validate-curriculum.mjs",
+        "app/practice/lessons/[id]/components/VocabularyActivity.tsx",
+        "app/practice/lessons/[id]/components/ReadingActivity.tsx",
+        "app/practice/lessons/[id]/components/RoleplayActivity.tsx",
+        "lib/roleplay-validation.ts"
+      ]
     }
   ]
 }

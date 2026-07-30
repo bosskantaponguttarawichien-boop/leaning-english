@@ -341,6 +341,56 @@ listen first, see sentence boundaries, and read aloud with natural pauses.
 
 ---
 
+## [2026-07-30] Session: Complete Lesson Input and Roleplay Validation
+
+### Summary
+Closed three learner-facing gaps: incomplete vocabulary previews, stories
+without sentence-level meaning/grammar support, and roleplay activities that
+accepted arbitrary text without checking it.
+
+### Accomplishments
+1. **Whole-lesson vocabulary coverage**
+   - Expanded each lesson from 8 vocabulary items to 23–24 items selected from
+     its Story, comprehension questions, controlled practice, shadowing, and
+     roleplay.
+   - Kept the existing vocabulary-card interaction and divided cards into
+     "core topic vocabulary" and "whole-lesson reading support."
+   - Added L01 contextual notes for `which`, `describes`, `will be useful`,
+     `has prepared`, `right now`, `past action`, and `the present`, so the
+     learner sees the exact form and meaning used in the lesson.
+   - Preserved the original 1,537-entry vocabulary database.
+2. **Sentence-by-sentence Story analysis**
+   - Added Thai translations, tense/form labels, sentence formulas, and Thai
+     usage explanations for all 140 story sentences across L01–L24.
+   - Added a per-sentence reveal control alongside the existing audio button.
+   - Added curriculum validation requiring every story sentence to have all
+     four explanation fields.
+3. **Real roleplay validation**
+   - Replaced the two-word gate with a local four-part validator checking
+     English-like words, sentence structure, expected tense/form, and prompt
+     relevance.
+   - Natural Model now remains hidden until the response passes.
+   - Added a 0–100 result and actionable Thai feedback for every failed check.
+   - Supports natural alternatives, polite imperatives, short place/time/person
+     answers, inflected verbs, and common contractions.
+
+### Verification
+- Curriculum validation: passed (24 lessons, 144 activities).
+- Vocabulary coverage: 23–24 items per lesson; 1,537 bank entries preserved.
+- Story explanations: 140/140 sentences across 24/24 reading activities.
+- TypeScript: passed.
+- ESLint: passed with two pre-existing React Hook Form compiler warnings.
+- Production build: passed using the existing local Google Font mock.
+- Browser flow:
+  - Verified L01 vocabulary sections and contextual meanings.
+  - Verified sentence translation, tense, structure, and usage reveal.
+  - Verified gibberish is rejected at 0/100 without revealing the model.
+  - Verified a natural correct answer passes at 100/100.
+  - Verified a valid English sentence using the wrong tense is rejected with a
+    Present Continuous correction.
+
+---
+
 ## [2026-07-14] Session: Dark Mode Input Visibility & Invalid Tailwind Colors Fix
 
 ### Summary
@@ -463,4 +513,3 @@ Aligned all sub-practice pages, monthly assessment, AI Tutor coach, and lesson a
 1. The visual styling and border-radius alignment across the entire practice ecosystem is 100% complete and fully verified.
 2. All components adhere to the flat hairline border layouts, warm cream canvas backgrounds, and color-coded register accents of the Hume AI design spec.
 3. Code quality passes TypeScript compilation and Next.js production builds.
-

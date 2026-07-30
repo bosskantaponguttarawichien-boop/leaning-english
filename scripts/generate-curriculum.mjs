@@ -1,4 +1,4 @@
-import { writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const lessons = [
@@ -11,6 +11,16 @@ const lessons = [
     exit: "เลือกกลุ่มเวลาให้ข้อความ 6 แบบและพูดตัวอย่างของตัวเอง 3 ประโยค",
     safe: "เริ่มจาก Present Simple, Present Continuous, Past Simple และรูปอนาคตที่ตรงกับเจตนา",
     vocab: ["usually", "happen", "finish", "plan", "experience", "continue", "before", "future"],
+    supportVocab: ["which", "describe", "useful", "prepare"],
+    vocabNotes: [
+      { word: "which", formInLesson: "Which sentence...?", contextualMeaning: "ประโยคไหน / ประโยคใด" },
+      { word: "describe", formInLesson: "describes", contextualMeaning: "อธิบายหรือบรรยาย — เติม -s เพราะประธาน sentence เป็นเอกพจน์" },
+      { word: "useful", formInLesson: "will be useful", contextualMeaning: "จะมีประโยชน์" },
+      { word: "prepare", formInLesson: "has prepared", contextualMeaning: "ได้เตรียมไว้แล้ว — prepare เปลี่ยนเป็น prepared ใน Present Perfect" },
+      { word: "right", formInLesson: "right now", contextualMeaning: "ตอนนี้ / ในขณะนี้" },
+      { word: "past", formInLesson: "a past action", contextualMeaning: "การกระทำในอดีต" },
+      { word: "present", formInLesson: "the present", contextualMeaning: "ปัจจุบัน / ตอนนี้" }
+    ],
     tags: ["Time", "Daily Life"],
     chunks: ["I usually...", "I'm ...ing now", "I ... yesterday", "I'm going to...", "I'll...", "I've already...", "I was ...ing when..."],
     concept: `# Tense คือมุมที่เราเลือกมองเวลา
@@ -668,6 +678,369 @@ Past Perfect ใช้บอกว่าเหตุการณ์หนึ่�
   }
 ];
 
+const storyTranslations = {
+  L01: [
+    "นีน่าใช้ภาษาอังกฤษทุกวัน",
+    "ตอนนี้เธอกำลังคุยกับลูกค้า",
+    "เมื่อวานเธอตอบอีเมลเป็นภาษาอังกฤษ",
+    "พรุ่งนี้เธอวางแผนจะเข้าร่วมการประชุมออนไลน์",
+    "เธอคิดว่าการประชุมจะมีประโยชน์",
+    "เธอเตรียมคำถามไว้สามข้อแล้ว ดังนั้นเธอจึงรู้สึกพร้อม"
+  ],
+  L02: [
+    "สวัสดี ฉันชื่อบอส",
+    "ฉันมาจากประเทศไทย และฉันอาศัยอยู่ในกรุงเทพฯ",
+    "ฉันทำงานที่บริษัทเทคโนโลยี",
+    "งานของฉันเกี่ยวกับซอฟต์แวร์และ AI",
+    "ฉันสนใจการเรียนรู้เครื่องมือใหม่ ๆ",
+    "ฉันตื่นเต้นที่จะพัฒนาภาษาอังกฤษ เพราะฉันต้องการสื่อสารในที่ทำงานให้ชัดเจนขึ้น"
+  ],
+  L03: [
+    "ในวันธรรมดา เคนมักตื่นนอนตอนเจ็ดโมง",
+    "เขากินอาหารเช้าที่บ้านและนั่งรถบัสไปทำงาน",
+    "เขาเริ่มงานตอนเก้าโมง",
+    "เขามักกินอาหารกลางวันกับเพื่อนร่วมงาน",
+    "เขาเลิกงานตอนหกโมงและเดินกลับบ้าน",
+    "ตอนเย็นเขาพักผ่อนและเรียนภาษาอังกฤษยี่สิบนาที"
+  ],
+  L04: [
+    "มายาพบเพื่อนร่วมงานคนใหม่ชื่อทอม",
+    "เธอถามว่า “คุณทำงานอะไร”",
+    "ทอมบอกว่าเขาทำงานกับลูกค้า",
+    "มายาถามว่า “คุณชอบงานของคุณไหม”",
+    "เขาตอบว่า “ชอบครับ แต่ผมไม่ทำงานวันหยุดสุดสัปดาห์”",
+    "จากนั้นทอมถามมายาเกี่ยวกับงานอดิเรกของเธอ",
+    "เธอชอบทำอาหารและไปเยี่ยมครอบครัวบ่อย ๆ"
+  ],
+  L05: [
+    "ตอนนี้เป็นเวลาแปดโมงเช้า",
+    "อรุณกำลังรออยู่ที่ป้ายรถบัส",
+    "เขากำลังสวมเสื้อเชิ้ตสีน้ำเงินและถือกระเป๋า",
+    "คนสองคนกำลังนั่งอยู่บนม้านั่ง",
+    "ผู้หญิงคนหนึ่งกำลังคุยโทรศัพท์",
+    "ตอนนี้รถบัสกำลังมา ทุกคนจึงกำลังลุกขึ้นยืน"
+  ],
+  L06: [
+    "ตามปกติลีโอทำงานที่ออฟฟิศ แต่วันนี้เขากำลังทำงานจากบ้าน",
+    "ปกติเขากินอาหารกลางวันกับทีม แต่วันนี้เขากำลังกินคนเดียว",
+    "ทีมของเขามักมีประชุมในวันพฤหัสบดี",
+    "ตอนนี้พวกเขากำลังใช้การโทรออนไลน์ เพราะลีโอไม่ได้อยู่ที่ออฟฟิศ"
+  ],
+  L07: [
+    "เมื่อวานมะลิเริ่มงานตอนเก้าโมง",
+    "เธอตอบข้อความหลายข้อความและทำรายงานเสร็จก่อนอาหารกลางวัน",
+    "ช่วงบ่ายเธอโทรหาลูกค้า",
+    "หลังเลิกงานเธอไปเยี่ยมพี่สาวหรือน้องสาว",
+    "พวกเขาทำอาหารเย็นและดูภาพยนตร์",
+    "มะลิไม่ได้เรียนภาษาอังกฤษ เพราะเธอกลับถึงบ้านดึก"
+  ],
+  L08: [
+    "วันเสาร์ที่แล้ว แดนไปตลาดกับเพื่อน",
+    "พวกเขานั่งรถไฟและไปถึงที่นั่นตอนสิบโมง",
+    "แดนซื้อของขวัญชิ้นเล็กและพบร้านอาหารที่ดี",
+    "พวกเขากินอาหารกลางวันและพบเพื่อนอีกคนที่นั่น",
+    "ตอนเย็นแดนทำอาหารที่บ้านและเข้านอนเร็ว"
+  ],
+  L09: [
+    "นกกำลังขับรถกลับบ้านตอนที่ฝนตกหนักเริ่มขึ้น",
+    "เธอกำลังฟังเพลงอยู่ จึงไม่ได้ยินเสียงโทรศัพท์",
+    "ขณะที่เธอกำลังรอไฟแดง รถก็หยุดกะทันหัน",
+    "เธอโทรหาพี่ชายหรือน้องชายและอธิบายปัญหา",
+    "เขามาถึงในอีกยี่สิบนาทีต่อมาและช่วยเธอ"
+  ],
+  L10: [
+    "สุดสัปดาห์นี้ เฟิร์นวางแผนจะไปเยี่ยมพ่อแม่",
+    "เธอวางแผนจะขึ้นรถไฟเที่ยวเช้า เพราะต้องการมีเวลากับพวกเขามากขึ้น",
+    "วันเสาร์พวกเขาวางแผนจะทำอาหารด้วยกัน",
+    "วันอาทิตย์เฟิร์นวางแผนจะเดินเล่นในสวนและถ่ายรูป",
+    "เธอไม่ได้วางแผนจะทำงาน"
+  ],
+  L11: [
+    "แพทโทรหามินาเพื่อนัดประชุม",
+    "มินามีนัดพบลูกค้าเช้าวันจันทร์ แต่เธอว่างช่วงบ่าย",
+    "พวกเขาตกลงพบกันตอนบ่ายสามที่คาเฟ่ใกล้ออฟฟิศ",
+    "แพทจะนำบันทึกโครงการมา และมินากำลังเตรียมคำถามสามข้อ",
+    "พวกเขานัดพบกันประมาณหนึ่งชั่วโมง"
+  ],
+  L12: [
+    "ไคและจูนกำลังเตรียมอาหารเย็น",
+    "จูนเห็นว่าไม่มีข้าว",
+    "ไคพูดว่า “ฉันจะไปซื้อเอง”",
+    "จากนั้นโทรศัพท์ของจูนดังขึ้น แต่มือของเธอเปียก",
+    "ไคพูดว่า “ฉันจะรับเอง”",
+    "ท้องฟ้ากำลังมืดลง และจูนคิดว่าฝนจะตก",
+    "ไคสัญญาว่าเขาจะไปไม่นาน"
+  ],
+  L13: [
+    "พิมและอเล็กซ์กำลังคุยกันเรื่องการท่องเที่ยว",
+    "พิมเคยไปสามประเทศ แต่เธอยังไม่เคยไปญี่ปุ่น",
+    "อเล็กซ์เคยไปญี่ปุ่นสองครั้ง",
+    "เขาไปที่นั่นครั้งแรกในปี 2023",
+    "พิมถามว่าเขาเคยลองอาหารเช้าแบบดั้งเดิมหรือไม่",
+    "อเล็กซ์ตอบว่าเคย และบอกเธอว่าเขากินอาหารนั้นที่เกียวโต"
+  ],
+  L14: [
+    "นีน่าเปิดประตูอพาร์ตเมนต์ไม่ได้ เพราะเธอทำกุญแจหาย",
+    "เธอคิดว่าเธอทำมันตกเมื่อเช้านี้",
+    "เธอตรวจในกระเป๋าแล้ว แต่ยังหาไม่พบ",
+    "พี่ชายหรือน้องชายของเธอเพิ่งมาถึง เขาจึงเปิดประตูได้",
+    "นีน่าโทรหาคาเฟ่ที่เธอไปก่อนหน้านี้และถามเรื่องกุญแจ"
+  ],
+  L15: [
+    "มิวทำงานที่บริษัทเดิมมาเป็นเวลาสี่ปีแล้ว",
+    "เธออาศัยอยู่ในกรุงเทพฯ มาตั้งแต่ปี 2021",
+    "เธอเริ่มเรียนภาษาอังกฤษเมื่อประมาณสองปีก่อน",
+    "วันนี้จนถึงตอนนี้ เธอเรียนมาแล้วประมาณสามสิบนาที",
+    "เมื่อวานเธอรอรถบัสสี่สิบนาที แต่การเดินทางใช้เวลาเพียงยี่สิบนาที"
+  ],
+  L16: [
+    "เบนมาที่คลินิกเพราะเขาไอหนัก",
+    "เขาถามว่า “ช่วยผมได้ไหมครับ”",
+    "พยาบาลบอกว่าเขาต้องรอคุณหมอ",
+    "เธอบอกเขาว่า “คุณควรดื่มน้ำ และไม่ควรสูบบุหรี่”",
+    "เบนถามว่าเขาต้องจ่ายเงินตอนนี้หรือไม่",
+    "พยาบาลบอกว่าเขาจ่ายได้หลังจากพบคุณหมอ"
+  ],
+  L17: [
+    "ลูกค้าบอกเจย์ว่าเวลานัดของเขาถูกเลื่อนไปเป็นวันพฤหัสบดี",
+    "เจย์ฟังเวลาใหม่ไม่ทัน",
+    "เขาพูดว่า “ขอโทษครับ ช่วยพูดอีกครั้งให้ช้าลงได้ไหม”",
+    "ลูกค้าพูดข้อมูลซ้ำ",
+    "เจย์ถามว่า “คุณหมายถึงวันพฤหัสบดีตอนบ่ายสามใช่ไหม”",
+    "ลูกค้าตอบว่าใช่",
+    "จากนั้นเจย์ยืนยันว่า “สรุปว่านัดคือวันพฤหัสบดีตอนบ่ายสาม ถูกต้องไหมครับ”"
+  ],
+  L18: [
+    "ลีน่ากำลังจะเดินทางต่างประเทศครั้งแรกในวันพรุ่งนี้",
+    "เธอตื่นเต้นกับเที่ยวบิน แต่ก็รู้สึกกังวลเล็กน้อย",
+    "สนามบินดูวุ่นวาย และขั้นตอนเช็กอินทำให้สับสนในตอนแรก",
+    "พนักงานที่ให้ความช่วยเหลืออธิบายทุกอย่างอย่างชัดเจน",
+    "หลังจากนั้นลีน่ารู้สึกผ่อนคลาย",
+    "เธอคิดว่าประสบการณ์ทั้งหมดน่าตื่นเต้น"
+  ],
+  L19: [
+    "มินามาถึงสนามบินก่อนเที่ยวบินสองชั่วโมง",
+    "ที่เคาน์เตอร์เช็กอิน เธอพูดว่า “ฉันต้องการเช็กอินสำหรับเที่ยวบินไปสิงคโปร์ค่ะ”",
+    "เธอยื่นหนังสือเดินทางให้พนักงานและวางสัมภาระบนเครื่องชั่ง",
+    "พนักงานให้ที่นั่งริมหน้าต่างแก่เธอและบอกว่าเริ่มขึ้นเครื่องตอนสิบโมง",
+    "มินาถามว่าต่อไปเธอควรไปที่ไหน"
+  ],
+  L20: [
+    "ซาร่าขึ้นรถแท็กซี่และแสดงที่อยู่โรงแรมของเธอ",
+    "รถแท็กซี่ออกตัว แต่คนขับกำลังไปผิดทาง",
+    "ซาร่าถามว่า “เรากำลังจะไปโรงแรมเซ็นทรัลใช่ไหมคะ”",
+    "คนขับพูดชื่อโรงแรมอีกแห่งหนึ่ง",
+    "ซาร่ารู้ว่าเขาเข้าใจที่อยู่ผิด",
+    "เธอขอให้เขาหยุดและแสดงแผนที่",
+    "ในที่สุดพวกเขาก็มาถึงโรงแรมที่ถูกต้อง"
+  ],
+  L21: [
+    "ที่ร้านอาหาร ต้นสั่งไก่กับข้าวและน้ำหนึ่งแก้ว",
+    "พนักงานนำปลาและชามาให้",
+    "ต้นพูดอย่างสุภาพว่า “ขอโทษครับ ผมคิดว่ามีข้อผิดพลาด",
+    "ผมสั่งไก่และน้ำครับ”",
+    "พนักงานขอโทษและเปลี่ยนรายการอาหาร",
+    "ต่อมาต้นตรวจราคาก่อนจ่ายเงิน",
+    "รายการอาหารสุดท้ายถูกต้อง"
+  ],
+  L22: [
+    "เช้าวันจันทร์ คิมพบเพื่อนร่วมงานในห้องครัว",
+    "เพื่อนร่วมงานถามเกี่ยวกับวันหยุดสุดสัปดาห์ของเธอ",
+    "คิมบอกว่ามันผ่อนคลาย เพราะเธอไปเยี่ยมครอบครัว",
+    "จากนั้นเธอถามว่า “แล้วของคุณล่ะ”",
+    "ต่อมาพวกเขาคุยกันเรื่องงาน",
+    "ตอนนี้คิมกำลังเตรียมรายงาน และเพื่อนร่วมงานกำลังทดสอบบริการใหม่",
+    "พวกเขาตกลงจะคุยกันอีกครั้งหลังอาหารกลางวัน"
+  ],
+  L23: [
+    "หน้าหนึ่งควรแสดงคำสั่งซื้อของลูกค้า แต่กลับแสดงหน้าจอว่าง",
+    "ปัญหาเกิดขึ้นหลังจากผู้ใช้เข้าสู่ระบบ",
+    "แนตทดสอบหน้านั้นสองครั้งและได้ผลลัพธ์เหมือนเดิม",
+    "เขารีสตาร์ตบริการและตรวจรายงานระบบแล้ว",
+    "เขาพบข้อความผิดปกติหนึ่งข้อความ แต่ยังไม่พบสาเหตุที่แน่ชัด"
+  ],
+  L24: [
+    "บอสทำงานด้านเทคโนโลยีและตอนนี้กำลังปรับปรุงโครงการหนึ่ง",
+    "สัปดาห์ก่อนเขาพบปัญหาขณะที่กำลังทดสอบระบบ",
+    "เขาทำการทดสอบครั้งแรกเสร็จก่อนที่ปัญหาจะปรากฏ",
+    "ตั้งแต่นั้นมา เขาลองวิธีแก้สองวิธีและเรียนรู้เกี่ยวกับระบบมากขึ้น",
+    "พรุ่งนี้เขาวางแผนจะทดสอบอีกครั้ง",
+    "เขาคิดว่าเวอร์ชันถัดไปจะทำงานได้ดีขึ้น"
+  ]
+};
+
+const vocabularyDatabase = JSON.parse(
+  readFileSync(resolve(process.cwd(), "data/vocab.json"), "utf8")
+);
+const vocabularyWords = new Set(
+  vocabularyDatabase.words.map((item) => item.word.toLowerCase())
+);
+const vocabularyStopWords = new Set(
+  "a an the i you he she it we they my your his her our their me him them is am are was were be been being have has had do does did can could should would will to of in on at for from with and but or so because if that this these those there here not no yes as about than then very more some any one two three four".split(" ")
+);
+
+function splitStorySentences(text) {
+  const matches = text.match(/[^.!?]+(?:[.!?]+["”']?|$)/g);
+  return (matches || [text]).map((sentence) => sentence.trim()).filter(Boolean);
+}
+
+function resolveVocabularyWord(token) {
+  const candidates = [
+    token,
+    token.replace(/'s$/, ""),
+    token.replace(/ies$/, "y"),
+    token.replace(/ied$/, "y"),
+    token.replace(/ing$/, ""),
+    token.replace(/ing$/, "e"),
+    token.replace(/(.)\1ing$/, "$1"),
+    token.replace(/ed$/, ""),
+    token.replace(/ed$/, "e"),
+    token.replace(/(.)\1ed$/, "$1"),
+    token.replace(/s$/, ""),
+    token.replace(/es$/, "")
+  ];
+
+  return candidates.find((candidate) => vocabularyWords.has(candidate));
+}
+
+function buildLessonVocabulary(spec) {
+  const selected = [...spec.vocab, ...(spec.supportVocab || [])];
+  const lessonInput = [
+    ...spec.questions,
+    spec.story,
+    ...spec.readingOptions,
+    ...spec.prompts,
+    ...spec.models,
+    ...spec.shadow.map((pair) => pair[0]),
+    ...spec.fill.map((pair) => pair[0])
+  ].join(" ");
+  const tokens = lessonInput.toLowerCase().match(/[a-z]+(?:'[a-z]+)?/g) || [];
+
+  for (const token of tokens) {
+    if (vocabularyStopWords.has(token)) continue;
+    const word = resolveVocabularyWord(token);
+    if (word && !selected.includes(word)) selected.push(word);
+    if (selected.length >= 24) break;
+  }
+
+  return selected;
+}
+
+function analyzeSentence(sentence, spec) {
+  const text = sentence.toLowerCase();
+  const stativeIngAdjectives = new Set(["boring", "confusing", "exciting", "interesting", "relaxing", "tiring"]);
+  const pastContinuousWord = text.match(/\b(?:was|were)\s+(?:not\s+)?([a-z]+ing)\b/)?.[1];
+  const presentContinuousWord = text.match(/\b(?:am|is|are)\s+(?:not\s+)?([a-z]+ing)\b/)?.[1]
+    || text.match(/\b(?:am|is|are)\s+(?:i|you|he|she|it|we|they)\s+([a-z]+ing)\b/)?.[1];
+  const hasPastContinuous = Boolean(pastContinuousWord && !stativeIngAdjectives.has(pastContinuousWord));
+  const hasPresentContinuous = Boolean(presentContinuousWord && !stativeIngAdjectives.has(presentContinuousWord));
+  const hasPresentPerfect = /\b(has|have)\s+(?:already\s+|just\s+|never\s+|ever\s+)?(?:been|[a-z]+ed|done|gone|seen|found|lost|tried|made|taken|written|worked|lived|studied|checked|restarted|learned)\b/.test(text);
+  const hasPastSimple = /\b(yesterday|last|ago|went|took|got|bought|found|had|met|made|ate|called|asked|said|told|arrived|started|finished|answered|visited|cooked|watched|tested|showed|realized|ordered|brought|apologized|changed|paid|appeared|dropped|waited|helped|explained)\b/.test(text)
+    || /\bdid(?:n't| not)?\b/.test(text);
+
+  if (/\bhad\s+(?:[a-z]+ed|done|gone|seen|found|made|taken|written|completed)\b/.test(text)) {
+    return {
+      tense: "Past Perfect",
+      structure: "Subject + had + V3 + ...",
+      usage: "ใช้บอกเหตุการณ์ที่เสร็จก่อนอีกเหตุการณ์หนึ่งในอดีต"
+    };
+  }
+
+  if (hasPastContinuous) {
+    const hasInterruptingPastAction = hasPastSimple || /\b[a-z]+ed\b/.test(text);
+    return {
+      tense: hasInterruptingPastAction ? "Past Continuous + Past Simple" : "Past Continuous",
+      structure: hasInterruptingPastAction
+        ? "Subject + was/were + V-ing + when/while + Subject + V2"
+        : "Subject + was/were + V-ing + ...",
+      usage: "ใช้เล่าฉากที่กำลังดำเนินอยู่ในอดีต และอาจมีเหตุการณ์สั้นเข้ามาแทรก"
+    };
+  }
+
+  if (/\b(am|is|are)(?:n't| not)?\s+going to\s+[a-z]+\b/.test(text)) {
+    return {
+      tense: "be going to (future plan)",
+      structure: "Subject + am/is/are + (not) going to + base verb",
+      usage: "ใช้บอกแผนหรือความตั้งใจที่มีอยู่แล้ว"
+    };
+  }
+
+  if (hasPresentPerfect) {
+    const isPassive = /\b(has|have)\s+been\s+[a-z]+ed\b/.test(text);
+    return {
+      tense: "Present Perfect",
+      structure: isPassive
+        ? "Subject + have/has + been + V3 (passive)"
+        : "Subject + have/has + V3 + ...",
+      usage: isPassive
+        ? "ใช้บอกสิ่งที่ถูกกระทำไปแล้วและผลนั้นเกี่ยวข้องกับตอนนี้"
+        : "ใช้เชื่อมการกระทำในอดีตกับผล ประสบการณ์ หรือช่วงเวลาที่ต่อถึงปัจจุบัน"
+    };
+  }
+
+  if (/\bwill(?:\s+not)?\s+[a-z]+\b|\bwon't\s+[a-z]+\b|'ll\s+[a-z]+\b/.test(text)) {
+    return {
+      tense: "Present Simple + will" ,
+      structure: "Subject + present verb + (that) + Subject + will + base verb",
+      usage: "ใช้ Present Simple แสดงความคิดหรือสภาพตอนนี้ และใช้ will กับการคาดการณ์หรือการตัดสินใจ"
+    };
+  }
+
+  if (hasPresentContinuous) {
+    const isArrangement = spec.tense.some((tense) => tense.includes("future"));
+    const isQuestion = sentence.includes("?");
+    return {
+      tense: isArrangement ? "Present Continuous (future arrangement)" : "Present Continuous",
+      structure: isQuestion
+        ? "Am/Is/Are + subject + V-ing + ...?"
+        : "Subject + am/is/are + V-ing + ...",
+      usage: isArrangement
+        ? "ใช้บอกนัดหมายในอนาคตที่จัดไว้แล้ว"
+        : "ใช้บอกสิ่งที่กำลังเกิดขึ้นตอนนี้หรือสถานการณ์ชั่วคราว"
+    };
+  }
+
+  if (/\b(has|have) to\s+[a-z]+\b|\b(should|shouldn't|can|can't|could)\s+[a-z]+\b/.test(text)) {
+    return {
+      tense: "Modal / necessity form",
+      structure: "Subject + modal (or have to) + base verb",
+      usage: "ใช้บอกความสามารถ ความจำเป็น คำแนะนำ หรือคำขออย่างสุภาพ"
+    };
+  }
+
+  if (hasPastSimple) {
+    return {
+      tense: "Past Simple",
+      structure: "Subject + V2 (or did not + base verb) + ...",
+      usage: "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+    };
+  }
+
+  if (/\b(am|is|are)\b/.test(text)) {
+    return {
+      tense: "Present Simple with be",
+      structure: "Subject + am/is/are + noun/adjective/place",
+      usage: "ใช้บอกตัวตน สภาพ ความรู้สึก หรือสถานที่ในปัจจุบัน"
+    };
+  }
+
+  return {
+    tense: "Present Simple",
+    structure: "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+    usage: "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+  };
+}
+
+function buildSentenceNotes(spec) {
+  const sentences = splitStorySentences(spec.story);
+  const translations = storyTranslations[spec.id] || [];
+
+  return sentences.map((sentence, index) => ({
+    translation: translations[index],
+    ...analyzeSentence(sentence, spec)
+  }));
+}
+
 function activityId(lessonId, suffix) {
   return `${lessonId}-${suffix}`;
 }
@@ -677,6 +1050,8 @@ function buildLesson(spec, index) {
   const sentences = spec.shadow.map((pair) => pair[0]);
   const fillQuestions = spec.fill.map((pair) => pair[0]).join("\n");
   const fillAnswers = spec.fill.map((pair) => pair[1]).join(",");
+  const lessonVocabulary = buildLessonVocabulary(spec);
+  const sentenceNotes = buildSentenceNotes(spec);
 
   return {
     id: spec.id,
@@ -704,8 +1079,10 @@ function buildLesson(spec, index) {
         id: activityId(spec.id, "V1"),
         type: "vocabulary",
         instruction: "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-        context: `คำเหล่านี้จะปรากฏในสถานการณ์ “${spec.th}” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย`,
-        options: spec.vocab
+        context: `คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “${spec.th}” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย`,
+        options: lessonVocabulary,
+        coreVocabularyCount: spec.vocab.length,
+        vocabularyNotes: spec.vocabNotes || []
       },
       {
         id: activityId(spec.id, "C1"),
@@ -720,7 +1097,8 @@ function buildLesson(spec, index) {
         content: spec.story,
         question: spec.questions.join("\n"),
         options: spec.readingOptions,
-        answer: spec.readingAnswers.join(",")
+        answer: spec.readingAnswers.join(","),
+        sentenceNotes
       },
       {
         id: activityId(spec.id, "F1"),

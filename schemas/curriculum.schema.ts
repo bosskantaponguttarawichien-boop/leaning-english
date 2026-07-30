@@ -16,6 +16,19 @@ export const ActivityTypeSchema = z.enum([
     "work_task"
 ]);
 
+export const SentenceNoteSchema = z.object({
+    translation: z.string(),
+    tense: z.string(),
+    structure: z.string(),
+    usage: z.string(),
+});
+
+export const VocabularyNoteSchema = z.object({
+    word: z.string(),
+    formInLesson: z.string(),
+    contextualMeaning: z.string(),
+});
+
 export const ActivitySchema = z.object({
     id: z.string(),
     type: ActivityTypeSchema,
@@ -26,6 +39,9 @@ export const ActivitySchema = z.object({
     answer: z.union([z.string(), z.array(z.string())]).optional(),
     hint: z.string().optional(),
     context: z.string().optional(),
+    coreVocabularyCount: z.number().int().positive().optional(),
+    vocabularyNotes: z.array(VocabularyNoteSchema).optional(),
+    sentenceNotes: z.array(SentenceNoteSchema).optional(),
 });
 
 export const LessonSchema = z.object({

@@ -71,12 +71,23 @@ for (const [lessonIndex, lesson] of (curriculum.lessons || []).entries()) {
     }
 
     if (activity.type === "vocabulary") {
-      if (!Array.isArray(activity.options) || activity.options.length < 8 || activity.options.length > 12) {
-        errors.push(`${activity.id} must reference 8-12 vocabulary items.`);
+      if (!Array.isArray(activity.options) || activity.options.length < 12 || activity.options.length > 24) {
+        errors.push(`${activity.id} must reference 12-24 vocabulary items.`);
       }
       for (const word of activity.options || []) {
         if (!vocabularyWords.has(word.toLowerCase())) {
           errors.push(`${activity.id} references missing vocabulary: ${word}`);
+        }
+      }
+      if (!Number.isInteger(activity.coreVocabularyCount) || activity.coreVocabularyCount < 1) {
+        errors.push(`${activity.id} must identify its core vocabulary count.`);
+      }
+      for (const note of activity.vocabularyNotes || []) {
+        if (!activity.options.includes(note.word)) {
+          errors.push(`${activity.id} has a contextual note for an unlisted word: ${note.word}`);
+        }
+        if (!note.formInLesson?.trim() || !note.contextualMeaning?.trim()) {
+          errors.push(`${activity.id} has an incomplete contextual vocabulary note for ${note.word}.`);
         }
       }
     }
@@ -89,6 +100,21 @@ for (const [lessonIndex, lesson] of (curriculum.lessons || []).entries()) {
       }
       if ((activity.options || []).length !== questions.length * 2) {
         errors.push(`${activity.id} must provide two reading choices per question.`);
+      }
+
+      const storySentences = (activity.content || "")
+        .match(/[^.!?]+(?:[.!?]+["”']?|$)/g)
+        ?.map((sentence) => sentence.trim())
+        .filter(Boolean) || [];
+      if (!Array.isArray(activity.sentenceNotes) || activity.sentenceNotes.length !== storySentences.length) {
+        errors.push(`${activity.id} must explain every story sentence.`);
+      }
+      for (const [noteIndex, note] of (activity.sentenceNotes || []).entries()) {
+        for (const field of ["translation", "tense", "structure", "usage"]) {
+          if (!note[field]?.trim()) {
+            errors.push(`${activity.id} sentence note ${noteIndex + 1} is missing ${field}.`);
+          }
+        }
       }
     }
 

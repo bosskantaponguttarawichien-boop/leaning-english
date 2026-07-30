@@ -43,6 +43,7 @@ export default function ReadingActivity({ activity, onComplete, onErrorLogged }:
     const questions = (activity.question || "").split("\n");
     const correctAnswers = (activity.answer as string || "").split(",").map(a => a.trim());
     const options = activity.options || [];
+    const sentenceNotes = activity.sentenceNotes || [];
 
     const [userAnswers, setUserAnswers] = useState<string[]>(new Array(questions.length).fill(""));
     const [isChecked, setIsChecked] = useState(false);
@@ -51,6 +52,7 @@ export default function ReadingActivity({ activity, onComplete, onErrorLogged }:
     const [playbackRate, setPlaybackRate] = useState(0.88);
     const [playbackMode, setPlaybackMode] = useState<"story" | "sentence" | null>(null);
     const [activeSentence, setActiveSentence] = useState<number | null>(null);
+    const [expandedNotes, setExpandedNotes] = useState<Set<number>>(new Set());
     const playbackIdRef = useRef(0);
     const pauseTimerRef = useRef<number | null>(null);
 
@@ -143,6 +145,15 @@ export default function ReadingActivity({ activity, onComplete, onErrorLogged }:
         };
         utterance.onerror = utterance.onend;
         window.speechSynthesis.speak(utterance);
+    };
+
+    const toggleSentenceNote = (sentenceIndex: number) => {
+        setExpandedNotes((current) => {
+            const next = new Set(current);
+            if (next.has(sentenceIndex)) next.delete(sentenceIndex);
+            else next.add(sentenceIndex);
+            return next;
+        });
     };
 
     const handleSelectOption = (qIdx: number, val: string) => {
@@ -246,28 +257,67 @@ export default function ReadingActivity({ activity, onComplete, onErrorLogged }:
                     <div className="space-y-2" aria-live="polite">
                         {storySentences.map((sentence, sentenceIndex) => {
                             const isActive = activeSentence === sentenceIndex;
+                            const isExpanded = expandedNotes.has(sentenceIndex);
+                            const note = sentenceNotes[sentenceIndex];
 
                             return (
                                 <div
                                     key={`${sentence}-${sentenceIndex}`}
-                                    className={`group flex items-start gap-3 rounded-md border p-3 transition-colors ${
+                                    className={`group rounded-md border p-3 transition-colors ${
                                         isActive
                                             ? "border-hume-lavender/60 bg-hume-lavender/20"
                                             : "border-transparent hover:border-ink/10 dark:hover:border-canvas-cream/10"
                                     }`}
                                     aria-current={isActive ? "true" : undefined}
                                 >
-                                    <button
-                                        type="button"
-                                        onClick={() => handlePlaySentence(sentenceIndex)}
-                                        className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-ink/15 text-[10px] text-ink/60 transition-colors hover:border-ink hover:bg-ink hover:text-canvas-cream dark:border-canvas-cream/20 dark:text-canvas-cream/60 dark:hover:border-canvas-cream dark:hover:bg-canvas-cream dark:hover:text-ink"
-                                        aria-label={`ฟังประโยคที่ ${sentenceIndex + 1}`}
-                                    >
-                                        ▶
-                                    </button>
-                                    <p className="text-sm text-ink/80 dark:text-canvas-cream/80 leading-relaxed whitespace-pre-wrap font-mono">
-                                        {sentence}
-                                    </p>
+                                    <div className="flex items-start gap-3">
+                                        <button
+                                            type="button"
+                                            onClick={() => handlePlaySentence(sentenceIndex)}
+                                            className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-ink/15 text-[10px] text-ink/60 transition-colors hover:border-ink hover:bg-ink hover:text-canvas-cream dark:border-canvas-cream/20 dark:text-canvas-cream/60 dark:hover:border-canvas-cream dark:hover:bg-canvas-cream dark:hover:text-ink"
+                                            aria-label={`ฟังประโยคที่ ${sentenceIndex + 1}`}
+                                        >
+                                            ▶
+                                        </button>
+                                        <div className="min-w-0 flex-1">
+                                            <p className="text-sm text-ink/80 dark:text-canvas-cream/80 leading-relaxed whitespace-pre-wrap font-mono">
+                                                {sentence}
+                                            </p>
+                                            {note && (
+                                                <button
+                                                    type="button"
+                                                    onClick={() => toggleSentenceNote(sentenceIndex)}
+                                                    className="mt-2 text-[10px] font-mono font-bold uppercase tracking-wider text-hume-lavender hover:underline"
+                                                    aria-expanded={isExpanded}
+                                                >
+                                                    {isExpanded ? "ซ่อนคำอธิบาย ↑" : "ดูคำแปล + โครงสร้าง + Tense ↓"}
+                                                </button>
+                                            )}
+                                        </div>
+                                    </div>
+
+                                    {note && isExpanded && (
+                                        <div className="mt-3 ml-10 grid gap-2 rounded-md border border-hume-lavender/20 bg-canvas/70 p-3 dark:bg-zinc-950/50">
+                                            <div>
+                                                <span className="text-[9px] font-mono font-bold uppercase tracking-wider text-ink/40 dark:text-canvas-cream/40">คำแปล</span>
+                                                <p className="mt-0.5 text-sm font-semibold text-ink dark:text-canvas-cream">{note.translation}</p>
+                                            </div>
+                                            <div className="grid gap-2 sm:grid-cols-2">
+                                                <div className="rounded-md bg-hume-mint/10 p-2.5">
+                                                    <span className="text-[9px] font-mono font-bold uppercase tracking-wider text-hume-mint">Tense / Form</span>
+                                                    <p className="mt-0.5 text-xs font-semibold text-ink dark:text-canvas-cream">{note.tense}</p>
+                                                </div>
+                                                <div className="rounded-md bg-hume-lavender/10 p-2.5">
+                                                    <span className="text-[9px] font-mono font-bold uppercase tracking-wider text-hume-lavender">โครงสร้าง</span>
+                                                    <p className="mt-0.5 text-xs text-ink/75 dark:text-canvas-cream/75">{note.structure}</p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <span className="text-[9px] font-mono font-bold uppercase tracking-wider text-ink/40 dark:text-canvas-cream/40">ทำไมใช้รูปนี้</span>
+                                                <p className="mt-0.5 text-xs leading-relaxed text-ink/70 dark:text-canvas-cream/70">{note.usage}</p>
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
                             );
                         })}

@@ -43,7 +43,7 @@
           "id": "L01-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “แผนที่เวลา: Tense ที่ต้องใช้จริง” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “แผนที่เวลา: Tense ที่ต้องใช้จริง” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "usually",
             "happen",
@@ -52,7 +52,61 @@
             "experience",
             "continue",
             "before",
-            "future"
+            "future",
+            "which",
+            "describe",
+            "useful",
+            "prepare",
+            "sentence",
+            "action",
+            "now",
+            "form",
+            "past",
+            "present",
+            "use",
+            "every",
+            "day",
+            "right",
+            "talk",
+            "customer"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": [
+            {
+              "word": "which",
+              "formInLesson": "Which sentence...?",
+              "contextualMeaning": "ประโยคไหน / ประโยคใด"
+            },
+            {
+              "word": "describe",
+              "formInLesson": "describes",
+              "contextualMeaning": "อธิบายหรือบรรยาย — เติม -s เพราะประธาน sentence เป็นเอกพจน์"
+            },
+            {
+              "word": "useful",
+              "formInLesson": "will be useful",
+              "contextualMeaning": "จะมีประโยชน์"
+            },
+            {
+              "word": "prepare",
+              "formInLesson": "has prepared",
+              "contextualMeaning": "ได้เตรียมไว้แล้ว — prepare เปลี่ยนเป็น prepared ใน Present Perfect"
+            },
+            {
+              "word": "right",
+              "formInLesson": "right now",
+              "contextualMeaning": "ตอนนี้ / ในขณะนี้"
+            },
+            {
+              "word": "past",
+              "formInLesson": "a past action",
+              "contextualMeaning": "การกระทำในอดีต"
+            },
+            {
+              "word": "present",
+              "formInLesson": "the present",
+              "contextualMeaning": "ปัจจุบัน / ตอนนี้"
+            }
           ]
         },
         {
@@ -73,7 +127,45 @@
             "She has prepared three questions.",
             "She is going to join a meeting."
           ],
-          "answer": "She is talking to a customer.,She has prepared three questions."
+          "answer": "She is talking to a customer.,She has prepared three questions.",
+          "sentenceNotes": [
+            {
+              "translation": "นีน่าใช้ภาษาอังกฤษทุกวัน",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "ตอนนี้เธอกำลังคุยกับลูกค้า",
+              "tense": "Present Continuous",
+              "structure": "Subject + am/is/are + V-ing + ...",
+              "usage": "ใช้บอกสิ่งที่กำลังเกิดขึ้นตอนนี้หรือสถานการณ์ชั่วคราว"
+            },
+            {
+              "translation": "เมื่อวานเธอตอบอีเมลเป็นภาษาอังกฤษ",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            },
+            {
+              "translation": "พรุ่งนี้เธอวางแผนจะเข้าร่วมการประชุมออนไลน์",
+              "tense": "be going to (future plan)",
+              "structure": "Subject + am/is/are + (not) going to + base verb",
+              "usage": "ใช้บอกแผนหรือความตั้งใจที่มีอยู่แล้ว"
+            },
+            {
+              "translation": "เธอคิดว่าการประชุมจะมีประโยชน์",
+              "tense": "Present Simple + will",
+              "structure": "Subject + present verb + (that) + Subject + will + base verb",
+              "usage": "ใช้ Present Simple แสดงความคิดหรือสภาพตอนนี้ และใช้ will กับการคาดการณ์หรือการตัดสินใจ"
+            },
+            {
+              "translation": "เธอเตรียมคำถามไว้สามข้อแล้ว ดังนั้นเธอจึงรู้สึกพร้อม",
+              "tense": "Present Perfect",
+              "structure": "Subject + have/has + V3 + ...",
+              "usage": "ใช้เชื่อมการกระทำในอดีตกับผล ประสบการณ์ หรือช่วงเวลาที่ต่อถึงปัจจุบัน"
+            }
+          ]
         },
         {
           "id": "L01-F1",
@@ -172,7 +264,7 @@
           "id": "L02-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “แนะนำตัว: เป็นอะไร เป็นอย่างไร อยู่ที่ไหน” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “แนะนำตัว: เป็นอะไร เป็นอย่างไร อยู่ที่ไหน” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "name",
             "work",
@@ -181,8 +273,25 @@
             "interest",
             "from",
             "live",
-            "company"
-          ]
+            "company",
+            "where",
+            "boss",
+            "why",
+            "improve",
+            "hi",
+            "technology",
+            "software",
+            "learn",
+            "new",
+            "want",
+            "communicate",
+            "clearly",
+            "change",
+            "hello",
+            "what"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": []
         },
         {
           "id": "L02-C1",
@@ -202,7 +311,45 @@
             "To communicate more clearly.",
             "To change his name."
           ],
-          "answer": "He lives in Bangkok.,To communicate more clearly."
+          "answer": "He lives in Bangkok.,To communicate more clearly.",
+          "sentenceNotes": [
+            {
+              "translation": "สวัสดี ฉันชื่อบอส",
+              "tense": "Present Simple with be",
+              "structure": "Subject + am/is/are + noun/adjective/place",
+              "usage": "ใช้บอกตัวตน สภาพ ความรู้สึก หรือสถานที่ในปัจจุบัน"
+            },
+            {
+              "translation": "ฉันมาจากประเทศไทย และฉันอาศัยอยู่ในกรุงเทพฯ",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "ฉันทำงานที่บริษัทเทคโนโลยี",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "งานของฉันเกี่ยวกับซอฟต์แวร์และ AI",
+              "tense": "Present Simple with be",
+              "structure": "Subject + am/is/are + noun/adjective/place",
+              "usage": "ใช้บอกตัวตน สภาพ ความรู้สึก หรือสถานที่ในปัจจุบัน"
+            },
+            {
+              "translation": "ฉันสนใจการเรียนรู้เครื่องมือใหม่ ๆ",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "ฉันตื่นเต้นที่จะพัฒนาภาษาอังกฤษ เพราะฉันต้องการสื่อสารในที่ทำงานให้ชัดเจนขึ้น",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            }
+          ]
         },
         {
           "id": "L02-F1",
@@ -303,7 +450,7 @@
           "id": "L03-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “วันธรรมดาของฉัน” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “วันธรรมดาของฉัน” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "wake",
             "breakfast",
@@ -312,8 +459,26 @@
             "often",
             "start",
             "finish",
-            "relax"
-          ]
+            "relax",
+            "how",
+            "go",
+            "work",
+            "what",
+            "evening",
+            "up",
+            "seven",
+            "home",
+            "take",
+            "nine",
+            "colleague",
+            "six",
+            "walk",
+            "study",
+            "twenty",
+            "minute"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": []
         },
         {
           "id": "L03-C1",
@@ -333,7 +498,45 @@
             "He relaxes and studies English.",
             "He starts work again."
           ],
-          "answer": "He takes a bus.,He relaxes and studies English."
+          "answer": "He takes a bus.,He relaxes and studies English.",
+          "sentenceNotes": [
+            {
+              "translation": "ในวันธรรมดา เคนมักตื่นนอนตอนเจ็ดโมง",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "เขากินอาหารเช้าที่บ้านและนั่งรถบัสไปทำงาน",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "เขาเริ่มงานตอนเก้าโมง",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "เขามักกินอาหารกลางวันกับเพื่อนร่วมงาน",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "เขาเลิกงานตอนหกโมงและเดินกลับบ้าน",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "ตอนเย็นเขาพักผ่อนและเรียนภาษาอังกฤษยี่สิบนาที",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            }
+          ]
         },
         {
           "id": "L03-F1",
@@ -432,7 +635,7 @@
           "id": "L04-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “ถามเพื่อรู้จักกัน” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “ถามเพื่อรู้จักกัน” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "hobby",
             "weekend",
@@ -441,8 +644,26 @@
             "understand",
             "prefer",
             "enjoy",
-            "often"
-          ]
+            "often",
+            "work",
+            "what",
+            "meet",
+            "new",
+            "colleague",
+            "name",
+            "ask",
+            "say",
+            "customer",
+            "job",
+            "cook",
+            "visit",
+            "drive",
+            "bus",
+            "home",
+            "after"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": []
         },
         {
           "id": "L04-C1",
@@ -462,7 +683,51 @@
             "She enjoys cooking.",
             "She enjoys driving a bus."
           ],
-          "answer": "No — he doesn't.,She enjoys cooking."
+          "answer": "No — he doesn't.,She enjoys cooking.",
+          "sentenceNotes": [
+            {
+              "translation": "มายาพบเพื่อนร่วมงานคนใหม่ชื่อทอม",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "เธอถามว่า “คุณทำงานอะไร”",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "ทอมบอกว่าเขาทำงานกับลูกค้า",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "มายาถามว่า “คุณชอบงานของคุณไหม”",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "เขาตอบว่า “ชอบครับ แต่ผมไม่ทำงานวันหยุดสุดสัปดาห์”",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "จากนั้นทอมถามมายาเกี่ยวกับงานอดิเรกของเธอ",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "เธอชอบทำอาหารและไปเยี่ยมครอบครัวบ่อย ๆ",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            }
+          ]
         },
         {
           "id": "L04-F1",
@@ -561,7 +826,7 @@
           "id": "L05-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “ตอนนี้กำลังเกิดอะไรขึ้น” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “ตอนนี้กำลังเกิดอะไรขึ้น” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "wait",
             "wear",
@@ -570,8 +835,26 @@
             "currently",
             "now",
             "sit",
-            "stand"
-          ]
+            "stand",
+            "where",
+            "what",
+            "people",
+            "do",
+            "when",
+            "bus",
+            "come",
+            "eight",
+            "morning",
+            "stop",
+            "blue",
+            "shirt",
+            "carry",
+            "bag",
+            "woman",
+            "phone"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": []
         },
         {
           "id": "L05-C1",
@@ -591,7 +874,45 @@
             "They are standing up.",
             "They are going to sleep."
           ],
-          "answer": "At a bus stop.,They are standing up."
+          "answer": "At a bus stop.,They are standing up.",
+          "sentenceNotes": [
+            {
+              "translation": "ตอนนี้เป็นเวลาแปดโมงเช้า",
+              "tense": "Present Simple with be",
+              "structure": "Subject + am/is/are + noun/adjective/place",
+              "usage": "ใช้บอกตัวตน สภาพ ความรู้สึก หรือสถานที่ในปัจจุบัน"
+            },
+            {
+              "translation": "อรุณกำลังรออยู่ที่ป้ายรถบัส",
+              "tense": "Present Continuous",
+              "structure": "Subject + am/is/are + V-ing + ...",
+              "usage": "ใช้บอกสิ่งที่กำลังเกิดขึ้นตอนนี้หรือสถานการณ์ชั่วคราว"
+            },
+            {
+              "translation": "เขากำลังสวมเสื้อเชิ้ตสีน้ำเงินและถือกระเป๋า",
+              "tense": "Present Continuous",
+              "structure": "Subject + am/is/are + V-ing + ...",
+              "usage": "ใช้บอกสิ่งที่กำลังเกิดขึ้นตอนนี้หรือสถานการณ์ชั่วคราว"
+            },
+            {
+              "translation": "คนสองคนกำลังนั่งอยู่บนม้านั่ง",
+              "tense": "Present Continuous",
+              "structure": "Subject + am/is/are + V-ing + ...",
+              "usage": "ใช้บอกสิ่งที่กำลังเกิดขึ้นตอนนี้หรือสถานการณ์ชั่วคราว"
+            },
+            {
+              "translation": "ผู้หญิงคนหนึ่งกำลังคุยโทรศัพท์",
+              "tense": "Present Continuous",
+              "structure": "Subject + am/is/are + V-ing + ...",
+              "usage": "ใช้บอกสิ่งที่กำลังเกิดขึ้นตอนนี้หรือสถานการณ์ชั่วคราว"
+            },
+            {
+              "translation": "ตอนนี้รถบัสกำลังมา ทุกคนจึงกำลังลุกขึ้นยืน",
+              "tense": "Present Continuous",
+              "structure": "Subject + am/is/are + V-ing + ...",
+              "usage": "ใช้บอกสิ่งที่กำลังเกิดขึ้นตอนนี้หรือสถานการณ์ชั่วคราว"
+            }
+          ]
         },
         {
           "id": "L05-F1",
@@ -691,7 +1012,7 @@
           "id": "L06-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “ปกติ vs ตอนนี้” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “ปกติ vs ตอนนี้” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "normally",
             "today",
@@ -700,8 +1021,26 @@
             "work",
             "study",
             "stay",
-            "change"
-          ]
+            "change",
+            "where",
+            "why",
+            "team",
+            "us",
+            "online",
+            "call",
+            "office",
+            "home",
+            "eat",
+            "alone",
+            "meeting",
+            "thursday",
+            "right",
+            "now",
+            "hotel",
+            "what"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": []
         },
         {
           "id": "L06-C1",
@@ -721,7 +1060,33 @@
             "Because Leo is at home.",
             "Because Thursday is a holiday."
           ],
-          "answer": "At the office.,Because Leo is at home."
+          "answer": "At the office.,Because Leo is at home.",
+          "sentenceNotes": [
+            {
+              "translation": "ตามปกติลีโอทำงานที่ออฟฟิศ แต่วันนี้เขากำลังทำงานจากบ้าน",
+              "tense": "Present Continuous",
+              "structure": "Subject + am/is/are + V-ing + ...",
+              "usage": "ใช้บอกสิ่งที่กำลังเกิดขึ้นตอนนี้หรือสถานการณ์ชั่วคราว"
+            },
+            {
+              "translation": "ปกติเขากินอาหารกลางวันกับทีม แต่วันนี้เขากำลังกินคนเดียว",
+              "tense": "Present Continuous",
+              "structure": "Subject + am/is/are + V-ing + ...",
+              "usage": "ใช้บอกสิ่งที่กำลังเกิดขึ้นตอนนี้หรือสถานการณ์ชั่วคราว"
+            },
+            {
+              "translation": "ทีมของเขามักมีประชุมในวันพฤหัสบดี",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "ตอนนี้พวกเขากำลังใช้การโทรออนไลน์ เพราะลีโอไม่ได้อยู่ที่ออฟฟิศ",
+              "tense": "Present Continuous",
+              "structure": "Subject + am/is/are + V-ing + ...",
+              "usage": "ใช้บอกสิ่งที่กำลังเกิดขึ้นตอนนี้หรือสถานการณ์ชั่วคราว"
+            }
+          ]
         },
         {
           "id": "L06-F1",
@@ -820,7 +1185,7 @@
           "id": "L07-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “เมื่อวานฉันทำอะไร” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “เมื่อวานฉันทำอะไร” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "yesterday",
             "clean",
@@ -829,8 +1194,26 @@
             "call",
             "visit",
             "finish",
-            "start"
-          ]
+            "start",
+            "what",
+            "before",
+            "why",
+            "study",
+            "work",
+            "nine",
+            "answer",
+            "several",
+            "message",
+            "report",
+            "afternoon",
+            "customer",
+            "after",
+            "sister",
+            "dinner",
+            "movie"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": []
         },
         {
           "id": "L07-C1",
@@ -850,7 +1233,45 @@
             "She arrived home late.",
             "She forgot her name."
           ],
-          "answer": "A report.,She arrived home late."
+          "answer": "A report.,She arrived home late.",
+          "sentenceNotes": [
+            {
+              "translation": "เมื่อวานมะลิเริ่มงานตอนเก้าโมง",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            },
+            {
+              "translation": "เธอตอบข้อความหลายข้อความและทำรายงานเสร็จก่อนอาหารกลางวัน",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            },
+            {
+              "translation": "ช่วงบ่ายเธอโทรหาลูกค้า",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            },
+            {
+              "translation": "หลังเลิกงานเธอไปเยี่ยมพี่สาวหรือน้องสาว",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            },
+            {
+              "translation": "พวกเขาทำอาหารเย็นและดูภาพยนตร์",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            },
+            {
+              "translation": "มะลิไม่ได้เรียนภาษาอังกฤษ เพราะเธอกลับถึงบ้านดึก",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            }
+          ]
         },
         {
           "id": "L07-F1",
@@ -949,7 +1370,7 @@
           "id": "L08-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “เล่าเรื่องวันหยุดที่ผ่านมา” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “เล่าเรื่องวันหยุดที่ผ่านมา” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "go",
             "have",
@@ -958,8 +1379,26 @@
             "take",
             "meet",
             "buy",
-            "get"
-          ]
+            "get",
+            "how",
+            "travel",
+            "market",
+            "what",
+            "home",
+            "evening",
+            "last",
+            "saturday",
+            "friend",
+            "train",
+            "ten",
+            "small",
+            "good",
+            "restaurant",
+            "another",
+            "dinner"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": []
         },
         {
           "id": "L08-C1",
@@ -979,7 +1418,39 @@
             "He made dinner.",
             "He bought another train."
           ],
-          "answer": "He took a train.,He made dinner."
+          "answer": "He took a train.,He made dinner.",
+          "sentenceNotes": [
+            {
+              "translation": "วันเสาร์ที่แล้ว แดนไปตลาดกับเพื่อน",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            },
+            {
+              "translation": "พวกเขานั่งรถไฟและไปถึงที่นั่นตอนสิบโมง",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            },
+            {
+              "translation": "แดนซื้อของขวัญชิ้นเล็กและพบร้านอาหารที่ดี",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            },
+            {
+              "translation": "พวกเขากินอาหารกลางวันและพบเพื่อนอีกคนที่นั่น",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            },
+            {
+              "translation": "ตอนเย็นแดนทำอาหารที่บ้านและเข้านอนเร็ว",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            }
+          ]
         },
         {
           "id": "L08-F1",
@@ -1079,7 +1550,7 @@
           "id": "L09-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “ตอนที่ปัญหาเกิดขึ้น” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “ตอนที่ปัญหาเกิดขึ้น” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "while",
             "when",
@@ -1088,8 +1559,26 @@
             "call",
             "happen",
             "suddenly",
-            "problem"
-          ]
+            "problem",
+            "what",
+            "do",
+            "start",
+            "car",
+            "stop",
+            "home",
+            "heavy",
+            "listen",
+            "music",
+            "hear",
+            "phone",
+            "wait",
+            "red",
+            "light",
+            "brother",
+            "explain"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": []
         },
         {
           "id": "L09-C1",
@@ -1109,7 +1598,39 @@
             "While she was waiting at a red light.",
             "After she arrived home."
           ],
-          "answer": "She was driving home.,While she was waiting at a red light."
+          "answer": "She was driving home.,While she was waiting at a red light.",
+          "sentenceNotes": [
+            {
+              "translation": "นกกำลังขับรถกลับบ้านตอนที่ฝนตกหนักเริ่มขึ้น",
+              "tense": "Past Continuous + Past Simple",
+              "structure": "Subject + was/were + V-ing + when/while + Subject + V2",
+              "usage": "ใช้เล่าฉากที่กำลังดำเนินอยู่ในอดีต และอาจมีเหตุการณ์สั้นเข้ามาแทรก"
+            },
+            {
+              "translation": "เธอกำลังฟังเพลงอยู่ จึงไม่ได้ยินเสียงโทรศัพท์",
+              "tense": "Past Continuous + Past Simple",
+              "structure": "Subject + was/were + V-ing + when/while + Subject + V2",
+              "usage": "ใช้เล่าฉากที่กำลังดำเนินอยู่ในอดีต และอาจมีเหตุการณ์สั้นเข้ามาแทรก"
+            },
+            {
+              "translation": "ขณะที่เธอกำลังรอไฟแดง รถก็หยุดกะทันหัน",
+              "tense": "Past Continuous + Past Simple",
+              "structure": "Subject + was/were + V-ing + when/while + Subject + V2",
+              "usage": "ใช้เล่าฉากที่กำลังดำเนินอยู่ในอดีต และอาจมีเหตุการณ์สั้นเข้ามาแทรก"
+            },
+            {
+              "translation": "เธอโทรหาพี่ชายหรือน้องชายและอธิบายปัญหา",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            },
+            {
+              "translation": "เขามาถึงในอีกยี่สิบนาทีต่อมาและช่วยเธอ",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            }
+          ]
         },
         {
           "id": "L09-F1",
@@ -1207,7 +1728,7 @@
           "id": "L10-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “แผนที่ตั้งใจไว้” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “แผนที่ตั้งใจไว้” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "plan",
             "travel",
@@ -1216,8 +1737,26 @@
             "money",
             "walk",
             "next",
-            "reason"
-          ]
+            "reason",
+            "why",
+            "take",
+            "early",
+            "train",
+            "go",
+            "work",
+            "sunday",
+            "weekend",
+            "parent",
+            "want",
+            "time",
+            "saturday",
+            "cook",
+            "together",
+            "park",
+            "photo"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": []
         },
         {
           "id": "L10-C1",
@@ -1237,7 +1776,39 @@
             "No — she isn't.",
             "Yes — she is."
           ],
-          "answer": "She wants more time with her parents.,No — she isn't."
+          "answer": "She wants more time with her parents.,No — she isn't.",
+          "sentenceNotes": [
+            {
+              "translation": "สุดสัปดาห์นี้ เฟิร์นวางแผนจะไปเยี่ยมพ่อแม่",
+              "tense": "be going to (future plan)",
+              "structure": "Subject + am/is/are + (not) going to + base verb",
+              "usage": "ใช้บอกแผนหรือความตั้งใจที่มีอยู่แล้ว"
+            },
+            {
+              "translation": "เธอวางแผนจะขึ้นรถไฟเที่ยวเช้า เพราะต้องการมีเวลากับพวกเขามากขึ้น",
+              "tense": "be going to (future plan)",
+              "structure": "Subject + am/is/are + (not) going to + base verb",
+              "usage": "ใช้บอกแผนหรือความตั้งใจที่มีอยู่แล้ว"
+            },
+            {
+              "translation": "วันเสาร์พวกเขาวางแผนจะทำอาหารด้วยกัน",
+              "tense": "be going to (future plan)",
+              "structure": "Subject + am/is/are + (not) going to + base verb",
+              "usage": "ใช้บอกแผนหรือความตั้งใจที่มีอยู่แล้ว"
+            },
+            {
+              "translation": "วันอาทิตย์เฟิร์นวางแผนจะเดินเล่นในสวนและถ่ายรูป",
+              "tense": "be going to (future plan)",
+              "structure": "Subject + am/is/are + (not) going to + base verb",
+              "usage": "ใช้บอกแผนหรือความตั้งใจที่มีอยู่แล้ว"
+            },
+            {
+              "translation": "เธอไม่ได้วางแผนจะทำงาน",
+              "tense": "be going to (future plan)",
+              "structure": "Subject + am/is/are + (not) going to + base verb",
+              "usage": "ใช้บอกแผนหรือความตั้งใจที่มีอยู่แล้ว"
+            }
+          ]
         },
         {
           "id": "L10-F1",
@@ -1336,7 +1907,7 @@
           "id": "L11-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “นัดหมายที่จัดไว้แล้ว” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “นัดหมายที่จัดไว้แล้ว” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "appointment",
             "available",
@@ -1345,8 +1916,26 @@
             "tomorrow",
             "tonight",
             "free",
-            "arrange"
-          ]
+            "arrange",
+            "when",
+            "meeting",
+            "what",
+            "bring",
+            "call",
+            "customer",
+            "monday",
+            "morning",
+            "afternoon",
+            "agree",
+            "near",
+            "office",
+            "project",
+            "note",
+            "prepare",
+            "question"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": []
         },
         {
           "id": "L11-C1",
@@ -1366,7 +1955,39 @@
             "The project notes.",
             "A customer."
           ],
-          "answer": "Monday at three.,The project notes."
+          "answer": "Monday at three.,The project notes.",
+          "sentenceNotes": [
+            {
+              "translation": "แพทโทรหามินาเพื่อนัดประชุม",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "มินามีนัดพบลูกค้าเช้าวันจันทร์ แต่เธอว่างช่วงบ่าย",
+              "tense": "Present Continuous (future arrangement)",
+              "structure": "Subject + am/is/are + V-ing + ...",
+              "usage": "ใช้บอกนัดหมายในอนาคตที่จัดไว้แล้ว"
+            },
+            {
+              "translation": "พวกเขาตกลงพบกันตอนบ่ายสามที่คาเฟ่ใกล้ออฟฟิศ",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "แพทจะนำบันทึกโครงการมา และมินากำลังเตรียมคำถามสามข้อ",
+              "tense": "Present Continuous (future arrangement)",
+              "structure": "Subject + am/is/are + V-ing + ...",
+              "usage": "ใช้บอกนัดหมายในอนาคตที่จัดไว้แล้ว"
+            },
+            {
+              "translation": "พวกเขานัดพบกันประมาณหนึ่งชั่วโมง",
+              "tense": "Present Continuous (future arrangement)",
+              "structure": "Subject + am/is/are + V-ing + ...",
+              "usage": "ใช้บอกนัดหมายในอนาคตที่จัดไว้แล้ว"
+            }
+          ]
         },
         {
           "id": "L11-F1",
@@ -1465,7 +2086,7 @@
           "id": "L12-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “ตัดสินใจ เสนอ และคาดการณ์” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “ตัดสินใจ เสนอ และคาดการณ์” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "decide",
             "promise",
@@ -1474,8 +2095,26 @@
             "think",
             "help",
             "check",
-            "worry"
-          ]
+            "worry",
+            "why",
+            "buy",
+            "rice",
+            "what",
+            "prepare",
+            "dinner",
+            "see",
+            "say",
+            "phone",
+            "hand",
+            "wet",
+            "answer",
+            "sky",
+            "get",
+            "dark",
+            "rain"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": []
         },
         {
           "id": "L12-C1",
@@ -1495,7 +2134,51 @@
             "She thinks it will rain.",
             "She thinks dinner will disappear."
           ],
-          "answer": "There is no rice.,She thinks it will rain."
+          "answer": "There is no rice.,She thinks it will rain.",
+          "sentenceNotes": [
+            {
+              "translation": "ไคและจูนกำลังเตรียมอาหารเย็น",
+              "tense": "Present Continuous",
+              "structure": "Subject + am/is/are + V-ing + ...",
+              "usage": "ใช้บอกสิ่งที่กำลังเกิดขึ้นตอนนี้หรือสถานการณ์ชั่วคราว"
+            },
+            {
+              "translation": "จูนเห็นว่าไม่มีข้าว",
+              "tense": "Present Simple with be",
+              "structure": "Subject + am/is/are + noun/adjective/place",
+              "usage": "ใช้บอกตัวตน สภาพ ความรู้สึก หรือสถานที่ในปัจจุบัน"
+            },
+            {
+              "translation": "ไคพูดว่า “ฉันจะไปซื้อเอง”",
+              "tense": "Present Simple + will",
+              "structure": "Subject + present verb + (that) + Subject + will + base verb",
+              "usage": "ใช้ Present Simple แสดงความคิดหรือสภาพตอนนี้ และใช้ will กับการคาดการณ์หรือการตัดสินใจ"
+            },
+            {
+              "translation": "จากนั้นโทรศัพท์ของจูนดังขึ้น แต่มือของเธอเปียก",
+              "tense": "Present Simple with be",
+              "structure": "Subject + am/is/are + noun/adjective/place",
+              "usage": "ใช้บอกตัวตน สภาพ ความรู้สึก หรือสถานที่ในปัจจุบัน"
+            },
+            {
+              "translation": "ไคพูดว่า “ฉันจะรับเอง”",
+              "tense": "Present Simple + will",
+              "structure": "Subject + present verb + (that) + Subject + will + base verb",
+              "usage": "ใช้ Present Simple แสดงความคิดหรือสภาพตอนนี้ และใช้ will กับการคาดการณ์หรือการตัดสินใจ"
+            },
+            {
+              "translation": "ท้องฟ้ากำลังมืดลง และจูนคิดว่าฝนจะตก",
+              "tense": "Present Simple + will",
+              "structure": "Subject + present verb + (that) + Subject + will + base verb",
+              "usage": "ใช้ Present Simple แสดงความคิดหรือสภาพตอนนี้ และใช้ will กับการคาดการณ์หรือการตัดสินใจ"
+            },
+            {
+              "translation": "ไคสัญญาว่าเขาจะไปไม่นาน",
+              "tense": "Present Simple + will",
+              "structure": "Subject + present verb + (that) + Subject + will + base verb",
+              "usage": "ใช้ Present Simple แสดงความคิดหรือสภาพตอนนี้ และใช้ will กับการคาดการณ์หรือการตัดสินใจ"
+            }
+          ]
         },
         {
           "id": "L12-F1",
@@ -1593,7 +2276,7 @@
           "id": "L13-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “เคยหรือไม่เคย” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “เคยหรือไม่เคย” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "ever",
             "never",
@@ -1602,8 +2285,26 @@
             "visit",
             "see",
             "eat",
-            "travel"
-          ]
+            "travel",
+            "when",
+            "first",
+            "go",
+            "talk",
+            "country",
+            "ask",
+            "traditional",
+            "breakfast",
+            "say",
+            "tell",
+            "abroad",
+            "food",
+            "someone",
+            "famous",
+            "study",
+            "all"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": []
         },
         {
           "id": "L13-C1",
@@ -1623,7 +2324,45 @@
             "In 2023.",
             "He has never gone."
           ],
-          "answer": "No — she hasn't.,In 2023."
+          "answer": "No — she hasn't.,In 2023.",
+          "sentenceNotes": [
+            {
+              "translation": "พิมและอเล็กซ์กำลังคุยกันเรื่องการท่องเที่ยว",
+              "tense": "Present Continuous",
+              "structure": "Subject + am/is/are + V-ing + ...",
+              "usage": "ใช้บอกสิ่งที่กำลังเกิดขึ้นตอนนี้หรือสถานการณ์ชั่วคราว"
+            },
+            {
+              "translation": "พิมเคยไปสามประเทศ แต่เธอยังไม่เคยไปญี่ปุ่น",
+              "tense": "Present Perfect",
+              "structure": "Subject + have/has + V3 + ...",
+              "usage": "ใช้เชื่อมการกระทำในอดีตกับผล ประสบการณ์ หรือช่วงเวลาที่ต่อถึงปัจจุบัน"
+            },
+            {
+              "translation": "อเล็กซ์เคยไปญี่ปุ่นสองครั้ง",
+              "tense": "Present Perfect",
+              "structure": "Subject + have/has + V3 + ...",
+              "usage": "ใช้เชื่อมการกระทำในอดีตกับผล ประสบการณ์ หรือช่วงเวลาที่ต่อถึงปัจจุบัน"
+            },
+            {
+              "translation": "เขาไปที่นั่นครั้งแรกในปี 2023",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            },
+            {
+              "translation": "พิมถามว่าเขาเคยลองอาหารเช้าแบบดั้งเดิมหรือไม่",
+              "tense": "Present Perfect",
+              "structure": "Subject + have/has + V3 + ...",
+              "usage": "ใช้เชื่อมการกระทำในอดีตกับผล ประสบการณ์ หรือช่วงเวลาที่ต่อถึงปัจจุบัน"
+            },
+            {
+              "translation": "อเล็กซ์ตอบว่าเคย และบอกเธอว่าเขากินอาหารนั้นที่เกียวโต",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            }
+          ]
         },
         {
           "id": "L13-F1",
@@ -1723,7 +2462,7 @@
           "id": "L14-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “อดีตที่ยังมีผลตอนนี้” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “อดีตที่ยังมีผลตอนนี้” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "already",
             "yet",
@@ -1732,8 +2471,26 @@
             "break",
             "finish",
             "happen",
-            "problem"
-          ]
+            "problem",
+            "why",
+            "open",
+            "door",
+            "what",
+            "check",
+            "apartment",
+            "key",
+            "think",
+            "drop",
+            "morning",
+            "bag",
+            "brother",
+            "arrive",
+            "call",
+            "visit",
+            "ask"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": []
         },
         {
           "id": "L14-C1",
@@ -1753,7 +2510,39 @@
             "Her bag.",
             "Her brother's phone."
           ],
-          "answer": "She has lost her key.,Her bag."
+          "answer": "She has lost her key.,Her bag.",
+          "sentenceNotes": [
+            {
+              "translation": "นีน่าเปิดประตูอพาร์ตเมนต์ไม่ได้ เพราะเธอทำกุญแจหาย",
+              "tense": "Present Perfect",
+              "structure": "Subject + have/has + V3 + ...",
+              "usage": "ใช้เชื่อมการกระทำในอดีตกับผล ประสบการณ์ หรือช่วงเวลาที่ต่อถึงปัจจุบัน"
+            },
+            {
+              "translation": "เธอคิดว่าเธอทำมันตกเมื่อเช้านี้",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            },
+            {
+              "translation": "เธอตรวจในกระเป๋าแล้ว แต่ยังหาไม่พบ",
+              "tense": "Present Perfect",
+              "structure": "Subject + have/has + V3 + ...",
+              "usage": "ใช้เชื่อมการกระทำในอดีตกับผล ประสบการณ์ หรือช่วงเวลาที่ต่อถึงปัจจุบัน"
+            },
+            {
+              "translation": "พี่ชายหรือน้องชายของเธอเพิ่งมาถึง เขาจึงเปิดประตูได้",
+              "tense": "Present Perfect",
+              "structure": "Subject + have/has + V3 + ...",
+              "usage": "ใช้เชื่อมการกระทำในอดีตกับผล ประสบการณ์ หรือช่วงเวลาที่ต่อถึงปัจจุบัน"
+            },
+            {
+              "translation": "นีน่าโทรหาคาเฟ่ที่เธอไปก่อนหน้านี้และถามเรื่องกุญแจ",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            }
+          ]
         },
         {
           "id": "L14-F1",
@@ -1853,7 +2642,7 @@
           "id": "L15-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “นานแค่ไหน: for, since, ago, about” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “นานแค่ไหน: for, since, ago, about” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "for",
             "since",
@@ -1862,8 +2651,26 @@
             "time",
             "hour",
             "year",
-            "wait"
-          ]
+            "wait",
+            "how",
+            "long",
+            "work",
+            "company",
+            "when",
+            "start",
+            "learn",
+            "same",
+            "live",
+            "far",
+            "today",
+            "study",
+            "thirty",
+            "minute",
+            "yesterday",
+            "bus"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": []
         },
         {
           "id": "L15-C1",
@@ -1883,7 +2690,39 @@
             "About two years ago.",
             "For yesterday."
           ],
-          "answer": "For four years.,About two years ago."
+          "answer": "For four years.,About two years ago.",
+          "sentenceNotes": [
+            {
+              "translation": "มิวทำงานที่บริษัทเดิมมาเป็นเวลาสี่ปีแล้ว",
+              "tense": "Present Perfect",
+              "structure": "Subject + have/has + V3 + ...",
+              "usage": "ใช้เชื่อมการกระทำในอดีตกับผล ประสบการณ์ หรือช่วงเวลาที่ต่อถึงปัจจุบัน"
+            },
+            {
+              "translation": "เธออาศัยอยู่ในกรุงเทพฯ มาตั้งแต่ปี 2021",
+              "tense": "Present Perfect",
+              "structure": "Subject + have/has + V3 + ...",
+              "usage": "ใช้เชื่อมการกระทำในอดีตกับผล ประสบการณ์ หรือช่วงเวลาที่ต่อถึงปัจจุบัน"
+            },
+            {
+              "translation": "เธอเริ่มเรียนภาษาอังกฤษเมื่อประมาณสองปีก่อน",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            },
+            {
+              "translation": "วันนี้จนถึงตอนนี้ เธอเรียนมาแล้วประมาณสามสิบนาที",
+              "tense": "Present Perfect",
+              "structure": "Subject + have/has + V3 + ...",
+              "usage": "ใช้เชื่อมการกระทำในอดีตกับผล ประสบการณ์ หรือช่วงเวลาที่ต่อถึงปัจจุบัน"
+            },
+            {
+              "translation": "เมื่อวานเธอรอรถบัสสี่สิบนาที แต่การเดินทางใช้เวลาเพียงยี่สิบนาที",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            }
+          ]
         },
         {
           "id": "L15-F1",
@@ -1986,7 +2825,7 @@
           "id": "L16-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “ทำได้ จำเป็น และควรทำ” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “ทำได้ จำเป็น และควรทำ” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "ability",
             "advice",
@@ -1995,8 +2834,26 @@
             "possible",
             "recommend",
             "help",
-            "need"
-          ]
+            "need",
+            "what",
+            "nurse",
+            "give",
+            "visit",
+            "bad",
+            "say",
+            "wait",
+            "doctor",
+            "tell",
+            "drink",
+            "water",
+            "smoke",
+            "pay",
+            "now",
+            "after",
+            "see"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": []
         },
         {
           "id": "L16-C1",
@@ -2016,7 +2873,45 @@
             "He should drink water.",
             "He should run outside."
           ],
-          "answer": "He has to wait.,He should drink water."
+          "answer": "He has to wait.,He should drink water.",
+          "sentenceNotes": [
+            {
+              "translation": "เบนมาที่คลินิกเพราะเขาไอหนัก",
+              "tense": "Present Continuous",
+              "structure": "Subject + am/is/are + V-ing + ...",
+              "usage": "ใช้บอกสิ่งที่กำลังเกิดขึ้นตอนนี้หรือสถานการณ์ชั่วคราว"
+            },
+            {
+              "translation": "เขาถามว่า “ช่วยผมได้ไหมครับ”",
+              "tense": "Modal / necessity form",
+              "structure": "Subject + modal (or have to) + base verb",
+              "usage": "ใช้บอกความสามารถ ความจำเป็น คำแนะนำ หรือคำขออย่างสุภาพ"
+            },
+            {
+              "translation": "พยาบาลบอกว่าเขาต้องรอคุณหมอ",
+              "tense": "Modal / necessity form",
+              "structure": "Subject + modal (or have to) + base verb",
+              "usage": "ใช้บอกความสามารถ ความจำเป็น คำแนะนำ หรือคำขออย่างสุภาพ"
+            },
+            {
+              "translation": "เธอบอกเขาว่า “คุณควรดื่มน้ำ และไม่ควรสูบบุหรี่”",
+              "tense": "Modal / necessity form",
+              "structure": "Subject + modal (or have to) + base verb",
+              "usage": "ใช้บอกความสามารถ ความจำเป็น คำแนะนำ หรือคำขออย่างสุภาพ"
+            },
+            {
+              "translation": "เบนถามว่าเขาต้องจ่ายเงินตอนนี้หรือไม่",
+              "tense": "Modal / necessity form",
+              "structure": "Subject + modal (or have to) + base verb",
+              "usage": "ใช้บอกความสามารถ ความจำเป็น คำแนะนำ หรือคำขออย่างสุภาพ"
+            },
+            {
+              "translation": "พยาบาลบอกว่าเขาจ่ายได้หลังจากพบคุณหมอ",
+              "tense": "Modal / necessity form",
+              "structure": "Subject + modal (or have to) + base verb",
+              "usage": "ใช้บอกความสามารถ ความจำเป็น คำแนะนำ หรือคำขออย่างสุภาพ"
+            }
+          ]
         },
         {
           "id": "L16-F1",
@@ -2114,7 +3009,7 @@
           "id": "L17-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “ฟังไม่ทันก็ไปต่อได้” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “ฟังไม่ทันก็ไปต่อได้” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "repeat",
             "slowly",
@@ -2123,8 +3018,26 @@
             "understand",
             "clearly",
             "confirm",
-            "again"
-          ]
+            "again",
+            "what",
+            "information",
+            "miss",
+            "how",
+            "customer",
+            "tell",
+            "appointment",
+            "move",
+            "thursday",
+            "catch",
+            "new",
+            "time",
+            "say",
+            "sorry",
+            "ask",
+            "correct"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": []
         },
         {
           "id": "L17-C1",
@@ -2144,7 +3057,51 @@
             "He repeated Thursday at three.",
             "He ended the call."
           ],
-          "answer": "The new appointment time.,He repeated Thursday at three."
+          "answer": "The new appointment time.,He repeated Thursday at three.",
+          "sentenceNotes": [
+            {
+              "translation": "ลูกค้าบอกเจย์ว่าเวลานัดของเขาถูกเลื่อนไปเป็นวันพฤหัสบดี",
+              "tense": "Present Perfect",
+              "structure": "Subject + have/has + been + V3 (passive)",
+              "usage": "ใช้บอกสิ่งที่ถูกกระทำไปแล้วและผลนั้นเกี่ยวข้องกับตอนนี้"
+            },
+            {
+              "translation": "เจย์ฟังเวลาใหม่ไม่ทัน",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "เขาพูดว่า “ขอโทษครับ ช่วยพูดอีกครั้งให้ช้าลงได้ไหม”",
+              "tense": "Modal / necessity form",
+              "structure": "Subject + modal (or have to) + base verb",
+              "usage": "ใช้บอกความสามารถ ความจำเป็น คำแนะนำ หรือคำขออย่างสุภาพ"
+            },
+            {
+              "translation": "ลูกค้าพูดข้อมูลซ้ำ",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "เจย์ถามว่า “คุณหมายถึงวันพฤหัสบดีตอนบ่ายสามใช่ไหม”",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "ลูกค้าตอบว่าใช่",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "จากนั้นเจย์ยืนยันว่า “สรุปว่านัดคือวันพฤหัสบดีตอนบ่ายสาม ถูกต้องไหมครับ”",
+              "tense": "Present Simple with be",
+              "structure": "Subject + am/is/are + noun/adjective/place",
+              "usage": "ใช้บอกตัวตน สภาพ ความรู้สึก หรือสถานที่ในปัจจุบัน"
+            }
+          ]
         },
         {
           "id": "L17-F1",
@@ -2246,7 +3203,7 @@
           "id": "L18-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “พูดความรู้สึกและต้นเหตุ” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “พูดความรู้สึกและต้นเหตุ” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "excited",
             "exciting",
@@ -2255,8 +3212,26 @@
             "interest",
             "interesting",
             "tired",
-            "relaxed"
-          ]
+            "relaxed",
+            "how",
+            "flight",
+            "what",
+            "make",
+            "go",
+            "first",
+            "international",
+            "trip",
+            "tomorrow",
+            "also",
+            "little",
+            "nervous",
+            "airport",
+            "look",
+            "busy",
+            "check"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": []
         },
         {
           "id": "L18-C1",
@@ -2276,7 +3251,45 @@
             "An employee explains everything.",
             "The airport closes."
           ],
-          "answer": "She is excited.,An employee explains everything."
+          "answer": "She is excited.,An employee explains everything.",
+          "sentenceNotes": [
+            {
+              "translation": "ลีน่ากำลังจะเดินทางต่างประเทศครั้งแรกในวันพรุ่งนี้",
+              "tense": "Present Continuous",
+              "structure": "Subject + am/is/are + V-ing + ...",
+              "usage": "ใช้บอกสิ่งที่กำลังเกิดขึ้นตอนนี้หรือสถานการณ์ชั่วคราว"
+            },
+            {
+              "translation": "เธอตื่นเต้นกับเที่ยวบิน แต่ก็รู้สึกกังวลเล็กน้อย",
+              "tense": "Present Simple with be",
+              "structure": "Subject + am/is/are + noun/adjective/place",
+              "usage": "ใช้บอกตัวตน สภาพ ความรู้สึก หรือสถานที่ในปัจจุบัน"
+            },
+            {
+              "translation": "สนามบินดูวุ่นวาย และขั้นตอนเช็กอินทำให้สับสนในตอนแรก",
+              "tense": "Present Simple with be",
+              "structure": "Subject + am/is/are + noun/adjective/place",
+              "usage": "ใช้บอกตัวตน สภาพ ความรู้สึก หรือสถานที่ในปัจจุบัน"
+            },
+            {
+              "translation": "พนักงานที่ให้ความช่วยเหลืออธิบายทุกอย่างอย่างชัดเจน",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "หลังจากนั้นลีน่ารู้สึกผ่อนคลาย",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "เธอคิดว่าประสบการณ์ทั้งหมดน่าตื่นเต้น",
+              "tense": "Present Simple with be",
+              "structure": "Subject + am/is/are + noun/adjective/place",
+              "usage": "ใช้บอกตัวตน สภาพ ความรู้สึก หรือสถานที่ในปัจจุบัน"
+            }
+          ]
         },
         {
           "id": "L18-F1",
@@ -2379,7 +3392,7 @@
           "id": "L19-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “สนามบินและเช็กอิน” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “สนามบินและเช็กอิน” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "airport",
             "passport",
@@ -2388,8 +3401,26 @@
             "flight",
             "check-in",
             "passenger",
-            "seat"
-          ]
+            "seat",
+            "what",
+            "give",
+            "employee",
+            "when",
+            "start",
+            "arrive",
+            "hour",
+            "before",
+            "check",
+            "desk",
+            "say",
+            "like",
+            "put",
+            "near",
+            "window",
+            "ten"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": []
         },
         {
           "id": "L19-C1",
@@ -2409,7 +3440,39 @@
             "At ten.",
             "Two days later."
           ],
-          "answer": "Her passport.,At ten."
+          "answer": "Her passport.,At ten.",
+          "sentenceNotes": [
+            {
+              "translation": "มินามาถึงสนามบินก่อนเที่ยวบินสองชั่วโมง",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "ที่เคาน์เตอร์เช็กอิน เธอพูดว่า “ฉันต้องการเช็กอินสำหรับเที่ยวบินไปสิงคโปร์ค่ะ”",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "เธอยื่นหนังสือเดินทางให้พนักงานและวางสัมภาระบนเครื่องชั่ง",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "พนักงานให้ที่นั่งริมหน้าต่างแก่เธอและบอกว่าเริ่มขึ้นเครื่องตอนสิบโมง",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "มินาถามว่าต่อไปเธอควรไปที่ไหน",
+              "tense": "Modal / necessity form",
+              "structure": "Subject + modal (or have to) + base verb",
+              "usage": "ใช้บอกความสามารถ ความจำเป็น คำแนะนำ หรือคำขออย่างสุภาพ"
+            }
+          ]
         },
         {
           "id": "L19-F1",
@@ -2511,7 +3574,7 @@
           "id": "L20-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “แท็กซี่และเส้นทาง” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “แท็กซี่และเส้นทาง” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "taxi",
             "car",
@@ -2520,8 +3583,26 @@
             "route",
             "turn",
             "traffic",
-            "arrive"
-          ]
+            "arrive",
+            "what",
+            "how",
+            "solve",
+            "problem",
+            "get",
+            "into",
+            "show",
+            "hotel",
+            "move",
+            "go",
+            "wrong",
+            "ask",
+            "say",
+            "different",
+            "name",
+            "realize"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": []
         },
         {
           "id": "L20-C1",
@@ -2541,7 +3622,51 @@
             "She showed him the map.",
             "She bought another hotel."
           ],
-          "answer": "The hotel address.,She showed him the map."
+          "answer": "The hotel address.,She showed him the map.",
+          "sentenceNotes": [
+            {
+              "translation": "ซาร่าขึ้นรถแท็กซี่และแสดงที่อยู่โรงแรมของเธอ",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "รถแท็กซี่ออกตัว แต่คนขับกำลังไปผิดทาง",
+              "tense": "Present Continuous",
+              "structure": "Subject + am/is/are + V-ing + ...",
+              "usage": "ใช้บอกสิ่งที่กำลังเกิดขึ้นตอนนี้หรือสถานการณ์ชั่วคราว"
+            },
+            {
+              "translation": "ซาร่าถามว่า “เรากำลังจะไปโรงแรมเซ็นทรัลใช่ไหมคะ”",
+              "tense": "Present Continuous",
+              "structure": "Am/Is/Are + subject + V-ing + ...?",
+              "usage": "ใช้บอกสิ่งที่กำลังเกิดขึ้นตอนนี้หรือสถานการณ์ชั่วคราว"
+            },
+            {
+              "translation": "คนขับพูดชื่อโรงแรมอีกแห่งหนึ่ง",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "ซาร่ารู้ว่าเขาเข้าใจที่อยู่ผิด",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "เธอขอให้เขาหยุดและแสดงแผนที่",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "ในที่สุดพวกเขาก็มาถึงโรงแรมที่ถูกต้อง",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            }
+          ]
         },
         {
           "id": "L20-F1",
@@ -2644,7 +3769,7 @@
           "id": "L21-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “สั่งอาหารและแก้รายการผิด” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “สั่งอาหารและแก้รายการผิด” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "restaurant",
             "food",
@@ -2653,8 +3778,26 @@
             "customer",
             "pay",
             "price",
-            "wrong"
-          ]
+            "wrong",
+            "what",
+            "how",
+            "report",
+            "problem",
+            "rice",
+            "glass",
+            "water",
+            "bring",
+            "fish",
+            "tea",
+            "say",
+            "politely",
+            "think",
+            "there",
+            "mistake",
+            "apologize"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": []
         },
         {
           "id": "L21-C1",
@@ -2674,7 +3817,51 @@
             "He said there was a mistake.",
             "He left without speaking."
           ],
-          "answer": "Chicken and water.,He said there was a mistake."
+          "answer": "Chicken and water.,He said there was a mistake.",
+          "sentenceNotes": [
+            {
+              "translation": "ที่ร้านอาหาร ต้นสั่งไก่กับข้าวและน้ำหนึ่งแก้ว",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "พนักงานนำปลาและชามาให้",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "ต้นพูดอย่างสุภาพว่า “ขอโทษครับ ผมคิดว่ามีข้อผิดพลาด",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "ผมสั่งไก่และน้ำครับ”",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            },
+            {
+              "translation": "พนักงานขอโทษและเปลี่ยนรายการอาหาร",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "ต่อมาต้นตรวจราคาก่อนจ่ายเงิน",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "รายการอาหารสุดท้ายถูกต้อง",
+              "tense": "Present Simple with be",
+              "structure": "Subject + am/is/are + noun/adjective/place",
+              "usage": "ใช้บอกตัวตน สภาพ ความรู้สึก หรือสถานที่ในปัจจุบัน"
+            }
+          ]
         },
         {
           "id": "L21-F1",
@@ -2775,7 +3962,7 @@
           "id": "L22-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “คุยกับเพื่อนร่วมงาน” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “คุยกับเพื่อนร่วมงาน” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "weekend",
             "project",
@@ -2784,8 +3971,26 @@
             "colleague",
             "progress",
             "work",
-            "sound"
-          ]
+            "sound",
+            "what",
+            "do",
+            "now",
+            "monday",
+            "morning",
+            "meet",
+            "kitchen",
+            "ask",
+            "say",
+            "relax",
+            "visit",
+            "family",
+            "how",
+            "yours",
+            "later",
+            "talk"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": []
         },
         {
           "id": "L22-C1",
@@ -2805,7 +4010,51 @@
             "She is preparing a report.",
             "She is traveling abroad."
           ],
-          "answer": "She visited her family.,She is preparing a report."
+          "answer": "She visited her family.,She is preparing a report.",
+          "sentenceNotes": [
+            {
+              "translation": "เช้าวันจันทร์ คิมพบเพื่อนร่วมงานในห้องครัว",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "เพื่อนร่วมงานถามเกี่ยวกับวันหยุดสุดสัปดาห์ของเธอ",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "คิมบอกว่ามันผ่อนคลาย เพราะเธอไปเยี่ยมครอบครัว",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            },
+            {
+              "translation": "จากนั้นเธอถามว่า “แล้วของคุณล่ะ”",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "ต่อมาพวกเขาคุยกันเรื่องงาน",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "ตอนนี้คิมกำลังเตรียมรายงาน และเพื่อนร่วมงานกำลังทดสอบบริการใหม่",
+              "tense": "Present Continuous",
+              "structure": "Subject + am/is/are + V-ing + ...",
+              "usage": "ใช้บอกสิ่งที่กำลังเกิดขึ้นตอนนี้หรือสถานการณ์ชั่วคราว"
+            },
+            {
+              "translation": "พวกเขาตกลงจะคุยกันอีกครั้งหลังอาหารกลางวัน",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            }
+          ]
         },
         {
           "id": "L22-F1",
@@ -2909,7 +4158,7 @@
           "id": "L23-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “อธิบายปัญหาในงาน” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “อธิบายปัญหาในงาน” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "problem",
             "happen",
@@ -2918,8 +4167,26 @@
             "result",
             "fix",
             "test",
-            "system"
-          ]
+            "system",
+            "when",
+            "what",
+            "already",
+            "try",
+            "page",
+            "show",
+            "customer",
+            "order",
+            "after",
+            "sign",
+            "same",
+            "service",
+            "check",
+            "message",
+            "exact",
+            "yet"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": []
         },
         {
           "id": "L23-C1",
@@ -2939,7 +4206,39 @@
             "He restarted the service.",
             "He changed the customer."
           ],
-          "answer": "After the user signs in.,He restarted the service."
+          "answer": "After the user signs in.,He restarted the service.",
+          "sentenceNotes": [
+            {
+              "translation": "หน้าหนึ่งควรแสดงคำสั่งซื้อของลูกค้า แต่กลับแสดงหน้าจอว่าง",
+              "tense": "Modal / necessity form",
+              "structure": "Subject + modal (or have to) + base verb",
+              "usage": "ใช้บอกความสามารถ ความจำเป็น คำแนะนำ หรือคำขออย่างสุภาพ"
+            },
+            {
+              "translation": "ปัญหาเกิดขึ้นหลังจากผู้ใช้เข้าสู่ระบบ",
+              "tense": "Present Simple",
+              "structure": "Subject + base verb (เติม -s/-es เมื่อประธานเป็น he/she/it) + ...",
+              "usage": "ใช้บอกกิจวัตร ข้อเท็จจริง ความชอบ หรือสิ่งที่เกิดเป็นปกติ"
+            },
+            {
+              "translation": "แนตทดสอบหน้านั้นสองครั้งและได้ผลลัพธ์เหมือนเดิม",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            },
+            {
+              "translation": "เขารีสตาร์ตบริการและตรวจรายงานระบบแล้ว",
+              "tense": "Present Perfect",
+              "structure": "Subject + have/has + V3 + ...",
+              "usage": "ใช้เชื่อมการกระทำในอดีตกับผล ประสบการณ์ หรือช่วงเวลาที่ต่อถึงปัจจุบัน"
+            },
+            {
+              "translation": "เขาพบข้อความผิดปกติหนึ่งข้อความ แต่ยังไม่พบสาเหตุที่แน่ชัด",
+              "tense": "Past Simple",
+              "structure": "Subject + V2 (or did not + base verb) + ...",
+              "usage": "ใช้เล่าเหตุการณ์ที่เกิดและจบแล้วในอดีต"
+            }
+          ]
         },
         {
           "id": "L23-F1",
@@ -3044,7 +4343,7 @@
           "id": "L24-V1",
           "type": "vocabulary",
           "instruction": "รู้คำสำคัญก่อนเข้าสู่เรื่อง",
-          "context": "คำเหล่านี้จะปรากฏในสถานการณ์ “ภารกิจรวม: ภาษาอังกฤษของฉัน” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
+          "context": "คำเหล่านี้ครอบคลุมหัวข้อ Story คำถาม และ Roleplay ของบท “ภารกิจรวม: ภาษาอังกฤษของฉัน” ฟังเสียง อ่านตัวอย่าง และนึกความหมายก่อนเปิดภาษาไทย",
           "options": [
             "challenge",
             "goal",
@@ -3053,8 +4352,26 @@
             "plan",
             "work",
             "problem",
-            "solution"
-          ]
+            "solution",
+            "what",
+            "boss",
+            "currently",
+            "do",
+            "go",
+            "tomorrow",
+            "technology",
+            "project",
+            "last",
+            "week",
+            "while",
+            "test",
+            "system",
+            "complete",
+            "first",
+            "before"
+          ],
+          "coreVocabularyCount": 8,
+          "vocabularyNotes": []
         },
         {
           "id": "L24-C1",
@@ -3074,7 +4391,45 @@
             "He is going to test again.",
             "He is going to forget the project."
           ],
-          "answer": "He is improving a project.,He is going to test again."
+          "answer": "He is improving a project.,He is going to test again.",
+          "sentenceNotes": [
+            {
+              "translation": "บอสทำงานด้านเทคโนโลยีและตอนนี้กำลังปรับปรุงโครงการหนึ่ง",
+              "tense": "Present Simple with be",
+              "structure": "Subject + am/is/are + noun/adjective/place",
+              "usage": "ใช้บอกตัวตน สภาพ ความรู้สึก หรือสถานที่ในปัจจุบัน"
+            },
+            {
+              "translation": "สัปดาห์ก่อนเขาพบปัญหาขณะที่กำลังทดสอบระบบ",
+              "tense": "Past Continuous + Past Simple",
+              "structure": "Subject + was/were + V-ing + when/while + Subject + V2",
+              "usage": "ใช้เล่าฉากที่กำลังดำเนินอยู่ในอดีต และอาจมีเหตุการณ์สั้นเข้ามาแทรก"
+            },
+            {
+              "translation": "เขาทำการทดสอบครั้งแรกเสร็จก่อนที่ปัญหาจะปรากฏ",
+              "tense": "Past Perfect",
+              "structure": "Subject + had + V3 + ...",
+              "usage": "ใช้บอกเหตุการณ์ที่เสร็จก่อนอีกเหตุการณ์หนึ่งในอดีต"
+            },
+            {
+              "translation": "ตั้งแต่นั้นมา เขาลองวิธีแก้สองวิธีและเรียนรู้เกี่ยวกับระบบมากขึ้น",
+              "tense": "Present Perfect",
+              "structure": "Subject + have/has + V3 + ...",
+              "usage": "ใช้เชื่อมการกระทำในอดีตกับผล ประสบการณ์ หรือช่วงเวลาที่ต่อถึงปัจจุบัน"
+            },
+            {
+              "translation": "พรุ่งนี้เขาวางแผนจะทดสอบอีกครั้ง",
+              "tense": "be going to (future plan)",
+              "structure": "Subject + am/is/are + (not) going to + base verb",
+              "usage": "ใช้บอกแผนหรือความตั้งใจที่มีอยู่แล้ว"
+            },
+            {
+              "translation": "เขาคิดว่าเวอร์ชันถัดไปจะทำงานได้ดีขึ้น",
+              "tense": "Present Simple + will",
+              "structure": "Subject + present verb + (that) + Subject + will + base verb",
+              "usage": "ใช้ Present Simple แสดงความคิดหรือสภาพตอนนี้ และใช้ will กับการคาดการณ์หรือการตัดสินใจ"
+            }
+          ]
         },
         {
           "id": "L24-F1",

@@ -3,6 +3,10 @@
 import React, { useState } from "react";
 import { Activity } from "@/schemas/curriculum.schema";
 import { speak } from "@/lib/speech";
+import {
+    RoleplayValidationResult,
+    validateRoleplayResponse,
+} from "@/lib/roleplay-validation";
 
 interface RoleplayActivityProps {
     activity: Activity;
@@ -16,8 +20,12 @@ export default function RoleplayActivity({ activity, onComplete }: RoleplayActiv
     const [responses, setResponses] = useState<string[]>(() => prompts.map(() => ""));
     const [revealed, setRevealed] = useState<Set<number>>(new Set());
     const [confidence, setConfidence] = useState(3);
+    const [validationResults, setValidationResults] = useState<Array<RoleplayValidationResult | null>>(
+        () => prompts.map(() => null),
+    );
 
     const currentResponse = responses[turn] || "";
+    const currentValidation = validationResults[turn];
     const isLast = turn === prompts.length - 1;
 
     const setCurrentResponse = (value: string) => {
@@ -26,9 +34,31 @@ export default function RoleplayActivity({ activity, onComplete }: RoleplayActiv
             next[turn] = value;
             return next;
         });
+        if (!revealed.has(turn)) {
+            setValidationResults((current) => {
+                const next = [...current];
+                next[turn] = null;
+                return next;
+            });
+        }
     };
 
-    const revealModel = () => setRevealed((current) => new Set(current).add(turn));
+    const checkResponse = () => {
+        const result = validateRoleplayResponse(
+            currentResponse,
+            prompts[turn],
+            models[turn] || "",
+        );
+        setValidationResults((current) => {
+            const next = [...current];
+            next[turn] = result;
+            return next;
+        });
+
+        if (result.valid) {
+            setRevealed((current) => new Set(current).add(turn));
+        }
+    };
 
     return (
         <div className="bg-canvas dark:bg-zinc-900 p-6 sm:p-8 rounded-md border border-ink/10 dark:border-zinc-800 shadow-none flex flex-col gap-6 animate-fade-in">
@@ -91,6 +121,42 @@ export default function RoleplayActivity({ activity, onComplete }: RoleplayActiv
                 />
             </div>
 
+            {currentValidation && (
+                <div
+                    className={`rounded-md border p-4 ${
+                        currentValidation.valid
+                            ? "border-hume-mint/30 bg-hume-mint/10"
+                            : "border-hume-coral/30 bg-hume-coral/10"
+                    }`}
+                    role="status"
+                >
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                        <strong className={`text-sm ${currentValidation.valid ? "text-hume-mint" : "text-hume-coral"}`}>
+                            {currentValidation.valid ? "ผ่านการตรวจ ✓" : "ยังต้องแก้ไข"}
+                        </strong>
+                        <span className="rounded-full bg-canvas/70 px-3 py-1 text-[10px] font-mono font-bold text-ink/60 dark:bg-zinc-950/60 dark:text-canvas-cream/60">
+                            {currentValidation.score}/100
+                        </span>
+                    </div>
+                    <p className="mt-1 text-xs text-ink/65 dark:text-canvas-cream/65">{currentValidation.summary}</p>
+                    <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                        {currentValidation.checks.map((check) => (
+                            <div
+                                key={check.id}
+                                className="rounded-md border border-ink/5 bg-canvas/70 p-2.5 dark:border-canvas-cream/5 dark:bg-zinc-950/50"
+                            >
+                                <p className={`text-[11px] font-bold ${check.passed ? "text-hume-mint" : "text-hume-coral"}`}>
+                                    {check.passed ? "✓" : "✕"} {check.label}
+                                </p>
+                                <p className="mt-0.5 text-[11px] leading-relaxed text-ink/60 dark:text-canvas-cream/60">
+                                    {check.message}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+
             {revealed.has(turn) && (
                 <div className="p-4 rounded-md bg-hume-mint/10 border-l-2 border-hume-mint">
                     <div className="flex justify-between gap-3">
@@ -130,15 +196,15 @@ export default function RoleplayActivity({ activity, onComplete }: RoleplayActiv
                 {!revealed.has(turn) ? (
                     <button
                         type="button"
-                        disabled={currentResponse.trim().split(/\s+/).length < 2}
-                        onClick={revealModel}
+                        disabled={currentResponse.trim().length === 0}
+                        onClick={checkResponse}
                         className={`px-6 py-3 rounded-full font-mono text-xs uppercase tracking-wider font-bold ${
-                            currentResponse.trim().split(/\s+/).length >= 2
+                            currentResponse.trim().length > 0
                                 ? "bg-ink dark:bg-canvas-cream text-canvas-cream dark:text-ink"
                                 : "bg-ink/5 dark:bg-white/5 text-ink/30 dark:text-white/30 cursor-not-allowed"
                         }`}
                     >
-                        Compare with model
+                        ตรวจคำตอบ
                     </button>
                 ) : !isLast ? (
                     <button
