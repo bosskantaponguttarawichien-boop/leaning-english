@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Activity } from "@/schemas/curriculum.schema";
 import { playErrorBuzz } from "@/lib/audio";
+import { createEnglishUtterance, cancelSpeech } from "@/lib/speech";
 
 interface ReadingActivityProps {
     activity: Activity;
@@ -21,21 +22,6 @@ function splitIntoSentences(text: string) {
     return (sentences || [text]).map(sentence => sentence.trim()).filter(Boolean);
 }
 
-function createEnglishUtterance(text: string, rate: number) {
-    const utterance = new SpeechSynthesisUtterance(text);
-    const voices = window.speechSynthesis.getVoices();
-    const englishVoice = voices.find(voice => voice.lang.startsWith("en-US"))
-        || voices.find(voice => voice.lang.startsWith("en"));
-
-    if (englishVoice) {
-        utterance.voice = englishVoice;
-    }
-
-    utterance.rate = rate;
-    utterance.pitch = 1;
-    utterance.volume = 1;
-    return utterance;
-}
 
 export default function ReadingActivity({ activity, onComplete, onErrorLogged }: ReadingActivityProps) {
     const docText = activity.content || "";
@@ -62,7 +48,7 @@ export default function ReadingActivity({ activity, onComplete, onErrorLogged }:
             if (pauseTimerRef.current !== null) {
                 window.clearTimeout(pauseTimerRef.current);
             }
-            window.speechSynthesis?.cancel();
+            cancelSpeech();
         };
     }, [docText]);
 
@@ -72,7 +58,7 @@ export default function ReadingActivity({ activity, onComplete, onErrorLogged }:
             window.clearTimeout(pauseTimerRef.current);
             pauseTimerRef.current = null;
         }
-        window.speechSynthesis?.cancel();
+        cancelSpeech();
         setPlaybackMode(null);
         setActiveSentence(null);
     };

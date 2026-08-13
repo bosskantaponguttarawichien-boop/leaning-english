@@ -2,23 +2,12 @@
 
 import React, { useState } from "react";
 import { Activity } from "@/schemas/curriculum.schema";
+import { speak } from "@/lib/speech";
+
 
 interface ShadowingActivityProps {
     activity: Activity;
     onComplete: () => void;
-}
-
-function speakAtRate(text: string, rate: number) {
-    if (typeof window === "undefined" || !window.speechSynthesis) return;
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    const voices = window.speechSynthesis.getVoices();
-    utterance.voice =
-        voices.find((voice) => voice.lang.startsWith("en-US")) ||
-        voices.find((voice) => voice.lang.startsWith("en")) ||
-        null;
-    utterance.rate = rate;
-    window.speechSynthesis.speak(utterance);
 }
 
 export default function ShadowingActivity({ activity, onComplete }: ShadowingActivityProps) {
@@ -80,7 +69,7 @@ export default function ShadowingActivity({ activity, onComplete }: ShadowingAct
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <button
                     type="button"
-                    onClick={() => speakAtRate(sentences[current], 0.78)}
+                    onClick={() => speak(sentences[current], { rate: 0.78 })}
                     className="p-4 rounded-md border border-ink/10 dark:border-zinc-700 text-left hover:bg-ink/5"
                 >
                     <span className="block text-[10px] font-mono uppercase text-ink/45 dark:text-white/45">Round 1</span>
@@ -88,7 +77,7 @@ export default function ShadowingActivity({ activity, onComplete }: ShadowingAct
                 </button>
                 <button
                     type="button"
-                    onClick={() => speakAtRate(sentences[current], 0.9)}
+                    onClick={() => speak(sentences[current], { rate: 0.9 })}
                     className="p-4 rounded-md border border-ink/10 dark:border-zinc-700 text-left hover:bg-ink/5"
                 >
                     <span className="block text-[10px] font-mono uppercase text-ink/45 dark:text-white/45">Round 2</span>
@@ -96,7 +85,7 @@ export default function ShadowingActivity({ activity, onComplete }: ShadowingAct
                 </button>
                 <button
                     type="button"
-                    onClick={() => speakAtRate(sentences[current], 1)}
+                    onClick={() => speak(sentences[current], { rate: 1 })}
                     className="p-4 rounded-md border border-ink/10 dark:border-zinc-700 text-left hover:bg-ink/5"
                 >
                     <span className="block text-[10px] font-mono uppercase text-ink/45 dark:text-white/45">Round 3</span>
