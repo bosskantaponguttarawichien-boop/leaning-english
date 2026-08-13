@@ -202,6 +202,22 @@ export async function updateLessonProgress(lessonId: string, updates: Partial<Le
 }
 
 /**
+ * Wipes all lesson progress (local cache, localStorage, and Firebase) so the
+ * curriculum restarts from the first lesson. Throws if the Firebase delete
+ * fails, since the caller promises the reset applies everywhere.
+ */
+export async function resetCurriculumProgress(): Promise<void> {
+    localCache = {};
+    if (typeof window !== "undefined") {
+        localStorage.removeItem(STORAGE_KEY);
+    }
+    const result = await setData(CURRICULUM_PROGRESS_PATH, null);
+    if (!result.success) {
+        throw result.error;
+    }
+}
+
+/**
  * Helper to log error tags (e.g., missing_be, spelling) to a lesson's progress.
  */
 export async function logLessonError(lessonId: string, errorTag: string): Promise<void> {

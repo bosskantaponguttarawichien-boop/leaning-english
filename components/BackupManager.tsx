@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { resetCurriculumProgress } from "@/lib/curriculum";
 
 export default function BackupManager() {
     const [statusMessage, setStatusMessage] = useState("");
@@ -10,7 +11,7 @@ export default function BackupManager() {
         try {
             const keysToBackup = [
                 "englist_progress_v2",
-                "englist_curriculum_progress_v1",
+                "englist_curriculum_progress_v2",
                 "assessments",
                 "openai_api_key"
             ];
@@ -77,6 +78,26 @@ export default function BackupManager() {
         reader.readAsText(file);
     };
 
+    const handleResetLessons = async () => {
+        const confirmed = window.confirm(
+            "รีเซ็ตความคืบหน้าบทเรียนทั้งหมด และกลับไปเริ่มเรียนตั้งแต่บทแรก? การกระทำนี้ย้อนกลับไม่ได้ และจะลบข้อมูลทั้งในเครื่องนี้และบน Firebase (ถ้าใช้เครื่องอื่นด้วย ต้องกดรีเซ็ตที่เครื่องนั้นด้วยเช่นกัน)"
+        );
+        if (!confirmed) return;
+
+        setStatusMessage("Resetting lesson progress... ⏳");
+        setIsError(false);
+
+        try {
+            await resetCurriculumProgress();
+            setStatusMessage("Lesson progress reset! Reloading page... 🔄");
+            window.location.reload();
+        } catch (error) {
+            console.error("Failed to reset lesson progress:", error);
+            setStatusMessage("Failed to reset lesson progress ❌");
+            setIsError(true);
+        }
+    };
+
     return (
         <div className="p-6 rounded-md bg-canvas dark:bg-zinc-900 border border-ink/10 dark:border-zinc-800 flex flex-col gap-4 shadow-none">
             <div className="font-display">
@@ -104,6 +125,19 @@ export default function BackupManager() {
                         className="hidden"
                     />
                 </label>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center pt-3 border-t border-ink/10 dark:border-zinc-800">
+                <div className="flex-1">
+                    <span className="font-mono text-[9px] font-semibold uppercase tracking-widest text-red-500/80">Danger Zone</span>
+                    <p className="text-xs text-ink/65 dark:text-canvas-cream/65 mt-0.5 leading-normal">Reset all lesson progress and start over from Lesson 1.</p>
+                </div>
+                <button
+                    onClick={handleResetLessons}
+                    className="h-9 px-5 bg-transparent text-red-500 border border-red-500/40 font-mono text-[10px] uppercase tracking-wider font-bold rounded-full transition-all hover:bg-red-500/10 active:scale-[0.97] cursor-pointer text-center flex items-center justify-center gap-1.5 focus:outline-none shrink-0"
+                >
+                    🗑️ Reset Lesson Progress
+                </button>
             </div>
 
             {statusMessage && (
