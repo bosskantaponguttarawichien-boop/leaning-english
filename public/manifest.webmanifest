@@ -1,0 +1,44 @@
+{
+  "name": "EngList — English Vocab Typing",
+  "short_name": "EngList",
+  "description": "Improve your English vocabulary and typing speed with focused practice.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#fff9f3",
+  "theme_color": "#fff9f3",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Today's practice",
+      "short_name": "Practice",
+      "url": "/practice"
+    },
+    {
+      "name": "Progress dashboard",
+      "short_name": "Progress",
+      "url": "/dashboard"
+    }
+  ]
+}
